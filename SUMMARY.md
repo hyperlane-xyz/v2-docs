@@ -4,9 +4,8 @@
 
 ## Introduction
 
-* [Overview](the-basics/spaces.md)
-  * [What is Abacus?](introduction/overview/what-is-abacus.md)
-  * [What problem is Abacus solving?](introduction/overview/what-problem-is-abacus-solving.md)
+* [Overview](introduction/overview.md)
+* [Interchain apps](introduction/interchain-apps.md)
 
 ## Protocol
 
