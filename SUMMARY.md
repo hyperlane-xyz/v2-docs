@@ -2,21 +2,29 @@
 
 * [Get Started](README.md)
 
-## The Basics
+## Introduction
 
-* [Spaces](the-basics/spaces.md)
-* [Collections](the-basics/collections.md)
-* [The GitBook editor](the-basics/the-gitbook-editor.md)
-* [Live edit and locked edits](the-basics/live-edit-and-locked-edits.md)
-* [Change requests](the-basics/change-requests.md)
+* [Overview](introduction/overview/README.md)
+  * [What is Abacus?](introduction/overview/what-is-abacus.md)
+  * [What problem is Abacus solving?](introduction/overview/what-problem-is-abacus-solving.md)
+* [Page 1](introduction/page-1.md)
+* [Collections](introduction/collections.md)
+* [The GitBook editor](introduction/the-gitbook-editor.md)
+* [Live edit and locked edits](introduction/live-edit-and-locked-edits.md)
+* [Change requests](introduction/change-requests.md)
 
-## Publishing
+## Protocol
 
-* [Publishing your content](publishing/publishing-your-content.md)
+* [Architecture](protocol/architecture.md)
+* [Messaging](protocol/messaging.md)
+* [Security](protocol/security.md)
+* [Governance](protocol/governance.md)
 
-## Tips and tricks
+## Developers
 
-* [Speed up with quick find](tips-and-tricks/speed-up-with-quick-find.md)
+* [Abacus Apps](developers/abacus-apps.md)
+* [SDK](developers/sdk.md)
+* [Messaging encoding](developers/messaging-encoding.md)
 
 ## Next steps
 
