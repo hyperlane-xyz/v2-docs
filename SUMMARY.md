@@ -1,10 +1,8 @@
 # Table of contents
 
-* [Get Started](README.md)
-
 ## Introduction
 
-* [Overview](introduction/overview.md)
+* [Overview](README.md)
 * [Interchain apps](introduction/interchain-apps.md)
 
 ## Protocol
