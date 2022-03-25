@@ -1,4 +1,4 @@
-# Publishing your content
+# Architecture
 
 GitBook makes publishing lovely docs a breeze. Hit the ‘Share’ button up top, select ‘Publish’, configure a few settings and you're good to go!
 

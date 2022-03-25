@@ -4,27 +4,29 @@
 
 ## Introduction
 
-* [Overview](introduction/overview/README.md)
+* [Overview](the-basics/spaces.md)
   * [What is Abacus?](introduction/overview/what-is-abacus.md)
   * [What problem is Abacus solving?](introduction/overview/what-problem-is-abacus-solving.md)
-* [Page 1](introduction/page-1.md)
-* [Collections](introduction/collections.md)
-* [The GitBook editor](introduction/the-gitbook-editor.md)
-* [Live edit and locked edits](introduction/live-edit-and-locked-edits.md)
-* [Change requests](introduction/change-requests.md)
 
 ## Protocol
 
-* [Architecture](protocol/architecture.md)
-* [Messaging](protocol/messaging.md)
+* [Architecture](publishing/publishing-your-content.md)
+* [Messaging](protocol/messaging/README.md)
+  * [Overview](protocol/messaging/overview.md)
+  * [Outbox](protocol/messaging/outbox.md)
+  * [Inbox](protocol/messaging/inbox.md)
+  * [Agents](protocol/messaging/agents.md)
 * [Security](protocol/security.md)
 * [Governance](protocol/governance.md)
 
 ## Developers
 
-* [Abacus Apps](developers/abacus-apps.md)
+* [Abacus Apps](tips-and-tricks/speed-up-with-quick-find.md)
 * [SDK](developers/sdk.md)
 * [Messaging encoding](developers/messaging-encoding.md)
+* [Example apps](developers/example-apps/README.md)
+  * [Controller](developers/example-apps/controller.md)
+  * [PingPong](developers/example-apps/pingpong.md)
 
 ## Next steps
 

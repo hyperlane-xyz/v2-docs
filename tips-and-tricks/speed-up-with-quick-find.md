@@ -1,4 +1,4 @@
-# Speed up with quick find
+# Abacus Apps
 
 If you haven't already, give that `CMD + K` (`CTRL + K` on Windows) shortcut a little tap.
 
