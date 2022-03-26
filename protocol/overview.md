@@ -4,6 +4,12 @@ description: A high level description of the Abacus protocol
 
 # Overview
 
+{% hint style="info" %}
+Note: The Abacus protocol is still under development. The protocol docs describe the latest Abacus protocol design.
+
+For the latest on what's been implemented and deployed to testnet(s) and mainnet(s), please visit the [roadmap](../resources/roadmap.md).
+{% endhint %}
+
 ## Components
 
 Abacus is comprised of three high level components that combine to create a secure cross-chain communication protocol.
@@ -32,6 +38,6 @@ Abacus is governed by a [DAO](governance/dao.md), based on Compound's Governor B
 
 Unlike many of these other protocols, Abacus is natively multi-chain. Users can propose and vote on proposals from any Abacus supported chain. Furthermore, the Abacus DAO can execute transactions on any Abacus supported chain using the [Abacus Controller](governance/controller.md).
 
-The Abacus Controller is an instance of the [Controller](../developers/example-apps/controller.md) application, that owns the Abacus protocol contracts on each chain. When the DAO needs to execute a transaction on a remote chain, it calls a function on the Abacus Controller contract on the source chain, specifying the transaction to be executed.
+The Abacus Controller is an instance of the [Controller](../developers/examples/controller.md) application, that owns the Abacus protocol contracts on each chain. When the DAO needs to execute a transaction on a remote chain, it calls a function on the Abacus Controller contract on the source chain, specifying the transaction to be executed.
 
 This causes a cross-chain message to be sent to the Controller contract on the destination chain, which executes the transaction.
