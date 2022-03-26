@@ -18,8 +18,8 @@
   * [DAO](protocol/governance/dao.md)
   * [Controller](protocol/governance/controller.md)
 * [Agents](protocol/agents/README.md)
-  * [Validators](protocol/agents/validators.md)
   * [Checkpointer](protocol/agents/checkpointer.md)
+  * [Validator](protocol/agents/validator.md)
   * [Relayer](protocol/agents/relayer.md)
   * [Processor](protocol/agents/processor.md)
 

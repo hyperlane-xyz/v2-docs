@@ -16,7 +16,7 @@ Each Abacus-supported chain has its own validator set, and runs its own instance
 
 #### Registration
 
-To be eligible to receive delegations, validators must first register their public key on the `StakingRegistry.` To register, validators provide a proof-of-possession of their private key \[footnote on rogue key attacks] and specify a commission as a percentage of staking rewards.
+To be eligible to receive delegations, validators must first register their public key on the `StakingRegistry.` To register, validators provide a proof-of-possession of their private key \[footnote: To protect against [rogue key attacks](https://rist.tech.cornell.edu/papers/pkreg.html)] and specify a commission as a percentage of staking rewards.
 
 Each registered validator has a corresponding `StakingPool` contract, responsible for managing ABC tokens delegated to that validator.
 
