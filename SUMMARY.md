@@ -7,14 +7,22 @@
 
 ## Protocol
 
-* [Architecture](publishing/publishing-your-content.md)
+* [Overview](protocol/overview.md)
 * [Messaging](protocol/messaging/README.md)
   * [Overview](protocol/messaging/overview.md)
   * [Outbox](protocol/messaging/outbox.md)
   * [Inbox](protocol/messaging/inbox.md)
-  * [Agents](protocol/messaging/agents.md)
-* [Security](protocol/security.md)
-* [Governance](protocol/governance.md)
+* [Security](protocol/security/README.md)
+  * [Proof of stake](protocol/security/proof-of-stake.md)
+  * [Sovereign consensus](protocol/security/sovereign-consensus.md)
+* [Governance](protocol/governance/README.md)
+  * [DAO](protocol/governance/dao.md)
+  * [Controller](protocol/governance/controller.md)
+* [Agents](protocol/agents/README.md)
+  * [Validators](protocol/agents/validators.md)
+  * [Checkpointer](protocol/agents/checkpointer.md)
+  * [Relayer](protocol/agents/relayer.md)
+  * [Processor](protocol/agents/processor.md)
 
 ## Developers
 

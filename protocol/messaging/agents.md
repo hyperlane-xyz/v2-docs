@@ -1,3 +1,0 @@
-# Agents
-
-Checkpointer Relayer Processor
