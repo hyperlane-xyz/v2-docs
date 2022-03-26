@@ -29,8 +29,8 @@
 * [SDK](developers/sdk.md)
 * [Message encoding](developers/message-encoding.md)
 * [Examples](developers/examples/README.md)
-  * [Controller](developers/examples/controller.md)
-  * [PingPong](developers/examples/pingpong.md)
+  * [Controller](developers/example-apps/controller.md)
+  * [PingPong](developers/example-apps/pingpong.md)
 
 ## Resources
 
