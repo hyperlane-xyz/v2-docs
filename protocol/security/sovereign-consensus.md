@@ -61,13 +61,13 @@ That smart contract must implement `verify()`, which takes message-specific info
   * @param _data Additional data provided by the caller,
   * e.g. guardian signatures on `_root`
   * @return Returns true iff the message should be accepted.
-  **/
+  */
 function verify(
-    bytes32 _root,
-    uint32 _origin,
-    bytes32 _sender,
-    bytes memory _message,
-    bytes memory _data
+  bytes32 _root,
+  uint32 _origin,
+  bytes32 _sender,
+  bytes memory _message,
+  bytes memory _data
 ) external view returns (bool valid);
 ```
 
