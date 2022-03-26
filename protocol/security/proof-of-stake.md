@@ -20,11 +20,36 @@ To be eligible to receive delegations, validators must first register their publ
 
 Each registered validator has a corresponding `StakingPool` contract, responsible for managing ABC tokens delegated to that validator.
 
+```solidity
+/**
+  * @notice Registers the validator's public key and deploys staking and withdrawal
+  * pools.
+  * @param _publicKey The validator's public key.
+  * @param _commission The validator's staking reward commission.
+  * @param _pop A proof-of-possession of the validator's private key.
+  * @return Returns true upon success.
+  */
+function register(
+  bytes32 _publicKey,
+  uint256 _commission,
+  bytes memory _pop
+) external returns (bool);
+```
+
 #### Delegation
 
-Users can delegate to a validator by calling `StakingPool.delegate()`, which transfers `ABC` tokens from the user to the pool. In return, the user receives `ERC20`-compatible `StakingTokens`, representing their proportional share of the `ABC` held by the pool. \[footnote: In other words, the users share of the total supply of `PoolTokens` is equal to the share of `ABC` they contributed to the pool at the time of delegation.]
+Users can delegate to a validator by calling `StakingPool.delegate()`, which transfers `ABC` tokens from the user to the pool. In return, the user receives `ERC20`-compatible `StakingTokens`, representing their proportional share of the `ABC` held by the pool. \[footnote: In other words, the users share of the total supply of `StakingTokens` is equal to the share of `ABC` they contributed to the pool at the time of delegation.]
 
 These `StakingTokens` represent a pro-rata claim on the `ABC` held by the `StakingPool`.
+
+```solidity
+/**
+  * @notice Delegates `amount` ABC to the pool's validator.
+  * @param _amount The amount of ABC to delegate.
+  * @return Returns the number of StakingTokens minted to msg.sender.
+  */
+function delegate(uint256 _amount) external returns (uint256);
+```
 
 #### Withdrawals
 
@@ -32,7 +57,27 @@ Users can withdraw their stake from a pool by calling `StakingPool.withdraw()`, 
 
 The `WithdrawalPool` mints an `ERC721`-compatible `WithdrawalToken` to the user, representing the user's proportional share of `ABC` in the `WithdrawalPool` and the timestamp at which that share can be withdrawn \[footnote: 21 days later].
 
+```solidity
+/**
+  * @notice Withdraws ABC from the StakingPool and deposits it in the
+  * WithdrawalPool.
+  * @param _amount The amount of StakingTokens to burn.
+  * @return The amount of ABC transferred to the staking pool.
+  * @return The ID of the WithdrawalToken minted to msg.sender
+  */
+function withdraw(uint256 _amount) external returns (uint256, uint256);
+```
+
 Users can withdraw their `ABC` by calling `WithdrawalPool.withdraw()`, which checks the timestamp on their `WithdrawalToken`, burns it, and transfers the corresponding share of the pool's `ABC` to the user.
+
+```solidity
+/**
+  * @notice Withdraws ABC from the WithdrawalPool.
+  * @param _id The ID of the WithdrawalToken.
+  * @return The amount of ABC transferred to msg.sender.
+  */
+function withdraw(uint256 _id) external returns (uint256);
+```
 
 ## Epochs
 
@@ -50,13 +95,25 @@ Validators and delegators are rewarded for their role in securing the network in
 
 The protocol specifies a governable `rewardsRate`, the number of `ABC` tokens that should be minted every epoch for each validator in the validator set.
 
-Rewards are split between validators and their delegators. Validators receive a percentage of the rewards as a commission \[footnote: as specified during registration], and the rest is transferred to their `StakingPool`, which effectively distributes rewards pro-rata to delegators \[footnote: Because the `StakingTokens` tokens held by delegators represent a pro-rata claim on the `ABC` held by the `StakingPool`].
+Rewards are split between validators and their delegators. Validators receive a percentage of the rewards as a commission \[footnote: As specified during registration], and the rest is transferred to their `StakingPool`, which effectively distributes rewards pro-rata to delegators.
+
+\[footnote: Because the `StakingTokens` tokens held by delegators represent a pro-rata claim on the `ABC` held by the `StakingPool`].
 
 The `RewardsManager` contract manages the `rewardsRate` and is responsible for distributing staking rewards to validators and their delegators. Anyone can distribute staking rewards by specifying a validator and calling `RewardsManager.reward()`.&#x20;
 
 {% hint style="warning" %}
 `StakingRewards` does not have a view into the history of validator sets for previous epochs, and thus can only distribute rewards for the current epoch. `StakingRewards.reward()` should be called once for each validator, every epoch, in order to ensure all rewards are properly distributed.&#x20;
 {% endhint %}
+
+```solidity
+/**
+  * @notice Mints `rewardsRate` ABC tokens and divides them proportionally between
+  * _validator and its staking pool according to its commission.
+  * @param _validator The validator public key.
+  * @return True upon success.
+  */
+function reward(bytes32 _validator) external returns(bool);
+```
 
 #### Slashing
 
@@ -65,6 +122,24 @@ If a validator signs anything other than a valid [Outbox](../messaging/outbox.md
 Anyone can present evidence in the form of a signed checkpoint by calling `SlashingManager.slash()`. The contract verifies the signature, checks that the checkpoint is not present in the Outbox, and that this evidence has not already been presented to the `SlashingManager`.
 
 If the evidence is accepted, the `SlashingManager` withdraws and burns half of the `ABC` held by the `StakingPool` and `WithdrawalPool`, which effectively slashes each delegator pro-rata.\[footnote: Because the`StakingTokens` and `WithdrawalTokens` held by delegators represent pro-rata claims on the `ABC` held by the respective pools.]
+
+```solidity
+/**
+  * @notice Checks that the validator signed an invalid checkpoint and burns ABC
+  * held in its Staking and Withdrawal pools.
+  * @param _validator The validator public key.
+  * @param _root The merkle root of the signed checkpoint.
+  * @param _index The index of the signed checkpoint.
+  * @param _signature The validator's signature on the checkpoint.
+  * @return True upon success.
+  */
+function slash(
+  bytes32 _validator,
+  bytes32 _root,
+  uint256 _index,
+  bytes memory _signature
+) external returns(bool);
+```
 
 The `SlashingManager` contract exposes a governable function to modify the percentage of stake that can be slashed.
 
@@ -78,9 +153,35 @@ The current validator set is managed locally by the `LocalValidatorsManager` con
 
 During the `TransitionWindow`, a 24 hour period at the end of each epoch, anyone may propose a validator set for the upcoming epoch by calling `LocalValidatorsManager.proposeDiff()`. This proposal must contain a `ValidatorsDiff`, which specifies validators to add and remove from the current set.
 
-Proposals are scored by calculating the minimum stake that would be required in order to achieve a quorum. At any given time, the proposal that has scored highest for the next epoch is stored as  `LocalValidatorsManager.pendingDiff`.
+Proposals are scored by calculating the minimum stake that would be required in order to achieve a quorum.&#x20;
 
-After the `TransitionWindow` is over, anyone may call `LocalValidatorsManager.applyDiff()`. The `LocalValidatorsManager` broadcasts a cross-chain message to all remote Inboxes containing the `ValidatorsDiff`, and clears the `pendingDiff`. \[footnote: Note that because message processing is not guaranteed to happen in order, these messages also contain an epoch number, to ensure that the `RemoteValidatorsManager` applies the diff against the correct validator set. As a fallback, the `LocalValidatorsManager` exposes a function to send the entire validator set to a `RemoteValidatorsManager`.`]`&#x20;
+```solidity
+/**
+  * @notice Proposes a diff to be applied to the validator set for the upcoming
+  * epoch.
+  * @dev If accepted, stores the proposal as `pendingDiff`.
+  * @param _additions The public keys to be added to the validator set.
+  * @param _deletions The public keys to be removed from the validator set.
+  * @return True upon acceptance.
+  */
+function proposeDiff(
+  bytes32[] calldata _additions,
+  bytes32[] calldata _deletions
+) external returns(uint256);
+```
+
+After the `TransitionWindow` is over, anyone may apply the diff to the validator set by calling `applyDiff()`. The `LocalValidatorsManager` broadcasts a cross-chain message to all remote Inboxes containing the `ValidatorsDiff`, and clears the `pendingDiff`.
+
+\[footnote: Note that because message processing is not guaranteed to happen in order, these messages also contain an epoch number, to ensure that the `RemoteValidatorsManager` applies the diff against the correct validator set. As a fallback, the `LocalValidatorsManager` exposes a function to send the entire validator set to a `RemoteValidatorsManager.]`
+
+```solidity
+/**
+  * @notice Applies `pendingDiff` to the current validator set, broadcasts it to
+  * all `RemoteValidatorsManagers`, and clears it.
+  * @return True upon success.
+  */
+function applyDiff() external returns(bool);
+```
 
 The `LocalValidatorsManager` contract exposes governable functions to modify the size of the `threshold` and the maximum validator set size.
 
@@ -90,4 +191,43 @@ The validator set for a remote chain is managed by a `RemoteValidatorsManager` c
 
 When the `RemoteValidatorsManager` contract receives a cross-chain message from its corresponding `LocalValidatorsManager`, it updates its view of the validator set accordingly.
 
-The `RemoteValidatorsManager` contract exposes `isValidator()`, `isSignature()`, and `isQuorum()` view functions. These can be used by an Inbox to check that a checkpoint was signed by a quorum of validators.&#x20;
+The `RemoteValidatorsManager` contract exposes a number of view functions that can Be used by an Inbox to check that a checkpoint was signed by a quorum of validators.
+
+```solidity
+/**
+  * @notice Checks whether or not a checkpoint was signed by a quorum of validators.
+  * @param _validators The public keys of the validators that signed the checkpoint.
+  * @param _root The merkle root of the signed checkpoint.
+  * @param _index The index of the signed checkpoint.
+  * @param _signatures The validator signatures on the checkpoint.
+  * @return True upon acceptance.
+  */
+function isQuorum(
+  bytes32[] _validators,
+  bytes32 _root,
+  uint256 _index,
+  bytes memory signatures
+) public view returns (bool);
+
+/**
+  * @notice Checks whether or not a checkpoint was signed by `_publicKey`.
+  * @param _publicKey The public key to verify the signature against.
+  * @param _root The merkle root of the signed checkpoint.
+  * @param _index The index of the signed checkpoint.
+  * @param _signature A signature on the checkpoint.
+  * @return Whether or not signature verification succeeded.
+  */
+function verifySignature(
+  bytes32 _publicKey,
+  bytes32 _root,
+  uint256 _index,
+  bytes memory _signature
+) public view returns (bool);
+
+/**
+  * @notice Returns whether or not `_publicKey` is in the known validator set.
+  * @param _publicKey The public key to check.
+  * @return Whether or not `_publicKey` is in the known validator set.
+  */
+function isValidator(bytes32 _publicKey) public view returns (bool);
+```

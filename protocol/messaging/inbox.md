@@ -6,7 +6,9 @@ description: A description of the Inbox contract
 
 The Inbox contract provides an interface for applications building on Abacus to receive messages from remote chains.
 
-There are several Inboxes on each Abacus-supported chain, one for each remote chain from which messages may be sent.
+{% hint style="info" %}
+There are several Inboxes on each Abacus-supported chain, one for each remote chain from which messages may be sent. For clarity and simplicity, the following documentation describes a single Inbox contract responsible for receiving messages from a single remote chain.
+{% endhint %}
 
 In order to pass a message on to its recipient, a signed [checkpoint](./#checkpoints) committing to that message must first be relayed to the Inbox. Anyone can relay a signed checkpoint to an Inbox by calling `Inbox.checkpoint()`.
 

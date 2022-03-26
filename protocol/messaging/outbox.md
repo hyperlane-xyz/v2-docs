@@ -22,8 +22,8 @@ function dispatch(
 ) external;
 ```
 
-Each dispatched message get inserted as a leaf into an [incremental merkle tree](https://medium.com/@josephdelong/ethereum-2-0-deposit-merkle-tree-13ec8404ca4f). This data structure allows leaves to be inserted while minimizing the number of storage writes.
+Dispatched messages get inserted into an [incremental merkle tree](https://medium.com/@josephdelong/ethereum-2-0-deposit-merkle-tree-13ec8404ca4f), which updates the contents of the tree while minimizing the number of storage for each insertion.
 
-For a message to reach its destination, it must first be included in a [checkpoint](./#checkpoints). Anyone can create a new checkpoint by calling `Outbox.checkpoint()`, which computes the current merkle root and writes it to storage.
+For a dispatched message to reach its destination, it must first be included in a [checkpoint](./#checkpoints). Anyone can create a new checkpoint by calling `Outbox.checkpoint()`, which computes the current merkle root and writes it to storage.
 
 Checkpoints are signed by the validator set and relayed to [Inboxes](inbox.md), after which messages can be proved against the merkle root and forwarded to their recipient.
