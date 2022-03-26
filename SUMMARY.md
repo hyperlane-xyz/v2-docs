@@ -9,7 +9,6 @@
 
 * [Overview](protocol/overview.md)
 * [Messaging](protocol/messaging/README.md)
-  * [Overview](protocol/messaging/overview.md)
   * [Outbox](protocol/messaging/outbox.md)
   * [Inbox](protocol/messaging/inbox.md)
 * [Security](protocol/security/README.md)
@@ -28,11 +27,16 @@
 
 * [Abacus Apps](tips-and-tricks/speed-up-with-quick-find.md)
 * [SDK](developers/sdk.md)
-* [Messaging encoding](developers/messaging-encoding.md)
-* [Example apps](developers/example-apps/README.md)
-  * [Controller](developers/example-apps/controller.md)
-  * [PingPong](developers/example-apps/pingpong.md)
+* [Message encoding](developers/message-encoding.md)
+* [Examples](developers/examples/README.md)
+  * [Controller](developers/examples/controller.md)
+  * [PingPong](developers/examples/pingpong.md)
 
-## Next steps
+## Resources
 
-* [What next?](next-steps/what-next.md)
+* [Roadmap](resources/roadmap.md)
+* [FAQ](resources/faq.md)
+* [Glossary](resources/glossary.md)
+* [Github](https://github.com/abacus-network)
+* [Discord](https://discord.gg/hjWqkP6S)
+* [Website](https://www.useabacus.network)
