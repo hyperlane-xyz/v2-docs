@@ -25,7 +25,7 @@
 
 ## Developers
 
-* [Abacus Apps](tips-and-tricks/speed-up-with-quick-find.md)
+* [Abacus Apps](developers/abacus-apps.md)
 * [SDK](developers/sdk.md)
 * [Message encoding](developers/message-encoding.md)
 * [Examples](developers/examples/README.md)

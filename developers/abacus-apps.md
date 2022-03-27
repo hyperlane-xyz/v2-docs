@@ -1,5 +1,7 @@
 # Abacus Apps
 
+
+
 Abacus Apps are applications that can natively synchronize state across their "shards" on various blockchains and as such are natively cross-chain. Abacus Apps are able to allow users to interact with them from any Abacus supported chain. While the specific patterns and best practices of how to develop such an application may still evolve over time, a common pattern that is used among current Abacus Apps is the Router pattern. It contains the following parts:
 
 #### 1. Abacus Platform authentication
@@ -18,7 +20,7 @@ Each router needs to know the addresses of all the other routers on the remote c
 
 #### 3. Message formatting
 
-Routers can synchronize by sending and receiving messages from each other. At the Abacus platform level, messages are just raw bytes, and thus Abacus Apps need to define a common messaging format to translate them into semantically meaningful entities such as commands or function arguments. Read more under [Message encoding](../developers/message-encoding.md).
+Routers can synchronize by sending and receiving messages from each other. At the Abacus platform level, messages are just raw bytes, and thus Abacus Apps need to define a common messaging format to translate them into semantically meaningful entities such as commands or function arguments. Read more under [Message encoding](message-encoding.md).
 
 
 
