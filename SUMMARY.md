@@ -31,7 +31,6 @@
 * [Message encoding](developers/message-encoding.md)
 * [Examples](developers/examples/README.md)
   * [Controller](developers/examples/controller.md)
-  * [PingPong](developers/examples/pingpong.md)
 
 ## Resources
 
