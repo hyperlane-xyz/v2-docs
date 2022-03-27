@@ -16,7 +16,7 @@ Each Abacus-supported chain has its own validator set, and runs its own instance
 
 #### Registration
 
-To be eligible to receive delegations, validators must first register their public key on the `StakingRegistry`. To register, validators provide a proof-of-possession of their private key \[footnote: To protect against [rogue key attacks](https://rist.tech.cornell.edu/papers/pkreg.html)] and specify a commission as a percentage of staking rewards.
+To be eligible to receive delegations, validators must first register their public key on the `StakingRegistry`. To register, validators provide a proof-of-possession of their private key \[[1](proof-of-stake.md#footnotes)] and specify a commission as a percentage of staking rewards.
 
 Each registered validator has a corresponding `StakingPool` contract, responsible for managing ABC tokens delegated to that validator.
 
@@ -38,7 +38,7 @@ function register(
 
 #### Delegation
 
-Users can delegate to a validator by calling `StakingPool.delegate()`, which transfers `ABC` tokens from the user to the pool. In return, the user receives `ERC20`-compatible `StakingTokens`, representing their proportional share of the `ABC` held by the pool. \[footnote: In other words, the users share of the total supply of `StakingTokens` is equal to the share of `ABC` they contributed to the pool at the time of delegation.]
+Users can delegate to a validator by calling `StakingPool.delegate()`, which transfers `ABC` tokens from the user to the pool. In return, the user receives `ERC20`-compatible `StakingTokens`, representing their proportional share of the `ABC` held by the pool \[[2](proof-of-stake.md#undefined)].
 
 These `StakingTokens` represent a pro-rata claim on the `ABC` held by the `StakingPool`.
 
@@ -55,7 +55,7 @@ function delegate(uint256 _amount) external returns (uint256);
 
 Users can withdraw their stake from a pool by calling `StakingPool.withdraw()`, which burns the user's `StakingTokens` and transfers the corresponding share of the pool's `ABC`  to the validator's `WithdrawalPool`.
 
-The `WithdrawalPool` mints an `ERC721`-compatible `WithdrawalToken` to the user, representing the user's proportional share of `ABC` in the `WithdrawalPool` and the timestamp at which that share can be withdrawn \[footnote: 21 days later].
+The `WithdrawalPool` mints an `ERC721`-compatible `WithdrawalToken` to the user, representing the user's proportional share of `ABC` in the `WithdrawalPool` and the timestamp at which that share can be withdrawn \[[3](proof-of-stake.md#footnotes)].
 
 ```solidity
 /**
@@ -95,9 +95,7 @@ Validators and delegators are rewarded for their role in securing the network in
 
 The protocol specifies a governable `rewardsRate`, the number of `ABC` tokens that should be minted every epoch for each validator in the validator set.
 
-Rewards are split between validators and their delegators. Validators receive a percentage of the rewards as a commission \[footnote: As specified during registration], and the rest is transferred to their `StakingPool`, which effectively distributes rewards pro-rata to delegators.
-
-\[footnote: Because the `StakingTokens` tokens held by delegators represent a pro-rata claim on the `ABC` held by the `StakingPool`].
+Rewards are split between validators and their delegators. Validators receive a percentage of the rewards as a commission \[[4](proof-of-stake.md#footnotes)], and the rest is transferred to their `StakingPool`, which effectively distributes rewards pro-rata to delegators \[[5](proof-of-stake.md#footnotes)].
 
 The `RewardsManager` contract manages the `rewardsRate` and is responsible for distributing staking rewards to validators and their delegators. Anyone can distribute staking rewards by specifying a validator and calling `RewardsManager.reward()`.&#x20;
 
@@ -121,7 +119,7 @@ If a validator signs anything other than a valid [Outbox](../messaging/outbox.md
 
 Anyone can present evidence in the form of a signed checkpoint by calling `SlashingManager.slash()`. The contract verifies the signature, checks that the checkpoint is not present in the Outbox, and that this evidence has not already been presented to the `SlashingManager`.
 
-If the evidence is accepted, the `SlashingManager` withdraws and burns half of the `ABC` held by the `StakingPool` and `WithdrawalPool`, which effectively slashes each delegator pro-rata.\[footnote: Because the`StakingTokens` and `WithdrawalTokens` held by delegators represent pro-rata claims on the `ABC` held by the respective pools.]
+If the evidence is accepted, the `SlashingManager` withdraws and burns half of the `ABC` held by the `StakingPool` and `WithdrawalPool`, which effectively slashes each delegator pro-rata \[[6](proof-of-stake.md#footnotes)].
 
 ```solidity
 /**
@@ -170,9 +168,7 @@ function proposeDiff(
 ) external returns(uint256);
 ```
 
-After the `TransitionWindow` is over, anyone may apply the diff to the validator set by calling `applyDiff()`. The `LocalValidatorsManager` broadcasts a cross-chain message to all remote Inboxes containing the `ValidatorsDiff`, and clears the `pendingDiff`.
-
-\[footnote: Note that because message processing is not guaranteed to happen in order, these messages also contain an epoch number, to ensure that the `RemoteValidatorsManager` applies the diff against the correct validator set. As a fallback, the `LocalValidatorsManager` exposes a function to send the entire validator set to a `RemoteValidatorsManager.]`
+After the `TransitionWindow` is over, anyone may apply the diff to the validator set by calling `applyDiff()`. The `LocalValidatorsManager` broadcasts a cross-chain message to all remote Inboxes containing the `ValidatorsDiff`, and clears the `pendingDiff`\[[7](proof-of-stake.md#footnotes)].
 
 ```solidity
 /**
@@ -231,3 +227,14 @@ function verifySignature(
   */
 function isValidator(bytes32 _publicKey) public view returns (bool);
 ```
+
+#### Footnotes
+
+* \[1] To protect against [rogue key attacks](https://rist.tech.cornell.edu/papers/pkreg.html)
+* \[2] In other words, the users share of the total supply of `StakingTokens` is equal to the share of `ABC` they contributed to the pool at the time of delegation.
+* \[3] 21 days later
+* \[4] As specified during registration
+* \[5] Because the `StakingTokens` tokens held by delegators represent a pro-rata claim on the `ABC` held by the `StakingPool`
+* \[6] Because the`StakingTokens` and `WithdrawalTokens` held by delegators represent pro-rata claims on the `ABC` held by the respective pools.
+* \[7] Note that because message processing is not guaranteed to happen in order, these messages also contain an epoch number, to ensure that the `RemoteValidatorsManager` applies the diff against the correct validator set. As a fallback, the `LocalValidatorsManager` exposes a function to send the entire validator set to a `RemoteValidatorsManager.`
+

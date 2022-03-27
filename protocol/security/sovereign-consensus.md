@@ -12,13 +12,13 @@ While we expect the security of the Abacus validator set to be sufficient for mo
 
 Sovereign consensus is designed to address the scaling problems inherent in proof-of-stake based oracle networks.
 
-The economic security of proof-of-stake is based on a simple principle; that the "stick" of slashing is larger than the "carrot" that can be gained by byzantine behavior.\[footnote: [https://en.wikipedia.org/wiki/Carrot\_and\_stick](https://en.wikipedia.org/wiki/Carrot\_and\_stick)]
+The economic security of proof-of-stake is based on a simple principle; that the "stick" of slashing is larger than the "carrot" that can be gained by byzantine behavior \[[1](sovereign-consensus.md#undefined)].
 
-Intuitively, this holds true for proof-of-stake blockchains. A quorum of validators can collude to double spend tokens by double signing blocks and forking the chain, for which their stake would be slashed. Validators cannot spend tokens for which they don't have access to the private key; they can at _most_ double spend tokens they already own. It seems reasonable to conclude that the economic consequences of slashing would be greater than the economic benefits of double spending.
+Intuitively, this holds true for proof-of-stake blockchains. A quorum of validators can collude to double spend tokens by double signing blocks and forking the chain, for which their stake would be slashed. Validators cannot spend tokens for which they don't have access to the private key; they can at _most_ double spend tokens they already own. It seems reasonable to conclude that the economic consequences of slashing would be greater than the economic benefits of double spending \[[2](sovereign-consensus.md#undefined)].
 
 \[image: stick > carrot]
 
-\[footnote: For simplicity, we ignore [long range attacks](https://blog.positive.com/rewriting-history-a-brief-introduction-to-long-range-attacks-54e473acdba9), which may allow validators to retroactively go "long" or "short" tokens for which the future price is substantially different, while potentially avoiding the consequences of slashing. Most proof-of-stake blockchains have mitigations to protect against long range attacks, and all can be expected to hard-fork in the event of such an attack.]
+
 
 Unfortunately, the economic security of proof-of-stake is less clear for oracle networks. Unlike in layer ones, where the rules of the blockchain can prevent byzantine validators from spending tokens that they don't own, oracle networks have no ability to verify the values provided by their validators. This makes the attack surface far larger than in blockchains. In other words, the "stick" stays the same size, but the "carrot" grows much larger.
 
@@ -72,3 +72,8 @@ function verify(
 ```
 
 More sophisticated sovereigns may implement rules specific to the content of the message. For example, a cross-chain token application could require additional guardian signatures for transfers over a certain size.
+
+#### Footnotes
+
+* \[1] [https://en.wikipedia.org/wiki/Carrot\_and\_stick](https://en.wikipedia.org/wiki/Carrot\_and\_stick)
+* \[2] For simplicity, we ignore [long range attacks](https://blog.positive.com/rewriting-history-a-brief-introduction-to-long-range-attacks-54e473acdba9), which may allow validators to retroactively go "long" or "short" tokens for which the future price is substantially different, while potentially avoiding the consequences of slashing. Most proof-of-stake blockchains have mitigations to protect against long range attacks, and all can be expected to hard-fork in the event of such an attack.
