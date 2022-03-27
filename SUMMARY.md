@@ -3,7 +3,8 @@
 ## Introduction
 
 * [Overview](README.md)
-* [Interchain apps](introduction/interchain-apps.md)
+* [Background](introduction/background.md)
+* [Vision](introduction/vision.md)
 
 ## Protocol
 
