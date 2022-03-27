@@ -25,7 +25,8 @@
 
 ## Developers
 
-* [Abacus Apps](developers/abacus-apps.md)
+* [Abacus apps](developers/abacus-apps.md)
+* [Abacus Apps](developers/abacus-apps-1.md)
 * [SDK](developers/sdk.md)
 * [Message encoding](developers/message-encoding.md)
 * [Examples](developers/examples/README.md)
