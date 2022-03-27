@@ -20,17 +20,23 @@ The messaging component of Abacus is comprised of two smart contracts, [Outbox](
 
 To send a cross-chain message chain A, developers simply call `Outbox.dispatch()`, specifying the message contents, the destination chain, and the address on that chain that the message should be sent to.
 
-To receive a cross-chain message on chain B, developers simply implement a `handle()` function. This gets called by an Inbox contract with the message contents, the origin chain, and the address that sent the message, as arguments.
+To receive a cross-chain message on chain B, developers simply implement a `handle()` function. This gets called by an Inbox contract with the message contents, the origin chain, and the address that sent the message on the origin chain, as arguments.
 
 ### Security
 
-Abacus ensures messages are passed between chains securely and in a way that is consistent with the principles of decentralization.
+Abacus cross-chain messaging is secured by two layers.
 
-Abacus is powered by decentralized network of validators, secured by [proof-of-stake](security/proof-of-stake.md). On each chain, the validator set acts as a notary, signing the merkle root of the Outbox smart contract. This commits to the history of outbound messages on that chain, which allows those messages to be relayed to their destinations.
+First, a [proof-of-stake](security/proof-of-stake.md) protocol secures a validator set, providing shared security for all Abacus users. Second, [sovereign consensus](security/sovereign-consensus.md) allows  application's to implement additional security measures when necessary.
+
+#### Proof of stake
+
+Abacus is powered by decentralized network of validators, secured by proof-of-stake. On each chain, the validator set acts as a notary, signing the merkle root of the Outbox smart contract. This commits to the history of outbound messages on that chain, which allows those messages to be relayed to their destinations.
 
 The validator set for each chain is determined by a delegated proof-of-stake protocol, implemented as a series of smart contracts. Individual validators that sign anything other than Outbox merkle roots can be slashed by presenting the signature as evidence to these smart contracts.
 
-Developers building on the Abacus protocol can optionally specify application specific security rules using [sovereign consensus](security/sovereign-consensus.md). Sovereign consensus addresses the scalability problems inherent in proof-of-stake systems while isolating failures within "zones of sovereignty".
+#### Sovereign consensus
+
+Developers building on the Abacus protocol can optionally specify application specific security rules using sovereign consensus. Sovereign consensus addresses the scalability problems inherent in proof-of-stake systems while isolating failures within "zones of sovereignty".
 
 ### Governance
 

@@ -8,7 +8,7 @@ The primary purpose of the Abacus protocol is to facilitate the passing of messa
 
 Applications send and receive cross-chain messages using the Outbox and Inbox mailbox smart contracts.&#x20;
 
-These mailboxes store checkpoints, a commitment to the contents of the mailbox, allowing messages to be relayed efficiently from an Outbox on one chain to an Inbox on another.
+These mailboxes store checkpoints, a commitment to the contents of the mailbox in the form of a merkle root, allowing messages to be relayed efficiently from an Outbox on one chain to an Inbox on another.
 
 ## Mailboxes
 
@@ -26,8 +26,8 @@ Merkle roots are passed between Outboxes and Inboxes via checkpoints. Checkpoint
 
 To pass messages from an Outbox to an Inbox, [someone](../agents/checkpointer.md) must call `Outbox.checkpoint()`. The Outbox smart contract creates a checkpoint and writes it to storage.
 
-The [validator set](../agents/validator.md) is responsible for observing the Outbox smart contract and signing new checkpoints as they're created. The signed checkpoints then get written to a publicly viewable channel, such as [IPFS](https://ipfs.io) or [S3](https://en.wikipedia.org/wiki/Amazon\_S3).
+The [validator set](../agents/validator.md) is responsible for observing the Outbox smart contract and signing new checkpoints as they're created. The signed checkpoints then get written to a publicly viewable, highly available channel, such as [S3](https://en.wikipedia.org/wiki/Amazon\_S3) or the underlying blockchain.
 
 The signed checkpoint can then be [relayed](../agents/relayer.md) to an Inbox contract, which accepts the checkpoint if and only if it was signed by a quorum of validators.
 
-After a checkpoint has been accepted by an Inbox, messages can be proved against the checkpoint root and forwarded to their intended recipients.
+After a checkpoint has been accepted by an Inbox, messages can be proven against the checkpoint root and forwarded to their intended recipients.

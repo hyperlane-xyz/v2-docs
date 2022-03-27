@@ -28,7 +28,7 @@ To enable sovereign consensus, applications simply designate a sovereign smart c
 
 Sovereign consensus allows applications to optionally provision additional security _beyond_ what the Abacus proof-of-stake protocol already provides. Furthermore, it allows for failures to be isolated within "zones of sovereignty", preventing a single failure from cascading throughout the protocol.
 
-A simple sovereign implementation would be to require additional signatures on a checkpoint, in addition to those of the Abacus validator set. An application's DAO could appoint a set of reputable and incentive aligned guardians, and require a quorum of guardians to sign a checkpoint before accepting any messages it contains.
+A simple example implementation of sovereign consensus would be to require additional signatures on a checkpoint, in addition to those of the Abacus validator set. An application's DAO could appoint a set of reputable and incentive aligned guardians, and require a quorum of guardians to sign a checkpoint before accepting any messages it contains.
 
 More advanced sovereign implementations may consider the contents of the message or the current state of the application.
 

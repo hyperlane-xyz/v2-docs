@@ -38,7 +38,7 @@ Sovereign consensus complements proof-of-stake by allowing applications that bui
 
 While these rules can be arbitrary, we expect most applications that adopt sovereign consensus to retain some notion of guardians; application-specific validators that must have signed a [checkpoint](../messaging/#checkpoints) before its messages can be forwarded by the [Inbox](../messaging/inbox.md) to the application.
 
-The economic security of the protocol is strengthened when applications select incentive aligned guardians, as an application's native token can be expected to depreciate in the event of an Abacus safety failure.
+The economic security of the protocol is strengthened when applications select incentive aligned guardians, as an application's native token can be expected to depreciate in the event that an attacker is able to pass fraudulent messages to the application.
 
 Abacus applications enable sovereign consensus by implementing the `sovereign()` function in their application, which returns the smart contract address containing the sovereign consensus rules.
 
@@ -58,7 +58,7 @@ That smart contract must implement `verify()`, which takes message-specific info
   * @param _origin The chain ID from which the message was sent. 
   * @param _sender The address from which the message was sent.
   * @param _message The contents of the message.
-  * @param _data Additional data provided by the caller,
+  * @param _sovereignData Additional data provided by the caller,
   * e.g. guardian signatures on `_root`
   * @return Returns true iff the message should be accepted.
   */
@@ -67,9 +67,8 @@ function verify(
   uint32 _origin,
   bytes32 _sender,
   bytes memory _message,
-  bytes memory _data
+  bytes memory _sovereignData
 ) external view returns (bool valid);
 ```
 
 More sophisticated sovereigns may implement rules specific to the content of the message. For example, a cross-chain token application could require additional guardian signatures for transfers over a certain size.
-
