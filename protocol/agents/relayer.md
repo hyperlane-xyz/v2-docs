@@ -1,5 +1,30 @@
 # Relayer
 
-The relayer agent takes signed checkpoints from the Validators and submits them to the associated inboxes on the remote chains. It is important to note that the relayer is a permission-less role and thus anyone can run a relayer and relay the checkpoints. Similar to the [Checkpointer](checkpointer.md), relayers will usually consider a trade-off between latency and cost when evaluating whether to relay a particular signed checkpoint. Even at the presence of a more recent signed checkpoints, relayers should not relay them unless said checkpoint actually results in the ability to process additional messages.
+The Relayer is an unpermissioned role responsible for taking signed [checkpoints](../messaging/#checkpoints) from a source chain and relaying them to an [Inbox](../messaging/inbox.md) on a destination chain.
 
-At launch, relayers will be able to be configured with a simple "max-latency" policy, but in the future more sophisticated policies can be developed that consider additional data points such as message senders/contents/quantity as well as compensation mechanisms.
+Checkpoints can be relayed by calling `Inbox.checkpoint()`. Because a message must be included in a relayed checkpoint before it can be sent to its recipient, more frequent relaying of checkpoints results in lower perceived latency for users. Anyone can relay a checkpoint at any time to facilitate the delivery of cross-chain messages.
+
+```solidity
+/**
+  * @notice Verifies that a quorum of validators signed the checkpoint and writes
+  * it to storage so that messages can be proved against its root.
+  * @dev Reverts if checkpoints's index is not greater than our latest index.
+  * @param _root The checkpoint's merkle root
+  * @param _index The checkpoint's index
+  * @param _signature Validator signatures on `_root` and `_index`
+  */
+function checkpoint(
+  bytes32 _root,
+  uint256 _index,
+  bytes memory _signatures
+) external;
+```
+
+For convenience, Abacus Works will run an open source and configurable relayer agent, implemented as a rust binary.&#x20;
+
+Relayers are configured to point to the Validators' storage modality to read the signed checkpoints off-chain and aggregate them before submitting them on-chain.
+
+For now, the relayer can be configured with a simple "max-latency" policy, ensuring that checkpoints are always relayed within a predefined time period.
+
+In the future the protocol may directly or indirectly incentivize the relaying of checkpoints.&#x20;
+

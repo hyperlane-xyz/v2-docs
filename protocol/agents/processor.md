@@ -1,7 +1,30 @@
 # Processor
 
-Once a relayer relayed a signed checkpoint, the processor agent is able to construct a merkle proof for the processing of a message included in that checkpoint and submit such on-chain. Processing of a message is completely permission-less. On the testnets, developers can expect messages to be processed for them. At mainnet launch, there will be an adjacent protocol for allowing users to pay on the source chain for the processing of their messages on the remote chain and developers can opt into it. Otherwise, application developers (or anyone else) can also just run processors themselves.
+The Processor is an unpermissioned role that proves and processes messages on an [Inbox](../messaging/inbox.md).
 
-#### Error Handling
+Messages can be proven against a checkpoint by calling `Inbox.prove()`. After a message has been proved, it can be processed by calling `Inbox.process()`. For convenience, both actions can be performed in the same transaction by calling `Inbox.proveAndProcess()`.
 
-If the recipient of a message reverts, the processor agent may be configured to retry the processing of the message at a later time. However after a maximum amount of retries, the processor will no longer attempt to process the message. Developers should be mindful of this possibility and possibly consider monitoring of their application's messages and require manual processing.
+```solidity
+/**
+  * @notice First attempts to prove the validity of `_message`. If successful,
+  * then attempts to process.
+  * @param _message Formatted message
+  * @param _proof Merkle proof of inclusion for message's leaf
+  * @param _index Index of leaf in Outbox's merkle tree
+  */
+function proveAndProcess(
+  bytes memory _message,
+  bytes32[32] calldata _proof,
+  uint256 _index
+) external;
+```
+
+For convenience, Abacus Works will run an open source and configurable processor agent, implemented as a rust binary.
+
+The processor observes an [Outbox](../messaging/outbox.md), constructing merkle proofs for messages as checkpoints are created. After those checkpoints are relayed to an Inbox, the processor submits the merkle proof to the Inbox, which forwards the message to its recipient.
+
+On testnets, developers can expect the Abacus Works processor to automatically process messages. On mainnets, there will be a protocol for paying on the source chain for the processor to process the message on the remote chain.
+
+#### Error handling
+
+The processor may be configured to retry messages when processing fails. Messages that fail to process on the first attempt will cause the processor to retry with exponential backoff. After a maximum amount of retries, the processor will no longer attempt to process the message.

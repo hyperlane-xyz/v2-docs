@@ -1,12 +1,8 @@
----
-description: A high level description of the Checkpointer agent
----
-
 # Checkpointer
 
 The Checkpointer is an unpermissioned role responsible for creating [checkpoints](../messaging/#checkpoints) on an [Outbox](../messaging/outbox.md).
 
-Checkpoints can be created by calling `Outbox.checkpoint()`.  Because a message must be included in a checkpoint before it can be relayed to a remote chain, more frequent checkpoints result in lower perceived latency for end users. Anyone can create a checkpoint at any time to facilitate the delivery of cross-chain messages.
+Checkpoints can be created by calling `Outbox.checkpoint()`.  Because a message must be included in a checkpoint before it can be relayed to a remote chain, more frequent checkpoints result in lower perceived latency for users. Anyone can create a checkpoint at any time to facilitate the delivery of cross-chain messages.
 
 ```solidity
 /**
