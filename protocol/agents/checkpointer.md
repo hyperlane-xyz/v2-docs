@@ -1,5 +1,27 @@
+---
+description: A high level description of the Checkpointer agent
+---
+
 # Checkpointer
 
-Checkpointers are agents that explicitly call the `checkpoint` function on the Outbox so that Validators can sign them. Checkpointers are permissionless and anyone can run them. Checkpointers will usually consider whether to checkpoint a trade-off between latency and cost. More frequent checkpointing allows the root of the Outbox's merkle tree to be relayed faster at the expense of higher gas consumption.&#x20;
+The Checkpointer is an unpermissioned role responsible for creating [checkpoints](../messaging/#checkpoints) on an [Outbox](../messaging/outbox.md).
 
-At launch, checkpointers may be run with a simple "max-latency" policy but in the future, more advanced policies can be developed that account for other indicators such as number of messages "waiting to be checkpointed", priorities of specific senders, etc. Having message senders compensate checkpointers is also being considered. In the meantime if an application requires higher latency, it can either run their own checkpointer or even just checkpoint as part of the message dispatch on-chain.
+Checkpoints can be created by calling `Outbox.checkpoint()`.  Because a message must be included in a checkpoint before it can be relayed to a remote chain, more frequent checkpoints result in lower perceived latency for end users. Anyone can create a checkpoint at any time to facilitate the delivery of cross-chain messages.
+
+```solidity
+/**
+  * @notice Checkpoints the latest root and index.
+  * Validators are expected to sign this checkpoint so that it can be
+  * relayed to the Inbox contracts.
+  * @dev emits Checkpoint event
+  */
+function checkpoint() external;
+```
+
+For convenience, Abacus Works will run an open source and configurable checkpointer agent, implemented as a rust binary.&#x20;
+
+For now, the checkpointer can be configured with a simple "max-latency" policy, ensuring that messages are always included in a checkpoint within a predefined time period.&#x20;
+
+If application developers require lower latency, they can run a checkpointer themselves or call `Outbox.checkpoint()` directly within their application after calling `Outbox.dispatch().`&#x20;
+
+In the future the protocol may directly or indirectly incentivize checkpoint creation.&#x20;
