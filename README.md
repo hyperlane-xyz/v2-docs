@@ -6,7 +6,7 @@ description: New to Abacus? Start here.
 
 ### What is Abacus?
 
-Abacus is a developer platform that allows users to build cross-chain decentralized applications.
+Abacus is a developer platform that allows users to build interchain decentralized applications.
 
 Applications built on top of Abacus can share state across multiple blockchains using Abacus'  generalized cross-chain messaging protocol.&#x20;
 
@@ -16,7 +16,7 @@ Abacus isn’t a blockchain. Abacus is how you build interchain applications.
 
 Abacus aims to make the "Which chain should I deploy on?" question obsolete.
 
-In traditional web development, the choice of hosting environment is mostly an afterthought. While meaningful differences exist between cloud providers, the experience that the developer can deliver to their users is not meaningfully impacted by this choice.
+In traditional web development, the choice of hosting environment is mostly an afterthought. While material differences exist between cloud providers, the experience that the developer can deliver to their users is not meaningfully impacted by this choice.
 
 On the other hand, a web3 developer's choice of hosting environment can have existential implications for them and their users. Decentralized applications have largely succeeded due to accessibility and composability, but applications are only accessible and composable within the chain on which they're deployed.
 
