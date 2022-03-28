@@ -40,9 +40,9 @@ Developers building on the Abacus protocol can optionally specify application sp
 
 ### Governance
 
-Abacus is governed by a [DAO](governance/dao.md), based on Compound's Governor Bravo. Much as in other protocols, ABC holders can propose, vote on, and implement changes to the Abacus protocol.
+Abacus is governed by a [DAO](broken-reference), based on Compound's Governor Bravo. Much as in other protocols, ABC holders can propose, vote on, and implement changes to the Abacus protocol.
 
-Unlike many of these other protocols, Abacus is natively multi-chain. Users can propose and vote on proposals from any Abacus supported chain. Furthermore, the Abacus DAO can execute transactions on any Abacus supported chain using the [Abacus Controller](governance/controller.md).
+Unlike many of these other protocols, Abacus is natively multi-chain. Users can propose and vote on proposals from any Abacus supported chain. Furthermore, the Abacus DAO can execute transactions on any Abacus supported chain using the [Abacus Controller](broken-reference).
 
 The Abacus Controller is an instance of the [Controller](../developers/examples/controller.md) application, that owns the Abacus protocol contracts on each chain. When the DAO needs to execute a transaction on a remote chain, it calls a function on the Abacus Controller contract on the source chain, specifying the transaction to be executed.
 

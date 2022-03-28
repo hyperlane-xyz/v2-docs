@@ -1,7 +1,7 @@
 # Roadmap
 
 {% hint style="info" %}
-The Abacus protocol is still under development. The protocol docs describe the latest Abacus protocol design. This roadmap is illustrative only and is subject to change.
+The following roadmap is for informational purposes only and is subject to change.
 {% endhint %}
 
 April 2022

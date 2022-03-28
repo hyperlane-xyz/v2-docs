@@ -81,7 +81,7 @@ function withdraw(uint256 _id) external returns (uint256);
 
 ## Epochs
 
-Abacus partitions time up into `Epochs`, a period of time during which the validator set remains fixed. Epochs are numbered, and the length of an epoch is a [governable](../governance/) parameter of the protocol.
+Abacus partitions time up into `Epochs`, a period of time during which the validator set remains fixed. Epochs are numbered, and the length of an epoch is a [governable](../governance.md) parameter of the protocol.
 
 Epochs are tracked by the `EpochManager` contract, which exposes functions to modify the length of an epoch, and to query a particular epoch's start and end timestamps.
 

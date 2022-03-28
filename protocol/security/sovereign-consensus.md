@@ -16,17 +16,9 @@ The economic security of proof-of-stake is based on a simple principle; that the
 
 Intuitively, this holds true for proof-of-stake blockchains. A quorum of validators can collude to double spend tokens by double signing blocks and forking the chain, for which their stake would be slashed. Validators cannot spend tokens for which they don't have access to the private key; they can at _most_ double spend tokens they already own. It seems reasonable to conclude that the economic consequences of slashing would be greater than the economic benefits of double spending \[[2](sovereign-consensus.md#undefined)].
 
-\[image: stick > carrot]
-
-
-
 Unfortunately, the economic security of proof-of-stake is less clear for oracle networks. Unlike in layer ones, where the rules of the blockchain can prevent byzantine validators from spending tokens that they don't own, oracle networks have no ability to verify the values provided by their validators. This makes the attack surface far larger than in blockchains. In other words, the "stick" stays the same size, but the "carrot" grows much larger.
 
-\[image: stick < carrot]
-
 This problem only gets worse as the network scales in adoption, as we can expect the value of the assets built on top of the oracle network to grow faster than the value of the proof-of-stake token that secures it.
-
-\[TODO(Zaki): cite Sreeram Kannan here].
 
 At Abacus, we believe that a simple proof-of-stake protocol is not sufficient to provide economic security for a cross-chain messaging layer at scale.
 

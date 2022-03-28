@@ -8,7 +8,7 @@ description: New to Abacus? Start here.
 
 Abacus is a developer platform that allows users to build cross-chain decentralized applications.
 
-Applications built on top of Abacus can share state across multiple blockchains by using Abacus'  generalized cross-chain messaging protocol.&#x20;
+Applications built on top of Abacus can share state across multiple blockchains using Abacus'  generalized cross-chain messaging protocol.&#x20;
 
 Abacus isn’t a blockchain. Abacus is how you build interchain applications.
 

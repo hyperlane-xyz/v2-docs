@@ -15,20 +15,19 @@
 * [Security](protocol/security/README.md)
   * [Proof of stake](protocol/security/proof-of-stake.md)
   * [Sovereign consensus](protocol/security/sovereign-consensus.md)
-* [Governance](protocol/governance/README.md)
-  * [DAO](protocol/governance/dao.md)
-  * [Controller](protocol/governance/controller.md)
+* [Governance](protocol/governance.md)
 * [Agents](protocol/agents/README.md)
   * [Checkpointer](protocol/agents/checkpointer.md)
-  * [Validator](protocol/agents/validator.md)
+  * [Validators](protocol/agents/validators.md)
   * [Relayer](protocol/agents/relayer.md)
   * [Processor](protocol/agents/processor.md)
 
 ## Developers
 
-* [Abacus apps](developers/abacus-apps.md)
+* [Interchain applications](developers/interchain-applications/README.md)
+  * [Routers](developers/interchain-applications/routers.md)
+  * [Message encoding](developers/interchain-applications/message-encoding.md)
 * [SDK](developers/sdk.md)
-* [Message encoding](developers/message-encoding.md)
 * [Examples](developers/examples/README.md)
   * [Controller](developers/examples/controller.md)
 
