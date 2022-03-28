@@ -12,7 +12,7 @@ Applications built on top of Abacus can share state across multiple blockchains 
 
 Abacus isn’t a blockchain. Abacus is how you build interchain applications.
 
-### The problem Abacus is solving
+### What problem does Abacus solve?
 
 Abacus aims to make the "Which chain should I deploy on?" question obsolete.
 
