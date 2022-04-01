@@ -17,6 +17,11 @@ contract Example {
   
   event MessageReceived(bytes message);
   
+  modifier onlyInbox() {
+    require(msg.sender == inbox, "!inbox");
+    _;
+  }
+  
   constructor(address _outbox, address _inbox) {
     outbox = _outbox;
     inbox = _inbox;
