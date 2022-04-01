@@ -20,5 +20,5 @@ function latestCheckpoint()
 
 Validators that sign anything other than a finalized checkpoint risk compromising the safety of the protocol, and may be slashed.
 
-Abacus Works is developing the validator as a rust binary that can be easily run by anyone. Operationally, validators need to run this binary and a node for the chain that they are validating for. We hope that the majority of Abacus validators will come from each chain's existing node operator community.
+Abacus Works is developing the validator as a Rust binary that can be easily run by anyone. Operationally, validators need to run this binary and a node for the chain that they are validating for. We hope that the majority of Abacus validators will come from each chain's existing node operator community.
 
