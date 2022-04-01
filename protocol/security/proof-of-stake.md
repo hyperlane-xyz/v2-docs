@@ -187,7 +187,7 @@ The validator set for a remote chain is managed by a `RemoteValidatorsManager` c
 
 When the `RemoteValidatorsManager` contract receives a cross-chain message from its corresponding `LocalValidatorsManager`, it updates its view of the validator set accordingly.
 
-The `RemoteValidatorsManager` contract exposes a number of view functions that can Be used by an Inbox to check that a checkpoint was signed by a quorum of validators.
+The `RemoteValidatorsManager` contract exposes a number of view functions that can be used by an Inbox to check that a checkpoint was signed by a quorum of validators.
 
 ```solidity
 /**
