@@ -26,7 +26,7 @@ To receive a cross-chain message on chain B, developers simply implement a `hand
 
 Abacus cross-chain messaging is secured by two layers.
 
-First, a [proof-of-stake](security/proof-of-stake.md) protocol secures a validator set, providing shared security for all Abacus users. Second, [sovereign consensus](security/sovereign-consensus.md) allows  application's to implement additional security measures when necessary.
+First, a [proof-of-stake](security/proof-of-stake.md) protocol secures a validator set, providing shared security for all Abacus users. Second, [sovereign consensus](security/sovereign-consensus.md) allows applications to implement additional security measures when necessary.
 
 #### Proof of stake
 
@@ -42,7 +42,7 @@ Developers building on the Abacus protocol can optionally specify application sp
 
 Abacus is governed by a [DAO](broken-reference), based on Compound's Governor Bravo. Much as in other protocols, ABC holders can propose, vote on, and implement changes to the Abacus protocol.
 
-Unlike many of these other protocols, Abacus is natively multi-chain. Users can propose and vote on proposals from any Abacus supported chain. Furthermore, the Abacus DAO can execute transactions on any Abacus supported chain using the [Abacus Controller](broken-reference).
+Unlike many of these other protocols, Abacus is natively multi-chain. Users can propose and vote on proposals from any Abacus supported chain. Furthermore, the Abacus DAO can execute transactions on any Abacus supported chain using the Abacus Controller.
 
 The Abacus Controller is an instance of the [Controller](../developers/examples/controller.md) application, that owns the Abacus protocol contracts on each chain. When the DAO needs to execute a transaction on a remote chain, it calls a function on the Abacus Controller contract on the source chain, specifying the transaction to be executed.
 
