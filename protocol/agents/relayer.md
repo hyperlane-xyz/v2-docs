@@ -20,7 +20,7 @@ function checkpoint(
 ) external;
 ```
 
-For convenience, Abacus Works will run an open source and configurable relayer agent, implemented as a rust binary.&#x20;
+For convenience, Abacus Works will run an open source and configurable relayer agent, implemented as a Rust binary.&#x20;
 
 Relayers are configured to point to the Validators' storage modality to read the signed checkpoints off-chain and aggregate them before submitting them on-chain.
 
