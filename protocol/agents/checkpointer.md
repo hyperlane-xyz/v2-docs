@@ -14,7 +14,7 @@ Checkpoints can be created by calling `Outbox.checkpoint()`.  Because a message 
 function checkpoint() external;
 ```
 
-For convenience, Abacus Works will run an open source and configurable checkpointer agent, implemented as a rust binary.&#x20;
+For convenience, Abacus Works will run an open source and configurable checkpointer agent, implemented as a Rust binary.&#x20;
 
 For now, the checkpointer can be configured with a simple "max-latency" policy, ensuring that messages are always included in a checkpoint within a predefined time period.&#x20;
 
