@@ -11,7 +11,7 @@ In this page we describe previous approaches to interoperability and propose **"
 ### Eras of Interoperability
 
 {% hint style="info" %}
-Work on blockchain interoperability dates back to the [early days](https://bitcointalk.org/index.php?topic=91843.msg1011956#msg1011956) of bitcoin. Abacus focuses specifically on interoperability of smart contract platforms. &#x20;
+Work on blockchain interoperability dates back to the [early days](https://bitcointalk.org/index.php?topic=91843.msg1011956#msg1011956) of Bitcoin. Abacus focuses specifically on interoperability of smart contract platforms. &#x20;
 {% endhint %}
 
 #### _2016-2019: Walled gardens_
