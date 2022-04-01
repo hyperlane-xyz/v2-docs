@@ -19,7 +19,7 @@ function proveAndProcess(
 ) external;
 ```
 
-For convenience, Abacus Works will run an open source and configurable processor agent, implemented as a rust binary.
+For convenience, Abacus Works will run an open source and configurable processor agent, implemented as a Rust binary.
 
 The processor observes an [Outbox](../messaging/outbox.md), constructing merkle proofs for messages as checkpoints are created. After those checkpoints are relayed to an Inbox, the processor submits the merkle proof to the Inbox, which forwards the message to its recipient.
 
