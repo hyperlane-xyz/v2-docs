@@ -36,7 +36,7 @@ Abacus applications enable sovereign consensus by implementing the `sovereign()`
 
 ```solidity
 /**
-  * @return Returns the address of the applications sovereign consensus contract.
+  * @return Returns the address of the application's sovereign consensus contract.
   **/
 function sovereign() external view returns (address);
 ```
