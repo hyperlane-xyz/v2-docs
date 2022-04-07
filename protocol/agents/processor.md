@@ -1,8 +1,8 @@
 # Processor
 
-The Processor is an unpermissioned role that proves and processes messages on an [Inbox](../messaging/inbox.md).
+Processors are responsible for verifying and then processing messages on an [Inbox](../messaging/inbox.md).
 
-Messages can be proven against a checkpoint by calling `Inbox.prove()`. After a message has been proved, it can be processed by calling `Inbox.process()`. For convenience, both actions can be performed in the same transaction by calling `Inbox.proveAndProcess()`.
+Messages can be verified against a checkpoint by calling `Inbox.prove()`. After a message has been proved, it can be processed by calling `Inbox.process()`. For convenience, both actions can be performed in the same transaction by calling `Inbox.proveAndProcess()`.
 
 ```solidity
 /**

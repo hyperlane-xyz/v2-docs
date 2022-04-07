@@ -4,7 +4,7 @@ description: A high level description of important roles played in the Abacus pr
 
 # Agents
 
-The Abacus protocol is powered by a set of four off-chain agents.
+The Abacus protocol is operated by a set of off-chain agents.
 
 With the exception of the validators, the roles these agents play are simple, permission-less, and can be filled by anyone. For convenience, Abacus implements these agents as set of Rust binaries.
 

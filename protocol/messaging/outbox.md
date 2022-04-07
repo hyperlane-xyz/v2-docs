@@ -24,7 +24,7 @@ Each dispatched message get inserted as a leaf into an [incremental merkle tree]
 function dispatch(
   uint32 _destinationDomain,
   bytes32 _recipientAddress,
-  bytes memory _messageBody
+  bytes calldata _messageBody
 ) external;
 ```
 

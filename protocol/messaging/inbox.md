@@ -24,7 +24,7 @@ In order to pass a message on to its recipient, a signed [checkpoint](./#checkpo
 function checkpoint(
   bytes32 _root,
   uint256 _index,
-  bytes memory _signatures
+  bytes calldata _signatures
 ) external;
 ```
 
@@ -57,5 +57,5 @@ Finally, messages that have been proven against a checkpoint can be forwarded to
   * if message has not been proven, or if the call to `handle` fails.
   * @param _message Formatted message
   */
-function process(bytes memory _message) public;
+function process(bytes calldata _message) public;
 ```

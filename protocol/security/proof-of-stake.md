@@ -32,7 +32,7 @@ Each registered validator has a corresponding `StakingPool` contract, responsibl
 function register(
   bytes32 _publicKey,
   uint256 _commission,
-  bytes memory _pop
+  bytes calldata _pop
 ) external returns (bool);
 ```
 
@@ -135,7 +135,7 @@ function slash(
   bytes32 _validator,
   bytes32 _root,
   uint256 _index,
-  bytes memory _signature
+  bytes calldata _signature
 ) external returns(bool);
 ```
 

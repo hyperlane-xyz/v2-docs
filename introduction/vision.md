@@ -4,13 +4,13 @@ description: Interchain applications, the next era of interoperability
 
 # Vision
 
-We believe the upcoming era of interoperability will be defined by interchain applications, in which applications, rather than users, will be responsible for interoperability.
+We believe the next era of interoperability will be defined by interchain applications that are natively interoperable across blockchains, and that do not defer any of this responsibility to users.
 
 ### Interchain applications
 
-Interchain applications will communicate natively across chains, meeting users and assets on the chains where they are already.
+Interchain applications will communicate natively across chains, meeting users and assets on the chains where they are, while bringing along nonlocal network effects.&#x20;
 
-Despite being compatible with multiple chains, interchain applications will be able to present a single, unified, state to their users, as opposed to requiring a per-chain UX. Interchain applications will allow for true interoperability across blockchains, strengthening the accessibility and composability that has made decentralized applications so successful to date.
+Despite access from multiple chains, interchain applications will present a unified state to their users, obviating chain-specific UX. Interchain applications will be truly interoperable across blockchains, strengthening the accessibility and composability that have made decentralized applications successful to date and solving a core challenge which has limited their growth and virality.
 
 At Abacus, we are working to bring the blockchain world into the era of interchain applications.
 
@@ -18,6 +18,6 @@ At Abacus, we are working to bring the blockchain world into the era of intercha
 
 Realizing this vision will require more than generic message passing protocols; it will require entire ecosystems to emerge around building interchain applications.
 
-To that end, the long term vision is for Abacus to become a one-stop deployment platform, where a developer only needs to write and deploy their application once to get the combined benefits of all Abacus supported chains.
+To that end, the long term Abacus vision is to become a one-stop deployment platform, where developers write and deploy their applications only once to get the combined benefits of all supported chains.
 
-We recognize that this will require a massive investment of time, effort, and resources. As we work towards that vision, we will be releasing versions of Abacus that allow any developer to deploy an Abacus app that acts as the connective tissue between all of their existing deployments on supported chains.
+We recognize that this requires a monumental investment of time, effort, and resources. As we work towards that vision, we will be releasing incremental versions of Abacus that allow any developer to deploy an Abacus app that acts as the connective tissue between all of their existing deployments on supported chains.

@@ -1,6 +1,6 @@
 # Relayer
 
-The Relayer is an unpermissioned role responsible for taking signed [checkpoints](../messaging/#checkpoints) from a source chain and relaying them to an [Inbox](../messaging/inbox.md) on a destination chain.
+Relayers are responsible for taking source chain signed Outbox [checkpoints](../messaging/#checkpoints) and relaying them to destination chain [Inbox](../messaging/inbox.md)es.
 
 Checkpoints can be relayed by calling `Inbox.checkpoint()`. Because a message must be included in a relayed checkpoint before it can be sent to its recipient, more frequent relaying of checkpoints results in lower perceived latency for users. Anyone can relay a checkpoint at any time to facilitate the delivery of cross-chain messages.
 
@@ -24,7 +24,7 @@ For convenience, Abacus Works will run an open source and configurable relayer a
 
 Relayers are configured to point to the Validators' storage modality to read the signed checkpoints off-chain and aggregate them before submitting them on-chain.
 
-For now, the relayer can be configured with a simple "max-latency" policy, ensuring that checkpoints are always relayed within a predefined time period.
+For now, the relayer can be configured with a simple "max-latency" policy, ensuring that checkpoints are always relayed within at a predefined time period.
 
-In the future the protocol may directly or indirectly incentivize the relaying of checkpoints.&#x20;
+In the future the protocol may directly or indirectly incentivize relaying.&#x20;
 

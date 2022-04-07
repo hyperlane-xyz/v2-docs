@@ -14,7 +14,7 @@ Abacus isn’t a blockchain. Abacus is how you build interchain applications.
 
 ### What problem does Abacus solve?
 
-Abacus aims to make the "Which chain should I deploy on?" question obsolete.
+Abacus aims to make the "Which chain(s) should I deploy on?" question obsolete.
 
 In traditional web development, the choice of hosting environment is mostly an afterthought. While material differences exist between cloud providers, the experience that the developer can deliver to their users is not meaningfully impacted by this choice.
 

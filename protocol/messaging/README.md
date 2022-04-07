@@ -18,7 +18,7 @@ Applications can send messages to remote chains via the Outbox, and receive mess
 
 When an application sends a message to an Outbox, that message is stored in a [merkle tree](https://en.wikipedia.org/wiki/Merkle\_tree) along with every other message that has ever been sent to the Outbox.
 
-The [Abacus validator set](../agents/validators.md) is responsible for ensuring that Outbox merkle roots get replicated to their corresponding Inbox(es). The contents of each message can then be proven against that root, and forwarded to their intended recipient.&#x20;
+The [Abacus validator set](../agents/validators.md) is responsible for ensuring that Outbox merkle roots get replicated to their corresponding Inbox(es). The contents of each message can then be verified against that root, and subsequently forwarded to their intended recipient.&#x20;
 
 ## Checkpoints
 
@@ -26,8 +26,8 @@ Merkle roots are passed between Outboxes and Inboxes via checkpoints. Checkpoint
 
 To pass messages from an Outbox to an Inbox, [someone](../agents/checkpointer.md) must call `Outbox.checkpoint()`. The Outbox smart contract creates a checkpoint and writes it to storage.
 
-The [validator set](../agents/validators.md) is responsible for observing the Outbox smart contract and signing new checkpoints as they're created. The signed checkpoints then get written to a publicly viewable, highly available channel, such as [S3](https://en.wikipedia.org/wiki/Amazon\_S3) or the underlying blockchain.
+The [validator set](../agents/validators.md) is responsible for observing the Outbox smart contract and signing new checkpoints as they are created. Signed checkpoints are written to a publicly viewable, highly available channel, such as [S3](https://en.wikipedia.org/wiki/Amazon\_S3) or the underlying blockchain.
 
-The signed checkpoint can then be [relayed](../agents/relayer.md) to an Inbox contract, which accepts the checkpoint if and only if it was signed by a quorum of validators.
+Once published, these signed checkpoints can be [relayed](../agents/relayer.md) to an Inbox contract, which accepts the checkpoint if and only if it was signed by a quorum of validators.
 
-After a checkpoint has been accepted by an Inbox, messages can be proven against the checkpoint root and forwarded to their intended recipients.
+After a checkpoint has been accepted by an Inbox, messages can be verified against the checkpoint root and forwarded to their intended recipients.
