@@ -37,5 +37,5 @@
 * [FAQ](resources/faq.md)
 * [Glossary](resources/glossary.md)
 * [Github](https://github.com/abacus-network)
-* [Discord](https://discord.gg/hjWqkP6S)
+* [Discord](https://discord.gg/KBD3aD78Bb)
 * [Website](https://www.useabacus.network)
