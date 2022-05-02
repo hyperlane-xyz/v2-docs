@@ -2,7 +2,7 @@
 
 ## Introduction
 
-* [Overview](README.md)
+* [What is Abacus?](README.md)
 * [Background](introduction/background.md)
 * [Vision](introduction/vision.md)
 
@@ -24,11 +24,18 @@
 
 ## Developers
 
-* [Interchain applications](developers/interchain-applications/README.md)
-  * [Routers](developers/interchain-applications/routers.md)
-  * [Message encoding](developers/interchain-applications/message-encoding.md)
-* [SDK](developers/sdk.md)
+* [Getting started](developers/getting-started/README.md)
+  * [Write your contracts](developers/getting-started/write-your-contracts.md)
+  * [Test your contracts](developers/getting-started/test-your-contracts.md)
+  * [Deploy your app](developers/getting-started/deploy-your-app.md)
+  * [Build your SDK](developers/getting-started/build-your-sdk.md)
+* [Advanced](developers/advanced/README.md)
+  * [AbacusConnectionClient.sol](developers/advanced/abacusconnectionclient.sol.md)
+  * [Router.sol](developers/advanced/router.sol.md)
+  * [Message encoding](developers/advanced/message-encoding.md)
 * [Examples](developers/examples/README.md)
+  * [Ping pong](developers/examples/ping-pong.md)
+  * [ERC20 token](developers/examples/erc20-token.md)
   * [Controller](developers/examples/controller.md)
 
 ## Resources
