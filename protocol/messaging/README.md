@@ -31,3 +31,17 @@ The [validator set](../agents/validators.md) is responsible for observing the Ou
 Once published, these signed checkpoints can be [relayed](../agents/relayer.md) to an Inbox contract, which accepts the checkpoint if and only if it was signed by a quorum of validators.
 
 After a checkpoint has been accepted by an Inbox, messages can be verified against the checkpoint root and forwarded to their intended recipients.
+
+## Lifecycle
+
+Sending and receiving a cross-chain message consists of four steps.
+
+1. First, the message must be submitted to the Outbox on the source chain via a call to [`Outbox.dispatch()`](outbox.md#dispatch).
+2. That message must then be included in a checkpoint via a call to [`Outbox.checkpoint()`](outbox.md#checkpoint).
+3. That checkpoint is then signed by the validators, and the signed checkpoint is relayed to the destination chain via a call to [`Inbox.checkpoint()`](inbox.md#checkpoint).
+4. Finally, the message can be sent to the recipient via a call to [`Inbox.process()`](inbox.md#process).
+
+{% hint style="info" %}
+Checkpoints commit to a history of all previous messages. Therefore, creating and relaying a checkpoint for every message is not strictly necessary. Applications looking for the lowest latency should consider checkpointing after each message, while applications that can tolerate more latency can consider amortizing the gas costs of checkpointing across multiple messages. If a single transaction dispatches multiple messages, only one checkpoint after the messages have been dispatched is necessary.
+{% endhint %}
+

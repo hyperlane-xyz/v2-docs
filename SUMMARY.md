@@ -33,6 +33,7 @@
   * [AbacusConnectionClient.sol](developers/advanced/abacusconnectionclient.sol.md)
   * [Router.sol](developers/advanced/router.sol.md)
   * [Message encoding](developers/advanced/message-encoding.md)
+  * [Gas](developers/advanced/gas.md)
 * [Examples](developers/examples/README.md)
   * [Ping pong](developers/examples/ping-pong.md)
   * [ERC20 token](developers/examples/erc20-token.md)
