@@ -1,21 +1,21 @@
 # Processor
 
-Processors are responsible for verifying and then processing messages on an [Inbox](../messaging/inbox.md).
-
-Messages can be verified against a checkpoint by calling `Inbox.prove()`. After a message has been proved, it can be processed by calling `Inbox.process()`. For convenience, both actions can be performed in the same transaction by calling `Inbox.proveAndProcess()`.
+Processors are responsible for sending messages to their recipients by calling [`Inbox.process()`](../messaging/inbox.md#process).
 
 ```solidity
 /**
-  * @notice First attempts to prove the validity of `_message`. If successful,
-  * then attempts to process.
-  * @param _message Formatted message
-  * @param _proof Merkle proof of inclusion for message's leaf
-  * @param _index Index of leaf in Outbox's merkle tree
-  */
-function proveAndProcess(
-  bytes memory _message,
-  bytes32[32] calldata _proof,
-  uint256 _index
+ * @notice Attempts to process the provided formatted `message`. Performs
+ * verification against root of the proof
+ * @dev Reverts if verification of the message fails.
+ * @param _message Formatted message (refer to Common.sol Message library)
+ * @param _proof Merkle proof of inclusion for message's leaf
+ * @param _index Index of leaf in outbox's merkle tree
+*/
+function process(
+   bytes calldata _message,
+   bytes32[32] calldata _proof,
+   uint256 _index,
+   bytes calldata _sovereignData
 ) external;
 ```
 
@@ -23,7 +23,9 @@ For convenience, Abacus Works will run an open source and configurable processor
 
 The processor observes an [Outbox](../messaging/outbox.md), constructing merkle proofs for messages as checkpoints are created. After those checkpoints are relayed to an Inbox, the processor submits the merkle proof to the Inbox, which forwards the message to its recipient.
 
-On testnets, developers can expect the Abacus Works processor to automatically process messages. On mainnets, there will be a protocol for paying on the source chain for the processor to process the message on the remote chain.
+Similar to the [Relayer](relayer.md), messages will only be processed by the Abacus Works processor if a sufficient [interchain gas payment](../../developers/advanced/gas.md) has been made on the source chain.
+
+Note that Sovereign Consensus is not currently implemented.
 
 #### Error handling
 

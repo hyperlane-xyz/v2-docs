@@ -14,8 +14,6 @@ Checkpoints can be created by calling `Outbox.checkpoint()`.  Because a message 
 function checkpoint() external;
 ```
 
-For convenience, Abacus Works will run an open source and configurable checkpointer agent, implemented as a Rust binary. This checkpointer will be configured with a "max-latency" policy, ensuring messages are included in a checkpoint at least as frequently as configured.
+Because checkpoints commit to the entire history of outbound messages, the gas costs of creating a new checkpoint can be amortized over multiple messages. However, in the early days of the network, there may not be enough messages being sent in order to amortize these costs effectively. For now, application developers are encouraged to call \`checkpoint()\` whenever they send a new message.
 
-If application developers require lower latency, they can run a checkpointer themselves or call `Outbox.checkpoint()` directly within their application after calling `Outbox.dispatch().`&#x20;
-
-In the future the protocol may directly or indirectly incentivize checkpoint creation.&#x20;
+In the future the protocol may directly or indirectly incentivize checkpoint creation or allow for mechanisms for users to pool fee payments towards a single checkpoint for many messages.

@@ -24,7 +24,7 @@ For convenience, Abacus Works will run an open source and configurable relayer a
 
 Relayers are configured to point to the Validators' storage modality to read the signed checkpoints off-chain and aggregate them before submitting them on-chain.
 
-For now, the relayer can be configured with a simple "max-latency" policy, ensuring that checkpoints are always relayed within at a predefined time period.
+Messages will only be processed by the Abacus Works relayer if a [sufficient Interchain gas](../../developers/advanced/gas.md) payment has been made on the source chain.
 
-In the future the protocol may directly or indirectly incentivize relaying.&#x20;
+In the future the protocol may directly or indirectly incentivize relaying or introduce mechanisms for users to pool their fee payments towards a single checkpoint for many messages.
 
