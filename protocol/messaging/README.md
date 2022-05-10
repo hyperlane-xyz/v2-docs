@@ -45,3 +45,4 @@ Sending and receiving a cross-chain message consists of four steps.
 Checkpoints commit to a history of all previous messages. Therefore, creating and relaying a checkpoint for every message is not strictly necessary. Applications looking for the lowest latency should consider checkpointing after each message, while applications that can tolerate more latency can consider amortizing the gas costs of checkpointing across multiple messages. If a single transaction dispatches multiple messages, only one checkpoint after the messages have been dispatched is necessary.
 {% endhint %}
 
+![](<../../.gitbook/assets/Untitled Diagram.drawio (1).svg>)
