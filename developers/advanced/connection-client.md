@@ -2,11 +2,11 @@
 description: The easiest way to connect your application to Abacus
 ---
 
-# AbacusConnectionClient.sol
+# Connection Client
 
 To send and receive interchain messages, your application will need to be aware of the Abacus contract addresses. Inheriting from [`AbacusConnectionClient`](https://github.com/abacus-network/abacus-monorepo/blob/main/solidity/app/contracts/AbacusConnectionClient.sol) is the easiest way to manage these pointers.
 
-## AbacusConnectionManager
+## Abacus Connection Manager
 
 Before diving into `AbacusConnectionClient`, first let's zoom out, and take a look at [`AbacusConnectionManager`](https://github.com/abacus-network/abacus-monorepo/blob/main/solidity/core/contracts/AbacusConnectionManager.sol),  an out-of-the-box solution for managing Abacus contract addresses.
 
@@ -22,7 +22,7 @@ Over time, we expect a number of incremental improvements to the Abacus protocol
 
 Using an `AbacusConnectionManager` allows applications to migrate to a new Abacus deployment with just a few transactions.
 
-## AbacusConnectionClient
+## Abacus Connection Client
 
 ``[`AbacusConnectionClient`](https://github.com/abacus-network/abacus-monorepo/blob/main/solidity/app/contracts/AbacusConnectionClient.sol) is a simple mix-in contract that application developers can inherit from in order to connect to Abacus.
 

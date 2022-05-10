@@ -30,11 +30,11 @@ The contract has a single payable function, which takes a message leaf index (wh
 function payGasFor(uint256 _leafIndex) external payable;
 ```
 
-Developers can specify the address of the `InterchainGasPaymaster` that they're using via their [`AbacusConnectionManager`](abacusconnectionclient.sol.md#abacusconnectionmanager). For convenience, Abacus Works will operate a processor and relayer, and deploy corresponding `AbacusConnectionManager` and `InterchainGasPaymasters` that application developers can point to if they choose.
+Developers can specify the address of the `InterchainGasPaymaster` that they're using via their [`AbacusConnectionManager`](connection-client.md#abacusconnectionmanager). For convenience, Abacus Works will operate a processor and relayer, and deploy corresponding `AbacusConnectionManager` and `InterchainGasPaymasters` that application developers can point to if they choose.
 
 ## Checkpoints
 
-Because an application will often want to checkpoint and/or pay for gas while dispatching a message, convenience functions are provided in [Router.sol](router.sol.md). The following table shows each of these convenience functions and what they do.
+Because an application will often want to checkpoint and/or pay for gas while dispatching a message, convenience functions are provided in [Router.sol](router-pattern.md). The following table shows each of these convenience functions and what they do.
 
 | Function                        | Interchain gas payment? | Creates a checkpoint? |
 | ------------------------------- | ----------------------- | --------------------- |
@@ -53,9 +53,9 @@ Applications can use the `InterchainGasCalculator` in the Abacus SDK to estimate
 
 ### Smart Contract
 
-Adapting the simple example from the [Getting started](../getting-started/write-your-contracts.md) section, let's have our `HelloWorld` application dispatch a message, pay interchain gas for that message, and create a checkpoint. Note the `HelloWorld` contract now inherits from [Router.sol](router.sol.md).
+Adapting the simple example from the [Getting started](../contracts-sdk/write-your-contracts.md) section, let's have our `HelloWorld` application dispatch a message, pay interchain gas for that message, and create a checkpoint. Note the `HelloWorld` contract now inherits from [Router.sol](router-pattern.md).
 
-We will use the internal function `_dispatchWithGasAndCheckpoint`, which is implemented in [`Router.sol`](router.sol.md). It will first dispatch a message to a remote router, then pay a specified amount of origin chain native tokens to the `InterchainGasPaymaster` contract that's been set in the `AbacusConnectionManager`, and then create a checkpoint on the `Outbox`. No special handling logic, apart from simply implementing the `handle()` function, is required.
+We will use the internal function `_dispatchWithGasAndCheckpoint`, which is implemented in [`Router.sol`](router-pattern.md). It will first dispatch a message to a remote router, then pay a specified amount of origin chain native tokens to the `InterchainGasPaymaster` contract that's been set in the `AbacusConnectionManager`, and then create a checkpoint on the `Outbox`. No special handling logic, apart from simply implementing the `handle()` function, is required.
 
 ```solidity
 import {Router} from "@abacus-network/app/contracts/Router.sol";

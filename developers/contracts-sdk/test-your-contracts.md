@@ -12,7 +12,7 @@ In the future, Abacus will support additional testing frameworks, including [Fou
 
 First, install the plugin:
 
-```
+```shell
 yarn add --dev @abacus-network/hardhat
 ```
 

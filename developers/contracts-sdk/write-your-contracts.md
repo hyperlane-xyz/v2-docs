@@ -10,7 +10,7 @@ The first step in building an interchain application is writing your smart contr
 
 Developers can send messages to other chains by calling the `dispatch()` function on the [`Outbox`](../../protocol/messaging/outbox.md) smart contract.
 
-Note that we inherit from [`AbacusConnectionClient`](../advanced/abacusconnectionclient.sol.md), a simple contract that helps us keep track of the Abacus [`Inbox`](../../protocol/messaging/inbox.md) and [`Outbox`](../../protocol/messaging/outbox.md) contracts on our local chain.
+Note that we inherit from [`AbacusConnectionClient`](../advanced/connection-client.md), a simple contract that helps us keep track of the Abacus [`Inbox`](../../protocol/messaging/inbox.md) and [`Outbox`](../../protocol/messaging/outbox.md) contracts on our local chain.
 
 ```solidity
 import {AbacusConnectionClient} from "@abacus-network/app/contracts/AbacusConnectionClient.sol";
@@ -63,9 +63,9 @@ contract HelloWorld is AbacusConnectionClient {
 
 ## Try it yourself!
 
-To get started writing your contracts, simply install [@abacus-network/app](https://www.npmjs.com/package/@abacus-network/app) and inherit from [`AbacusConnectionClient`](../advanced/abacusconnectionclient.sol.md).
+To get started writing your contracts, simply install [@abacus-network/app](https://www.npmjs.com/package/@abacus-network/app) and inherit from [`AbacusConnectionClient`](../advanced/connection-client.md).
 
 You can also use the [template repo](https://github.com/abacus-network/abacus-app-template), which has everything you need to write, test, deploy, and interact with, your first interchain application.
 
-Looking to build something a bit more complex? Consider taking a look at the [Router pattern](../advanced/router.sol.md) for interchain applications.
+Looking to build something a bit more complex? Consider taking a look at the [Router pattern](../advanced/router-pattern.md) for interchain applications.
 
