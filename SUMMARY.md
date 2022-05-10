@@ -35,7 +35,7 @@
   * [Message encoding](developers/advanced/message-encoding.md)
   * [Gas](developers/advanced/gas.md)
 * [Examples](developers/examples/README.md)
-  * [Ping pong](developers/examples/ping-pong.md)
+  * [Hello World](developers/examples/hello-world.md)
   * [ERC20 token](developers/examples/erc20-token.md)
   * [Controller](developers/examples/controller.md)
 
