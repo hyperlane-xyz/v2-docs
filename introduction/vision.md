@@ -1,10 +1,10 @@
 ---
-description: Interchain applications, the next era of interoperability
+description: 'Interchain applications: The next era of interoperability'
 ---
 
 # Vision
 
-We believe the next era of interoperability will be defined by interchain applications that are natively interoperable across blockchains, and that do not defer any of this responsibility to users.
+We believe the next era of interoperability will be defined by interchain applications that are natively interoperable across blockchains, and that do not defer any of this responsibility to their users.
 
 ### Interchain applications
 

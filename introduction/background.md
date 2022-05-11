@@ -22,7 +22,7 @@ In these days, smart contract platforms were still nascent. Ethereum had launche
 
 IBC is the intellectual precursor that inspires the Abacus design philosophy. While IBC is the most secure and effective way to achieve **intra-**ecosystem interoperability, it does not allow for communication across non-Cosmos-SDK chains, which is required in the heterogenous multi-chain world that has since developed.\
 \
-The emergence of a multi-chain world brought the next era of interoperability, token bridges.
+The emergence of a multi-chain world brought the next era of interoperability: token bridges.
 
 #### _2020-2022: The bridges are coming!_
 
