@@ -11,16 +11,12 @@ April 2022
   * Security:
     * Single-Signature Validator per Outbox operated by Abacus Works
 
-May 2022
+July 2022
 
 * Mainnet Launch
   * Goal: Allow real usage of Abacus Apps on as many EVM chains as possible
   * Security:
     * Multiple-Signature Validator per Outbox operated by diverse set
-
-June 2022
-
-* DAO Launch
 
 Q3 2022
 
