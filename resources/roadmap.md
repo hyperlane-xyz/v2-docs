@@ -6,7 +6,7 @@ The following roadmap is for informational purposes only and is subject to chang
 
 April 2022
 
-* Testnet Launch
+* Testnet Launch (completed)
   * Goal: Allow developers to build Abacus Apps with the SDK
   * Security:
     * Multiple-Signature Validator per Outbox operated by Abacus Works
