@@ -9,7 +9,7 @@ April 2022
 * Testnet Launch
   * Goal: Allow developers to build Abacus Apps with the SDK
   * Security:
-    * Single-Signature Validator per Outbox operated by Abacus Works
+    * Multiple-Signature Validator per Outbox operated by Abacus Works
 
 July 2022
 
