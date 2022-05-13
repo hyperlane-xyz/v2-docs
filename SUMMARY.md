@@ -55,4 +55,4 @@
 * [Glossary](resources/glossary.md)
 * [Github](https://github.com/abacus-network)
 * [Discord](https://discord.gg/KBD3aD78Bb)
-* [Website](https://www.useabacus.network)
+* [Website](https://www.useabacus.network/)

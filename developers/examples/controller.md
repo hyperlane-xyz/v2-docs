@@ -4,7 +4,7 @@ description: An app for executing cross-chain function calls
 
 # Controller
 
-The Controller is an Abacus application that allows arbitrary function calls to be executed on remote chains, built according to the [Router](broken-reference) design pattern.
+The Controller is an Abacus application that allows arbitrary function calls to be executed on remote chains, built according to the [Router](../advanced/router-pattern.md) design pattern.
 
 We expect the Controller to be most useful as a tool to extend the reach of a governance protocol to multiple chains. For example, the Controller can allow a DAO deployed on Ethereum to execute transactions on remote chains like Polygon, Avalanche, or Celo.
 
