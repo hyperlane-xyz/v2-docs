@@ -4,13 +4,13 @@ description: Recommended approaches for encoding and decoding messages
 
 # Message encoding
 
-Abacus cross-chain messages are encoded as raw byte arrays. In order to send and receive messages, developers should implement functions for encoding and decoding cross-chain messages.&#x20;
+Abacus interchain messages are encoded as raw byte arrays. In order to send and receive messages, developers should implement functions for encoding and decoding interchain messages.&#x20;
 
-In this section, we describe two recommended approaches and their trade-offs.
+In this section, we describe two recommended approaches and their tradeoffs.
 
 ### General
 
-In most cases, we expect that developers are sending cross-chain messages in order to call a function on a contract on remote chain. For that, it is necessary to encode and decode raw bytes to an equivalent of a function call with arguments.
+In most cases, we expect that developers are sending interchain messages in order to call a function on a contract on remote chain. For that, it is necessary to encode and decode raw bytes to an equivalent of a function call with arguments.
 
 #### ABI Encoding
 

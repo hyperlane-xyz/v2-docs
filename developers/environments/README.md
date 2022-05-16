@@ -2,7 +2,7 @@
 
 Throughout the Abacus Code bases exist the concept of environments to facilitate the development and testing of changes, both of the Abacus core platform as well as applications building on top of Abacus. Environments also encode the set of domains/chains that are supported. This page outlines the purpose of each environment and how developers should think about them.
 
-### Environment: \`test\`
+### Environment: "test"
 
 The `test` environment is meant for local development. Application developers can use the `@abacus-network/hardhat` plugin's `TestAbacusDeploy` object to deploy a mocked Abacus core platform. By calling `processMessages()`, developers can simulate the processing of messages across domains without having to run any of the Agents.
 

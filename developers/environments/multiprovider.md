@@ -4,7 +4,7 @@ description: Manage node providers for Abacus supported networks in one plac
 
 # MultiProvider
 
-&#x20;`MultiProvider` is a network utility used throughout the Abacus Application SDK. In essence, it is a mapping that resolves a network namespace to a configured node provider.
+`MultiProvider` is a network utility used throughout the Abacus Application SDK. In essence, it is a mapping that resolves a network namespace to a configured node provider.
 
 ### Configuration
 
@@ -13,11 +13,11 @@ It has a simple interface for configuring target networks that are supported by 
 ```typescript
 const ethereum = {
     provider: new UrlJsonRpcProvider('http://localhost:8545/')
-}
+};
 const polygon = {
     provider: new UrlJsonRpcProvider('https://rpc-mainnet.matic.network'),
     confirmations: 10, // wait 10 blocks for finality
-}
+};
 const multiProvider = new MultiProvider({ ethereum, polygon });
 ```
 
@@ -40,8 +40,8 @@ import { ethers } from 'hardhat';
 const [signer] = await ethers.getSigners();
 const testMultiProvider = new MultiProvider({
     test1: { signer },
-    test2: { signer }
-    test3: { signer }
+    test2: { signer },
+    test3: { signer },
 });
 ```
 

@@ -17,7 +17,7 @@ yarn add @abacus-network/sdk
 The `AbacusApp` abstraction is a mapping that resolves a network namespace to a collection of [ethers Contract](https://docs.ethers.io/v5/api/contract/contract/#Contract) instances on that network. A default implementation of this collection called [`AbacusContracts`](https://github.com/abacus-network/abacus-monorepo/blob/main/typescript/sdk/src/contracts.ts#L37) is provided which should satisfy most conceivable designs. This implementation ensures your contracts collections are attached to the appropriate network providers.
 
 {% hint style="info" %}
-Please see the [Examples section](../examples/) for a demonstration of how to leverage the `AbacusApp` abstraction`.`
+Please see the [Examples section](../examples/) for a demonstration of how to leverage the`AbacusApp` abstraction.
 {% endhint %}
 
 ### Interact

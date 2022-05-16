@@ -24,7 +24,7 @@ Using an `AbacusConnectionManager` allows applications to migrate to a new Abacu
 
 ## Abacus Connection Client
 
-``[`AbacusConnectionClient`](https://github.com/abacus-network/abacus-monorepo/blob/main/solidity/app/contracts/AbacusConnectionClient.sol) is a simple mix-in contract that application developers can inherit from in order to connect to Abacus.
+[`AbacusConnectionClient`](https://github.com/abacus-network/abacus-monorepo/blob/main/solidity/app/contracts/AbacusConnectionClient.sol) is a simple mix-in contract that application developers can inherit from in order to connect to Abacus.
 
 This contract maintains a pointer to an `AbacusConnectionManager`. Application developers can choose to deploy their own connection manager, or point to an existing contract that's managed by an entity they trust.
 
