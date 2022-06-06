@@ -1,5 +1,5 @@
 ---
-description: Manage node providers for Abacus supported networks in one plac
+description: Manage node providers for Abacus supported networks in one place
 ---
 
 # MultiProvider

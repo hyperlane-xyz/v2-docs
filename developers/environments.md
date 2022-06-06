@@ -30,4 +30,4 @@ The domains that are supported are `alfajores`, `kovan`, `fuji`, `mumbai`, `bsct
 
 ### Environment: "mainnet"&#x20;
 
-TBD
+Coming soon, please see the [roadmap](../resources/roadmap.md) for more information.

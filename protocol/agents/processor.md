@@ -23,7 +23,7 @@ For convenience, Abacus Works will run an open source and configurable processor
 
 The processor observes an [Outbox](../messaging/outbox.md), constructing merkle proofs for messages as checkpoints are created. After those checkpoints are relayed to an Inbox, the processor submits the merkle proof to the Inbox, which forwards the message to its recipient.
 
-Similar to the [Relayer](relayer.md), messages will only be processed by the Abacus Works processor if a sufficient [interchain gas payment](../../developers/advanced/gas.md) has been made on the source chain.
+Similar to the [Relayer](relayer.md), messages will only be processed by the Abacus Works processor if a sufficient [interchain gas payment](../../developers/application-sdk/gas.md) has been made on the source chain.
 
 Note that Sovereign Consensus is not currently implemented.
 

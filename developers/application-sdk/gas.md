@@ -1,5 +1,5 @@
 ---
-description: Paying for message costs incurred on the destination chain.
+description: Pay for your message to be relayed using tokens on the origin chain
 ---
 
 # Gas
@@ -10,7 +10,7 @@ Abacus allows users to pay for message processing on the destination chain using
 
 In order to simplify the UX for interchain applications, Abacus allows users to pay for transactions on the destination chain using tokens from the origin chain.
 
-This interchain payment protocol is based on a social contract between the operator of a [relayer](../../protocol/agents/relayer.md) and [processor](../../protocol/agents/processor.md) and an application developer or user. To pay for their message, anyone can send  tokens on the origin chain to the operator, specifying the index of the message in the [Outbox's](../../protocol/messaging/outbox.md) merkle tree that they want to be processed. So long as enough tokens were provided on the origin chain given the current token exchange rates and gas prices, the operator is expected to submit a transaction that:
+This interchain payment protocol is based on a social contract between the operator of a [relayer](../../protocol/agents/relayer.md) and an application developer or user. To pay for their message, anyone can send  tokens on the origin chain to the operator, specifying the index of the message in the [`Outbox's`](../../protocol/messaging/outbox.md) merkle tree that they want to be processed. So long as enough tokens were provided on the origin chain given the current token exchange rates and gas prices, the operator is expected to submit a transaction that:
 
 1. Relays a signed checkpoint that includes the message (if one has not been relayed already)
 2. Processes the message
@@ -30,32 +30,21 @@ The contract has a single payable function, which takes a message leaf index (wh
 function payGasFor(uint256 _leafIndex) external payable;
 ```
 
-Developers can specify the address of the `InterchainGasPaymaster` that they're using via their [`AbacusConnectionManager`](connection-client.md#abacusconnectionmanager). For convenience, Abacus Works will operate a processor and relayer, and deploy corresponding `AbacusConnectionManager` and `InterchainGasPaymasters` that application developers can point to if they choose.
-
-## Checkpoints
-
-Because an application will often want to checkpoint and/or pay for gas while dispatching a message, convenience functions are provided in [Router.sol](router-pattern.md). The following table shows each of these convenience functions and what they do.
-
-| Function                        | Interchain gas payment? | Creates a checkpoint? |
-| ------------------------------- | ----------------------- | --------------------- |
-| `_dispatchWithGasAndCheckpoint` | ✅                       | ✅                     |
-| `_dispatchWithGas`              | ✅                       | ❌                     |
-| `_dispatchAndCheckpoint`        | ❌                       | ✅                     |
-| `_dispatch`                     | ❌                       | ❌                     |
+Developers can specify the address of the `InterchainGasPaymaster` that they're using via their [`AbacusConnectionManager`](../contract-sdk/abacusconnectionclient.md#abacusconnectionmanager). For convenience, Abacus Works will operate a relayer, and deploy corresponding `AbacusConnectionManager` and `InterchainGasPaymasters` that application developers can point to if they choose.
 
 {% hint style="info" %}
-It's recommended to always pay for gas for each dispatched message, otherwise the dispatched message may not be processed on the destination chain.
+It's recommended to always pay for gas for each dispatched message, otherwise the message may not be relayed destination chain.
 {% endhint %}
 
-Applications can use the `InterchainGasCalculator` in the Abacus SDK to estimate how many origin chain native tokens to pay when dispatching a message. See the example below illustrating how to estimate and pay interchain gas payments.
+Applications can use the `InterchainGasCalculator` in the Abacus SDK to estimate how many origin chain native tokens to pay when dispatching a message. See the [example](gas.md#example) below illustrating how to estimate and pay interchain gas payments.
 
 ## Example
 
 ### Smart Contract
 
-Adapting the simple example from the [Getting started](../contracts-sdk/write-your-contracts.md) section, let's have our `HelloWorld` application dispatch a message, pay interchain gas for that message, and create a checkpoint. Note the `HelloWorld` contract now inherits from [Router.sol](router-pattern.md).
+Adapting the simple example from the [Getting started](broken-reference) section, let's have our `HelloWorld` application dispatch a message, pay interchain gas for that message, and create a checkpoint. Note the `HelloWorld` contract now inherits from [Router.sol](../contract-sdk/router.md).
 
-We will use the internal function `_dispatchWithGasAndCheckpoint`, which is implemented in [`Router.sol`](router-pattern.md). It will first dispatch a message to a remote router, then pay a specified amount of origin chain native tokens to the `InterchainGasPaymaster` contract that's been set in the `AbacusConnectionManager`, and then create a checkpoint on the `Outbox`. No special handling logic, apart from simply implementing the `handle()` function, is required.
+We will use the internal function `_dispatchWithGasAndCheckpoint`, which is implemented in [`Router.sol`](../contract-sdk/router.md). It will first dispatch a message to a remote router, then pay a specified amount of origin chain native tokens to the `InterchainGasPaymaster` contract that's been set in the `AbacusConnectionManager`, and then create a checkpoint on the `Outbox`. No special handling logic, apart from simply implementing the `handle()` function, is required.
 
 ```solidity
 import {Router} from "@abacus-network/app/contracts/Router.sol";
@@ -74,9 +63,8 @@ contract HelloWorld is Router {
   function sendHelloWorld(uint32 _destination) external payable {
     // The message that we're sending.
     bytes memory _message = "hello world";
-    // Send the message, using any msg.value to pay for interchain gas,
-    // and create a checkpoint.
-    _dispatchWithGasAndCheckpoint(_destination, _message, msg.value);
+    // Send the message, using any msg.value to pay for interchain gas.
+    _dispatchWithGas(_destination, _message, msg.value);
   }
 
   /**
