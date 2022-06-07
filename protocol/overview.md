@@ -1,49 +1,40 @@
 ---
-description: A high level description of the Abacus protocol
+description: A secure interchain messaging protocol
 ---
 
 # Overview
 
 {% hint style="info" %}
-Note: The Abacus protocol is still under development. The protocol docs describe the latest Abacus protocol design.
+Note: The Abacus protocol is still under development. This documentation reflects the latest Abacus protocol design.
 
-For the latest on what's been implemented and deployed to testnet(s) and mainnet(s), please visit the [roadmap](../resources/roadmap.md).
+For the latest on what's been implemented and deployed to testnet(s) and mainnet(s), please take a look at the [roadmap](../resources/roadmap.md).
 {% endhint %}
 
-## Components
+Abacus is a generalized interchain messaging protocol that allows developers to send arbitrary data from one blockchain to another.
 
-Abacus is comprised of three high level components that combine to create a secure cross-chain communication protocol.
+Abacus provides an on-chain [API](messaging-api/) to send and receive interchain messages. This API is secured by a delegated [proof-of-stake](security/proof-of-stake/) protocol combined with an application-specific approach to security called [sovereign consensus](security/sovereign-consensus.md).&#x20;
 
-### Messaging
+### Messaging API
 
-The messaging component of Abacus is comprised of two smart contracts, [Outbox](messaging/outbox.md), and  [Inbox](messaging/inbox.md). These contracts implement the API that developers must integrate in order to send cross-chain messages using Abacus.
+The Abacus messaging API is implemented by two smart contracts, [Outbox](messaging-api/outbox.md), and  [Inbox](messaging-api/inbox.md). Developers can integrate with these contracts and use them to send and receive interchain messages.
 
-To send a cross-chain message, developers simply call `Outbox.dispatch()`, specifying the message contents, the destination chain, and the address on that chain that the message should be sent to.
+**To send interchain messages, developers call `Outbox.dispatch()`.**
 
-To receive a cross-chain message, developers simply implement a `handle()` function. This gets called by an Inbox contract with the message contents, the origin chain, and the address that sent the message on the origin chain, as arguments.
+This function function takes as arguments the message contents, the destination chain ID, and the recipient address.
+
+**To receive interchain messages, developers implement `handle()`.**
+
+The `Inbox` contract will call the `handle()` function on a message's recipient, providing as arguments the message contents, the origin chain ID, and the sender address.
 
 ### Security
 
-Abacus cross-chain messaging is secured by two layers.
+The messaging API is secured by two complementary protocols.
 
-First, a [proof-of-stake](security/proof-of-stake.md) protocol maintains a validator set, providing shared security for all Abacus users. Second, [sovereign consensus](security/sovereign-consensus.md) enables applications to implement additional security measures when necessary.
+**Proof-of-stake provides global economic security for Abacus messages.**
 
-#### Proof of stake
+This protocol secures the Abacus validator set and ensures that there is an economic cost to censorship or falsification of messages.
 
-Abacus is powered by a decentralized network of validators secured by proof-of-stake. On each chain, the validator set acts as a notary, signing the contents (merkle root) of the Outbox smart contract. This commits to the history of outbound messages on that chain, which allows those messages to be relayed to their destinations.
+**Sovereign consensus is an optional application-specific security protocol that complements proof-of-stake.**
 
-The validator set for each chain is determined by a delegated proof-of-stake protocol, implemented as a series of smart contracts. Individual validators that sign anything other than Outbox merkle roots can be slashed by a witness presenting the signature as evidence to these smart contracts.
+This protocol **** allows application developers to optionally specify an additional validator set, specific to their application. Signatures from both the global Abacus validator set and the application-specific validator set are required before messages can be delivered.&#x20;
 
-#### Sovereign consensus
-
-Developers building on the Abacus protocol can optionally specify application aware security rules using sovereign consensus. Sovereign consensus addresses the scalability problems inherent to proof-of-stake systems while isolating failures within "zones of sovereignty".
-
-### Governance
-
-Abacus is governed by a [DAO](governance.md#dao), based on Compound's Governor Bravo. Much as in other protocols, ABC holders can propose, vote on, and implement changes to the Abacus protocol.
-
-Unlike many of these other protocols, Abacus is natively multi-chain. Users can propose and vote on proposals from any Abacus supported chain. Furthermore, the Abacus DAO can execute transactions on any Abacus supported chain using the Abacus Controller.
-
-The Abacus Controller is an instance of the [Controller](../developers/examples/controller.md) application, that owns the Abacus protocol contracts on each chain. When the DAO needs to execute a transaction on a remote chain, it calls a function on the source chain Abacus Controller contract, specifying the transaction to be executed.
-
-This sends cross-chain message to the destination chain Abacus Controller contract, which executes the transaction.

@@ -1,14 +1,13 @@
 ---
-description: A high level description of important roles played in the Abacus protocol
+description: The off-chain actors that power the Abacus protocol
 ---
 
 # Agents
 
 The Abacus protocol is operated by a set of off-chain agents.
 
-With the exception of the validators, the roles these agents play are simple, permission-less, and can be filled by anyone. For convenience, Abacus implements these agents as set of Rust binaries.
+For convenience, Abacus implements these agents as set of Rust binaries.
 
-1. [Checkpointers](checkpointer.md) periodically call `Outbox.checkpoint()`, which creates a new merkle root [checkpoint](../messaging/#checkpoints), allowing messages to be passed to one or more Inboxes.
-2. [Validators](validators.md) sign checkpoints and make their signatures available to relayers.
-3. [Relayers](relayer.md) aggregate signatures on a given checkpoint and relay it to one or more Inboxes.
-4. [Processors](processor.md)  prove messages against an Inbox's accepted checkpoints and forward it to the recipient where the message is processed.
+1. [Validators](validators.md) sign`Outbox` merkle roots and and make their signatures available to relayers.
+2. [Relayers](relayers.md) aggregate validator signatures and submit merkle proofs to `Inboxes`, delivering interchain messages to their recipients.
+3. Watchtowers observe the network for validator fraud. If detected, watchtowers submit evidence to the source chain, slashing the fraudulent validator(s).

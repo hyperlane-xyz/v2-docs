@@ -6,6 +6,16 @@ description: A high level description of how Abacus is governed
 
 The Abacus protocol is governed by a DAO, which uses the [controller app](../developers/examples/controller.md) to control protocol contracts on remote chains.
 
+### Governance
+
+Abacus is governed by a [DAO](governance.md#dao), based on Compound's Governor Bravo. Much as in other protocols, ABC holders can propose, vote on, and implement changes to the Abacus protocol.
+
+Unlike many of these other protocols, Abacus is natively multi-chain. Users can propose and vote on proposals from any Abacus supported chain. Furthermore, the Abacus DAO can execute transactions on any Abacus supported chain using the Abacus Controller.
+
+The Abacus Controller is an instance of the [Controller](../developers/examples/controller.md) application, that owns the Abacus protocol contracts on each chain. When the DAO needs to execute a transaction on a remote chain, it calls a function on the source chain Abacus Controller contract, specifying the transaction to be executed.
+
+This sends cross-chain message to the destination chain Abacus Controller contract, which executes the transaction.
+
 ## DAO
 
 In an effective decentralized network, a representative set of participants routinely coordinate to make critical decisions. With the advent of smart contracts, DAOs have emerged as a pragmatic structure for orchestrating this process in code.&#x20;

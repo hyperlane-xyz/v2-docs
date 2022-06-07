@@ -1,10 +1,14 @@
+---
+description: Validators secure the Abacus protocol
+---
+
 # Validators
 
-Validators are permissioned actors responsible for signing checkpoints on an [Outbox](../messaging/outbox.md), facilitating message transmission to remote chains.
+Validators are responsible for observing the [`Outbox`](../messaging-api/outbox.md) contract and signing its merkle root, facilitating message transmission to remote chains.
 
-Membership in the validator set is determined by a [proof-of-stake](../security/proof-of-stake.md) protocol implemented as a set of smart contracts on each Abacus-supported chain.
+The global validator set is determined by a [proof-of-stake](../security/proof-of-stake/) protocol implemented as a set of smart contracts on each Abacus-supported chain. Applications may specify additional [sovereign](../security/sovereign-consensus.md) validator sets, which provide application-specific security on top of proof-of-stake's economic security.
 
-Validators can retrieve the most recent checkpoint by calling `Outbox.latestCheckpoint()`. After a checkpoint has achieved sufficient [finality](https://medium.com/mechanism-labs/finality-in-blockchain-consensus-d1f83c120a9a), validators are expected to sign it and store their signature on highly available storage so that their signatures can be [relayed](relayer.md) to one or more [Inboxes](../messaging/inbox.md).
+Validators read the current merkle root by calling `Outbox.latestCheckpoint()`.  Once a root has achieved sufficient [finality](https://medium.com/mechanism-labs/finality-in-blockchain-consensus-d1f83c120a9a), validators are expected to sign it and post their signature to highly available storage so that it can be aggregated by [relayers](relayers.md).
 
 ```solidity
 /**
@@ -18,7 +22,7 @@ function latestCheckpoint()
   returns (bytes32 root, uint256 index);
 ```
 
-Validators that sign anything other than a finalized checkpoint risk compromising the safety of the protocol, and may be slashed.
+Validators that sign anything other than a finalized merkle root risk compromising the safety of the protocol, and may be slashed.
 
 Abacus Works is developing the validator as a Rust binary that can be easily run by anyone. Operationally, validators need to run this binary and a node for the chain that they are validating for. We hope that the majority of Abacus validators will come from each chain's existing node operator community.
 

@@ -8,7 +8,7 @@ Application developers looking to write their contracts once and deploy them on 
 
 In this pattern, an instance of the application's contracts is deployed on each application-supported chain. Each instance is made aware of the addresses of instances on other chains. These instances use Abacus to communicate information and state to and from instances on remote chains.
 
-Developers looking to build in this pattern can inherit from the `Router` mix-in contract. The `Router` contract is an [`AbacusConnectionClient`](abacusconnectionclient.md) that tracks the addresses of `Router` contract addresses on remote chains.
+Developers looking to build in this pattern can inherit from the `Router` mix-in contract. The `Router` contract is an [`AbacusConnectionClient`](connection-client.md) that tracks the addresses of `Router` contract addresses on remote chains.
 
 This allows `Routers` to send messages directly to other `Routers` without needing an address to be provided. It also allows `Routers` to reject messages sent from other untrusted applications.
 

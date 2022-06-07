@@ -32,7 +32,7 @@ Abacus is a generalized messaging protocol that allows applications to communica
 
 With a simple smart contract call, Alice on Ethereum can send a message to Bob on Avalanche.
 
-Abacus is [secured](protocol/security/) by a [proof-of-stake](protocol/security/proof-of-stake.md) validator set in combination with a novel approach to application-specific security we call [sovereign consensus](protocol/security/sovereign-consensus.md).
+Abacus is [secured](protocol/security/) by a [proof-of-stake](protocol/security/proof-of-stake/) validator set in combination with a novel approach to application-specific security we call [sovereign consensus](protocol/security/sovereign-consensus.md).
 
 [Read more](broken-reference) about the Abacus protocol.
 

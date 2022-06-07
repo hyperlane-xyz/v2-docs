@@ -8,7 +8,7 @@ The first step in building an interchain application is writing your smart contr
 
 ## Sending messages
 
-Developers can send messages to other chains by calling the `dispatch()` function on the [`Outbox`](../../protocol/messaging/outbox.md) smart contract, specifying as arguments the message contents and destination.
+Developers can send messages to other chains by calling the `dispatch()` function on the [`Outbox`](../../protocol/messaging-api/outbox.md) smart contract, specifying as arguments the message contents and destination.
 
 ```solidity
 import {IOutbox} from "@abacus-network/core/interfaces/IOutbox.sol";
@@ -32,7 +32,7 @@ contract HelloWorld {
 
 ## Receiving messages
 
-Developers can receive messages from other chains by implementing the `handle()` function. The  [`Inbox`](../../protocol/messaging/inbox.md) contract will call `handle()` on the recipient when processing messages.
+Developers can receive messages from other chains by implementing the `handle()` function. The  [`Inbox`](../../protocol/messaging-api/inbox.md) contract will call `handle()` on the recipient when processing messages.
 
 ```solidity
 import {IMessageRecipient} from "@abacus-network/core/interfaces/IMessageRecipient.sol";

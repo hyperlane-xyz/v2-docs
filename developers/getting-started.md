@@ -1,12 +1,14 @@
 ---
-description: Build interchain applications with Abacus
+description: Everything you need to build your first interchain application
 ---
 
 # Getting started
 
 Abacus makes interchain communication straightforward by providing a simple API for sending and receiving interchain messages.
 
-_**Integrating with Abacus?**_ Use the [contract SDK](contract-sdk/) to write and test your contracts.
+To communicate between chains, application developers just need to implement functions that interface with this API.
+
+_**Integrating with Abacus?**_ Use the [contract SDK](contracts-sdk/) to write and test your contracts.
 
 _**Building an interchain application?**_ The [application SDK](application-sdk/) has everything else you need.
 
@@ -17,3 +19,4 @@ _**Looking for a step-by-step tutorial?**_** ** Keep reading for a step-by-step 
 _**Not sure what to build?**_ Take a look at some [example applications](examples/) to see what you can do.
 
 _**Have questions?**_ We'd love to answer them! Ask us on [discord](https://discord.com/invite/KBD3aD78Bb), reach out on [twitter](https://twitter.com/Abacus\_Network), or ping us on Telegram.
+
