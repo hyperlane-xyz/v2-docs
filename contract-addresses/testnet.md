@@ -1,7 +1,5 @@
 # Testnet
 
-Essentially taken from [https://github.com/abacus-network/abacus-monorepo/blob/main/typescript/sdk/src/core/environments/testnet.ts](https://github.com/abacus-network/abacus-monorepo/blob/main/typescript/sdk/src/core/environments/testnet.ts) and [https://github.com/abacus-network/abacus-monorepo/blob/main/typescript/sdk/src/domains.ts](https://github.com/abacus-network/abacus-monorepo/blob/main/typescript/sdk/src/domains.ts)
-
 ```json
 [
   {

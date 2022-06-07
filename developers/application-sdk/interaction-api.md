@@ -22,7 +22,7 @@ Please see the [Examples section](../examples/) for a demonstration of how to le
 
 ### Interact
 
-Once an `AbacusApp` implementation is defined, it can be instantiated using the output generated from the [`AbacusAppDeployer`](deployment-tooling.md) and an instance of the [`MultiProvider`](multiprovider.md).&#x20;
+Once an `AbacusApp` implementation is defined, it can be instantiated using the output generated from the [`AbacusAppDeployer`](../application-sdk/deployment-tooling.md) and an instance of the [`MultiProvider`](multiprovider.md).&#x20;
 
 ```typescript
 import { addresses } from './deployOutput';
