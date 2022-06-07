@@ -6,7 +6,7 @@ description: The easiest way to integrate with Abacus
 
 Inheriting from [`AbacusConnectionClient`](https://github.com/abacus-network/abacus-monorepo/blob/main/solidity/app/contracts/AbacusConnectionClient.sol) is a simple way to ensure your contract knows where to send and receive interchain messages.
 
-This simple mix-in contract maintains a pointer to an [`AbacusConnectionManager`](../contract-sdk/abacusconnectionmanager.md). Application developers can choose to deploy their own connection manager, or point to an existing contract that's managed by an entity they trust.
+This simple mix-in contract maintains a pointer to an [`AbacusConnectionManager`](abacusconnectionmanager.md). Application developers can choose to deploy their own connection manager, or point to an existing contract that's managed by an entity they trust.
 
 `AbacusConnectionClient` exposes functions that allow subclasses to easily send messages to the `Outbox` via the `_outbox()` view function, and permission message delivery via the `onlyInbox` modifier.
 

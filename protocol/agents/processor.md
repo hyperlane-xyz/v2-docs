@@ -4,7 +4,7 @@ description: Watchtowers observe the network for validator fraud
 
 # Watchtowers
 
-Watchtowers are responsible for observing an [`Outbox`](../messaging-api/outbox.md) and its corresponding [`Inboxes`](../messaging-api/inbox.md) to detect if validators have censored or falsified messages.
+Watchtowers are responsible for observing an [`Outbox`](../messaging/outbox.md) and its corresponding [`Inboxes`](../messaging/inbox.md) to detect if validators have censored or falsified messages.
 
 If fraud is detected, the watchtower submits evidence to the origin chain, slashing the validator. Watchtowers earn a reward for successfully submitting evidence of fraud.
 

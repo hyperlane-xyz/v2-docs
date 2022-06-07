@@ -40,7 +40,7 @@ Please see the [Examples section](../examples/) for an implementation of the `Ab
 
 ### Deploy
 
-Once a single network's implementation is specified, a deployer can be instantiated with a [multiprovider.md](../environments/multiprovider.md "mention") and corresponding config. The subsequent `deploy()` invocation will perform deployment for all networks specified in the configuration.
+Once a single network's implementation is specified, a deployer can be instantiated with a [multiprovider.md](multiprovider.md "mention") and corresponding config. The subsequent `deploy()` invocation will perform deployment for all networks specified in the configuration.
 
 ```typescript
 const ethereum: MyConfig = {...};

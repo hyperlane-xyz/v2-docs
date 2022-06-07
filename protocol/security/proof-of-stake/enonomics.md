@@ -38,7 +38,7 @@ function reward(bytes32 _validator) external returns(bool);
 
 #### Slashing
 
-If a validator signs anything other than a valid [`Outbox`](../../messaging-api/outbox.md) merkle root, the stake delegated to that validator can be slashed.
+If a validator signs anything other than a valid [`Outbox`](../../messaging/outbox.md) merkle root, the stake delegated to that validator can be slashed.
 
 Anyone can present evidence of fraud by calling `SlashingManager.slash()`.&#x20;
 

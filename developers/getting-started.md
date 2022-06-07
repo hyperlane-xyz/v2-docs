@@ -8,7 +8,7 @@ Abacus makes interchain communication straightforward by providing a simple API 
 
 To communicate between chains, application developers just need to implement functions that interface with this API.
 
-_**Integrating with Abacus?**_ Use the [contract SDK](contracts-sdk/) to write and test your contracts.
+_**Integrating with Abacus?**_ Use the [contract SDK](contract-sdk/) to write and test your contracts.
 
 _**Building an interchain application?**_ The [application SDK](application-sdk/) has everything else you need.
 
