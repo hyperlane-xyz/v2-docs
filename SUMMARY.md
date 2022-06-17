@@ -53,7 +53,8 @@
 
 * [Getting started](validators/getting-started/README.md)
   * [AWS setup](validators/getting-started/aws-setup.md)
-  * [Run a validator](validators/getting-started/run-a-validator.md)
+  * [Environment variables](validators/getting-started/environment-variables.md)
+  * [Start validating](validators/getting-started/start-validating.md)
 
 ## Resources
 
