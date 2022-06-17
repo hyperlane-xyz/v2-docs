@@ -1,10 +1,10 @@
 ---
-description: Build smart contracts that communicate across chains
+description: Build interchain smart contracts
 ---
 
 # Contract SDK
 
-The contract SDK contains everything you need to write and test your interchain contracts, including:
+The Abacus Contract SDK contains everything you need to write and test your interchain smart contracts, including:
 
 * An [API](messaging-api.md) for sending and receiving interchain messages.
 * An [`AbacusConnectionClient`](abacusconnectionclient.md) mix-in that your contract can inherit from when integrating with Abacus.

@@ -1,10 +1,10 @@
 ---
-description: Deploy your application on multiple chains
+description: Deploying your application to multiple chains
 ---
 
-# Deployment Tooling
+# Deployment tooling
 
-The Abacus deployment tooling simplifies the deployment of Abacus smart contract applications to configured target networks.
+The Application SDK simplifies the deployment of smart contracts to a set of configured target chains.
 
 ### Install
 
@@ -14,47 +14,43 @@ yarn add @abacus-network/deploy
 
 ### Implement
 
-To leverage the `AbacusAppDeployer` abstraction, developers must provide an implementation for `deployContracts` which describes the logic for deploying the application on a single network.&#x20;
+To leverage the `AbacusAppDeployer` class, developers must provide an implementation for `deployContracts` which describes the logic for deploying the application on a single chain. Developers building with the [Router](../contract-sdk/router.md) pattern can extend `AbacusRouterDeployer`, which handles some Router-specific boilerplate.
 
 ```typescript
 import { AbacusAppDeployer } from '@abacus-network/deploy';
 import { ChainName } from '@abacus-network/sdk';
 
-class MyDeployer<Networks extends ChainName, MyConfig>
-  extends AbacusAppDeployer<Networks, MyConfig> { 
+class MyDeployer<Chain extends ChainName, MyConfig>
+  extends AbacusRouterDeployer<Chain, MyContracts, MyFactories, MyConfig> { 
     function deployContracts(network: Networks, config: MyConfig) {
         // deploy contracts here
     }
 }
 ```
 
-There are `deployContract` and `deployProxiedContract` helper functions included in `AbacusAppDeployer` which can simplify the `deployContracts` implementation.&#x20;
+For a simple, single contract app that extends the `Router` contract, it is sufficient to call the `deployRouter` method in the `deployContracts` implementation:
 
 ```typescript
-this.deployContract(network, 'MyContract', MyContract__factory, config.args);
+  async deployContracts(chain: Chain, config: HelloWorldConfig) {
+    const acm = this.core.getContracts(chain).abacusConnectionManager.address;
+    const router = await this.deployRouter(chain, [], [acm]);
+    return { router };
+  }
 ```
 
 {% hint style="info" %}
-Please see the [Examples section](../examples/) for an implementation of the `AbacusAppDeployer` abstraction`.`
+See the [Examples section](../examples/) for more implementations of `AbacusAppDeployer.`
 {% endhint %}
 
 ### Deploy
 
-Once a single network's implementation is specified, a deployer can be instantiated with a [multiprovider.md](multiprovider.md "mention") and corresponding config. The subsequent `deploy()` invocation will perform deployment for all networks specified in the configuration.
+After providing an implementation for `deployContracts`, a deployer can be instantiated with a [Multiprovider](multiprovider.md) and a map of chains to configurations. These configs will be provided to your `deployContracts` methods and can include any values needed there. The initialization of Invoking `deploy()` will deploy contracts for all specified chains.&#x20;
 
 ```typescript
 const ethereum: MyConfig = {...};
 const polygon: MyConfig = {...};
 const myDeployer = new MyDeployer(multiProvider, { ethereum, polygon });
-const addresses = await myDeployer.deploy();
+const contracts = await myDeployer.deploy();
 ```
 
-{% hint style="info" %}
-Persisting deployment artifacts will be very important for future use of your application. This goes beyond just addresses and includes compiler options and constructor arguments.
-{% endhint %}
-
-There is a `writeOutput` helper function included in `AbacusAppDeployer` that will assist in writing these artifacts to disk.&#x20;
-
-```typescript
-deployer.writeOutput('./output', addresses)
-```
+In scripts that calls `deploy`, consider persisting deployment artifacts as they will be  important for future use of your application. This includes addresses, compiler options, and contract constructor arguments.

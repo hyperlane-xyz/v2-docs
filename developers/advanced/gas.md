@@ -41,7 +41,7 @@ Applications can use the `InterchainGasCalculator` in the Abacus SDK to estimate
 
 Adapting the simple example from the [Getting started](broken-reference) section, let's have our `HelloWorld` application dispatch a message, pay interchain gas for that message, and create a checkpoint. Note the `HelloWorld` contract now inherits from [Router.sol](../contract-sdk/router.md).
 
-We will use the internal function `_dispatchWithGasAndCheckpoint`, which is implemented in [`Router.sol`](../contract-sdk/router.md). It will first dispatch a message to a remote router, then pay a specified amount of origin chain native tokens to the `InterchainGasPaymaster` contract that's been set in the `AbacusConnectionManager`, and then create a checkpoint on the `Outbox`. No special handling logic, apart from simply implementing the `handle()` function, is required.
+We will use the internal function `_dispatchWithGas`, which is implemented in [`Router.sol`](../contract-sdk/router.md). It will first dispatch a message to a remote router, then pay a specified amount of origin chain native tokens to the `InterchainGasPaymaster` contract that's been set in the `AbacusConnectionManager`, and then create a checkpoint on the `Outbox`. No special handling logic, apart from simply implementing the `handle()` function, is required.
 
 ```solidity
 import {Router} from "@abacus-network/app/contracts/Router.sol";

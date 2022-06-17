@@ -34,20 +34,18 @@
   * [Router](developers/contract-sdk/router.md)
   * [Hardhat](developers/contract-sdk/hardhat.md)
 * [Application SDK](developers/application-sdk/README.md)
-  * [Deployment Tooling](developers/application-sdk/deployment-tooling.md)
-  * [Interaction API](developers/application-sdk/interaction-api.md)
+  * [Core concepts](developers/application-sdk/core-concepts.md)
+  * [Deployment tooling](developers/application-sdk/deployment-tooling.md)
+  * [Contract interaction](developers/application-sdk/contract-interaction.md)
   * [MultiProvider](developers/application-sdk/multiprovider.md)
   * [Gas](developers/advanced/gas.md)
 * [Environments](developers/environments.md)
+* [Contract Addresses](developers/contract-addresses/README.md)
+  * [Testnet](developers/contract-addresses/testnet.md)
 * [Examples](developers/examples/README.md)
   * [Hello World](developers/examples/ping-pong.md)
   * [ERC20 token](developers/examples/erc20-token.md)
   * [Controller](developers/examples/controller.md)
-
-***
-
-* [Contract Addresses](contract-addresses/README.md)
-  * [Testnet](contract-addresses/testnet.md)
 
 ## Validators
 

@@ -1,16 +1,18 @@
 ---
-description: Manage node providers for Abacus supported networks in one place
+description: Manage RPC providers for Abacus supported chains in one place
 ---
 
 # MultiProvider
 
-`MultiProvider` is a network utility used throughout the Abacus Application SDK. In essence, it is a mapping that resolves a network namespace to a configured node provider.
+`MultiProvider` is a utility used throughout the Abacus Application SDK. In essence, it is a mapping that resolves a chain namespace to a configured node (JSON RPC) provider.
 
 ### Configuration
 
-It has a simple interface for configuring target networks that are supported by the Abacus core protocol.
+To configure and create your `MultiProvider`, create ethers.js-compatible providers and optionally specify a block confirmation threshold:&#x20;
 
 ```typescript
+import {chainConnectionConfigs} from '@abacus-network/sdk';
+// You can use a custom defined provider, say for a local node:
 const ethereum = {
     provider: new UrlJsonRpcProvider('http://localhost:8545/')
 };
@@ -18,12 +20,14 @@ const polygon = {
     provider: new UrlJsonRpcProvider('https://rpc-mainnet.matic.network'),
     confirmations: 10, // wait 10 blocks for finality
 };
-const multiProvider = new MultiProvider({ ethereum, polygon });
+// Or you can use the SDK's default configs and providers:
+const celo = chainConnectionConfigs.celo
+const multiProvider = new MultiProvider({ ethereum, polygon, celo });
 ```
 
 ### Use
 
-`MultiProvider` allows, for example, an application to have static node provisioning per target network and register a user's signer for the duration of a session.
+`MultiProvider` allows, for example, an application to have static node provisioning per target chain and register a user's signer for the duration of a session.
 
 ```typescript
 const userSigner = await getSessionSigner();
@@ -32,7 +36,7 @@ serverMultiProvider.getDomainConnection('ethereum').registerSigner(userSigner);
 
 ### Testing
 
-For use in hardhat tests, we can provide the hardhat `signer` to multiple test networks to emulate a multichain system locally. The networks shown (`test1`, `test2`, `test3`) are included for convenience.
+For use in tests, the Hardhat `signer` can be used to emulate a multichain system locally. The chains shown (`test1`, `test2`, `test3`) are included for convenience.
 
 ```typescript
 import { ethers } from 'hardhat';

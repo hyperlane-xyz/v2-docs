@@ -10,7 +10,7 @@ In this pattern, an instance of the application's contracts is deployed on each 
 
 Developers looking to build in this pattern can inherit from the `Router` mix-in contract. The `Router` contract is an [`AbacusConnectionClient`](abacusconnectionclient.md) that tracks the addresses of `Router` contract addresses on remote chains.
 
-This allows `Routers` to send messages directly to other `Routers` without needing an address to be provided. It also allows `Routers` to reject messages sent from other untrusted applications.
+This allows `Routers` to send messages directly to other `Routers` without needing an address to be provided. It also allows `Routers` to reject messages sent from other untrusted senders.
 
 ```solidity
  interface IRouter {

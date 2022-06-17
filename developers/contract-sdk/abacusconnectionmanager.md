@@ -4,7 +4,7 @@ description: Manage your application's connection to Abacus
 
 # AbacusConnectionManager
 
-``[`AbacusConnectionManagers`](https://github.com/abacus-network/abacus-monorepo/blob/main/solidity/core/contracts/AbacusConnectionManager.sol) connect [`AbacusConnectionClients`](abacusconnectionclient.md) to the Abacus `Outbox` and `Inbox` contracts.
+[`AbacusConnectionManagers`](https://github.com/abacus-network/abacus-monorepo/blob/main/solidity/core/contracts/AbacusConnectionManager.sol) connect [`AbacusConnectionClients`](abacusconnectionclient.md) to the Abacus `Outbox` and `Inbox` contracts.
 
 `ApplicationConnectionClients` send messages to the [`Outbox`](../../protocol/messaging/outbox.md) contract address stored in the `AbacusConnectionManager.`
 
