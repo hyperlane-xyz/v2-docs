@@ -14,11 +14,11 @@ The `dev` environment is used by Abacus Works developers to test Agent changes. 
 
 The domains that are supported by the `sdk` are `alfajores` and `kovan`.
 
-### Environment: "testnet"
+### Environment: "testnet2"
 
-The `testnet` environment is where developers should expect to make integration tests of their app. Analogous to traditional software engineering practices, `testnet` is Abacus' staging environment. It's where one can test deployment tooling to real remote networks, as well as UI and SDK integrations. Agents are run as close as possible to mainnet and the relayer will expect Interchain gas payments in order to process messages on the destination chain.
+The `testnet2` environment is where developers should expect to make integration tests of their app. Analogous to traditional software engineering practices, `testnet` is Abacus' staging environment. It's where one can test deployment tooling to real remote networks, as well as UI and SDK integrations. Agents are run as close as possible to mainnet and the relayer will expect Interchain gas payments in order to process messages on the destination chain.
 
-Developers can interact with `testnet` Abacus core deployment by calling
+Developers can interact with `testnet2` Abacus core deployment by calling
 
 ```typescript
 import { AbacusCore } from '@abacus-network/sdk';
@@ -28,6 +28,10 @@ const core = AbacusCore.fromEnvironment(environment, multiProvider);
 
 The domains that are supported are `alfajores`, `kovan`, `fuji`, `mumbai`, `bsctestnet`, `arbitrumrinkeby`, `optimismkovan`. You can find the contract addresses under the Contract Addresses section.
 
+
+
 ### Environment: "mainnet"&#x20;
 
-Coming soon, please see the [roadmap](../resources/roadmap.md) for more information.
+The `mainnet` environment is where real value is at stake, a production environment deploying to the full set of Abacus supported domains. Where Validator sets will be continuously decentralized and relayers will need to be incentivized to process messages via interchain gas payments.
+
+The domains that are supported are `ethereum`, `polygon`, `avalanche`, `bsc`, `celo`, `arbitrum` and `kovan`. You can find the contract addresses under the [Contract Addresses section](contract-addresses/mainnet.md).
