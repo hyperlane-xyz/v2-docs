@@ -39,6 +39,6 @@ The `Outbox` and `Inbox` addressed stored by the `AbacusConnectionManager` can b
 }
 ```
 
-Applications should deploy their own `AbacusConnectionManagers` if they want their connection to Abacus to be controlled by their governance protocol.
+Applications can deploy their own `AbacusConnectionManagers` if they want their connection to Abacus to be controlled by their own governance protocol.
 
-Abacus Works will deploy and maintain an `AbacusConnectionManager` that all are welcome to use.
+Abacus Works will deploy and maintain a public `AbacusConnectionManager` that all are welcome to use.

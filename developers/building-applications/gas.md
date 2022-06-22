@@ -27,7 +27,7 @@ The contract has a single payable function, which takes a message leaf index (wh
 function payGasFor(uint256 _leafIndex) external payable;
 ```
 
-Developers can specify the address of the `InterchainGasPaymaster` that they're using via their [`AbacusConnectionManager`](../contract-sdk/abacusconnectionclient.md#abacusconnectionmanager). For convenience, Abacus Works will operate a relayer, and deploy corresponding `AbacusConnectionManager` and `InterchainGasPaymasters` that application developers can point to if they choose.
+Developers can specify the address of the `InterchainGasPaymaster` that they're using via their [`AbacusConnectionManager`](../writing-contracts/abacusconnectionclient.md#abacusconnectionmanager). For convenience, Abacus Works will operate a relayer, and deploy corresponding `AbacusConnectionManager` and `InterchainGasPaymasters` that application developers can point to if they choose.
 
 {% hint style="info" %}
 It's recommended to always pay for gas for each dispatched message, otherwise the message may not be relayed destination chain.
@@ -39,9 +39,9 @@ Applications can use the `InterchainGasCalculator` in the Abacus SDK to estimate
 
 ### Smart Contract
 
-Adapting the simple example from the [Getting started](broken-reference) section, let's have our `HelloWorld` application dispatch a message, pay interchain gas for that message, and create a checkpoint. Note the `HelloWorld` contract now inherits from [Router.sol](../contract-sdk/router.md).
+Adapting the simple example from the [Getting started](broken-reference) section, let's have our `HelloWorld` application dispatch a message, pay interchain gas for that message, and create a checkpoint. Note the `HelloWorld` contract now inherits from [Router.sol](../writing-contracts/router.md).
 
-We will use the internal function `_dispatchWithGas`, which is implemented in [`Router.sol`](../contract-sdk/router.md). It will first dispatch a message to a remote router, then pay a specified amount of origin chain native tokens to the `InterchainGasPaymaster` contract that's been set in the `AbacusConnectionManager`, and then create a checkpoint on the `Outbox`. No special handling logic, apart from simply implementing the `handle()` function, is required.
+We will use the internal function `_dispatchWithGas`, which is implemented in [`Router.sol`](../writing-contracts/router.md). It will first dispatch a message to a remote router, then pay a specified amount of origin chain native tokens to the `InterchainGasPaymaster` contract that's been set in the `AbacusConnectionManager`, and then create a checkpoint on the `Outbox`. No special handling logic, apart from simply implementing the `handle()` function, is required.
 
 ```solidity
 import {Router} from "@abacus-network/app/contracts/Router.sol";

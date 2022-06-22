@@ -4,19 +4,37 @@ description: Everything you need to build your first interchain application
 
 # Getting started
 
-Abacus makes interchain communication straightforward by providing a simple API for sending and receiving interchain messages.
+Abacus makes interchain communication straightforward by providing a simple API for sending and receiving messages from smart contracts. You can build a new interchain application from the ground up or integrate messaging into your existing app.
 
-To communicate between chains, application developers just need to implement functions that interface with this API.
+Similar to single-chain dApp development, the high level approach is to 1. write/modify your contracts, 2. deploy them to the network(s), and 3. utilize contracts in your application. The Abacus SDK provides the utilities you'll need for all three steps.
 
-_**Integrating with Abacus?**_ Use the [contract SDK](contract-sdk/) to write and test your contracts.
+### **Building Interchain Apps**
 
-_**Building an interchain application?**_ The [application SDK](application-sdk/) has everything else you need.
+_**Integrating contracts with Abacus?**_ See the [writing contracts](writing-contracts/) section to learn about writing and testing contracts.
 
-_**Looking for an example?**_ The [template repo](https://github.com/abacus-network/abacus-app-template) has a "Hello World" Abacus application.
+_**Ready to deploy your contracts?**_ Use the SDK's [deployment tooling](deploying-contracts/) to facilitate deployment across multiple chains.
 
-_**Looking for a step-by-step tutorial?**_** ** Keep reading for a step-by-step walkthrough of how to build your first interchain application using Abacus.
+_**Interacting with contracts?**_ Learn about [building an application](building-applications/) on top of interchain contracts.
 
-_**Not sure what to build?**_ Take a look at some [example applications](examples/) to see what you can do.
+### **Example Apps**
 
-_**Have questions?**_ We'd love to answer them! Ask us on [discord](https://discord.com/invite/KBD3aD78Bb), reach out on [twitter](https://twitter.com/Abacus\_Network), or ping us on Telegram.
+The [Hello World](https://github.com/abacus-network/abacus-app-template) app shows a contract that sends a 'hello' message to a set of destination chains, and has an examples of how to deploy and interact with that contract.
+
+For more examples, take a look at the [example applications](examples/) page to see what you can build.
+
+### Recommended Packages
+
+**@abacus-network/sdk:** Building blocks for interchain applications.
+
+**@abacus-network/deploy:** Utilities for multi-chain deployments
+
+**@abacus-network/core:** Objects for interacting with core Abacus contracts.&#x20;
+
+**@abacus-network/hardhat:** A hardhat plugin for contract testing.
+
+**@abacus-network/utils: (**Optional) Various Javascript/Typescript utilities.
+
+### Help and support
+
+If you need help building your interchain applications, you can always reach out on [discord](https://discord.com/invite/KBD3aD78Bb) or [twitter](https://twitter.com/Abacus\_Network)!
 

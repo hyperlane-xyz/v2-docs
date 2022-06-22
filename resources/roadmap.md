@@ -10,7 +10,7 @@ The following roadmap is for informational purposes only and is subject to chang
 
 ## Abacus Alpha
 
-_**Live on**_ [_**testnet**_](../developers/contract-addresses/testnet2.md)_**, mainnet ETA June 2022**_
+_**Live on**_ [_**testnet**_](broken-reference)_**, mainnet ETA June 2022**_
 
 We are currently working towards the alpha release of Abacus.
 

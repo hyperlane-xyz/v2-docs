@@ -14,7 +14,3 @@ description: A list of common terms in Abacus systems
 * **Relayer:** A service that submits signed checkpoints to destination chains.
 * **Router:** A contract that can dispatch and receive Abacus messages.
 * **Validator:** A client on the Abacus network, elected by Proof-of-Stake, that helps ensure the security and liveness of the system.
-
-{% hint style="info" %}
-For more terms and concepts related to the SDK, see the [Core concepts](../developers/application-sdk/core-concepts.md) page.
-{% endhint %}

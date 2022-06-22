@@ -6,12 +6,6 @@ description: Interact with your application on multiple chains
 
 The Abacus SDK simplifies the interface for smart contract applications deployed across multiple chains. It provides utilties for invoking a contract's methods on a target chain and a  [`MultiProvider`](multiprovider.md) for managing chain connections.&#x20;
 
-### Install
-
-```shell
-yarn add @abacus-network/sdk
-```
-
 ### Implement
 
 The `AbacusApp` abstraction is a mapping that resolves a chain to a collection of [ethers Contracts](https://docs.ethers.io/v5/api/contract/contract/#Contract). Developers should extend `AbacusApp` and can add methods for different kinds of contract calls/transactions they would like to initiate.
@@ -32,12 +26,12 @@ export class MyAbacusApp<Chain extends ChainName = ChainName>
 ```
 
 {% hint style="info" %}
-See the [Examples section](../examples/) for a more detailed demonstration of how to extend `AbacusApp`.
+See the [Abacus Hello World](https://github.com/abacus-network/abacus-app-template/blob/main/src/sdk/app.ts) app for an example of how to extend `AbacusApp`.
 {% endhint %}
 
 ### Interact
 
-Once an `AbacusApp` implementation is defined, it can be instantiated using the output generated from the [`AbacusAppDeployer`](deployment-tooling.md) and an instance of the [`MultiProvider`](multiprovider.md).&#x20;
+Once an `AbacusApp` implementation is defined, it can be instantiated using the output generated from the [`AbacusAppDeployer`](broken-reference) and an instance of the [`MultiProvider`](multiprovider.md).&#x20;
 
 ```typescript
 const chainToContracts = await myDeployer.deploy();
