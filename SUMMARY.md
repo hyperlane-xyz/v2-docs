@@ -41,8 +41,7 @@
   * [Contract interaction](developers/building-applications/contract-interaction.md)
   * [MultiProvider](developers/building-applications/multiprovider.md)
   * [Gas](developers/building-applications/gas.md)
-* [Environments](developers/environments/README.md)
-  * [Mainnet](developers/environments/mainnet.md)
+* [Environments](developers/environments.md)
 * [Examples](developers/examples/README.md)
   * [Controller](developers/examples/controller.md)
 

@@ -32,8 +32,9 @@ The domains that are supported are `alfajores`, `kovan`, `fuji`, `mumbai`, `bsct
 
 The `mainnet` environment is where real value is at stake, a production environment deploying to the full set of Abacus supported domains. Where Validator sets will be continuously decentralized and relayers will need to be incentivized to process messages via interchain gas payments.
 
+The domains that are supported are `ethereum`, `polygon`, `avalanche`, `bsc`, `celo`, `arbitrum` and `kovan`. You can find the contract addresses under the Contract Addresses section.
+
 ### Contract Addresses
 
-In cases where the core Abacus contract addresses are needed (instead of using utilities via Environment names), the artifacts for core deployments can be found in the [monorepo here](https://github.com/abacus-network/abacus-monorepo/tree/rossy/replace-celo-provider/typescript/sdk/src/core/environments).
+In cases where the core Abacus contract addresses are needed (instead of using utilities via Environment names), the artifacts for core deployments can be found in the [monorepo here](https://github.com/abacus-network/abacus-monorepo/tree/main/typescript/sdk/src/core/environments).
 
-The domains that are supported are `ethereum`, `polygon`, `avalanche`, `bsc`, `celo`, `arbitrum` and `kovan`. You can find the contract addresses under the [Contract Addresses section](mainnet.md).
