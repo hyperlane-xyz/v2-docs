@@ -30,5 +30,5 @@ If everything is configured correctly, you should see json files being written t
 
 [Relayers](../../protocol/agents/relayer.md) need to know where to find your validator's signatures. Copy your URL by navigating to your S3 bucket in the AWS console, selecting the `checkpoint_latest_index.json` object, and clicking "Copy URL".
 
-Please submit a PR to add this URL to [this file](https://github.com/abacus-network/abacus-monorepo/blob/main/typescript/infra/config/environments/mainnet/validators.ts#L15), or reach out on #validators on Discord.
+Please reach out on #validators on Discord when you are ready to be added to the validator set.
 

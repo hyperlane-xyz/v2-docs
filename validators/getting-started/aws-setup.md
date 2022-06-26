@@ -47,7 +47,7 @@ Your validator will post their signatures to this bucket.
 
 1. Go to AWS's S3 in the AWS console.
 2. On the right, click the orange "Create Bucket" button
-3. Pick an informative bucket name, such as `abacus-validator-signatures-${chain_name}`
+3. Pick an informative bucket name, such as `abacus-validator-signatures-${validator_name}-${chain_name}`
 4. Consider choosing the same region as the KMS key you created in the previous step.&#x20;
 5. Keep the recommended "ACLs disabled" setting for object ownership.
 6. Configure public access settings so that relayers can read your signatures

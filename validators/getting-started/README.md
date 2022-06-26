@@ -4,7 +4,7 @@ description: Everything you need to start running a validator
 
 # Getting started
 
-Abacus [validators](../../protocol/agents/validators.md) are stateless, do not submit transactions, and are not networked with other validators.
+Abacus [validators](../../protocol/agents/validators.md) are stateless, do not submit transactions, and are not networked with other validators. Abacus validators are run on a per-source-chain basis, but of course entities can be running validators for multiple chains. These instructions are written for a single chain.
 
 Running a validator simply requires the following:
 
