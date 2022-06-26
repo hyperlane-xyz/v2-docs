@@ -24,4 +24,6 @@ Sending and receiving a cross-chain message consists of three steps.
 
 1. An application calls [`Outbox.dispatch()`](outbox.md#dispatch)on the origin chain, inserting the message into the `Outbox's` merkle tree.
 2. The validator set for the origin chain signs the new merkle root. If specified, the message recipient's sovereign validators also sign the new merkle root.&#x20;
-3. A relayer delivers the message by calling `Inbox.process()`, providing a mekle proof of the message against the signed root from step 2.
+3. A relayer delivers the message by calling `InboxValidatorManager.process()`, providing a mekle proof of the message against the signed root from step 2. `InboxValidatorManager` will then call `Inbox.process` which verifies the merkle proof and eventually will call `handle` on the message recipient.
+
+![](<../../.gitbook/assets/Untitled Diagram.drawio (2).svg>)
