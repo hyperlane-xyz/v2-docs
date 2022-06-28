@@ -43,6 +43,8 @@
   * [Gas](developers/building-applications/gas.md)
 * [Environments](developers/environments.md)
 * [Examples](developers/examples/README.md)
+  * [HelloWorld](developers/examples/helloworld.md)
+  * [ERC20 token](developers/examples/erc20-token.md)
   * [Controller](developers/examples/controller.md)
 
 ## Validators

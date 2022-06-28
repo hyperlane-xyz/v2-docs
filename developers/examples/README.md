@@ -4,22 +4,10 @@ description: Examples of different interchain applications using Abacus
 
 # Examples
 
-## Hello World
+For examples of integrating contracts with Abacus and building interchain apps on top, see these repositories:
 
-The [abacus-app-template repo](https://github.com/abacus-network/abacus-app-template) shows the basic skeleton of an Abacus app.
+****[**HelloWorld**](helloworld.md) **-** The skeleton of an Abacus-connected contract and app.
 
-Its [contract](https://github.com/abacus-network/abacus-app-template/blob/main/contracts/HelloWorld.sol) sends a user-specified string to another chain which handles the message by increasing counters and emitting events.
+****[**ERC20 Token**](erc20-token.md) **-** An interchain ERC20 token contract.
 
-Its [deployer](https://github.com/abacus-network/abacus-app-template/blob/main/src/deploy/deploy.ts) is configured to deploy to local hardhat-based test networks.
-
-Its [app](https://github.com/abacus-network/abacus-app-template/blob/main/src/sdk/app.ts) fetches some basic statistics and returns them.
-
-## ERC20 Token
-
-The [abacus-token repo](https://github.com/abacus-network/abacus-token) shows an example interchain ERC20 token.
-
-The changes to the vanilla OpenZeppelin ERC20 contract are minimal. It has a `transferRemote()` function that burns the specified amount of tokens on the sending chain and mints the equivalent amount on the receiving chain.
-
-## Controller
-
-The [Controller](controller.md) is an Abacus application that allows arbitrary function calls to be executed on remote chains.
+****[**Controller**](controller.md) - An app for executing arbitrary cross-chain function calls.
