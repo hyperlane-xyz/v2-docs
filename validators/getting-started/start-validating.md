@@ -22,7 +22,7 @@ You can run the validator binary by compiling the code directly, or using a dock
 
 The validator can be run directly via  `cargo run --bin validator` in the `rust` folder of the [monorepo](https://github.com/abacus-network/abacus-monorepo).
 
-Alternatively, the docker image can be run via `docker run -it gcr.io/abacus-labs-dev/abacus-agent:sha-8c9c389` `./validator`.
+Alternatively, the docker image can be run via `docker run -it gcr.io/abacus-labs-dev/abacus-agent:sha-90f1885 ./validator`.
 
 If everything is configured correctly, you should see json files being written to your S3 bucket.
 
