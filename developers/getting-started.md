@@ -6,7 +6,15 @@ description: Everything you need to build your first interchain application
 
 Abacus makes interchain communication straightforward by providing a simple API for sending and receiving messages from smart contracts. You can build a new interchain application from the ground up or integrate messaging into your existing app.
 
-Similar to single-chain dApp development, the high level approach is to 1. write/modify your contracts, 2. deploy them to the network(s), and 3. utilize contracts in your application. The Abacus SDK provides the utilities you'll need for all three steps.
+Similar to single-chain dApp development, the high level approach is to:
+
+1\. write/modify your contracts,&#x20;
+
+2\. deploy them to the network(s), and&#x20;
+
+3\. utilize contracts in your application.&#x20;
+
+The Abacus SDK provides the utilities you'll need for all three steps.
 
 ### **Building Interchain Apps**
 
