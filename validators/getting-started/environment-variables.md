@@ -33,7 +33,7 @@ Your validator takes as configuration the following environment variables:
 | --------- | ------------------------------- | ------------------------------------ |
 | Arbitrum  | 1                               | 1                                    |
 | Avalanche | 1                               | 2                                    |
-| BSC       | 1                               | 3                                    |
+| BSC       | 15                              | 3                                    |
 | Celo      | 1                               | 5                                    |
 | Ethereum  | 20                              | 15                                   |
 | Optimism  | 20                              | 15                                   |
