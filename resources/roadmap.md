@@ -10,13 +10,13 @@ The following roadmap is for informational purposes only and is subject to chang
 
 ## Abacus Alpha
 
-_**Live on**_ [_**testnet**_](broken-reference)_**, mainnet ETA June 2022**_
+_**Live on**_ [_**testnet**_](broken-reference)_**, mainnet ETA July 2022**_
 
 We are currently working towards the alpha release of Abacus.
 
 **Security**
 
-The alpha release will use ECDSA multi-signatures, rather than an aggregatable signature scheme. Future releases will use an aggregatable signature scheme, which will reduce the gas costs of relaying messages by up to 33%.
+The alpha release will use ECDSA multi-signatures, rather than an aggregatable signature scheme. Future releases will use an aggregatable signature scheme, which will allow Abacus to scale to larger validator sets.
 
 The validator set on each chain will be determined by a multi-signature wallet controlled by Abacus Works. Future releases will use proof-of-stake to determine the validator set.
 
