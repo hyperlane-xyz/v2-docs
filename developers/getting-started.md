@@ -16,6 +16,16 @@ Similar to single-chain dApp development, the high level approach is to:
 
 The Abacus SDK provides the utilities you'll need for all three steps.
 
+### Installing the SDK Package
+
+The SDK package can be added to you project using yarn or npm (yarn is recommended).
+
+```shell
+yarn add @abacus-network/sdk
+```
+
+The SDK includes includes other dependencies you may need, such as the `@abacus-network/app` package for extending Abacus contracts and the `@abacus-network/utils` package for various utility functions.
+
 ### **Building Interchain Apps**
 
 _**Integrating contracts with Abacus?**_ See the [writing contracts](writing-contracts/) section to learn about writing and testing contracts.
@@ -29,18 +39,6 @@ _**Interacting with contracts?**_ Learn about [building an application](building
 The [Hello World](https://github.com/abacus-network/abacus-app-template) app shows a contract that sends a 'hello' message to a set of destination chains, and has an examples of how to deploy and interact with that contract.
 
 For more examples, take a look at the [example applications](examples/) page to see what you can build.
-
-### Recommended Packages
-
-**@abacus-network/sdk:** Building blocks for interchain applications.
-
-**@abacus-network/deploy:** Utilities for multi-chain deployments
-
-**@abacus-network/core:** Objects for interacting with core Abacus contracts.&#x20;
-
-**@abacus-network/hardhat:** A hardhat plugin for contract testing.
-
-**@abacus-network/utils: (**Optional) Various Javascript/Typescript utilities.
 
 ### Help and support
 

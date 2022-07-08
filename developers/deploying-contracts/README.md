@@ -8,12 +8,6 @@ The Abacus SDK contains utilities to facilitate deploying your contract(s) to mu
 
 Two core classes will be relevant for this task: an `AbacusDeployer` and an `AbacusAppChecker`.
 
-### Install
-
-```shell
-yarn add @abacus-network/deploy
-```
-
 ### [AbacusDeployer](abacusdeployer.md)
 
 A utility for managing deployments to multiple supported chains.&#x20;

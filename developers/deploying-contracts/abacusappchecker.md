@@ -7,8 +7,7 @@ description: A utility for confirm that contracts are functioning
 Abacus apps can optionally implement an `AbacusAppChecker` to confirm that their contracts and live. For contracts utilizing the the [Router](../writing-contracts/router.md) pattern, simply extending the `AbacusRouterChecker` with custom types is sufficient.
 
 ```typescript
-import { AbacusRouterChecker } from '@abacus-network/deploy';
-import { ChainName } from '@abacus-network/sdk';
+import { AbacusRouterChecker, ChainName } from '@abacus-network/sdk';
 
 export class MyChecker<
   Chain extends ChainName,

@@ -11,8 +11,7 @@ Developers must provide an implementation for `deployContracts` which describes 
 Deployers will also need contract [Factories](https://docs.ethers.io/v5/api/contract/contract-factory/), which be defined manually or generated automatically by tooling like TypeChain (recommended).
 
 ```typescript
-import { AbacusRouterDeployer } from '@abacus-network/deploy';
-import { ChainName } from '@abacus-network/sdk';
+import { AbacusRouterDeployer, ChainName } from '@abacus-network/sdk';
 
 class MyDeployer<Chain extends ChainName, MyConfig>
   extends AbacusRouterDeployer<Chain, MyContracts, MyFactories, MyConfig> { 

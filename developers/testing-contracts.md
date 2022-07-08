@@ -1,43 +1,22 @@
 ---
-description: Testing contracts locally using the Hardhat plugin
+description: Testing contracts locally using SDK test utilities
 ---
 
 # Testing contracts
 
-Once you're done writing your contracts, it's time to test them! You can use the [Abacus hardhat plugin](https://www.npmjs.com/package/@abacus-network/hardhat) to deploy an instance of Abacus for testing purposes and simulate interchain messaging.
-
-In the future, Abacus will support additional testing frameworks, including [Foundry](https://github.com/foundry-rs/foundry).
-
-## Install the plugin&#x20;
-
-First, install the plugin:
-
-```shell
-yarn add --dev @abacus-network/hardhat
-```
-
-Then, import it by adding the following line to your `hardhat.config.ts`
-
-```typescript
-import '@abacus-network/hardhat';
-```
-
-## Use the plugin
-
-The Abacus hardhat plugin allows you to deploy an instance of the Abacus contracts to your test environment, and simulate the passing of interchain messages between contracts.
+Once you're done writing your contracts, it's time to test them! You can use the Abacus `TestCoreApp` and `TestCoreDeployer` to create an instance of Abacus for testing purposes and simulate interchain messaging.
 
 In the example below, we simulate message passing between two chains. For more in depth examples see the tests in the [Abacus template application](https://github.com/abacus-network/abacus-app-template/tree/main/src/test).
 
 ```typescript
-import '@abacus-network/hardhat';
-import { utils as deployUtils } from '@abacus-network/deploy';
-import { TestCoreApp } from '@abacus-network/hardhat/dist/src/TestCoreApp';
-import { TestCoreDeploy } from '@abacus-network/hardhat/dist/src/TestCoreDeploy';
 import {
   ChainMap,
   ChainNameToDomainId,
+  getMultiProviderFromConfigAndSigner,
   MultiProvider,
   TestChainNames,
+  TestCoreApp,
+  TestCoreDeployer,
 } from '@abacus-network/sdk';
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers';
 import { expect } from 'chai';
@@ -55,7 +34,7 @@ describe('HelloWorld', async () => {
   before(async () => {
     [signer] = await ethers.getSigners();
     // Create multiprovider using desired test configs
-    multiProvider = deployUtils.getMultiProviderFromConfigAndSigner(
+    multiProvider = getMultiProviderFromConfigAndSigner(
       myTestConfigs,
       signer,
     );
@@ -65,7 +44,7 @@ describe('HelloWorld', async () => {
     // Create a core test app with deployed core contracts
     coreApp = new TestCoreApp(coreContractsMaps, multiProvider);
     // Extend my configs with needed core configs
-    config = coreApp.extendWithConnectionManagers(getMyConfigs(signer.address));
+    config = coreApp.extendWithConnectionClientConfig(getMyConfigs(signer.address));
   });
 
   beforeEach(async () => {
