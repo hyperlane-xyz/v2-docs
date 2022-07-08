@@ -36,5 +36,5 @@ The domains that are supported are `ethereum`, `polygon`, `avalanche`, `bsc`, `c
 
 ### Contract Addresses
 
-In cases where the core Abacus contract addresses are needed (instead of using utilities via Environment names), the artifacts for core deployments can be found in the [monorepo here](https://github.com/abacus-network/abacus-monorepo/tree/main/typescript/sdk/src/core/environments).
+In cases where the core Abacus contract addresses are needed (instead of using utilities via Environment names), the artifacts for core deployments can be found in the [monorepo here](https://github.com/abacus-network/abacus-monorepo/tree/main/typescript/sdk/src/consts/environments).
 
