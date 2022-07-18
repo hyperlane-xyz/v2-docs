@@ -33,7 +33,7 @@ Your validator takes as configuration the following environment variables:
 | Chain     | Suggested reorg period (blocks) | Suggested polling interval (seconds) |
 | --------- | ------------------------------- | ------------------------------------ |
 | Arbitrum  | 0                               | 1                                    |
-| Avalanche | 3                               | 2                                    |
+| Avalanche | 1                               | 2                                    |
 | BSC       | 15                              | 3                                    |
 | Celo      | 0                               | 5                                    |
 | Ethereum  | 20                              | 15                                   |
