@@ -4,7 +4,7 @@ description: Abacus domain identifiers.
 
 ## Mainnet
 
-| Network | Domain Identifier (integer) 
+| Network | Domain Identifier (`uint32`) |
 | ------- | ------- |
 | Arbitrum | `0x617262` |
 | Avalanche | `0x61766178` |
@@ -16,7 +16,7 @@ description: Abacus domain identifiers.
 
 ## Testnet
 
-| Network | Latency |
+| Network | Domain Identifier (`uint32`) |
 | ------- | ------- |
 | Alfajores | `1000` |
 | Fuji | `43113` |
