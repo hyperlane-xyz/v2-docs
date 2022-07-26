@@ -1,3 +1,10 @@
+---
+description: Abacus block finality latency configuratino.
+---
+
+Validators must wait a certain number of blocks to be mined before they are considered valid and [reorg-safe](https://www.alchemy.com/overviews/what-is-a-reorg). Without this, validators could be slashed since they may have signed a checkpoint that is no longer valid. 
+
+Refer to the following sections for block finality configuration used by the Abacus Works validators.
 
 ## Mainnet
 
