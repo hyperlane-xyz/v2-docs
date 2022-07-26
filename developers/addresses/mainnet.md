@@ -1,3 +1,9 @@
+---
+description: Mainnet abacus core contract addresses
+---
+
+Find additional [mainnet address information on github](https://github.com/abacus-network/abacus-monorepo/blob/main/typescript/sdk/src/consts/environments/mainnet.json).
+
 # Avalanche
 ## Outbox
 `0x0761b0827849abbf7b0cC09CE14e1C93D87f5004`
