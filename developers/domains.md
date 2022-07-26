@@ -19,10 +19,10 @@ description: Abacus domain identifiers.
 | Network | Domain Identifier (`uint32`) |
 | ------- | ------- |
 | Alfajores | `1000` |
+| ArbitrumRinkeby | `0x61722d72` |
+| BSC Testnet | `0x62732d74` |
 | Fuji | `43113` |
 | Goerli | `5` |
 | Kovan | `3000` |
 | Mumbai | `80001` |
-| BSC Testnet | `0x62732d74` |
-| ArbitrumRinkeby | `0x61722d72` |
 | OptimismKovan | `0x6f702d6b` |
