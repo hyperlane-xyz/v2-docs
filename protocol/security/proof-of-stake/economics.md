@@ -2,7 +2,7 @@
 description: A partial specification of proof-of-stake tokenomics
 ---
 
-# Enonomics
+# Economics
 
 {% hint style="info" %}
 Note: The Abacus protocol is still under development. This documentation reflects the latest Abacus protocol design.
