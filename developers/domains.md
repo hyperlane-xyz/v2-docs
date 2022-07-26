@@ -1,0 +1,28 @@
+---
+description: Abacus domain identifiers.
+---
+
+## Mainnet
+
+| Network | Domain Identifier (integer) 
+| ------- | ------- |
+| Arbitrum | `0x617262` |
+| Avalanche | `0x61766178` |
+| BSC | `0x627363` |
+| Celo | `0x63656c6f` |
+| Ethereum | `0x657468` |
+| Optimism | `0x6f70` |
+| Polygon | `0x706f6c79` |
+
+## Testnet
+
+| Network | Latency |
+| ------- | ------- |
+| Alfajores | `1000` |
+| Fuji | `43113` |
+| Goerli | `5` |
+| Kovan | `3000` |
+| Mumbai | `80001` |
+| BSC Testnet | `0x62732d74` |
+| ArbitrumRinkeby | `0x61722d72` |
+| OptimismKovan | `0x6f702d6b` |
