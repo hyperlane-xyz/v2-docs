@@ -1,3 +1,9 @@
+---
+description: Testnet abacus core contract addresses
+---
+
+Find additional [testnet address information on github](https://github.com/abacus-network/abacus-monorepo/blob/main/typescript/sdk/src/consts/environments/testnet2.json).
+
 ## Outboxes
 
 | Network | Address |
