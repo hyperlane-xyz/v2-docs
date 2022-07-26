@@ -1,0 +1,32 @@
+---
+description: Abacus block finality latency configuratino.
+---
+
+Validators must wait a certain number of blocks to be mined before they are considered valid and [reorg-safe](https://www.alchemy.com/overviews/what-is-a-reorg). Without this, validators could be slashed since they may have signed a checkpoint that is no longer valid. 
+
+Refer to the following sections for block finality configuration used by the Abacus Works validators.
+
+## Mainnet
+
+| Network | Latency |
+| ------- | ------- |
+| Arbitrum | 1 block (Xs) |
+| Avalanche | 3 blocks () |
+| BSC | 15 blocks (Xs) |
+| Celo | 1 block (5s) |
+| Ethereum | 20 blocks (260s) |
+| Optimism | 1 block (Xs) |
+| Polygon | 256 blocks (Xs) |
+
+## Testnet
+
+| Network | Latency |
+| ------- | ------- |
+| Alfajores | 1 block (Xs) |
+| Fuji | 3 blocks (Xs) |
+| Goerli | 7 blocks (Xs) |
+| Kovan | 7 blocks (Xs) |
+| Mumbai | 32 blocks (Xs) |
+| BSC Testnet | 9 blocks (Xs) |
+| ArbitrumRinkeby | 1 block (Xs) |
+| OptimismKovan | 1 block (Xs) |
