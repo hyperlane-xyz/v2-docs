@@ -11,22 +11,22 @@ Refer to the following sections for block finality configuration used by the Aba
 | Network | Latency |
 | ------- | ------- |
 | Arbitrum | 1 block (Xs) |
-| Avalanche | 3 blocks () |
-| BSC | 15 blocks (Xs) |
+| Avalanche | 3 blocks (6s) |
+| BSC | 15 blocks (45s) |
 | Celo | 1 block (5s) |
 | Ethereum | 20 blocks (260s) |
 | Optimism | 1 block (Xs) |
-| Polygon | 256 blocks (Xs) |
+| Polygon | 256 blocks (~540s) |
 
 ## Testnet
 
 | Network | Latency |
 | ------- | ------- |
-| Alfajores | 1 block (Xs) |
-| Fuji | 3 blocks (Xs) |
-| Goerli | 7 blocks (Xs) |
-| Kovan | 7 blocks (Xs) |
-| Mumbai | 32 blocks (Xs) |
-| BSC Testnet | 9 blocks (Xs) |
+| Alfajores | 1 block (5s) |
+| Fuji | 3 blocks (~6s) |
+| Goerli | 7 blocks (105s) |
+| Kovan | 7 blocks (~50s) |
+| Mumbai | 32 blocks (160s) |
+| BSC Testnet | 9 blocks (27s) |
 | ArbitrumRinkeby | 1 block (Xs) |
 | OptimismKovan | 1 block (Xs) |
