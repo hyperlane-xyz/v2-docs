@@ -18,7 +18,7 @@ To send the message, it calls the `_dispatchWithGas` method.
 
 The [deployer](https://github.com/abacus-network/abacus-app-template/blob/main/src/deploy/deploy.ts) is configured to deploy to local hardhat-based test networks.
 
-The main purpose of defining a deployer is to provide the custom types and and implementation of the `deployContracts` method. See [Deploying contracts](../deploying-contracts/) for more details.
+The main purpose of defining a deployer is to provide the custom types and and implementation of the `deployContracts` method. See [Deploying contracts](../writing-contracts/deploying-contracts/) for more details.
 
 ```typescript
 export class HelloWorldDeployer<

@@ -24,13 +24,13 @@ The SDK package can be added to you project using yarn or npm (yarn is recommend
 yarn add @abacus-network/sdk
 ```
 
-The SDK includes includes other dependencies you may need, such as the `@abacus-network/app` package for extending Abacus contracts and the `@abacus-network/utils` package for various utility functions.
+The SDK includes other dependencies you may need, such as the `@abacus-network/app` package for extending Abacus contracts and the `@abacus-network/utils` package for various utility functions.
 
 ### **Building Interchain Apps**
 
 _**Integrating contracts with Abacus?**_ See the [writing contracts](writing-contracts/) section to learn about writing and testing contracts.
 
-_**Ready to deploy your contracts?**_ Use the SDK's [deployment tooling](deploying-contracts/) to facilitate deployment across multiple chains.
+_**Ready to deploy your contracts?**_ Use the SDK's [deployment tooling](writing-contracts/deploying-contracts/) to facilitate deployment across multiple chains.
 
 _**Interacting with contracts?**_ Learn about [building an application](building-applications/) on top of interchain contracts.
 

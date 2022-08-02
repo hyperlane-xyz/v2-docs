@@ -31,7 +31,7 @@ See the [Abacus Hello World](https://github.com/abacus-network/abacus-app-templa
 
 ### Interact
 
-Once an `AbacusApp` implementation is defined, it can be instantiated using the output generated from the [`AbacusAppDeployer`](../deploying-contracts/abacusdeployer.md) and an instance of the [`MultiProvider`](multiprovider.md).&#x20;
+Once an `AbacusApp` implementation is defined, it can be instantiated using the output generated from the [`AbacusAppDeployer`](../writing-contracts/deploying-contracts/abacusdeployer.md) and an instance of the [`MultiProvider`](multiprovider.md).&#x20;
 
 ```typescript
 const chainToContracts = await myDeployer.deploy();

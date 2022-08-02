@@ -6,7 +6,7 @@ description: A utility for managing deployments to multiple chains
 
 `AbacusDeployer` helps manage the deployment of contracts across multiple chains. Abacus apps should extend a deployer to specifiy the needed types and implement any needed logic for deployment of their contracts.&#x20;
 
-Developers must provide an implementation for `deployContracts` which describes the logic for deploying the application on a single chain. Developers building with the [Router](../writing-contracts/router.md) pattern can extend `AbacusRouterDeployer`, which handles some Router-specific boilerplate.
+Developers must provide an implementation for `deployContracts` which describes the logic for deploying the application on a single chain. Developers building with the [Router](../router.md) pattern can extend `AbacusRouterDeployer`, which handles some Router-specific boilerplate.
 
 Deployers will also need contract [Factories](https://docs.ethers.io/v5/api/contract/contract-factory/), which be defined manually or generated automatically by tooling like TypeChain (recommended).
 
