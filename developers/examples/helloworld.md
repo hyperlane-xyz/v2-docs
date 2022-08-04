@@ -25,9 +25,9 @@ export class HelloWorldDeployer<
   Chain extends ChainName,
 > extends AbacusRouterDeployer<
   Chain,
+  HelloWorldConfig,
   HelloWorldContracts,
   HelloWorldFactories,
-  HelloWorldConfig
 > 
 ```
 
@@ -42,5 +42,6 @@ const tx = await sender.sendHelloWorld(
   toDomain,
   message,
   chainConnection.overrides,
+  gasValue
 );
 ```

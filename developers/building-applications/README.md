@@ -2,7 +2,7 @@
 description: Create interchain applications with the Abacus Application SDK
 ---
 
-# Building applications
+# Abacus App Framework
 
 The Abacus Application SDK helps developers create and manage applications built on top of interchain smart contracts.
 
@@ -16,7 +16,7 @@ App to chain communication is performed via ethers.js compatible [providers](htt
 
 ### [Gas Estimation and Payment](gas.md)
 
-Abacus allows users to pay for message processing on the destination chain using tokens from the origin chain. Use the `InterchainGasPaymaster` utility for gas estimation of cross-chain messages.
+Abacus allows users to pay for message processing on the destination chain using tokens from the origin chain. Use the `InterchainGasCalculator` utility for gas estimation of cross-chain messages.
 
 ### Class Hierarchy
 

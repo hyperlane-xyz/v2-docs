@@ -2,7 +2,7 @@
 description: Predefined Abacus environments for test and production use
 ---
 
-# Environments
+# Core Environments
 
 Throughout the Abacus Code bases exist the concept of environments to facilitate the development and testing of changes, both of the Abacus core platform as well as applications building on top of Abacus. Environments also encode the set of domains/chains that are supported. This page outlines the purpose of each environment and how developers should think about them.
 
@@ -25,8 +25,6 @@ const core = AbacusCore.fromEnvironment(environment, multiProvider);
 ```
 
 The domains that are supported are `alfajores`, `kovan`, `fuji`, `mumbai`, `bsctestnet`, `arbitrumrinkeby`, `optimismkovan`. You can find the contract addresses under the Contract Addresses section.
-
-
 
 ### Environment: "mainnet"&#x20;
 
