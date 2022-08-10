@@ -4,17 +4,21 @@ description: Receive an inbound message from any Abacus supported network.
 
 # Receive
 
-Inbound messages can be received by contracts implementing the `IMessageRecipient.handle` to be relayed successfully by Abacus.
+Contracts must implement the \`handle()\` ABI defined below in order to receive messages from Abacus.
+
+### Interface
 
 ```solidity
 interface IMessageRecipient {
     function handle(
         uint32 _origin,
         bytes32 _sender,
-        bytes calldata _message
+        bytes calldata _messageBody
     ) external;
 }
 ```
+
+### Access Control
 
 {% hint style="warning" %}
 In `handle` implementations, it is important to restrict the `msg.sender` to the corresponding `origin` domain's `Inbox` address to prevent any contract from spoofing an inbound Abacus message.&#x20;
@@ -32,7 +36,9 @@ modifier onlyEthereumInbox(uint32 origin) {
 }
 ```
 
-A generalized message access control layer is provided in the [`AbacusConnectionManager`](../writing-contracts/abacusconnectionmanager.md) library, and Abacus Works has deployed and maintained these registries on all supported networks.&#x20;
+A generalized message access control layer is provided in the [`AbacusConnectionManager`](../building-applications/writing-contracts/abacusconnectionmanager.md) library, and Abacus Works has deployed and maintained these registries on all supported networks.&#x20;
+
+### Encoding
 
 {% hint style="info" %}
 Abacus message senders are left-padded to `bytes32` for compatibility with virtual machines that are addressed differently.&#x20;
@@ -46,6 +52,8 @@ function bytes32ToAddress(bytes32 _buf) internal pure returns (address) {
     return address(uint160(uint256(_buf)));
 }
 ```
+
+### Example Usage
 
 An example `handle` implementation for receiving messages from `ethereum` on `avalanche` is provided below.
 

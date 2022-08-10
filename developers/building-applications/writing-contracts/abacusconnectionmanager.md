@@ -6,9 +6,9 @@ description: Manage your application's connection to Abacus
 
 [`AbacusConnectionManagers`](https://github.com/abacus-network/abacus-monorepo/blob/main/solidity/core/contracts/AbacusConnectionManager.sol) connect [`AbacusConnectionClients`](abacusconnectionclient.md) to the Abacus `Outbox` and `Inbox` contracts.
 
-`ApplicationConnectionClients` send messages to the [`Outbox`](../../protocol/messaging/outbox.md) contract address stored in the `AbacusConnectionManager.`
+`ApplicationConnectionClients` send messages to the [`Outbox`](../../../protocol/messaging/outbox.md) contract address stored in the `AbacusConnectionManager.`
 
-Similarly, `ApplicationConnectionClients` query the `AbacusConnectionManager` when receiving messages, to ensure that messages are being delivered by an [`Inbox`](../../protocol/messaging/inbox.md) contract.
+Similarly, `ApplicationConnectionClients` query the `AbacusConnectionManager` when receiving messages, to ensure that messages are being delivered by an [`Inbox`](../../../protocol/messaging/inbox.md) contract.
 
 The `Outbox` and `Inbox` addressed stored by the `AbacusConnectionManager` can be updated by the contract's `owner`, allowing clients using that connection manager to easily migrate to newer versions of the Abacus protocol.
 

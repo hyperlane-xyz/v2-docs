@@ -6,7 +6,7 @@ description: The skeleton of an Abacus-connected contract and app
 
 The [abacus-app-template repo](https://github.com/abacus-network/abacus-app-template) shows the basic skeleton of an Abacus app.
 
-#### Contract
+### Contract
 
 Its [contract](https://github.com/abacus-network/abacus-app-template/blob/main/contracts/HelloWorld.sol) sends a user-specified string to another chain which handles the message by increasing counters and emitting events.&#x20;
 
@@ -14,11 +14,11 @@ To conveniently implement the router pattern, the contract extends `@abacus-netw
 
 To send the message, it calls the `_dispatchWithGas` method.
 
-#### Deployer
+### Deployer
 
 The [deployer](https://github.com/abacus-network/abacus-app-template/blob/main/src/deploy/deploy.ts) is configured to deploy to local hardhat-based test networks.
 
-The main purpose of defining a deployer is to provide the custom types and and implementation of the `deployContracts` method. See [Deploying contracts](../writing-contracts/deploying-contracts/) for more details.
+The main purpose of defining a deployer is to provide the custom types and and implementation of the `deployContracts` method. See [Deploying contracts](../building-applications/nodejs-sdk/deploying-contracts.md) for more details.
 
 ```typescript
 export class HelloWorldDeployer<
@@ -31,7 +31,7 @@ export class HelloWorldDeployer<
 > 
 ```
 
-#### Application
+### Application
 
 The [application](https://github.com/abacus-network/abacus-app-template/blob/main/src/sdk/app.ts#L12) fetches some basic statistics and returns them.
 

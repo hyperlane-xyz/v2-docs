@@ -28,9 +28,9 @@ The SDK includes other dependencies you may need, such as the `@abacus-network/a
 
 ### **Building Interchain Apps**
 
-_**Integrating contracts with Abacus?**_ See the [writing contracts](writing-contracts/) section to learn about writing and testing contracts.
+_**Integrating contracts with Abacus?**_ See the [writing contracts](building-applications/writing-contracts/) section to learn about writing and testing contracts.
 
-_**Ready to deploy your contracts?**_ Use the SDK's [deployment tooling](writing-contracts/deploying-contracts/) to facilitate deployment across multiple chains.
+_**Ready to deploy your contracts?**_ Use the SDK's [deployment tooling](building-applications/nodejs-sdk/deploying-contracts.md) to facilitate deployment across multiple chains.
 
 _**Interacting with contracts?**_ Learn about [building an application](building-applications/) on top of interchain contracts.
 

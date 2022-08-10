@@ -2,9 +2,11 @@
 description: Testing contracts locally using SDK test utilities
 ---
 
-# Testing
+# Interchain Testing
 
 Once you're done writing your contracts, it's time to test them! You can use the Abacus `TestCoreApp` and `TestCoreDeployer` to create an instance of Abacus for testing purposes and simulate interchain messaging.
+
+### Example Usage
 
 In the example below, we simulate message passing between two chains. For more in depth examples see the tests in the [Abacus template application](https://github.com/abacus-network/abacus-app-template/tree/main/src/test).
 
