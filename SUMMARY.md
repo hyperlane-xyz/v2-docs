@@ -6,11 +6,11 @@
 
 * [Getting started](developers/getting-started.md)
 * [Messaging API](developers/messaging-api/README.md)
+  * [Quickstart Tutorial](developers/messaging-api/quickstart-tutorial.md)
   * [Send](developers/messaging-api/send.md)
   * [Receive](developers/messaging-api/receive.md)
   * [Unit testing](developers/messaging-api/unit-testing.md)
   * [Gas](developers/messaging-api/gas.md)
-  * [Tutorial](developers/messaging-api/tutorial.md)
 * [App framework](developers/building-applications/README.md)
   * [Solidity SDK](developers/building-applications/writing-contracts/README.md)
     * [AbacusConnectionClient](developers/building-applications/writing-contracts/abacusconnectionclient.md)

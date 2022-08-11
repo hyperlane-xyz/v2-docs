@@ -2,7 +2,7 @@
 description: Send your first interchain message in under 5 minutes
 ---
 
-# Tutorial
+# Quickstart Tutorial
 
 This tutorial demonstrates how to [send](send.md) a simple interchain message to a pre-deployed [`TestRecipient`](https://github.com/abacus-network/abacus-monorepo/blob/e199e9688a4b5710fe45eefd2f04ecb84385952c/solidity/core/contracts/test/TestRecipient.sol) contract.
 
@@ -14,7 +14,7 @@ Note that this tutorial does not cover [paying for the cost of relaying the mess
 
 * `$OUTBOX_ADDRESS`: The [Outbox](../../protocol/messaging/outbox.md) contract address on the origin chain. Abacus contract addresses can be found [here](../contract-addresses/).
 * `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../domains.md).
-* `$RECIPIENT`: The address of the `TestRecipient` contract on the destination chain, left padded to a `bytes32`. TestRecipient contract addresses can be found [here](tutorial.md#appendix).
+* `$RECIPIENT`: The address of the `TestRecipient` contract on the destination chain, left padded to a `bytes32`. TestRecipient contract addresses can be found [here](quickstart-tutorial.md#appendix).
 
 ### Send a message
 
@@ -22,13 +22,13 @@ Sending a message is a simple matter of calling `Outbox.dispatch()`. This functi
 
 {% tabs %}
 {% tab title="Using Metamask" %}
-1. Navigate to the `Outbox` contract page on Etherscan (or its equivalent if you're sending from a non-ethereum chain).
+1. Navigate to the `Outbox` contract page on [Etherscan](https://etherscan.io/address/0x2f9DB5616fa3fAd1aB06cB2C906830BA63d135e3#writeProxyContract) (or its equivalent if you're sending from a non-ethereum chain, which you could find [here](../contract-addresses/mainnet.md)).
 2. Under the `Contract` tab, find the `Write as Proxy` button.
 3. Click on the `Connect to Web3` button to connect your Wallet (i.e. Metamask). Make sure that you are on the correct network.
 4. Expand the `dispatch` box.
-5. For destination domain, enter `$DESTINATION_DOMAIN`.
-6. For the recipient address, enter `$RECIPIENT`. Remember to make sure to zero-pad this to a `bytes32`.
-7. For the message body, enter whatever you like! A [string-to-hex converter website](https://dencode.com/en/string/hex) can help if you want to send a human-readable message. In the example below, we sent the "Hello World" string.
+5. For destination domain, enter `$DESTINATION_DOMAIN`. You can find some [here](../domains.md), or you could use `0x706f6c79` to send to Polygon.
+6. For the recipient address, enter `$RECIPIENT`. Remember to make sure to zero-pad this to a `bytes32` if you are using your own address. Alternatively, you can use any of the recipient addresses provided [here](quickstart-tutorial.md#testrecipient-addresses), or use `0x000000000000000000000000c1C8760B7be3901A2FB6F8ecF2829552721d0FfF` if you're sending to Polygon.
+7. For the message body, enter whatever you like! A [string-to-hex converter website](https://dencode.com/en/string/hex) can help you write your message if you want to send a human-readable message. In the example below, we sent the "Hello World" string.
 8. Submit the transaction via your wallet/Metamask
 
 ![How to send an interchain message using Etherscan + Metamask](<../../.gitbook/assets/Screen Shot 2022-08-10 at 4.01.00 PM.png>)
