@@ -9,6 +9,7 @@
   * [Quickstart](developers/messaging-api/quickstart.md)
   * [Send](developers/messaging-api/send.md)
   * [Receive](developers/messaging-api/receive.md)
+  * [Unit testing](developers/messaging-api/unit-testing.md)
   * [Gas](developers/messaging-api/gas.md)
 * [App Framework](developers/building-applications/README.md)
   * [Solidity SDK](developers/building-applications/writing-contracts/README.md)
