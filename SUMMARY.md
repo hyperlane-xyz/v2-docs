@@ -1,10 +1,6 @@
 # Table of contents
 
-## Introduction
-
 * [What is Abacus?](README.md)
-* [Background](introduction/background.md)
-* [Vision](introduction/vision.md)
 
 ## Developers
 
