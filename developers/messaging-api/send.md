@@ -1,10 +1,10 @@
 ---
-description: Send an outbound message to any Abacus supported network.
+description: Send a message to any Abacus supported network.
 ---
 
 # Send
 
-Outbound messages must be sent with the `Outbox.dispatch` endpoint to be relayed by Abacus.
+Developers can send interchain messages by calling the`Outbox.dispatch` endpoint.
 
 ### Interface
 
@@ -18,7 +18,7 @@ interface IOutbox {
 }
 ```
 
-Developers can reference deployed [`Outbox` addresses in the docs](../addresses/).
+You can find the address of the `Outbox` contract on each chain [here](../contract-addresses/), and chain domains [here](../domains.md).
 
 ### Encoding
 
@@ -37,15 +37,15 @@ function addressToBytes32(address _addr) internal pure returns (bytes32) {
 
 ### Example Usage
 
-An example sending from `ethereum`  to [`HelloWorld`](https://github.com/abacus-network/abacus-monorepo/blob/mattie/kathy-asserts-message-processing/typescript/helloworld/contracts/HelloWorld.sol) on `avalanche`  is provided below.
+The code snippet below shows an example of sending a message from Ethereum to Avalanche.
 
 ```solidity
 uint32 constant avalancheDomain = 0x61766178;
-address constant avalancheHelloWorld = 0x82825C0884558C9c5A94B545e7563c95aBA49197;
+address constant avalancheRecipient = 0x82825C0884558C9c5A94B545e7563c95aBA49197;
 address constant ethereumOutbox = 0x2f9DB5616fa3fAd1aB06cB2C906830BA63d135e3;
 IOutbox(ethereumOutbox).dispatch(
     avalancheDomain,
-    addressToBytes32(avalancheHelloWorld),
+    addressToBytes32(avalancheRecipient),
     bytes("hello avalanche from ethereum")
 );
 ```

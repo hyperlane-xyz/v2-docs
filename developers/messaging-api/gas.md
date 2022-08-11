@@ -26,11 +26,11 @@ interface IInterchainGasPaymaster {
 }
 ```
 
-Developers can reference deployed [`InterchainGasPaymaster` addresses](../addresses/) and [destination domains](../domains.md) in the docs.
+Developers can reference deployed [`InterchainGasPaymaster` addresses](../contract-addresses/) and [destination domains](../domains.md) in the docs.
 
 ### Access Control
 
-This interchain payment protocol is based on a social contract between the a [relayer](../../protocol/agents/relayer.md) and an application developer or user. To pay for their message, anyone can send native value on the origin chain to the operator and pass their message identifier as defined by the [Outbox](../../protocol/messaging/outbox.md). So long as enough tokens were provided on the origin chain given the current token exchange rates and gas prices, the relayer is expected to submit a transaction that processes the message.
+This interchain payment protocol is based on a social contract between the a [relayer](../../protocol/agents/relayer.md) and an application developer or user. To pay for their message, anyone can send native value on the origin chain to the operator and pass their message identifier as defined by the [`Outbox`](../../protocol/messaging/outbox.md). So long as enough tokens were provided on the origin chain given the current token exchange rates and gas prices, the relayer is expected to submit a transaction that processes the message.
 
 {% hint style="warning" %}
 Because a call is made to the `InterchainGasPaymaster` contract, special care should be made by an application to ensure the `InterchainGasPaymaster` contract is trustworthy and does not present a vector for reentrancy.

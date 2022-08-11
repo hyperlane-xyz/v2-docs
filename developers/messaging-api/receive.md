@@ -4,7 +4,7 @@ description: Receive an inbound message from any Abacus supported network.
 
 # Receive
 
-Contracts must implement the \`handle()\` ABI defined below in order to receive messages from Abacus.
+Developers must implement the `handle()` ABI in order to receive interchain messages.
 
 ### Interface
 
@@ -21,10 +21,10 @@ interface IMessageRecipient {
 ### Access Control
 
 {% hint style="warning" %}
-In `handle` implementations, it is important to restrict the `msg.sender` to the corresponding `origin` domain's `Inbox` address to prevent any contract from spoofing an inbound Abacus message.&#x20;
+To ensure only valid interchain messages are accepted, it is important to require that `msg.sender` is a known Abacus `Inbox`.
 {% endhint %}
 
-Developers can reference deployed [`Inbox` addresses](../addresses/) and corresponding [domain identifiers](../domains.md) in the docs. An example of `Inbox` access control implemented on `avalanche` for restricting inbound messages from `ethereum` is provided below.
+Developers can reference deployed [`Inbox` addresses](../contract-addresses/) and corresponding [domain identifiers](../domains.md) in the docs. An example of `Inbox` access control implemented on `avalanche` for restricting inbound messages from `ethereum` is provided below.
 
 ```solidity
 uint32 constant ethereumDomain = 0x657468;
@@ -55,7 +55,7 @@ function bytes32ToAddress(bytes32 _buf) internal pure returns (address) {
 
 ### Example Usage
 
-An example `handle` implementation for receiving messages from `ethereum` on `avalanche` is provided below.
+An example `handle()` implementation for receiving messages from Ethereum on Avalanche is provided below.
 
 ```solidity
 event Received(address sender, bytes message);

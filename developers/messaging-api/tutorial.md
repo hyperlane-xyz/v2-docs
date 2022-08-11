@@ -2,15 +2,19 @@
 description: Send your first interchain message in under 5 minutes
 ---
 
-# Quickstart
+# Tutorial
 
 This tutorial demonstrates how to [send](send.md) a simple interchain message to a pre-deployed [`TestRecipient`](https://github.com/abacus-network/abacus-monorepo/blob/e199e9688a4b5710fe45eefd2f04ecb84385952c/solidity/core/contracts/test/TestRecipient.sol) contract.
 
+{% hint style="warning" %}
+Note that this tutorial does not cover [paying for the cost of relaying the message to the destination chain](gas.md), which will eventually be required.
+{% endhint %}
+
 ### Inputs
 
-* `$OUTBOX_ADDRESS`: The [Outbox](../../protocol/messaging/outbox.md) contract address on the origin chain. Abacus contract addresses can be found [here](../addresses/).
+* `$OUTBOX_ADDRESS`: The [Outbox](../../protocol/messaging/outbox.md) contract address on the origin chain. Abacus contract addresses can be found [here](../contract-addresses/).
 * `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../domains.md).
-* `$RECIPIENT`: The address of the `TestRecipient` contract on the destination chain, left padded to a `bytes32`. TestRecipient contract addresses can be found [here](quickstart.md#appendix).
+* `$RECIPIENT`: The address of the `TestRecipient` contract on the destination chain, left padded to a `bytes32`. TestRecipient contract addresses can be found [here](tutorial.md#appendix).
 
 ### Send a message
 

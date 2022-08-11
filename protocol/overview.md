@@ -16,7 +16,7 @@ Abacus provides an on-chain [API](messaging/) to send and receive interchain mes
 
 ### Messaging API
 
-The Abacus messaging API is implemented by two smart contracts, [Outbox](messaging/outbox.md), and  [Inbox](messaging/inbox.md). Developers can integrate with these contracts and use them to send and receive interchain messages.
+The Abacus messaging API is implemented by two smart contracts, [`Outbox`](messaging/outbox.md) and  [`Inbox`](messaging/inbox.md). Developers can integrate with these contracts and use them to send and receive interchain messages.
 
 **To send interchain messages, developers call `Outbox.dispatch()`.**
 

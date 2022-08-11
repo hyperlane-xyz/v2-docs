@@ -4,8 +4,16 @@ description: Send and receive interchain messages using Abacus
 
 # Messaging API
 
-Integrating with Abacus can be as simple as understanding two endpoints. These endpoints are the smart contract interface into sending and receiving messages to and from other blockchains.
+Abacus provides an on-chain API for sending and receiving interchain messages.
 
-To [send interchain messages, reference the `Outbox.dispatch` API](send.md).
+To send interchain messages, reference the [Outbox.dispatch() API](send.md).
 
-To [receive interchain messages, implement the `IMessageRecipient.handle` interface.](receive.md)
+To receive interchain messages, implement the [IMessageRecipient.handle()](receive.md) interface.
+
+You can [unit test](unit-testing.md) your integration with the Abacus messaging API using the `MockOutbox` and `MockInbox` contracts.
+
+Delivering an interchain message requires submitting a transaction on the destination chain. Optionally, you can pay for the gas for this transaction on the origin chain, and let an Abacus [relayer](../../protocol/agents/relayer.md) deliver your message for you.
+
+Learn more about [interchain gas payments](gas.md).
+
+Want to try it for your self? Follow [this tutorial](tutorial.md) to send your first interchain message in less than five minutes.

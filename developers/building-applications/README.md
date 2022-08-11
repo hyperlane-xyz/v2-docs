@@ -2,9 +2,9 @@
 description: Create interchain applications with the Abacus Application SDK
 ---
 
-# App Framework
+# App framework
 
-The Abacus Application Framework helps developers create and manage applications built on top of interchain smart contracts. It is designed primarily for applications which leverage the shared state model and symmetric communication patterns such as the [Router](writing-contracts/router.md) pattern.&#x20;
+Abacus provides a framework that helps developers create and manage applications built on top of interchain smart contracts. It is designed primarily for applications which leverage the shared state model and symmetric communication patterns such as the [Router](writing-contracts/router.md) pattern.&#x20;
 
 ### Solidity SDK&#x20;
 

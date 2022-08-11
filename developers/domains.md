@@ -1,10 +1,16 @@
 ---
-description: Abacus domain identifiers.
+description: Unique IDs for each Abacus-supported chain
 ---
 
-# Domain Identifiers
+# Domain identifiers
 
-Domain identifiers are used to distinguish between destination networks and are an essential part of message encoding. In future, if the Abacus mailboxes are upgraded with backwards incompatible changes (like an encoding change), different domain identifiers would be necessary. A message encoding change implies a fresh storage commitment to accumulated outbound messages and therefore fresh deployments of Abacus mailboxes ([`Outbox`](../protocol/messaging/outbox.md) and [`Inbox`](../protocol/messaging/inbox.md)).
+{% hint style="warning" %}
+Note that Abacus domain IDs have no relationship with EVM chain IDs, as Abacus will eventually support non-EVM chains.
+{% endhint %}
+
+Abacus uses proprietary domain IDs to reference each Abacus-supported chain.
+
+When [sending a message](messaging-api/send.md), users must provide the domain ID of the destination chain. When [receiving a message](messaging-api/receive.md), the recipient will be passed the domain ID of the origin chain.
 
 ### Mainnet
 
