@@ -10,6 +10,7 @@
 
 * [Getting started](developers/getting-started.md)
 * [Messaging API](developers/messaging-api/README.md)
+  * [Quickstart](developers/messaging-api/quickstart.md)
   * [Send](developers/messaging-api/send.md)
   * [Receive](developers/messaging-api/receive.md)
   * [Gas](developers/messaging-api/gas.md)
