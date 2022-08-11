@@ -14,10 +14,10 @@ To configure and create your `MultiProvider`, create ethers.js-compatible provid
 import {chainConnectionConfigs} from '@abacus-network/sdk';
 // You can use a custom defined provider, say for a local node:
 const ethereum = {
-    provider: new UrlJsonRpcProvider('http://localhost:8545/')
+    provider: new ethers.providers.UrlJsonRpcProvider('http://localhost:8545/')
 };
 const polygon = {
-    provider: new UrlJsonRpcProvider('https://rpc-mainnet.matic.network'),
+    provider: new ethers.providers.UrlJsonRpcProvider('https://rpc-mainnet.matic.network'),
     confirmations: 10, // wait 10 blocks for finality
 };
 // Or you can use the SDK's default configs and providers:

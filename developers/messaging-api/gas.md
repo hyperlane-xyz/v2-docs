@@ -51,3 +51,7 @@ IInterchainGasPaymaster(ethereumGasPaymaster).payGasFor{
     avalancheDomain
 );
 ```
+
+### Calculating Gas Payments
+
+See [gas.md](../building-applications/nodejs-sdk/gas.md "mention") to learn how to use the Abacus SDK to calculate the correct payment for a message.
