@@ -14,7 +14,7 @@ Users are **not currently required** to pay relaying fees but eventually this wi
 
 ### Interface
 
-The contract has a single payable function which accepts a message ID and emits an event with that UID and the amount of tokens that have been paid to the contract.
+The contract has a single payable function which accepts a message ID and emits an event with that UID and the amount of tokens that have been paid to the contract. This function does not necessarily need to be called in the same transaction as the message dispatch, allowing for the ability to top up payments for a message that's already been dispatched.
 
 ```solidity
 interface IInterchainGasPaymaster {
