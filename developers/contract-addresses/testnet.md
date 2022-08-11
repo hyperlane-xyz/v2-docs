@@ -64,3 +64,27 @@ Find additional [testnet address information on github](https://github.com/abacu
 | Optimismkovan   | Mumbai          | `0xA9425D5cBcD2c83EB2a5BF453EAA18968db3ef77` |
 | Optimismkovan   | Bsctestnet      | `0x0E18b28D98C2efDb59252c021320F203305b1B66` |
 | Optimismkovan   | Arbitrumrinkeby | `0xB6a4129c305056d80fFfea96DdbDCf1F58BC8240` |
+
+### InterchainGasPaymaster
+
+| Network         | Address                                      |
+| --------------- | -------------------------------------------- |
+| Alfajores       | `0x1Fb165396FB26AC4178ca4240b3724039F75EED7` |
+| Kovan           | `0x74234D5EEb6229fD75fF5370fab7D9819295F0D5` |
+| Fuji            | `0x4834a491f78BBF48e983F9Ce0E20D1E4DbE013D8` |
+| Mumbai          | `0x9A27744C249A11f68B3B56f09D280599585DFBb8` |
+| Bsctestnet      | `0x155b1F1801030Ea4dF038107d3cc1b4bA496916e` |
+| Arbitrumrinkeby | `0x76D20943b68985dF999C5bb13d6E7AdF3CFc276F` |
+| Optimismkovan   | `0xD7D2B0f61B834D98772e938Fa64425587C0f3481` |
+
+### AbacusConnectionManager
+
+| Network         | Address                                      |
+| --------------- | -------------------------------------------- |
+| Alfajores       | `0xc41169650335Ad274157Ea5116Cdf227430A68a3` |
+| Kovan           | `0xfA1fBF362144ae1bEf2E33409948dA1FB812bb41` |
+| Fuji            | `0x33AbaF6708be03Bdf0595DA0745A7111b01dB8c7` |
+| Mumbai          | `0xb636B2c65A75d41F0dBe98fB33eb563d245a241a` |
+| Bsctestnet      | `0xe403E16db1f5997bC62Dc611A8d42836364A7f01` |
+| Arbitrumrinkeby | `0xFb55597F07417b08195Ba674f4dd58aeC9B89FBB` |
+| Optimismkovan   | `0x740bEd6E4eEc7c57a2818177Fba3f9E896D5DE1c` |

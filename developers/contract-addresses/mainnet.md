@@ -64,3 +64,27 @@ Find additional [mainnet address information on github](https://github.com/abacu
 | Ethereum  | Celo      | `0xCB5C99F908410add8241b558299fe9aadC06bA99` |
 | Ethereum  | Arbitrum  | `0x7082e975Fde8D85B0C56B4512b437efFb46F0a09` |
 | Ethereum  | Optimism  | `0xF7af65596A16740b16CF755F3A43206C96285da0` |
+
+### InterchainGasPaymaster
+
+| Network   | Address                                      |
+| --------- | -------------------------------------------- |
+| Arbitrum  | `0x376aD181E8cd45eAd5403F78d5A871D08c3c4D77` |
+| Avalanche | `0xed9a722c543883FB7e07E78F3879762DE09eA7D5` |
+| BSC       | `0x47bf94790241B1764fC41A35a8329A15569E121C` |
+| Celo      | `0xCDeb368Db32ecCefaf7018e152DA9120565cb572` |
+| Ethereum  | `0x17E216fBb22dF4ef8A6640ae9Cb147C92710ac84` |
+| Optimism  | `0xc5D6aCaafBCcEC6D7fD7d92F4509befce641c563` |
+| Polygon   | `0x60B8d195f1b2EcaC26d54b95C69E6399cFD64b53` |
+
+### AbacusConnectionManager
+
+| Network   | Address                                      |
+| --------- | -------------------------------------------- |
+| Arbitrum  | `0x8b83fefd896fAa52057798f6426E9f0B080FCCcE` |
+| Avalanche | `0x8b83fefd896fAa52057798f6426E9f0B080FCCcE` |
+| BSC       | `0x19dc38aeae620380430C200a6E990D5Af5480117` |
+| Celo      | `0x12582c7B0f43c6A667CBaA7fA8b112F7fb1E69F0` |
+| Ethereum  | `0xeA87ae93Fa0019a82A727bfd3eBd1cFCa8f64f1D` |
+| Optimism  | `0xd83A4F747fE80Ed98839e05079B1B7Fe037b1638` |
+| Polygon   | `0x1Ab68dC4f7b6cfcd00218D4b761b7F3b5a724555` |
