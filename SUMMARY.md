@@ -43,7 +43,7 @@
   * [Proof of stake](protocol/security/proof-of-stake.md)
     * [Staking](protocol/security/proof-of-stake/staking.md)
     * [Validators](protocol/security/proof-of-stake/validators.md)
-    * [Enonomics](protocol/security/proof-of-stake/enonomics.md)
+    * [Economics](protocol/security/proof-of-stake/economics.md)
   * [Sovereign consensus](protocol/security/sovereign-consensus.md)
 * [Governance](protocol/governance.md)
 * [Agents](protocol/agents/README.md)
