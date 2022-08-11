@@ -22,7 +22,7 @@ The Abacus application framework helps developers create and manage interchain a
 
 Looking for some inspiration?
 
-[Take a look](getting-started.md#example-apps) at some example applications built using the Abacus messaging API and application framework.
+[Take a look](examples/) at some example applications built using the Abacus messaging API and application framework.
 
 ### Help and support
 
