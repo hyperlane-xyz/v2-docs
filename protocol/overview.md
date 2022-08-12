@@ -36,5 +36,5 @@ This protocol secures the Abacus validator set and ensures that there is an econ
 
 **Sovereign consensus is an optional application-specific security protocol that complements proof-of-stake.**
 
-This protocol **** allows application developers to optionally specify an additional validator set, specific to their application. Signatures from both the global Abacus validator set and the application-specific validator set are required before messages can be delivered.&#x20;
+This protocol **** gives application developers the option to specify an additional validator set, specific to their application. With sovereign consensus, signatures from both the global Abacus validator set and the application-specific validator set are required before messages can be delivered.&#x20;
 
