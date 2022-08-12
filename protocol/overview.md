@@ -10,7 +10,7 @@ Note: The Abacus protocol is still under development. This documentation reflect
 For the latest on what's been implemented and deployed to testnet(s) and mainnet(s), please take a look at the [roadmap](../resources/roadmap.md).
 {% endhint %}
 
-Abacus is a generalized interchain messaging protocol that allows developers to send arbitrary data from one blockchain to another.
+Abacus is a generalized interchain messaging protocol that empowers developers to send data from one blockchain to another.
 
 Abacus provides an on-chain [API](messaging/) to send and receive interchain messages. This API is secured by a delegated [proof-of-stake](security/proof-of-stake.md) protocol combined with an application-specific approach to security called [sovereign consensus](security/sovereign-consensus.md).&#x20;
 
@@ -20,7 +20,7 @@ The Abacus messaging API is implemented by two smart contracts, [`Outbox`](messa
 
 **To send interchain messages, developers call `Outbox.dispatch()`.**
 
-This function function takes as arguments the message contents, the destination chain ID, and the recipient address.
+This function takes as arguments the message contents, the destination chain ID, and the recipient address.
 
 **To receive interchain messages, developers implement `handle()`.**
 
