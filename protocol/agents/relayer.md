@@ -12,7 +12,7 @@ Relayers can easily configure the messages that they wish to process. At launch,
 
 1. A sender/recipient whitelist
 2. A sender/recipient blacklist
-3. The ability to accept [payments on the origin chain](../../developers/building-applications/nodejs-sdk/gas.md) as for processing a message on the destination chain.&#x20;
+3. The ability to accept [payments on the origin chain](../../developers/building-applications/gas.md) as for processing a message on the destination chain.&#x20;
 
 ```solidity
 /**

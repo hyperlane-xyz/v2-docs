@@ -32,6 +32,7 @@
   * [Testnet](developers/contract-addresses/testnet.md)
 * [Domain identifiers](developers/domains.md)
 * [Latencies](developers/latencies.md)
+* [Debugging](developers/debugging.md)
 
 ## Protocol
 
