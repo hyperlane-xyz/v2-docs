@@ -2,11 +2,11 @@
 description: Manage RPC providers for Abacus supported chains in one place
 ---
 
-# MultiProvider
+# RPC Providers
 
 `MultiProvider` is a utility used throughout the Abacus Application SDK. In essence, it is a mapping that resolves a chain namespace to a configured node (JSON RPC) provider.
 
-### Configuration
+### Configure
 
 To configure and create your `MultiProvider`, create ethers.js-compatible providers and optionally specify a block confirmation threshold:&#x20;
 
@@ -14,10 +14,10 @@ To configure and create your `MultiProvider`, create ethers.js-compatible provid
 import {chainConnectionConfigs} from '@abacus-network/sdk';
 // You can use a custom defined provider, say for a local node:
 const ethereum = {
-    provider: new UrlJsonRpcProvider('http://localhost:8545/')
+    provider: new ethers.providers.UrlJsonRpcProvider('http://localhost:8545/')
 };
 const polygon = {
-    provider: new UrlJsonRpcProvider('https://rpc-mainnet.matic.network'),
+    provider: new ethers.providers.UrlJsonRpcProvider('https://rpc-mainnet.matic.network'),
     confirmations: 10, // wait 10 blocks for finality
 };
 // Or you can use the SDK's default configs and providers:
@@ -25,7 +25,7 @@ const celo = chainConnectionConfigs.celo
 const multiProvider = new MultiProvider({ ethereum, polygon, celo });
 ```
 
-### Use
+### Interact
 
 `MultiProvider` allows, for example, an application to have static node provisioning per target chain and register a user's signer for the duration of a session.
 
@@ -34,7 +34,7 @@ const userSigner = await getSessionSigner();
 serverMultiProvider.getDomainConnection('ethereum').registerSigner(userSigner);
 ```
 
-### Testing
+### Test
 
 For use in tests, the Hardhat `signer` can be used to emulate a multichain system locally. The chains shown (`test1`, `test2`, `test3`) are included for convenience.
 

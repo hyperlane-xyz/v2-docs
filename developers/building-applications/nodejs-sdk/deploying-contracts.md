@@ -1,10 +1,12 @@
 ---
-description: A utility for managing deployments to multiple chains
+description: Managing multi-chain contract deployments
 ---
 
-# AbacusDeployer
+# Deployment
 
 `AbacusDeployer` helps manage the deployment of contracts across multiple chains. Abacus apps should extend a deployer to specifiy the needed types and implement any needed logic for deployment of their contracts.&#x20;
+
+### Implement
 
 Developers must provide an implementation for `deployContracts` which describes the logic for deploying the application on a single chain. Developers building with the [Router](../writing-contracts/router.md) pattern can extend `AbacusRouterDeployer`, which handles some Router-specific boilerplate.
 
@@ -34,4 +36,21 @@ For a simple, single contract app that extends the `Router` contract, it is suff
 
 {% hint style="info" %}
 For an example deployer implementation see the [Abacus Hello World](https://github.com/abacus-network/abacus-app-template/blob/main/src/deploy/deploy.ts) app.
+{% endhint %}
+
+### Interact
+
+Once an `AbacusDeployer` class has been defined, the deployer can be instantiated with a [Multiprovider](multiprovider.md) and a map of chains to configurations. These configs will be provided to your `deployContracts` methods and can include any values needed there. The initialization of Invoking `deploy()` will deploy contracts for all specified chains.&#x20;
+
+```typescript
+const ethereum: MyConfig = {...};
+const polygon: MyConfig = {...};
+const myDeployer = new MyDeployer(multiProvider, { ethereum, polygon });
+const contracts = await myDeployer.deploy();
+```
+
+In scripts that calls `deploy`, consider persisting deployment artifacts as they will be  important for future use of your application. This includes addresses, compiler options, and contract constructor arguments.
+
+{% hint style="info" %}
+For an example deployment script, see the [Abacus Hello World](https://github.com/abacus-network/abacus-app-template/blob/main/src/scripts/deploy.ts) app.
 {% endhint %}

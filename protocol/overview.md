@@ -10,17 +10,17 @@ Note: The Abacus protocol is still under development. This documentation reflect
 For the latest on what's been implemented and deployed to testnet(s) and mainnet(s), please take a look at the [roadmap](../resources/roadmap.md).
 {% endhint %}
 
-Abacus is a generalized interchain messaging protocol that allows developers to send arbitrary data from one blockchain to another.
+Abacus is a generalized interchain messaging protocol that empowers developers to send data from one blockchain to another.
 
 Abacus provides an on-chain [API](messaging/) to send and receive interchain messages. This API is secured by a delegated [proof-of-stake](security/proof-of-stake.md) protocol combined with an application-specific approach to security called [sovereign consensus](security/sovereign-consensus.md).&#x20;
 
 ### Messaging API
 
-The Abacus messaging API is implemented by two smart contracts, [Outbox](messaging/outbox.md), and  [Inbox](messaging/inbox.md). Developers can integrate with these contracts and use them to send and receive interchain messages.
+The Abacus messaging API is implemented by two smart contracts, [`Outbox`](messaging/outbox.md) and  [`Inbox`](messaging/inbox.md). Developers can integrate with these contracts and use them to send and receive interchain messages.
 
 **To send interchain messages, developers call `Outbox.dispatch()`.**
 
-This function function takes as arguments the message contents, the destination chain ID, and the recipient address.
+This function takes as arguments the message contents, the destination chain ID, and the recipient address.
 
 **To receive interchain messages, developers implement `handle()`.**
 
@@ -36,5 +36,5 @@ This protocol secures the Abacus validator set and ensures that there is an econ
 
 **Sovereign consensus is an optional application-specific security protocol that complements proof-of-stake.**
 
-This protocol **** allows application developers to optionally specify an additional validator set, specific to their application. Signatures from both the global Abacus validator set and the application-specific validator set are required before messages can be delivered.&#x20;
+This protocol **** gives application developers the option to specify an additional validator set, specific to their application. With sovereign consensus, signatures from both the global Abacus validator set and the application-specific validator set are required before messages can be delivered.&#x20;
 

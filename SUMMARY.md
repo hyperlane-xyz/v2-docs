@@ -1,54 +1,54 @@
 # Table of contents
 
-## Introduction
-
 * [What is Abacus?](README.md)
-* [Background](introduction/background.md)
-* [Vision](introduction/vision.md)
+
+## Developers
+
+* [Getting started](developers/getting-started.md)
+* [Messaging API](developers/messaging-api/README.md)
+  * [Quickstart Tutorial](developers/messaging-api/quickstart-tutorial.md)
+  * [Send](developers/messaging-api/send.md)
+  * [Receive](developers/messaging-api/receive.md)
+  * [Unit testing](developers/messaging-api/unit-testing.md)
+  * [Gas](developers/messaging-api/gas.md)
+* [App framework](developers/building-applications/README.md)
+  * [Solidity SDK](developers/building-applications/writing-contracts/README.md)
+    * [AbacusConnectionClient](developers/building-applications/writing-contracts/abacusconnectionclient.md)
+    * [AbacusConnectionManager](developers/building-applications/writing-contracts/abacusconnectionmanager.md)
+    * [Router](developers/building-applications/writing-contracts/router.md)
+  * [NodeJS SDK](developers/building-applications/nodejs-sdk/README.md)
+    * [RPC Providers](developers/building-applications/nodejs-sdk/multiprovider.md)
+    * [Deployment](developers/building-applications/nodejs-sdk/deploying-contracts.md)
+    * [Interchain Testing](developers/building-applications/nodejs-sdk/testing-contracts.md)
+    * [Interchain Gas Estimation](developers/building-applications/nodejs-sdk/gas.md)
+    * [App Abstraction](developers/building-applications/nodejs-sdk/contract-interaction/README.md)
+      * [Core App Environments](developers/building-applications/nodejs-sdk/contract-interaction/environments.md)
+* [Example apps](developers/examples/README.md)
+  * [HelloWorld](developers/examples/helloworld.md)
+  * [ERC20 token](developers/examples/erc20-token.md)
+  * [Controller](developers/examples/controller.md)
+* [Contract addresses](developers/addresses.md)
+* [Domain identifiers](developers/domains.md)
+* [Latencies](developers/latencies.md)
+* [Debugging](developers/debugging.md)
 
 ## Protocol
 
 * [Overview](protocol/overview.md)
-* [Messaging API](protocol/messaging/README.md)
+* [Message passing](protocol/messaging/README.md)
   * [Outbox](protocol/messaging/outbox.md)
   * [Inbox](protocol/messaging/inbox.md)
 * [Security](protocol/security/README.md)
   * [Proof of stake](protocol/security/proof-of-stake.md)
     * [Staking](protocol/security/proof-of-stake/staking.md)
     * [Validators](protocol/security/proof-of-stake/validators.md)
-    * [Enonomics](protocol/security/proof-of-stake/enonomics.md)
+    * [Economics](protocol/security/proof-of-stake/economics.md)
   * [Sovereign consensus](protocol/security/sovereign-consensus.md)
 * [Governance](protocol/governance.md)
 * [Agents](protocol/agents/README.md)
   * [Validators](protocol/agents/validators.md)
   * [Relayers](protocol/agents/relayer.md)
   * [Watchtowers](protocol/agents/processor.md)
-
-## Developers
-
-* [Getting started](developers/getting-started.md)
-* [Writing contracts](developers/writing-contracts/README.md)
-  * [Messaging API](developers/writing-contracts/messaging-api.md)
-  * [AbacusConnectionClient](developers/writing-contracts/abacusconnectionclient.md)
-  * [AbacusConnectionManager](developers/writing-contracts/abacusconnectionmanager.md)
-  * [Router](developers/writing-contracts/router.md)
-* [Deploying contracts](developers/deploying-contracts/README.md)
-  * [AbacusDeployer](developers/deploying-contracts/abacusdeployer.md)
-  * [AbacusAppChecker](developers/deploying-contracts/abacusappchecker.md)
-  * [Running deployment](developers/deploying-contracts/running-deployment.md)
-* [Testing contracts](developers/testing-contracts.md)
-* [Building applications](developers/building-applications/README.md)
-  * [Contract interaction](developers/building-applications/contract-interaction.md)
-  * [MultiProvider](developers/building-applications/multiprovider.md)
-  * [Gas](developers/building-applications/gas.md)
-* [Environments](developers/environments.md)
-* [Latencies](developers/latencies.md)
-* [Domain Identifiers](developers/domains.md)
-* [Addresses](developers/addresses.md)
-* [Examples](developers/examples/README.md)
-  * [HelloWorld](developers/examples/helloworld.md)
-  * [ERC20 token](developers/examples/erc20-token.md)
-  * [Controller](developers/examples/controller.md)
 
 ## Validators
 
