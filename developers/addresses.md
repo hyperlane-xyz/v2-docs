@@ -5,7 +5,6 @@ description: Abacus core contract addresses
 # Mainnet
 
 ## Outbox
-
 | Network   | Address                                                                                                                             |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Avalanche | [`0x0761b0827849abbf7b0cC09CE14e1C93D87f5004`](https://snowtrace.io/address/0x0761b0827849abbf7b0cC09CE14e1C93D87f5004)             |
@@ -17,7 +16,6 @@ description: Abacus core contract addresses
 | Ethereum  | [`0x2f9DB5616fa3fAd1aB06cB2C906830BA63d135e3`](https://etherscan.io/address/0x2f9DB5616fa3fAd1aB06cB2C906830BA63d135e3)             |
 
 ## Inboxes
-
 | Network   | Origin    | Address                                                                                                                             |
 | --------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Avalanche | Celo      | [`0x3a867fCfFeC2B790970eeBDC9023E75B0a172aa7`](https://celoscan.io/address/0x3a867fCfFeC2B790970eeBDC9023E75B0a172aa7)              |
@@ -64,7 +62,6 @@ description: Abacus core contract addresses
 | Ethereum  | Optimism  | [`0xF7af65596A16740b16CF755F3A43206C96285da0`](https://optimistic.etherscan.io//address/0xF7af65596A16740b16CF755F3A43206C96285da0) |
 
 ## InterchainGasPaymaster
-
 | Network   | Address                                                                                                                             |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Avalanche | [`0xed9a722c543883FB7e07E78F3879762DE09eA7D5`](https://snowtrace.io/address/0xed9a722c543883FB7e07E78F3879762DE09eA7D5)             |
@@ -76,7 +73,6 @@ description: Abacus core contract addresses
 | Ethereum  | [`0x17E216fBb22dF4ef8A6640ae9Cb147C92710ac84`](https://etherscan.io/address/0x17E216fBb22dF4ef8A6640ae9Cb147C92710ac84)             |
 
 ## AbacusConnectionManager
-
 | Network   | Address                                                                                                                             |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Avalanche | [`0x8b83fefd896fAa52057798f6426E9f0B080FCCcE`](https://snowtrace.io/address/0x8b83fefd896fAa52057798f6426E9f0B080FCCcE)             |
@@ -87,10 +83,9 @@ description: Abacus core contract addresses
 | Optimism  | [`0xd83A4F747fE80Ed98839e05079B1B7Fe037b1638`](https://optimistic.etherscan.io//address/0xd83A4F747fE80Ed98839e05079B1B7Fe037b1638) |
 | Ethereum  | [`0xeA87ae93Fa0019a82A727bfd3eBd1cFCa8f64f1D`](https://etherscan.io/address/0xeA87ae93Fa0019a82A727bfd3eBd1cFCa8f64f1D)             |
 
-# Testnet2
+# Testnet
 
 ## Outbox
-
 | Network         | Address                                                                                                                                           |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Alfajores       | [`0x5C7D9B5f38022dB78416D6C0132bf8c404deDe27`](https://alfajores-blockscout.celo-testnet.org//address/0x5C7D9B5f38022dB78416D6C0132bf8c404deDe27) |
@@ -102,7 +97,6 @@ description: Abacus core contract addresses
 | Optimismkovan   | [`0x981f5C4070bC048186CDE1CcB61Ea5c969194b54`](https://kovan-optimistic.etherscan.io//address/0x981f5C4070bC048186CDE1CcB61Ea5c969194b54)         |
 
 ## Inboxes
-
 | Network         | Origin          | Address                                                                                                                                           |
 | --------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Alfajores       | Kovan           | [`0x443f8614728327Ce0cAb864DD463Fe2702b57597`](https://kovan.etherscan.io//address/0x443f8614728327Ce0cAb864DD463Fe2702b57597)                    |
@@ -149,7 +143,6 @@ description: Abacus core contract addresses
 | Optimismkovan   | Arbitrumrinkeby | [`0xB6a4129c305056d80fFfea96DdbDCf1F58BC8240`](https://testnet.arbiscan.io//address/0xB6a4129c305056d80fFfea96DdbDCf1F58BC8240)                   |
 
 ## InterchainGasPaymaster
-
 | Network         | Address                                                                                                                                           |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Alfajores       | [`0x1Fb165396FB26AC4178ca4240b3724039F75EED7`](https://alfajores-blockscout.celo-testnet.org//address/0x1Fb165396FB26AC4178ca4240b3724039F75EED7) |
@@ -161,7 +154,6 @@ description: Abacus core contract addresses
 | Optimismkovan   | [`0xD7D2B0f61B834D98772e938Fa64425587C0f3481`](https://kovan-optimistic.etherscan.io//address/0xD7D2B0f61B834D98772e938Fa64425587C0f3481)         |
 
 ## AbacusConnectionManager
-
 | Network         | Address                                                                                                                                           |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Alfajores       | [`0xc41169650335Ad274157Ea5116Cdf227430A68a3`](https://alfajores-blockscout.celo-testnet.org//address/0xc41169650335Ad274157Ea5116Cdf227430A68a3) |
