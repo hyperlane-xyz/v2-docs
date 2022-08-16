@@ -12,7 +12,7 @@ For the latest on what's been implemented and deployed to testnet(s) and mainnet
 
 #### Registration
 
-To be eligible to receive delegations, validators must first register their public key on the `StakingRegistry`. To register, validators provide a proof-of-possession of their private key \[[1](staking.md#footnotes)] and specify a commission as a percentage of staking rewards.
+To be eligible to receive token delegations, validators must first register their public key on the `StakingRegistry`. To register, validators provide a proof-of-possession of their private key \[[1](staking.md#footnotes)] and specify a commission as a percentage of staking rewards.
 
 Each registered validator has a corresponding `StakingPool` contract, responsible for managing `ABC` tokens delegated to that validator.
 
@@ -36,7 +36,7 @@ function register(
 
 Users can delegate to a validator by calling `StakingPool.delegate()`, which transfers `ABC` tokens from the user to the pool. In return, the user receives `ERC20`-compatible `StakingTokens`, representing their proportional share of the `ABC` held by the pool \[[2](staking.md#undefined)].
 
-These `StakingTokens` represent a pro-rata claim on the `ABC` held by the `StakingPool`.
+These `StakingTokens` represent a proportional claim on the `ABC` held by the `StakingPool`.
 
 ```solidity
 /**

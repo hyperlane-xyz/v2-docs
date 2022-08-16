@@ -32,6 +32,3 @@ Individual messages can only be censored or falsified if a quorum of **both** th
 
 [Read more](sovereign-consensus.md) about sovereign consensus.
 
-##
-
-[Read more](sovereign-consensus.md) about sovereign consensus.

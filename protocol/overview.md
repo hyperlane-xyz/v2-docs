@@ -20,11 +20,11 @@ The Abacus messaging API is implemented by two smart contracts, [`Outbox`](messa
 
 **To send interchain messages, developers call `Outbox.dispatch()`.**
 
-This function takes as parameters the message contents, the destination chain ID, and the recipient address.
+This function takes as arguments the message contents, the destination chain ID, and the recipient address.
 
 **To receive interchain messages, developers implement `handle()`.**
 
-The `Inbox` contract will call the `handle()` function on a message's recipient, providing as parameters the message contents, the origin chain ID, and the sender address.
+The `Inbox` contract will call the `handle()` function on a message's recipient, providing as arguments the message contents, the origin chain ID, and the sender address.
 
 ### Security
 
