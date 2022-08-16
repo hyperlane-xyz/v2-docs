@@ -18,7 +18,7 @@ interface IOutbox {
 }
 ```
 
-You can find the address of the `Outbox` contract on each chain [here](../contract-addresses/), and chain domains [here](../domains.md).
+You can find the address of the `Outbox` contract on each chain [here](broken-reference), and chain domains [here](../domains.md).
 
 ### Encoding
 

@@ -24,7 +24,7 @@ interface IMessageRecipient {
 To ensure only valid interchain messages are accepted, it is important to require that `msg.sender` is a known Abacus `Inbox`.
 {% endhint %}
 
-Developers can reference deployed [`Inbox` addresses](../contract-addresses/) and corresponding [domain identifiers](../domains.md) in the docs. An example of `Inbox` access control implemented on `avalanche` for restricting inbound messages from `ethereum` is provided below.
+Developers can reference deployed [`Inbox` addresses](broken-reference) and corresponding [domain identifiers](../domains.md) in the docs. An example of `Inbox` access control implemented on `avalanche` for restricting inbound messages from `ethereum` is provided below.
 
 ```solidity
 uint32 constant ethereumDomain = 0x657468;

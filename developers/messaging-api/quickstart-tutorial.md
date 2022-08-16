@@ -12,7 +12,7 @@ Note that this tutorial does not cover [paying for the cost of relaying the mess
 
 ### Inputs
 
-* `$OUTBOX_ADDRESS`: The [Outbox](../../protocol/messaging/outbox.md) contract address on the origin chain. Abacus contract addresses can be found [here](../contract-addresses/).
+* `$OUTBOX_ADDRESS`: The [Outbox](../../protocol/messaging/outbox.md) contract address on the origin chain. Abacus contract addresses can be found [here](broken-reference).
 * `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../domains.md).
 * `$RECIPIENT`: The address of the `TestRecipient` contract on the destination chain, left padded to a `bytes32`. TestRecipient contract addresses can be found [here](quickstart-tutorial.md#appendix).
 
@@ -22,7 +22,7 @@ Sending a message is a simple matter of calling `Outbox.dispatch()`. This functi
 
 {% tabs %}
 {% tab title="Using Metamask" %}
-1. Navigate to the `Outbox` contract page on [Etherscan](https://etherscan.io/address/0x2f9DB5616fa3fAd1aB06cB2C906830BA63d135e3#writeProxyContract) (or its equivalent if you're sending from a non-ethereum chain, which you could find [here](../contract-addresses/mainnet.md)).
+1. Navigate to the `Outbox` contract page on [Etherscan](https://etherscan.io/address/0x2f9DB5616fa3fAd1aB06cB2C906830BA63d135e3#writeProxyContract) (or its equivalent if you're sending from a non-ethereum chain, which you could find [here](broken-reference)).
 2. Under the `Contract` tab, find the `Write as Proxy` button.
 3. Click on the `Connect to Web3` button to connect your Wallet (i.e. Metamask). Make sure that you are on the correct network.
 4. Expand the `dispatch` box.
