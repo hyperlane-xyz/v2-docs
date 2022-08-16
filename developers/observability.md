@@ -22,7 +22,7 @@ If you visit a verified `Inbox` contract on a block explorer, you can easily vie
 
 ### Using the NodeJS SDK
 
-The Abacus Core App (built using the [App Framework](building-applications/)) exposes various utilities for message observability. To instantiate this app, reference the [Core App environments docs](addresses/environments.md).
+The Abacus Core App (built using the [App Framework](building-applications/)) exposes various utilities for message observability. To instantiate this app, reference the [Core App environments docs](building-applications/nodejs-sdk/contract-interaction/environments.md).
 
 ```typescript
 import { AbacusCore } from '@abacus-network/sdk';

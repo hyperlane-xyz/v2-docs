@@ -4,7 +4,7 @@ description: Interact with your application on multiple chains
 
 # App Abstraction
 
-The Abacus SDK simplifies the interface for smart contract applications deployed across multiple chains. It provides utilties for invoking a contract's methods on a target chain and a  [`MultiProvider`](multiprovider.md) for managing chain connections.&#x20;
+The Abacus SDK simplifies the interface for smart contract applications deployed across multiple chains. It provides utilties for invoking a contract's methods on a target chain and a  [`MultiProvider`](../multiprovider.md) for managing chain connections.&#x20;
 
 ### Implement
 
@@ -31,7 +31,7 @@ See the [Abacus Hello World](https://github.com/abacus-network/abacus-app-templa
 
 ### Interact
 
-Once an `AbacusApp` implementation is defined, it can be instantiated using the output generated from the [`AbacusAppDeployer`](broken-reference) and an instance of the [`MultiProvider`](multiprovider.md).&#x20;
+Once an `AbacusApp` implementation is defined, it can be instantiated using the output generated from the [`AbacusAppDeployer`](broken-reference) and an instance of the [`MultiProvider`](../multiprovider.md).&#x20;
 
 ```typescript
 const chainToContracts = await myDeployer.deploy();

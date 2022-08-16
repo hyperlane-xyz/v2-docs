@@ -51,7 +51,7 @@ function delegate(uint256 _amount) external returns (uint256);
 
 Users can withdraw their stake from a pool by calling `StakingPool.withdraw()`, which burns the user's `StakingTokens` and transfers the corresponding share of the pool's `ABC`  to the validator's `WithdrawalPool`.
 
-The `WithdrawalPool` mints an `ERC721`-compatible `WithdrawalToken` to the user, representing the user's proportional share of `ABC` in the `WithdrawalPool` and the timestamp at which that share can be withdrawn \[[3](staking.md#footnotes)].
+The `WithdrawalPool` mints an `ERC721`-compatible `WithdrawalToken` to the user, representing the user's proportional share of `ABC` in the `WithdrawalPool` and the timestamp when that share can be withdrawn \[[3](staking.md#footnotes)].
 
 ```solidity
 /**
@@ -78,5 +78,5 @@ function withdraw(uint256 _id) external returns (uint256);
 #### Footnotes
 
 * \[1] To protect against [rogue key attacks](https://rist.tech.cornell.edu/papers/pkreg.html)
-* \[2] In other words, the users share of the total supply of `StakingTokens` is equal to the share of `ABC` they contributed to the pool at the time of delegation.
+* \[2] In other words, the user's share of the total supply of `StakingTokens` is equal to the share of `ABC` they contributed to the pool at the time of delegation.
 * \[3] 21 days later

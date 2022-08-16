@@ -8,7 +8,7 @@ The Abacus messaging API is secured by two [complementary](https://en.wikipedia.
 
 A [proof-of-stake](proof-of-stake.md) protocol determines and secures the global Abacus validator set. Proof-of-stake provides _economic security_, ensuring that there is an economic cost to censorship or falsification of messages.
 
-[Sovereign consensus](sovereign-consensus.md) gives applications the option to specify their own validator sets, which operate in parallel with the global set. Sovereign consensus provides _reputational security_, allowing known and incentive-aligned actors to participate explicitly in securing an application.
+[Sovereign consensus](sovereign-consensus.md) gives applications the _option_ to specify their own validator sets, which operate in parallel with the global set. Sovereign consensus provides _reputational security_, allowing known and incentive-aligned actors to participate explicitly in securing an application.
 
 ## Proof of stake
 
@@ -22,7 +22,7 @@ Users are incentivized to delegate their `ABC` tokens to validators to earn stak
 
 ## Sovereign consensus
 
-Sovereign consensus gives applications the option to specify their own validator sets that operate in parallel with the global set.
+Sovereign consensus gives applications the _option_ to specify their own validator sets that operate in parallel with the global set.
 
 Applications can use sovereign consensus for _reputational security_ by specifying a validator set comprised of known and incentive-aligned actors.
 

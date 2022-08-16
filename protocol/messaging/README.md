@@ -6,11 +6,11 @@ description: Send and receive messages
 
 The main purpose of Abacus is to facilitate passing messages from an address on one chain to an address on another chain.
 
-Applications send and receive cross-chain messages using the [`Outbox`](outbox.md) and [`Inbox`](inbox.md) smart contracts.&#x20;
+Applications send and receive interchain messages using the [`Outbox`](outbox.md) and [`Inbox`](inbox.md) smart contracts.&#x20;
 
 ## Mailboxes
 
-The [`Outbox`](outbox.md) and [`Inbox`](inbox.md) contracts allow application developers to send and receive cross-chain messages.
+The [`Outbox`](outbox.md) and [`Inbox`](inbox.md) contracts allow application developers to send and receive interchain messages.
 
 There is one `Outbox` on every Abacus-supported chain. Applications send messages to other chains by calling `Outbox.dispatch()`. These messages are inserted into the `Outbox's` [merkle tree](https://en.wikipedia.org/wiki/Merkle\_tree).
 
@@ -20,7 +20,7 @@ The [Abacus validator se](../agents/validators.md)[t](../agents/validators.md) f
 
 ## Lifecycle
 
-Sending and receiving a cross-chain message takes three steps:
+Sending and receiving a interchain message takes three steps:
 
 1. An application calls [`Outbox.dispatch()`](outbox.md#dispatch)on the origin chain, inserting the message into the `Outbox's` merkle tree.
 2. The origin chain's validator set signs the new merkle root. If specified, the message recipient's sovereign validators also sign the new merkle root.&#x20;

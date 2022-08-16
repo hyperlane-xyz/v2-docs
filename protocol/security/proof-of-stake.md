@@ -18,7 +18,7 @@ The validators that have received the most delegated stake make up the _validato
 
 Abacus validators are responsible for observing the `Outbox` contract on their chain and continuously signing its merkle root as new messages are sent to it.
 
-Users that stake `ABC` are rewarded with newly minted `ABC`. Abacus mints a quantity of `ABC` tokens per epoch to be paid out as _staking rewards_. The token quantity is adjustable through governance. These rewards are split proportionally between users that delegated to the elected validator set. Validators may charge a commission on the rewards paid to their delegators.
+Users that stake `ABC` are rewarded with newly minted `ABC`. Abacus mints a quantity of `ABC` tokens per epoch to be paid out as _staking rewards_. The quantity is adjustable through governance. These rewards are split proportionally between users that delegated to the elected validator set. Validators may charge a commission on the rewards paid to their delegators.
 
 Delegated stake can be slashed if a validator attempts to falsify or censor messages.
 

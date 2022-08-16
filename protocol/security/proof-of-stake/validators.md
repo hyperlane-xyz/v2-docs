@@ -10,7 +10,7 @@ Note: The Abacus protocol is still under development. This documentation reflect
 For the latest on what's been implemented and deployed to testnet(s) and mainnet(s), please take a look at the [roadmap](../../../resources/roadmap.md).
 {% endhint %}
 
-The composition of the Abacus validator set is determined by the stake held in each `StakingPool`. Every epoch, Abacus broadcasts a cross-chain message to remote chains to ensure that all `Inboxes` have an up-to-date view of the latest validator set.
+The Abacus validator set composition is determined by the stake held in each `StakingPool`. Every epoch, Abacus broadcasts an interchain message to every remote chain to ensure that all `Inboxes` have an up-to-date view of the latest validator set.
 
 #### Local
 
@@ -35,7 +35,7 @@ function proposeDiff(
 ) external returns(uint256);
 ```
 
-After the `TransitionWindow` is over, anyone may apply the diff to the validator set by calling `applyDiff()`. The `LocalValidatorsManager` broadcasts a cross-chain message to all remote Inboxes containing the `ValidatorsDiff`, and clears the `pendingDiff`\[[1](validators.md#footnotes)].
+After the `TransitionWindow` is over, anyone may apply the change to the validator set by calling `applyDiff()`. The `LocalValidatorsManager` broadcasts an interchain message to all remote Inboxes containing the `ValidatorsDiff`, and clears the `pendingDiff`\[[1](validators.md#footnotes)].
 
 ```solidity
 /**
@@ -46,13 +46,13 @@ After the `TransitionWindow` is over, anyone may apply the diff to the validator
 function applyDiff() external returns(bool);
 ```
 
-The `LocalValidatorsManager` contract exposes governable functions to modify the size of the `threshold` and the maximum validator set size.
+The `LocalValidatorsManager` contract exposes functions to modify the size of the `threshold` and the maximum validator set size, adjustable through governance.
 
 #### Remote
 
 The validator set for a remote chain is managed by a `RemoteValidatorsManager` contract. This contract stores an [`EnumerableSet`](https://docs.openzeppelin.com/contracts/3.x/api/utils#EnumerableSet) of public keys representing the latest validator set for which it is aware, as well as the `threshold`, the number of validators required to reach a quorum.
 
-When the `RemoteValidatorsManager` contract receives a cross-chain message from its corresponding `LocalValidatorsManager`, it updates its view of the validator set accordingly.
+When the `RemoteValidatorsManager` contract receives an interchain message from its corresponding `LocalValidatorsManager`, it updates its view of the validator set accordingly.
 
 The `RemoteValidatorsManager` contract exposes a number of view functions that can be used by an `Inbox` to check that a checkpoint was signed by a quorum of validators.
 
@@ -99,4 +99,4 @@ function isValidator(bytes32 _publicKey) public view returns (bool);
 
 #### Footnotes
 
-* \[1] Note that because message processing is not guaranteed to happen in order, these messages also contain an epoch number, to ensure that the `RemoteValidatorsManager` applies the diff against the correct validator set. As a fallback, the `LocalValidatorsManager` exposes a function to send the entire validator set to a `RemoteValidatorsManager.`
+* \[1] Note that because message processing is not guaranteed to happen in order, these messages also contain an epoch number, to ensure that the `RemoteValidatorsManager` applies the change against the correct validator set. As a fallback, the `LocalValidatorsManager` exposes a function to send the entire validator set to a `RemoteValidatorsManager.`
