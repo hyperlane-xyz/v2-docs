@@ -32,6 +32,7 @@
   * [ERC20 token](developers/examples/erc20-token.md)
   * [Controller](developers/examples/controller.md)
 * [Latencies](developers/latencies.md)
+* [Helpful Resources](developers/helpful-resources.md)
 
 ## Protocol
 
