@@ -82,6 +82,6 @@ You can click on the chain name in the left column to be directed to the address
 | [Mumbai](https://mumbai.polygonscan.com/address/0x0f860bfd24d08C484033D478fe4b7Cda2C9167Ff)                | 0x0000000000000000000000000f860bfd24d08C484033D478fe4b7Cda2C9167Ff |
 | [Alfajores](https://alfajores.celoscan.io/address/0xb510708DC42eb9F74816E8f167B0dEa4C98ad92E)              | 0x000000000000000000000000b510708DC42eb9F74816E8f167B0dEa4C98ad92E |
 | [Fuji](https://testnet.snowtrace.io/address/0xC7529Ec8F908512e875B5d118927a3B0665Bc843)                    | 0x000000000000000000000000C7529Ec8F908512e875B5d118927a3B0665Bc843 |
-| BSC Testnet                                                                                                | 0x000000000000000000000000d97D98F6353e4D0de0d9e180059941325e23f1f7 |
+| [BSC Testnet](https://testnet.bscscan.com/address/0xd97D98F6353e4D0de0d9e180059941325e23f1f7)              | 0x000000000000000000000000d97D98F6353e4D0de0d9e180059941325e23f1f7 |
 | [Arbitrum Rinkeby](https://testnet.arbiscan.io/address/0x10D005721329B1278B23e9E84501D339D5037Cbc)         | 0x00000000000000000000000010D005721329B1278B23e9E84501D339D5037Cbc |
 | [Optimism Kovan](https://kovan-optimistic.etherscan.io/address/0xC5C50B4890F4171E6Ae50cD50Ff636Baef3b2Ed1) | 0x000000000000000000000000C5C50B4890F4171E6Ae50cD50Ff636Baef3b2Ed1 |
