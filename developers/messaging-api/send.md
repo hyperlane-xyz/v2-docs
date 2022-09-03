@@ -4,7 +4,7 @@ description: Send a message to any Abacus supported network.
 
 # Send
 
-Developers can send interchain messages by calling the`Outbox.dispatch` endpoint.
+Developers can send interchain messages by calling the`Outbox.dispatch` endpoint. At the moment, dispatched messages must be received by a contract with the `handle()` function. You will learn more about this in the [Receive](receive.md) section up next, but for now let's cover the message sending interface.
 
 ### Interface
 
@@ -18,7 +18,13 @@ interface IOutbox {
 }
 ```
 
-You can find the address of the `Outbox` contract on each chain [here](../contract-addresses/), and chain domains [here](../domains.md).
+You can find the address of the `Outbox` contract on each chain [here](../addresses.md#outbox), and chain domains [here](../domains.md).
+
+`_destinationDomain` is the chain you're sending to, it is **not** the chainID, rather it is a unique ID assigned by the protocol to each chain. Domain ID's can be found [here](../domains.md).
+
+`_recipientAddress` is the receiving contract, it needs to be a contract with the `handle()` function, you can read about it in the [Receive](receive.md) section.
+
+`_messageBody` is the message you're passing. More on example usage below.
 
 ### Encoding
 

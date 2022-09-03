@@ -4,7 +4,7 @@ description: Local security provided by application-specific validators
 
 # Sovereign consensus
 
-Sovereign consensus allows applications to optionally specify their own validator sets that operate in parallel with the global set.
+Sovereign consensus gives applications the _option_ to specify their own validator sets that operate in parallel with the global set.
 
 Applications can leverage the reputation of known and incentive-aligned actors by allowing them to participate as [validators](../agents/validators.md) in sovereign consensus.
 

@@ -12,7 +12,7 @@ Note that this tutorial does not cover [paying for the cost of relaying the mess
 
 ### Inputs
 
-* `$OUTBOX_ADDRESS`: The [Outbox](../../protocol/messaging/outbox.md) contract address on the origin chain. Abacus contract addresses can be found [here](../contract-addresses/).
+* `$OUTBOX_ADDRESS`: The [Outbox](../../protocol/messaging/outbox.md) contract address on the origin chain. Abacus contract addresses can be found [here](../addresses.md#outbox).
 * `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../domains.md).
 * `$RECIPIENT`: The address of the `TestRecipient` contract on the destination chain, left padded to a `bytes32`. TestRecipient contract addresses can be found [here](quickstart-tutorial.md#appendix).
 
@@ -22,7 +22,7 @@ Sending a message is a simple matter of calling `Outbox.dispatch()`. This functi
 
 {% tabs %}
 {% tab title="Using Metamask" %}
-1. Navigate to the `Outbox` contract page on [Etherscan](https://etherscan.io/address/0x2f9DB5616fa3fAd1aB06cB2C906830BA63d135e3#writeProxyContract) (or its equivalent if you're sending from a non-ethereum chain, which you could find [here](../contract-addresses/mainnet.md)).
+1. Navigate to the `Outbox` contract page on [Etherscan](https://etherscan.io/address/0x2f9DB5616fa3fAd1aB06cB2C906830BA63d135e3#writeProxyContract) (or its equivalent if you're sending from a non-ethereum chain, which you could find [here](../addresses.md#outbox)).
 2. Under the `Contract` tab, find the `Write as Proxy` button.
 3. Click on the `Connect to Web3` button to connect your Wallet (i.e. Metamask). Make sure that you are on the correct network.
 4. Expand the `dispatch` box.
@@ -62,24 +62,26 @@ Address of `TestRecipient` contracts that you can send test messages to. Left-pa
 
 #### Mainnets
 
-| Chain     | TestRecipient address                                                                                                                                    |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ethereum  | [0x0000000000000000000000003C5b70e0D5Bab4397cEA18272574c44aC8fC9A6E](https://etherscan.io/address/0x3C5b70e0D5Bab4397cEA18272574c44aC8fC9A6E)            |
-| Polygon   | [0x000000000000000000000000c1C8760B7be3901A2FB6F8ecF2829552721d0FfF](https://polygonscan.com/address/0xc1C8760B7be3901A2FB6F8ecF2829552721d0FfF)         |
-| Celo      | [0x000000000000000000000000D126Ed458a6eD624AeE125Ef2F5285E80CEe980D](https://celoscan.io/address/0xD126Ed458a6eD624AeE125Ef2F5285E80CEe980D)             |
-| Avalanche | [0x0000000000000000000000004ca4541f2Fe9590d8D11b005bFFfe9F231CCb5d0](https://snowtrace.io/address/0x4ca4541f2Fe9590d8D11b005bFFfe9F231CCb5d0)            |
-| BSC       | [0x000000000000000000000000fc5c1d5Ac3655668F2545668938a52D7810DB86d](https://bscscan.com/address/0xfc5c1d5Ac3655668F2545668938a52D7810DB86d)             |
-| Arbitrum  | [0x0000000000000000000000002E00E2C74A70B8B7573231e7ED063FEf065855Ab](https://arbiscan.io/address/0x2E00E2C74A70B8B7573231e7ED063FEf065855Ab)             |
-| Optimism  | [0x000000000000000000000000EaB3b53b08926182324bF7E12D30A5393C394cE3](https://optimistic.etherscan.io/address/0xEaB3b53b08926182324bF7E12D30A5393C394cE3) |
+You can click on the chain name in the left column to be directed to the address, and you can copy the 'left-padded' to bytes32 addresses on from the right column.
+
+| Chain                                                                                          | TestRecipient address                                              |
+| ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| [Ethereum](https://etherscan.io/address/0x3C5b70e0D5Bab4397cEA18272574c44aC8fC9A6E)            | 0x0000000000000000000000003C5b70e0D5Bab4397cEA18272574c44aC8fC9A6E |
+| [Polygon](https://polygonscan.com/address/0xc1C8760B7be3901A2FB6F8ecF2829552721d0FfF)          | 0x000000000000000000000000c1C8760B7be3901A2FB6F8ecF2829552721d0FfF |
+| [Celo](https://celoscan.io/address/0xD126Ed458a6eD624AeE125Ef2F5285E80CEe980D)                 | 0x000000000000000000000000D126Ed458a6eD624AeE125Ef2F5285E80CEe980D |
+| [Avalanche](https://snowtrace.io/address/0x4ca4541f2Fe9590d8D11b005bFFfe9F231CCb5d0)           | 0x0000000000000000000000004ca4541f2Fe9590d8D11b005bFFfe9F231CCb5d0 |
+| [BSC](https://bscscan.com/address/0xfc5c1d5Ac3655668F2545668938a52D7810DB86d)                  | 0x000000000000000000000000fc5c1d5Ac3655668F2545668938a52D7810DB86d |
+| [Arbitrum](https://arbiscan.io/address/0x2E00E2C74A70B8B7573231e7ED063FEf065855Ab)             | 0x0000000000000000000000002E00E2C74A70B8B7573231e7ED063FEf065855Ab |
+| [Optimism](https://optimistic.etherscan.io/address/0xEaB3b53b08926182324bF7E12D30A5393C394cE3) | 0x000000000000000000000000EaB3b53b08926182324bF7E12D30A5393C394cE3 |
 
 #### Testnets
 
-| Chain            | TestRecipient address                                                                                                                                          |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mumbai           | [0x0000000000000000000000000f860bfd24d08C484033D478fe4b7Cda2C9167Ff](https://mumbai.polygonscan.com/address/0x0f860bfd24d08C484033D478fe4b7Cda2C9167Ff)        |
-| Alfajores        | [0x000000000000000000000000b510708DC42eb9F74816E8f167B0dEa4C98ad92E](https://alfajores.celoscan.io/address/0xb510708DC42eb9F74816E8f167B0dEa4C98ad92E)         |
-| Kovan            | [0x000000000000000000000000611241eC593B5692180A6ce5CbD79445826f30Be](https://kovan.etherscan.io/address/0x611241eC593B5692180A6ce5CbD79445826f30Be)            |
-| Fuji             | [0x000000000000000000000000C7529Ec8F908512e875B5d118927a3B0665Bc843](https://testnet.snowtrace.io/address/0xC7529Ec8F908512e875B5d118927a3B0665Bc843)          |
-| BSC Testnet      | [0x000000000000000000000000d97D98F6353e4D0de0d9e180059941325e23f1f7](https://mumbai.polygonscan.com/address/0x0f860bfd24d08C484033D478fe4b7Cda2C9167Ff)        |
-| Arbitrum Rinkeby | [0x00000000000000000000000010D005721329B1278B23e9E84501D339D5037Cbc](https://testnet.arbiscan.io/address/0x10D005721329B1278B23e9E84501D339D5037Cbc)           |
-| Optimism Kovan   | [0x000000000000000000000000C5C50B4890F4171E6Ae50cD50Ff636Baef3b2Ed1](https://kovan-optimistic.etherscan.io/address/0xC5C50B4890F4171E6Ae50cD50Ff636Baef3b2Ed1) |
+| Chain                                                                                                      | TestRecipient address                                              |
+| ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| [Kovan](https://kovan.etherscan.io/address/0x611241eC593B5692180A6ce5CbD79445826f30Be)                     | 0x000000000000000000000000611241eC593B5692180A6ce5CbD79445826f30Be |
+| [Mumbai](https://mumbai.polygonscan.com/address/0x0f860bfd24d08C484033D478fe4b7Cda2C9167Ff)                | 0x0000000000000000000000000f860bfd24d08C484033D478fe4b7Cda2C9167Ff |
+| [Alfajores](https://alfajores.celoscan.io/address/0xb510708DC42eb9F74816E8f167B0dEa4C98ad92E)              | 0x000000000000000000000000b510708DC42eb9F74816E8f167B0dEa4C98ad92E |
+| [Fuji](https://testnet.snowtrace.io/address/0xC7529Ec8F908512e875B5d118927a3B0665Bc843)                    | 0x000000000000000000000000C7529Ec8F908512e875B5d118927a3B0665Bc843 |
+| [BSC Testnet](https://testnet.bscscan.com/address/0xd97D98F6353e4D0de0d9e180059941325e23f1f7)              | 0x000000000000000000000000d97D98F6353e4D0de0d9e180059941325e23f1f7 |
+| [Arbitrum Rinkeby](https://testnet.arbiscan.io/address/0x10D005721329B1278B23e9E84501D339D5037Cbc)         | 0x00000000000000000000000010D005721329B1278B23e9E84501D339D5037Cbc |
+| [Optimism Kovan](https://kovan-optimistic.etherscan.io/address/0xC5C50B4890F4171E6Ae50cD50Ff636Baef3b2Ed1) | 0x000000000000000000000000C5C50B4890F4171E6Ae50cD50Ff636Baef3b2Ed1 |

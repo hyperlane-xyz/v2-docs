@@ -12,7 +12,7 @@ There are several `Inboxes` on each Abacus-supported chain, one for each remote 
 
 #### Process
 
-[Relayers](../agents/relayer.md) deliver messages to their recipients by calling `InboxValidatorManager.process()`. This function takes as arguments the signed merkle root, the message, and a merkle proof of that message against the signed root.
+[Relayers](../agents/relayer.md) deliver messages to their recipients by calling `InboxValidatorManager.process()`. This function takes as parameters the signed merkle root, the message, and a merkle proof of that message against the signed root.
 
 The `InboxValidatorManager` verifies that a quorum of validators signed the root and then calls `Inbox.process` which verifies the merkle proof before delivering the message to the recipient by calling `recipient.handle()`.
 

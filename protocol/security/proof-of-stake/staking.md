@@ -12,7 +12,7 @@ For the latest on what's been implemented and deployed to testnet(s) and mainnet
 
 #### Registration
 
-To be eligible to receive delegations, validators must first register their public key on the `StakingRegistry`. To register, validators provide a proof-of-possession of their private key \[[1](staking.md#footnotes)] and specify a commission as a percentage of staking rewards.
+To be eligible to receive token delegations, validators must first register their public key on the `StakingRegistry`. To register, validators provide a proof-of-possession of their private key \[[1](staking.md#footnotes)] and specify a commission as a percentage of staking rewards.
 
 Each registered validator has a corresponding `StakingPool` contract, responsible for managing `ABC` tokens delegated to that validator.
 
@@ -36,7 +36,7 @@ function register(
 
 Users can delegate to a validator by calling `StakingPool.delegate()`, which transfers `ABC` tokens from the user to the pool. In return, the user receives `ERC20`-compatible `StakingTokens`, representing their proportional share of the `ABC` held by the pool \[[2](staking.md#undefined)].
 
-These `StakingTokens` represent a pro-rata claim on the `ABC` held by the `StakingPool`.
+These `StakingTokens` represent a proportional claim on the `ABC` held by the `StakingPool`.
 
 ```solidity
 /**
@@ -51,7 +51,7 @@ function delegate(uint256 _amount) external returns (uint256);
 
 Users can withdraw their stake from a pool by calling `StakingPool.withdraw()`, which burns the user's `StakingTokens` and transfers the corresponding share of the pool's `ABC`  to the validator's `WithdrawalPool`.
 
-The `WithdrawalPool` mints an `ERC721`-compatible `WithdrawalToken` to the user, representing the user's proportional share of `ABC` in the `WithdrawalPool` and the timestamp at which that share can be withdrawn \[[3](staking.md#footnotes)].
+The `WithdrawalPool` mints an `ERC721`-compatible `WithdrawalToken` to the user, representing the user's proportional share of `ABC` in the `WithdrawalPool` and the timestamp when that share can be withdrawn \[[3](staking.md#footnotes)].
 
 ```solidity
 /**
@@ -78,5 +78,5 @@ function withdraw(uint256 _id) external returns (uint256);
 #### Footnotes
 
 * \[1] To protect against [rogue key attacks](https://rist.tech.cornell.edu/papers/pkreg.html)
-* \[2] In other words, the users share of the total supply of `StakingTokens` is equal to the share of `ABC` they contributed to the pool at the time of delegation.
+* \[2] In other words, the user's share of the total supply of `StakingTokens` is equal to the share of `ABC` they contributed to the pool at the time of delegation.
 * \[3] 21 days later

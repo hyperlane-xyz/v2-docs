@@ -10,7 +10,9 @@ Running a validator simply requires the following:
 
 #### An RPC node&#x20;
 
-Validators make simple view calls to read merkle roots from the [`Outbox`](../../protocol/messaging/outbox.md) contract on the chain they are validating for.&#x20;
+Validators make simple view calls to read merkle roots from the [`Outbox`](../../protocol/messaging/outbox.md) contract on the chain they are validating for.
+
+Note that operating a validator for the mainnet Polygon network requires an RPC endpoint of an archive node. This is because validators make view calls for state that has reached finality by looking at state at past block heights that have since reached finality. Polygon's number of blocks to finality is very high (256 blocks), and a non-archive Polygon node only allows state reads 128 blocks in the past.
 
 #### A secure signing key&#x20;
 

@@ -10,7 +10,7 @@ The `Outbox` contract provides an API to send messages to remote chains.
 
 To send interchain messages, developers call `Outbox.dispatch()`.
 
-This function takes as arguments the message contents, the destination chain ID, and the recipient address. Each message get inserted as a leaf into an [incremental merkle tree](https://medium.com/@josephdelong/ethereum-2-0-deposit-merkle-tree-13ec8404ca4f). This data structure allows gas-efficient insertion of elements into the tree.
+This function takes as parameters the message contents, the destination chain ID, and the recipient address. Each message get inserted as a leaf into an [incremental merkle tree](https://medium.com/@josephdelong/ethereum-2-0-deposit-merkle-tree-13ec8404ca4f). This data structure allows gas-efficient insertion of elements into the tree.
 
 ```solidity
 /**

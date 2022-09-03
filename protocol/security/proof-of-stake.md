@@ -14,11 +14,11 @@ Each Abacus-supported chain has its own validator set, and runs its own instance
 
 Users determine and secure the validator set by staking their `ABC` tokens and delegating them to one or more validators. Users can request to withdraw staked `ABC`, after which they must wait a 21 day _unbonding period_ before receiving their tokens.
 
-The validators that have received the most delegated stake make up the _validator set_. The validator set is adjusted every _epoch_ during the _transition window,_ during which any user can propose a diff to the validator set. At the end of the transition window, the highest scoring diff is accepted and broadcast to each of the remote chains.
+The validators that have received the most delegated stake make up the _validator set_. The validator set is adjusted every _epoch_ during the _transition window,_ during which any user can propose a change to the validator set. At the end of the transition window, the highest scoring change is accepted and broadcast to each of the remote chains.
 
 Abacus validators are responsible for observing the `Outbox` contract on their chain and continuously signing its merkle root as new messages are sent to it.
 
-Users that stake `ABC` are rewarded with newly minted `ABC`. Abacus mints a governable quantity of `ABC` tokens per epoch to be paid out as _staking rewards_. These rewards are split pro-rata between users that delegated to the elected validator set. Validators may charge a commission on the rewards paid to their delegators.
+Users that stake `ABC` are rewarded with newly minted `ABC`. Abacus mints a quantity of `ABC` tokens per epoch to be paid out as _staking rewards_. The quantity is adjustable through governance. These rewards are split proportionally between users that delegated to the elected validator set. Validators may charge a commission on the rewards paid to their delegators.
 
 Delegated stake can be slashed if a validator attempts to falsify or censor messages.
 

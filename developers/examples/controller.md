@@ -1,5 +1,5 @@
 ---
-description: An app for executing cross-chain function calls
+description: An app for executing interchain function calls
 ---
 
 # Controller
