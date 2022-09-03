@@ -91,16 +91,15 @@ description: Abacus core contract addresses
 
 ## Outbox
 
-<<<<<<< Updated upstream
-| Network | Address |
+| Network         | Address                                                                                                                                           |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Alfajores | [`0x5C7D9B5f38022dB78416D6C0132bf8c404deDe27`](https://alfajores-blockscout.celo-testnet.org//address/0x5C7D9B5f38022dB78416D6C0132bf8c404deDe27) |
-| Kovan | [`0xE199902fb97726e3D924bF6606382af11a954c85`](https://kovan.etherscan.io//address/0xE199902fb97726e3D924bF6606382af11a954c85) |
-| Fuji | [`0xc507A7c848b59469cC44A3653F8a582aa8BeC71E`](https://testnet.snowtrace.io//address/0xc507A7c848b59469cC44A3653F8a582aa8BeC71E) |
-| Mumbai | [`0xe17c37212d785760E8331D4A4395B17b34Ba8cDF`](https://mumbai.polygonscan.com//address/0xe17c37212d785760E8331D4A4395B17b34Ba8cDF) |
-| Bsctestnet | [`0xE023239c8dfc172FF008D8087E7442d3eBEd9350`](https://testnet.bscscan.com//address/0xE023239c8dfc172FF008D8087E7442d3eBEd9350) |
-| Arbitrumrinkeby | [`0xB6a4129c305056d80fFfea96DdbDCf1F58BC8240`](https://testnet.arbiscan.io//address/0xB6a4129c305056d80fFfea96DdbDCf1F58BC8240) |
-| Optimismkovan | [`0x981f5C4070bC048186CDE1CcB61Ea5c969194b54`](https://kovan-optimistic.etherscan.io//address/0x981f5C4070bC048186CDE1CcB61Ea5c969194b54) |
+| Alfajores       | [`0x5C7D9B5f38022dB78416D6C0132bf8c404deDe27`](https://alfajores-blockscout.celo-testnet.org//address/0x5C7D9B5f38022dB78416D6C0132bf8c404deDe27) |
+| Kovan           | [`0xE199902fb97726e3D924bF6606382af11a954c85`](https://kovan.etherscan.io//address/0xE199902fb97726e3D924bF6606382af11a954c85)                    |
+| Fuji            | [`0xc507A7c848b59469cC44A3653F8a582aa8BeC71E`](https://testnet.snowtrace.io//address/0xc507A7c848b59469cC44A3653F8a582aa8BeC71E)                  |
+| Mumbai          | [`0xe17c37212d785760E8331D4A4395B17b34Ba8cDF`](https://mumbai.polygonscan.com//address/0xe17c37212d785760E8331D4A4395B17b34Ba8cDF)                |
+| Bsctestnet      | [`0xE023239c8dfc172FF008D8087E7442d3eBEd9350`](https://testnet.bscscan.com//address/0xE023239c8dfc172FF008D8087E7442d3eBEd9350)                   |
+| Arbitrumrinkeby | [`0xB6a4129c305056d80fFfea96DdbDCf1F58BC8240`](https://testnet.arbiscan.io//address/0xB6a4129c305056d80fFfea96DdbDCf1F58BC8240)                   |
+| Optimismkovan   | [`0x981f5C4070bC048186CDE1CcB61Ea5c969194b54`](https://kovan-optimistic.etherscan.io//address/0x981f5C4070bC048186CDE1CcB61Ea5c969194b54)         |
 
 ## Inboxes
 
