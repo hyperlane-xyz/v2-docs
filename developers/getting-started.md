@@ -8,7 +8,7 @@ description: Build interchain applications using Abacus
 
 Abacus makes interchain communication straightforward by providing a simple on-chain API for sending and receiving messages.
 
-[Learn more](getting-started.md#messaging-api) about the Abacus interchain messaging API.
+[Learn more](messaging-api/) about the Abacus interchain messaging API.
 
 ### Application framework
 
@@ -16,7 +16,7 @@ Looking for something a bit more advanced?
 
 The Abacus application framework helps developers create and manage interchain applications.
 
-[Learn more](getting-started.md#application-framework) about the application framework.
+[Learn more](building-applications/) about the application framework.
 
 ### Example applications
 
