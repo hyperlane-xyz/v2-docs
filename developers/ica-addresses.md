@@ -1,5 +1,5 @@
 ---
-description: Interchain Accounts InterchainAccountRouter middleware addresses
+description: Interchain Accounts Router middleware addresses
 ---
 
 # Contract addresses
