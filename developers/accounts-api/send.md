@@ -56,7 +56,8 @@ Perform a Uniswap V3 swap on Ethereum via an Interchain Account from a controlli
 
 ```solidity
 uint32 constant ethereumDomain = 0x657468;
-address constant icaRouter = 0x1dbb057c50820b73A5450B5a0cADf5C5cc4b362E; // consistent across all chains
+ // consistent across all chains
+address constant icaRouter = 0x1dbb057c50820b73A5450B5a0cADf5C5cc4b362E;
 IInterchainAccountRouter(icaRouter).dispatch(
     ethereumDomain,
     [swapCall]
@@ -71,5 +72,8 @@ An example is included below of a contract precomputing its own Interchain Accou
 
 ```solidity
 uint32 localDomain = IOutbox(...).localDomain;
-address myInterchainAccount = IInterchainAccountRouter(...).getInterchainAccount(localDomain, address(this));
+address myInterchainAccount = IInterchainAccountRouter(...).getInterchainAccount(
+    localDomain,
+    address(this)
+);
 ```
