@@ -11,6 +11,7 @@
   * [Receive](developers/messaging-api/receive.md)
   * [Unit testing](developers/messaging-api/unit-testing.md)
   * [Gas](developers/messaging-api/gas.md)
+* [Accounts API](developers/messaging-api/send.md)
 * [Domain identifiers](developers/domains.md)
 * [Observability](developers/observability.md)
 * [Debugging](developers/debugging.md)
