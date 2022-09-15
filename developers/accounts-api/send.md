@@ -6,7 +6,7 @@ description: Send a message via Interchain Account to any contract on an Abacus 
 
 Developers can send interchain messages via Interchain Accounts by calling the `InterchainAccountRouter.dispatch` endpoint. In contrast with the [Messaging API](../messaging-api/send.md), the Interchain Account API allows developers to send messages to any contract, not just `IMessageRecipient`s with the `handle()` function, making it compatible with legacy contracts. To achieve this, message encoding must be constrained to ABI encoded function calls. 
 
-If it does not exist already, the Interchain Account will be atomically created. 
+If it does not exist already, an Interchain Account will be atomically created that is controlled by the sending address on the origin chain in perpetuity. The controlling pair of origin chain and address will have consistent interchain account addresses on all chains that support the Interchain Account specification. 
 
 ### Interface
 
@@ -21,6 +21,10 @@ interface IInterchainAccountRouter {
         uint32 _destinationDomain,
         Call[] calldata calls
     ) external returns (uint256);
+    function getInterchainAccount(
+        uint32 _originDomain, 
+        address _sender
+    ) external returns (address);
 }
 ```
 
@@ -48,7 +52,7 @@ Call swapCall = Call({
 
 ### Sending
 
-Perform a Uniswap V3 swap on Ethereum via an Interchain Account from a controlling account on another chain. The Interchain Account must satisfy any requirements the recieving contract has on `msg.sender`, such as token allowances for swapping.
+Perform a Uniswap V3 swap on Ethereum via an Interchain Account from a controlling account on another chain. The Interchain Account must satisfy any requirements the recieving contract has on `msg.sender`, such as token balances or allowances.
 
 ```solidity
 uint32 constant ethereumDomain = 0x657468;
@@ -57,4 +61,15 @@ IInterchainAccountRouter(icaRouter).dispatch(
     ethereumDomain,
     [swapCall]
 );
+```
+
+### Precomputing Addresses
+
+It is often useful to have knowledge of the Interchain Account address before sending a message. For example, you may want to fund the address with tokens before sending a message. The `getInterchainAccount` function can be used to get the address of an Interchain Account given the controlling chain domain and address pair.
+
+An example is included below of a contract precomputing its own Interchain Account address.
+
+```solidity
+uint32 localDomain = IOutbox(...).localDomain;
+address myInterchainAccount = IInterchainAccountRouter(...).getInterchainAccount(localDomain, address(this));
 ```
