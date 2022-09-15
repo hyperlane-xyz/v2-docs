@@ -1,5 +1,5 @@
 ---
-description: Receive an inbound message from any Abacus supported network.
+description: Receive an inbound message from any Hyperlane supported network.
 ---
 
 # Receive
@@ -29,7 +29,7 @@ interface IMessageRecipient {
 ### Access Control
 
 {% hint style="warning" %}
-To ensure only valid interchain messages are accepted, it is important to require that `msg.sender` is a known Abacus `Inbox`.
+To ensure only valid interchain messages are accepted, it is important to require that `msg.sender` is a known Hyperlane `Inbox`.
 {% endhint %}
 
 Developers can reference deployed [`Inbox` addresses](../addresses.md#inboxes) and corresponding [domain identifiers](../domains.md) in the docs. An example of `Inbox` access control implemented on `avalanche` for restricting inbound messages from `ethereum` is provided below.
@@ -46,10 +46,12 @@ modifier onlyEthereumInbox(uint32 origin) {
 
 A generalized message access control layer is provided in the [`AbacusConnectionManager`](../building-applications/writing-contracts/abacusconnectionmanager.md) library, and Abacus Works has deployed and maintained these registries on all supported networks.&#x20;
 
+_Note: Abacus is the former name of the Hyperlane protocol. The ACM will soon be renamed._
+
 ### Encoding
 
 {% hint style="info" %}
-Abacus message senders are left-padded to `bytes32` for compatibility with virtual machines that are addressed differently.&#x20;
+Hyperlane message senders are left-padded to `bytes32` for compatibility with virtual machines that are addressed differently.&#x20;
 {% endhint %}
 
 The following utility is provided in the [`TypeCasts` library](https://github.com/abacus-network/abacus-monorepo/blob/main/solidity/core/contracts/libs/TypeCasts.sol) for convenience.

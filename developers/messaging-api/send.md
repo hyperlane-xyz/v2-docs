@@ -1,5 +1,5 @@
 ---
-description: Send a message to any Abacus supported network.
+description: Send a message to any Hyperlane supported network.
 ---
 
 # Send

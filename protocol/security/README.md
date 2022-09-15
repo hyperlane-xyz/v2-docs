@@ -4,15 +4,15 @@ description: The protocols that secure the messaging API
 
 # Security
 
-The Abacus messaging API is secured by two [complementary](https://en.wikipedia.org/wiki/Swiss\_cheese\_model) protocols.
+The Hyperlane messaging API is secured by two [complementary](https://en.wikipedia.org/wiki/Swiss\_cheese\_model) protocols.
 
-A [proof-of-stake](proof-of-stake.md) protocol determines and secures the global Abacus validator set. Proof-of-stake provides _economic security_, ensuring that there is an economic cost to censorship or falsification of messages.
+A [proof-of-stake](proof-of-stake.md) protocol determines and secures the global Hyperlane validator set. Proof-of-stake provides _economic security_, ensuring that there is an economic cost to censorship or falsification of messages.
 
 [Sovereign consensus](sovereign-consensus.md) gives applications the _option_ to run their own validator sets in parallel to the global set. This insulates applications from dependence on the proof-of-stake protocol for security and gives applications the power to customize parameters on app-level interchain transactions.
 
 ## Proof of stake
 
-The Abacus delegated proof-of-stake protocol secures the global Abacus validator set and ensures that there is an economic cost to censorship or falsification of messages.
+The Hyperlane delegated proof-of-stake protocol secures the global Hyperlane validator set and ensures that there is an economic cost to censorship or falsification of messages.
 
 The validator set is responsible for observing and signing an `Outbox's` merkle root, which allows its contents to be delivered to `Inboxes` on remote chains.
 

@@ -22,12 +22,14 @@ If you visit a verified `Inbox` contract on a block explorer, you can easily vie
 
 ### Using the NodeJS SDK
 
-The Abacus Core App (built using the [App Framework](building-applications/)) exposes various utilities for message observability. To instantiate this app, reference the [Core App environments docs](building-applications/nodejs-sdk/contract-interaction/environments.md).
+The Hyperlane Core App (built using the [App Framework](building-applications/)) exposes various utilities for message observability. To instantiate this app, reference the [Core App environments docs](building-applications/nodejs-sdk/contract-interaction/environments.md).
 
 ```typescript
 import { AbacusCore } from '@abacus-network/sdk';
 const core = AbacusCore.fromEnvironment(environment, multiProvider);
 ```
+
+_Note: Abacus is the former name of the Hyperlane protocol. The repo and SDK will soon be renamed._
 
 #### Get dispatched messages
 

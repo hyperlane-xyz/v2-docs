@@ -1,10 +1,10 @@
 ---
-description: Unit test your integration with mock Abacus contracts
+description: Unit test your integration with mock Hyperlane contracts
 ---
 
 # Unit testing
 
-You can use the  `MockOutbox` and `MockInbox` contracts to unit test your integration with the Abacus messaging API.
+You can use the  `MockOutbox` and `MockInbox` contracts to unit test your integration with the Hyperlane messaging API.
 
 You simply need to deploy the mock contracts in your test environment, and configure your application to send and receive messages using these mock contracts.
 

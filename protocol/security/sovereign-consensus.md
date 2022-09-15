@@ -10,7 +10,7 @@ Applications can leverage the reputation of known and incentive-aligned actors b
 
 In order for a message to be delivered to an application, a quorum of both the global and sovereign validator sets must sign a merkle root that contains that message. This ensures that neither validator set alone is able to falsify messages.
 
-While we expect the security of the Abacus validator set to be sufficient for most applications, the [additional layer](https://en.wikipedia.org/wiki/Swiss\_cheese\_model) of sovereign consensus allows applications to make explicit the implicit trust assumptions that underpin most decentralized applications.
+While we expect the security of the Hyperlane validator set to be sufficient for most applications, the [additional layer](https://en.wikipedia.org/wiki/Swiss\_cheese\_model) of sovereign consensus allows applications to make explicit the implicit trust assumptions that underpin most decentralized applications.
 
 Applications can add sovereign validators by calling `Inbox.enrollSovereignValidator()`.
 

@@ -5,12 +5,12 @@ description: A partial specification of proof-of-stake tokenomics
 # Economics
 
 {% hint style="info" %}
-Note: The Abacus protocol is still under development. This documentation reflects the latest Abacus protocol design.
+Note: The Hyperlane protocol is still under development. This documentation reflects the latest Hyperlane protocol design.
 
 For the latest on what's been implemented and deployed to testnet(s) and mainnet(s), please take a look at the [roadmap](../../../resources/roadmap.md).
 {% endhint %}
 
-The Abacus protocol provides economic incentives that reward users for delegating their `ABC` and punish delegators for validator misbehavior.
+The Hyperlane protocol provides economic incentives that reward users for delegating their `ABC` and punish delegators for validator misbehavior.
 
 #### Rewards
 

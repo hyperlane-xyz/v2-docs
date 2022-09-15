@@ -1,8 +1,10 @@
 ---
-description: The easiest way to integrate with Abacus
+description: The easiest way to integrate with Hyperlane
 ---
 
 # AbacusConnectionClient
+
+_Note: Abacus is the former name of the Hyperlane protocol. The repo, ACM, and ACC will soon be renamed._
 
 Inheriting from [`AbacusConnectionClient`](https://github.com/abacus-network/abacus-monorepo/blob/main/solidity/app/contracts/AbacusConnectionClient.sol) is a simple way to ensure your contract knows where to send or receive interchain messages to or from.
 
@@ -42,3 +44,5 @@ contract HelloWorld is AbacusConnectionClient {
   }
 }
 ```
+
+__

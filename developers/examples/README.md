@@ -1,12 +1,12 @@
 ---
-description: Examples of different interchain applications using Abacus
+description: Examples of different interchain applications using Hyperlane
 ---
 
-# Examples
+# Example apps
 
-For examples of integrating contracts with Abacus and building interchain apps on top, see these repositories:
+For examples of integrating contracts with Hyperlane and building interchain apps on top, see these repositories:
 
-****[**HelloWorld**](helloworld.md) **-** The skeleton of an Abacus-connected contract and app.
+****[**HelloWorld**](helloworld.md) **-** The skeleton of an Hyperlane-connected contract and app.
 
 ****[**ERC20 Token**](erc20-token.md) **-** An interchain ERC20 token contract.
 

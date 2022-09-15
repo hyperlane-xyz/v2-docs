@@ -1,10 +1,12 @@
 ---
-description: Manage your application's connection to Abacus
+description: Manage your application's connection to Hyperlane
 ---
 
 # AbacusConnectionManager
 
-[`AbacusConnectionManagers`](https://github.com/abacus-network/abacus-monorepo/blob/main/solidity/core/contracts/AbacusConnectionManager.sol) connect [`AbacusConnectionClients`](abacusconnectionclient.md) to the Abacus `Outbox` and `Inbox` contracts.
+_Note: Abacus is the former name of the Hyperlane protocol. The repo, ACM, and ACC will soon be renamed._
+
+[`AbacusConnectionManagers`](https://github.com/abacus-network/abacus-monorepo/blob/main/solidity/core/contracts/AbacusConnectionManager.sol) connect [`AbacusConnectionClients`](abacusconnectionclient.md) to the Hyperlane `Outbox` and `Inbox` contracts.
 
 `ApplicationConnectionClients` send messages to the [`Outbox`](../../../protocol/messaging/outbox.md) contract address stored in the `AbacusConnectionManager.`
 
@@ -39,6 +41,6 @@ The `Outbox` and `Inbox` addressed stored by the `AbacusConnectionManager` can b
 }
 ```
 
-Applications can deploy their own `AbacusConnectionManagers` if they want their connection to Abacus to be controlled by their own governance protocol.
+Applications can deploy their own `AbacusConnectionManagers` if they want their connection to Hyperlane to be controlled by their own governance protocol.
 
 Abacus Works will deploy and maintain a public `AbacusConnectionManager` that all are welcome to use.

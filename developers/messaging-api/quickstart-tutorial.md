@@ -12,7 +12,7 @@ Note that this tutorial does not cover [paying for the cost of relaying the mess
 
 ### Inputs
 
-* `$OUTBOX_ADDRESS`: The [Outbox](../../protocol/messaging/outbox.md) contract address on the origin chain. Abacus contract addresses can be found [here](../addresses.md#outbox).
+* `$OUTBOX_ADDRESS`: The [Outbox](../../protocol/messaging/outbox.md) contract address on the origin chain. Hyperlane contract addresses can be found [here](../addresses.md#outbox).
 * `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../domains.md).
 * `$RECIPIENT`: The address of the `TestRecipient` contract on the destination chain, left padded to a `bytes32`. TestRecipient contract addresses can be found [here](quickstart-tutorial.md#appendix).
 

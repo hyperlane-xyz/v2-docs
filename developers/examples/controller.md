@@ -4,7 +4,7 @@ description: An app for executing interchain function calls
 
 # Controller
 
-The Controller is an Abacus application that allows arbitrary function calls to be executed on remote chains, built according to the [Router](../building-applications/writing-contracts/router.md) design pattern.
+The Controller is an Hyperlane application that allows arbitrary function calls to be executed on remote chains, built according to the [Router](../building-applications/writing-contracts/router.md) design pattern.
 
 We expect the Controller to be most useful as a tool to extend the reach of a governance protocol to multiple chains. For example, the Controller can allow a DAO deployed on Ethereum to execute transactions on remote chains like Polygon, Avalanche, or Celo.
 
@@ -58,7 +58,7 @@ This gives the DAO the exclusive power to execute calls on remote chains.
 
 #### Recovery
 
-Recovery mode provides a fail-safe mechanism for regaining control in the event of a catastrophic Abacus liveness failure.
+Recovery mode provides a fail-safe mechanism for regaining control in the event of a catastrophic Hyperlane liveness failure.
 
 Recovery mode can be triggered by the `recoveryManager`, a permissioned role on the `ControllerRouter`, and is subject to a time lock.
 

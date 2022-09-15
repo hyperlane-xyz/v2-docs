@@ -1,16 +1,16 @@
 ---
-description: A partial specification of how Abacus validator sets are determined
+description: A partial specification of how Hyperlane validator sets are determined
 ---
 
 # Validators
 
 {% hint style="info" %}
-Note: The Abacus protocol is still under development. This documentation reflects the latest Abacus protocol design.
+Note: The Hyperlane protocol is still under development. This documentation reflects the latest Hyperlane protocol design.
 
 For the latest on what's been implemented and deployed to testnet(s) and mainnet(s), please take a look at the [roadmap](../../../resources/roadmap.md).
 {% endhint %}
 
-The Abacus validator set composition is determined by the stake held in each `StakingPool`. Every epoch, Abacus broadcasts an interchain message to every remote chain to ensure that all `Inboxes` have an up-to-date view of the latest validator set.
+The Hyperlane validator set composition is determined by the stake held in each `StakingPool`. Every epoch, Hyperlane broadcasts an interchain message to every remote chain to ensure that all `Inboxes` have an up-to-date view of the latest validator set.
 
 #### Local
 

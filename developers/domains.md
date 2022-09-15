@@ -1,5 +1,5 @@
 ---
-description: Unique IDs for each Abacus-supported chain
+description: Unique IDs for each Hyperlane-supported chain
 ---
 
 # Domain identifiers
@@ -8,7 +8,7 @@ description: Unique IDs for each Abacus-supported chain
 Note that Abacus domain IDs have no relationship with EVM chain IDs, as Abacus will eventually support non-EVM chains.
 {% endhint %}
 
-Abacus uses proprietary domain IDs to reference each Abacus-supported chain.
+Hyperlane uses proprietary domain IDs to reference each Hyperlane-supported chain.
 
 When [sending a message](messaging-api/send.md), users must provide the domain ID of the destination chain. When [receiving a message](messaging-api/receive.md), the recipient will be passed the domain ID of the origin chain.
 

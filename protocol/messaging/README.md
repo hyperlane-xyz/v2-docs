@@ -4,7 +4,7 @@ description: Send and receive messages
 
 # Message passing
 
-The main purpose of Abacus is to facilitate passing messages from an address on one chain to an address on another chain.
+The main purpose of Hyperlane is to facilitate passing messages from an address on one chain to an address on another chain.
 
 Applications send and receive interchain messages using the [`Outbox`](outbox.md) and [`Inbox`](inbox.md) smart contracts.&#x20;
 
@@ -12,11 +12,11 @@ Applications send and receive interchain messages using the [`Outbox`](outbox.md
 
 The [`Outbox`](outbox.md) and [`Inbox`](inbox.md) contracts allow application developers to send and receive interchain messages.
 
-There is one `Outbox` on every Abacus-supported chain. Applications send messages to other chains by calling `Outbox.dispatch()`. These messages are inserted into the `Outbox's` [merkle tree](https://en.wikipedia.org/wiki/Merkle\_tree).
+There is one `Outbox` on every Hyperlane-supported chain. Applications send messages to other chains by calling `Outbox.dispatch()`. These messages are inserted into the `Outbox's` [merkle tree](https://en.wikipedia.org/wiki/Merkle\_tree).
 
-There are `n-1` `Inboxes` on every Abacus-supported chain, one for every other chain. Applications receive messages via `handle()`, a function that gets called by `Inbox` contracts whenever interchain messages are being delivered.
+There are `n-1` `Inboxes` on every Hyperlane-supported chain, one for every other chain. Applications receive messages via `handle()`, a function that gets called by `Inbox` contracts whenever interchain messages are being delivered.
 
-The [Abacus validator se](../agents/validators.md)[t](../agents/validators.md) for each chain is responsible for signing the latest `Outbox` merkle root on that chain. Messages can be delivered to remote `Inboxes` by providing merkle proofs against this signed root.
+The Hyperlane[ validator se](../agents/validators.md)[t](../agents/validators.md) for each chain is responsible for signing the latest `Outbox` merkle root on that chain. Messages can be delivered to remote `Inboxes` by providing merkle proofs against this signed root.
 
 ## Lifecycle
 

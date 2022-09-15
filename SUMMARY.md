@@ -1,6 +1,6 @@
 # Table of contents
 
-* [What is Abacus?](README.md)
+* [What is Hyperlane?](README.md)
 
 ## Developers
 

@@ -4,10 +4,10 @@ description: Receive messages
 
 # Inbox
 
-The `Inbox` contract provides an interface for applications building on Abacus to receive messages from remote chains.
+The `Inbox` contract provides an interface for applications building on Hyperlane to receive messages from remote chains.
 
 {% hint style="info" %}
-There are several `Inboxes` on each Abacus-supported chain, one for each remote chain from which messages may be sent. For clarity and simplicity, the following documentation describes a single `Inbox` contract responsible for receiving messages from a single remote chain.
+There are several `Inboxes` on each Hyperlane-supported chain, one for each remote chain from which messages may be sent. For clarity and simplicity, the following documentation describes a single `Inbox` contract responsible for receiving messages from a single remote chain.
 {% endhint %}
 
 #### Process

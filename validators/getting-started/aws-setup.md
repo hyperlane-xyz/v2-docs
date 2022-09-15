@@ -6,7 +6,7 @@ description: Configure your signing key and S3 bucket
 
 ### Create an IAM user
 
-This IAM user will be given permission to sign with the KMS key that you will later configure. Your Abacus validator will use this identity when signing.
+This IAM user will be given permission to sign with the KMS key that you will later configure. Your Hyperlane validator will use this identity when signing.
 
 1. Go to AWS's Identity and Access Management (IAM) in the [AWS console](https://us-east-1.console.aws.amazon.com/iamv2/home).
 2. On the left, under "Access management", click "Users".
@@ -15,7 +15,7 @@ This IAM user will be given permission to sign with the KMS key that you will la
 5. Select "Access key - Programmatic access" as the access type.
 6. Keep clicking the next buttons, the default permissions and tags are sufficient for now.
 7. Once reviewed, click "Create user".
-8. Copy the "Access key ID" and "Secret access key" to a safe place. These will be passed to your Abacus validator as environment variables.
+8. Copy the "Access key ID" and "Secret access key" to a safe place. These will be passed to your Hyperlane validator as environment variables.
 
 ### Create a KMS key
 

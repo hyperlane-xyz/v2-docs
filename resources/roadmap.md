@@ -8,31 +8,29 @@ description: Last updated June 6th, 2022
 The following roadmap is for informational purposes only and is subject to change.
 {% endhint %}
 
-## Abacus Alpha
+## Hyperlane Alpha
 
-_**Live on**_ [_**testnet**_](broken-reference)_**, mainnet ETA July 2022**_
-
-We are currently working towards the alpha release of Abacus.
+We have currently released Hyperlane's 'mainnet-alpha'
 
 **Security**
 
-The alpha release will use ECDSA multi-signatures, rather than an aggregatable signature scheme. Future releases will use an aggregatable signature scheme, which will allow Abacus to scale to larger validator sets.
+The alpha release uses ECDSA multi-signatures, rather than an aggregatable signature scheme. Future releases will use an aggregatable signature scheme, which will allow Hyperlane to scale to larger validator sets.
 
-The validator set on each chain will be determined by a multi-signature wallet controlled by Abacus Works. Future releases will use proof-of-stake to determine the validator set.
+The validator set on each chain is determined by a multi-signature wallet controlled by Abacus Works. Future releases will use proof-of-stake to determine the validator set.
 
-Sovereign consensus will not be implemented for the alpha release.
+Sovereign consensus is implemented for the alpha release.
 
 **Governance**
 
-Abacus alpha will be governed by a multi-signature wallet controlled by Abacus Works.
+Hyperlane alpha is governed by a multi-signature wallet controlled by Abacus Works.
 
 **Agents**
 
-The relayer will be configurable with a whitelist that allows operators to specify which messages to relay. Future releases will allow relayers to accept payments on the origin chain for processing of messages on the destination chain.
+The relayer is configurable with a whitelist that allows operators to specify which messages to relay. Future releases will allow relayers to accept payments on the origin chain for processing of messages on the destination chain.
 
 **Networks**
 
-The alpha version of Abacus will be deployed to the following mainnets (with testnets in parentheses):
+The alpha version of Hyperlane is deployed to the following mainnets (with testnets in parentheses):
 
 * Arbitrum (Rinkeby)
 * Avalanche (Fuji)
@@ -42,9 +40,9 @@ The alpha version of Abacus will be deployed to the following mainnets (with tes
 * Optimism (Kovan)
 * Polygon (Mumbai)
 
-## Abacus Beta
+## Hyperlane Beta
 
-_**ETA Q3 2022**_
+_**ETA Q4 2022**_
 
 * Aggregatable signatures to reduce gas costs and expand the validator set
 * Sovereign Consensus

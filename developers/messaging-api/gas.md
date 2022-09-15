@@ -4,12 +4,12 @@ description: Paying for message delivery gas costs
 
 # Gas
 
-The lifecycle of an Abacus message involves two transactions, one on the origin chain to send the message, and one on the destination chain to deliver the message.
+The lifecycle of an Hyperlane message involves two transactions, one on the origin chain to send the message, and one on the destination chain to deliver the message.
 
-For convenience, Abacus provides an API on the origin chain that can be used to pay [relayers](../../protocol/agents/relayer.md) to deliver messages on the destination chain.
+For convenience, Hyperlane provides an API on the origin chain that can be used to pay [relayers](../../protocol/agents/relayer.md) to deliver messages on the destination chain.
 
 {% hint style="danger" %}
-Users are **not currently required** to pay relaying fees but eventually this will be necessary for the economic sustainability of the protocol.
+During Mainnet Alpha users will **not be required** to pay relaying fees but eventually will be necessary for the economic sustainability of the protocol.
 {% endhint %}
 
 ### Interface
@@ -54,4 +54,4 @@ IInterchainGasPaymaster(ethereumGasPaymaster).payGasFor{
 
 ### Calculating Gas Payments
 
-See [gas.md](../building-applications/nodejs-sdk/gas.md "mention") to learn how to use the Abacus SDK to calculate the correct payment for a message.
+See [gas.md](../building-applications/nodejs-sdk/gas.md "mention") to learn how to use the Hyperlane SDK to calculate the correct payment for a message.

@@ -5,7 +5,7 @@ description: A partial specification of the staking contracts
 # Staking
 
 {% hint style="info" %}
-Note: The Abacus protocol is still under development. This documentation reflects the latest Abacus protocol design.
+Note: The Hyperlane protocol is still under development. This documentation reflects the latest Hyperlane protocol design.
 
 For the latest on what's been implemented and deployed to testnet(s) and mainnet(s), please take a look at the [roadmap](../../../resources/roadmap.md).
 {% endhint %}

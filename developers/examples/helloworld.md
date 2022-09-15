@@ -1,10 +1,10 @@
 ---
-description: The skeleton of an Abacus-connected contract and app
+description: The skeleton of an Hyperlane-connected contract and app
 ---
 
 # HelloWorld
 
-The [abacus-app-template repo](https://github.com/abacus-network/abacus-app-template) shows the basic skeleton of an Abacus app.
+The [abacus-app-template repo](https://github.com/abacus-network/abacus-app-template) shows the basic skeleton of an Hyperlane app.
 
 ### Contract
 
