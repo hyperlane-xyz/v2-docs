@@ -48,7 +48,7 @@ Call swapCall = Call({
 
 ### Sending
 
-Perform a Uniswap V3 swap on Ethereum from an Interchain Account . The Interchain Account must satisfy any requirements the recieving contract has on `msg.sender`, such as token allowances for swapping.
+Perform a Uniswap V3 swap on Ethereum via an Interchain Account from a controlling account on another chain. The Interchain Account must satisfy any requirements the recieving contract has on `msg.sender`, such as token allowances for swapping.
 
 ```solidity
 uint32 constant ethereumDomain = 0x657468;
