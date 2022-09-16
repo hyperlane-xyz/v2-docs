@@ -89,6 +89,19 @@ description: Hyperlane core contract addresses
 | Optimism  | `0xd83A4F747fE80Ed98839e05079B1B7Fe037b1638` | [optimism:0xd83A...](https://optimistic.etherscan.io/address/0xd83A4F747fE80Ed98839e05079B1B7Fe037b1638) |
 | Ethereum  | `0xeA87ae93Fa0019a82A727bfd3eBd1cFCa8f64f1D` | [ethereum:0xeA87...](https://etherscan.io/address/0xeA87ae93Fa0019a82A727bfd3eBd1cFCa8f64f1D)            |
 
+### InterchainAccountRouter
+
+| Network   | Address                                      | Explorer                                                                                                  |
+| --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Bsc       | `0x1dbb057c50820b73A5450B5a0cADf5C5cc4b362E` | [bsc:0x1dbb...](https://bscscan.com//address/0x1dbb057c50820b73A5450B5a0cADf5C5cc4b362E)                  |
+| Avalanche | `0x1dbb057c50820b73A5450B5a0cADf5C5cc4b362E` | [avalanche:0x1dbb...](https://snowtrace.io/address/0x1dbb057c50820b73A5450B5a0cADf5C5cc4b362E)            |
+| Polygon   | `0x1dbb057c50820b73A5450B5a0cADf5C5cc4b362E` | [polygon:0x1dbb...](https://polygonscan.com/address/0x1dbb057c50820b73A5450B5a0cADf5C5cc4b362E)           |
+| Celo      | `0x1dbb057c50820b73A5450B5a0cADf5C5cc4b362E` | [celo:0x1dbb...](https://celoscan.io/address/0x1dbb057c50820b73A5450B5a0cADf5C5cc4b362E)                  |
+| Arbitrum  | `0x1dbb057c50820b73A5450B5a0cADf5C5cc4b362E` | [arbitrum:0x1dbb...](https://arbiscan.io//address/0x1dbb057c50820b73A5450B5a0cADf5C5cc4b362E)             |
+| Optimism  | `0x1dbb057c50820b73A5450B5a0cADf5C5cc4b362E` | [optimism:0x1dbb...](https://optimistic.etherscan.io//address/0x1dbb057c50820b73A5450B5a0cADf5C5cc4b362E) |
+| Ethereum  | `0x1dbb057c50820b73A5450B5a0cADf5C5cc4b362E` | [ethereum:0x1dbb...](https://etherscan.io/address/0x1dbb057c50820b73A5450B5a0cADf5C5cc4b362E)             |
+
+
 ## Testnet2
 
 ### Outbox
@@ -164,12 +177,23 @@ description: Hyperlane core contract addresses
 
 ### AbacusConnectionManager
 
-| Network         | Address                                      | Explorer                                                                                                                |
-| --------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Alfajores       | `0xc41169650335Ad274157Ea5116Cdf227430A68a3` | [alfajores:0xc411...](https://alfajores-blockscout.celo-testnet.org/address/0xc41169650335Ad274157Ea5116Cdf227430A68a3) |
-| Kovan           | `0xfA1fBF362144ae1bEf2E33409948dA1FB812bb41` | [kovan:0xfA1f...](https://kovan.etherscan.io/address/0xfA1fBF362144ae1bEf2E33409948dA1FB812bb41)                        |
-| Fuji            | `0x33AbaF6708be03Bdf0595DA0745A7111b01dB8c7` | [fuji:0x33Ab...](https://testnet.snowtrace.io/address/0x33AbaF6708be03Bdf0595DA0745A7111b01dB8c7)                       |
-| Mumbai          | `0xb636B2c65A75d41F0dBe98fB33eb563d245a241a` | [mumbai:0xb636...](https://mumbai.polygonscan.com/address/0xb636B2c65A75d41F0dBe98fB33eb563d245a241a)                   |
-| Bsctestnet      | `0xe403E16db1f5997bC62Dc611A8d42836364A7f01` | [bsctestnet:0xe403...](https://testnet.bscscan.com/address/0xe403E16db1f5997bC62Dc611A8d42836364A7f01)                  |
-| Arbitrumrinkeby | `0xFb55597F07417b08195Ba674f4dd58aeC9B89FBB` | [arbitrumrinkeby:0xFb55...](https://testnet.arbiscan.io/address/0xFb55597F07417b08195Ba674f4dd58aeC9B89FBB)             |
-| Optimismkovan   | `0x740bEd6E4eEc7c57a2818177Fba3f9E896D5DE1c` | [optimismkovan:0x740b...](https://kovan-optimistic.etherscan.io/address/0x740bEd6E4eEc7c57a2818177Fba3f9E896D5DE1c)     |
+| Network         | Address                                      | Explorer                                                                                                                 |
+| --------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Alfajores       | `0xc41169650335Ad274157Ea5116Cdf227430A68a3` | [alfajores:0xc411...](https://alfajores-blockscout.celo-testnet.org//address/0xc41169650335Ad274157Ea5116Cdf227430A68a3) |
+| Kovan           | `0xfA1fBF362144ae1bEf2E33409948dA1FB812bb41` | [kovan:0xfA1f...](https://kovan.etherscan.io//address/0xfA1fBF362144ae1bEf2E33409948dA1FB812bb41)                        |
+| Fuji            | `0x33AbaF6708be03Bdf0595DA0745A7111b01dB8c7` | [fuji:0x33Ab...](https://testnet.snowtrace.io//address/0x33AbaF6708be03Bdf0595DA0745A7111b01dB8c7)                       |
+| Mumbai          | `0xb636B2c65A75d41F0dBe98fB33eb563d245a241a` | [mumbai:0xb636...](https://mumbai.polygonscan.com//address/0xb636B2c65A75d41F0dBe98fB33eb563d245a241a)                   |
+| Bsctestnet      | `0xe403E16db1f5997bC62Dc611A8d42836364A7f01` | [bsctestnet:0xe403...](https://testnet.bscscan.com//address/0xe403E16db1f5997bC62Dc611A8d42836364A7f01)                  |
+| Arbitrumrinkeby | `0xFb55597F07417b08195Ba674f4dd58aeC9B89FBB` | [arbitrumrinkeby:0xFb55...](https://testnet.arbiscan.io//address/0xFb55597F07417b08195Ba674f4dd58aeC9B89FBB)             |
+| Optimismkovan   | `0x740bEd6E4eEc7c57a2818177Fba3f9E896D5DE1c` | [optimismkovan:0x740b...](https://kovan-optimistic.etherscan.io//address/0x740bEd6E4eEc7c57a2818177Fba3f9E896D5DE1c)     |
+
+### InterchainAccountRouter
+
+| Network         | Address                                      | Explorer                                                                                                                 |
+| --------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Alfajores       | `0xd384D44Dc07c366C18c682704FEbd2bd0a15C143` | [alfajores:0xd384...](https://alfajores-blockscout.celo-testnet.org//address/0xd384D44Dc07c366C18c682704FEbd2bd0a15C143) |
+| Kovan           | `0xd384D44Dc07c366C18c682704FEbd2bd0a15C143` | [kovan:0xd384...](https://kovan.etherscan.io//address/0xd384D44Dc07c366C18c682704FEbd2bd0a15C143)                        |
+| Fuji            | `0xd384D44Dc07c366C18c682704FEbd2bd0a15C143` | [fuji:0xd384...](https://testnet.snowtrace.io//address/0xd384D44Dc07c366C18c682704FEbd2bd0a15C143)                       |
+| Bsctestnet      | `0xd384D44Dc07c366C18c682704FEbd2bd0a15C143` | [bsctestnet:0xd384...](https://testnet.bscscan.com//address/0xd384D44Dc07c366C18c682704FEbd2bd0a15C143)                  |
+| Arbitrumrinkeby | `0xd384D44Dc07c366C18c682704FEbd2bd0a15C143` | [arbitrumrinkeby:0xd384...](https://testnet.arbiscan.io//address/0xd384D44Dc07c366C18c682704FEbd2bd0a15C143)             |
+| Optimismkovan   | `0xd384D44Dc07c366C18c682704FEbd2bd0a15C143` | [optimismkovan:0xd384...](https://kovan-optimistic.etherscan.io//address/0xd384D44Dc07c366C18c682704FEbd2bd0a15C143)     |
