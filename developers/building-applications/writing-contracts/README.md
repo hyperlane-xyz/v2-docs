@@ -8,7 +8,7 @@ The solidity SDK ([`@abacus-network/app`](https://www.npmjs.com/package/@abacus-
 
 ### [`AbacusConnectionClient`](abacusconnectionclient.md)&#x20;
 
-A mix-in that your contract can inherit from when integrating with Abacus.
+A mix-in that your contract can inherit from when integrating with Hyperlane.
 
 ### [`AbacusConnectionManager`](abacusconnectionmanager.md)&#x20;
 
@@ -17,3 +17,5 @@ A contract that manages the connection between your `AbacusConnectionClient` and
 ### [`Router`](router.md)&#x20;
 
 A mix-in contract, which implements a recommended pattern for interchain applications. Contracts can be written once and then deployed across many chains.
+
+_Note: Abacus is the former name of the Hyperlane protocol. The repo, ACM, and ACC will soon be renamed._

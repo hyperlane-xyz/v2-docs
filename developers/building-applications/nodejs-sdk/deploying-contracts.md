@@ -4,7 +4,9 @@ description: Managing multi-chain contract deployments
 
 # Deployment
 
-`AbacusDeployer` helps manage the deployment of contracts across multiple chains. Abacus apps should extend a deployer to specifiy the needed types and implement any needed logic for deployment of their contracts.&#x20;
+_Note: Abacus is the former name of the Hyperlane protocol. The repo and deployers will soon be renamed._
+
+`AbacusDeployer` helps manage the deployment of contracts across multiple chains. Hyperlane apps should extend a deployer to specifiy the needed types and implement any needed logic for deployment of their contracts.&#x20;
 
 ### Implement
 
@@ -52,5 +54,5 @@ const contracts = await myDeployer.deploy();
 In scripts that calls `deploy`, consider persisting deployment artifacts as they will be  important for future use of your application. This includes addresses, compiler options, and contract constructor arguments.
 
 {% hint style="info" %}
-For an example deployment script, see the [Abacus Hello World](https://github.com/abacus-network/abacus-app-template/blob/main/src/scripts/deploy.ts) app.
+For an example deployment script, see the [Hyperlane Hello World](https://github.com/abacus-network/abacus-app-template/blob/main/src/scripts/deploy.ts) app.
 {% endhint %}

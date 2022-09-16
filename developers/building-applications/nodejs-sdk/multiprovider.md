@@ -1,10 +1,12 @@
 ---
-description: Manage RPC providers for Abacus supported chains in one place
+description: Manage RPC providers for Hyperlane supported chains in one place
 ---
 
 # RPC Providers
 
-`MultiProvider` is a utility used throughout the Abacus Application SDK. In essence, it is a mapping that resolves a chain namespace to a configured node (JSON RPC) provider.
+_Note: Abacus is the former name of the Hyperlane protocol. The repo, ACM, and ACC will soon be renamed._
+
+`MultiProvider` is a utility used throughout the Hyperlane Application SDK. In essence, it is a mapping that resolves a chain namespace to a configured node (JSON RPC) provider.
 
 ### Configure
 

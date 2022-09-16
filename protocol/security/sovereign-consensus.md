@@ -1,35 +1,57 @@
 ---
-description: Local security provided by application-specific validators
+description: Configurable interchain security
 ---
 
 # Sovereign consensus
 
-Sovereign consensus gives applications the _option_ to specify their own validator sets that operate in parallel with the global set.
+Sovereign consensus allows applications to configure and choose from a selection of **Interchain Security Modules**, smart contracts that define the security model for an application.
 
-Applications can leverage the reputation of known and incentive-aligned actors by allowing them to participate as [validators](../agents/validators.md) in sovereign consensus.
+Applications can use sovereign consensus to tune security models and trust assumptions to best fit their needs. A heterogenous ecosystem of interchain security models allows for fault isolation and maximizes Hyperlane's decentralization.
 
-In order for a message to be delivered to an application, a quorum of both the global and sovereign validator sets must sign a merkle root that contains that message. This ensures that neither validator set alone is able to falsify messages.
+Sovereign consensus is entirely optional, and[`Inboxes`](../messaging/inbox.md) will default to a module that leverages the economic security provided by [proof-of-stake](proof-of-stake.md).
 
-While we expect the security of the Abacus validator set to be sufficient for most applications, the [additional layer](https://en.wikipedia.org/wiki/Swiss\_cheese\_model) of sovereign consensus allows applications to make explicit the implicit trust assumptions that underpin most decentralized applications.
-
-Applications can add sovereign validators by calling `Inbox.enrollSovereignValidator()`.
+Applications can opt into sovereign consensus by implementing the `interchainSecurityModule()` interface, which returns the address of the ISM being used by the application.
 
 ```solidity
+interface UsingSovereignConsensus {
+  function interchainSecurityModule() external view returns (address);
+} 
+```
+
+This model allows for varying levels of customization. Developers that want minimal customization can use the default ISM or point to an already deployed contract. Developers that want more control over security can deploy and configure their own ISM, or even write one from scratch.
+
+### Interchain security modules
+
+Interchain security modules (ISMs) are smart contracts that define the security model for an application.
+
+ISMs must implement the `accept()` interface, which gets called by the `Inbox` before delivering a message. If `accept()` does not return true, the transaction will revert.
+
+```solidity
+interface IInterchainSecurityModule {
 /**
-  * @notice Adds a public key to msg.sender's sovereign validator set.
+  * @notice Validates whether or not to accept a message.
   * @param _root The merkle root that `_message` was proved against.
-  * @param _origin The chain ID from which the message was sent. 
-  * @param _sender The address from which the message was sent.
-  * @param _message The contents of the message.
-  * @param _sovereignData Additional data provided by the caller,
-  * e.g. guardian signatures on `_root`
+  * @param _index The number of messages in the merkle tree.
+  * @param _sovereignData Arbitrary data consumed by the ISM.
+  * Typically validator signatures. 
+  * @param _message The message to accept or reject.
   * @return Returns true iff the message should be accepted.
   */
-function enrollSovereignValidator(
-  bytes32 _root,
-  uint32 _origin,
-  bytes32 _sender,
-  bytes memory _message,
-  bytes memory _sovereignData
-) external view returns (bool valid);
+  function accept(
+    bytes32 _root,
+    uint256 _index,
+    bytes calldata _sovereignData,
+    bytes calldata _message
+  ) external returns (bool);
+}
 ```
+
+### Examples
+
+A few types of ISMs are described below for illustrative purposes. Eventually, we plan to deploy pre-configured instances of each of these that developers can choose from. Alternatively, developers can deploy and configure their own ISM instances.
+
+**Multisig:** A simple t-of-n security model. A proof-of-stake adapter contract could be used to vary the membership to reflect the Hyperlane validators that provide the most economic security.
+
+**Optimistic:** A model pioneered by [Optics](https://docs.celo.org/protocol/bridge/optics) that prioritizes safety over liveness, optimistic ISMs encode a fraud window during which 1-of-n parties can halt the system.
+
+**Dynamic:** ISMs that vary their configuration (or underlying security model) over time based on message content or application state.

@@ -1,5 +1,7 @@
 # NodeJS SDK
 
+_Note: Abacus is the former name of the Hyperlane protocol. The repos and SDK will soon be renamed._
+
 The NodeJS SDK ([`@abacus-network/sdk`](https://www.npmjs.com/package/@abacus-network/sdk)) contains everything you need to productionize your interchain app on the web, including:
 
 ### [RPC Provider Management](./#multiprovider)
@@ -12,7 +14,7 @@ Facilitate deploying your contract(s) to multiple chains. This includes utilitie
 
 ### [Interchain Gas Estimation](./#gas-estimation-and-payment)
 
-Abacus allows users to pay for message processing on the destination chain using tokens from the origin chain. Use the `InterchainGasCalculator` utility for gas estimation of cross-chain messages.
+Hyperlane allows users to pay for message processing on the destination chain using tokens from the origin chain. Use the `InterchainGasCalculator` utility for gas estimation of cross-chain messages.
 
 ### [App Abstraction](./#undefined)
 

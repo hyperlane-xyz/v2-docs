@@ -4,7 +4,9 @@ description: Paying for message costs incurred on the destination chain.
 
 # Interchain Gas Estimation
 
-Applications can use the `InterchainGasCalculator` in the Abacus SDK to estimate how many [origin chain native tokens to pay](../../messaging-api/gas.md) when dispatching a message. See the example below illustrating how to estimate and pay interchain gas payments.
+_Note: Abacus is the former name of the Hyperlane protocol._&#x20;
+
+Applications can use the `InterchainGasCalculator` in the Hyperlane SDK to estimate how many [origin chain native tokens to pay](../../messaging-api/gas.md) when dispatching a message. See the example below illustrating how to estimate and pay interchain gas payments.
 
 Be sure to use `@abacus-network/sdk` version `0.4.1` or greater for the calculator to work correctly.
 

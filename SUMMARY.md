@@ -1,6 +1,6 @@
 # Table of contents
 
-* [What is Abacus?](README.md)
+* [What is Hyperlane?](README.md)
 
 ## Developers
 
@@ -43,11 +43,7 @@
   * [Inbox](protocol/messaging/inbox.md)
 * [Security](protocol/security/README.md)
   * [Proof of stake](protocol/security/proof-of-stake.md)
-    * [Staking](protocol/security/proof-of-stake/staking.md)
-    * [Validators](protocol/security/proof-of-stake/validators.md)
-    * [Economics](protocol/security/proof-of-stake/economics.md)
   * [Sovereign consensus](protocol/security/sovereign-consensus.md)
-* [Governance](protocol/governance.md)
 * [Agents](protocol/agents/README.md)
   * [Validators](protocol/agents/validators.md)
   * [Relayers](protocol/agents/relayer.md)
