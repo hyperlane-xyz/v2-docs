@@ -12,25 +12,28 @@ There are several `Inboxes` on each Hyperlane-supported chain, one for each remo
 
 #### Process
 
-[Relayers](../agents/relayer.md) deliver messages to their recipients by calling `InboxValidatorManager.process()`. This function takes as parameters the signed merkle root, the message, and a merkle proof of that message against the signed root.
+[Relayers](../agents/relayer.md) deliver messages to their recipients by calling `Inbox.process()`. This function takes as parameters the message to deliver, a merkle proof of that message, and an arbitrary bytes array, to be consumed by the recipient's [interchain security module](../security/sovereign-consensus.md) (ISM).
 
-The `InboxValidatorManager` verifies that a quorum of validators signed the root and then calls `Inbox.process` which verifies the merkle proof before delivering the message to the recipient by calling `recipient.handle()`.
+The `Inbox` checks for acceptance by the recipients ISM and verifies the merkle proof before delivering the message to the recipient by calling `recipient.handle()`.
 
 ```solidity
 /**
-  * @notice Attempts to process the provided formatted `message`. Verifies
-  * the aggregated signature on the checkpoint, and the merkle proof of
-  * `message` against it.
-  * @dev Reverts if fails to verify the signature or merkle proof.
-  * @param _checkpoint The signed merkle root and leaf index.
-  * @param _signature An aggregated signature on the checkpoint.
-  * @param _proof A merkle proof of `message` against `checkpoint.root`.
+  * @notice Attempts to process the provided formatted `message`. Checks
+  * that the recipient's ISM will accept the messages, verifies the merkle
+  * proof, and delivers the message to the recipient.
+  * @param _root The merkle root that `_message` was proved against.
+  * @param _index The number of messages in the merkle tree.
+  * @param _sovereignData Arbitrary data to pass to the recipient's ISM.
+  * Typically a list of validator signatures.
   * @param _message Formatted message (refer to Mailbox.sol Message library).
+  * @param _proof A merkle proof of `message` against `_root`.
   */
-function process(
-  Checkpoint calldata _checkpoint,
-  Signature calldata _signature,
-  MerkleProof calldata _proof,
-  bytes calldata _message
-) external;
+  function process(
+    bytes32 _root,
+    uint256 _index,
+    bytes calldata _sovereignData,
+    bytes calldata _message,
+    bytes32[32] calldata _proof,
+    uint256 _leafIndex
+  ) external;
 ```

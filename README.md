@@ -12,6 +12,8 @@ Check out the [getting started guide](developers/getting-started.md) for ABIs, c
 
 ### Want to learn more about the protocol?
 
-Take a look at the [protocol docs](protocol/overview.md) to understand the Hyperlane protocol architecture and security model.
+Take a look at the [protocol docs](protocol/overview.md) to understand the Hyperlane protocol architecture and [security model](protocol/security/).
 
-_**A quick note to prevent confusion**_: Hyperlane was originally named Abacus. For the time being you may encounter the name Abacus still referenced throughout the docs, github repos, and smart contracts.&#x20;
+{% hint style="warning" %}
+Hyperlane was originally named Abacus. For the time being you may encounter the name Abacus still referenced throughout the docs, github repos, and smart contracts.&#x20;
+{% endhint %}

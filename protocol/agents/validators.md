@@ -12,7 +12,7 @@ Validators read the current merkle root by calling `Outbox.latestCheckpoint()`. 
 
 ```solidity
 /**
-  * @notice Returns the latest checkpoint for the Validators to sign.
+  * @notice Returns the latest checkpoint for validators to sign.
   * @return root Latest checkpointed root
   * @return index Latest checkpointed index
   */
