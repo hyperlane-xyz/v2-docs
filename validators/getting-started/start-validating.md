@@ -10,7 +10,9 @@ description: Run your validator
 
 ### Monitoring and alerting
 
-Validators expose metrics on the port number specified in the environment variable `ABC_BASE_METRICS`. Port `9090` is recommended, though any valid port can be chosen. A Grafana dashboard that can be imported is coming soon.&#x20;
+Validators expose metrics on the port number specified in the environment variable `ABC_BASE_METRICS`. Port `9090` is recommended, though any valid port can be chosen.
+
+We also provide a mostly-ready-to-go grafana dashboard to get you started, you can find the source and instructions for importing it under [tools/grafana](https://github.com/abacus-network/abacus-monorepo/tree/main/tools/grafana).
 
 ### Running multiple validators
 
