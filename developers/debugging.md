@@ -30,6 +30,6 @@ Users are **not currently required** to pay relaying fees but eventually this wi
 
 An underfunded message implies the [gas paid](messaging-api/gas.md) for message relay is insufficient. The relayer registered on the gas paymaster can [`claim`](https://github.com/abacus-network/abacus-monorepo/blob/main/solidity/core/contracts/InterchainGasPaymaster.sol#L62) these fees to compensate for gas costs incurred on the destination chain. The relayer client uses the [`eth_estimateGas`](https://ethereum.github.io/execution-apis/api-documentation/)RPC on the destination chain to determine the absolute cost of relaying a message, uses the [CoinGecko API](https://www.coingecko.com/en/api) to calculate the exchange rate between the two chains native assets, and will only pay for message processing if the message relay was funded appropriately on the source chain's paymaster (within some acceptable price deviation).
 
-### Repl.it Debugger
+### Transaction Debugger
 
-You can use [this repl.it snippet](https://abacus-message-debugger.namchu2.repl.co/) to debug message delivery. It will check for possible issues as listed above.
+You can use the [transaction debugger](https://explorer.hyperlane.xyz/debugger) in the Hyperlane Explorer to debug message delivery. It will check for common issues like those described above. Be sure to set the explorer to the correct environment (e.g. Mainnet, Testnet) or your messages may not be found.
