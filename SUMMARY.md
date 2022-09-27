@@ -13,7 +13,7 @@
   * [Gas](developers/messaging-api/gas.md)
 * [Accounts API](developers/accounts-api/send.md)
 * [Domain identifiers](developers/domains.md)
-* [Observability](developers/observability.md)
+* [Where is My Message?](developers/observability.md)
 * [Debugging](developers/debugging.md)
 * [App framework](developers/building-applications/README.md)
   * [Solidity SDK](developers/building-applications/writing-contracts/README.md)
