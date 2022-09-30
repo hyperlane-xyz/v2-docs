@@ -12,7 +12,7 @@ Note: The Hyperlane protocol is still under development. This documentation refl
 For the latest on what's been implemented and deployed to testnet(s) and mainnet(s), please take a look at the [roadmap](../resources/roadmap.md).
 {% endhint %}
 
-Hyperlane is a generalized interchain messaging protocol that empowers developers to send messages from one blockchain to another.
+Hyperlane is a generalized interchain messaging protocol that empowers developers to send messages from one blockchain to another. Messages can contain any arbitrary bytes, and are not limited to text. They can be used to transfer any information between blockchains. They can allow you to move around value, execute function calls, and many other things that allow for the creation of interchain applications, apps that can be accessed by users on any blockchain.
 
 Hyperlane provides an on-chain [API](messaging/) to send and receive interchain messages.
 

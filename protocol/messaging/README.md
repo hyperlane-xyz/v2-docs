@@ -4,9 +4,11 @@ description: Send and receive interchain messages
 
 # Message passing
 
-The main purpose of Hyperlane is to facilitate passing messages from an address on one chain to an address on another chain.
+The main purpose of Hyperlane is to empower developers to build applications that are connected across different blockchains, to build natively interchain applications that can serve users anywhere regardless of the blockchain they're on. To do so, we must have a way to pass information between blockchains in a secure manner. Message passing capabilities are critical to achieving this purpose.
 
-Applications send and receive interchain messages using the [`Outbox`](outbox.md) and [`Inbox`](inbox.md) smart contracts.&#x20;
+So how does Hyperlane do it? Applications send and receive interchain messages using the [`Outbox`](outbox.md) and [`Inbox`](inbox.md) smart contracts. These mailbox contracts are deployed on every chain Hyperlane supports.
+
+The network of mailboxes facilitates the connective tissue between blockchains that developers leverage to create interchain applications, and add interchain functionality to their existing applications. If you'd like to learn more about them, read on!&#x20;
 
 ## Mailboxes
 

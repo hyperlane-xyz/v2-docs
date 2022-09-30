@@ -4,10 +4,10 @@ description: The off-chain actors that power the Hyperlane protocol
 
 # Agents
 
-The Hyperlane protocol is operated by a set of off-chain agents.
+Like most intricate protocols, the Hyperlane protocol is operated by a set of off-chain agents. These agents are critical for the overall function of the network. In its quest for maximal decentralization, Hyperlane seeks to keep these roles permissionless, so that anyone willing and able can take an active role in operating the protocol.
 
-For convenience, Hyperlane implements these agents as set of Rust binaries.
+For convenience, Hyperlane implements these agents as a set of Rust binaries.
 
 1. [Validators](validators.md) sign`Outbox` merkle roots and and make their signatures available to relayers.
 2. [Relayers](relayer.md) aggregate validator signatures and submit merkle proofs to `Inboxes`, delivering interchain messages to their recipients.
-3. Watchtowers observe the network for validator fraud. If detected, watchtowers submit evidence to the source chain, slashing the fraudulent validator(s).
+3. [Watchtowers](processor.md) observe the network for validator fraud. If detected, watchtowers submit evidence to the source chain, slashing the fraudulent validator(s).

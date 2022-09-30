@@ -4,7 +4,9 @@ description: The protocols that secure the messaging API
 
 # Security
 
-The Hyperlane messaging API is secured by two [complementary](https://en.wikipedia.org/wiki/Defense\_in\_depth\_\(computing\)) protocols.
+Security is mission critical for anyone building in Crypto, and with Hyperlane the goal is to provide developers with peace of mind when they use the platform. If you're a developer using Hyperlane, you shouldn't have to worry about whether or not the interoperability protocol you chose is secure, rather you should be free to focus on your application.&#x20;
+
+So how does Hyperlane maintain its security? The Hyperlane messaging API is secured by two [complementary](https://en.wikipedia.org/wiki/Defense\_in\_depth\_\(computing\)) protocols.
 
 ### Proof of stake
 
