@@ -32,12 +32,12 @@ The relayer is configurable with a whitelist that allows operators to specify wh
 
 The alpha version of Hyperlane is deployed to the following mainnets (with testnets in parentheses):
 
-* Arbitrum (Rinkeby)
+* Arbitrum (Goerli)
 * Avalanche (Fuji)
 * BNB (BSC testnet)
 * Celo (Alfajores)
-* Ethereum (Kovan)
-* Optimism (Kovan)
+* Ethereum (Goerli)
+* Optimism (Goerli)
 * Polygon (Mumbai)
 
 ## Hyperlane Beta
