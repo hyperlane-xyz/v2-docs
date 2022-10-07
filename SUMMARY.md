@@ -13,6 +13,8 @@
   * [Gas](developers/messaging-api/gas.md)
 * [Accounts API](developers/send/README.md)
   * [Quickstart Tutorial](developers/send/quickstart-tutorial.md)
+* [Queries API](developers/query/README.md)
+  <!-- * [Quickstart Tutorial](developers/query/quickstart-tutorial.md) -->
 * [Domain identifiers](developers/domains.md)
 * [Where is my message?](developers/observability.md)
 * [App framework](developers/building-applications/README.md)

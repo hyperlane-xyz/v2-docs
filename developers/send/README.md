@@ -43,6 +43,16 @@ You can find the address of the `InterchainAccountRouter` contract on each chain
 Calls can be easily encoded with the `abi.encodeCall` function.
 
 ```solidity
+interface IUniswapV3Pool {
+    function swap(
+        address recipient,
+        bool zeroForOne,
+        int256 amountSpecified,
+        uint160 sqrtPriceLimitX96,
+        bytes calldata data
+    ) external returns (int256 amount0, int256 amount1);
+}
+
 IUniswapV3Pool pool = IUniswapV3Pool(...);
 Call swapCall = Call({
     to: address(pool),
