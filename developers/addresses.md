@@ -158,3 +158,14 @@ description: Hyperlane core contract addresses
 | Bsctestnet    | `0xe403E16db1f5997bC62Dc611A8d42836364A7f01` | [bsctestnet:0xe403...](https://testnet.bscscan.com//address/0xe403E16db1f5997bC62Dc611A8d42836364A7f01)                  |
 | Goerli        | `0x01812D60958798695391dacF092BAc4a715B1718` | [goerli:0x0181...](https://goerli.etherscan.io//address/0x01812D60958798695391dacF092BAc4a715B1718)                      |
 | Moonbasealpha | `0xD356C996277eFb7f75Ee8bd61b31cC781A12F54f` | [moonbasealpha:0xD356...](https://moonbase.moonscan.io//address/0xD356C996277eFb7f75Ee8bd61b31cC781A12F54f)              |
+
+### InterchainQueryRouter
+
+| Network       | Address                                      | Explorer                                                                                                                 |
+| ------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Alfajores     | `0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38` | [alfajores:0xd090...](https://alfajores-blockscout.celo-testnet.org//address/0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38) |
+| Fuji          | `0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38` | [fuji:0xd090...](https://testnet.snowtrace.io//address/0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38)                       |
+| Mumbai        | `0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38` | [mumbai:0xd090...](https://mumbai.polygonscan.com//address/0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38)                   |
+| Bsctestnet    | `0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38` | [bsctestnet:0xd090...](https://testnet.bscscan.com//address/0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38)                  |
+| Goerli        | `0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38` | [goerli:0xd090...](https://goerli.etherscan.io//address/0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38)                      |
+| Moonbasealpha | `0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38` | [moonbasealpha:0xd090...](https://moonbase.moonscan.io//address/0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38)              |
