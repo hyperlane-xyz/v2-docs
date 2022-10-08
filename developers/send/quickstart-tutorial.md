@@ -1,6 +1,6 @@
 # Quickstart Tutorial
 
-This tutorial demonstrates how to make a simple call via Interchain Accounts to a pre-deployed [`TestRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/core/contracts/test/TestRecipient.sol) contract on a remote destination chain.
+This tutorial demonstrates how to make a simple call via Interchain Accounts to a pre-deployed [`TestRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/core/contracts/test/TestRecipient.sol) contract on a remote destination chain. You can also check out the [`hyperlane-quickstart`](https://github.com/hyperlane-xyz/hyperlane-quickstart) repo for running this out of the box.
 
 ### Inputs
 

@@ -4,7 +4,7 @@ description: Send your first interchain message in under 5 minutes
 
 # Quickstart Tutorial
 
-This tutorial demonstrates how to [send](send.md) a simple interchain message to a pre-deployed [`TestRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/core/contracts/test/TestRecipient.sol) contract.
+This tutorial demonstrates how to [send](send.md) a simple interchain message to a pre-deployed [`TestRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/core/contracts/test/TestRecipient.sol) contract. You can also check out the [`hyperlane-quickstart`](https://github.com/hyperlane-xyz/hyperlane-quickstart) repo for running this out of the box.
 
 {% hint style="warning" %}
 Note that this tutorial does not cover [paying for the cost of relaying the message to the destination chain](gas.md), which will eventually be required.
