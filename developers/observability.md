@@ -1,5 +1,5 @@
 ---
-description: Tips and tricks for observing and debugging interchain messages
+description: How can I see what happens once my messages are sent?
 ---
 
 # Where is my message?
@@ -7,12 +7,12 @@ description: Tips and tricks for observing and debugging interchain messages
 &#x20;This section shows you how to track interchain messages both manually as well as programmatically.
 
 {% hint style="info" %}
-A fully-featured interchain message explorer is **coming soon**! For now, use the methods below for message observability.
+A fully-featured interchain message explorer is **coming soon**! For now, use the methods below to observe your messages as they are routed to their destination.
 {% endhint %}
 
 ## Debugging a message manually
 
-You can the [Hyperlane Explorer Debugger](https://explorer.hyperlane.xyz/debugger) to determine the delivery status of your message. Just paste in the transaction hash of the message send. Make sure you select the correct environment in the select box in the top right.
+You use can the [Hyperlane Explorer Debugger](https://explorer.hyperlane.xyz/debugger) to determine the delivery status of your message. Just paste in the transaction hash of the message send. Make sure you select the correct environment in the select box in the top right.
 
 <figure><img src="../.gitbook/assets/Screen Shot 2022-10-04 at 11.39.30 AM.png" alt=""><figcaption></figcaption></figure>
 
