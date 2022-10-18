@@ -17,6 +17,7 @@ description: Hyperlane core contract addresses
 | Arbitrum  | `0x0761b0827849abbf7b0cC09CE14e1C93D87f5004` | [arbitrum:0x0761...](https://arbiscan.io//address/0x0761b0827849abbf7b0cC09CE14e1C93D87f5004)             |
 | Optimism  | `0x0be2Ae2f6D02a3e0e00ECB57D3E1fCbb7f8F38F4` | [optimism:0x0be2...](https://optimistic.etherscan.io//address/0x0be2Ae2f6D02a3e0e00ECB57D3E1fCbb7f8F38F4) |
 | Ethereum  | `0x2f9DB5616fa3fAd1aB06cB2C906830BA63d135e3` | [ethereum:0x2f9D...](https://etherscan.io/address/0x2f9DB5616fa3fAd1aB06cB2C906830BA63d135e3)             |
+| Moonbeam  | `0xeA87ae93Fa0019a82A727bfd3eBd1cFCa8f64f1D` | [moonbeam:0xeA87...](https://moonbeam.moonscan.io//address/0xeA87ae93Fa0019a82A727bfd3eBd1cFCa8f64f1D)    |
 
 ### Inboxes
 
@@ -28,42 +29,56 @@ description: Hyperlane core contract addresses
 | Avalanche | Bsc       | `0x4B44e4305B42405382b7BeC717F64D0552a9D9Fe` | [avalanche:0x4B44...](https://snowtrace.io/address/0x4B44e4305B42405382b7BeC717F64D0552a9D9Fe)            |
 | Avalanche | Ethereum  | `0x0E3239277501d215e17a4d31c487F86a425E110B` | [avalanche:0x0E32...](https://snowtrace.io/address/0x0E3239277501d215e17a4d31c487F86a425E110B)            |
 | Avalanche | Arbitrum  | `0x552D41c0B5c774F529C956E7CC77d0e054D7aFa8` | [avalanche:0x552D...](https://snowtrace.io/address/0x552D41c0B5c774F529C956E7CC77d0e054D7aFa8)            |
+| Avalanche | Moonbeam  | `0x32af5Df81fEd5E26119F6640FBB13f3d63a94CDe` | [avalanche:0x32af...](https://snowtrace.io/address/0x32af5Df81fEd5E26119F6640FBB13f3d63a94CDe)            |
 | Bsc       | Avalanche | `0x182E8d7c5F1B06201b102123FC7dF0EaeB445a7B` | [bsc:0x182E...](https://bscscan.com//address/0x182E8d7c5F1B06201b102123FC7dF0EaeB445a7B)                  |
 | Bsc       | Polygon   | `0xaad207a0Fd7a4e3C927Ccc78ac8134baF586B852` | [bsc:0xaad2...](https://bscscan.com//address/0xaad207a0Fd7a4e3C927Ccc78ac8134baF586B852)                  |
 | Bsc       | Celo      | `0x66DC49405Ae2956f7E87FEAa9fE8f506C8987462` | [bsc:0x66DC...](https://bscscan.com//address/0x66DC49405Ae2956f7E87FEAa9fE8f506C8987462)                  |
 | Bsc       | Arbitrum  | `0x79b3D752cc9494eCB93800712471a7a62954C8AE` | [bsc:0x79b3...](https://bscscan.com//address/0x79b3D752cc9494eCB93800712471a7a62954C8AE)                  |
 | Bsc       | Optimism  | `0xA1ac41d8A663fd317cc3BD94C7de92dC4BA4a882` | [bsc:0xA1ac...](https://bscscan.com//address/0xA1ac41d8A663fd317cc3BD94C7de92dC4BA4a882)                  |
 | Bsc       | Ethereum  | `0xE0C452DDA7506f0F4dE5C8C1d383F7aD866eA4F0` | [bsc:0xE0C4...](https://bscscan.com//address/0xE0C452DDA7506f0F4dE5C8C1d383F7aD866eA4F0)                  |
+| Bsc       | Moonbeam  | `0x79e25126E1dAB135734e0261E8aB93674131fD2b` | [bsc:0x79e2...](https://bscscan.com//address/0x79e25126E1dAB135734e0261E8aB93674131fD2b)                  |
 | Polygon   | Bsc       | `0x9fA986ACB22953c504Fcf5985DFA476d481C3b1B` | [polygon:0x9fA9...](https://polygonscan.com/address/0x9fA986ACB22953c504Fcf5985DFA476d481C3b1B)           |
 | Polygon   | Avalanche | `0xA805695C20ED9F4ce9905cd1aFaE7877A81ec0d7` | [polygon:0xA805...](https://polygonscan.com/address/0xA805695C20ED9F4ce9905cd1aFaE7877A81ec0d7)           |
 | Polygon   | Celo      | `0x8358D8291e3bEDb04804975eEa0fe9fe0fAfB147` | [polygon:0x8358...](https://polygonscan.com/address/0x8358D8291e3bEDb04804975eEa0fe9fe0fAfB147)           |
 | Polygon   | Arbitrum  | `0x5060eCD5dFAD300A90592C04e504600A7cdcF70b` | [polygon:0x5060...](https://polygonscan.com/address/0x5060eCD5dFAD300A90592C04e504600A7cdcF70b)           |
 | Polygon   | Optimism  | `0xc22B646edf6c9A43d83fDBc8D5E1B3c6DAfACb83` | [polygon:0xc22B...](https://polygonscan.com/address/0xc22B646edf6c9A43d83fDBc8D5E1B3c6DAfACb83)           |
 | Polygon   | Ethereum  | `0x6A55822cf11f9fcBc4c75BC2638AfE8Eb942cAdd` | [polygon:0x6A55...](https://polygonscan.com/address/0x6A55822cf11f9fcBc4c75BC2638AfE8Eb942cAdd)           |
+| Polygon   | Moonbeam  | `0x6267Dbfc38f7Af897536563c15f07B89634cb656` | [polygon:0x6267...](https://polygonscan.com/address/0x6267Dbfc38f7Af897536563c15f07B89634cb656)           |
 | Celo      | Bsc       | `0xdB670e1a1e312BF17425b08cE55Bdf2cD8F8eD54` | [celo:0xdB67...](https://celoscan.io/address/0xdB670e1a1e312BF17425b08cE55Bdf2cD8F8eD54)                  |
 | Celo      | Avalanche | `0x97423A68BAe94b5De52d767a17aBCc54c157c0E5` | [celo:0x9742...](https://celoscan.io/address/0x97423A68BAe94b5De52d767a17aBCc54c157c0E5)                  |
 | Celo      | Polygon   | `0x086eF95a2F74582Ee30E7D698518a872fb18301f` | [celo:0x086e...](https://celoscan.io/address/0x086eF95a2F74582Ee30E7D698518a872fb18301f)                  |
 | Celo      | Arbitrum  | `0x4E1c88DD261BEe2941e6c1814597e30F53330428` | [celo:0x4E1c...](https://celoscan.io/address/0x4E1c88DD261BEe2941e6c1814597e30F53330428)                  |
 | Celo      | Optimism  | `0xF5165f115ba4E1Adc09f0EB392232D65F219806a` | [celo:0xF516...](https://celoscan.io/address/0xF5165f115ba4E1Adc09f0EB392232D65F219806a)                  |
 | Celo      | Ethereum  | `0x8105a095368f1a184CceA86cCe21318B5Ee5BE28` | [celo:0x8105...](https://celoscan.io/address/0x8105a095368f1a184CceA86cCe21318B5Ee5BE28)                  |
+| Celo      | Moonbeam  | `0xEb4ca142644172878Bee23E44C8BDae215E92430` | [celo:0xEb4c...](https://celoscan.io/address/0xEb4ca142644172878Bee23E44C8BDae215E92430)                  |
 | Arbitrum  | Bsc       | `0x3a867fCfFeC2B790970eeBDC9023E75B0a172aa7` | [arbitrum:0x3a86...](https://arbiscan.io//address/0x3a867fCfFeC2B790970eeBDC9023E75B0a172aa7)             |
 | Arbitrum  | Avalanche | `0x02d16BC51af6BfD153d67CA61754cF912E82C4d9` | [arbitrum:0x02d1...](https://arbiscan.io//address/0x02d16BC51af6BfD153d67CA61754cF912E82C4d9)             |
 | Arbitrum  | Polygon   | `0x14c3CEee8F431aE947364f43429a98EA89800238` | [arbitrum:0x14c3...](https://arbiscan.io//address/0x14c3CEee8F431aE947364f43429a98EA89800238)             |
 | Arbitrum  | Celo      | `0x4B44e4305B42405382b7BeC717F64D0552a9D9Fe` | [arbitrum:0x4B44...](https://arbiscan.io//address/0x4B44e4305B42405382b7BeC717F64D0552a9D9Fe)             |
 | Arbitrum  | Optimism  | `0x0E3239277501d215e17a4d31c487F86a425E110B` | [arbitrum:0x0E32...](https://arbiscan.io//address/0x0E3239277501d215e17a4d31c487F86a425E110B)             |
 | Arbitrum  | Ethereum  | `0x552D41c0B5c774F529C956E7CC77d0e054D7aFa8` | [arbitrum:0x552D...](https://arbiscan.io//address/0x552D41c0B5c774F529C956E7CC77d0e054D7aFa8)             |
+| Arbitrum  | Moonbeam  | `0x88AcaD5222Fbb66C23d0E9532FDd32e57C68a53F` | [arbitrum:0x88Ac...](https://arbiscan.io//address/0x88AcaD5222Fbb66C23d0E9532FDd32e57C68a53F)             |
 | Optimism  | Bsc       | `0x66DC49405Ae2956f7E87FEAa9fE8f506C8987462` | [optimism:0x66DC...](https://optimistic.etherscan.io//address/0x66DC49405Ae2956f7E87FEAa9fE8f506C8987462) |
 | Optimism  | Avalanche | `0x79b3D752cc9494eCB93800712471a7a62954C8AE` | [optimism:0x79b3...](https://optimistic.etherscan.io//address/0x79b3D752cc9494eCB93800712471a7a62954C8AE) |
 | Optimism  | Polygon   | `0xA1ac41d8A663fd317cc3BD94C7de92dC4BA4a882` | [optimism:0xA1ac...](https://optimistic.etherscan.io//address/0xA1ac41d8A663fd317cc3BD94C7de92dC4BA4a882) |
 | Optimism  | Celo      | `0xE0C452DDA7506f0F4dE5C8C1d383F7aD866eA4F0` | [optimism:0xE0C4...](https://optimistic.etherscan.io//address/0xE0C452DDA7506f0F4dE5C8C1d383F7aD866eA4F0) |
 | Optimism  | Arbitrum  | `0x2Fa570E83009eaEef3a1cbd496a9a30F05266634` | [optimism:0x2Fa5...](https://optimistic.etherscan.io//address/0x2Fa570E83009eaEef3a1cbd496a9a30F05266634) |
 | Optimism  | Ethereum  | `0xea820f9BCFD5E16a0dd42071EB61A29874Ad81A4` | [optimism:0xea82...](https://optimistic.etherscan.io//address/0xea820f9BCFD5E16a0dd42071EB61A29874Ad81A4) |
+| Optimism  | Moonbeam  | `0xCDaebcc592DA5c982B05E95039FF5f3467420223` | [optimism:0xCDae...](https://optimistic.etherscan.io//address/0xCDaebcc592DA5c982B05E95039FF5f3467420223) |
 | Ethereum  | Bsc       | `0x81a92A1a272cb09d7b4970b07548463dC7aE0cB7` | [ethereum:0x81a9...](https://etherscan.io/address/0x81a92A1a272cb09d7b4970b07548463dC7aE0cB7)             |
 | Ethereum  | Avalanche | `0x95Ad03405aC24c0bc247bdFDC113B01955A71761` | [ethereum:0x95Ad...](https://etherscan.io/address/0x95Ad03405aC24c0bc247bdFDC113B01955A71761)             |
 | Ethereum  | Polygon   | `0xF59557dfacDc5a1cb8A36Af43aA4819a6A891e88` | [ethereum:0xF595...](https://etherscan.io/address/0xF59557dfacDc5a1cb8A36Af43aA4819a6A891e88)             |
 | Ethereum  | Celo      | `0xCB5C99F908410add8241b558299fe9aadC06bA99` | [ethereum:0xCB5C...](https://etherscan.io/address/0xCB5C99F908410add8241b558299fe9aadC06bA99)             |
 | Ethereum  | Arbitrum  | `0x7082e975Fde8D85B0C56B4512b437efFb46F0a09` | [ethereum:0x7082...](https://etherscan.io/address/0x7082e975Fde8D85B0C56B4512b437efFb46F0a09)             |
 | Ethereum  | Optimism  | `0xF7af65596A16740b16CF755F3A43206C96285da0` | [ethereum:0xF7af...](https://etherscan.io/address/0xF7af65596A16740b16CF755F3A43206C96285da0)             |
+| Ethereum  | Moonbeam  | `0xdc47eDc036daaE45D3F019CCfD443Bf72fBD981c` | [ethereum:0xdc47...](https://etherscan.io/address/0xdc47eDc036daaE45D3F019CCfD443Bf72fBD981c)             |
+| Moonbeam  | Celo      | `0x02d16BC51af6BfD153d67CA61754cF912E82C4d9` | [moonbeam:0x02d1...](https://moonbeam.moonscan.io//address/0x02d16BC51af6BfD153d67CA61754cF912E82C4d9)    |
+| Moonbeam  | Ethereum  | `0x14c3CEee8F431aE947364f43429a98EA89800238` | [moonbeam:0x14c3...](https://moonbeam.moonscan.io//address/0x14c3CEee8F431aE947364f43429a98EA89800238)    |
+| Moonbeam  | Avalanche | `0x4B44e4305B42405382b7BeC717F64D0552a9D9Fe` | [moonbeam:0x4B44...](https://moonbeam.moonscan.io//address/0x4B44e4305B42405382b7BeC717F64D0552a9D9Fe)    |
+| Moonbeam  | Polygon   | `0x0E3239277501d215e17a4d31c487F86a425E110B` | [moonbeam:0x0E32...](https://moonbeam.moonscan.io//address/0x0E3239277501d215e17a4d31c487F86a425E110B)    |
+| Moonbeam  | Bsc       | `0x552D41c0B5c774F529C956E7CC77d0e054D7aFa8` | [moonbeam:0x552D...](https://moonbeam.moonscan.io//address/0x552D41c0B5c774F529C956E7CC77d0e054D7aFa8)    |
+| Moonbeam  | Arbitrum  | `0xCA41932888D323B3d99f5eA48F86D502055C0322` | [moonbeam:0xCA41...](https://moonbeam.moonscan.io//address/0xCA41932888D323B3d99f5eA48F86D502055C0322)    |
+| Moonbeam  | Optimism  | `0xF5739A4AF21346Aa937bF7fEB5d3B21c2d230138` | [moonbeam:0xF573...](https://moonbeam.moonscan.io//address/0xF5739A4AF21346Aa937bF7fEB5d3B21c2d230138)    |
 
 ### InterchainGasPaymaster
 
@@ -76,6 +91,7 @@ description: Hyperlane core contract addresses
 | Arbitrum  | `0x376aD181E8cd45eAd5403F78d5A871D08c3c4D77` | [arbitrum:0x376a...](https://arbiscan.io//address/0x376aD181E8cd45eAd5403F78d5A871D08c3c4D77)             |
 | Optimism  | `0xc5D6aCaafBCcEC6D7fD7d92F4509befce641c563` | [optimism:0xc5D6...](https://optimistic.etherscan.io//address/0xc5D6aCaafBCcEC6D7fD7d92F4509befce641c563) |
 | Ethereum  | `0x17E216fBb22dF4ef8A6640ae9Cb147C92710ac84` | [ethereum:0x17E2...](https://etherscan.io/address/0x17E216fBb22dF4ef8A6640ae9Cb147C92710ac84)             |
+| Moonbeam  | `0xEb9FcFDC9EfDC17c1EC5E1dc085B98485da213D6` | [moonbeam:0xEb9F...](https://moonbeam.moonscan.io//address/0xEb9FcFDC9EfDC17c1EC5E1dc085B98485da213D6)    |
 
 ### ConnectionManager
 
@@ -88,6 +104,7 @@ description: Hyperlane core contract addresses
 | Arbitrum  | `0x8b83fefd896fAa52057798f6426E9f0B080FCCcE` | [arbitrum:0x8b83...](https://arbiscan.io//address/0x8b83fefd896fAa52057798f6426E9f0B080FCCcE)             |
 | Optimism  | `0xd83A4F747fE80Ed98839e05079B1B7Fe037b1638` | [optimism:0xd83A...](https://optimistic.etherscan.io//address/0xd83A4F747fE80Ed98839e05079B1B7Fe037b1638) |
 | Ethereum  | `0xeA87ae93Fa0019a82A727bfd3eBd1cFCa8f64f1D` | [ethereum:0xeA87...](https://etherscan.io/address/0xeA87ae93Fa0019a82A727bfd3eBd1cFCa8f64f1D)             |
+| Moonbeam  | `0x1052eF3419f26Bec74Ed7CEf4a4FA6812Bc09908` | [moonbeam:0x1052...](https://moonbeam.moonscan.io//address/0x1052eF3419f26Bec74Ed7CEf4a4FA6812Bc09908)    |
 
 ## Testnet2
 
