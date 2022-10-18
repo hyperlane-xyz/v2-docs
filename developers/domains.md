@@ -23,6 +23,7 @@ When [sending a message](messaging-api/send.md), users must provide the domain I
 | Ethereum  | `0x657468`                   |
 | Optimism  | `0x6f70`                     |
 | Polygon   | `0x706f6c79`                 |
+| Moonbeam  | `0x6d6f2d6d`                 |
 
 ### Testnet
 
