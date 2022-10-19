@@ -119,6 +119,18 @@ description: Hyperlane core contract addresses
 | Ethereum  | `0xbbaAD55AD524345C06596392ed569CB1618380C5` | [ethereum:0xbbaA...](https://etherscan.io/address/0xbbaAD55AD524345C06596392ed569CB1618380C5)             |
 | Moonbeam  | `0x441a01Fca2eD731C0Fc4633998332f9FEDB17575` | [moonbeam:0x441a...](https://moonbeam.moonscan.io//address/0x441a01Fca2eD731C0Fc4633998332f9FEDB17575)    |
 
+### InterchainAccountRouter
+
+| Network   | Address                                      | Explorer                                                                                                  |
+| --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Bsc       | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [bsc:0x28DB...](https://bscscan.com//address/0x28DB114018576cF6c9A523C17903455A161d18C4)                  |
+| Avalanche | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [avalanche:0x28DB...](https://snowtrace.io/address/0x28DB114018576cF6c9A523C17903455A161d18C4)            |
+| Polygon   | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [polygon:0x28DB...](https://polygonscan.com/address/0x28DB114018576cF6c9A523C17903455A161d18C4)           |
+| Celo      | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [celo:0x28DB...](https://celoscan.io/address/0x28DB114018576cF6c9A523C17903455A161d18C4)                  |
+| Arbitrum  | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [arbitrum:0x28DB...](https://arbiscan.io//address/0x28DB114018576cF6c9A523C17903455A161d18C4)             |
+| Optimism  | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [optimism:0x28DB...](https://optimistic.etherscan.io//address/0x28DB114018576cF6c9A523C17903455A161d18C4) |
+| Ethereum  | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [ethereum:0x28DB...](https://etherscan.io/address/0x28DB114018576cF6c9A523C17903455A161d18C4)             |
+
 ### Create2Factory
 
 | Network   | Address                                      | Explorer                                                                                                  |
@@ -212,6 +224,17 @@ description: Hyperlane core contract addresses
 | Bsctestnet    | `0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38` | [bsctestnet:0xd090...](https://testnet.bscscan.com//address/0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38)                  |
 | Goerli        | `0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38` | [goerli:0xd090...](https://goerli.etherscan.io//address/0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38)                      |
 | Moonbasealpha | `0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38` | [moonbasealpha:0xd090...](https://moonbase.moonscan.io//address/0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38)              |
+
+### InterchainAccountRouter
+
+| Network       | Address                                      | Explorer                                                                                                                 |
+| ------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Alfajores     | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [alfajores:0x28DB...](https://alfajores-blockscout.celo-testnet.org//address/0x28DB114018576cF6c9A523C17903455A161d18C4) |
+| Fuji          | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [fuji:0x28DB...](https://testnet.snowtrace.io//address/0x28DB114018576cF6c9A523C17903455A161d18C4)                       |
+| Mumbai        | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [mumbai:0x28DB...](https://mumbai.polygonscan.com//address/0x28DB114018576cF6c9A523C17903455A161d18C4)                   |
+| Bsctestnet    | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [bsctestnet:0x28DB...](https://testnet.bscscan.com//address/0x28DB114018576cF6c9A523C17903455A161d18C4)                  |
+| Goerli        | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [goerli:0x28DB...](https://goerli.etherscan.io//address/0x28DB114018576cF6c9A523C17903455A161d18C4)                      |
+| Moonbasealpha | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [moonbasealpha:0x28DB...](https://moonbase.moonscan.io//address/0x28DB114018576cF6c9A523C17903455A161d18C4)              |
 
 ### Create2Factory
 
