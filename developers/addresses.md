@@ -106,6 +106,20 @@ description: Hyperlane core contract addresses
 | Ethereum  | `0xeA87ae93Fa0019a82A727bfd3eBd1cFCa8f64f1D` | [ethereum:0xeA87...](https://etherscan.io/address/0xeA87ae93Fa0019a82A727bfd3eBd1cFCa8f64f1D)             |
 | Moonbeam  | `0x1052eF3419f26Bec74Ed7CEf4a4FA6812Bc09908` | [moonbeam:0x1052...](https://moonbeam.moonscan.io//address/0x1052eF3419f26Bec74Ed7CEf4a4FA6812Bc09908)    |
 
+### InterchainQueryRouter
+
+| Network | Address | Explorer |
+| --- | --- | --- |
+| Bsc | `0xbbaAD55AD524345C06596392ed569CB1618380C5` | [bsc:0xbbaA...](https://bscscan.com//address/0xbbaAD55AD524345C06596392ed569CB1618380C5) |
+| Avalanche | `0xbbaAD55AD524345C06596392ed569CB1618380C5` | [avalanche:0xbbaA...](https://snowtrace.io/address/0xbbaAD55AD524345C06596392ed569CB1618380C5) |
+| Polygon | `0xbbaAD55AD524345C06596392ed569CB1618380C5` | [polygon:0xbbaA...](https://polygonscan.com/address/0xbbaAD55AD524345C06596392ed569CB1618380C5) |
+| Celo | `0xbbaAD55AD524345C06596392ed569CB1618380C5` | [celo:0xbbaA...](https://celoscan.io/address/0xbbaAD55AD524345C06596392ed569CB1618380C5) |
+| Arbitrum | `0xbbaAD55AD524345C06596392ed569CB1618380C5` | [arbitrum:0xbbaA...](https://arbiscan.io//address/0xbbaAD55AD524345C06596392ed569CB1618380C5) |
+| Optimism | `0xbbaAD55AD524345C06596392ed569CB1618380C5` | [optimism:0xbbaA...](https://optimistic.etherscan.io//address/0xbbaAD55AD524345C06596392ed569CB1618380C5) |
+| Ethereum | `0xbbaAD55AD524345C06596392ed569CB1618380C5` | [ethereum:0xbbaA...](https://etherscan.io/address/0xbbaAD55AD524345C06596392ed569CB1618380C5) |
+| Moonbeam | `0x441a01Fca2eD731C0Fc4633998332f9FEDB17575` | [moonbeam:0x441a...](https://moonbeam.moonscan.io//address/0x441a01Fca2eD731C0Fc4633998332f9FEDB17575) |
+
+
 ## Testnet2
 
 ### Outbox
