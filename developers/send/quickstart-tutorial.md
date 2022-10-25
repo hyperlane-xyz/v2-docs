@@ -14,15 +14,22 @@ Sending a message is a simple matter of calling `Outbox.dispatch()`. This functi
 {% tabs %}
 {% tab title="Using Metamask" %}
 1. Navigate to the `InterchainAccountRouter 0x28DB114018576cF6c9A523C17903455A161d18C4` contract page on [Etherscan](https://etherscan.io/address/0x28DB114018576cF6c9A523C17903455A161d18C4) (or whatever chain you want to send from)
-2. Click on the `Connect to Web3` button to connect your Wallet (i.e. Metamask). Make sure that you are on the correct network.
-3. Expand the `dispatch` box.
-4. For destination domain, enter `$DESTINATION_DOMAIN`. You can find some [here](../domains.md), or you could use `0x706f6c79` to send to Polygon.
-5. For the `calls` argument, we have to pass an array of `Call` (which itself is a tuple of `(to: address, calldata: bytes)` For this demo on Etherscan that looks like `[["$RECIPIENT", "$CALLDATA"]]`
+2. Under the `Contract` tab, find the `Write Contract` button.
+3. Click on the `Connect to Web3` button to connect your Wallet (i.e. Metamask). Make sure that you are on the correct network.
+4. Expand the `dispatch` box.
+5. For destination domain, enter `$DESTINATION_DOMAIN`. You can find some [here](../domains.md), or you could use `0x706f6c79` to send to Polygon.
+6. For the `calls` argument, we have to pass an array of `Call` (which itself is a tuple of `(to: address, calldata: bytes)` For this demo on Etherscan that looks like `[["$RECIPIENT", "$CALLDATA"]]`
    1. `$RECIPIENT` is just our `TestRecipient` at `0xBC3cFeca7Df5A45d61BC60E7898E63670e1654aE`
-   2. Our `$CALLDATA` is the abi-encoded function call `fooBar(uint256,string)` (or whatever function call you want to make). In this case this would come to:
-      1. ➜ cast calldata "fooBar(uint256,string)" 1 "HelloWorld from an ICA" 0xf07c1f4700000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000001648656c6c6f576f726c642066726f6d20616e2049434100000000000000000000
-      2. You can also use whatever preferred abi encoding tool like [https://abi.hashex.org/](https://abi.hashex.org/) as well
-6. Submit the transaction via your wallet/Metamask
+   2.  Our `$CALLDATA` is the abi-encoded function call `fooBar(uint256,string)` (or whatever function call you want to make). In this case this would come to:
+
+       1. ➜ cast calldata "fooBar(uint256,string)" 1 "HelloWorld from an ICA"&#x20;
+
+       which generates `0xf07c1f4700000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000001648656c6c6f576f726c642066726f6d20616e2049434100000000000000000000`
+
+       You can use your preferred abi encoding tool (like [https://abi.hashex.org/](https://abi.hashex.org/)) as well
+   3. Using our `TestRecipient` and the function call shown above, the tuple looks like:\
+      `[["0xBC3cFeca7Df5A45d61BC60E7898E63670e1654aE", "0xf07c1f4700000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000001648656c6c6f576f726c642066726f6d20616e2049434100000000000000000000"]]`
+7. Submit the transaction via your wallet/Metamask
 
 
 
@@ -40,7 +47,7 @@ cast send 0x28DB114018576cF6c9A523C17903455A161d18C4 'dispatch(uint32, (address,
 {% endtab %}
 {% endtabs %}
 
-You can see an example message sending transaction [here](https://goerli.etherscan.io/tx/0xbb076b17dca5e436f574a4728dd59d25da4fd9d05c48c6ec304ea5a354849edf).
+If you view the transaction on a block explorer, you should be able to see the `Dispatch` event. You can see an example message sending transaction [here](https://goerli.etherscan.io/tx/0xbb076b17dca5e436f574a4728dd59d25da4fd9d05c48c6ec304ea5a354849edf).
 
 
 
@@ -51,5 +58,7 @@ After the transaction that sent your call is [finalized](../latencies.md), you s
 If your message body was a human readable string, you can view it in tab with the list of events by selecting "Text" in the dropdown for the fourth parameter.\
 \
 You can see an example message delivery transaction [here](https://alfajores.celoscan.io/address/0xBC3cFeca7Df5A45d61BC60E7898E63670e1654aE#events).
+
+<figure><img src="../../.gitbook/assets/ICA Quickstart Polyscan.png" alt=""><figcaption><p>This transaction sent a "Hello World" message from an Interchain Account</p></figcaption></figure>
 
 Read more under the [`Where is my message?` section](../observability.md) to use tools like the[ Hyperlane Message Debugger.](https://explorer.hyperlane.xyz/debugger)
