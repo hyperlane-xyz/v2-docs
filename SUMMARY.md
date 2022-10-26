@@ -5,6 +5,7 @@
 ## Developers
 
 * [Getting started](developers/getting-started.md)
+* [Quickstarts](developers/quickstarts.md)
 * [Messaging API](developers/messaging-api/README.md)
   * [Quickstart Tutorial](developers/messaging-api/quickstart-tutorial.md)
   * [Send](developers/messaging-api/send.md)

@@ -28,7 +28,7 @@ export class MyAbacusApp<Chain extends ChainName = ChainName>
 ```
 
 {% hint style="info" %}
-See the [Abacus Hello World](https://github.com/abacus-network/abacus-app-template/blob/main/src/sdk/app.ts) app for an example of how to extend `AbacusApp`.
+See the [Hyperlane Hello World](https://github.com/abacus-network/abacus-app-template/blob/main/src/sdk/app.ts) app for an example of how to extend `AbacusApp`.
 {% endhint %}
 
 ### Interact

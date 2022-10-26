@@ -37,7 +37,7 @@ For a simple, single contract app that extends the `Router` contract, it is suff
 ```
 
 {% hint style="info" %}
-For an example deployer implementation see the [Abacus Hello World](https://github.com/abacus-network/abacus-app-template/blob/main/src/deploy/deploy.ts) app.
+For an example deployer implementation see the [Hyperlane Hello World](https://github.com/abacus-network/abacus-app-template/blob/main/src/deploy/deploy.ts) app.
 {% endhint %}
 
 ### Interact

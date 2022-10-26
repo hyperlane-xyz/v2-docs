@@ -14,6 +14,6 @@ To receive interchain messages, implement the [IMessageRecipient.handle()](recei
 
 You can [unit test](unit-testing.md) your integration with the Hyperlane messaging API using the `MockOutbox` and `MockInbox` contracts.
 
-Delivering an interchain message requires submitting a transaction on the destination chain. Optionally, you can pay for the gas for this transaction on the origin chain, and let an Hyperlane [relayer](../../protocol/agents/relayer.md) deliver your message for you.
+Delivering an interchain message requires submitting a transaction on the destination chain. Optionally, you can pay for the gas for this transaction on the origin chain, and let a Hyperlane [relayer](../../protocol/agents/relayer.md) deliver your message for you.
 
 Learn more about [interchain gas payments](gas.md).

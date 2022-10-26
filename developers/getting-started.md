@@ -10,8 +10,6 @@ Hyperlane makes interchain communication straightforward by providing a simple o
 
 [Learn more](messaging-api/) about the Hyperlane interchain messaging API.
 
-
-
 ### Application framework
 
 Looking for something a bit more advanced?
@@ -28,7 +26,7 @@ Looking for some inspiration?
 
 ### Help and support
 
-If you need help using Hyperlane, please reach out on [discord](https://discord.com/invite/KBD3aD78Bb) or [twitter](https://twitter.com/Abacus\_Network)!
+If you need help using Hyperlane, please reach out on [Discord](https://discord.com/invite/KBD3aD78Bb) or [Twitter](https://twitter.com/hyperlane\_xyz)!
 
 If you're running into issues once you've begun using Hyperlane, such as messages not getting processed or delivered properly, transaction failures, or other issues check out the [Where is My Message](observability.md) and [Debugging](broken-reference) sections.
 

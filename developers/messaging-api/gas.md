@@ -11,7 +11,7 @@ For convenience, Hyperlane provides an API on the origin chain that can be used 
 {% hint style="danger" %}
 Note that interchain gas payments are **not currently required**, but the first of four phases is currently in place to migrating toward requiring accurate payments for messages. This is important for the economic sustainability of the protocol.
 
-See [#migrating-toward-enforced-gas-payments](gas.md#migrating-toward-enforced-gas-payments "mention") to learn about the migration plan.&#x20;
+See [[#migrating-toward-enforced-gas-payments](gas.md#migrating-toward-enforced-gas-payments "mention")](gas.md#migrating-toward-enforcing-gas-payments) to learn about the migration plan.&#x20;
 {% endhint %}
 
 ### Interface

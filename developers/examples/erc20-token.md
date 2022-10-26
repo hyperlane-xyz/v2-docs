@@ -4,13 +4,13 @@ description: An interchain ERC20 token contract
 
 # ERC20 token
 
-The [abacus-token repo](https://github.com/abacus-network/abacus-token) shows an example interchain ERC20 token, also called an `AbcERC20`.
+The [hyperlane-token repo](https://github.com/hyperlane-xyz/hyperlane-token) shows an example interchain ERC20 token, also called a `HypERC20`.
 
 The changes to the vanilla OpenZeppelin ERC20 contract are minimal. It has a `transferRemote()` function that burns the specified amount of tokens on the sending chain and mints the equivalent amount on the receiving chain.
 
 #### Contract
 
-Its [contract](https://github.com/abacus-network/abacus-token/blob/main/contracts/AbcERC20.sol) implements a `transferRemote` method which burns tokens and dispatches corresponding messages.&#x20;
+Its [contract](https://github.com/hyperlane-xyz/hyperlane-token/blob/main/contracts/HypERC20.sol) implements a `transferRemote` method which burns tokens and dispatches corresponding messages.&#x20;
 
 ```solidity
 /**

@@ -54,7 +54,7 @@ _Note: Abacus is the former name of the Hyperlane protocol. The ACM will soon be
 Hyperlane message senders are left-padded to `bytes32` for compatibility with virtual machines that are addressed differently.&#x20;
 {% endhint %}
 
-The following utility is provided in the [`TypeCasts` library](https://github.com/abacus-network/abacus-monorepo/blob/main/solidity/core/contracts/libs/TypeCasts.sol) for convenience.
+The following utility is provided in the [`TypeCasts` library](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/libs/TypeCasts.sol) for convenience.
 
 ```solidity
 // alignment preserving cast
