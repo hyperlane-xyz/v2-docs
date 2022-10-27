@@ -28,7 +28,7 @@ interface IInterchainGasPaymaster {
 }
 ```
 
-Developers can reference deployed [`InterchainGasPaymaster` addresses](broken-reference) and [destination domains](../domains.md) in the docs.
+Developers can reference deployed [`InterchainGasPaymaster` addresses](../addresses.md) and [destination domains](../domains.md) in the docs.
 
 ### Access Control
 
