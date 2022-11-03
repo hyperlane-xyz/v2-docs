@@ -53,12 +53,10 @@ If you view the transaction on a block explorer, you should be able to see the `
 
 ### Confirm delivery
 
-After the transaction that sent your call is [finalized](../latencies.md), you should be able to see a corresponding transaction delivering your message to the `TestRecipient` contract on the destination chain. You can watch for this transaction on the destination chain's block explorer by querying for the recipient's address (in this guide `0xBC3cFeca7Df5A45d61BC60E7898E63670e1654aE)`.&#x20;
-
-If your message body was a human readable string, you can view it in tab with the list of events by selecting "Text" in the dropdown for the fourth parameter.\
+After the transaction that sent your call is [finalized](../latencies.md), you should be able to see a corresponding transaction delivering your message to the `TestRecipient` contract on the destination chain. You can watch for this transaction on [Hyperlane's Message Explorer](https://explorer.hyperlane.xyz/) by entering the transaction hash or the sender/recipient address in the input field.\
 \
-You can see an example message delivery transaction [here](https://alfajores.celoscan.io/address/0xBC3cFeca7Df5A45d61BC60E7898E63670e1654aE#events).
+You can see an example message delivery transaction [here](https://explorer.hyperlane.xyz/message/24275).
 
-<figure><img src="../../.gitbook/assets/ICA Quickstart Polyscan.png" alt=""><figcaption><p>This transaction sent a "Hello World" message from an Interchain Account</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Test Message Sent -- Hyperlane Explorer.png" alt=""><figcaption><p>This transaction sent a "Hello World" message from Goerli to Alfajores</p></figcaption></figure>
 
 Read more under the [`Where is my message?` section](../observability.md) to use tools like the[ Hyperlane Message Debugger.](https://explorer.hyperlane.xyz/debugger)

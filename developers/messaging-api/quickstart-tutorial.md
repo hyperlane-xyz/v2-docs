@@ -48,14 +48,11 @@ You can see an example message sending transaction [here](https://kovan.ethersca
 
 ### Confirm delivery
 
-After the transaction that sent your message is [finalized](../latencies.md), you should be able to see a corresponding transaction delivering your message to the `TestRecipient` contract on the destination chain. You can watch for this transaction on the destination chain's block explorer by querying for the recipient's address.&#x20;
-
-If your message body was a human readable string, you can view it in the logs by selecting "Text" in the dropdown for the third parameter.
-
-![This transaction delivered an interchain message to the TestRecipient contract on Mumbai](<../../.gitbook/assets/Screen Shot 2022-08-10 at 4.04.40 PM.png>)
-
+After the transaction that sent your message is [finalized](../latencies.md), you should be able to see a corresponding transaction delivering your message to the `TestRecipient` contract on the destination chain. You can watch for this transaction on [Hyperlane's Message Explorer](https://explorer.hyperlane.xyz/) by entering the transaction hash or the sender/recipient address in the input field.\
 \
-You can see an example message delivery transaction [here](https://mumbai.polygonscan.com/address/0x0f860bfd24d08c484033d478fe4b7cda2c9167ff#events.).
+You can see an example message delivery transaction [here](https://explorer.hyperlane.xyz/message/24275).
+
+<figure><img src="../../.gitbook/assets/Test Message in Hyperlane Explorer.png" alt=""><figcaption><p>Test "Hello World" message sent from Ethereum to Polygon, shown in the Hyperlane Message Explorer</p></figcaption></figure>
 
 Read more under the [Where is my message?](../observability.md) section to use tools like the[ Hyperlane Message Debugger.](https://explorer.hyperlane.xyz/debugger)
 
