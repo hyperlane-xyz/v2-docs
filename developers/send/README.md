@@ -30,7 +30,7 @@ interface IInterchainAccountRouter {
 }
 ```
 
-`InterchainAccountRouter` s can be found at `0x28DB114018576cF6c9A523C17903455A161d18C4` and chain domains [here](../domains.md).
+`InterchainAccountRouter` s can be found at `0xffD17672d47E7bB6192d5dBc12A096e00D1a206F` and chain domains [here](../domains.md).
 
 `_destinationDomain` is the chain you're sending to, it is **not** the chainID, rather it is a unique ID assigned by the protocol to each chain. Domain ID's can be found [here](../domains.md).
 
@@ -67,7 +67,7 @@ Perform a Uniswap V3 swap on Ethereum via an Interchain Account from a controlli
 ```solidity
 uint32 constant ethereumDomain = 0x657468;
  // consistent across all chains
-address constant icaRouter = 0x28DB114018576cF6c9A523C17903455A161d18C4;
+address constant icaRouter = 0xffD17672d47E7bB6192d5dBc12A096e00D1a206F;
 IInterchainAccountRouter(icaRouter).dispatch(
     ethereumDomain,
     [swapCall]

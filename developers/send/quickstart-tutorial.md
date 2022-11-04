@@ -13,7 +13,7 @@ Sending a message is a simple matter of calling `Outbox.dispatch()`. This functi
 
 {% tabs %}
 {% tab title="Using Metamask" %}
-1. Navigate to the `InterchainAccountRouter 0x28DB114018576cF6c9A523C17903455A161d18C4` contract page on [Etherscan](https://etherscan.io/address/0x28DB114018576cF6c9A523C17903455A161d18C4) (or whatever chain you want to send from)
+1. Navigate to the `InterchainAccountRouter 0xffD17672d47E7bB6192d5dBc12A096e00D1a206F` contract page on [Etherscan](https://etherscan.io/address/0x28DB114018576cF6c9A523C17903455A161d18C4) (or whatever chain you want to send from)
 2. Under the `Contract` tab, find the `Write Contract` button.
 3. Click on the `Connect to Web3` button to connect your Wallet (i.e. Metamask). Make sure that you are on the correct network.
 4. Expand the `dispatch` box.
