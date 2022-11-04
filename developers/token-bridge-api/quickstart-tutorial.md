@@ -14,10 +14,10 @@ Note that this tutorial does not cover [paying for the cost of relaying the mess
 
 ### Inputs
 
-* `$TOKEN_BRIDGE_ROUTER`: The address of the TokenBridgeRouter which exists on Goerli and Fuji right now 0x952228cA63f85130534981844050c82b89f373E7
-* `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../domains.md). Goerli's domain ID is 5, Fuji is 43113
-* `$RECIPIENT`: The address of the `TestTokenRecipient` contract on the destination chain padded to bytes32, 0x00000000000000000000000036597C9C49F3c5887A86466398480ddB66aD0759 on every chain.
-* $TOKEN\_ADDRESS: The address of the Token you want to transfer. On Goerli, USDC is at 0x07865c6e87b9f70255377e024ace6630c1eaa37f
+* `$TOKEN_BRIDGE_ROUTER`: The address of the TokenBridgeRouter which exists on Goerli and Fuji right now `0x952228cA63f85130534981844050c82b89f373E7`
+* `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../domains.md). Goerli's domain ID is `5`, Fuji is `43113`
+* `$RECIPIENT`: The address of the `TestTokenRecipient` contract on the destination chain padded to bytes32, `0x00000000000000000000000036597C9C49F3c5887A86466398480ddB66aD0759` on every chain.
+* `$TOKEN_ADDRESS`: The address of the Token you want to transfer. On Goerli, USDC is at `0x07865c6e87b9f70255377e024ace6630c1eaa37f`
 
 ### Acquire Token
 
@@ -33,7 +33,7 @@ Sending a message with tokens is a simple matter of calling `TokenBridgeRouter.d
 2. Under the `Contract` tab, find the `Write as Proxy` button.
 3. Click on the `Connect to Web3` button to connect your Wallet (i.e. Metamask). Make sure that you are on the correct network.
 4. Expand the `approve` box.
-5. Approve the TokenBridgeRouter at 0x952228cA63f85130534981844050c82b89f373E7 as the spender with the desirable amount (Note that USDC has 6 decimals vs. the conventional 18)
+5. Approve the TokenBridgeRouter at `0x952228cA63f85130534981844050c82b89f373E7` as the spender with the desirable amount (Note that USDC has 6 decimals vs. the conventional 18)
 6. Submit the transaction via Metamask
 7. Navigate to the TokenBridgeRouter contract page on [Etherscan](https://goerli.etherscan.io/address/0x952228cA63f85130534981844050c82b89f373E7#writeContract).
 8. Under the `Contract` tab, find the `Write as Proxy` button.
@@ -42,7 +42,7 @@ Sending a message with tokens is a simple matter of calling `TokenBridgeRouter.d
 11. For destination domain, enter `$DESTINATION_DOMAIN`.&#x20;
 12. For the recipient address, enter `$RECIPIENT`.
 13. For the message body, enter whatever you like! A [string-to-hex converter website](https://dencode.com/en/string/hex) can help you write your message if you want to send a human-readable message. In the example below, we sent the "Hello World" string as `0x48656c6c6f20576f726c64`
-14. For the token, enter $TOKEN\_ADDRESS
+14. For the token, enter `$TOKEN_ADDRESS`
 15. For the amount, enter the desirable amount
 16. Submit the transaction via your wallet/Metamask
 
