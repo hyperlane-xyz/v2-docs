@@ -4,10 +4,10 @@ description: How can I see what happens once my messages are sent?
 
 # Where is my message?
 
-&#x20;This section shows you how to track interchain messages both manually as well as programmatically.
+This section shows you how to track interchain messages both manually as well as programmatically.
 
 {% hint style="info" %}
-A fully-featured interchain message explorer is **coming soon**! For now, use the methods below to observe your messages as they are routed to their destination.
+A fully-featured [interchain message explorer](https://explorer.hyperlane.xyz/) is **in beta**! Search by address or transaction hash [here](https://explorer.hyperlane.xyz/). You can also follow the steps below to manually debug messages.
 {% endhint %}
 
 ## Debugging a message manually
