@@ -39,7 +39,7 @@ function handleQueryAddressResult(address _result) public {
 
 {% tabs %}
 {% tab title="Using Metamask" %}
-1. Navigate to the `TestQueryRecipient 0xF49ed566145eA1773c4Fb788b143Bd99f17b2024` contract page on [Etherscan](https://goerli.etherscan.io/address/0xF49ed566145eA1773c4Fb788b143Bd99f17b2024) (or whatever chain you want to send from)
+1. Navigate to the `TestQuerySender 0xF49ed566145eA1773c4Fb788b143Bd99f17b2024` contract page on [Etherscan](https://goerli.etherscan.io/address/0xF49ed566145eA1773c4Fb788b143Bd99f17b2024) (or whatever chain you want to send from)
 2. Under the `Contract` tab, find the `Write Contract` button.
 3. Click on the `Connect to Web3` button to connect your Wallet (i.e. Metamask). Make sure that you are on the correct network.
 4. Expand the `queryAddress` box.
