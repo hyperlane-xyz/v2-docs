@@ -1,6 +1,9 @@
 # Table of contents
 
-* [What is Hyperlane?](README.md)
+## ⏩ Introduction
+
+* [Intro to Hyperlane](README.md)
+* [Why Hyperlane?](introduction/why-hyperlane.md)
 
 ## Developers
 
