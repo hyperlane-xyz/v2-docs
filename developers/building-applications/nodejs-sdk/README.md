@@ -1,8 +1,8 @@
 # NodeJS SDK
 
-_Note: Abacus is the former name of the Hyperlane protocol. The repos and SDK will soon be renamed._
+_Note: Abacus is the former name of the Hyperlane protocol. The repos will soon be renamed._
 
-The NodeJS SDK ([`@abacus-network/sdk`](https://www.npmjs.com/package/@abacus-network/sdk)) contains everything you need to productionize your interchain app on the web, including:
+The NodeJS SDK ([`@hyperlane-xyz/sdk`](https://www.npmjs.com/package/@hyperlane-xyz/sdk)) contains everything you need to productionize your interchain app on the web, including:
 
 ### [RPC Provider Management](./#multiprovider)
 

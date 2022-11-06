@@ -4,7 +4,7 @@ description: Build interchain smart contracts
 
 # Solidity SDK
 
-The solidity SDK ([`@abacus-network/app`](https://www.npmjs.com/package/@abacus-network/app)) contains smart contract libraries for helping you write your interchain apps, including:
+The solidity SDK ([`@hyperlane-xyz/sdk`](https://www.npmjs.com/package/@hyperlane-xyz/sdk)) contains smart contract libraries for helping you write your interchain apps, including:
 
 ### [`AbacusConnectionClient`](abacusconnectionclient.md)&#x20;
 

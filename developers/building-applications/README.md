@@ -8,10 +8,10 @@ Hyperlane provides a framework that helps developers create and manage applicati
 
 ### Solidity SDK&#x20;
 
-The classes in the [`@abacus-network/app`](https://www.npmjs.com/package/@abacus-network/app) package help you write interchain contracts intended to be deployed on multiple networks.&#x20;
+The classes in the [`@hyperlane-xyz/sdk`](https://www.npmjs.com/package/@hyperlane-xyz/sdk) package help you write interchain contracts intended to be deployed on multiple networks.&#x20;
 
 ### NodeJS SDK
 
-The classes in the [`@abacus-network/sdk`](https://www.npmjs.com/package/@abacus-network/sdk) package help you manage and interact with Hyperlane applications on multiple networks. The building experience is familiar to smart contract developers, but a [test](nodejs-sdk/testing-contracts.md) and [deployment](nodejs-sdk/deploying-contracts.md) framework is provided to accelerate the development lifecycle. Furthermore, the [app abstraction](nodejs-sdk/contract-interaction/) helps developers productionize their apps into a seamless browser experience.&#x20;
+The classes in the [`@hyperlane-xyz/sdk`](https://www.npmjs.com/package/@hyperlane-xyz/sdk) package help you manage and interact with Hyperlane applications on multiple networks. The building experience is familiar to smart contract developers, but a [test](nodejs-sdk/testing-contracts.md) and [deployment](nodejs-sdk/deploying-contracts.md) framework is provided to accelerate the development lifecycle. Furthermore, the [app abstraction](nodejs-sdk/contract-interaction/) helps developers productionize their apps into a seamless browser experience.&#x20;
 
 _Note: Abacus is the former name of the Hyperlane protocol. The repo and SDK will soon be renamed._

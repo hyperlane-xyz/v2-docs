@@ -4,7 +4,7 @@ description: Interact with your application on multiple chains
 
 # App Abstraction
 
-_Note: Abacus is the former name of the Hyperlane protocol. The repo and SDK will soon be renamed._
+_Note: Abacus is the former name of the Hyperlane protocol. The repo will soon be renamed._
 
 The Hyperlane SDK simplifies the interface for smart contract applications deployed across multiple chains. It provides utilties for invoking a contract's methods on a target chain and a  [`MultiProvider`](../multiprovider.md) for managing chain connections.&#x20;
 
