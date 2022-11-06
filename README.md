@@ -16,7 +16,7 @@ Check out the [getting started guide](developers/getting-started.md) for ABIs, c
 
 Take a look at the [protocol docs](protocol/overview.md) to understand the Hyperlane protocol architecture and [security model](protocol/security/).
 
-### Why Hyperlane? Continue to the [next page](introduction/why-hyperlane.md) and read all about it
+### Why should you use Hyperlane? Continue to the [next page](introduction/why-hyperlane/) to learn more
 
 ### &#x20;
 

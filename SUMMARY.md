@@ -3,7 +3,10 @@
 ## ⏩ Introduction
 
 * [Intro to Hyperlane](README.md)
-* [Why Hyperlane?](introduction/why-hyperlane.md)
+* [Why Hyperlane?](introduction/why-hyperlane/README.md)
+  * [So, what is Hyperlane?](introduction/why-hyperlane/so-what-is-hyperlane.md)
+  * [What are the benefits of Hyperlane?](introduction/why-hyperlane/what-are-the-benefits-of-hyperlane.md)
+  * [What sets Hyperlane apart?](introduction/why-hyperlane/what-sets-hyperlane-apart.md)
 
 ## Developers
 
