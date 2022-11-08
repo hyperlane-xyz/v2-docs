@@ -4,17 +4,19 @@ description: How can I see what happens once my messages are sent?
 
 # Where is my message?
 
-This section shows you how to track interchain messages both manually as well as programmatically.
+This section shows you how to track interchain messages both manually and programmatically.
 
-{% hint style="info" %}
-A fully-featured [interchain message explorer](https://explorer.hyperlane.xyz/) is **in beta**! Search by address or transaction hash [here](https://explorer.hyperlane.xyz/). You can also follow the steps below to manually debug messages.
-{% endhint %}
+## Using the Hyperlane Message Explorer
 
-## Debugging a message manually
+Simply paste a sender/recipient address or a transaction hash into the input field on the Message Explorer to view details about a given message.
 
-You use can the [Hyperlane Explorer Debugger](https://explorer.hyperlane.xyz/debugger) to determine the delivery status of your message. Just paste in the transaction hash of the message send. Make sure you select the correct environment in the select box in the top right.
+<figure><img src="../.gitbook/assets/pending tx in msg explorer.png" alt=""><figcaption><p>Retrieving a transaction in the Hyperlane Message Explorer</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Screen Shot 2022-10-04 at 11.39.30 AM.png" alt=""><figcaption></figcaption></figure>
+### Debugging failed messages
+
+You'll know that a message failed to process because the bar at the top of the Message Explorer will turn red and the upper right section of the page will feature error reasons indicating why the message wasn't able to process.
+
+<figure><img src="../.gitbook/assets/failed tx in explorer.png" alt=""><figcaption><p>   Failed transaction from Fuji to Goerli</p></figcaption></figure>
 
 If your message was not delivered it can be due to several factors:
 
