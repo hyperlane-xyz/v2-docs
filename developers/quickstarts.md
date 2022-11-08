@@ -18,3 +18,15 @@ With Hyperlane, you can make a simple call via Interchain Accounts to a pre-depl
 
 Try it here with the [ICA Quickstart](send/quickstart-tutorial.md).
 
+### Interchain Queries
+
+Query any contract, not just `IMessageRecipient`s with the `handle()` function (even legacy contracts!).&#x20;
+
+Make a view call in moments using `TestQuerySender` and the [IQS Quickstart](query/quickstart-tutorial.md).
+
+### Sending Tokens
+
+You've sent messages with Hyperlane; now it's time to bring value into the mix.&#x20;
+
+Send tokens alongside messages with our [Token Bridge API Quickstart](token-bridge-api/quickstart-tutorial.md).
+
