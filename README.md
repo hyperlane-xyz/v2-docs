@@ -8,6 +8,48 @@ Hyperlane is the modular interoperability platform. Hyperlane empowers developer
 
 Hyperlane's API's offer developers secure and simple ways to communicate between blockchains, and the Hyperlane SDK can makes building interchain applications quick and easy. &#x20;
 
+
+
+```mermaid
+flowchart LR
+    
+    subgraph oc[Origin Chain]
+        sc(Sender Contract) 
+        mb[\Mailbox/]
+    end
+    
+    subgraph rc[Recipient Chain]
+        rec(Recipient Contract)
+        mb2[/Mailbox\]
+    end
+
+    val{{"Validator(s)"}}
+    aws[(Off-Chain<br>Highly-Available<br>Storage)]
+    rel[/Relayer/]
+
+    
+    sc--"<a href='https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/Outbox.sol#L115'>mailbox.dispatch()</a>"-->mb
+    mb--"<a href='https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/Outbox.sol#L188'>latestCheckpoint()</a>"-->val
+    val--signed checkpoint-->aws
+    mb-->rel
+    aws-->rel
+    rel--"<a href='https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/Inbox.sol#L91'>mailbox.process()</a>"-->mb2
+    mb2--"<a href='https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/19f6cd0a62745042432db3fc77cd21d45c958767/solidity/contracts/Inbox.sol#L141'>recipient.handle()</a>"-->rec
+
+    
+    style val fill:#fcf,stroke:#929,stroke-width:3px
+    style aws fill:#fc9,stroke:#f90,stroke-width:3px
+    style rel fill:#e4f3ff,stroke:#025aa1,stroke-width:3px 
+    style oc fill:#c8e6fe,stroke:#ddd,stroke-dasharray: 5 5,stroke-width:3px
+    style rc fill:#c8e6fe,stroke:#ddd,stroke-dasharray: 5 5,stroke-width:3px
+    style sc stroke-width:3px
+    style rec stroke-width:3px
+    style mb fill:#e4f3ff,stroke:#025aa1,stroke-width:3px
+    style mb2 fill:#e4f3ff,stroke:#025aa1,stroke-width:3px
+```
+
+
+
 ### Looking to integrate Hyperlane?
 
 Check out the [getting started guide](developers/getting-started.md) for ABIs, code examples, contract addresses, and more.
