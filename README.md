@@ -28,13 +28,13 @@ flowchart LR
     rel[/Relayer/]
 
     
-    sc--"<a href='https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/Outbox.sol#L115' target='_blank'>mailbox.dispatch()</a>"-->mb
-    mb--"<a href='https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/Outbox.sol#L188' target='_blank'>latestCheckpoint()</a>"-->val
+    sc--"mailbox.dispatch()"-->mb
+    mb--"latestCheckpoint()"-->val
     val--signed checkpoint-->aws
     mb-->rel
     aws-->rel
-    rel--"<a href='https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/Inbox.sol#L91' target='_blank'>mailbox.process()</a>"-->mb2
-    mb2--"<a href='https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/19f6cd0a62745042432db3fc77cd21d45c958767/solidity/contracts/Inbox.sol#L141' target='_blank'>recipient.handle()</a>"-->rec
+    rel--"mailbox.process()"-->mb2
+    mb2--"recipient.handle()"-->rec
 
     
     style val fill:#fcf,stroke:#929,stroke-width:3px
