@@ -45,7 +45,8 @@
 * [Contract addresses](developers/addresses.md)
   * [Core App Environments](developers/building-applications/nodejs-sdk/contract-interaction/environments.md)
 * [Latencies](developers/latencies.md)
-* [Helpful Resources](developers/helpful-resources.md)
+* [Helpful Resources](developers/helpful-resources/README.md)
+  * [V2 migration guide](developers/helpful-resources/v2-migration-guide.md)
 
 ## Protocol
 
