@@ -8,6 +8,22 @@ description: >-
 
 Developers can send interchain messages via Interchain Accounts by calling the `InterchainAccountRouter.dispatch` endpoint. In contrast with the [Messaging API](../messaging-api/send.md), the Interchain Account API allows developers to send messages to any contract, not just `IMessageRecipient`s with the `handle()` function, making it compatible with legacy contracts. To achieve this, message encoding must be constrained to ABI encoded function calls.
 
+```mermaid
+%%{init: {'theme': 'neutral', 'themeCSS': '.node rect { fill: #025AA1 } .edgeLabel { color: black } .nodeLabel { color: white }'}}%%
+flowchart LR
+	subgraph origin chain
+		sender --"send()"--> ICAO[API]
+	end
+
+	ICAO -."relay".-> ICAD
+	sender -."proxy".->account
+
+	subgraph destination chain
+		ICAD[API] --"send()"--> account
+		account --"CALL"--> recipient
+	end
+```
+
 If it does not exist already, an Interchain Account will be atomically created that is controlled by the sending address on the origin chain in perpetuity. The controlling pair of origin chain and address will have consistent interchain account addresses on all chains that support the Interchain Account specification.
 
 ### Interface
