@@ -52,11 +52,11 @@ function handleQueryAddressResult(address _result) public {
 {% endtab %}
 
 {% tab title="Using cast" %}
-You can call the `InterchainAccountRouter` directly using `cast`. Make sure that you have a valid RPC URL for the origin chain and a private key with which you can pay for gas.
+You can call the `TestQuerySender` directly using `cast`. Make sure that you have a valid RPC URL for the origin chain and a private key with which you can pay for gas.
 
 {% code overflow="wrap" %}
 ```shell
-cast send 0x28DB114018576cF6c9A523C17903455A161d18C4 'dispatch(uint32, (address,bytes)[])' $DESTINATION_DOMAIN "[($RECIPIENT,$(cast calldata "fooBar(uint256,string)" 1 "HelloWorld from an ICA via cast"))]" --rpc-url $RPC_URL --private-key $PRIVATE_KEY
+cast send 0xF49ed566145eA1773c4Fb788b143Bd99f17b2024 'queryAddress(uint32, address,bytes)' $DESTINATION_DOMAIN 0xffD17672d47E7bB6192d5dBc12A096e00D1a206F $(cast calldata "owner()") --rpc-url $RPC_URL --private-key $PRIVATE_KEY
 ```
 {% endcode %}
 {% endtab %}
