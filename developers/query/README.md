@@ -7,6 +7,22 @@ description: >-
 
 Developers can send cross chain view calls via Interchain Queries by calling the `InterchainQueryRouter.query` endpoint. In contrast with the [Messaging API](../messaging-api/send.md), the Interchain Queries API allows developers to send view calls to any contract, not just `IMessageRecipient`s with the `handle()` function, making it compatible with legacy contracts. To achieve this, message encoding must be constrained to ABI encoded function calls. Additionally, the `callback` functions must be defined on the interface of the querying contract for authentication purposes.
 
+```mermaid
+flowchart RL
+	subgraph origin chain
+		sender --"query"--> APIO[API]
+    APIO --"CALL"--> sender
+	end
+
+	APIO -."relay".-> APID
+	APID -."relay".-> APIO
+
+	subgraph destination chain
+		APID[API] --"CALL"--> recipient
+		recipient --"return"--> APID
+	end
+```
+
 ### Interface
 
 ```solidity
