@@ -24,7 +24,7 @@ You can run the validator binary by compiling the code directly, or using a dock
 
 The validator can be run directly via  `cargo run --bin validator` in the `rust` folder of the [monorepo](https://github.com/abacus-network/abacus-monorepo).
 
-Alternatively, the docker image can be run via `docker run -it gcr.io/abacus-labs-dev/abacus-agent:sha-da5c504 ./validator`.
+Alternatively, the docker image can be run via `docker run -it gcr.io/abacus-labs-dev/abacus-agent:sha-7956ff0 ./validator`.
 
 {% hint style="warning" %}
 Note due to the rebranding away from Abacus to Hyperlane, all environment variables that were previously prefixed with `ABC_` have been changed to use the prefix `HYP_`. If you previously operated a validator with the old environment variable prefix, be sure to change environment variable names before upgrading to the latest image / commit.

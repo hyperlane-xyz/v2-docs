@@ -43,3 +43,5 @@ Note due to the rebranding away from Abacus to Hyperlane, all environment variab
 | Ethereum  | 20                              | 15                                   |
 | Optimism  | 0                               | 15                                   |
 | Polygon   | 256                             | 2                                    |
+| Moonbeam  | 0                               | 5                                    |
+
