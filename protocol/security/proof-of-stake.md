@@ -1,12 +1,12 @@
 ---
-description: Attaching a cost to fraud
+description: Guaranteeing a cost to fraud
 ---
 
 # Proof of stake
 
 The Hyperlane delegated proof-of-stake protocol is designed to provide economic security to the [messaging API](../messaging/).
 
-Unlike many other messaging protocols, Hyperlane has [verifiable fraud proofs](proof-of-stake.md#undefined), which can be used to slash validators if they attempt to censor or falsify messages. By participating in proof-of-stake, validators attach an economic cost to these actions.&#x20;
+Unlike many other messaging protocols, Hyperlane has [verifiable fraud proofs](proof-of-stake.md#verifiable-fraud-proofs), which can be used to slash validators if they misbehave. By participating in proof-of-stake, validators attach an economic cost to these behaviors.&#x20;
 
 This protocol is implemented entirely in smart contracts. An instance of these smart contracts is deployed on every Hyperlane-supported chain.
 
@@ -20,7 +20,7 @@ Hyperlane validators are responsible for watching the `Outbox` contract on their
 
 Stakers are rewarded with newly minted `ABC`. Hyperlane mints a quantity of `ABC` tokens per epoch to be paid out as _staking rewards_. The quantity is adjustable through governance. These rewards are split proportionally to delegated stake. Validators may charge a commission on the rewards paid to their delegators.
 
-Stake can be slashed if a validator attempts to falsify or censor messages.
+Stake can be slashed if a validator attempts to falsify messages.
 
 ### Verifiable Fraud Proofs
 

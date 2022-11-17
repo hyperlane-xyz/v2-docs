@@ -30,7 +30,7 @@ function slash(
 ) external returns(bool);
 ```
 
-The presence of one or more watchtowers acts to deter message censorship or falsification by validators.
+The presence of one or more watchtowers acts to deter misbehavior by validators.
 
 For convenience, Abacus Works will run an open source and configurable watchtower agent, implemented as a Rust binary. Watchtowers will remain an open source and permissionless role. Applications could run Watchtowers, but so could Validators, Relayers, and any other stakeholder in the Hyperlane ecosystem.
 
