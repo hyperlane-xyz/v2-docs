@@ -42,4 +42,4 @@ Unlike other generalized messaging protocols, Hyperlane validators can be slashe
 
 **Sovereign consensus offers customizable security**
 
-Hyperlane lets applications tailor security models to their needs. Use the default [security module](broken-reference), choose from a menu of options, or deploy and configure your own!
+Hyperlane lets applications tailor security models to their needs. Use the default [Interchain Security Module](security/sovereign-consensus.md#interchain-security-modules), choose from a menu of options, or deploy and configure your own!
