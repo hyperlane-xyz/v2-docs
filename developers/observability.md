@@ -95,3 +95,7 @@ This utility leverages [ethers event polling](https://docs.ethers.io/v5/api/cont
 ```typescript
 const processReceipts = await core.waitForMessageProcessing(txReceipt);
 ```
+
+### Using Etherscan
+
+You can also look at the Etherscan page of the recipient on the destination chain however be aware that the processing transaction won't show up on list of transactions as you would typically imagine. The reason for that is that relayers actually call the Mailbox contracts which in turn call the `handle` function on the recipient. Thus, you will find evidence of processing on the under the `Internal Txns` tab instead
