@@ -97,7 +97,6 @@ It is often useful to have knowledge of the Interchain Account address before se
 An example is included below of a contract precomputing its own Interchain Account address.
 
 ```solidity
-uint32 localDomain = IOutbox(...).localDomain;
 address myInterchainAccount = IInterchainAccountRouter(...).getInterchainAccount(
     localDomain,
     address(this)
