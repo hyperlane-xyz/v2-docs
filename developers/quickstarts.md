@@ -28,5 +28,5 @@ Make a view call in moments using `TestQuerySender` and the [IQS Quickstart](que
 
 You've sent messages with Hyperlane; now it's time to bring value into the mix.&#x20;
 
-Send tokens alongside messages with our [Token Bridge API Quickstart](token-bridge-api/quickstart-tutorial.md).
+Send tokens alongside messages with our [Liquidity Layer API Quickstart](token-bridge-api/quickstart-tutorial.md).
 

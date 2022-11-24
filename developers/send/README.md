@@ -12,15 +12,15 @@ Developers can send interchain messages via Interchain Accounts by calling the `
 %%{init: {'theme': 'neutral', 'themeCSS': '.node rect { fill: #025AA1 } .edgeLabel { color: black } .nodeLabel { color: white }'}}%%
 flowchart LR
 	subgraph origin chain
-		sender --"send()"--> ICAO[API]
+		sender --"dispatch(Call)"--> HypO(Hyperlane)
 	end
 
-	ICAO -."relay".-> ICAD
-	sender -."proxy".->account
+	HypO -."relay".-> HypD
+	sender(Sender) -."proxy".-> ICAD
 
 	subgraph destination chain
-		ICAD[API] --"send()"--> account
-		account --"CALL"--> recipient
+		HypD(Hyperlane) --"makeCall(Call)"--> ICAD(ICA)
+		ICAD(ICA) --"Call"--> recipient(Recipient)
 	end
 ```
 

@@ -1,6 +1,7 @@
 ---
 description: >-
-  Send a call via Interchain Queries to any contract on an Abacus supported network.
+  Send a call via Interchain Queries to any contract on an Abacus supported
+  network.
 ---
 
 # Queries API
@@ -11,16 +12,16 @@ Developers can send cross chain view calls via Interchain Queries by calling the
 %%{init: {'theme': 'neutral', 'themeCSS': '.node rect { fill: #025AA1 } .edgeLabel { color: black } .nodeLabel { color: white }'}}%%
 flowchart RL
 	subgraph origin chain
-		sender --"query"--> APIO[API]
-    APIO --"CALL"--> sender
+		sender(Sender) --"query(Call, Callback)"--> APIO(Hyperlane)
+    APIO --"Callback(result)"--> sender
 	end
 
 	APIO -."relay".-> APID
 	APID -."relay".-> APIO
 
 	subgraph destination chain
-		APID[API] --"CALL"--> recipient
-		recipient --"return"--> APID
+		APID(Hyperlane) --"Call"--> recipient(Sender)
+		recipient --"result"--> APID
 	end
 ```
 

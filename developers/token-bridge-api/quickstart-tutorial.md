@@ -1,5 +1,5 @@
 ---
-description: Send value across chains with Hyperlane's Token Bridge API.
+description: Send value across chains with Hyperlane's Liquidity Layer.
 ---
 
 # Quickstart Tutorial
@@ -44,7 +44,7 @@ Sending a message with tokens is a simple matter of calling `TokenBridgeRouter.d
 13. For the message body, enter whatever you like! A [string-to-hex converter website](https://dencode.com/en/string/hex) can help you write your message if you want to send a human-readable message. In the example below, we sent the "Hello World" string as `0x48656c6c6f20576f726c64`
 14. For the token, enter `$TOKEN_ADDRESS`
 15. For the amount, enter the desirable amount
-16. For the bridge, enter the bridge name as a string (i.e. `Circle`)
+16. For the bridge, enter the bridge name as a string (i.e. `Circle or Portal`)
 17. Submit the transaction via your wallet/Metamask
 
     <figure><img src="../../.gitbook/assets/Screen Shot 2022-11-03 at 1.56.04 PM.png" alt=""><figcaption></figcaption></figure>

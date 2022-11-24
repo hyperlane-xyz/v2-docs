@@ -1,13 +1,16 @@
 ---
-description: Attach value with your Hyperlane messages using our Token Bridge API.
+description: Attach value with your Hyperlane messages using our Liquidity Layer API.
 ---
 
-# Token Bridge API
+# Liquidity Layer API
 
-Hyperlane's Token Bridge API will wrap around several token bridges to allow developers to send tokens alongside their message.
+Hyperlane's Liquidity layer will wrap around several token bridges to allow developers to send tokens alongside their message.
 
-Currently supported Token Bridges:
+Currently supported value bridges:
 
 * Circle
   * Token: USDC
   * Chains: Goerli and Fuji
+* Portal
+  * Token: USDC
+  * Chains: Goerli, Fuji, Mumbai, BSC Testnet, Alfajores

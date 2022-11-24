@@ -18,7 +18,7 @@
   * [Receive](developers/messaging-api/receive.md)
   * [Unit testing](developers/messaging-api/unit-testing.md)
   * [Gas](developers/messaging-api/gas.md)
-* [Token Bridge API](developers/token-bridge-api/README.md)
+* [Liquidity Layer API](developers/token-bridge-api/README.md)
   * [Quickstart Tutorial](developers/token-bridge-api/quickstart-tutorial.md)
 * [Accounts API](developers/send/README.md)
   * [Quickstart Tutorial](developers/send/quickstart-tutorial.md)
