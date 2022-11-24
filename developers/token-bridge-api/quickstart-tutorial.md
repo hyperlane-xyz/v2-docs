@@ -55,7 +55,9 @@ You can call `TokenBridgeRouter.dispatchWithTokens` directly using `cast`. Make 
 
 The final two parameters are the amount of the token you wish to send (not accounting for token decimals), and the bridge you wish to use. You can use the `Circle` or `Portal` bridges.
 
-<pre class="language-shell" data-overflow="wrap"><code class="lang-shell"><strong>cast send $TOKEN_BRIDGE_ROUTER "dispatchWithTokens(uint32,bytes32,bytes,address,uint256,string)" $DESTINATION_DOMAIN $RECIPIENT $(cast --from-utf8 "your message") $TOKEN_ADDRESS 1000 Circle -rpc-url $RPC_URL
+This example shows how to send 1 USDC (USDC has 6 decimals, so `1000000` is one full USDC) via the Circle bridge.
+
+<pre class="language-shell" data-overflow="wrap"><code class="lang-shell"><strong>cast send $TOKEN_BRIDGE_ROUTER "dispatchWithTokens(uint32,bytes32,bytes,address,uint256,string)" $DESTINATION_DOMAIN $RECIPIENT $(cast --from-utf8 "your message") $TOKEN_ADDRESS 1000000 Circle -rpc-url $RPC_URL
 </strong><strong>--private-key $PRIVATE_KEY</strong></code></pre>
 {% endtab %}
 {% endtabs %}
