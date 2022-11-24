@@ -4,7 +4,7 @@ description: Send value across chains with Hyperlane's Liquidity Layer.
 
 # Quickstart Tutorial
 
-This tutorial demonstrates how to [send](../messaging-api/send.md) a simple interchain message alongside with tokens to a pre-deployed [`TestQueryRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/core/contracts/test/TestRecipient.sol) contract.&#x20;
+This tutorial demonstrates how to [send](../messaging-api/send.md) a simple interchain message alongside with tokens to a pre-deployed [`TestTokenRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/test/TestTokenRecipient.sol) contract.&#x20;
 
 
 
@@ -17,7 +17,7 @@ Note that this tutorial does not cover [paying for the cost of relaying the mess
 * `$TOKEN_BRIDGE_ROUTER`: The address of the TokenBridgeRouter which exists on Goerli and Fuji right now `0x3428e12EfDb2446c1E7feC3f1CED099A8a7cD541`
 * `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../domains.md). Goerli's domain ID is `5`, Fuji is `43113`
 * `$RECIPIENT`: The address of the `TestTokenRecipient` contract on the destination chain padded to bytes32, `0x00000000000000000000000036597C9C49F3c5887A86466398480ddB66aD0759` on every chain.
-* `$TOKEN_ADDRESS`: The address of the Token you want to transfer. On Goerli, USDC is at `0x07865c6e87b9f70255377e024ace6630c1eaa37f`
+* `$TOKEN_ADDRESS`: The address of the Token you want to transfer. On Goerli, USDC is at `0x07865c6e87b9f70255377e024ace6630c1eaa37f`. On Fuji, USDC is at `0x5425890298aed601595a70ab815c96711a31bc65`.
 
 ### Acquire Token
 
@@ -25,7 +25,7 @@ For transferring USDC via the Circle Bridge, you can use [https://usdcfaucet.com
 
 ### Send a message with Tokens
 
-Sending a message with tokens is a simple matter of calling `TokenBridgeRouter.dispatch()`. This function can be called easily using Etherscan+[Metamask](https://metamask.io/) or [cast](https://book.getfoundry.sh/cast/).
+Sending a message with tokens is a simple matter of calling `TokenBridgeRouter.dispatchWithTokens`. This function can be called easily using Etherscan+[Metamask](https://metamask.io/) or [cast](https://book.getfoundry.sh/cast/).
 
 {% tabs %}
 {% tab title="Using Metamask" %}
@@ -44,16 +44,18 @@ Sending a message with tokens is a simple matter of calling `TokenBridgeRouter.d
 13. For the message body, enter whatever you like! A [string-to-hex converter website](https://dencode.com/en/string/hex) can help you write your message if you want to send a human-readable message. In the example below, we sent the "Hello World" string as `0x48656c6c6f20576f726c64`
 14. For the token, enter `$TOKEN_ADDRESS`
 15. For the amount, enter the desirable amount
-16. For the bridge, enter the bridge name as a string (i.e. `Circle or Portal`)
+16. For the bridge, enter the bridge name as a string (i.e. `Circle` or `Portal`)
 17. Submit the transaction via your wallet/Metamask
 
     <figure><img src="../../.gitbook/assets/Screen Shot 2022-11-03 at 1.56.04 PM.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Using Cast" %}
-You can call `Outbox.dispatch()` directly using `cast`. Make sure that you have a valid RPC URL for the origin chain and a private key with which you can pay for gas.
+You can call `TokenBridgeRouter.dispatchWithTokens` directly using `cast`. Make sure that you have a valid RPC URL for the origin chain and a private key with which you can pay for gas.
 
-<pre class="language-shell" data-overflow="wrap"><code class="lang-shell"><strong>cast send $OUTBOX_ADDRESS "dispatch(uint32,bytes32,bytes)" $DESTINATION_DOMAIN $RECIPIENT $(cast --from-utf8 "your message") --rpc-url $RPC_URL
+The final two parameters are the amount of the token you wish to send (not accounting for token decimals), and the bridge you wish to use. You can use the `Circle` or `Portal` bridges.
+
+<pre class="language-shell" data-overflow="wrap"><code class="lang-shell"><strong>cast send $TOKEN_BRIDGE_ROUTER "dispatchWithTokens(uint32,bytes32,bytes,address,uint256,string)" $DESTINATION_DOMAIN $RECIPIENT $(cast --from-utf8 "your message") $TOKEN_ADDRESS 1000 Circle -rpc-url $RPC_URL
 </strong><strong>--private-key $PRIVATE_KEY</strong></code></pre>
 {% endtab %}
 {% endtabs %}
