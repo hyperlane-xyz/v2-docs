@@ -1,5 +1,5 @@
 ---
-description: Abacus block finality latency configuratino.
+description: Abacus block finality latency configuration.
 ---
 
 # Latencies

@@ -24,8 +24,12 @@
   * [Quickstart Tutorial](developers/send/quickstart-tutorial.md)
 * [Queries API](developers/query/README.md)
   * [Quickstart Tutorial](developers/query/quickstart-tutorial.md)
-* [Troubleshooting](developers/troubleshooting.md)
-* [Where is my message?](developers/observability.md)
+* [Finding Messages](developers/finding-messages/README.md)
+  * [Hyperlane Explorer](developers/finding-messages/hyperlane-explorer.md)
+  * [GraphQL API](developers/finding-messages/graphql-api.md)
+  * [REST API](developers/finding-messages/rest-api.md)
+* [Troubleshooting](developers/troubleshooting/README.md)
+  * [Debugging with Explorer](developers/troubleshooting/observability.md)
 * [App framework](developers/building-applications/README.md)
   * [Solidity SDK](developers/building-applications/writing-contracts/README.md)
     * [AbacusConnectionClient](developers/building-applications/writing-contracts/abacusconnectionclient.md)
@@ -46,6 +50,7 @@
   * [Core App Environments](developers/building-applications/nodejs-sdk/contract-interaction/environments.md)
 * [Latencies](developers/latencies.md)
 * [Helpful Resources](developers/helpful-resources/README.md)
+  * [Token Sources & Faucets](developers/helpful-resources/token-sources-and-faucets.md)
   * [V2 migration guide](developers/helpful-resources/v2-migration-guide.md)
 
 ## Protocol

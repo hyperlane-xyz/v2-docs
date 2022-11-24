@@ -54,5 +54,5 @@ You can see an example message delivery transaction [here](https://explorer.hype
 
 <figure><img src="../../.gitbook/assets/Test Message in Hyperlane Explorer.png" alt=""><figcaption><p>Test "Hello World" message sent from Ethereum to Polygon, shown in the Hyperlane Message Explorer</p></figcaption></figure>
 
-Read more under the [Where is my message?](../observability.md) section to use tools like the[ Hyperlane Message Debugger.](https://explorer.hyperlane.xyz/debugger)
+Read more under the [Where is my message?](../troubleshooting/observability.md) section to use tools like the[ Hyperlane Message Debugger.](https://explorer.hyperlane.xyz/debugger)
 

@@ -8,13 +8,13 @@ description: Send and receive interchain messages using Hyperlane
 %%{init: {'theme': 'neutral', 'themeCSS': '.node rect { fill: #025AA1 } .edgeLabel { color: black } .nodeLabel { color: white }'}}%%
 flowchart LR
 	subgraph origin chain
-		sender(Sender) --"dispatch()"--> MO(Mailbox)
+		sender --"dispatch()"--> MO[API]
 	end
 
 	MO -."relay".-> MD
 
 	subgraph destination chain
-		MD(Mailbox) --"handle()"--> recipient(Recipient)
+		MD[API] --"handle()"--> recipient
 	end
 ```
 
