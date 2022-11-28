@@ -85,7 +85,7 @@ Query the ENS contract on Ethereum for the owner and expiration time of the any 
 ```solidity
 uint32 constant ethereumDomain = 0x657468;
 // consistent across all chains
-address constant iqsRouter = 0xd09072A2a076671cf615EE3dDaBb71EcE00d7b38;
+address constant iqsRouter = 0x6141e7E7fA2c1beB8be030B0a7DB4b8A10c7c3cd;
 IInterchainQueryRouter(iqsRouter).query(
     ethereumDomain,
     [ownerCall, nameExpiresCall],
