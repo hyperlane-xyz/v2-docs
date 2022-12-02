@@ -28,12 +28,13 @@ flowchart RL
 ### Interface
 
 ```solidity
-struct Call {
-    address to;
-    bytes data;
-}
-
 interface IInterchainQueryRouter {
+    function query(
+        uint32 _destinationDomain,
+        address target,
+        bytes calldata queryData,
+        bytes calldata callback
+    ) external returns (uint256);
     function query(
         uint32 _destinationDomain,
         Call calldata call,
@@ -57,7 +58,7 @@ You can find the address of the `InterchainQueryRouter` contract on each chain [
 
 ### Encoding
 
-Calls can be easily encoded with the `abi.encodeCall` function.
+Calls can be easily encoded with the `abi.encodeCall` function, like the Accounts API you can either call `dispatch` directly or pass `Call` structs
 
 ```solidity
 interface ENS {

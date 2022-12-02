@@ -29,15 +29,11 @@ If it does not exist already, an Interchain Account will be atomically created t
 ### Interface
 
 ```solidity
-struct Call {
-    address to;
-    bytes data;
-}
-
 interface IInterchainAccountRouter {
     function dispatch(
         uint32 _destinationDomain,
-        Call[] calldata calls
+        address _target,
+        bytes calldata data
     ) external;
     function getInterchainAccount(
         uint32 _originDomain, 
@@ -56,7 +52,7 @@ interface IInterchainAccountRouter {
 
 ### Encoding
 
-Calls can be easily encoded with the `abi.encodeCall` function.
+You can either pass a call directly in arguments to the `dispatch` function or construct an array of `Call` structs. Calls can be easily encoded with the `abi.encodeCall` function.
 
 ```solidity
 interface IUniswapV3Pool {
@@ -86,7 +82,8 @@ uint32 constant ethereumDomain = 0x657468;
 address constant icaRouter = 0xc011170d9795a7a2d065E384EAd1CA3394A7d35E;
 IInterchainAccountRouter(icaRouter).dispatch(
     ethereumDomain,
-    [swapCall]
+    address(pool),
+    abi.encodeCall(pool.swap, (...))
 );
 ```
 

@@ -16,20 +16,16 @@ Sending a message is a simple matter of calling `Outbox.dispatch()`. This functi
 1. Navigate to the `InterchainAccountRouter 0xc011170d9795a7a2d065E384EAd1CA3394A7d35E` contract page on [Etherscan](https://etherscan.io/address/0xc011170d9795a7a2d065E384EAd1CA3394A7d35E) (or whatever chain you want to send from)
 2. Under the `Contract` tab, find the `Write Contract` button.
 3. Click on the `Connect to Web3` button to connect your Wallet (i.e. Metamask). Make sure that you are on the correct network.
-4. Expand the `dispatch` box.
+4. Expand the second `dispatch` box (There are different overloads for `dispatch`, one with direct arguments and one with the `Call` structs).
 5. For destination domain, enter `$DESTINATION_DOMAIN`. You can find some [here](../domains.md), or you could use `0x706f6c79` to send to Polygon.
-6. For the `calls` argument, we have to pass an array of `Call` (which itself is a tuple of `(to: address, calldata: bytes)` For this demo on Etherscan that looks like `[["$RECIPIENT", "$CALLDATA"]]`
-   1. `$RECIPIENT` is just our `TestRecipient` at `0xBC3cFeca7Df5A45d61BC60E7898E63670e1654aE`
-   2.  Our `$CALLDATA` is the abi-encoded function call `fooBar(uint256,string)` (or whatever function call you want to make). In this case this would come to:
-
-       1. ➜ cast calldata "fooBar(uint256,string)" 1 "HelloWorld from an ICA"&#x20;
+6. For the `target` argument, enter the `$RECIPIENT`
+7. For the `data` argument, enter the ABI-encoded function call to the $RECIPIENT. To call `TestRecipient's` `fooBar(uint256,string):`
+   1.  ➜ cast calldata "fooBar(uint256,string)" 1 "HelloWorld from an ICA"&#x20;
 
        which generates `0xf07c1f4700000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000001648656c6c6f576f726c642066726f6d20616e2049434100000000000000000000`
 
        You can use your preferred abi encoding tool (like [https://abi.hashex.org/](https://abi.hashex.org/)) as well
-   3. Using our `TestRecipient` and the function call shown above, the tuple looks like:\
-      `[["0xBC3cFeca7Df5A45d61BC60E7898E63670e1654aE", "0xf07c1f4700000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000001648656c6c6f576f726c642066726f6d20616e2049434100000000000000000000"]]`
-7. Submit the transaction via your wallet/Metamask
+8. Submit the transaction via your wallet/Metamask
 
 
 
