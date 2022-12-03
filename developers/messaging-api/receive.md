@@ -20,7 +20,7 @@ interface IMessageRecipient {
 
 `_origin` the Domain ID of the source chain, IDs found [here](../domains.md#mainnet).
 
-`_sender` the address of the message sender on the source chain, it must match or the message will revert.
+`_sender` the address of the message sender on the source chain
 
 `_messageBody` the message being passed.
 
