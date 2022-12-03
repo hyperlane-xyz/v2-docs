@@ -6,6 +6,8 @@ description: >-
 
 # Quickstarts
 
+Each API has a quickstart section that can be used with just Metamask or foundry's cast, but if you are looking for a repo that you can clone and run locally, check out [https://github.com/hyperlane-xyz/hyperlane-quickstart/](https://github.com/hyperlane-xyz/hyperlane-quickstart/)
+
 ### Messaging&#x20;
 
 Hyperlane makes interchain communication straightforward by providing a simple on-chain API for sending and receiving messages.
