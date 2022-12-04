@@ -38,7 +38,7 @@ interface IInterchainAccountRouter {
     function getInterchainAccount(
         uint32 _originDomain, 
         address _sender
-    ) external returns (address);
+    ) external view returns (address);
 }
 ```
 
@@ -77,9 +77,9 @@ Call swapCall = Call({
 Perform a Uniswap V3 swap on Ethereum via an Interchain Account from a controlling account on another chain. The Interchain Account must satisfy any requirements the recieving contract has on `msg.sender`, such as token balances or allowances.
 
 ```solidity
-uint32 constant ethereumDomain = 0x657468;
+uint32 ethereumDomain = 0x657468;
  // consistent across all chains
-address constant icaRouter = 0xc011170d9795a7a2d065E384EAd1CA3394A7d35E;
+address icaRouter = 0xc011170d9795a7a2d065E384EAd1CA3394A7d35E;
 IInterchainAccountRouter(icaRouter).dispatch(
     ethereumDomain,
     address(pool),
