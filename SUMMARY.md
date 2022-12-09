@@ -44,7 +44,6 @@
 * [Example apps](developers/examples/README.md)
   * [HelloWorld](developers/examples/helloworld.md)
   * [ERC20 token](developers/examples/erc20-token.md)
-  * [Controller](developers/examples/controller.md)
 * [Domain identifiers](developers/domains.md)
 * [Contract addresses](developers/addresses.md)
   * [Core App Environments](developers/building-applications/nodejs-sdk/contract-interaction/environments.md)
