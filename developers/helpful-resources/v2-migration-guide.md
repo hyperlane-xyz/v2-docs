@@ -2,7 +2,7 @@
 
 An **API compatible** V2 of Hyperlane is currently under development. This page outlines some of the changes users can expect in V2 so they can prepare accordingly. More extensive documentation will be available prior to testnet launch.
 
-The latest code can be found on the [v2 branch of the monorepo](https://github.com/hyperlane-xyz/hyperlane-monorepo/tree/v2).
+The latest code can be found on the is on the main [branch of the monorepo](https://github.com/hyperlane-xyz/hyperlane-monorepo/tree/v2).
 
 ## Summary of changes
 
@@ -20,7 +20,7 @@ Hyperlane V2 adopts sovereign consensus, as outlined in the sovereign consensus 
 
 User feedback has indicated that the difference between Hyperlane domain IDs, and EIP-155 chain IDs. In V2, Hyperlane domain IDs will be changed to match EIP-155 chain IDs.
 
-## Migration guide
+## Migration guide for apps using V1
 
 If you're building on Hyperlane V1 using an `AbacusConnectionManager`, you will be able to migrate from V1 to V2 by:\
 1\. Calling `abacusConnectionManager.setOutbox(v2MailboxAddress)`\
@@ -28,7 +28,11 @@ If you're building on Hyperlane V1 using an `AbacusConnectionManager`, you will 
 3\. Eventually, calling `abacusConnectionManager.unenrollInbox(v1InboxAddress)` for each V1 `Inbox`\
 
 
-If you have hardcoded domain IDs into your smart contracts and they cannot be changed, you can use the `V2CompatibilityMiddleware` contracts, which will offer the same interface as the `Mailbox` contract but automatically convert between V1 and V2 domain IDs, both on outbound and inbound messages.
+## Using V2 API on V1
+
+You can use the `V2CompatibilityRouter`(`0x1d3aAC239538e6F1831C8708803e61A9EA299Eec`) on all chains that v1 is on to be able to use the V2 interface (i.e. function signatures and chain IDs instead of domain IDs) and when v2 launches, you can easily change the mailboxes to the actual v2 maiboxes.
+
+
 
 
 
