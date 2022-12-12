@@ -1,6 +1,6 @@
 ---
 description: >-
-  Send a call via Interchain Queries to any contract on an Abacus supported
+  Send a call via Interchain Queries to any contract on a Hyperlane supported
   network.
 ---
 
