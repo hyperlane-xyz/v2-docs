@@ -52,7 +52,7 @@ flowchart LR
 
 ### Looking to integrate Hyperlane?
 
-Check out the [getting started guide](developers/getting-started.md) for ABIs, code examples, contract addresses, and more.
+Check out the [getting started guide](developers/getting-started.md) for everything you need to start building with Hyperlane. If you run into an issues or have any questions, [join our discord](https://discord.gg/hyperlane) to get support from the community of Hyperlane builders!
 
 ### Want to learn more about the protocol?
 
