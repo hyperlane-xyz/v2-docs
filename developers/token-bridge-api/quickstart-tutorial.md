@@ -15,7 +15,7 @@ Note that this tutorial does not cover [paying for the cost of relaying the mess
 ### Inputs
 
 * `$TOKEN_BRIDGE_ROUTER`: The address of the TokenBridgeRouter which exists on Goerli and Fuji right now `0x3428e12EfDb2446c1E7feC3f1CED099A8a7cD541`
-* `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../domains.md). Goerli's domain ID is `5`, Fuji is `43113`
+* `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../../developers-faq-and-troubleshooting/domains.md). Goerli's domain ID is `5`, Fuji is `43113`
 * `$RECIPIENT`: The address of the `TestTokenRecipient` contract on the destination chain padded to bytes32, `0x00000000000000000000000036597C9C49F3c5887A86466398480ddB66aD0759` on every chain.
 * `$TOKEN_ADDRESS`: The address of the Token you want to transfer. On Goerli, USDC is at `0x07865c6e87b9f70255377e024ace6630c1eaa37f`. On Fuji, USDC is at `0x5425890298aed601595a70ab815c96711a31bc65`.
 
@@ -58,7 +58,8 @@ The final two parameters are the amount of the token you wish to send (not accou
 This example shows how to send 1 USDC (USDC has 6 decimals, so `1000000` is one full USDC) via the Circle bridge.
 
 <pre class="language-shell" data-overflow="wrap"><code class="lang-shell"><strong>cast send $TOKEN_BRIDGE_ROUTER "dispatchWithTokens(uint32,bytes32,bytes,address,uint256,string)" $DESTINATION_DOMAIN $RECIPIENT $(cast --from-utf8 "your message") $TOKEN_ADDRESS 1000000 Circle -rpc-url $RPC_URL
-</strong><strong>--private-key $PRIVATE_KEY</strong></code></pre>
+</strong><strong>--private-key $PRIVATE_KEY
+</strong></code></pre>
 {% endtab %}
 {% endtabs %}
 

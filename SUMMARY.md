@@ -24,12 +24,6 @@
   * [Quickstart Tutorial](developers/send/quickstart-tutorial.md)
 * [Queries API](developers/query/README.md)
   * [Quickstart Tutorial](developers/query/quickstart-tutorial.md)
-* [Finding Messages](developers/finding-messages/README.md)
-  * [Hyperlane Explorer](developers/finding-messages/hyperlane-explorer.md)
-  * [GraphQL API](developers/finding-messages/graphql-api.md)
-  * [REST API](developers/finding-messages/rest-api.md)
-* [Troubleshooting](developers/troubleshooting/README.md)
-  * [Debugging with Explorer](developers/troubleshooting/observability.md)
 * [App framework](developers/building-applications/README.md)
   * [Solidity SDK](developers/building-applications/writing-contracts/README.md)
     * [AbacusConnectionClient](developers/building-applications/writing-contracts/abacusconnectionclient.md)
@@ -44,13 +38,22 @@
 * [Example apps](developers/examples/README.md)
   * [HelloWorld](developers/examples/helloworld.md)
   * [ERC20 token](developers/examples/erc20-token.md)
-* [Domain identifiers](developers/domains.md)
-* [Contract addresses](developers/addresses.md)
-  * [Core App Environments](developers/building-applications/nodejs-sdk/contract-interaction/environments.md)
-* [Latencies](developers/latencies.md)
-* [Helpful Resources](developers/helpful-resources/README.md)
-  * [Token Sources & Faucets](developers/helpful-resources/token-sources-and-faucets.md)
-  * [V2 migration guide](developers/helpful-resources/v2-migration-guide.md)
+
+## Developers - FAQ & Troubleshooting
+
+* [Finding My Messages](developers-faq-and-troubleshooting/finding-my-messages/README.md)
+  * [Hyperlane Explorer](developers-faq-and-troubleshooting/finding-my-messages/hyperlane-explorer.md)
+  * [GraphQL API](developers-faq-and-troubleshooting/finding-my-messages/graphql-api.md)
+  * [REST API](developers-faq-and-troubleshooting/finding-my-messages/rest-api.md)
+* [Troubleshooting](developers-faq-and-troubleshooting/troubleshooting/README.md)
+  * [Debugging with Explorer](developers-faq-and-troubleshooting/troubleshooting/observability.md)
+* [Domain identifiers](developers-faq-and-troubleshooting/domains.md)
+* [Contract addresses](developers-faq-and-troubleshooting/addresses/README.md)
+  * [Core App Environments](developers-faq-and-troubleshooting/addresses/environments.md)
+* [Latencies](developers-faq-and-troubleshooting/latencies.md)
+* [Helpful Resources](developers-faq-and-troubleshooting/helpful-resources/README.md)
+  * [Token Sources & Faucets](developers-faq-and-troubleshooting/helpful-resources/token-sources-and-faucets.md)
+  * [V2 migration guide](developers-faq-and-troubleshooting/helpful-resources/v2-migration-guide.md)
 
 ## Protocol
 

@@ -24,10 +24,10 @@ If the destination domain identifier (`uint32`) is not known to relay clients th
 
 #### Invalid recipient
 
-If the recipient address (`bytes32`) is not a contract address that implements the [`IMessageRecipient` interface](../messaging-api/receive.md), the relayer will not be able to deliver your message.&#x20;
+If the recipient address (`bytes32`) is not a contract address that implements the [`IMessageRecipient` interface](../../developers/messaging-api/receive.md), the relayer will not be able to deliver your message.&#x20;
 
 {% hint style="warning" %}
-EVM addresses (`address`) must be left-padded with zeroes to be compliant. Refer to the [send encoding](../messaging-api/send.md#encoding) section for details and a `pure addressToBytes32` utility function.&#x20;
+EVM addresses (`address`) must be left-padded with zeroes to be compliant. Refer to the [send encoding](../../developers/messaging-api/send.md#encoding) section for details and a `pure addressToBytes32` utility function.&#x20;
 {% endhint %}
 
 #### Unprocessable
@@ -44,7 +44,7 @@ If you have a use case which is not accommodated by this behavior, **please reac
 Users are **not currently required** to pay relaying fees but eventually this will be necessary for the economic sustainability of the protocol.
 {% endhint %}
 
-An underfunded message implies the [gas paid](../messaging-api/gas.md) for message delivery is insufficient. The relayer registered on the gas paymaster can [`claim`](https://github.com/abacus-network/abacus-monorepo/blob/main/solidity/core/contracts/InterchainGasPaymaster.sol#L62) these fees to compensate for gas costs incurred on the destination chain. The relayer client uses the [`eth_estimateGas`](https://ethereum.github.io/execution-apis/api-documentation/)RPC on the destination chain to determine the absolute cost of relaying a message, uses the [CoinGecko API](https://www.coingecko.com/en/api) to calculate the exchange rate between the two chains native assets, and will only pay for message processing if the message relay was funded appropriately on the source chain's paymaster (within some acceptable price deviation).
+An underfunded message implies the [gas paid](../../developers/messaging-api/gas.md) for message delivery is insufficient. The relayer registered on the gas paymaster can [`claim`](https://github.com/abacus-network/abacus-monorepo/blob/main/solidity/core/contracts/InterchainGasPaymaster.sol#L62) these fees to compensate for gas costs incurred on the destination chain. The relayer client uses the [`eth_estimateGas`](https://ethereum.github.io/execution-apis/api-documentation/)RPC on the destination chain to determine the absolute cost of relaying a message, uses the [CoinGecko API](https://www.coingecko.com/en/api) to calculate the exchange rate between the two chains native assets, and will only pay for message processing if the message relay was funded appropriately on the source chain's paymaster (within some acceptable price deviation).
 
 ## Message status in your application
 

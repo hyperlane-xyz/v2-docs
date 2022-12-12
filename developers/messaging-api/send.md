@@ -18,9 +18,9 @@ interface IOutbox {
 }
 ```
 
-You can find the address of the `Outbox` contract on each chain [here](../addresses.md#outbox), and chain domains [here](../domains.md).
+You can find the address of the `Outbox` contract on each chain [here](../../developers-faq-and-troubleshooting/addresses/#outbox), and chain domains [here](../../developers-faq-and-troubleshooting/domains.md).
 
-`_destinationDomain` is the chain you're sending to, it is **not** the chainID, rather it is a unique ID assigned by the protocol to each chain. Domain ID's can be found [here](../domains.md).
+`_destinationDomain` is the chain you're sending to, it is **not** the chainID, rather it is a unique ID assigned by the protocol to each chain. Domain ID's can be found [here](../../developers-faq-and-troubleshooting/domains.md).
 
 `_recipientAddress` is the receiving contract, it needs to be a contract with the `handle()` function, you can read about it in the [Receive](receive.md) section.
 

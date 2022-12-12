@@ -18,7 +18,7 @@ interface IMessageRecipient {
 }
 ```
 
-`_origin` the Domain ID of the source chain, IDs found [here](../domains.md#mainnet).
+`_origin` the Domain ID of the source chain, IDs found [here](../../developers-faq-and-troubleshooting/domains.md#mainnet).
 
 `_sender` the address of the message sender on the source chain
 
@@ -32,7 +32,7 @@ interface IMessageRecipient {
 To ensure only valid interchain messages are accepted, it is important to require that `msg.sender` is a known Hyperlane `Inbox`.
 {% endhint %}
 
-Developers can reference deployed [`Inbox` addresses](../addresses.md#inboxes) and corresponding [domain identifiers](../domains.md) in the docs. An example of `Inbox` access control implemented on `avalanche` for restricting inbound messages from `ethereum` is provided below.
+Developers can reference deployed [`Inbox` addresses](../../developers-faq-and-troubleshooting/addresses/#inboxes) and corresponding [domain identifiers](../../developers-faq-and-troubleshooting/domains.md) in the docs. An example of `Inbox` access control implemented on `avalanche` for restricting inbound messages from `ethereum` is provided below.
 
 ```solidity
 uint32 constant ethereumDomain = 0x657468;

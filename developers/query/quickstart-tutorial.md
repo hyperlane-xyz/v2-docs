@@ -8,7 +8,7 @@ This tutorial demonstrates how to make a simple cross-chain view call via the Qu
 
 ### Inputs
 
-* `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../domains.md).
+* `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../../developers-faq-and-troubleshooting/domains.md).
 * `$TARGET`: The address of the contract on the destination chain you want to query. You could just query for the `owner()` of the `InterchainAccountRouter` which is `0xffD17672d47E7bB6192d5dBc12A096e00D1a206F` on every chain
 * `$TARGET_DATA`: The ABI encoded call, if you want to make an `owner()` call that would be `0x8da5cb5b`
 
@@ -43,7 +43,7 @@ function handleQueryAddressResult(address _result) public {
 2. Under the `Contract` tab, find the `Write Contract` button.
 3. Click on the `Connect to Web3` button to connect your Wallet (i.e. Metamask). Make sure that you are on the correct network.
 4. Expand the `queryAddress` box.
-5. For destination domain, enter `$DESTINATION_DOMAIN`. You can find some [here](../domains.md), or you could use `43113` to send to Fuji.
+5. For destination domain, enter `$DESTINATION_DOMAIN`. You can find some [here](../../developers-faq-and-troubleshooting/domains.md), or you could use `43113` to send to Fuji.
 6. For the target, enter `$TARGET`, i.e. the address of the contract you like to query on the destination (if you just want to see how this works, try `0xffD17672d47E7bB6192d5dBc12A096e00D1a206F`)
 7. For target data, enter `$TARGET_DATA`, i.e. the ABI encoded call of the query itself (`owner()` is `0x8da5cb5b`).
 8. Submit the transaction via your wallet/Metamask

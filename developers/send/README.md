@@ -42,9 +42,9 @@ interface IInterchainAccountRouter {
 }
 ```
 
-`InterchainAccountRouter` s can be found at `0xc011170d9795a7a2d065E384EAd1CA3394A7d35E` and chain domains [here](../domains.md).
+`InterchainAccountRouter` s can be found at `0xc011170d9795a7a2d065E384EAd1CA3394A7d35E` and chain domains [here](../../developers-faq-and-troubleshooting/domains.md).
 
-`_destinationDomain` is the chain you're sending to, it is **not** the chainID, rather it is a unique ID assigned by the protocol to each chain. Domain ID's can be found [here](../domains.md).
+`_destinationDomain` is the chain you're sending to, it is **not** the chainID, rather it is a unique ID assigned by the protocol to each chain. Domain ID's can be found [here](../../developers-faq-and-troubleshooting/domains.md).
 
 `calls` is an array of `Call` structs, each of which contains the address of the contract you're sending to, and the ABI encoded function call you're making. More on example usage below.
 

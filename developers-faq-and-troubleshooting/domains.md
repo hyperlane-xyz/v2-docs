@@ -10,7 +10,7 @@ Note that Abacus domain IDs have no relationship with EVM chain IDs, as Abacus w
 
 Hyperlane uses proprietary domain IDs to reference each Hyperlane-supported chain.
 
-When [sending a message](messaging-api/send.md), users must provide the domain ID of the destination chain. When [receiving a message](messaging-api/receive.md), the recipient will be passed the domain ID of the origin chain.
+When [sending a message](../developers/messaging-api/send.md), users must provide the domain ID of the destination chain. When [receiving a message](../developers/messaging-api/receive.md), the recipient will be passed the domain ID of the origin chain.
 
 ### Mainnet
 
