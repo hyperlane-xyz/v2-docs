@@ -5,7 +5,7 @@ description: Unique IDs for each Hyperlane-supported chain
 # Domain identifiers
 
 {% hint style="warning" %}
-Note that Abacus domain IDs have no relationship with EVM chain IDs, as Abacus will eventually support non-EVM chains.
+Note that Hyperlane domain IDs have no relationship with EVM chain IDs, as Hyperlane will eventually support non-EVM chains.
 {% endhint %}
 
 Hyperlane uses proprietary domain IDs to reference each Hyperlane-supported chain.
