@@ -42,6 +42,8 @@ Developers can send interchain messages very similarly to the [messaging-api](..
 
 Note that the contract calling `dispatchWithTokens` must approve the Liquidity Layer Router to be able to spend at least `_amount` of the token `_token` owned by the calling contract.
 
+The address of the LiquidityLayerRouter is `0x3428e12EfDb2446c1E7feC3f1CED099A8a7cD541`  on every chain.
+
 #### Interface
 
 ```solidity
@@ -53,11 +55,9 @@ interface ILiquidityLayerRouter {
         address _token,
         uint256 _amount,
         string calldata _bridge
-    ) external returns (uint256);
+    ) external;
 }
 ```
-
-The address of the LiquidityLayerRouter is `0x3428e12EfDb2446c1E7feC3f1CED099A8a7cD541`  on every chain.
 
 `_destinationDomain` is the chain you're sending to, it is **not** the chainID, rather it is a unique ID assigned by the protocol to each chain. Domain ID's can be found [here](../../developers-faq-and-troubleshooting/domains.md).
 
@@ -102,5 +102,3 @@ interface ILiquidityLayerMessageRecipient {
 
 
 The same point about access control and encoding from the [messaging-api](../messaging-api/ "mention") apply to the LiquidityLayer API as well, so be sure to check it out. However, rather than requiring access control such that the Mailbox can only call the `handle` function, the LiquidityLayerRouter on the local chain must be the only address that can call the `handleWithTokens` function.
-
-The address of the LiquidityLayerRouter is `0x3428e12EfDb2446c1E7feC3f1CED099A8a7cD541` on all supported chains.
