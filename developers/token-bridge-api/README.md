@@ -40,7 +40,7 @@ flowchart LR
 
 Developers can send interchain messages very similarly to the [messaging-api](../messaging-api/ "mention") by calling the `LiquidityLayerRouter.dispatchWithTokens` endpoint. At the moment, dispatched messages must be received by a contract with the `handleWithTokens()` function. You will learn more about this in the [Receive](../messaging-api/receive.md) section up next, but for now let's cover the message sending interface.
 
-Note that you must approve the Liquidity Layer Router to be able to spend at least `_amount` of the token `_token`.
+Note that the contract calling `dispatchWithTokens` must approve the Liquidity Layer Router to be able to spend at least `_amount` of the token `_token` owned by the calling contract.
 
 #### Interface
 
