@@ -99,5 +99,6 @@ interface ILiquidityLayerMessageRecipient {
 
 
 
-The same points about access control and encoding from the [messaging-api](../messaging-api/ "mention") apply to the LiquidityLayer API as well, so be sure to check it out.
+The same point about access control and encoding from the [messaging-api](../messaging-api/ "mention") apply to the LiquidityLayer API as well, so be sure to check it out. However, rather than requiring access control such that the Mailbox can only call the `handle` function, the LiquidityLayerRouter on the local chain must be the only address that can call the `handleWithTokens` function.
 
+The address of the LiquidityLayerRouter is `0x3428e12EfDb2446c1E7feC3f1CED099A8a7cD541` on all supported chains.
