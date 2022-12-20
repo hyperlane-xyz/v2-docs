@@ -248,6 +248,10 @@ description: Hyperlane core contract addresses
 
 ### InterchainQueryRouter
 
+{% hint style="info" %}
+Note: these contracts were previously deployed at the address `0xd09072a2a076671cf615ee3ddabb71ece00d7b38` (consistent for all chains) from [this commit](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/14e7ef89fd09ebedba676eb2b3069d9109cfa33b/typescript/ica/contracts/InterchainQueryRouter.sol).
+{% endhint %}
+
 | Network       | Address                                      | Explorer                                                                                                   |
 | ------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Alfajores     | `0x6141e7E7fA2c1beB8be030B0a7DB4b8A10c7c3cd` | [alfajores:0x6141...](https://alfajores.celoscan.io/address/0x6141e7E7fA2c1beB8be030B0a7DB4b8A10c7c3cd)    |
@@ -259,14 +263,18 @@ description: Hyperlane core contract addresses
 
 ### InterchainAccountRouter
 
-| Network       | Address                                      | Explorer                                                                                                                |
-| ------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Alfajores     | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [alfajores:0x28DB...](https://alfajores-blockscout.celo-testnet.org/address/0x28DB114018576cF6c9A523C17903455A161d18C4) |
-| Fuji          | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [fuji:0x28DB...](https://testnet.snowtrace.io/address/0x28DB114018576cF6c9A523C17903455A161d18C4)                       |
-| Mumbai        | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [mumbai:0x28DB...](https://mumbai.polygonscan.com/address/0x28DB114018576cF6c9A523C17903455A161d18C4)                   |
-| Bsctestnet    | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [bsctestnet:0x28DB...](https://testnet.bscscan.com/address/0x28DB114018576cF6c9A523C17903455A161d18C4)                  |
-| Goerli        | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [goerli:0x28DB...](https://goerli.etherscan.io/address/0x28DB114018576cF6c9A523C17903455A161d18C4)                      |
-| Moonbasealpha | `0x28DB114018576cF6c9A523C17903455A161d18C4` | [moonbasealpha:0x28DB...](https://moonbase.moonscan.io/address/0x28DB114018576cF6c9A523C17903455A161d18C4)              |
+{% hint style="info" %}
+Note: these contracts were previously deployed at the address `0x28DB114018576cF6c9A523C17903455A161d18C4` (consistent for all chains) from [this commit](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/4f01ee2c95f240e517fc577be348ee5812825059/typescript/ica/contracts/InterchainAccountRouter.sol).
+{% endhint %}
+
+| Network       | Address                                      | Explorer                                                                                                   |
+| ------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Alfajores     | `0xc011170d9795a7a2d065E384EAd1CA3394A7d35E` | [alfajores:0xc011...](https://alfajores.celoscan.io/address/0xc011170d9795a7a2d065E384EAd1CA3394A7d35E)    |
+| Fuji          | `0xc011170d9795a7a2d065E384EAd1CA3394A7d35E` | [fuji:0xc011...](https://testnet.snowtrace.io/address/0xc011170d9795a7a2d065E384EAd1CA3394A7d35E)          |
+| Mumbai        | `0xc011170d9795a7a2d065E384EAd1CA3394A7d35E` | [mumbai:0xc011...](https://mumbai.polygonscan.com/address/0xc011170d9795a7a2d065E384EAd1CA3394A7d35E)      |
+| Bsctestnet    | `0xc011170d9795a7a2d065E384EAd1CA3394A7d35E` | [bsctestnet:0xc011...](https://testnet.bscscan.com/address/0xc011170d9795a7a2d065E384EAd1CA3394A7d35E)     |
+| Goerli        | `0xc011170d9795a7a2d065E384EAd1CA3394A7d35E` | [goerli:0xc011...](https://goerli.etherscan.io/address/0xc011170d9795a7a2d065E384EAd1CA3394A7d35E)         |
+| Moonbasealpha | `0xc011170d9795a7a2d065E384EAd1CA3394A7d35E` | [moonbasealpha:0xc011...](https://moonbase.moonscan.io/address/0xc011170d9795a7a2d065E384EAd1CA3394A7d35E) |
 
 ### Create2Factory
 
