@@ -30,6 +30,8 @@ const enviroments = [
 const contracts = [
   "mailbox",
   "interchainGasPaymaster",
+  "interchainQueryRouter",
+  "interchainAccountRouter",
   "multisigIsm",
   "create2Factory",
 ];
@@ -52,4 +54,3 @@ for (const env of enviroments) {
   console.log("{% endtab %}");  
 }
 console.log("{% endtabs %}");
-
