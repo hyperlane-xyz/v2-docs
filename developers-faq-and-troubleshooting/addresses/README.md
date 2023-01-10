@@ -8,6 +8,7 @@ description: Hyperlane core contract addresses
 
 {% tab title="Mainnet" %}
 ### Mailbox
+
 | Network   | Address                                                                                                                            |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | Celo      | [`0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70`](https://celoscan.io/address/0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70)             |
@@ -19,7 +20,9 @@ description: Hyperlane core contract addresses
 | Optimism  | [`0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70`](https://optimistic.etherscan.io/address/0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70) |
 | Moonbeam  | [`0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70`](https://moonscan.io/address/0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70)             |
 ###
+
 ### InterchainGasPaymaster
+
 | Network   | Address                                                                                                                            |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | Celo      | [`0xdE86327fBFD04C4eA11dC0F270DA6083534c2582`](https://celoscan.io/address/0xdE86327fBFD04C4eA11dC0F270DA6083534c2582)             |
@@ -31,7 +34,9 @@ description: Hyperlane core contract addresses
 | Optimism  | [`0xdE86327fBFD04C4eA11dC0F270DA6083534c2582`](https://optimistic.etherscan.io/address/0xdE86327fBFD04C4eA11dC0F270DA6083534c2582) |
 | Moonbeam  | [`0xdE86327fBFD04C4eA11dC0F270DA6083534c2582`](https://moonscan.io/address/0xdE86327fBFD04C4eA11dC0F270DA6083534c2582)             |
 ###
+
 ### MultisigIsm
+
 | Network   | Address                                                                                                                            |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | Celo      | [`0x9bDE63104EE030d9De419EEd6bA7D14b86D6fE3f`](https://celoscan.io/address/0x9bDE63104EE030d9De419EEd6bA7D14b86D6fE3f)             |
@@ -43,7 +48,9 @@ description: Hyperlane core contract addresses
 | Optimism  | [`0xAab1D11E2063Bae5EB01fa946cA8d2FDe3db05D5`](https://optimistic.etherscan.io/address/0xAab1D11E2063Bae5EB01fa946cA8d2FDe3db05D5) |
 | Moonbeam  | [`0xf3b1F415740A26568C45b1c771A737E31C198F09`](https://moonscan.io/address/0xf3b1F415740A26568C45b1c771A737E31C198F09)             |
 ###
+
 ### Create2Factory
+
 | Network   | Address                                                                                                                            |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | Celo      | [`0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a`](https://celoscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)             |
@@ -55,9 +62,11 @@ description: Hyperlane core contract addresses
 | Optimism  | [`0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a`](https://optimistic.etherscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a) |
 | Moonbeam  | [`0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a`](https://moonscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)             |
 ###
+
 {% endtab %}
 {% tab title="Testnet" %}
 ### Mailbox
+
 | Network        | Address                                                                                                                                 |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | Alfajores      | [`0xCC737a94FecaeC165AbCf12dED095BB13F037685`](https://alfajores.celoscan.io/address/0xCC737a94FecaeC165AbCf12dED095BB13F037685)        |
@@ -69,7 +78,9 @@ description: Hyperlane core contract addresses
 | Optimismgoerli | [`0xCC737a94FecaeC165AbCf12dED095BB13F037685`](https://goerli-optimism.etherscan.io/address/0xCC737a94FecaeC165AbCf12dED095BB13F037685) |
 | Arbitrumgoerli | [`0xCC737a94FecaeC165AbCf12dED095BB13F037685`](https://goerli.arbiscan.io//address/0xCC737a94FecaeC165AbCf12dED095BB13F037685)          |
 ###
+
 ### InterchainGasPaymaster
+
 | Network        | Address                                                                                                                                 |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | Alfajores      | [`0xf857706CE59Cb7AE6df81Bbd0B0a656dB3e6beDA`](https://alfajores.celoscan.io/address/0xf857706CE59Cb7AE6df81Bbd0B0a656dB3e6beDA)        |
@@ -81,7 +92,9 @@ description: Hyperlane core contract addresses
 | Optimismgoerli | [`0xf857706CE59Cb7AE6df81Bbd0B0a656dB3e6beDA`](https://goerli-optimism.etherscan.io/address/0xf857706CE59Cb7AE6df81Bbd0B0a656dB3e6beDA) |
 | Arbitrumgoerli | [`0xf857706CE59Cb7AE6df81Bbd0B0a656dB3e6beDA`](https://goerli.arbiscan.io//address/0xf857706CE59Cb7AE6df81Bbd0B0a656dB3e6beDA)          |
 ###
+
 ### MultisigIsm
+
 | Network        | Address                                                                                                                                 |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | Alfajores      | [`0x4D06A1671A2a345B14B15cbD50027979A5D1d8C9`](https://alfajores.celoscan.io/address/0x4D06A1671A2a345B14B15cbD50027979A5D1d8C9)        |
@@ -93,7 +106,9 @@ description: Hyperlane core contract addresses
 | Optimismgoerli | [`0x47384E33E67007B7fE4326fb096Bdf9CbA7AB6E4`](https://goerli-optimism.etherscan.io/address/0x47384E33E67007B7fE4326fb096Bdf9CbA7AB6E4) |
 | Arbitrumgoerli | [`0x47384E33E67007B7fE4326fb096Bdf9CbA7AB6E4`](https://goerli.arbiscan.io//address/0x47384E33E67007B7fE4326fb096Bdf9CbA7AB6E4)          |
 ###
+
 ### Create2Factory
+
 | Network        | Address                                                                                                                                 |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | Alfajores      | [`0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a`](https://alfajores.celoscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)        |
@@ -105,5 +120,6 @@ description: Hyperlane core contract addresses
 | Optimismgoerli | [`0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a`](https://goerli-optimism.etherscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a) |
 | Arbitrumgoerli | [`0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a`](https://goerli.arbiscan.io//address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)          |
 ###
+
 {% endtab %}
 {% endtabs %}
