@@ -13,11 +13,10 @@ function generateTable(contract, addresses) {
       .filter(([candidate]) => candidate === contract)
       .map(([_, addressObject]) => {
         const address = addressObject.proxy ?? addressObject;
-        return [capitalize(network), `[\`${address}\`](${explorer}/address/${address}})`]
+        return [capitalize(network), `[\`${address}\`](${explorer}/address/${address})`]
       })[0];
     return entries;
-  }
-  );
+  });
   return markdownTable([
     ["Network", "Address"], 
     ...entries
@@ -48,6 +47,7 @@ for (const env of enviroments) {
   for (const contract of contracts) {
     console.log(`### ${capitalize(contract)}`);
     console.log(generateTable(contract, coreEnvironments[env]));
+    console.log("###");
   }
   console.log("{% endtab %}");  
 }
