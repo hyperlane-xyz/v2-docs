@@ -11,7 +11,10 @@ function generateTable(contract, addresses) {
     const explorer = chainMetadata[network].blockExplorers[0].url;
     const entries = Object.entries(contracts)
       .filter(([candidate]) => candidate === contract)
-      .map(([_, address]) => [capitalize(network), `${explorer}/address/${address.proxy ?? address}`])[0];
+      .map(([_, addressObject]) => {
+        const address = addressObject.proxy ?? addressObject;
+        return [capitalize(network), `[\`${address}\`](${explorer}/address/${address}})`]
+      })[0];
     return entries;
   }
   );
