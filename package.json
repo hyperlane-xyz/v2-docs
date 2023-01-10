@@ -1,0 +1,16 @@
+{
+    "name": "@hyperlane-xyz/docs",
+    "description": "Private docs package",
+    "version": "0.0.0",
+    "devDependencies": {
+        "@hyperlane-xyz/sdk": "^1.0.0-beta8",
+        "@types/node": "^18.11.18",
+        "markdown-table": "^3.0.3"
+    },
+    "packageManager": "yarn@3.2.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "sync": "node sync-addresses.js > ./developers-faq-and-troubleshooting/addresses/README.md"
+    }
+}
