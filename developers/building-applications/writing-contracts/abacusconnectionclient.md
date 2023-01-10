@@ -10,7 +10,7 @@ This mix-in contract maintains a pointers to the three contracts Hyperlane devel
 
 1. ``[`Mailbox`](broken-reference) (required)
 2. ``[`InterchainGasPaymaster`](../../messaging-api/gas.md) (optional)
-3. ``[`InterchainSecurityModule`](../../../protocol/sovereign-consensus.md) (optional)
+3. ``[`InterchainSecurityModule`](../../../protocol/security/sovereign-consensus.md) (optional)
 
 `HyperlaneConnectionClient` exposes functions that allow subclasses to easily send messages to the `Mailbox` via the `mailbox` storage variable, and permission message delivery via the `onlyMailbox` modifier.
 

@@ -6,7 +6,7 @@ description: Relayers deliver interchain messages to their recipients
 
 Relayers are responsible for ensuring messages are delivered to their recipients. Relayers are a permissionless but integral part of the Hyperlane protocol. Anyone can run a relayer.
 
-Relayers are configured to relay messages from a single origin chain to one or more destination chains. A relayer observes the [`Mailbox`](../messaging.md) on the origin chain, watching for new messages. When a new message is detected, the relayer queries the destination chain to determine the message recipient's [`ISM`](../sovereign-consensus.md#interchain-security-modules).
+Relayers are configured to relay messages from a single origin chain to one or more destination chains. A relayer observes the [`Mailbox`](../messaging/) on the origin chain, watching for new messages. When a new message is detected, the relayer queries the destination chain to determine the message recipient's [`ISM`](../security/sovereign-consensus.md#interchain-security-modules).
 
 The relayer is then responsible for aggregating the metadata needed by that ISM. This will vary by ISM, and may include [validator](validators.md) signatures, merkle proofs, zero knowledge proofs, and more!
 

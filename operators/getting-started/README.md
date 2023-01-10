@@ -2,7 +2,7 @@
 description: Everything you need to start running a validator
 ---
 
-# Getting started
+# Validators
 
 Hyperlane [validators](../../protocol/agents/validators.md) are stateless, do not submit transactions, and are not networked with other validators. Hyperlane validators are run on a per-origin-chain basis, and these instructions are written for a single chain.
 
@@ -10,7 +10,7 @@ Running a validator simply requires the following:
 
 #### An RPC node&#x20;
 
-Validators make simple view calls to read merkle roots from the [`Mailbox`](../../protocol/messaging.md) contract on the chain they are validating for.
+Validators make simple view calls to read merkle roots from the [`Mailbox`](../../protocol/messaging/) contract on the chain they are validating for.
 
 {% hint style="warning" %}
 Operating a validator for Polygon mainnet requires access to an archive node. This is because validators should only sign roots once they've been finalized, and Polygon requires 256 block confirmations to achieve finality.

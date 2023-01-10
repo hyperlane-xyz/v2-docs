@@ -12,7 +12,7 @@ The network of `Mailboxes` facilitates the connective tissue between blockchains
 
 To send interchain messages, developers call `Mailbox.dispatch()`.
 
-This function takes as parameters the message contents, the destination chain ID, and the recipient address. Each message get inserted as a leaf into an [incremental merkle tree](https://medium.com/@josephdelong/ethereum-2-0-deposit-merkle-tree-13ec8404ca4f). Storing messages in a merkle tree allows Hyperlane's [proof-of-stake](proof-of-stake.md) protocol to trustlessly verify fraud proofs.
+This function takes as parameters the message contents, the destination chain ID, and the recipient address. Each message get inserted as a leaf into an [incremental merkle tree](https://medium.com/@josephdelong/ethereum-2-0-deposit-merkle-tree-13ec8404ca4f). Storing messages in a merkle tree allows Hyperlane's [proof-of-stake](../security/proof-of-stake.md) protocol to trustlessly verify fraud proofs.
 
 ```solidity
 /**
@@ -31,7 +31,7 @@ function dispatch(
 
 ### Process
 
-[Relayers](agents/relayer.md) deliver messages to their recipients by calling `Mailbox.process()`.
+[Relayers](../agents/relayer.md) deliver messages to their recipients by calling `Mailbox.process()`.
 
 This function takes as parameters the message to deliver as well as arbitrary metadata that can be specified by the relayer. The `Mailbox` will pass the message and metadata to the recipient's `Interchain Security Module` for validation.
 

@@ -34,7 +34,7 @@
     * [Deployment](developers/building-applications/nodejs-sdk/deploying-contracts.md)
     * [Interchain Testing](developers/building-applications/nodejs-sdk/testing-contracts.md)
     * [Interchain Gas Estimation](developers/building-applications/nodejs-sdk/gas.md)
-    * [App Abstraction](developers/building-applications/nodejs-sdk/contract-interaction.md)
+    * [App Abstraction](developers/building-applications/nodejs-sdk/contract-interaction/README.md)
 * [Example apps](developers/examples/README.md)
   * [HelloWorld](developers/examples/helloworld.md)
   * [ERC20 token](developers/examples/erc20-token.md)
@@ -45,33 +45,38 @@
   * [Hyperlane Explorer](developers-faq-and-troubleshooting/finding-my-messages/hyperlane-explorer.md)
   * [REST API](developers-faq-and-troubleshooting/finding-my-messages/rest-api.md)
   * [GraphQL API](developers-faq-and-troubleshooting/finding-my-messages/graphql-api.md)
-* [Troubleshooting](developers-faq-and-troubleshooting/troubleshooting/README.md)
-  * [Debugging with Explorer](developers-faq-and-troubleshooting/troubleshooting/observability.md)
-* [Domain identifiers](developers-faq-and-troubleshooting/domains.md)
-* [Contract addresses](developers-faq-and-troubleshooting/addresses/README.md)
-  * [Core App Environments](developers-faq-and-troubleshooting/addresses/environments.md)
-* [Latencies](developers-faq-and-troubleshooting/latencies.md)
-* [Helpful Resources](developers-faq-and-troubleshooting/helpful-resources/README.md)
+* [Troubleshooting](developers/troubleshooting/README.md)
+  * [Debugging with Explorer](developers/troubleshooting/observability.md)
+* [Domain identifiers](developers/domains.md)
+* [Contract addresses](developers/addresses.md)
+  * [Core App Environments](developers/building-applications/nodejs-sdk/contract-interaction/environments.md)
+* [Latencies](developers/latencies.md)
+* [Helpful Resources](developers/helpful-resources/README.md)
   * [Token Sources & Faucets](developers-faq-and-troubleshooting/helpful-resources/token-sources-and-faucets.md)
-  * [V2 migration guide](developers-faq-and-troubleshooting/helpful-resources/v2-migration-guide.md)
+  * [V2 migration guide](developers/helpful-resources/v2-migration-guide.md)
 
 ## Protocol
 
 * [Overview](protocol/overview.md)
-* [Mailboxes](protocol/messaging.md)
-* [Sovereign consensus](protocol/sovereign-consensus.md)
-* [Proof of stake](protocol/proof-of-stake.md)
+* [Mailboxes](protocol/messaging/README.md)
+* [Sovereign consensus](protocol/security/sovereign-consensus.md)
+* [Proof of stake](protocol/security/proof-of-stake.md)
 * [Agents](protocol/agents/README.md)
   * [Validators](protocol/agents/validators.md)
   * [Relayers](protocol/agents/relayer.md)
   * [Watchtowers](protocol/agents/processor.md)
 
-## Validators
+## Operators
 
-* [Getting started](validators/getting-started/README.md)
-  * [AWS setup](validators/getting-started/aws-setup.md)
-  * [Environment variables](validators/getting-started/environment-variables.md)
-  * [Start validating](validators/getting-started/start-validating.md)
+* [Deployers](operators/deployers.md)
+* [Validators](operators/getting-started/README.md)
+  * [AWS setup](operators/getting-started/aws-setup.md)
+  * [Environment variables](operators/getting-started/environment-variables.md)
+  * [Start validating](operators/getting-started/start-validating.md)
+* [Relayers](operators/getting-started-1/README.md)
+  * [Environment variables](operators/getting-started-1/environment-variables.md)
+  * [Message filtering](operators/getting-started-1/message-filtering.md)
+  * [Start relaying](operators/getting-started-1/start-validating.md)
 
 ## Resources
 

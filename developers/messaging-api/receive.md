@@ -18,7 +18,7 @@ interface IMessageRecipient {
 }
 ```
 
-`_origin` the Domain ID of the origin chain, IDs found [here](../../developers-faq-and-troubleshooting/domains.md#mainnet).
+`_origin` the Domain ID of the origin chain, IDs found [here](../domains.md#mainnet).
 
 `_sender` the address of the message sender on the origin chain
 

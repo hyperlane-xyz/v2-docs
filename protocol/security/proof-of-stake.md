@@ -8,7 +8,7 @@ description: Making fraud costly
 Hyperlane's proof-of-stake protocol is a work in progress. Details may change as the design matures.
 {% endhint %}
 
-The Hyperlane delegated proof-of-stake protocol is designed to provide economic security to the [messaging API](messaging.md).
+The Hyperlane delegated proof-of-stake protocol is designed to provide economic security to the [messaging API](../messaging/).
 
 Many (though not all) [ISMs](sovereign-consensus.md#interchain-security-modules) rely on validator signatures as part of their security model. By participating in proof-of-stake, validators can attach an economic cost to creating fraudulent signatures. Hyperlane has [verifiable fraud proofs](proof-of-stake.md#verifiable-fraud-proofs), which can be used to slash validators if they misbehave.
 
@@ -28,7 +28,7 @@ Stake can be slashed if a validator attempts to falsify messages.
 
 ### Verifiable Fraud Proofs
 
-A key feature of the Hyperlane protocol is that unlike other externally validated protocols, a validator that engages in fraud a verifiable fraud proof can be submitted by a [Watchtower](agents/processor.md), leading to their stake being slashed. In other protocols it is common for a validator's stake to live on a separate blockchain from the origin chain they are validating messages for. What this means is that in order for a fraudulent validator to have their stake slashed, the same message passing protocol must relay a message to the chain where the stake lives. You can see the problem with this right? The same validator set where fraud occurred is the mechanism by which evidence of that fraud is delivered, what could go wrong?
+A key feature of the Hyperlane protocol is that unlike other externally validated protocols, a validator that engages in fraud a verifiable fraud proof can be submitted by a [Watchtower](../agents/processor.md), leading to their stake being slashed. In other protocols it is common for a validator's stake to live on a separate blockchain from the origin chain they are validating messages for. What this means is that in order for a fraudulent validator to have their stake slashed, the same message passing protocol must relay a message to the chain where the stake lives. You can see the problem with this right? The same validator set where fraud occurred is the mechanism by which evidence of that fraud is delivered, what could go wrong?
 
 Hyperlane doesn't want to allow for that possibility, thus in Hyperlane validators must keep their bonded stake on the origin chain for which they are validating. This means fraud proofs are verifiable. The record of fraud that is examined for slashing exists in the same environment as the stake to be slashed, leaving no room for error with the process of fraud proofs.&#x20;
 

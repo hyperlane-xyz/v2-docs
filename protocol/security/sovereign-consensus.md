@@ -8,7 +8,7 @@ Sovereign consensus allows applications to configure and choose from a selection
 
 Applications can use sovereign consensus to tune security models and trust assumptions to best fit their needs. A heterogenous ecosystem of interchain security models allows for fault isolation and maximizes Hyperlane's decentralization.
 
-Sovereign consensus is entirely optional. [`Mailboxes`](messaging.md) will default to a module that leverages the economic security provided by [proof-of-stake](proof-of-stake.md).
+Sovereign consensus is entirely optional. [`Mailboxes`](../messaging/) will default to a module that leverages the economic security provided by [proof-of-stake](proof-of-stake.md).
 
 Applications can opt into sovereign consensus by implementing the `interchainSecurityModule()` ABI, which returns the address of the ISM being used by the application.
 

@@ -18,9 +18,9 @@ interface IMailbox {
 }
 ```
 
-You can find the address of the `Mailbox` contract on each chain [here](../../developers-faq-and-troubleshooting/addresses/), and chain domains [here](../../developers-faq-and-troubleshooting/domains.md).
+You can find the address of the `Mailbox` contract on each chain [here](../addresses.md), and chain domains [here](../domains.md).
 
-`_destinationDomain` is the chain you're sending to. Domain ID's can be found [here](../../developers-faq-and-troubleshooting/domains.md).
+`_destinationDomain` is the chain you're sending to. Domain ID's can be found [here](../domains.md).
 
 `_recipientAddress` is the receiving contract, it needs to be a contract with the `handle()` function, you can read about it in the [Receive](receive.md) section.
 

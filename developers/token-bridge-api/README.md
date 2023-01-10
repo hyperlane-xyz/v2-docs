@@ -57,7 +57,7 @@ interface ILiquidityLayerRouter {
 
 The address of the `LiquidityLayerRouter` is `0x3428e12EfDb2446c1E7feC3f1CED099A8a7cD541`  on every chain.
 
-`_destinationDomain` is the chain you're sending to, it is **not** the chainID, rather it is a unique ID assigned by the protocol to each chain. Domain ID's can be found [here](../../developers-faq-and-troubleshooting/domains.md).
+`_destinationDomain` is the chain you're sending to, it is **not** the chainID, rather it is a unique ID assigned by the protocol to each chain. Domain ID's can be found [here](../domains.md).
 
 `_recipientAddress` is the receiving contract, it needs to be a contract with the `handleWithTokens()` function, you can read about it in the [Receive](./#receive) section.
 
@@ -87,7 +87,7 @@ interface ILiquidityLayerMessageRecipient {
 }
 ```
 
-`_origin` the Domain ID of the source chain, IDs found [here](../../developers-faq-and-troubleshooting/domains.md#mainnet).
+`_origin` the Domain ID of the source chain, IDs found [here](../domains.md#mainnet).
 
 `_sender` the address of the message sender on the source chain
 

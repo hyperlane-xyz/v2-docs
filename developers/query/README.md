@@ -48,9 +48,9 @@ interface IInterchainQueryRouter {
 }
 ```
 
-You can find the address of the `InterchainQueryRouter` contract on each chain [here](../../developers-faq-and-troubleshooting/addresses/#interchainqueryrouter), and chain domains [here](../../developers-faq-and-troubleshooting/domains.md).
+You can find the address of the `InterchainQueryRouter` contract on each chain [here](../addresses.md#interchainqueryrouter), and chain domains [here](../domains.md).
 
-`_destinationDomain` is the chain you're sending to, it is **not** the chainID, rather it is a unique ID assigned by the protocol to each chain. Domain ID's can be found [here](../../developers-faq-and-troubleshooting/domains.md).
+`_destinationDomain` is the chain you're sending to, it is **not** the chainID, rather it is a unique ID assigned by the protocol to each chain. Domain ID's can be found [here](../domains.md).
 
 `calls` is an array of `Call` structs, each of which contains the address of the contract you're sending to, and the ABI encoded function call you're making. More on example usage below.
 

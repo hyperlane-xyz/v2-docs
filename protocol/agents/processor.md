@@ -8,7 +8,7 @@ description: Watchtowers observe the network for validator fraud
 Watchtower agents are a work in progress. Details may change as the design matures.
 {% endhint %}
 
-Validators are responsible for signing attestations of [`Mailbox`](../messaging.md) state on the origin chain. These attestations can be consumed by [`ISMs`](../sovereign-consensus.md#interchain-security-modules) to prove the validity of interchain messages on the destination chain.
+Validators are responsible for signing attestations of [`Mailbox`](../messaging/) state on the origin chain. These attestations can be consumed by [`ISMs`](../security/sovereign-consensus.md#interchain-security-modules) to prove the validity of interchain messages on the destination chain.
 
 But who watches them? Who makes sure they perform their role dutifully, without fault? The Watchtowers!
 
