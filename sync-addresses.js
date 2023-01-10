@@ -47,7 +47,7 @@ for (const env of enviroments) {
   for (const contract of contracts) {
     console.log(`### ${capitalize(contract)}\n`);
     console.log(generateTable(contract, coreEnvironments[env]));
-    console.log("###\n");
+    console.log("\n");
   }
   console.log("{% endtab %}");  
 }
