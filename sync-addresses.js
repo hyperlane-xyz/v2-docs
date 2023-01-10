@@ -47,7 +47,7 @@ description: Hyperlane core contract addresses
 for (const env of enviroments) {
   console.log(`{% tab title="${capitalize(env)}" %}`);
   for (const contract of contracts) {
-    console.log(`### ${capitalize(contract)}\n`);
+    console.log(`## ${capitalize(contract)}\n`);
     console.log(generateTable(contract, coreEnvironments[env]));
     console.log("\n");
   }
