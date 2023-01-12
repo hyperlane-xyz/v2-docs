@@ -4,7 +4,7 @@ description: Configure your validator
 
 # Environment variables
 
-Make sure that you have completed [AWS Setup](aws-setup.md)
+Make sure that you have completed [AWS Setup](../../validators/getting-started/aws-setup.md)
 
 ### Environment variables
 
