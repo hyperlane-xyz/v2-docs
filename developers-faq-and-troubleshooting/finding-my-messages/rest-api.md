@@ -17,7 +17,7 @@ Connect your preferred fetch client or library to [https://api-v1.hyperlane.xyz/
 #### Request
 
 ```javascript
-const baseUrl = 'https://api.hyperlane.xyz/api/rest'
+const baseUrl = 'https://api-v1.hyperlane.xyz/api/rest'
 const messageHash = 'f1b84b24a88011e14bc4acde11753016af377b4a9f21a6dcea466da7915a901d'
 const url =`${baseUrl}/messages/byHash/${messageHash}`;
 const response = await fetch(url, {
