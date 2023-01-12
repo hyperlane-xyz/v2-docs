@@ -4,7 +4,7 @@ description: How to use the Hyperlane Explorer to debug messages
 
 # Debugging with Explorer
 
-Visit the Explorer at [https://explorer.hyperlane.xyz](https://explorer.hyperlane.xyz/)
+Visit the Explorer at [https://explorer.hyperlane.xyz](https://explorer-v2.hyperlane.xyz/)
 
 Then paste a sender/recipient address or a transaction hash into the top search field. All matching messages will be shown in the result list. Click the row for more details.
 

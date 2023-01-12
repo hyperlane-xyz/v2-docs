@@ -1,52 +1,59 @@
 ---
-description: >-
-  Send a message via Interchain Account to any contract on an Abacus supported
-  network.
+description: Make remote function calls from an Interchain Account
 ---
 
 # Accounts API
 
-Developers can send interchain messages via Interchain Accounts by calling the `InterchainAccountRouter.dispatch` endpoint. In contrast with the [Messaging API](../messaging-api/send.md), the Interchain Account API allows developers to send messages to any contract, not just `IMessageRecipient`s with the `handle()` function, making it compatible with legacy contracts. To achieve this, message encoding must be constrained to ABI encoded function calls.
+Developers can use the Accounts API to create an account on a remote chain, and use that account to call smart contracts.
 
-```mermaid
-%%{init: {'theme': 'neutral', 'themeCSS': '.node rect { fill: #025AA1 } .edgeLabel { color: black } .nodeLabel { color: white }'}}%%
-flowchart LR
-	subgraph origin chain
-		sender --"dispatch(Call)"--> HypO(Hyperlane)
-	end
+Unlike the [messaging-api](../messaging-api/ "mention"), which requires recipients to implement a specific interface, the Accounts API allows developers to interact with any remote contract.
 
-	HypO -."relay".-> HypD
-	sender(Sender) -."proxy".-> ICAD
-
-	subgraph destination chain
-		HypD(Hyperlane) --"makeCall(Call)"--> ICAD(ICA)
-		ICAD(ICA) --"Call"--> recipient(Recipient)
-	end
-```
-
-If it does not exist already, an Interchain Account will be atomically created that is controlled by the sending address on the origin chain in perpetuity. The controlling pair of origin chain and address will have consistent interchain account addresses on all chains that support the Interchain Account specification.
+The Accounts API assigns every `(uint32 origin, address sender)` pair a unique interchain account address. The sender controls that address on all remote chains, and can direct it to make arbitrary function calls via the `InterchainAccountRouter.dispatch()` endpoint.
 
 ### Interface
 
 ```solidity
 interface IInterchainAccountRouter {
+    struct Call {
+        address to;
+        bytes data;
+    }
+
+    /**
+     * @notice Direct an interchain account to make multiple consecutive calls
+     * @param _destinationDomain The chain on which to make the calls
+     * @param _calls The list of ABI encoded calls to make
+     * @return The message ID of the dispatched Hyperlane message
+     */
+    function dispatch(uint32 _destinationDomain, Call[] calldata _calls)
+        external
+        returns (bytes32);
+
+    /**
+     * @notice Direct an interchain account to make a single call
+     * @param _destinationDomain The chain on which to make the call
+     * @param _target The address to call
+     * @param _data The calldata for the call
+     * @return The message ID of the dispatched Hyperlane message
+     */
     function dispatch(
         uint32 _destinationDomain,
         address _target,
-        bytes calldata data
-    ) external;
-    function getInterchainAccount(
-        uint32 _originDomain, 
-        address _sender
-    ) external view returns (address);
+        bytes calldata _data
+    ) external returns (bytes32);
+
+    /**
+     * @return The interchain account address for the (origin, sender) pair
+     */
+    function getInterchainAccount(uint32 _originDomain, address _sender)
+        external
+        view
+        returns (address);
 }
+
 ```
 
-`InterchainAccountRouter` s can be found at `0xc011170d9795a7a2d065E384EAd1CA3394A7d35E` and chain domains [here](../domains.md).
-
-`_destinationDomain` is the chain you're sending to, it is **not** the chainID, rather it is a unique ID assigned by the protocol to each chain. Domain ID's can be found [here](../domains.md).
-
-`calls` is an array of `Call` structs, each of which contains the address of the contract you're sending to, and the ABI encoded function call you're making. More on example usage below.
+`InterchainAccountRouters`  can be found at `0xc011170d9795a7a2d065E384EAd1CA3394A7d35E` and domain IDs can be found [here](../domains.md).
 
 ## Example Usage
 
@@ -74,7 +81,7 @@ Call swapCall = Call({
 
 ### Sending
 
-Perform a Uniswap V3 swap on Ethereum via an Interchain Account from a controlling account on another chain. The Interchain Account must satisfy any requirements the recieving contract has on `msg.sender`, such as token balances or allowances.
+Perform a Uniswap V3 swap on Ethereum via an Interchain Account from a controlling account on another chain. The Interchain Account must satisfy any requirements the receiving contract has on `msg.sender`, such as token balances or allowances.
 
 ```solidity
 uint32 ethereumDomain = 0x657468;
