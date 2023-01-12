@@ -9,7 +9,7 @@ The Hyperlane agents collect useful information about activity on the system, in
 The APIs are currently available free of charge and without any required authentication.
 
 {% hint style="info" %}
-Connect your preferred fetch client or library to [https://api.hyperlane.xyz/api/rest](https://api.hyperlane.xyz/api/rest/) to query data!
+Connect your preferred fetch client or library to [https://api-v1.hyperlane.xyz/api/rest](https://api-v1.hyperlane.xyz/api/rest) to query data!
 {% endhint %}
 
 ### Example Query
