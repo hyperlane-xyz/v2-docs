@@ -50,9 +50,6 @@ Next, add an empty entry for the local chain to `hyperlane-deploy/config/network
 You can then run the following command to deploy the core contracts to your chain.
 
 ```bash
-# The private key that will be used to deploy the contracts. Does not have any
-# permissions post-deployment, any key with a balance will do.
-export PRIVATE_KEY=0x1234
 # The name of the chain to deploy to. Used to configure the localDomain for the
 # Mailbox contract.
 export LOCAL=YOUR_CHAIN_NAME
@@ -62,8 +59,9 @@ export RPC_URL=YOUR_CHAIN_RPC_URL
 # Used to configure the default MultisigIsm.
 export REMOTES=ethereum,polygon,avalanche,celo,arbitrum,optimism,bsc,moonbeam
 
-forge script scripts/DeployCore.s.sol --broadcast --rpc-url $RPC_URL \
-  --private-key $PRIVATE_key
+# Pass whatever wallet option you would like to use
+# https://book.getfoundry.sh/reference/forge/forge-script#wallet-options---raw
+forge script scripts/DeployCore.s.sol --broadcast --rpc-url $RPC_URL
 ```
 
 This script will write a partial Hyperlane agent config to `hyperlane-deploy/config/$LOCAL_agent_config.json`, which will be used in the following step.
@@ -72,33 +70,11 @@ Deployed contract addresses will be written to `hyperlane-deploy/config/networks
 
 ## 2. Run validators
 
-First, clone the `hyperlane-monorepo` repo.
-
-```bash
-git clone git@github.com:hyperlane-xyz/hyperlane-monorepo.git
-```
-
-&#x20;You will need to add the agent config from [#1.-deploy-the-core-smart-contracts](deployers.md#1.-deploy-the-core-smart-contracts "mention") to a base environment config, either [`testnet3_config.json`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/config/testnet3/testnet3\_config.json) or [`mainnet2_config.json`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/config/mainnet2/mainnet2\_config.json).
-
 {% hint style="warning" %}
-When copying the agent config, the numerical fields `index.from` and `domain` must be converted to strings by surrounding them with quotes.
+When using the agent config, the numerical fields `index.from` and `domain` must be converted to strings by surrounding them with quotes.
 {% endhint %}
 
-The validators for your chain will need to be run with a binary that includes these changes.
-
-If the validators will be running using a docker image, go ahead and build that image and push it to the container registry of your choice:
-
-```bash
-export TAG=YOUR_IMAGE_TAG
-export USER=YOUR_CONTAINER_REGISTRY_USER
-cd hyperlane-monorepo
-# If building for amd64, use "linux/amd64".
-docker buildx build rust --platform linux/x86_64 --tag hyperlane-agent
-docker image tag hyperlane-agent $USER/hyperlane-agent:$TAG
-docker image push $USER/hyperlane-agent:$TAG
-```
-
-Validators can use this image (or the locally built binary) when following the [getting-started](getting-started/ "mention")instructions.
+Follow the Validators guide to run validators for the mailbox on your chain. Include the agent config from [#1.-deploy-the-core-smart-contracts](deployers.md#1.-deploy-the-core-smart-contracts "mention") in `CONFIG_FILES`. If you use docker, you will need to mount the file into the container.
 
 Make sure to collect the validator addresses for use in the next step.
 
@@ -120,14 +96,12 @@ Applications using this ISM will only be able to verify messages sent **from** t
 export OWNER=0x1234
 # The private key that will be used to deploy the contracts. Does not have any
 # permissions post-deployment, any key with a balance will do.
-export PRIVATE_KEY=0x1234
 # An RPC url for the chain to deploy to.
 export RPC_URL=YOUR_CHAIN_RPC_URL
 # The comma separated name(s) of the chain(s) to receive messages from.
 export REMOTES=YOUR_CHAIN_NAME
 
-forge script scripts/DeployMultisigIsm.s.sol --broadcast --rpc-url $RPC_URL \
-  --private-key $PRIVATE_KEY
+forge script scripts/DeployMultisigIsm.s.sol --broadcast --rpc-url $RPC_URL
 ```
 
 You should see the following output. Save the contract addresses for future use. Applications will be able to use the `MultisigIsm` to verify messages sent from your chain. You will use the `TestRecipient` contract to verify that everything is working properly in step [#6.-send-test-messages](deployers.md#6.-send-test-messages "mention").
@@ -144,21 +118,19 @@ Script ran successfully.
   TestRecipient deployed at address 0x2952EAB89729522252249d08883449e7CaD21326
 ```
 
-
-
 ## 4. Run a relayer for the local chain
 
-Using the modified agent binary you built in [#2.-run-validators](deployers.md#2.-run-validators "mention"), follow the [getting-started-1](getting-started-1/ "mention")instructions to run a relayer for the local chain.
+Similar to [#2.-run-validators](deployers.md#2.-run-validators "mention"), follow the [getting-started-1](getting-started-1/ "mention") instructions to run a relayer for the local chain by including the agent config in `CONFIG_FILES`
 
-This relayer will deliver messages sent **from** the local chain **to** each of the remote chains.\
+This relayer will deliver messages sent **from** the local chain **to** each of the remote chains. Remember to set the `HYP_RELAYER_DESTINATIONCHAINNAMES`for your supported remotes appropriately.\
 \
 You will need the validator addresses and S3 bucket names/regions from [#2.-run-validators](deployers.md#2.-run-validators "mention")in order to properly configure the relayer.
 
 ## 5. Run relayer(s) for the remote chain(s)
 
-Using the modified agent binary you built in [#2.-run-validators](deployers.md#2.-run-validators "mention"), follow the [getting-started-1](getting-started-1/ "mention")instructions to run a relayer for each of the remote chains.
+Reversely, follow the [getting-started-1](getting-started-1/ "mention") instructions to run a relayer for each of the remote chains.
 
-These relayers will deliver messages sent **from** the remote chains **to** the local chain.
+These relayers will deliver messages sent **from** the remote chains **to** the local chain. Remember to set the `HYP_RELAYER_DESTINATIONCHAINNAMES`for your supported remotes appropriately.
 
 You can reference the validator addresses and S3 bucket names/regions needed to configure the relayer in either of the following files: [testnet](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/typescript/infra/config/environments/testnet3/validators.ts), [mainnet](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/typescript/infra/config/environments/mainnet2/validators.ts).
 
@@ -173,9 +145,6 @@ The explorer may not properly display your message, as it was sent to a chain th
 {% endhint %}
 
 ```bash
-# The private key that will be used to send a test message.
-# Only needs to be able to pay for gas.
-export PRIVATE_KEY=0x1234
 # An RPC url for the origin chain
 export RPC_URL=YOUR_CHAIN_RPC_URL
 # The name of the chain to send the message from.
@@ -187,12 +156,11 @@ export DESTINATION=DESTINATION_CHAIN_NAME
 # in step 1.
 # If sending to a remote chain, use the address of the corresponding TestRecipient
 # from step 3.
-export RECIPIENT=DESTINATION_CHAIN_NAME
+export RECIPIENT=TEST_RECIPIENT_ADDRESS
 # The name of the chain to send the message to, e.g. "hello world"
 export BODY=BODY
 
-forge script scripts/SendTestMessage.s.sol --broadcast --rpc-url $RPC_URL \
-  --private-key $PRIVATE_KEY
+forge script scripts/SendTestMessage.s.sol --broadcast --rpc-url $RPC_URL
 ```
 
 If your message is not showing up in the explorer, you can check its delivery status by running the following script:

@@ -80,6 +80,7 @@
   * [Environment variables](operators/getting-started-1/environment-variables.md)
   * [Message filtering](operators/getting-started-1/message-filtering.md)
   * [Start relaying](operators/getting-started-1/start-validating.md)
+* [Troubleshooting](operators/troubleshooting.md)
 
 ## Resources
 
