@@ -138,7 +138,7 @@ You can reference the validator addresses and S3 bucket names/regions needed to 
 
 You can check everything is working correctly by sending a test message between each pair of chains.
 
-This script will log the message ID and a link to the [message explorer](https://explorer-v2.hyperlane.xyz/).
+This script will log the message ID and a link to the [message explorer](https://explorer.hyperlane.xyz/).
 
 {% hint style="warning" %}
 The explorer may not properly display your message, as it was sent to a chain that the explorer does not know about.

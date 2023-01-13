@@ -57,6 +57,6 @@ Check out the [getting started guide](developers/getting-started.md) for everyth
 
 ### Want to learn more about the protocol?
 
-Take a look at the [protocol docs](protocol/overview.md) to understand the Hyperlane protocol architecture and [security model](broken-reference).
+Take a look at the [protocol docs](protocol/overview.md) to understand the Hyperlane protocol architecture and [security model](protocol/security/sovereign-consensus.md).
 
 ### Why should you use Hyperlane? Continue to the [next page](introduction/why-hyperlane/) to learn more&#x20;

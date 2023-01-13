@@ -38,7 +38,7 @@ If no `interchainSecurityModule` is specified, the default from the Mailbox will
 
 ### Deployment
 
-Clone the [https://github.com/hyperlane-xyz/hyperlane-token](https://github.com/hyperlane-xyz/hyperlane-token) repo and get it setup:
+Clone the [Hyperlane Token repo](https://github.com/hyperlane-xyz/hyperlane-token) and get it setup:
 
 ```
 $ yarn install

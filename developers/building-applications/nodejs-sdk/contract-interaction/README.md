@@ -10,7 +10,7 @@ The Hyperlane SDK simplifies the interface for smart contract applications deplo
 
 The `HyperlaneApp` abstraction is a mapping that resolves a chain to a collection of [ethers Contracts](https://docs.ethers.io/v5/api/contract/contract/#Contract). Developers should extend `HyperlaneApp` and can add methods for different kinds of contract calls/transactions they would like to initiate.
 
-A simple `AbacusApp` extension could look like this:
+A simple `HyperlaneApp` extension could look like this:
 
 ```typescript
 export class MyHyperlaneApp<Chain extends ChainName = ChainName> 
@@ -26,7 +26,7 @@ export class MyHyperlaneApp<Chain extends ChainName = ChainName>
 ```
 
 {% hint style="info" %}
-See the [Hyperlane Hello World](https://github.com/abacus-network/abacus-app-template/blob/main/src/sdk/app.ts) app for an example of how to extend `AbacusApp`.
+See the [Hyperlane Hello World](https://github.com/hyperlane-xyz/hyperlane-app-template/blob/main/src/app/app.ts) app for an example of how to extend `HyperlaneApp`.
 {% endhint %}
 
 ### Interact

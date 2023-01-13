@@ -8,7 +8,7 @@ Inheriting from [`HyperlaneConnectionClient`](https://github.com/hyperlane-xyz/h
 
 This mix-in contract maintains a pointers to the three contracts Hyperlane developers may need to interact with:
 
-1. ``[`Mailbox`](broken-reference) (required)
+1. ``[`Mailbox`](../../../protocol/messaging/) (required)
 2. ``[`InterchainGasPaymaster`](../../messaging-api/gas.md) (optional)
 3. ``[`InterchainSecurityModule`](../../../protocol/security/sovereign-consensus.md) (optional)
 

@@ -39,7 +39,7 @@ For a simple, single contract app that extends the `Router` contract, it is suff
 ```
 
 {% hint style="info" %}
-For an example deployer implementation see the [Hyperlane Hello World](https://github.com/abacus-network/abacus-app-template/blob/main/src/deploy/deploy.ts) app.
+For an example deployer implementation see the [Hyperlane Hello World](https://github.com/hyperlane-xyz/hyperlane-app-template/blob/main/src/deploy/deploy.ts) app.
 {% endhint %}
 
 ### Interact
@@ -56,5 +56,5 @@ const contracts = await myDeployer.deploy();
 In scripts that calls `deploy`, consider persisting deployment artifacts as they will be  important for future use of your application. This includes addresses, compiler options, and contract constructor arguments.
 
 {% hint style="info" %}
-For an example deployment script, see the [Hyperlane Hello World](https://github.com/abacus-network/abacus-app-template/blob/main/src/scripts/deploy.ts) app.
+For an example deployment script, see the [Hyperlane Hello World](https://github.com/hyperlane-xyz/hyperlane-app-template/blob/main/src/deploy/deploy.ts) app. This script is the same as the one provided above.&#x20;
 {% endhint %}

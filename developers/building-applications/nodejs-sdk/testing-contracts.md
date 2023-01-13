@@ -8,7 +8,7 @@ Once you're done writing your contracts, it's time to test them! You can use the
 
 ### Example Usage
 
-In the example below, we simulate message passing between two chains. For more in depth examples see the tests in the [Hyperlane template application](https://github.com/abacus-network/abacus-app-template/tree/main/src/test).
+In the example below, we simulate message passing between two chains. For more in depth examples see the tests in the [Hyperlane template application](https://github.com/hyperlane-xyz/hyperlane-app-template/tree/main/src/test).
 
 ```typescript
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers';

@@ -4,7 +4,7 @@ description: Make your warp route accessible to your users by deploying the refe
 
 # Deploy the UI for your Warp Route
 
-After [deploying the contracts for your own warp route](deploy-your-own-warp-route.md), it's time to deploy a UI for it. For that, you can simply use our UI template [https://github.com/hyperlane-xyz/hyperlane-warp-ui-template](https://github.com/hyperlane-xyz/hyperlane-warp-ui-template)
+After [deploying the contracts for your own warp route](deploy-your-own-warp-route.md), it's time to deploy a UI for it. For that, you can simply use our [UI template](https://github.com/hyperlane-xyz/hyperlane-warp-ui-template)
 
 ### Configure the UI
 

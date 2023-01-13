@@ -12,7 +12,7 @@ description: Run your validator
 
 Validators expose metrics on the port number specified in the environment variable `HYP_BASE_METRICS`. Port `9090` is recommended, though any valid port can be chosen.
 
-We also provide a mostly-ready-to-go grafana dashboard to get you started, you can find the source and instructions for importing it under [tools/grafana](https://github.com/abacus-network/abacus-monorepo/tree/main/tools/grafana). If you want to use your own, the `hyperlane_latest_checkpoint` is the most critical metric in both the `phase="validator_observed"` and `phase="validator_processed"` dimension. It should gradually increase and the two should never really be out of sync.
+We also provide a mostly-ready-to-go grafana dashboard to get you started, you can find the source and instructions for importing it under [tools/grafana](https://github.com/hyperlane-xyz/hyperlane-monorepo/tree/main/tools/grafana). If you want to use your own, the `hyperlane_latest_checkpoint` is the most critical metric in both the `phase="validator_observed"` and `phase="validator_processed"` dimension. It should gradually increase and the two should never really be out of sync.
 
 ### Running multiple validators
 
@@ -22,7 +22,7 @@ We encourage folks to validate on as many chains as they are interested in suppo
 
 You can run the validator binary by compiling the code directly, or using a docker image provided by Abacus Works.
 
-The validator can be run directly via  `cargo run --bin validator` in the `rust` folder of the [monorepo](https://github.com/abacus-network/abacus-monorepo).
+The validator can be run directly via  `cargo run --bin validator` in the `rust` folder of the [monorepo](https://github.com/hyperlane-xyz/hyperlane-monorepo).
 
 Alternatively, the docker image can be run via `docker run -it gcr.io/abacus-labs-dev/hyperlane-agent:sha-6f9ce82 ./validator`.
 
