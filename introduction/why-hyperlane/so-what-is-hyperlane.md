@@ -4,7 +4,11 @@ description: Before you know why you should use it, you should know what it is, 
 
 # So, what is Hyperlane?
 
-Hyperlane is the modular interoperability platform empowering developers to build applications that can easily and securely communicate between multiple blockchains. We call these interchain applications.\
+Hyperlane is the modular interoperability platform empowering developers to build applications that can easily and securely communicate between multiple blockchains. We call these interchain applications.
+
+<figure><img src="../../.gitbook/assets/Hyperlane Message Lifecycle Clear bg.png" alt=""><figcaption><p>Architecture overview of Hyperlane depicting the life cycle of a message</p></figcaption></figure>
+
+\
 \
 You should also know what Hyperlane is not. It is not another token bridge, it is a network between blockchains. Developers can leverage this network to build applications that can easily and securely interact between the blockchains within it, allowing them to serve users on any of those chains. We call this network the Interchain Highway, it is the most accessible, secure, and fast route between the blockchains it connects. \
 \
