@@ -1,5 +1,5 @@
 ---
-description: Attach value with your Hyperlane messages using our Liquidity Layer API.
+description: Attach value with your Hyperlane messages using the Liquidity Layer API.
 ---
 
 # Liquidity Layer API
@@ -55,7 +55,7 @@ interface ILiquidityLayerRouter {
 }
 ```
 
-The address of the `LiquidityLayerRouter` is `0x3428e12EfDb2446c1E7feC3f1CED099A8a7cD541`  on every chain.
+The address of the `LiquidityLayerRouter` is `0x2abe0860D81FB4242C748132bD69D125D88eaE26` on every chain.
 
 `_destinationDomain` is the chain you're sending to, it is **not** the chainID, rather it is a unique ID assigned by the protocol to each chain. Domain ID's can be found [here](../domains.md).
 

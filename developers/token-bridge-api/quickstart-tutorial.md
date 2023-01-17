@@ -14,7 +14,7 @@ Note that this tutorial does not cover [paying for the cost of relaying the mess
 
 ### Inputs
 
-* `$TOKEN_BRIDGE_ROUTER`: The address of the TokenBridgeRouter which exists on Goerli and Fuji right now `0x3428e12EfDb2446c1E7feC3f1CED099A8a7cD541`
+* `$TOKEN_BRIDGE_ROUTER`: The address of the TokenBridgeRouter  `0x2abe0860D81FB4242C748132bD69D125D88eaE26`
 * `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../domains.md). Goerli's domain ID is `5`, Fuji is `43113`
 * `$RECIPIENT`: The address of the `TestTokenRecipient` contract on the destination chain padded to bytes32, `0x00000000000000000000000036597C9C49F3c5887A86466398480ddB66aD0759` on every chain.
 * `$TOKEN_ADDRESS`: The address of the Token you want to transfer. On Goerli, USDC is at `0x07865c6e87b9f70255377e024ace6630c1eaa37f`. On Fuji, USDC is at `0x5425890298aed601595a70ab815c96711a31bc65`.
@@ -33,9 +33,9 @@ Sending a message with tokens is a simple matter of calling `TokenBridgeRouter.d
 2. Under the `Contract` tab, find the `Write as Proxy` button.
 3. Click on the `Connect to Web3` button to connect your Wallet (i.e. Metamask). Make sure that you are on the correct network.
 4. Expand the `approve` box.
-5. Approve the TokenBridgeRouter at `0x3428e12EfDb2446c1E7feC3f1CED099A8a7cD541` as the spender with the desirable amount (Note that USDC has 6 decimals vs. the conventional 18)
+5. Approve the TokenBridgeRouter at `0x2abe0860D81FB4242C748132bD69D125D88eaE26` as the spender with the desirable amount (Note that USDC has 6 decimals vs. the conventional 18)
 6. Submit the transaction via Metamask
-7. Navigate to the TokenBridgeRouter contract page on [Etherscan](https://goerli.etherscan.io/address/0x3428e12EfDb2446c1E7feC3f1CED099A8a7cD541).
+7. Navigate to the TokenBridgeRouter contract page on [Etherscan](https://goerli.etherscan.io/address/0x2abe0860D81FB4242C748132bD69D125D88eaE26).
 8. Under the `Contract` tab, find the `Write as Proxy` button.
 9. Click on the `Connect to Web3` button to connect your Wallet (i.e. Metamask). Make sure that you are on the correct network.
 10. Expand the `dispatchWithTokens` box.

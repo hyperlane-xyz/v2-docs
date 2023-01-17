@@ -1,10 +1,10 @@
 ---
-description: Make your warp route accessible to your users by deploying the reference UI
+description: A front-end for interchain token transfers
 ---
 
 # Deploy the UI for your Warp Route
 
-After [deploying the contracts for your own warp route](deploy-your-own-warp-route.md), it's time to deploy a UI for it. For that, you can simply use our [UI template](https://github.com/hyperlane-xyz/hyperlane-warp-ui-template)
+After you [deploy-a-warp-route.md](deploy-a-warp-route.md "mention"), you may want to deploy a UI for it. For that, you can simply use the [UI template](https://github.com/hyperlane-xyz/hyperlane-warp-ui-template).
 
 ### Configure the UI
 
@@ -49,3 +49,6 @@ Since the UI is a very simple Next.js app, you can use your favorite hosting ser
 
 And that's it. Now you and your users can use the UI to send tokens from the collateral chain to remote chains, from one remote chain to another, and from any remote chain back to the collateral chain.
 
+### Customize the UI
+
+You can customize the UI to your token by following these [instructions](https://github.com/hyperlane-xyz/hyperlane-warp-ui-template/blob/main/CUSTOMIZE.md).
