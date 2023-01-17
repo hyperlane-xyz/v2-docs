@@ -27,6 +27,7 @@ First, set up the `hyperlane-deploy` repo. This repo contain scripts to deploy H
 git clone git@github.com:hyperlane-xyz/hyperlane-deploy.git
 cd hyperlane-deploy
 yarn install
+git submodule init && git submodule update --remote
 ```
 
 Next, add an empty entry for the local chain to `hyperlane-deploy/config/networks.json`, e.g.
