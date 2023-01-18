@@ -1,12 +1,14 @@
 ---
-description: >-
-  Send a call via Interchain Queries to any contract on any Hyperlane supported
-  network.
+description: Query state on remote chains
 ---
 
 # Queries API
 
-Developers can send cross chain view calls via Interchain Queries by calling the `InterchainQueryRouter.query` endpoint. In contrast with the [Messaging API](../messaging-api/send.md), the Interchain Queries API allows developers to send view calls to any contract, not just `IMessageRecipient`s with the `handle()` function, making it compatible with legacy contracts. To achieve this, message encoding must be constrained to ABI encoded function calls. Additionally, the `callback` functions must be defined on the interface of the querying contract for authentication purposes.
+Developers can use the Queries API to query state on remote chains via interchain view calls.
+
+Unlike the [messaging-api](../messaging-api/ "mention"), which requires recipients to implement a specific interface, the Queries API allows developers to make view calls on any remote contract.
+
+To use the Interchain Queries API, developers specify a remote chain, an ABI encoded view call to make on the remote chain, and an ABI encoded callback to be made on the querying contract, to which the return value of the remote view call will be appended.
 
 ```mermaid
 %%{init: {'theme': 'neutral', 'themeCSS': '.node rect { fill: #025AA1 } .edgeLabel { color: black } .nodeLabel { color: white }'}}%%
@@ -27,38 +29,59 @@ flowchart RL
 
 ### Interface
 
-```solidity
-interface IInterchainQueryRouter {
+<pre class="language-solidity"><code class="lang-solidity">interface IInterchainQueryRouter {
+    /**
+     * @param _destinationDomain Domain of destination chain
+     * @param target The address of the contract to query on destination chain.
+     * @param queryData The calldata of the view call to make on the destination
+<strong>     * chain.
+</strong>     * @param callback Callback function selector on `msg.sender` and optionally
+     * abi-encoded prefix arguments.
+     * @return messageId The ID of the Hyperlane message encoding the query.
+     */
     function query(
         uint32 _destinationDomain,
         address target,
         bytes calldata queryData,
         bytes calldata callback
-    ) external returns (uint256);
+    ) external returns (bytes32);
+
+    /**
+     * @param _destinationDomain Domain of destination chain
+     * @param call The target address of the contract to query on destination
+     * chain, and the calldata of the view call to make.
+     * @param callback Callback function selector on `msg.sender` and optionally
+     * abi-encoded prefix arguments.
+     * @return messageId The ID of the Hyperlane message encoding the query.
+     */
     function query(
         uint32 _destinationDomain,
         Call calldata call,
         bytes calldata callback
-    ) external;
+    ) external returns (bytes32);
+
+    /**
+     * @param _destinationDomain Domain of destination chain
+     * @param calls Array of calls (to and data packed struct) to be made on
+     * destination chain in sequence.
+     * @param callbacks Array of callback function selectors on `msg.sender`
+     * and optionally abi-encoded prefix arguments.
+     */
     function query(
         uint32 _destinationDomain,
         Call[] calldata calls,
         bytes[] calldata callbacks
-    ) external;
+    ) external returns (bytes32);
 }
-```
+</code></pre>
 
 You can find the address of the `InterchainQueryRouter` contract on each chain [here](../addresses.md#interchainqueryrouter), and chain domains [here](../domains.md).
-
-`_destinationDomain` is the chain you're sending to, it is **not** the chainID, rather it is a unique ID assigned by the protocol to each chain. Domain ID's can be found [here](../domains.md).
-
-`calls` is an array of `Call` structs, each of which contains the address of the contract you're sending to, and the ABI encoded function call you're making. More on example usage below.
 
 ## Example Usage
 
 ### Encoding
 
-Calls can be easily encoded with the `abi.encodeCall` function, like the Accounts API you can either call `dispatch` directly or pass `Call` structs
+Calls can be easily encoded with the `abi.encodeCall` function. As with the [send](../send/ "mention"), you can either call `dispatch` directly or pass `Call` structs
 
 ```solidity
 interface ENS {
@@ -67,8 +90,7 @@ interface ENS {
 }
 
 ENS ens = ENS(0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e);
-uint256 label = ...;
-uint256(keccak256('hyperlane'));  // hyperlane.eth
+uint256 label = uint256(keccak256('hyperlane'));  // hyperlane.eth
 Call ownerCall = Call({
     to: address(ens),
     data: abi.encodeCall(ens.ownerOf, (label));
@@ -81,18 +103,56 @@ Call nameExpiresCall = Call({
 
 ### Querying
 
-Query the ENS contract on Ethereum for the owner and expiration time of the any domain (from any network).
+Query the ENS contract on Ethereum for the owner and expiration time of the any domain (from any network), and write it to storage.
 
-```solidity
-uint32 constant ethereumDomain = 0x657468;
-// consistent across all chains
-address constant iqsRouter = 0x6141e7E7fA2c1beB8be030B0a7DB4b8A10c7c3cd;
-IInterchainQueryRouter(iqsRouter).query(
+<pre class="language-solidity"><code class="lang-solidity"><strong>uint32 constant ethereumDomain = 1;
+</strong>// consistent across all chains
+address constant iqsRouter = 0x234b19282985882d6d6fd54dEBa272271f4eb784;
+// The address of the ENS contract on Ethereum
+address constant ens = 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e;
+
+interface ENS {
+    function ownerOf(uint256 label) external view returns (address);
+}
+
+// Stores the owners of queried ENS labels.
+mapping(uint256 => address) owner;
+
+/// @notice Only allow this function to be called via an IQS callback.
+modifier onlyCallback() {
+  require(msg.sender == iqsRouter);
+  _;
+}
+
+/**
+  * @notice Writes the result of an ENS label owner query.
+  * Only callable as an IQS callback from a query initiated by this contract.
+  * @param _label The ENS label
+  * @param _owner The ENS label owner
+  */
+function writeOwner(uint256 _label, address _owner) onlyCallback() external {
+  owner[_label] = _owner;
+}
+
+function queryEnsLabel(string memory _labelStr) external returns (bytes32) {
+  ENS _ens = ENS(ens);
+  uint256 _label = uint256(keccak256(_labelStr));
+  Call _ownerCall = Call({
+      to: address(ens),
+      data: abi.encodeCall(ens.ownerOf, (_label));
+  });
+  // The return value of ownerOf() will be automatically appended when
+  // making this callback
+  bytes memory _callback = abi.encodePacked(this.writeOwner.selector, _label);
+  // Dispatch the call. Will result in a view call of ENS.ownerOf() on Ethereum, 
+  // and a callback to this.writeOwner(_label, _owner).
+  return IInterchainQueryRouter(iqsRouter).query(
     ethereumDomain,
-    [ownerCall, nameExpiresCall],
-    [callback1, callback2]
-);
-```
+    _ownerCall,
+    _callback
+  );
+}
+</code></pre>
 
 ### Future Extensions
 
