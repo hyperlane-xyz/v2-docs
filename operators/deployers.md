@@ -56,13 +56,16 @@ You can then run the following command to deploy the core contracts to your chai
 export LOCAL=YOUR_CHAIN_NAME
 # An RPC url for the chain to deploy to.
 export RPC_URL=YOUR_CHAIN_RPC_URL
+# Deployer private key, must have a balance to pay for gas
+# Any of the following alternatives to --private-key will work
+# https://book.getfoundry.sh/reference/forge/forge-script#wallet-options---raw
+export PRIVATE_KEY=YOUR_PRIVATE_KEY
 # The comma separated name(s) of the chains to receive messages from.
 # Used to configure the default MultisigIsm.
 export REMOTES=ethereum,polygon,avalanche,celo,arbitrum,optimism,bsc,moonbeam
 
-# Pass whatever wallet option you would like to use
-# https://book.getfoundry.sh/reference/forge/forge-script#wallet-options---raw
-forge script scripts/DeployCore.s.sol --broadcast --rpc-url $RPC_URL
+forge script scripts/DeployCore.s.sol --broadcast --rpc-url $RPC_URL \
+    --private-key $PRIVATE_KEY
 ```
 
 This script will write a partial Hyperlane agent config to `hyperlane-deploy/config/$LOCAL_agent_config.json`, which will be used in the following step.
@@ -99,10 +102,15 @@ export OWNER=0x1234
 # permissions post-deployment, any key with a balance will do.
 # An RPC url for the chain to deploy to.
 export RPC_URL=YOUR_CHAIN_RPC_URL
+# Deployer private key, must have a balance to pay for gas
+# Any of the following alternatives to --private-key will work
+# https://book.getfoundry.sh/reference/forge/forge-script#wallet-options---raw
+export PRIVATE_KEY=YOUR_PRIVATE_KEY
 # The comma separated name(s) of the chain(s) to receive messages from.
 export REMOTES=YOUR_CHAIN_NAME
 
-forge script scripts/DeployMultisigIsm.s.sol --broadcast --rpc-url $RPC_URL
+forge script scripts/DeployMultisigIsm.s.sol --broadcast --rpc-url $RPC_URL \
+    --private-key $PRIVATE_KEY
 ```
 
 You should see the following output. Save the contract addresses for future use. Applications will be able to use the `MultisigIsm` to verify messages sent from your chain. You will use the `TestRecipient` contract to verify that everything is working properly in step [#6.-send-test-messages](deployers.md#6.-send-test-messages "mention").
@@ -148,6 +156,10 @@ The explorer may not properly display your message, as it was sent to a chain th
 ```bash
 # An RPC url for the origin chain
 export RPC_URL=YOUR_CHAIN_RPC_URL
+# Sender private key, must have a balance to pay for gas
+# Any of the following alternatives to --private-key will work
+# https://book.getfoundry.sh/reference/forge/forge-script#wallet-options---raw
+export PRIVATE_KEY=YOUR_PRIVATE_KEY
 # The name of the chain to send the message from.
 export ORIGIN=ORIGIN_CHAIN_NAME
 # The name of the chain to send the message to.
@@ -161,7 +173,8 @@ export RECIPIENT=TEST_RECIPIENT_ADDRESS
 # The name of the chain to send the message to, e.g. "hello world"
 export BODY=BODY
 
-forge script scripts/SendTestMessage.s.sol --broadcast --rpc-url $RPC_URL
+forge script scripts/SendTestMessage.s.sol --broadcast --rpc-url $RPC_URL \
+  --private-key $PRIVATE_KEY
 ```
 
 If your message is not showing up in the explorer, you can check its delivery status by running the following script:
