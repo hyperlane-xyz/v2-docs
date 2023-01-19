@@ -30,9 +30,7 @@ Despite that, permissionless is sorely missing from the world of interoperabilit
 
 Hyperlane's architecture was created with the prospect of permissionelss deployment in mind, with the ultimate goal of achieving this holy grail of interoperability.&#x20;
 
-It is currently in development, and will be live before the end of 2023. Given its uniqueness, more details will only be shared about the implementation of this feature as it nears release.
-
-In the meantime, you can request Hyperlane deployments using this [form](https://1nd5rxtdcl2.typeform.com/to/WJSVc3wR).
+The MVP of Permissionless Deployment is now live, and accessible [here](../../operators/deployers.md). Try it out and give us your feedback!
 
 #### Developer Focus
 
