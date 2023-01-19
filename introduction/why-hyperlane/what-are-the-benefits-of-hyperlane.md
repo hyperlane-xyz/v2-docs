@@ -2,7 +2,7 @@
 
 There are a number of benefits to using Hyperlane, several of which stem from the differentiating features discussed [here](what-sets-hyperlane-apart.md), but before we get to them let's touch on more basic benefits that accrue to applications and blockchains that connect to the Interchain Highway.
 
-#### Applications
+#### For Applications
 
 Hyperlane connects your applications across many blockchains. This allows users to interact with your application from the chain they're on. Reducing the amount of hoops they have to jump through just to get to your app. It's about abstracting away the complexity of navigating between chains, and letting you and your users simply focus on your app.
 
@@ -10,7 +10,7 @@ Apps that have achieved traction on one chain and would like to expand to more c
 
 Hyperlane enables you to treat any smart contract environment as your execution layer, allowing you to leverage Hyperlane as a smart router for execution, routing your messages to the most suitable chain given the parameters you care about most. For example, if you're optimizing for cost, you could route to the most cost effective chain, and use Hyperlane to 'settle' back on your preferred home base when you want.
 
-#### Blockchains, Rollups, and Appchains
+#### For Blockchains, Rollups, and Appchains
 
 But what about a blockchain? How can it benefit from Hyperlane? A Hyperlane deployment on a blockchain means every current and future application on that chain gets to accrue the benefits of interchain connectivity. Additionally, chains can benefit from new traffic that would not have arrived if not for Hyperlane. A Hyperlane deployment on your chain opens up a new trade route. It creates an onramp to the Interchain Highway, making it possible for your chain to access the users, assets, and other valuable state that exist on blockchains connected to Hyperlane.&#x20;
 
