@@ -6,9 +6,13 @@ description: A front-end for interchain token transfers
 
 After you [deploy-a-warp-route.md](deploy-a-warp-route.md "mention"), you may want to deploy a UI for it. For that, you can simply use the [UI template](https://github.com/hyperlane-xyz/hyperlane-warp-ui-template).
 
-### Configure the UI
+### Configure & Customize the UI
 
-After creating a repo from the template, we customize the UI by specifying the `HypERC20Collateral` from our deploy in [`./src/consts/tokens.json`](https://github.com/hyperlane-xyz/hyperlane-warp-ui-template/blob/main/src/consts/tokens.json)``
+Follow these [instructions](https://github.com/hyperlane-xyz/hyperlane-warp-ui-template/blob/main/CUSTOMIZE.md) for details on how to configure the UI's tokens and change the default branding assets/theme.
+
+#### Configure Tokens
+
+As mentioned in the [customization instructions](https://github.com/hyperlane-xyz/hyperlane-warp-ui-template/blob/main/CUSTOMIZE.md), the UI repo contains a token list (see `./src/consts/tokens.json)`which much be updated. The default list looks like this:
 
 ```
 {
@@ -40,15 +44,12 @@ Under `hypCollateralAddress`, specify the router address that you got on the col
 
 ### Deploy the UI
 
-Since the UI is a very simple Next.js app, you can use your favorite hosting service to host it. In this guide, we will be using Vercel.
+Since the UI is a Next.js app, you can use your favorite hosting service to host it. We recommend Vercel, which works very well with Next.
 
 * Sign up for Vercel ([https://vercel.com/](https://vercel.com/))
 * Create a new project
 * Connect it to your Git repo
 * Hit Deploy!
 
-And that's it. Now you and your users can use the UI to send tokens from the collateral chain to remote chains, from one remote chain to another, and from any remote chain back to the collateral chain.
+And that's it! Now you and your users can use the UI to send tokens from the collateral chain to remote chains, from one remote chain to another, and from any remote chain back to the collateral chain.
 
-### Customize the UI
-
-You can customize the UI to your token by following these [instructions](https://github.com/hyperlane-xyz/hyperlane-warp-ui-template/blob/main/CUSTOMIZE.md).

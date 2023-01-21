@@ -61,12 +61,12 @@ This Warp Route is secured by the default ISMs that are set on the `Mailboxes` f
 
 ### 3. Deployment
 
-Run the following scrip to deploy your Warp Route:
+Run the following script to deploy your Warp Route:
 
 ```
 $ DEBUG=* yarn ts-node scripts/deploy.ts --private-key $PRIVATE_KEY ----token-config example-config.json
 ```
 
-You have to pass a private key and the path to the config file as arguments to the command. If you would like to see more verbose deployment output, set the `DEBUG=*` env var.
+You must pass a private key and the path to the config file as arguments for the deploy script. Setting the `DEBUG=*` env var as shown above allows for more verbose deployment logging to be displayed.
 
 When the command finishes, it will output the list of contracts.
