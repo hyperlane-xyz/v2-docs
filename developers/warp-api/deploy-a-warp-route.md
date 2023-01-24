@@ -64,9 +64,11 @@ This Warp Route is secured by the default ISMs that are set on the `Mailboxes` f
 Run the following script to deploy your Warp Route:
 
 ```
-$ DEBUG=* yarn ts-node scripts/deploy.ts --private-key $PRIVATE_KEY --config my-config.json
+$ DEBUG=* yarn ts-node scripts/deploy.ts --private-key $PRIVATE_KEY --token-config my-config.json
 ```
 
 You must pass a private key and the path to the config file as arguments for the deploy script. Setting the `DEBUG=*` env var as shown above allows for more verbose deployment logging to be displayed.
+
+Example configs can be found in `./configs/`, one for tokens and another for chains. The chains config can be used to enable permisionless deployments, or to override the Hyperlane SDK's default values. Use the `--chain-config` flag to pass a chain config path to the deploy script.
 
 When the command finishes, it will output the list of contracts.
