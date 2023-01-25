@@ -76,7 +76,7 @@ Future changes, like accurately quoted interchain gas payments using token excha
 
 **How do I pay for gas with middlewares, like Interchain Accounts, Interchain Queries, and the Liquidity Layer?**
 
-All of these "middlewares" return the message ID that's dispatched, which can&#x20;
+See our entry on [Middleware APIs](middleware-apis.md) for more details.&#x20;
 
 **This may break some of my existing mainnet contracts that are live on v2.**
 
