@@ -6,7 +6,7 @@ description: Seamless and secure communication between blockchains
 
 Hyperlane is the modular interoperability platform. Hyperlane empowers developers to build interchain applications, apps that can communicate between many blockchain environments and offer users a unified experience.&#x20;
 
-Hyperlane's API's offer developers secure and simple ways to communicate between blockchains, and the Hyperlane SDK can makes building interchain applications quick and easy. &#x20;
+Hyperlane's API's offer developers secure and simple ways to communicate between blockchains, and the Hyperlane SDK can make building interchain applications quick and easy. &#x20;
 
 
 
@@ -52,7 +52,7 @@ flowchart LR
 
 ### Looking to integrate Hyperlane?
 
-Check out the [getting started guide](developers/getting-started.md) for everything you need to start building with Hyperlane. If you run into an issues or have any questions, [join our discord](https://discord.gg/hyperlane) to get support from the community of Hyperlane builders!
+Check out the [getting started guide](developers/getting-started.md) for everything you need to start building with Hyperlane. If you run into an issue or have any questions, [join our discord](https://discord.gg/hyperlane) to get support from the community of Hyperlane builders!
 
 ### Want to learn more about the protocol?
 
