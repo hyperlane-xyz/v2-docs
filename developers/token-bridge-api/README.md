@@ -51,7 +51,7 @@ interface ILiquidityLayerRouter {
         address _token,
         uint256 _amount,
         string calldata _bridge
-    ) external returns (uint256);
+    ) external returns (bytes32);
 }
 ```
 
@@ -101,3 +101,43 @@ interface ILiquidityLayerMessageRecipient {
 
 The same points about access control and encoding from the [messaging-api](../messaging-api/ "mention") apply to the LiquidityLayer API as well, so be sure to check it out. However, rather than requiring access control such that the Mailbox can only call the `handle` function, the LiquidityLayerRouter on the local chain must be the only address that can call the `handleWithTokens` function.
 
+### Paying for Interchain Gas
+
+Just like all Hyperlane messages that wish to have their messages delivered by a relayer, users must [pay for interchain gas](../paying-for-interchain-gas/).
+
+The `dispatchWithTokens` function in the Liquidity Layer API returns the message ID as a `bytes32`. This message ID can then be used by the caller to pay for interchain gas.
+
+Because the Liquidity Layer uses the default ISM for security, the [DefaultIsmInterchainGasPaymaster](../addresses.md#defaultisminterchaingaspaymaster-read-here) IGP should be used. When specifying the amount of gas, the caller must pay for a gas amount high enough to cover:
+
+1. "Overhead" gas used by the Liquidity Layer contract on the destination chain. This is about **280,000 gas**. This is because the actual cost of bridging the tokens via the underlying Circle or Portal bridge can be fairly high.
+2. The gas used by the recipient's `handleWithTokens` function on the destination chain.
+
+#### Gas Payment Example
+
+```solidity
+function dispatchWithTokensAndPayGas() external payable {
+    // First, dispatch with tokens
+    bytes32 messageId = liquidityLayer.dispatchWithTokens(/* ... */);
+
+    // Then, pay for gas
+
+    // The mainnet DefaultIsmInterchainGasPaymaster
+    IInterchainGasPaymaster igp = IInterchainGasPaymaster(
+        0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc
+    );
+    // Pay with the msg.value
+    igp.payForGas{ value: msg.value }(
+         // The ID of the message
+         messageId,
+         // Destination domain
+         destinationDomain,
+         // The total gas amount. This should be the
+         // overhead gas amount (280,000 gas) + gas used by the call being made.
+         // For example, if the handleWithTokens function uses 120,000 gas,
+         // we pay for 400k gas.
+         400000,
+         // Refund the msg.sender
+         msg.sender
+     );
+}
+```

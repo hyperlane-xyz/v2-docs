@@ -154,6 +154,47 @@ function queryEnsLabel(string memory _labelStr) external returns (bytes32) {
 }
 </code></pre>
 
+### Paying for Interchain Gas
+
+Just like all Hyperlane messages that wish to have their messages delivered by a relayer, users must [pay for interchain gas](../paying-for-interchain-gas/).
+
+The various `query` functions in the Queries API each return the message ID as a `bytes32`. This message ID can then be used by the caller to pay for interchain gas.
+
+Because the Queries API uses the default ISM for security, the [DefaultIsmInterchainGasPaymaster](../addresses.md#defaultisminterchaingaspaymaster-read-here) IGP should be used. When specifying the amount of gas, the caller must pay for a gas amount high enough to cover:
+
+1. "Overhead" gas used by the Queries API contract on the destination chain. This is about **80,000 gas**.
+2. The gas used by the user-specified arbitrary query / queries that will be performed on the destination chain.
+
+The gas used by the callback when the query is returned to the origin chain does not need to be explicitly paid for.
+
+#### Gas Payment Example
+
+```solidity
+function makeQuery(uint256 queryGasAmount) external payable {
+    // First, send the query
+    bytes32 messageId = IInterchainQueryRouter(iqsRouter).query(/* ... */);
+
+    // Then, pay for gas
+
+    // The mainnet DefaultIsmInterchainGasPaymaster
+    IInterchainGasPaymaster igp = IInterchainGasPaymaster(
+        0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc
+    );
+    // Pay with the msg.value
+    igp.payForGas{ value: msg.value }(
+         // The ID of the message
+         messageId,
+         // Destination domain
+         destinationDomain,
+         // The total gas amount. This should be the
+         // overhead gas amount (80,000 gas) + gas used by the query being made
+         80000 + queryGasAmount,
+         // Refund the msg.sender
+         msg.sender
+     );
+}
+```
+
 ### Future Extensions
 
 Create a cache for each destination chain contract that replicates queried state using historical calls as keys. This would enable atomic querying for calls which are recurring frequently. This would be especially useful for contracts which are queried frequently, such as ENS, Uniswap, and Compound.

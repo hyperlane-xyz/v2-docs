@@ -22,7 +22,7 @@ $ yarn build
 You will need to create a JSON file that specifies the Warp Route configuration. This will include information such as:
 
 * Which token, on which chain, is this Warp Route being created for?
-* Hyperlane connection details (e.g. contract addresses for [messaging](../../protocol/messaging/ "mention"))
+* Hyperlane connection details (e.g. contract addresses for [messaging](../../protocol/messaging/ "mention"), or the [IGP contract to use](../paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md))
 * Optional security configuration (i.e. [Interchain Security Module](../messaging-api/receive-1.md#interchain-security-modules) addresses)
 
 Your configuration must have exactly one entry with `"type": "collateral"`, which specifies the canonical token address. Every other entry must have `"type": "synthetic"`.
@@ -42,7 +42,7 @@ This Warp Route is secured by the default ISMs that are set on the `Mailboxes` f
     "token": "0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6",
     "owner": "0x5bA371aeA18734Cb7195650aFdfCa4f9251aa513",
     "mailbox": "0xCC737a94FecaeC165AbCf12dED095BB13F037685",
-    "interchainGasPaymaster": "0xf857706CE59Cb7AE6df81Bbd0B0a656dB3e6beDA",
+    "interchainGasPaymaster": "0xF90cB82a76492614D07B82a7658917f3aC811Ac1",
     "interchainSecurityModule": undefined,
   },
   "alfajores": {
@@ -53,7 +53,7 @@ This Warp Route is secured by the default ISMs that are set on the `Mailboxes` f
     "token": "0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6",
     "owner": "0x5bA371aeA18734Cb7195650aFdfCa4f9251aa513",
     "mailbox": "0xCC737a94FecaeC165AbCf12dED095BB13F037685",
-    "interchainGasPaymaster": "0xf857706CE59Cb7AE6df81Bbd0B0a656dB3e6beDA",
+    "interchainGasPaymaster": "0xF90cB82a76492614D07B82a7658917f3aC811Ac1",
     "interchainSecurityModule": undefined,
   }
 }

@@ -2,19 +2,15 @@
 description: Paying for message costs incurred on the destination chain.
 ---
 
-# Interchain Gas Estimation
+# Interchain Gas Quotes
 
-{% hint style="info" %}
-Note the details of gas estimation may change in future SDK versions as the [migration toward enforcing gas payments](../../messaging-api/gas.md#migrating-toward-enforcing-gas-payments) is put into effect.
-{% endhint %}
+Applications can use the `InterchainGasCalculator` in version `1.1.0` or later of the Hyperlane SDK to estimate how many origin chain native tokens to pay as [interchain gas payment](broken-reference) when dispatching a message. See the example below illustrating how to estimate and pay interchain gas pa yments.
 
-Applications can use the `InterchainGasCalculator` in the Hyperlane SDK to estimate how many [origin chain native tokens to pay](../../messaging-api/gas.md) when dispatching a message. See the example below illustrating how to estimate and pay interchain gas payments.
+### Getting an Interchain Gas Payment Quote Using the SDK
 
-### Estimating interchain gas payment using the SDK
+An interchain gas payment quote will call the [`quoteGasPayment`](broken-reference) function on an Interchain Gas Paymaster contract. &#x20;
 
-An interchain gas estimate considers the cost of processing the transaction on the destination chain, including a buffer to account for changes in native token prices of the origin and destination chains, or changes in the gas price on the destination chain.
-
-In this example, we will estimate interchain gas payment for a message from Avalanche to Polygon.
+In this example, we'll get an interchain gas payment quote for a message from Avalanche to Polygon.
 
 First, let's create the `InterchainGasCalculator`. See [multiprovider.md](multiprovider.md "mention") for creating a `MultiProvider` with your own RPC providers.
 
@@ -37,15 +33,21 @@ const calculator = InterchainGasCalculator.fromEnvironment(
   'mainnet',
   multiProvider,
 );
-
 ```
 
-Now, we can use the `estimatePaymentForHandleGas` function to find how much AVAX should be paid for our message from Avalanche to Polygon that we expect to consume 200,000 gas in the recipient contract's `handle` function. &#x20;
+There are three functions that can be used to quote interchain gas payment. The function to use depends on which IGP contract your application is using. See [Which IGP To Use & Understanding Gas Amounts](broken-reference) to understand which IGP contract you should be using and to get more information on gas amounts:
+
+| IGP contract                                                                                    | Function                          | Gas amount                                                             |
+| ----------------------------------------------------------------------------------------------- | --------------------------------- | ---------------------------------------------------------------------- |
+| The provided [DefaultIsmInterchainGasCalculator](broken-reference) for use with the default ISM | `quoteGasPaymentForDefaultIsmIgp` | The gas amount used by the message's recipient `handle` function       |
+| The provided [InterchainGasPaymaster](broken-reference) for use with a custom ISM               | `quoteGasPayment`                 | All gas required to process the message, including Mailbox and ISM gas |
+
+Now, we can use the `quoteGasPaymentForDefaultIsmIgp` function to find how much AVAX should be paid for our message from Avalanche to Polygon that we expect to consume 200,000 gas in the recipient contract's `handle` function.
 
 ```typescript
 // Calculate the AVAX payment to send from Avalanche to Polygon,
 // with the recipient's `handle` function consuming 200,000 gas.
-const avaxPayment = await calculator.estimatePaymentForHandleGas(
+const avaxPayment = await calculator.quoteGasPaymentForDefaultIsmIgp(
   'avalanche',
   'polygon',
   ethers.BigNumber.from(200_000),

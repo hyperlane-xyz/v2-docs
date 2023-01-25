@@ -14,9 +14,10 @@ These environment variables are JSON objects with the following format:
 
 ```typescript
 type MessageFilter = {
-  sourceAddress: string;
-  destinationDomain: string[];
-  destinationAddress: string;
+  senderAddress: string | string[];
+  originDomain: string | string[];
+  recipientAddress: string | string[];
+  destinationDomain: string | string[];
 }
 
 type BlackOrWhitelist = MessageFilter[];
@@ -29,17 +30,17 @@ For example, the following config used as a whitelist will ensure the relayer wi
 ```json
 [
     {
-        sourceAddress: "*",
+        senderAddress: "*",
         destinationDomain: ["1"],
         destinationAddress: "*"
     },
     {
-        sourceAddress: "0xca7f632e91B592178D83A70B404f398c0a51581F",
+        senderAddress: "0xca7f632e91B592178D83A70B404f398c0a51581F",
         destinationDomain: ["42220", "43114"],
         destinationAddress: "*"
     },
     {
-        sourceAddress: "*",
+        senderAddress: "*",
         destinationDomain: ["42161", "420"],
         destinationAddress: "0xca7f632e91B592178D83A70B404f398c0a51581F"
     }

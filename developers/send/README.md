@@ -106,3 +106,58 @@ address myInterchainAccount = IInterchainAccountRouter(...).getInterchainAccount
     address(this)
 );
 ```
+
+### Paying for Interchain Gas
+
+Just like all Hyperlane messages that wish to have their messages delivered by a relayer, users must [pay for interchain gas](../paying-for-interchain-gas/).
+
+The various `dispatch` functions in the Accounts API each return the message ID as a `bytes32`. This message ID can then be used by the caller to pay for interchain gas.
+
+Because the Accounts API uses the default ISM for security, the [DefaultIsmInterchainGasPaymaster](../addresses.md#defaultisminterchaingaspaymaster-read-here) IGP should be used. When specifying the amount of gas, the caller must pay for a gas amount high enough to cover:
+
+1. "Overhead" gas used by the Accounts API contract on the destination chain. See the below table to understand what this will be.
+2. The gas used by the user-specified arbitrary call(s) that will be performed by the interchain account.
+
+#### Overhead gas amounts
+
+For the very first message sent by a sender on the origin chain to a new destination domain, a higher overhead destination gas cost is incurred. This is because the Interchain Account must be created on the destination chain, which involves a new contract being deployed. Subsequent messages to an already-created Interchain Account have a much cheaper overhead.
+
+| Interchain Account Already Exists?                                                                                                                 | Overhead Gas Amount |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| No - this is the very first message from a `(uint32 origin, address sender)` pair to the destination, and a new Interchain Account will be created | 425,000             |
+| Yes                                                                                                                                                | 30,000              |
+
+#### Gas Payment Example
+
+```solidity
+function makeCall(uint256 gasAmount) external payable {
+    // First, send the call
+    uint32 ethereumDomain = 0x657468;
+    // consistent across all chains
+    address icaRouter = 0xc011170d9795a7a2d065E384EAd1CA3394A7d35E;
+    bytes32 messageId = IInterchainAccountRouter(icaRouter).dispatch(
+        ethereumDomain,
+        address(pool),
+        abi.encodeCall(pool.swap, (...))
+    );
+
+    // Then, pay for gas
+
+    // The mainnet DefaultIsmInterchainGasPaymaster
+    IInterchainGasPaymaster igp = IInterchainGasPaymaster(
+        0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc
+    );
+    // Pay with the msg.value
+    igp.payForGas{ value: msg.value }(
+         // The ID of the message
+         messageId,
+         // Destination domain
+         ethereumDomain,
+         // The total gas amount. This should be the
+         // overhead gas amount + gas used by the call being made
+         gasAmount,
+         // Refund the msg.sender
+         msg.sender
+     );
+}
+```

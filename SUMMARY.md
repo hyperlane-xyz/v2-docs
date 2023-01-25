@@ -18,7 +18,14 @@
   * [Receive](developers/messaging-api/receive.md)
   * [Security](developers/messaging-api/receive-1.md)
   * [Unit testing](developers/messaging-api/unit-testing.md)
-  * [Gas](developers/messaging-api/gas.md)
+* [Paying For Interchain Gas](developers/paying-for-interchain-gas/README.md)
+  * [Interchain Gas Paymasters](developers/paying-for-interchain-gas/interchain-gas-paymasters.md)
+  * [Paying the Correct Amount](developers/paying-for-interchain-gas/paying-the-correct-amount.md)
+  * [Which IGP to Use & Understanding Gas Amounts](developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md)
+  * [Refunds](developers/paying-for-interchain-gas/refunds.md)
+  * [Examples](developers/paying-for-interchain-gas/examples.md)
+  * [Middleware APIs](developers/paying-for-interchain-gas/middleware-apis.md)
+  * [Migrating to Enforced Interchain Gas Payments](developers/paying-for-interchain-gas/migrating-to-enforced-interchain-gas-payments.md)
 * [Liquidity Layer API](developers/token-bridge-api/README.md)
   * [Quickstart Tutorial](developers/token-bridge-api/quickstart-tutorial.md)
 * [Accounts API](developers/send/README.md)
@@ -36,7 +43,7 @@
     * [RPC Providers](developers/building-applications/nodejs-sdk/multiprovider.md)
     * [Deployment](developers/building-applications/nodejs-sdk/deploying-contracts.md)
     * [Interchain Testing](developers/building-applications/nodejs-sdk/testing-contracts.md)
-    * [Interchain Gas Estimation](developers/building-applications/nodejs-sdk/gas.md)
+    * [Interchain Gas Quotes](developers/building-applications/nodejs-sdk/gas.md)
     * [App Abstraction](developers/building-applications/nodejs-sdk/contract-interaction/README.md)
 * [Example apps](developers/examples/README.md)
   * [HelloWorld](developers/examples/helloworld.md)
@@ -57,6 +64,7 @@
 * [Helpful Resources](developers/helpful-resources/README.md)
   * [Token Sources & Faucets](developers-faq-and-troubleshooting/helpful-resources/token-sources-and-faucets.md)
   * [V2 migration guide](developers/helpful-resources/v2-migration-guide.md)
+  * [Migration to Enforced Interchain Gas Payments](developers-faq-and-troubleshooting/helpful-resources/migration-to-enforced-interchain-gas-payments.md)
 
 ## Protocol
 

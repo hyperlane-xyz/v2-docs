@@ -7,7 +7,7 @@ description: Send your first interchain message in under 5 minutes
 This tutorial demonstrates how to [send](send.md) a simple interchain message to a pre-deployed [`TestRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/core/contracts/test/TestRecipient.sol) contract. You can also check out the [`hyperlane-quickstart`](https://github.com/hyperlane-xyz/hyperlane-quickstart) repo for running this out of the box.
 
 {% hint style="warning" %}
-Note that this tutorial does not cover [paying for the cost of relaying the message to the destination chain](gas.md), which will eventually be required.
+Note that this tutorial does not cover [paying for the cost of relaying the message to the destination chain](broken-reference), which will eventually be required.
 {% endhint %}
 
 ### Inputs
@@ -22,7 +22,7 @@ Sending a message is a simple matter of calling `Mailbox.dispatch()`. This funct
 
 {% tabs %}
 {% tab title="Using Metamask" %}
-1. Navigate to the `Outbox` contract page on [Etherscan](https://etherscan.io/address/0x2f9DB5616fa3fAd1aB06cB2C906830BA63d135e3#writeProxyContract) (or its equivalent if you're sending from a non-ethereum chain, which you could find [here](../addresses.md#outbox)).
+1. Navigate to the `Mailbox` contract page on [Etherscan](https://etherscan.io/address/0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70) (or its equivalent if you're sending from a non-ethereum chain, which you could find [here](../addresses.md#mailbox)).
 2. Under the `Contract` tab, find the `Write as Proxy` button.
 3. Click on the `Connect to Web3` button to connect your Wallet (i.e. Metamask). Make sure that you are on the correct network.
 4. Expand the `dispatch` box.
@@ -35,9 +35,9 @@ Sending a message is a simple matter of calling `Mailbox.dispatch()`. This funct
 {% endtab %}
 
 {% tab title="Using Cast" %}
-You can call `Outbox.dispatch()` directly using `cast`. Make sure that you have a valid RPC URL for the origin chain and a private key with which you can pay for gas.
+You can call `Mailbox.dispatch()` directly using `cast`. Make sure that you have a valid RPC URL for the origin chain and a private key with which you can pay for gas.
 
-<pre class="language-shell" data-overflow="wrap"><code class="lang-shell"><strong>cast send $OUTBOX_ADDRESS "dispatch(uint32,bytes32,bytes)" $DESTINATION_DOMAIN $RECIPIENT $(cast --from-utf8 "your message") --rpc-url $RPC_URL
+<pre class="language-shell" data-overflow="wrap"><code class="lang-shell"><strong>cast send $MAILBOX_ADDRESS "dispatch(uint32,bytes32,bytes)" $DESTINATION_DOMAIN $RECIPIENT $(cast --from-utf8 "your message") --rpc-url $RPC_URL
 </strong><strong>--private-key $PRIVATE_KEY
 </strong></code></pre>
 {% endtab %}
