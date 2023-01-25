@@ -14,7 +14,7 @@ Finally, relayers deliver the message to its recipient by calling `Mailbox.proce
 
 Relayers do not receive direct token incentives from the protocol, but relayers can configure their fee structure for the messages they process, enabling them to earn revenue streams for providing their critical service.
 
-Relayers can easily configure the messages that they wish to process. At launch, the relayer will support:
+Relayers can easily configure the messages that they wish to process. Currently, the relayer will support:
 
 1. A sender/recipient whitelist
 2. A sender/recipient blacklist
