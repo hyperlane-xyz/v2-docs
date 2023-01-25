@@ -13,14 +13,16 @@ Relayers may optionally filter the messages they deliver by setting the `HYP_REL
 These environment variables are JSON objects with the following format:
 
 ```typescript
-type MessageFilter = {
-  senderAddress: string | string[];
-  originDomain: string | string[];
-  recipientAddress: string | string[];
-  destinationDomain: string | string[];
+type Filter = string | string[];
+
+type ListElement = {
+  senderAddress?: Filter;
+  originDomain?: Filter;
+  recipientAddress?: Filter;
+  destinationDomain?: Filter;
 }
 
-type BlackOrWhitelist = MessageFilter[];
+type BlackOrWhitelist = ListElement[];
 ```
 
 Both the whitelist and blacklists have "any" semantics. In other words, the relayer will deliver messages that match _any_ of the whitelist filters, and ignore messages that match _any_ of the blacklist filters.
@@ -32,17 +34,17 @@ For example, the following config used as a whitelist will ensure the relayer wi
     {
         senderAddress: "*",
         destinationDomain: ["1"],
-        destinationAddress: "*"
+        recipientAddress: "*"
     },
     {
         senderAddress: "0xca7f632e91B592178D83A70B404f398c0a51581F",
         destinationDomain: ["42220", "43114"],
-        destinationAddress: "*"
+        recipientAddress: "*"
     },
     {
         senderAddress: "*",
         destinationDomain: ["42161", "420"],
-        destinationAddress: "0xca7f632e91B592178D83A70B404f398c0a51581F"
+        recipientAddress: "0xca7f632e91B592178D83A70B404f398c0a51581F"
     }
 ]
 ```
