@@ -9,7 +9,7 @@ This tutorial demonstrates how to [send](../messaging-api/send.md) a simple inte
 
 
 {% hint style="warning" %}
-Note that this tutorial does not cover [paying for the cost of relaying the message to the destination chain](broken-reference), which will eventually be required.
+Note that this tutorial does not cover [paying for the cost of relaying the message to the destination chain](../messaging-api/gas.md), which will eventually be required.
 {% endhint %}
 
 ### Inputs

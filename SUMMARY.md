@@ -35,6 +35,7 @@
 * [Warp API](developers/warp-api/README.md)
   * [Deploy a Warp Route](developers/warp-api/deploy-a-warp-route.md)
   * [Deploy the UI for your Warp Route](developers/warp-api/deploy-the-ui-for-your-warp-route.md)
+  * [Warp API](developers/warp-api/warp-api.md)
 * [App framework](developers/building-applications/README.md)
   * [Solidity SDK](developers/building-applications/writing-contracts/README.md)
     * [HyperlaneConnectionClient](developers/building-applications/writing-contracts/abacusconnectionclient.md)

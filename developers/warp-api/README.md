@@ -8,9 +8,21 @@ Developers can use Hyperlane's Warp API to permissionlessly deploy "Warp Routes"
 
 Unlike other token wrapping protocols, Warp Routes are secured by [sovereign consensus](../../protocol/security/sovereign-consensus.md), allowing developers to specify the security model that governs the minting, burning, and unwrapping of their interchain token.
 
+### Overview
+
+A Hyperlane Warp Route allows a particular token to be moved between chains according to a  security model specified by the deployer.
+
+Each Warp Route consists of one contract deployed on every chain that the token can move between. These contracts use the [Messaging API](../messaging-api/) to send interchain messages to one another.&#x20;
+
+When a user transfers from the _canonical_ origin chain to a _non-canonical_ destination chain, their tokens are locked in a `HypERC20Collateral` contract, which sends a message to the destination chain to mint wrapped tokens.
+
+When a user transfers between non-canonical chains, their wrapped tokens are burned on the origin chain, which sends a message to the destination chain to mint wrapped tokens.
+
+Finally, if a user transfers from a non-canonical origin chain back to the canonical destination chain, their wrapped tokens are burned on the origin chain, which sends a message to the destination chain to release the tokens locked in the`HypERC20Collateral` contract.
+
 ### Interface
 
-Once deployed and configured, a Hyperlane Warp Route exposes the following token interface. Warp Route tokens implement this interface, in addition to the standard `ERC20` interface.
+Hyperlane Warp Route exposes the following token interface. Warp Route tokens implement this interface, in addition to the standard `ERC20` interface.
 
 ```solidity
 /// @notice An interchain extension of the ERC20 interface
@@ -29,17 +41,7 @@ interface IHypERC20 is IERC20 {
 }
 ```
 
-### Overview
-
-A Hyperlane Warp Route allows a particular token to be moved between chains according to a  security model specified by the deployer.
-
-Each Warp Route consists of one contract deployed on every chain that the token can move between. These contracts use the [Messaging API](../messaging-api/) to send interchain messages to one another.&#x20;
-
-When a user transfers from the _canonical_ origin chain to a _non-canonical_ destination chain, their tokens are locked in a `HypERC20Collateral` contract, which sends a message to the destination chain to mint wrapped tokens.
-
-When a user transfers between non-canonical chains, their wrapped tokens are burned on the origin chain, which sends a message to the destination chain to mint wrapped tokens.
-
-Finally, if a user transfers from a non-canonical origin chain back to the canonical destination chain, their wrapped tokens are burned on the origin chain, which sends a message to the destination chain to release the tokens locked in the`HypERC20Collateral` contract.
+###
 
 ### Security considerations
 
