@@ -3,7 +3,7 @@
     "description": "Private docs package",
     "version": "0.0.0",
     "devDependencies": {
-        "@hyperlane-xyz/sdk": "^1.0.0-beta8",
+        "@hyperlane-xyz/sdk": "^1.1.1",
         "@types/node": "^18.11.18",
         "markdown-table": "^3.0.3"
     },
@@ -11,6 +11,6 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "sync": "node sync-addresses.js > ./developers-faq-and-troubleshooting/addresses/README.md"
+        "sync": "node sync-addresses.js > ./developers/addresses.md"
     }
 }

@@ -9,16 +9,17 @@ function capitalize(str) {
 function generateTable(contract, addresses) {
   const entries = Object.entries(addresses).map(([network, contracts]) => {
     const explorer = chainMetadata[network].blockExplorers[0].url;
+    const url = new URL(explorer);
     const entries = Object.entries(contracts)
       .filter(([candidate]) => candidate === contract)
       .map(([_, addressObject]) => {
         const address = addressObject.proxy ?? addressObject;
-        return [capitalize(network), `[\`${address}\`](${explorer}/address/${address})`]
+        return [capitalize(network), `\`${address}\``, `[View on ${url.hostname}](${explorer}/address/${address})`]
       })[0];
     return entries;
   });
   return markdownTable([
-    ["Network", "Address"], 
+    ["Network", "Address", "Explorer"], 
     ...entries
   ]);
 }
@@ -30,9 +31,10 @@ const enviroments = [
 const contracts = [
   "mailbox",
   "interchainGasPaymaster",
+  "multisigIsm",
+  "defaultIsmInterchainGasPaymaster",
   "interchainQueryRouter",
   "interchainAccountRouter",
-  "multisigIsm",
   "create2Factory",
 ];
 
