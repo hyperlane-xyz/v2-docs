@@ -29,13 +29,13 @@ const enviroments = [
   'testnet',
 ]
 const contracts = [
-  "mailbox",
-  "interchainGasPaymaster",
-  "multisigIsm",
-  "defaultIsmInterchainGasPaymaster",
-  "interchainQueryRouter",
-  "interchainAccountRouter",
-  "create2Factory",
+  { name: "mailbox" },
+  { name: "defaultIsmInterchainGasPaymaster", extraInfo: '([read here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications))' },
+  { name: "interchainGasPaymaster", extraInfo: '(advanced - [read here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-a-custom-ism-advanced))' },
+  { name: "multisigIsm" },
+  { name: "interchainQueryRouter" },
+  { name: "interchainAccountRouter" },
+  { name: "create2Factory" },
 ];
 
 console.log(`---
@@ -49,8 +49,9 @@ description: Hyperlane core contract addresses
 for (const env of enviroments) {
   console.log(`{% tab title="${capitalize(env)}" %}`);
   for (const contract of contracts) {
-    console.log(`## ${capitalize(contract)}\n`);
-    console.log(generateTable(contract, coreEnvironments[env]));
+    const extraInfoStr = contract.extraInfo ? ` ${contract.extraInfo}` : '';
+    console.log(`## ${capitalize(contract.name)}${extraInfoStr}\n`);
+    console.log(generateTable(contract.name, coreEnvironments[env]));
     console.log("\n");
   }
   console.log("{% endtab %}");  
