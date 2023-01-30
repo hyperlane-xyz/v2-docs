@@ -36,6 +36,7 @@ const contracts = [
   "interchainQueryRouter",
   "interchainAccountRouter",
   "create2Factory",
+  "validatorAnnounce",
 ];
 
 console.log(`---
