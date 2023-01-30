@@ -5,9 +5,8 @@ description: Hyperlane core contract addresses
 # Contract addresses
 
 {% tabs %}
-
 {% tab title="Mainnet" %}
-## Mailbox
+### Mailbox
 
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -20,8 +19,7 @@ description: Hyperlane core contract addresses
 | Optimism  | `0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70` | [View on optimistic.etherscan.io](https://optimistic.etherscan.io/address/0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70) |
 | Moonbeam  | `0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70` | [View on moonscan.io](https://moonscan.io/address/0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70)                         |
 
-
-## InterchainGasPaymaster
+### InterchainGasPaymaster
 
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -34,8 +32,7 @@ description: Hyperlane core contract addresses
 | Optimism  | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on optimistic.etherscan.io](https://optimistic.etherscan.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918) |
 | Moonbeam  | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on moonscan.io](https://moonscan.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918)                         |
 
-
-## MultisigIsm
+### MultisigIsm
 
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -48,8 +45,7 @@ description: Hyperlane core contract addresses
 | Optimism  | `0xAab1D11E2063Bae5EB01fa946cA8d2FDe3db05D5` | [View on optimistic.etherscan.io](https://optimistic.etherscan.io/address/0xAab1D11E2063Bae5EB01fa946cA8d2FDe3db05D5) |
 | Moonbeam  | `0xf3b1F415740A26568C45b1c771A737E31C198F09` | [View on moonscan.io](https://moonscan.io/address/0xf3b1F415740A26568C45b1c771A737E31C198F09)                         |
 
-
-## DefaultIsmInterchainGasPaymaster
+### DefaultIsmInterchainGasPaymaster
 
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -62,8 +58,7 @@ description: Hyperlane core contract addresses
 | Optimism  | `0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc` | [View on optimistic.etherscan.io](https://optimistic.etherscan.io/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc) |
 | Moonbeam  | `0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc` | [View on moonscan.io](https://moonscan.io/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc)                         |
 
-
-## InterchainQueryRouter
+### InterchainQueryRouter
 
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -76,8 +71,7 @@ description: Hyperlane core contract addresses
 | Optimism  | `0x234b19282985882d6d6fd54dEBa272271f4eb784` | [View on optimistic.etherscan.io](https://optimistic.etherscan.io/address/0x234b19282985882d6d6fd54dEBa272271f4eb784) |
 | Moonbeam  | `0x234b19282985882d6d6fd54dEBa272271f4eb784` | [View on moonscan.io](https://moonscan.io/address/0x234b19282985882d6d6fd54dEBa272271f4eb784)                         |
 
-
-## InterchainAccountRouter
+### InterchainAccountRouter
 
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -90,8 +84,7 @@ description: Hyperlane core contract addresses
 | Optimism  | `0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5` | [View on optimistic.etherscan.io](https://optimistic.etherscan.io/address/0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5) |
 | Moonbeam  | `0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5` | [View on moonscan.io](https://moonscan.io/address/0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5)                         |
 
-
-## Create2Factory
+### Create2Factory
 
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -103,11 +96,10 @@ description: Hyperlane core contract addresses
 | Arbitrum  | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on arbiscan.io](https://arbiscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                         |
 | Optimism  | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on optimistic.etherscan.io](https://optimistic.etherscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a) |
 | Moonbeam  | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on moonscan.io](https://moonscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                         |
-
-
 {% endtab %}
+
 {% tab title="Testnet" %}
-## Mailbox
+### Mailbox
 
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -118,10 +110,9 @@ description: Hyperlane core contract addresses
 | Goerli         | `0xCC737a94FecaeC165AbCf12dED095BB13F037685` | [View on goerli.etherscan.io](https://goerli.etherscan.io/address/0xCC737a94FecaeC165AbCf12dED095BB13F037685)                   |
 | Moonbasealpha  | `0xCC737a94FecaeC165AbCf12dED095BB13F037685` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0xCC737a94FecaeC165AbCf12dED095BB13F037685)                 |
 | Optimismgoerli | `0xCC737a94FecaeC165AbCf12dED095BB13F037685` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0xCC737a94FecaeC165AbCf12dED095BB13F037685) |
-| Arbitrumgoerli | `0xCC737a94FecaeC165AbCf12dED095BB13F037685` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io//address/0xCC737a94FecaeC165AbCf12dED095BB13F037685)                    |
+| Arbitrumgoerli | `0xCC737a94FecaeC165AbCf12dED095BB13F037685` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0xCC737a94FecaeC165AbCf12dED095BB13F037685)                     |
 
-
-## InterchainGasPaymaster
+### InterchainGasPaymaster
 
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -132,10 +123,9 @@ description: Hyperlane core contract addresses
 | Goerli         | `0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a` | [View on goerli.etherscan.io](https://goerli.etherscan.io/address/0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a)                   |
 | Moonbasealpha  | `0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a)                 |
 | Optimismgoerli | `0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a) |
-| Arbitrumgoerli | `0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io//address/0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a)                    |
+| Arbitrumgoerli | `0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a)                     |
 
-
-## MultisigIsm
+### MultisigIsm
 
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -146,10 +136,9 @@ description: Hyperlane core contract addresses
 | Goerli         | `0x32B34F0D86b275b92e9289d9054Db5Ec32d2CC6C` | [View on goerli.etherscan.io](https://goerli.etherscan.io/address/0x32B34F0D86b275b92e9289d9054Db5Ec32d2CC6C)                   |
 | Moonbasealpha  | `0xec8875C7cE0a814A56654618D366641859F32C7A` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0xec8875C7cE0a814A56654618D366641859F32C7A)                 |
 | Optimismgoerli | `0x47384E33E67007B7fE4326fb096Bdf9CbA7AB6E4` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0x47384E33E67007B7fE4326fb096Bdf9CbA7AB6E4) |
-| Arbitrumgoerli | `0x47384E33E67007B7fE4326fb096Bdf9CbA7AB6E4` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io//address/0x47384E33E67007B7fE4326fb096Bdf9CbA7AB6E4)                    |
+| Arbitrumgoerli | `0x47384E33E67007B7fE4326fb096Bdf9CbA7AB6E4` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0x47384E33E67007B7fE4326fb096Bdf9CbA7AB6E4)                     |
 
-
-## DefaultIsmInterchainGasPaymaster
+### DefaultIsmInterchainGasPaymaster
 
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -160,10 +149,9 @@ description: Hyperlane core contract addresses
 | Goerli         | `0xF90cB82a76492614D07B82a7658917f3aC811Ac1` | [View on goerli.etherscan.io](https://goerli.etherscan.io/address/0xF90cB82a76492614D07B82a7658917f3aC811Ac1)                   |
 | Moonbasealpha  | `0xF90cB82a76492614D07B82a7658917f3aC811Ac1` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0xF90cB82a76492614D07B82a7658917f3aC811Ac1)                 |
 | Optimismgoerli | `0xF90cB82a76492614D07B82a7658917f3aC811Ac1` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0xF90cB82a76492614D07B82a7658917f3aC811Ac1) |
-| Arbitrumgoerli | `0xF90cB82a76492614D07B82a7658917f3aC811Ac1` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io//address/0xF90cB82a76492614D07B82a7658917f3aC811Ac1)                    |
+| Arbitrumgoerli | `0xF90cB82a76492614D07B82a7658917f3aC811Ac1` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0xF90cB82a76492614D07B82a7658917f3aC811Ac1)                     |
 
-
-## InterchainQueryRouter
+### InterchainQueryRouter
 
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -174,10 +162,9 @@ description: Hyperlane core contract addresses
 | Goerli         | `0xF782C6C4A02f2c71BB8a1Db0166FAB40ea956818` | [View on goerli.etherscan.io](https://goerli.etherscan.io/address/0xF782C6C4A02f2c71BB8a1Db0166FAB40ea956818)                   |
 | Moonbasealpha  | `0xF782C6C4A02f2c71BB8a1Db0166FAB40ea956818` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0xF782C6C4A02f2c71BB8a1Db0166FAB40ea956818)                 |
 | Optimismgoerli | `0xF782C6C4A02f2c71BB8a1Db0166FAB40ea956818` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0xF782C6C4A02f2c71BB8a1Db0166FAB40ea956818) |
-| Arbitrumgoerli | `0xF782C6C4A02f2c71BB8a1Db0166FAB40ea956818` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io//address/0xF782C6C4A02f2c71BB8a1Db0166FAB40ea956818)                    |
+| Arbitrumgoerli | `0xF782C6C4A02f2c71BB8a1Db0166FAB40ea956818` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0xF782C6C4A02f2c71BB8a1Db0166FAB40ea956818)                     |
 
-
-## InterchainAccountRouter
+### InterchainAccountRouter
 
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -188,10 +175,9 @@ description: Hyperlane core contract addresses
 | Goerli         | `0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D` | [View on goerli.etherscan.io](https://goerli.etherscan.io/address/0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D)                   |
 | Moonbasealpha  | `0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D)                 |
 | Optimismgoerli | `0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D) |
-| Arbitrumgoerli | `0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io//address/0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D)                    |
+| Arbitrumgoerli | `0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D)                     |
 
-
-## Create2Factory
+### Create2Factory
 
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -202,8 +188,6 @@ description: Hyperlane core contract addresses
 | Goerli         | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on goerli.etherscan.io](https://goerli.etherscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                   |
 | Moonbasealpha  | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                 |
 | Optimismgoerli | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a) |
-| Arbitrumgoerli | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io//address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                    |
-
-
+| Arbitrumgoerli | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                     |
 {% endtab %}
 {% endtabs %}

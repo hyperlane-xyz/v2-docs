@@ -19,6 +19,8 @@ $ yarn build
 
 ### 2. Configuration
 
+#### Token config
+
 You will need to create a JSON file that specifies the Warp Route configuration. This will include information such as:
 
 * Which token, on which chain, is this Warp Route being created for?
@@ -31,7 +33,7 @@ Deployers may configure interchain security by setting the `interchainSecurityMo
 
 #### Example
 
-An example config for a Warp Route that allows for interchain transfers of the ERC20 token at address `0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6` between the Goerli and Alfajores testnets is shown below.
+An example token config for a Warp Route that allows for interchain transfers of the ERC20 token at address `0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6` between the Goerli and Alfajores testnets is shown below, and can be found in [`configs/warp-route-token-config.json`](https://github.com/hyperlane-xyz/hyperlane-token/blob/main/configs/warp-route-token-config.json)``
 
 This Warp Route is secured by the default ISMs that are set on the `Mailboxes` for those chains.
 
@@ -59,12 +61,48 @@ This Warp Route is secured by the default ISMs that are set on the `Mailboxes` f
 }
 ```
 
+#### Chain config
+
+The Warp Route deployer will be aware of the connection details (e.g. RPC URL) for many standard chains.
+
+If you would like to deploy a Warp Route to a chain that is not included in the Hyperlane SDK, you can specify chain connection details in a JSON file.
+
+#### Example
+
+An example chain config for a Warp Route is shown below. If your chain does not have a block explorer you can leave that array empty.
+
+```json
+{
+  "goerli": {
+    "id": 5,
+    "name": "goerli",
+    "displayName": "Goerli",
+    "nativeToken": { "name": "Ether", "symbol": "ETH", "decimals": 18 },
+    "publicRpcUrls": [{ "http": "https://eth-goerli.public.blastapi.io" }],
+    "blockExplorers": [
+      {
+        "name": "Goerliscan",
+        "url": "https://goerli.etherscan.io",
+        "apiUrl": "https://api-goerli.etherscan.io",
+        "family": "etherscan"
+      }
+    ],
+    "blocks": {
+      "confirmations": 1,
+      "reorgPeriod": 2,
+      "estimateBlockTime": 13
+    }
+  }
+}
+```
+
 ### 3. Deployment
 
 Run the following script to deploy your Warp Route:
 
-```
-$ DEBUG=* yarn ts-node scripts/deploy.ts --private-key $PRIVATE_KEY --token-config my-config.json
+```bash
+$ DEBUG=* yarn ts-node scripts/deploy.ts --private-key $PRIVATE_KEY \
+    --token-config my-token-config.json --chain-config my-chain-config.json
 ```
 
 You must pass a private key and the path to the config file as arguments for the deploy script. Setting the `DEBUG=*` env var as shown above allows for more verbose deployment logging to be displayed.
