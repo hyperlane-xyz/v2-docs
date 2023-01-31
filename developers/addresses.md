@@ -23,7 +23,7 @@ description: Hyperlane core contract addresses
 
 ## DefaultIsmInterchainGasPaymaster
 
-[Read about this here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)
+Read about this [here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | Celo      | `0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc` | [View on celoscan.io](https://celoscan.io/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc)                         |
@@ -125,7 +125,7 @@ Advanced use - [read here](./paying-for-interchain-gas/which-igp-to-use-and-unde
 
 ## DefaultIsmInterchainGasPaymaster
 
-[Read about this here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)
+Read about this [here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | Alfajores      | `0xF90cB82a76492614D07B82a7658917f3aC811Ac1` | [View on alfajores.celoscan.io](https://alfajores.celoscan.io/address/0xF90cB82a76492614D07B82a7658917f3aC811Ac1)               |
