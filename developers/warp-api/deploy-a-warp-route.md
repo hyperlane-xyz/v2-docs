@@ -101,11 +101,13 @@ An example chain config for a Warp Route is shown below. If your chain does not 
 Run the following script to deploy your Warp Route:
 
 ```bash
-$ DEBUG=* yarn ts-node scripts/deploy.ts --private-key $PRIVATE_KEY \
+$ yarn deploy-warp-route --private-key $PRIVATE_KEY \
     --token-config my-token-config.json --chain-config my-chain-config.json
 ```
 
-You must pass a private key and the path to the config file as arguments for the deploy script. Setting the `DEBUG=*` env var as shown above allows for more verbose deployment logging to be displayed.
+You must pass a private key and the path to the config file as arguments for the deploy script.&#x20;
+
+Private key function needs to be passed from the account that submits the deployment transaction to all the chains that the Warp Route is being deployed to. This account needs to have balances on all chains that the account is deploying and connecting Warp Route to.
 
 Example configs can be found in `./configs/`, one for tokens and another for chains. The chains config can be used to enable permisionless deployments, or to override the Hyperlane SDK's default values. Use the `--chain-config` flag to pass a chain config path to the deploy script.
 
