@@ -3,7 +3,7 @@
     "description": "Private docs package",
     "version": "0.0.0",
     "devDependencies": {
-        "@hyperlane-xyz/sdk": "^1.1.2",
+        "@hyperlane-xyz/sdk": "^1.1.3",
         "@types/node": "^18.11.18",
         "markdown-table": "^3.0.3"
     },

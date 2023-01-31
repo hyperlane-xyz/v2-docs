@@ -18,9 +18,10 @@ function generateTable(contract, addresses) {
       })[0];
     return entries;
   });
+
   return markdownTable([
     ["Network", "Address", "Explorer"], 
-    ...entries
+    ...entries.filter(x => x)
   ]);
 }
 
