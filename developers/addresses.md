@@ -21,8 +21,9 @@ description: Hyperlane core contract addresses
 | Moonbeam  | `0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70` | [View on moonscan.io](https://moonscan.io/address/0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70)                         |
 
 
-## DefaultIsmInterchainGasPaymaster ([read here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications))
+## DefaultIsmInterchainGasPaymaster
 
+[Read about this here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | Celo      | `0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc` | [View on celoscan.io](https://celoscan.io/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc)                         |
@@ -35,8 +36,9 @@ description: Hyperlane core contract addresses
 | Moonbeam  | `0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc` | [View on moonscan.io](https://moonscan.io/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc)                         |
 
 
-## InterchainGasPaymaster (advanced - [read here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-a-custom-ism-advanced))
+## InterchainGasPaymaster
 
+Advanced use - [read here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-a-custom-ism-advanced)
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | Celo      | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on celoscan.io](https://celoscan.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918)                         |
@@ -121,8 +123,9 @@ description: Hyperlane core contract addresses
 | Arbitrumgoerli | `0xCC737a94FecaeC165AbCf12dED095BB13F037685` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io//address/0xCC737a94FecaeC165AbCf12dED095BB13F037685)                    |
 
 
-## DefaultIsmInterchainGasPaymaster ([read here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications))
+## DefaultIsmInterchainGasPaymaster
 
+[Read about this here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | Alfajores      | `0xF90cB82a76492614D07B82a7658917f3aC811Ac1` | [View on alfajores.celoscan.io](https://alfajores.celoscan.io/address/0xF90cB82a76492614D07B82a7658917f3aC811Ac1)               |
@@ -135,8 +138,9 @@ description: Hyperlane core contract addresses
 | Arbitrumgoerli | `0xF90cB82a76492614D07B82a7658917f3aC811Ac1` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io//address/0xF90cB82a76492614D07B82a7658917f3aC811Ac1)                    |
 
 
-## InterchainGasPaymaster (advanced - [read here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-a-custom-ism-advanced))
+## InterchainGasPaymaster
 
+Advanced use - [read here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-a-custom-ism-advanced)
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | Alfajores      | `0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a` | [View on alfajores.celoscan.io](https://alfajores.celoscan.io/address/0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a)               |

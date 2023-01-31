@@ -30,8 +30,8 @@ const enviroments = [
 ]
 const contracts = [
   { name: "mailbox" },
-  { name: "defaultIsmInterchainGasPaymaster", extraInfo: '([read here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications))' },
-  { name: "interchainGasPaymaster", extraInfo: '(advanced - [read here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-a-custom-ism-advanced))' },
+  { name: "defaultIsmInterchainGasPaymaster", subtitle: '[Read about this here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)' },
+  { name: "interchainGasPaymaster", subtitle: 'Advanced use - [read here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-a-custom-ism-advanced)' },
   { name: "multisigIsm" },
   { name: "interchainQueryRouter" },
   { name: "interchainAccountRouter" },
@@ -49,8 +49,10 @@ description: Hyperlane core contract addresses
 for (const env of enviroments) {
   console.log(`{% tab title="${capitalize(env)}" %}`);
   for (const contract of contracts) {
-    const extraInfoStr = contract.extraInfo ? ` ${contract.extraInfo}` : '';
-    console.log(`## ${capitalize(contract.name)}${extraInfoStr}\n`);
+    console.log(`## ${capitalize(contract.name)}\n`);
+    if (contract.subtitle) {
+      console.log(`${contract.subtitle}`);
+    }
     console.log(generateTable(contract.name, coreEnvironments[env]));
     console.log("\n");
   }
