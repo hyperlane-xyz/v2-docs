@@ -107,6 +107,20 @@ Advanced use - [read here](./paying-for-interchain-gas/which-igp-to-use-and-unde
 | Moonbeam  | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on moonscan.io](https://moonscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                         |
 
 
+## ValidatorAnnounce
+
+| Network   | Address                                      | Explorer                                                                                                              |
+| --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Celo      | `0xB5bc6369bc2Dc8969B18f6C25488EC0a38cA637f` | [View on celoscan.io](https://celoscan.io/address/0xB5bc6369bc2Dc8969B18f6C25488EC0a38cA637f)                         |
+| Ethereum  | `0xB5bc6369bc2Dc8969B18f6C25488EC0a38cA637f` | [View on etherscan.io](https://etherscan.io/address/0xB5bc6369bc2Dc8969B18f6C25488EC0a38cA637f)                       |
+| Avalanche | `0xB5bc6369bc2Dc8969B18f6C25488EC0a38cA637f` | [View on snowtrace.io](https://snowtrace.io/address/0xB5bc6369bc2Dc8969B18f6C25488EC0a38cA637f)                       |
+| Polygon   | `0xB5bc6369bc2Dc8969B18f6C25488EC0a38cA637f` | [View on polygonscan.com](https://polygonscan.com/address/0xB5bc6369bc2Dc8969B18f6C25488EC0a38cA637f)                 |
+| Bsc       | `0xB5bc6369bc2Dc8969B18f6C25488EC0a38cA637f` | [View on bscscan.com](https://bscscan.com/address/0xB5bc6369bc2Dc8969B18f6C25488EC0a38cA637f)                         |
+| Arbitrum  | `0xB5bc6369bc2Dc8969B18f6C25488EC0a38cA637f` | [View on arbiscan.io](https://arbiscan.io/address/0xB5bc6369bc2Dc8969B18f6C25488EC0a38cA637f)                         |
+| Optimism  | `0xB5bc6369bc2Dc8969B18f6C25488EC0a38cA637f` | [View on optimistic.etherscan.io](https://optimistic.etherscan.io/address/0xB5bc6369bc2Dc8969B18f6C25488EC0a38cA637f) |
+| Moonbeam  | `0xB5bc6369bc2Dc8969B18f6C25488EC0a38cA637f` | [View on moonscan.io](https://moonscan.io/address/0xB5bc6369bc2Dc8969B18f6C25488EC0a38cA637f)                         |
+
+
 {% endtab %}
 {% tab title="Testnet" %}
 ## Mailbox
@@ -207,6 +221,20 @@ Advanced use - [read here](./paying-for-interchain-gas/which-igp-to-use-and-unde
 | Moonbasealpha  | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                 |
 | Optimismgoerli | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a) |
 | Arbitrumgoerli | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io//address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                    |
+
+
+## ValidatorAnnounce
+
+| Network        | Address                                      | Explorer                                                                                                                        |
+| -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Alfajores      | `0x81c196606092fF966446078BE3033F464Efc8655` | [View on alfajores.celoscan.io](https://alfajores.celoscan.io/address/0x81c196606092fF966446078BE3033F464Efc8655)               |
+| Fuji           | `0x81c196606092fF966446078BE3033F464Efc8655` | [View on testnet.snowtrace.io](https://testnet.snowtrace.io/address/0x81c196606092fF966446078BE3033F464Efc8655)                 |
+| Mumbai         | `0x81c196606092fF966446078BE3033F464Efc8655` | [View on mumbai.polygonscan.com](https://mumbai.polygonscan.com/address/0x81c196606092fF966446078BE3033F464Efc8655)             |
+| Bsctestnet     | `0x81c196606092fF966446078BE3033F464Efc8655` | [View on testnet.bscscan.com](https://testnet.bscscan.com/address/0x81c196606092fF966446078BE3033F464Efc8655)                   |
+| Goerli         | `0x81c196606092fF966446078BE3033F464Efc8655` | [View on goerli.etherscan.io](https://goerli.etherscan.io/address/0x81c196606092fF966446078BE3033F464Efc8655)                   |
+| Moonbasealpha  | `0x81c196606092fF966446078BE3033F464Efc8655` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0x81c196606092fF966446078BE3033F464Efc8655)                 |
+| Optimismgoerli | `0x81c196606092fF966446078BE3033F464Efc8655` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0x81c196606092fF966446078BE3033F464Efc8655) |
+| Arbitrumgoerli | `0x81c196606092fF966446078BE3033F464Efc8655` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io//address/0x81c196606092fF966446078BE3033F464Efc8655)                    |
 
 
 {% endtab %}

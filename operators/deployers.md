@@ -50,23 +50,22 @@ Next, add an empty entry for the local chain to `hyperlane-deploy/config/network
 
 You can then run the following command to deploy the core contracts to your chain.
 
-```bash
-# The name of the chain to deploy to. Used to configure the localDomain for the
+<pre class="language-bash"><code class="lang-bash"># The name of the chain to deploy to. Used to configure the localDomain for the
 # Mailbox contract.
 export LOCAL=YOUR_CHAIN_NAME
 # An RPC url for the chain to deploy to.
 export RPC_URL=YOUR_CHAIN_RPC_URL
 # Deployer private key, must have a balance to pay for gas
 # Any of the following alternatives to --private-key will work
-# https://book.getfoundry.sh/reference/forge/forge-script#wallet-options---raw
-export PRIVATE_KEY=YOUR_PRIVATE_KEY
+<strong># https://book.getfoundry.sh/reference/forge/forge-script#wallet-options---raw
+</strong>export PRIVATE_KEY=YOUR_PRIVATE_KEY
 # The comma separated name(s) of the chains to receive messages from.
 # Used to configure the default MultisigIsm.
 export REMOTES=ethereum,polygon,avalanche,celo,arbitrum,optimism,bsc,moonbeam
 
 forge script scripts/DeployCore.s.sol --broadcast --rpc-url $RPC_URL \
     --private-key $PRIVATE_KEY
-```
+</code></pre>
 
 This script will write a partial Hyperlane agent config to `hyperlane-deploy/config/$LOCAL_agent_config.json`, which will be used in the following step.
 
@@ -107,6 +106,7 @@ export RPC_URL=YOUR_CHAIN_RPC_URL
 # https://book.getfoundry.sh/reference/forge/forge-script#wallet-options---raw
 export PRIVATE_KEY=YOUR_PRIVATE_KEY
 # The comma separated name(s) of the chain(s) to receive messages from.
+# Probably just the name of your chain. 
 export REMOTES=YOUR_CHAIN_NAME
 
 forge script scripts/DeployMultisigIsm.s.sol --broadcast --rpc-url $RPC_URL \
@@ -153,8 +153,7 @@ This script will log the message ID and a link to the [message explorer](https:/
 The explorer may not properly display your message, as it was sent to a chain that the explorer does not know about.
 {% endhint %}
 
-```bash
-# An RPC url for the origin chain
+<pre class="language-bash"><code class="lang-bash"># An RPC url for the origin chain
 export RPC_URL=YOUR_CHAIN_RPC_URL
 # Sender private key, must have a balance to pay for gas
 # Any of the following alternatives to --private-key will work
@@ -173,9 +172,9 @@ export RECIPIENT=TEST_RECIPIENT_ADDRESS
 # The name of the chain to send the message to, e.g. "hello world"
 export BODY=BODY
 
-forge script scripts/SendTestMessage.s.sol --broadcast --rpc-url $RPC_URL \
-  --private-key $PRIVATE_KEY
-```
+<strong>forge script scripts/SendTestMessage.s.sol --broadcast --rpc-url $RPC_URL \
+</strong>  --private-key $PRIVATE_KEY
+</code></pre>
 
 If your message is not showing up in the explorer, you can check its delivery status by running the following script:
 

@@ -10,12 +10,17 @@ This IAM user will be given permission to sign with the KMS key that you will la
 
 1. Go to AWS's Identity and Access Management (IAM) in the [AWS console](https://us-east-1.console.aws.amazon.com/iamv2/home).
 2. On the left, under "Access management", click "Users".
-3. Click the blue button "Add user".
+3. Click the blue button "Add users".
 4. Pick a friendly and informative username, like `hyperlane-validator-${chain_name}`. This username will be referenced in future steps, so if you choose a different username be sure to use your correct username in the future.
-5. Select "Access key - Programmatic access" as the access type.
-6. Keep clicking the next buttons, the default permissions and tags are sufficient for now.
-7. Once reviewed, click "Create user".
-8. Copy the "Access key ID" and "Secret access key" to a safe place. These will be passed to your Hyperlane validator as environment variables.
+5. Click "Next", you do not need to assign the user any permissions.
+6. Click "Create user".
+7. Click into the user that you just created
+8. Click the "Security Credentials" tab
+9. Scroll down to "Access Keys" and click "Create Access Key"
+10. Select "Application running outside AWS" and click "Next"
+11. Click "Next", no need to add a description tag&#x20;
+12. Click "Create access key"
+13. Copy the "Access key ID" and "Secret access key" to a safe place. These will be passed to your Hyperlane validator as environment variables.
 
 ### Create a KMS key
 
