@@ -30,7 +30,7 @@ const enviroments = [
 ]
 const contracts = [
   { name: "mailbox" },
-  { name: "defaultIsmInterchainGasPaymaster", subtitle: '[Read about this here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)' },
+  { name: "defaultIsmInterchainGasPaymaster", subtitle: 'Read about this [here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)' },
   { name: "interchainGasPaymaster", subtitle: 'Advanced use - [read here](./paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-a-custom-ism-advanced)' },
   { name: "multisigIsm" },
   { name: "interchainQueryRouter" },
