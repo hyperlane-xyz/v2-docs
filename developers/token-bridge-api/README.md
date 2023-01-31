@@ -107,7 +107,7 @@ Just like all Hyperlane messages that wish to have their messages delivered by a
 
 The `dispatchWithTokens` function in the Liquidity Layer API returns the message ID as a `bytes32`. This message ID can then be used by the caller to pay for interchain gas.
 
-Because the Liquidity Layer uses the default ISM for security, the [DefaultIsmInterchainGasPaymaster](../addresses.md#defaultisminterchaingaspaymaster-read-here) IGP should be used. When specifying the amount of gas, the caller must pay for a gas amount high enough to cover:
+Because the Liquidity Layer uses the default ISM for security, the [DefaultIsmInterchainGasPaymaster](../addresses.md#defaultisminterchaingaspaymaster-1) IGP should be used. When specifying the amount of gas, the caller must pay for a gas amount high enough to cover:
 
 1. "Overhead" gas used by the Liquidity Layer contract on the destination chain. This is about **280,000 gas**. This is because the actual cost of bridging the tokens via the underlying Circle or Portal bridge can be fairly high.
 2. The gas used by the recipient's `handleWithTokens` function on the destination chain.

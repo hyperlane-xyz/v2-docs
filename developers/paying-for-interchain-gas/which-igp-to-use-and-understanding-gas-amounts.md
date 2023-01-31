@@ -14,7 +14,7 @@ When using the `DefaultIsmInterchainGasPaymaster`, the `_gasAmount` to use when 
 
 Behind the scenes, the `DefaultIsmInterchainGasPaymaster` is configured to automatically add to the provided `_gasAmount` all overhead gas amounts that your message will use at its destination-- this includes any gas used by the Mailbox or the default ISM (for example, verifying validator signatures). This allows messages to be fully paid for without requiring any knowledge of the internal gas usage of the destination's Mailbox contract or default ISM when a message is processed.
 
-Find the deployed `DefaultIsmInterchainGasPaymaster` [addresses here.](../addresses.md#defaultisminterchaingaspaymaster-read-here)
+Find the deployed `DefaultIsmInterchainGasPaymaster` [addresses here](../addresses.md#defaultisminterchaingaspaymaster).
 
 See [Examples](examples.md) to see how this is used in practice.
 
@@ -29,7 +29,7 @@ The gas amount required to process the message should include:
 * The amount of gas used by the ISM
 * The amount of gas used by the message's recipient `handle` function
 
-Find the deployed `InterchainGasPaymaster` [addresses here.](../addresses.md#interchaingaspaymaster-advanced-read-here)
+Find the deployed `InterchainGasPaymaster` [addresses here.](../addresses.md#interchaingaspaymaster)
 
 #### TLDR
 

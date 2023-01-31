@@ -33,7 +33,7 @@ See [Paying the Correct Amount](paying-the-correct-amount.md) to understand how 
 
 #### IGP contract address changes
 
-The previous IGP contract address has been deprecated. Instead, two different IGP contracts are taking its place: the `DefaultIsmInterchainGasPaymaster` ([mainnet addresses](../addresses.md#defaultisminterchaingaspaymaster-read-here)), and the `InterchainGasPaymaster` ([mainnet addresses](../addresses.md#interchaingaspaymaster-advanced-read-here)).
+The previous IGP contract address has been deprecated. Instead, two different IGP contracts are taking its place: the `DefaultIsmInterchainGasPaymaster` ([mainnet addresses](../addresses.md#defaultisminterchaingaspaymaster)), and the `InterchainGasPaymaster` ([mainnet addresses](../addresses.md#interchaingaspaymaster)).
 
 See [Which IGP To Use & Understanding Gas Amounts](which-igp-to-use-and-understanding-gas-amounts.md) to understand which IGP contract your app should be using. Apps should move over to the appropriate IGP contract as soon as possible.
 

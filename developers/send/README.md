@@ -113,7 +113,7 @@ Just like all Hyperlane messages that wish to have their messages delivered by a
 
 The various `dispatch` functions in the Accounts API each return the message ID as a `bytes32`. This message ID can then be used by the caller to pay for interchain gas.
 
-Because the Accounts API uses the default ISM for security, the [DefaultIsmInterchainGasPaymaster](../addresses.md#defaultisminterchaingaspaymaster-read-here) IGP should be used. When specifying the amount of gas, the caller must pay for a gas amount high enough to cover:
+Because the Accounts API uses the default ISM for security, the [DefaultIsmInterchainGasPaymaster](../addresses.md#defaultisminterchaingaspaymaster) IGP should be used. When specifying the amount of gas, the caller must pay for a gas amount high enough to cover:
 
 1. "Overhead" gas used by the Accounts API contract on the destination chain. See the below table to understand what this will be.
 2. The gas used by the user-specified arbitrary call(s) that will be performed by the interchain account.
