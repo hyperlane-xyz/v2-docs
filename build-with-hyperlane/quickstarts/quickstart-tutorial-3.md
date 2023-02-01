@@ -4,7 +4,7 @@ description: Make a view call across chains using IQS.
 
 # Queries
 
-This tutorial demonstrates how to make a simple cross-chain view call via the Queries API from pre-deployed `TestQuerySender` contracts to any arbitrary target on which Hyperlane is deployed.
+This tutorial demonstrates how to make a simple interchain view call via the Queries API from pre-deployed `TestQuerySender` contracts to any arbitrary target on which Hyperlane is deployed.
 
 ### Inputs
 
