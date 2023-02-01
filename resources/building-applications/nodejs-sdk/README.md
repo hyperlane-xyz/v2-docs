@@ -14,7 +14,7 @@ Facilitate deploying your contract(s) to multiple chains. This includes utilitie
 
 ### [Interchain Gas Estimation](./#gas-estimation-and-payment)
 
-Hyperlane allows users to pay for message processing on the destination chain using tokens from the origin chain. Use the `InterchainGasCalculator` utility for gas estimation of cross-chain messages.
+Hyperlane allows users to pay for message processing on the destination chain using tokens from the origin chain. Use the `InterchainGasCalculator` utility for gas estimation of interchain messages.
 
 ### [App Abstraction](./#undefined)
 
