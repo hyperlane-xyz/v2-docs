@@ -34,7 +34,7 @@ If everything is configured correctly, you should see json files being written t
 
 ### Announce your validator
 
-[Relayers](../../../protocol-reference/agents/relayer.md) need to know where to find your validator's signatures. You can make relayers aware of your validator by writing to the `ValidatorAnnounce` contract on the chain that you're validating.
+[Relayers](../../../protocol/agents/relayer.md) need to know where to find your validator's signatures. You can make relayers aware of your validator by writing to the `ValidatorAnnounce` contract on the chain that you're validating.
 
 First, find the signed announcement JSON object written by your validator by navigating to your S3 bucket in the AWS console, selecting the `announcement.json` object, and clicking on the "Object URL".
 

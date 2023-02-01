@@ -52,15 +52,15 @@
   * [HelloWorld](build-with-hyperlane/examples/helloworld.md)
   * [ERC20 token](build-with-hyperlane/examples/erc20-token.md)
 
-## API Reference
+## APIs
 
-* [Messaging API](api-reference/messaging-api/README.md)
-  * [Send](api-reference/messaging-api/send.md)
-  * [Receive](api-reference/messaging-api/receive.md)
-* [Liquidity Layer API](api-reference/token-bridge-api.md)
-* [Accounts API](api-reference/send.md)
-* [Queries API](api-reference/query.md)
-* [Warp API](api-reference/warp-api.md)
+* [Messaging API](apis/messaging-api/README.md)
+  * [Send](apis/messaging-api/send.md)
+  * [Receive](apis/messaging-api/receive.md)
+* [Liquidity Layer API](apis/token-bridge-api.md)
+* [Accounts API](apis/send.md)
+* [Queries API](apis/query.md)
+* [Warp API](apis/warp-api.md)
 
 ## SDKs
 
@@ -75,17 +75,17 @@
     * [Interchain Gas Quotes](sdks/building-applications/nodejs-sdk/gas.md)
     * [App Abstraction](sdks/building-applications/nodejs-sdk/contract-interaction.md)
 
-## Protocol Reference
+## Protocol
 
-* [Overview](protocol-reference/overview.md)
-* [Mailboxes](protocol-reference/messaging.md)
-* [Sovereign consensus](protocol-reference/sovereign-consensus.md)
-* [Proof of Stake](protocol-reference/proof-of-stake.md)
-* [Permissionless Interoperability](protocol-reference/permissionless-interoperability.md)
-* [Agents](protocol-reference/agents/README.md)
-  * [Validators](protocol-reference/agents/validators.md)
-  * [Relayers](protocol-reference/agents/relayer.md)
-  * [Watchtowers](protocol-reference/agents/processor.md)
+* [Overview](protocol/overview.md)
+* [Mailboxes](protocol/messaging.md)
+* [Sovereign consensus](protocol/sovereign-consensus.md)
+* [Proof of Stake](protocol/proof-of-stake.md)
+* [Permissionless Interoperability](protocol/permissionless-interoperability.md)
+* [Agents](protocol/agents/README.md)
+  * [Validators](protocol/agents/validators.md)
+  * [Relayers](protocol/agents/relayer.md)
+  * [Watchtowers](protocol/agents/processor.md)
 
 ## Resources
 

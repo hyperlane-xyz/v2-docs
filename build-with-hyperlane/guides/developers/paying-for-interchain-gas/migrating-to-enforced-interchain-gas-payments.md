@@ -76,7 +76,7 @@ Future changes, like accurately quoted interchain gas payments using token excha
 
 **How do I pay for gas with middlewares, like Interchain Accounts, Interchain Queries, and the Liquidity Layer?**
 
-APIs like the [Liquidity Layer API](../../../../api-reference/token-bridge-api.md), the [Accounts API](../../../../api-reference/send.md), and the [Queries API](../../../../api-reference/query.md) are sometimes called "middlewares." Just like all Hyperlane messages that wish to be delivered by a relayer, messages sent via these middlewares must have interchain gas paid for. See our entry on [Middleware APIs](middleware-apis.md) for more details.&#x20;
+APIs like the [Liquidity Layer API](../../../../apis/token-bridge-api.md), the [Accounts API](../../../../apis/send.md), and the [Queries API](../../../../apis/query.md) are sometimes called "middlewares." Just like all Hyperlane messages that wish to be delivered by a relayer, messages sent via these middlewares must have interchain gas paid for. See our entry on [Middleware APIs](middleware-apis.md) for more details.&#x20;
 
 **This may break some of my existing mainnet contracts that are live on v2.**
 

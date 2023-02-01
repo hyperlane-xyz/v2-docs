@@ -46,5 +46,5 @@ interface ISpecifiesInterchainSecurityModule {
 If no ISM is specified, or if the specified ISM is the null address, the default `MultisigIsm` will be used.
 
 {% hint style="warning" %}
-[Relayer](../../../protocol-reference/agents/relayer.md) support for custom ISMs is coming soon™️. It is recommended to use the default ISM for now.
+[Relayer](../../../protocol/agents/relayer.md) support for custom ISMs is coming soon™️. It is recommended to use the default ISM for now.
 {% endhint %}

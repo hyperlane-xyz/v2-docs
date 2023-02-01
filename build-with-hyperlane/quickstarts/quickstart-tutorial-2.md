@@ -3,7 +3,7 @@
 This tutorial demonstrates how to:
 
 * Make a simple call via Interchain Accounts to a pre-deployed [`TestRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/core/contracts/test/TestRecipient.sol) contract on a remote destination chain.
-* [Pay for interchain gas](../../api-reference/send.md#paying-for-interchain-gas) to have a [relayer](../../protocol-reference/agents/relayer.md) deliver the message.
+* [Pay for interchain gas](../../apis/send.md#paying-for-interchain-gas) to have a [relayer](../../protocol/agents/relayer.md) deliver the message.
 
 You can also check out the [`hyperlane-quickstart`](https://github.com/hyperlane-xyz/hyperlane-quickstart) repo for running this out of the box.
 
@@ -52,7 +52,7 @@ If you view the transaction on a block explorer, you should be able to see the `
 
 ### Pay For Interchain Gas
 
-For a message to be delivered by an off-chain [relayer](../../protocol-reference/agents/relayer.md), the message must [pay interchain gas](../../api-reference/send.md#paying-for-interchain-gas) on the origin chain to cover the destination chain transaction costs. This is done by calling the `payForGas` function of an "Interchain Gas Paymaster" contract, which lets you pay a relayer to deliver a message on your behalf.
+For a message to be delivered by an off-chain [relayer](../../protocol/agents/relayer.md), the message must [pay interchain gas](../../apis/send.md#paying-for-interchain-gas) on the origin chain to cover the destination chain transaction costs. This is done by calling the `payForGas` function of an "Interchain Gas Paymaster" contract, which lets you pay a relayer to deliver a message on your behalf.
 
 This `payForGas` call would typically be done by a smart contract that would first dispatch the message and immediately pay for gas, but because we dispatched the message from an [externally owned account](https://ethereum.org/en/developers/docs/accounts/#types-of-account) (EOA), we need to pay for gas with a separate transaction.
 
@@ -66,7 +66,7 @@ This `payForGas` call would typically be done by a smart contract that would fir
 
 
       <figure><img src="../../.gitbook/assets/Screen Shot 2023-01-26 at 10.47.06 AM.png" alt=""><figcaption><p>Finding the message ID from the <code>DispatchId</code> log</p></figcaption></figure>
-* `$GAS_AMOUNT`: The amount of destination gas to pay for. We'll be paying for 550,000 gas, which is based off the overhead gas amount described [here](../../api-reference/send.md#overhead-gas-amounts) when creating a new ICA.
+* `$GAS_AMOUNT`: The amount of destination gas to pay for. We'll be paying for 550,000 gas, which is based off the overhead gas amount described [here](../../apis/send.md#overhead-gas-amounts) when creating a new ICA.
 
 {% tabs %}
 {% tab title="Using Metamask" %}

@@ -1,6 +1,6 @@
 # Interchain Gas Paymasters
 
-For convenience, Hyperlane provides an on-chain API on the origin chain that can be used to pay [relayers](../../../../protocol-reference/agents/relayer.md) in the origin chain's native token to deliver messages on the destination chain. This payment is called an interchain gas payment.
+For convenience, Hyperlane provides an on-chain API on the origin chain that can be used to pay [relayers](../../../../protocol/agents/relayer.md) in the origin chain's native token to deliver messages on the destination chain. This payment is called an interchain gas payment.
 
 ### Interface
 
@@ -21,7 +21,7 @@ interface IInterchainGasPaymaster {
 
 ### How It Works
 
-The interchain gas payment protocol is based on a social contract between a [relayer](../../../../protocol-reference/agents/relayer.md) and the interchain gas payer. Any relayer can provide their own IGP contracts, and anyone can pay for interchain gas on behalf of any message. A set of IGP contracts relating to relayers operated by the core team are provided.
+The interchain gas payment protocol is based on a social contract between a [relayer](../../../../protocol/agents/relayer.md) and the interchain gas payer. Any relayer can provide their own IGP contracts, and anyone can pay for interchain gas on behalf of any message. A set of IGP contracts relating to relayers operated by the core team are provided.
 
 The IGP contracts that are provided will calculate and enforce payment on-chain. This means that a call to the `payForGas` function of the `InterchainGasPaymaster` will revert if there is insufficient payment. If a `payForGas` call is successfully made that pays for a sufficient gas amount, the relayer commits to processing the message.
 

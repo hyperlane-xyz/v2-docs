@@ -8,7 +8,7 @@ description: Build interchain applications using Hyperlane
 
 Hyperlane makes interchain communication straightforward by providing a simple on-chain API for sending and receiving messages.
 
-[Learn more](../api-reference/messaging-api/) about the Hyperlane interchain messaging API.
+[Learn more](../apis/messaging-api/) about the Hyperlane interchain messaging API.
 
 ### Application framework
 

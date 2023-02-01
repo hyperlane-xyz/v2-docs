@@ -91,7 +91,7 @@ If `forge` complains about an incorrect nonce, use the `--slow` flag when deploy
 
 Follow [these instructions](guides/deployers.md#2.-run-validators) to run one or more Hyperlane validators for your ethermint chain.
 
-You will need to expose your ethermint node's RPC endpoint to these validator(s) so that they can query the Hyperlane [`Mailbox`](../protocol-reference/messaging.md) contract.
+You will need to expose your ethermint node's RPC endpoint to these validator(s) so that they can query the Hyperlane [`Mailbox`](../protocol/messaging.md) contract.
 
 ### Deploy remote ISMs
 
@@ -107,7 +107,7 @@ Follow [these instructions ](guides/deployers.md#4.-run-a-relayer-for-the-local-
 
 You will need an RPC URL for each chain, as well as an address with tokens to pay for gas.&#x20;
 
-You will need to expose your ethermint node's RPC endpoint to the relayers so that they can query the Hyperlane [`Mailbox`](../protocol-reference/messaging.md) contract.
+You will need to expose your ethermint node's RPC endpoint to the relayers so that they can query the Hyperlane [`Mailbox`](../protocol/messaging.md) contract.
 
 ### Test your Hyperlane deployment
 

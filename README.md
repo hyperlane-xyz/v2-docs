@@ -6,11 +6,11 @@ description: Pioneering permissionless and modular interoperability between bloc
 
 Hyperlane is the permissionless and modular interoperability layer. Hyperlane empowers developers to build Interchain Applications, apps that can connect between any blockchain environment and offer users a unified experience.&#x20;
 
-### **Hyperlane API's**
+### **Hyperlane APIs**
 
-Hyperlane's API's offer developers secure and simple ways to communicate between blockchains, and the Hyperlane SDK makes building interchain applications quick and easy.&#x20;
+Hyperlane's [APIs](./#hyperlane-apis) offer developers secure and simple ways to communicate between blockchains, and the Hyperlane [SDKs](broken-reference) makes building interchain applications quick and easy.&#x20;
 
-[messaging-api](api-reference/messaging-api/ "mention") [token-bridge-api.md](api-reference/token-bridge-api.md "mention") [send.md](api-reference/send.md "mention")[query.md](api-reference/query.md "mention")[warp-api.md](api-reference/warp-api.md "mention")
+[messaging-api](apis/messaging-api/ "mention") [token-bridge-api.md](apis/token-bridge-api.md "mention") [send.md](apis/send.md "mention")[query.md](apis/query.md "mention")[warp-api.md](apis/warp-api.md "mention")
 
 
 
@@ -59,6 +59,6 @@ Check out the [getting started guide](introduction/getting-started.md) for every
 
 ### Learn more about the Hyperlane Protocol
 
-Take a look at the [protocol docs](protocol-reference/overview.md) to understand the Hyperlane protocol architecture and [security model](protocol-reference/sovereign-consensus.md).
+Take a look at the [protocol docs](protocol/overview.md) to understand the Hyperlane protocol architecture and [security model](protocol/sovereign-consensus.md).
 
 ### Learn more about Hyperlane use cases. Continue to the [next page](introduction/why-hyperlane/) to learn more&#x20;

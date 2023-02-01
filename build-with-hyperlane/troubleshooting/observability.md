@@ -24,15 +24,15 @@ If the destination domain identifier (`uint32`) is not known to relay clients th
 
 #### Invalid recipient
 
-If the recipient address (`bytes32`) is not a contract address that implements the [`IMessageRecipient` interface](../../api-reference/messaging-api/receive.md), the relayer will not be able to deliver your message.&#x20;
+If the recipient address (`bytes32`) is not a contract address that implements the [`IMessageRecipient` interface](../../apis/messaging-api/receive.md), the relayer will not be able to deliver your message.&#x20;
 
 {% hint style="warning" %}
-EVM addresses (`address`) must be left-padded with zeroes to be compliant. Refer to the [send encoding](../../api-reference/messaging-api/send.md#encoding) section for details and a `pure addressToBytes32` utility function.&#x20;
+EVM addresses (`address`) must be left-padded with zeroes to be compliant. Refer to the [send encoding](../../apis/messaging-api/send.md#encoding) section for details and a `pure addressToBytes32` utility function.&#x20;
 {% endhint %}
 
 #### Unprocessable
 
-If gas estimation of the message recipient's `IMessageRecipient.handle()` function fails, the [relayer](../../protocol-reference/agents/relayer.md) will not deliver the message. The relayer will continue to estimate gas for message delivery, as state changes may allow for successful delivery of a previously undeliverable message.
+If gas estimation of the message recipient's `IMessageRecipient.handle()` function fails, the [relayer](../../protocol/agents/relayer.md) will not deliver the message. The relayer will continue to estimate gas for message delivery, as state changes may allow for successful delivery of a previously undeliverable message.
 
 {% hint style="info" %}
 If you have a use case which is not accommodated by this behavior, **please reach out** [on Discord](https://discord.com/invite/KBD3aD78Bb).&#x20;

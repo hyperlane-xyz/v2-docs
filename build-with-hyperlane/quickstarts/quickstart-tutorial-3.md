@@ -11,11 +11,11 @@ This tutorial demonstrates how to make a simple interchain view call via the Que
 * `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../../resources/domains.md), or you could use `43113` to send to Fuji.
 * `$TARGET`: The address of the contract on the destination chain you want to query. You could just query for the `owner()` of the `InterchainAccountRouter` contract which is found at `0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D` on every testnet chain
 * `$TARGET_DATA`: The ABI encoded call, if you want to make an `owner()` call that would be `0x8da5cb5b`
-* `$GAS_AMOUNT`: The amount of gas on the destination chain to pay for. This should be an upper estimate of the amount of gas you expect your specific query to use on the destination chain, plus the [overhead gas amount](../../api-reference/query.md#paying-for-interchain-gas) expected to be used by the Queries API contract on the destination chain. For the simple `owner()` example, we can set this to a generous `200000` gas.
+* `$GAS_AMOUNT`: The amount of gas on the destination chain to pay for. This should be an upper estimate of the amount of gas you expect your specific query to use on the destination chain, plus the [overhead gas amount](../../apis/query.md#paying-for-interchain-gas) expected to be used by the Queries API contract on the destination chain. For the simple `owner()` example, we can set this to a generous `200000` gas.
 
 ### How TestQuerySender works
 
-* `TestQuerySender` is very simple. It basically just calls the `InterchainQueryRouter` and designates a callback function for the result of the query itself. It also [pays for interchain gas](../../api-reference/query.md#paying-for-interchain-gas).
+* `TestQuerySender` is very simple. It basically just calls the `InterchainQueryRouter` and designates a callback function for the result of the query itself. It also [pays for interchain gas](../../apis/query.md#paying-for-interchain-gas).
 
 ```solidity
 function queryAddress(
