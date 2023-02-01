@@ -35,7 +35,7 @@
     * [Unit testing](build-with-hyperlane/guides/developers/unit-testing.md)
     * [Configuring Security](build-with-hyperlane/guides/developers/receive-1.md)
     * [V2 migration guide](build-with-hyperlane/guides/developers/v2-migration-guide.md)
-  * [Deployers](build-with-hyperlane/guides/deployers/README.md)
+  * [Permissionless Deployment](build-with-hyperlane/guides/deployers/README.md)
     * [Celestia + Hyperlane](build-with-hyperlane/guides/deployers/celestia-+-hyperlane.md)
   * [Validators](build-with-hyperlane/guides/getting-started/README.md)
     * [AWS setup](build-with-hyperlane/guides/getting-started/aws-setup.md)
