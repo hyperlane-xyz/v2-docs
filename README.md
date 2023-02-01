@@ -4,13 +4,11 @@ description: Pioneering permissionless and modular interoperability between bloc
 
 # Hyperlane Introduction
 
-Hyperlane is permissionless and modular interoperability platform with focus on security assumptions. Empowering developers to build interchain applications that can communicate cross chain between blockchain environments.&#x20;
+Hyperlane is the permissionless and modular interoperability layer. Hyperlane empowers developers to build Interchain Applications, apps that can connect between any blockchain environment and offer users a unified experience.&#x20;
 
-Hyperlane priority focus is developer experience and security of cross chain transfers offering it's users the best experience of cross chain protocol communication.
+### **Hyperlane API's**
 
-### **Cross chain API modules by Hyperlane**
-
-Hyperlane provides set of various API modules as plug and play solution for their cross chain application. Hyperlane SDK can makes building interchain applications quick and easy. &#x20;
+Hyperlane's API's offer developers secure and simple ways to communicate between blockchains, and the Hyperlane SDK makes building interchain applications quick and easy.&#x20;
 
 [messaging-api](api-reference/messaging-api/ "mention") [token-bridge-api.md](api-reference/token-bridge-api.md "mention") [send.md](api-reference/send.md "mention")[query.md](api-reference/query.md "mention")[warp-api.md](api-reference/warp-api.md "mention")
 
@@ -55,13 +53,11 @@ flowchart LR
     style mb2 fill:#e4f3ff,stroke:#025aa1,stroke-width:3px
 ```
 
-
-
 ### Integrate Hyperlane into your app
 
 Check out the [getting started guide](introduction/getting-started.md) for everything you need to start building with Hyperlane. If you run into an issues or have any questions, [join our discord](https://discord.gg/hyperlane) to get support from the community of Hyperlane builders!
 
-### Learn more about Hyperlane Protocol
+### Learn more about the Hyperlane Protocol
 
 Take a look at the [protocol docs](protocol-reference/overview.md) to understand the Hyperlane protocol architecture and [security model](protocol-reference/sovereign-consensus.md).
 
