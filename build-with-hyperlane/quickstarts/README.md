@@ -6,7 +6,7 @@ description: >-
 
 # Quickstarts
 
-Each API has a Quickstart section that can be used with just Metamask or Cast by Foundry. If you are looking for a repo which you can clone and run locally, check out [Hyperlane Quickstart GitHub](https://github.com/hyperlane-xyz/hyperlane-quickstart/).&#x20;
+Each API has a Quickstart section that can be used with just Metamask or [Cast by Foundry](https://book.getfoundry.sh/cast/). If you are looking for a repo which you can clone and run locally, check out [Hyperlane Quickstart GitHub](https://github.com/hyperlane-xyz/hyperlane-quickstart/).&#x20;
 
 ### Messaging&#x20;
 

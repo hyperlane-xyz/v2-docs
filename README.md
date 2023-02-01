@@ -1,7 +1,5 @@
 ---
-description: >-
-  Permissionless secure modular blockchain architecture for cross chain
-  communication
+description: Pioneering permissionless and modular interoperability between blockchains
 ---
 
 # Hyperlane Introduction
