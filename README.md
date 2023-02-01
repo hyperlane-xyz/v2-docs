@@ -8,7 +8,7 @@ Hyperlane is the permissionless and modular interoperability layer. Hyperlane em
 
 ### **Hyperlane APIs**
 
-Hyperlane's [APIs](./#hyperlane-apis) offer developers secure and simple ways to communicate between blockchains, and the Hyperlane [SDKs](broken-reference) makes building interchain applications quick and easy.&#x20;
+Hyperlane's [APIs](./#hyperlane-apis) offer developers secure and simple ways to communicate between blockchains, and the Hyperlane [SDKs](broken-reference) make building interchain applications quick and easy.&#x20;
 
 [messaging-api](apis/messaging-api/ "mention") [token-bridge-api.md](apis/token-bridge-api.md "mention") [send.md](apis/send.md "mention")[query.md](apis/query.md "mention")[warp-api.md](apis/warp-api.md "mention")
 
