@@ -62,6 +62,19 @@
 * [Queries API](api-reference/query.md)
 * [Warp API](api-reference/warp-api.md)
 
+## SDKs
+
+* [Hyperlane SDKs](sdks/building-applications/README.md)
+  * [Solidity SDK](sdks/building-applications/writing-contracts/README.md)
+    * [HyperlaneConnectionClient](sdks/building-applications/writing-contracts/abacusconnectionclient.md)
+    * [Router](sdks/building-applications/writing-contracts/router.md)
+  * [NodeJS SDK](sdks/building-applications/nodejs-sdk/README.md)
+    * [RPC Providers](sdks/building-applications/nodejs-sdk/multiprovider.md)
+    * [Deployment](sdks/building-applications/nodejs-sdk/deploying-contracts.md)
+    * [Interchain Testing](sdks/building-applications/nodejs-sdk/testing-contracts.md)
+    * [Interchain Gas Quotes](sdks/building-applications/nodejs-sdk/gas.md)
+    * [App Abstraction](sdks/building-applications/nodejs-sdk/contract-interaction.md)
+
 ## Protocol Reference
 
 * [Overview](protocol-reference/overview.md)
@@ -84,16 +97,6 @@
 * [Core App Environments](resources/environments.md)
 * [Latencies](resources/latencies.md)
 * [Migration to Enforced Interchain Gas Payments](resources/migration-to-enforced-interchain-gas-payments.md)
-* [Hyperlane SDKs](resources/building-applications/README.md)
-  * [Solidity SDK](resources/building-applications/writing-contracts/README.md)
-    * [HyperlaneConnectionClient](resources/building-applications/writing-contracts/abacusconnectionclient.md)
-    * [Router](resources/building-applications/writing-contracts/router.md)
-  * [NodeJS SDK](resources/building-applications/nodejs-sdk/README.md)
-    * [RPC Providers](resources/building-applications/nodejs-sdk/multiprovider.md)
-    * [Deployment](resources/building-applications/nodejs-sdk/deploying-contracts.md)
-    * [Interchain Testing](resources/building-applications/nodejs-sdk/testing-contracts.md)
-    * [Interchain Gas Quotes](resources/building-applications/nodejs-sdk/gas.md)
-    * [App Abstraction](resources/building-applications/nodejs-sdk/contract-interaction.md)
 * [Github](https://github.com/hyperlane-xyz)
 * [Discord](https://discord.gg/hyperlane)
 * [Website](https://hyperlane.xyz)

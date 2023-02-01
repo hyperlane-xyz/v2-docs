@@ -13,7 +13,7 @@ interface IInterchainGasPaymaster {
 }
 ```
 
-This function can be called directly on or off chain, or using the Hyperlane SDK's [InterchainGasCalculator](../../../../resources/building-applications/nodejs-sdk/gas.md).
+This function can be called directly on or off chain, or using the Hyperlane SDK's [InterchainGasCalculator](../../../../sdks/building-applications/nodejs-sdk/gas.md).
 
 The provided InterchainGasPaymaster contracts will refund any overpayment to the `_refundAddress` passed to the `payForGas` function. See [Refunds](paying-the-correct-amount.md#refunds) below for more information.
 

@@ -16,7 +16,7 @@ Looking for something a bit more advanced?
 
 The Hyperlane application framework helps developers create and manage interchain applications.
 
-[Learn more](../resources/building-applications/) about the application framework.
+[Learn more](../sdks/building-applications/) about the application framework.
 
 ### Example applications
 

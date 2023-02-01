@@ -18,7 +18,7 @@ Relayers can easily configure the messages that they wish to process. Currently,
 
 1. A sender/recipient whitelist
 2. A sender/recipient blacklist
-3. The ability to accept [payments on the origin chain](../../resources/building-applications/nodejs-sdk/gas.md) as for processing a message on the destination chain.&#x20;
+3. The ability to accept [payments on the origin chain](../../sdks/building-applications/nodejs-sdk/gas.md) as for processing a message on the destination chain.&#x20;
 
 For convenience, Abacus Works will run an open source and configurable relayer agent, implemented as a rust binary. If you'd like to run your own relayer, we've open sourced the [binary here](https://github.com/hyperlane-xyz/hyperlane-monorepo/tree/main/rust/agents/relayer).&#x20;
 

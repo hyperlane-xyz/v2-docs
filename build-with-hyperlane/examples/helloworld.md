@@ -18,7 +18,7 @@ To send the message, it calls the `_dispatchWithGas` method.
 
 The [deployer](https://github.com/hyperlane-xyz/hyperlane-app-template/blob/main/src/deploy/deploy.ts) is configured to deploy to local hardhat-based test networks.
 
-The main purpose of defining a deployer is to provide the custom types and and implementation of the `deployContracts` method. See [Deploying contracts](../../resources/building-applications/nodejs-sdk/deploying-contracts.md) for more details.
+The main purpose of defining a deployer is to provide the custom types and and implementation of the `deployContracts` method. See [Deploying contracts](../../sdks/building-applications/nodejs-sdk/deploying-contracts.md) for more details.
 
 ```typescript
 export class HelloWorldDeployer<
