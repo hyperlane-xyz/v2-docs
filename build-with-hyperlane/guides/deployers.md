@@ -2,7 +2,7 @@
 description: Everything you need to deploy Hyperlane to a new chain
 ---
 
-# Deployers
+# Permissionless Deployment
 
 Hyperlane is designed to be deployed to new chains by anyone, at any time. Read on to learn how to deploy Hyperlane to your favorite EVM chain.
 
@@ -12,11 +12,11 @@ This tutorial is intended for users who want to deploy Hyperlane to a new EVM ch
 
 At a high level, this requires the following actions:
 
-1. Deploying the core smart contracts (`Mailbox, InterchainGasPaymaster`) to the local chain. This script will also deploy and configure an [Interchain Security Module](../../../protocol-reference/sovereign-consensus.md#interchain-security-modules) on the local chain. Applications may use this ISM to verify interchain messages sent **to** the local chain.
-2. Running one or more [validators](../getting-started/) for the local chain, to provide security for outgoing messages
-3. Deploying and configuring [Interchain Security Modules](../developers/receive-1.md#interchain-security-modules) on the remote chain(s). Applications will use these ISMs to verify interchain messages sent **from** the local chain.
-4. Running a [relayer](../getting-started-1/) for the local chain, to deliver interchain messages sent **from** the local chain **to** the remote chain(s).
-5. Running a [relayer](../getting-started-1/) for the remote chain(s), to deliver incoming messages sent **from** the remote chain(s) **to** the local chain.
+1. Deploying the core smart contracts (`Mailbox, InterchainGasPaymaster`) to the local chain. This script will also deploy and configure an [Interchain Security Module](../../protocol-reference/sovereign-consensus.md#interchain-security-modules) on the local chain. Applications may use this ISM to verify interchain messages sent **to** the local chain.
+2. Running one or more [validators](getting-started/) for the local chain, to provide security for outgoing messages
+3. Deploying and configuring [Interchain Security Modules](developers/receive-1.md#interchain-security-modules) on the remote chain(s). Applications will use these ISMs to verify interchain messages sent **from** the local chain.
+4. Running a [relayer](getting-started-1/) for the local chain, to deliver interchain messages sent **from** the local chain **to** the remote chain(s).
+5. Running a [relayer](getting-started-1/) for the remote chain(s), to deliver incoming messages sent **from** the remote chain(s) **to** the local chain.
 6. Testing that messages can be sent from the local chain to each of the remote chains, and vice versa.&#x20;
 
 ## 1. Deploy the core smart contracts
@@ -77,13 +77,13 @@ Deployed contract addresses will be written to `hyperlane-deploy/config/networks
 When using the agent config, the numerical fields `index.from` and `domain` must be converted to strings by surrounding them with quotes.
 {% endhint %}
 
-Follow the Validators guide to run validators for the mailbox on your chain. Include the agent config from [#1.-deploy-the-core-smart-contracts](./#1.-deploy-the-core-smart-contracts "mention") in `CONFIG_FILES`. If you use docker, you will need to mount the file into the container.
+Follow the Validators guide to run validators for the mailbox on your chain. Include the agent config from [#1.-deploy-the-core-smart-contracts](deployers.md#1.-deploy-the-core-smart-contracts "mention") in `CONFIG_FILES`. If you use docker, you will need to mount the file into the container.
 
 Make sure to collect the validator addresses for use in the next step.
 
 ## 3. Deploy remote ISMs
 
-Using the validator addresses from [#2.-run-validators](./#2.-run-validators "mention"), add an entry to `hyperlane-deploy/config/multisig_ism.json` for the local chain.
+Using the validator addresses from [#2.-run-validators](deployers.md#2.-run-validators "mention"), add an entry to `hyperlane-deploy/config/multisig_ism.json` for the local chain.
 
 This config will be used to deploy a `MultisigIsm` to each remote chain that you'd like to be able to send messages **to**. Applications will be able to use this ISM to verify interchain messages sent **from** the local chain.
 
@@ -113,7 +113,7 @@ forge script scripts/DeployMultisigIsm.s.sol --broadcast --rpc-url $RPC_URL \
     --private-key $PRIVATE_KEY
 ```
 
-You should see the following output. Save the contract addresses for future use. Applications will be able to use the `MultisigIsm` to verify messages sent from your chain. You will use the `TestRecipient` contract to verify that everything is working properly in step [#6.-send-test-messages](./#6.-send-test-messages "mention").
+You should see the following output. Save the contract addresses for future use. Applications will be able to use the `MultisigIsm` to verify messages sent from your chain. You will use the `TestRecipient` contract to verify that everything is working properly in step [#6.-send-test-messages](deployers.md#6.-send-test-messages "mention").
 
 ```bash
 [⠒] Compiling...
@@ -129,15 +129,15 @@ Script ran successfully.
 
 ## 4. Run a relayer for the local chain
 
-Similar to [#2.-run-validators](./#2.-run-validators "mention"), follow the [getting-started-1](../getting-started-1/ "mention") instructions to run a relayer for the local chain by including the agent config in `CONFIG_FILES`
+Similar to [#2.-run-validators](deployers.md#2.-run-validators "mention"), follow the [getting-started-1](getting-started-1/ "mention") instructions to run a relayer for the local chain by including the agent config in `CONFIG_FILES`
 
 This relayer will deliver messages sent **from** the local chain **to** each of the remote chains. Remember to set the `HYP_RELAYER_DESTINATIONCHAINNAMES`for your supported remotes appropriately.\
 \
-You will need the validator addresses and S3 bucket names/regions from [#2.-run-validators](./#2.-run-validators "mention")in order to properly configure the relayer.
+You will need the validator addresses and S3 bucket names/regions from [#2.-run-validators](deployers.md#2.-run-validators "mention")in order to properly configure the relayer.
 
 ## 5. Run relayer(s) for the remote chain(s)
 
-Reversely, follow the [getting-started-1](../getting-started-1/ "mention") instructions to run a relayer for each of the remote chains.
+Reversely, follow the [getting-started-1](getting-started-1/ "mention") instructions to run a relayer for each of the remote chains.
 
 These relayers will deliver messages sent **from** the remote chains **to** the local chain. Remember to set the `HYP_RELAYER_DESTINATIONCHAINNAMES`for your supported remotes appropriately.
 

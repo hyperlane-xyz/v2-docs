@@ -70,11 +70,11 @@ Then, follow [these instructions](https://docs.celestia.org/developers/instantia
 
 ## 2. Deploy Hyperlane's interchain messaging API
 
-Additional documentation for deploying Hypelane to an EVM compatible chain can be found [here](./).
+Additional documentation for deploying Hypelane to an EVM compatible chain can be found [here](guides/deployers.md).
 
 ### Deploy the Hyperlane core contracts
 
-Follow [these instructions](./#1.-deploy-the-core-smart-contracts) to deploy the Hyperlane core contracts to your ethermint chain.
+Follow [these instructions](guides/deployers.md#1.-deploy-the-core-smart-contracts) to deploy the Hyperlane core contracts to your ethermint chain.
 
 If you run the contract deployment on the same machine as your ethermint node, you can use the RPC URL `http://localhost:8545`.
 
@@ -89,13 +89,13 @@ If `forge` complains about an incorrect nonce, use the `--slow` flag when deploy
 
 ### Run Hyperlane validators
 
-Follow [these instructions](./#2.-run-validators) to run one or more Hyperlane validators for your ethermint chain.
+Follow [these instructions](guides/deployers.md#2.-run-validators) to run one or more Hyperlane validators for your ethermint chain.
 
-You will need to expose your ethermint node's RPC endpoint to these validator(s) so that they can query the Hyperlane [`Mailbox`](../../../protocol-reference/messaging.md) contract.
+You will need to expose your ethermint node's RPC endpoint to these validator(s) so that they can query the Hyperlane [`Mailbox`](../protocol-reference/messaging.md) contract.
 
 ### Deploy remote ISMs
 
-Follow [these instructions](./#3.-deploy-remote-isms) to deploy an `Interchain Security Module` smart contract to each of the remote chains you would like your ethermint chain to be able to communicate with.
+Follow [these instructions](guides/deployers.md#3.-deploy-remote-isms) to deploy an `Interchain Security Module` smart contract to each of the remote chains you would like your ethermint chain to be able to communicate with.
 
 You will need an RPC URL for each of these remote chains, as well as an address with tokens to pay for gas.&#x20;
 
@@ -103,11 +103,11 @@ Applications on remote chains will use these contracts to verify messages coming
 
 ### Run Hyperlane relayers
 
-Follow [these instructions ](./#4.-run-a-relayer-for-the-local-chain)and [these instructions](./#5.-run-relayer-s-for-the-remote-chain-s) to run Hyperlane relayers to deliver messages between your ethermint chain and the remote chains you've configured.
+Follow [these instructions ](guides/deployers.md#4.-run-a-relayer-for-the-local-chain)and [these instructions](guides/deployers.md#5.-run-relayer-s-for-the-remote-chain-s) to run Hyperlane relayers to deliver messages between your ethermint chain and the remote chains you've configured.
 
 You will need an RPC URL for each chain, as well as an address with tokens to pay for gas.&#x20;
 
-You will need to expose your ethermint node's RPC endpoint to the relayers so that they can query the Hyperlane [`Mailbox`](../../../protocol-reference/messaging.md) contract.
+You will need to expose your ethermint node's RPC endpoint to the relayers so that they can query the Hyperlane [`Mailbox`](../protocol-reference/messaging.md) contract.
 
 ### Test your Hyperlane deployment
 
@@ -115,11 +115,11 @@ Follow these instructions to send messages from your ethermint chain to the remo
 
 ## 3. Deploy a Hyperlane Warp route
 
-Additional documentation for deploying a Warp route to an EVM compatible chain can be found [here](../../quickstarts/deploy-a-warp-route.md).
+Additional documentation for deploying a Warp route to an EVM compatible chain can be found [here](quickstarts/deploy-a-warp-route.md).
 
 ### Deploy the contracts
 
-Follow [these instructions](../../quickstarts/deploy-a-warp-route.md) to deploy warp route contracts to your ethermint chains and the remote chains that you'd like to support.
+Follow [these instructions](quickstarts/deploy-a-warp-route.md) to deploy warp route contracts to your ethermint chains and the remote chains that you'd like to support.
 
 You will need to make sure you add the details for your chain in a chain config JSON file and pass that to the deployer. The contents of that file should look something like this. Make sure to substitute your own chain name, token name, and RPC URL.\
 
@@ -146,7 +146,7 @@ Your token config **must** specify the ISMs that you deployed on the remote chai
 
 ### Deploy the UI
 
-Follow [these instructions](../../quickstarts/deploy-the-ui-for-your-warp-route.md) to deploy the UI for your Warp Route.
+Follow [these instructions](quickstarts/deploy-the-ui-for-your-warp-route.md) to deploy the UI for your Warp Route.
 
 You will need to make sure you've added your chain to `src/consts/chains.json`. You can use the same JSON object you used in the previous step, with the additional `logoImgSrc` field.
 
