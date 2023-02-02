@@ -46,9 +46,9 @@ function addressToBytes32(address _addr) internal pure returns (bytes32) {
 The code snippet below shows an example of sending a message from Ethereum to Avalanche.
 
 ```solidity
-uint32 constant avalancheDomain = 0x61766178;
-address constant avalancheRecipient = 0x82825C0884558C9c5A94B545e7563c95aBA49197;
-address constant ethereumOutbox = 0x2f9DB5616fa3fAd1aB06cB2C906830BA63d135e3;
+uint32 constant avalancheDomain = 43114;
+address constant avalancheRecipient = 0xBC3cFeca7Df5A45d61BC60E7898E63670e1654aE;
+address constant ethereumMailbox = 0x2f9db5616fa3fad1ab06cb2c906830ba63d135e3;
 IMailbox(ethereumMailbox).dispatch(
     avalancheDomain,
     addressToBytes32(avalancheRecipient),
