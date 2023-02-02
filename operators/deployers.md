@@ -12,9 +12,9 @@ This tutorial is intended for users who want to deploy Hyperlane to a new EVM ch
 
 At a high level, this requires the following actions:
 
-1. Deploying the core smart contracts (`Mailbox, InterchainGasPaymaster`) to the local chain. This script will also deploy and configure an [Interchain Security Module](../../protocol/sovereign-consensus.md#interchain-security-modules) on the local chain. Applications may use this ISM to verify interchain messages sent **to** the local chain.
+1. Deploying the core smart contracts (`Mailbox, InterchainGasPaymaster`) to the local chain. This script will also deploy and configure an [Interchain Security Module](../protocol/sovereign-consensus.md#interchain-security-modules) on the local chain. Applications may use this ISM to verify interchain messages sent **to** the local chain.
 2. Running one or more [validators](getting-started/) for the local chain, to provide security for outgoing messages
-3. Deploying and configuring [Interchain Security Modules](developers/receive-1.md#interchain-security-modules) on the remote chain(s). Applications will use these ISMs to verify interchain messages sent **from** the local chain.
+3. Deploying and configuring [Interchain Security Modules](../build-with-hyperlane/guides/receive-1.md#interchain-security-modules) on the remote chain(s). Applications will use these ISMs to verify interchain messages sent **from** the local chain.
 4. Running a [relayer](getting-started-1/) for the local chain, to deliver interchain messages sent **from** the local chain **to** the remote chain(s).
 5. Running a [relayer](getting-started-1/) for the remote chain(s), to deliver incoming messages sent **from** the remote chain(s) **to** the local chain.
 6. Testing that messages can be sent from the local chain to each of the remote chains, and vice versa.&#x20;

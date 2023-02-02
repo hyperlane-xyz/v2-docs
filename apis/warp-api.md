@@ -45,7 +45,7 @@ interface IHypERC20 is IERC20 {
 
 ### Security considerations
 
-Each Warp Route is secured by [sovereign consensus](../protocol/sovereign-consensus.md). The deployer of a Warp Route can optionally specify the [Interchain Security Module(s)](../build-with-hyperlane/guides/developers/receive-1.md#interchain-security-modules) (ISMs) that are used to verify interchain transfer messages.
+Each Warp Route is secured by [sovereign consensus](../protocol/sovereign-consensus.md). The deployer of a Warp Route can optionally specify the [Interchain Security Module(s)](../build-with-hyperlane/guides/receive-1.md#interchain-security-modules) (ISMs) that are used to verify interchain transfer messages.
 
 This means that each Warp Route may have a unique security configuration. Users transferring interchain tokens should understand the trust assumptions of a Route before using it.&#x20;
 

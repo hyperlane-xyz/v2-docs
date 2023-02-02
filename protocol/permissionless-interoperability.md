@@ -16,7 +16,7 @@ Permissionless Interoperability means that you have the freedom to deploy Hyperl
 
 The permissionless and modular design of Hyperlane powers many unique features:
 
-* Expand to any environment without reliance on external parties with [Permissionless Deployment](../build-with-hyperlane/guides/deployers.md)
+* Expand to any environment without reliance on external parties with [Permissionless Deployment](../operators/deployers.md)
 * Own and customize your app's security model with [Sovereign Consensus](sovereign-consensus.md) and customize it with your choice of [Interchain Security Modules](sovereign-consensus.md#interchain-security-modules) (ISMs)&#x20;
 * Move value anywhere, permissionlessly with [Warp Routes](../apis/warp-api.md)
 
@@ -27,7 +27,7 @@ The Hyperlane thesis is that&#x20;
 
 **The Permissionless End Game**
 
-We envision an end game where the developer burden is as minimal as possible. Currently, the biggest burden that faced by permissionless deployers is [Relaying](../build-with-hyperlane/guides/getting-started-1/), with security initialization and configuration to a lesser extent. The long term vision is one where a relayer network exists to cater to the needs of permissionless deployers. A deployer script would include information, terms, and payment under which relayer services for a new network will be provided. Such that new networks can be added without the deployer needing to operate a relayer service.
+We envision an end game where the developer burden is as minimal as possible. Currently, the biggest burden that faced by permissionless deployers is [Relaying](../operators/getting-started-1/), with security initialization and configuration to a lesser extent. The long term vision is one where a relayer network exists to cater to the needs of permissionless deployers. A deployer script would include information, terms, and payment under which relayer services for a new network will be provided. Such that new networks can be added without the deployer needing to operate a relayer service.
 
 Reducing of burden of configuring and initializing a security module will likely be addressed by allowing developers to cast an on-chain petition to existing security module operators, and to enlist their services to secure the chain. The first modules that will support this feature will likely be economic security modules, leveraging both direct proof of stake and restaking.
 

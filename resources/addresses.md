@@ -22,7 +22,7 @@ description: Hyperlane core contract addresses
 
 ### DefaultIsmInterchainGasPaymaster
 
-Read about this [here](../build-with-hyperlane/guides/developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)
+Read about this [here](../build-with-hyperlane/guides/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)
 
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -38,7 +38,7 @@ Read about this [here](../build-with-hyperlane/guides/developers/paying-for-inte
 
 ### InterchainGasPaymaster
 
-Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-a-custom-ism-advanced)
+Advanced use - [read here](../build-with-hyperlane/guides/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-a-custom-ism-advanced)
 
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -135,7 +135,7 @@ Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-
 
 ### DefaultIsmInterchainGasPaymaster
 
-Read about this [here](../build-with-hyperlane/guides/developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)
+Read about this [here](../build-with-hyperlane/guides/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)
 
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -150,7 +150,7 @@ Read about this [here](../build-with-hyperlane/guides/developers/paying-for-inte
 
 ### InterchainGasPaymaster
 
-Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-a-custom-ism-advanced)
+Advanced use - [read here](../build-with-hyperlane/guides/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-a-custom-ism-advanced)
 
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |

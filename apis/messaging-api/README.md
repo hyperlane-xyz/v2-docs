@@ -26,7 +26,7 @@ To send interchain messages, reference the [`Mailbox.dispatch()` API](send.md).
 
 To receive interchain messages, implement the [`IMessageRecipient.handle()`](receive.md) interface.
 
-You can [unit test](../../build-with-hyperlane/guides/developers/unit-testing.md) your integration with the Hyperlane messaging API using the `MockMailbox`  contracts.
+You can [unit test](../../build-with-hyperlane/guides/unit-testing.md) your integration with the Hyperlane messaging API using the `MockMailbox`  contracts.
 
 Delivering an interchain message requires submitting a transaction on the destination chain. Optionally, you can pay for the gas for this transaction on the origin chain, and let a Hyperlane [relayer](../../protocol/agents/relayer.md) deliver your message for you.
 

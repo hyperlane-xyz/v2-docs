@@ -7,7 +7,7 @@ description: Send your first interchain message in under 5 minutes
 This tutorial demonstrates how to:
 
 * [Send](../../apis/messaging-api/send.md) a simple interchain message to a pre-deployed [`TestRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/core/contracts/test/TestRecipient.sol) contract.
-* [Pay for interchain gas](../guides/developers/paying-for-interchain-gas/) to have a [relayer](../../protocol/agents/relayer.md) deliver the message.
+* [Pay for interchain gas](../guides/paying-for-interchain-gas/) to have a [relayer](../../protocol/agents/relayer.md) deliver the message.
 
 You can also check out the [`hyperlane-quickstart`](https://github.com/hyperlane-xyz/hyperlane-quickstart) repo for running this out of the box.
 
@@ -50,7 +50,7 @@ You can see an example message sending transaction [here](https://kovan.ethersca
 
 ### Pay For Interchain Gas
 
-For a message to be delivered by an off-chain [relayer](../../protocol/agents/relayer.md), the message must [pay interchain gas](../guides/developers/paying-for-interchain-gas/) on the origin chain to cover the destination chain transaction costs. This is done by calling the `payForGas` function of an "Interchain Gas Paymaster" contract, which lets you pay a relayer to deliver a message on your behalf.
+For a message to be delivered by an off-chain [relayer](../../protocol/agents/relayer.md), the message must [pay interchain gas](../guides/paying-for-interchain-gas/) on the origin chain to cover the destination chain transaction costs. This is done by calling the `payForGas` function of an "Interchain Gas Paymaster" contract, which lets you pay a relayer to deliver a message on your behalf.
 
 This `payForGas` call would typically be done by a smart contract that would first dispatch the message and immediately pay for gas, but because we dispatched the message from an [externally owned account](https://ethereum.org/en/developers/docs/accounts/#types-of-account) (EOA), we need to pay for gas with a separate transaction.
 

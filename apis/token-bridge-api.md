@@ -103,7 +103,7 @@ The same points about access control and encoding from the [messaging-api](messa
 
 ### Paying for Interchain Gas
 
-Just like all Hyperlane messages that wish to have their messages delivered by a relayer, users must [pay for interchain gas](../build-with-hyperlane/guides/developers/paying-for-interchain-gas/).
+Just like all Hyperlane messages that wish to have their messages delivered by a relayer, users must [pay for interchain gas](../build-with-hyperlane/guides/paying-for-interchain-gas/).
 
 The `dispatchWithTokens` function in the Liquidity Layer API returns the message ID as a `bytes32`. This message ID can then be used by the caller to pay for interchain gas.
 

@@ -30,7 +30,7 @@ Despite that, permissionless is sorely missing from the world of interoperabilit
 
 Hyperlane's architecture was created with the prospect of permissionelss deployment in mind, with the ultimate goal of achieving this holy grail of interoperability.&#x20;
 
-The MVP of Permissionless Deployment is now live, and accessible [here](../../build-with-hyperlane/guides/deployers.md). Try it out and give us your feedback!
+The MVP of Permissionless Deployment is now live, and accessible [here](../../operators/deployers.md). Try it out and give us your feedback!
 
 #### Developer Focus
 
