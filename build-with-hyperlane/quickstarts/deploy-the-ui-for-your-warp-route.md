@@ -46,7 +46,7 @@ Under `hypCollateralAddress`, specify the router address that you got on the col
 
 Since the UI is a Next.js app, you can use your favorite hosting service to host it. We recommend Vercel, which works very well with Next.
 
-* Sign up for Vercel ([https://vercel.com/](https://vercel.com/))
+* Sign up for [Vercel](https://vercel.com/)
 * Create a new project
 * Connect it to your Git repo
 * Hit Deploy!

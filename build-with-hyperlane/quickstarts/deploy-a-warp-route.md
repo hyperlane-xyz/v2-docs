@@ -24,7 +24,7 @@ $ yarn build
 You will need to create a JSON file that specifies the Warp Route configuration. This will include information such as:
 
 * Which token, on which chain, is this Warp Route being created for?
-* Hyperlane connection details (e.g. contract addresses for [messaging.md](../../protocol/messaging.md "mention"), or the [IGP contract to use](../guides/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md))
+* Hyperlane connection details (e.g. contract addresses for [messaging.md](../../protocol/messaging.md "mention"), or the [IGP contract to use](../guides/developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md))
 * Optional security configuration (i.e. [Interchain Security Module](../guides/receive-1.md#interchain-security-modules) addresses)
 
 Your configuration must have exactly one entry with `"type": "collateral"`, which specifies the canonical token address. Every other entry must have `"type": "synthetic"`.

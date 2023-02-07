@@ -4,7 +4,7 @@ Two different types of IGP contracts are provided. Read below to understand whic
 
 #### When using the default ISM (for most applications)
 
-If your application makes use of the default [Interchain Security Module](../receive-1.md#interchain-security-modules) (ISM) for security by either not specifying a [custom ISM](../receive-1.md#specifying-custom-isms) or specifying **** the [MultisigIsm](../../../../resources/addresses.md#multisigism), your application can make use of the **`DefaultIsmInterchainGasPaymaster`**.
+If your application makes use of the default [Interchain Security Module](../../receive-1.md#interchain-security-modules) (ISM) for security by either not specifying a [custom ISM](../../receive-1.md#specifying-custom-isms) or specifying **** the [MultisigIsm](../../../../resources/addresses.md#multisigism), your application can make use of the **`DefaultIsmInterchainGasPaymaster`**.
 
 {% hint style="info" %}
 The default ISM is the default security module for Hyperlane messages, so if you don't know if you're using the default ISM for security, then you are automatically using the default ISM.
@@ -16,7 +16,7 @@ Behind the scenes, the `DefaultIsmInterchainGasPaymaster` is configured to autom
 
 Find the deployed `DefaultIsmInterchainGasPaymaster` [addresses here](../../../../resources/addresses.md#defaultisminterchaingaspaymaster).
 
-See [Examples](examples.md) to see how this is used in practice.
+See [Examples](../../paying-for-interchain-gas/examples.md) to see how this is used in practice.
 
 #### When using a custom ISM (advanced)
 
@@ -31,7 +31,7 @@ The gas amount required to process the message should include:
 
 Find the deployed `InterchainGasPaymaster` [addresses here.](../../../../resources/addresses.md#interchaingaspaymaster)
 
-#### TLDR
+#### TL;DR
 
 | Application ISM       | IGP Contract                       | \_gasAmount                                              |
 | --------------------- | ---------------------------------- | -------------------------------------------------------- |

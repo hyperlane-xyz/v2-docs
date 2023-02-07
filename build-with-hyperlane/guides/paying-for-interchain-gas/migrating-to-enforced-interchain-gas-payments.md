@@ -14,14 +14,14 @@ Previously, interchain gas payments were not enforced by the relayer that's oper
 
 * Interchain gas payments are starting to be enforced using on-chain fee quoting
 * The old IGP contracts have been deprecated, and there are new IGP contract addresses that apps must move to
-* Read the entire [Paying For Interchain Gas](./) section for details on how to correctly pay interchain gas
+* Read the entire [Paying For Interchain Gas](../developers/paying-for-interchain-gas/) section for details on how to correctly pay interchain gas
 * A new SDK version `1.1.0` has been released with the relevant changes to gas payments
 
 ### Overview of Changes
 
 Previously, a single `InterchainGasPaymaster` contract address was provided. This contract didn't do much-- it would accept any payment and emit an event indicating that a gas payment was made, but it didn't require specific payment amounts.
 
-The best current source of information for paying for gas can be found in the [Paying For Interchain Gas](./) section.
+The best current source of information for paying for gas can be found in the [Paying For Interchain Gas](../developers/paying-for-interchain-gas/) section.
 
 #### On-chain fee quoting
 
@@ -35,7 +35,7 @@ See [Paying the Correct Amount](paying-the-correct-amount.md) to understand how 
 
 The previous IGP contract address has been deprecated. Instead, two different IGP contracts are taking its place: the `DefaultIsmInterchainGasPaymaster` ([mainnet addresses](../../../resources/addresses.md#defaultisminterchaingaspaymaster)), and the `InterchainGasPaymaster` ([mainnet addresses](../../../resources/addresses.md#interchaingaspaymaster)).
 
-See [Which IGP To Use & Understanding Gas Amounts](which-igp-to-use-and-understanding-gas-amounts.md) to understand which IGP contract your app should be using. Apps should move over to the appropriate IGP contract as soon as possible.
+See [Which IGP To Use & Understanding Gas Amounts](../developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md) to understand which IGP contract your app should be using. Apps should move over to the appropriate IGP contract as soon as possible.
 
 ### What's Next
 
@@ -58,7 +58,7 @@ No. The interface is exactly the same, just the IGP contract addresses have chan
 
 #### How do I know how much gas to use as the `_gasAmount` parameter when using the IGP?
 
-See [Which IGP To Use & Understanding Gas Amounts](which-igp-to-use-and-understanding-gas-amounts.md) to understand how this may differ if you're using the default Interchain Security Module.
+See [Which IGP To Use & Understanding Gas Amounts](../developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md) to understand how this may differ if you're using the default Interchain Security Module.
 
 Generally, this would involve estimating an upper bound amount of gas that your messages use on the destination.
 

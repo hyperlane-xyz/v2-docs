@@ -112,3 +112,21 @@ Your validator IAM user will need write permissions, and it should be publicly r
 ### Test Access
 
 See [https://github.com/tkporter/get-aws-kms-address](https://github.com/tkporter/get-aws-kms-address)
+
+`` `//First, install dependencies ``&#x20;
+
+`yarn`
+
+`Now set up all the required environment variables...`
+
+`The access ID of the user to use for the API request export ACCESS_KEY_ID=`
+
+`The secret access key of the user to use for the API request export SECRET_ACCESS_KEY=`
+
+`The region where the key is, e.g. us-west-2 export REGION=`
+
+`The ID of the key-- this is the big ugly string that's used to identify the key that isn't the alias, e.g. something like e2788a15-b8ef-4690-8fb1-f3613306ac99 export KEY_ID=`
+
+`` Run it! ts-node index.ts` ``&#x20;
+
+##
