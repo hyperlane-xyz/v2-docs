@@ -6,7 +6,17 @@ description: What are the platform's differentiating features?
 
 If you're considering an interoperability platform, you probably want to know what makes it unique, so let's get right into it and discuss what differentiates Hyperlane from existing offerings.&#x20;
 
-#### Sovereign Consensus
+#### [Permissionless Interoperability](../../protocol/permissionless-interoperability.md)
+
+The real magic of crypto is enabled by its permissionless nature. Even outside of crypto, the permissive and expressive nature of software is a major reason for the tremendous innovation seen in software in the last few decades while many other areas have stagnated.&#x20;
+
+Despite that, permissionless is sorely missing from the world of interoperability, and for good reason. The adversarial nature of blockchains makes the prospect of permissionless deployment for interoperability seem like a pipe dream, until now.
+
+Hyperlane's architecture was purpose built to be the first ever [Permissionless Interoperability](../../protocol/permissionless-interoperability.md) layer, an attempt to achieve the holy grail of blockchain connectivity.
+
+The MVP of Permissionless Interoperability is now live, and accessible [here](../../operators/deployers.md). Try it out and give us your feedback!
+
+#### [Sovereign Consensus](../../protocol/sovereign-consensus.md)
 
 Hyperlane introduces [Sovereign Consensus](../../protocol/sovereign-consensus.md), an innovation in interchain security. The tl;dr on Sovereign Consensus is that it lets developers configure their own security model, utilizing what we call **Interchain Security Modules** (ISMs). ISMs are a menu of security options that a developer choose can from, as well as mix and match between them. Initial ISMs will include economic security, optimistic security, and different proof-of-authority configurations. That said, new ISMs can be written and implemented by anyone meaning the potential exists to support any security model a developer would like.&#x20;
 
@@ -16,21 +26,13 @@ Sovereign Consensus can ultimately incorporate any security model, giving develo
 
 When developers write new ISMs for their own benefit, they can be made available for others to leverage as well, creating a network effect in security to the benefit of all Hyperlane users. For instance, you can imagine the not so far future when ZK proofs are efficient enough such that light client verification of any blockchain is feasible, this mode of security can be incorporated into Hyperlane as an ISM. With Sovereign Consensus no Hyperlane developer will be left behind as the industry moves forward.
 
-#### Verifiable Fraud Proofs and Permissionless Slashing
+#### [Verifiable Fraud Proofs and Permissionless Slashing](../../protocol/proof-of-stake.md#verifiable-fraud-proofs)
 
 Hyperlane’s architecture offers another unique feature in the interoperability landscape, Verifiable Fraud Proofs and Permissionless Slashing. What does this mean? First we need some context. In the case of Hyperlane, part of the security model, namely the economic security on outbound messages, comes from staking validators. Unlike other systems where the stake is concentrated on a single chain, Hyperlane has unique validator sets for each chain, and those validators keep their stakes on the chain they are validating. Thus in the event of malicious behavior by validators the malicious action is recorded on the chain they’ve staked on, allowing anyone to observe it and submit a fraud proof of it. Because the stake lives on the same chain, the validator can be permissionlessly slashed, and there is no need for an honest majority, or even honest minority assumption in the validator set. This is what it means for a system to have Verifiable Fraud Proofs and Permissionless Slashing. There is no way for validators to escape the economic costs of malicious behavior, meaning that the cost to commit fraud will always be known, and will always be borne by a malicious validator. Any system constructed like Hyperlane will have these properties.
 
 However, imagine a system where validators keep their stake on a single chain. You detect fraud on a different chain, and submit a proof. The validator is to be slashed. How can that stake, which lives on a different chain than the one where the fraud occurred, be slashed? The information has to be relayed over to that chain, meaning it has to go through the same validator set that includes a bad apple. But what if a majority of the set is colluding? How could they be slashed? The only option is to slash them manually, in a permissioned mode. Thus systems architected in such a way lack the properties that Hyperlane developers benefit from.
 
-#### Permissionless Deployment
 
-The real magic of crypto is enabled by its permissionless nature. Even outside of crypto, the permissive and expressive nature of software is a major reason for the tremendous innovation seen in software in the last few decades while many other areas have stagnated.&#x20;
-
-Despite that, permissionless is sorely missing from the world of interoperability, and for good reason. The adversarial nature of blockchains makes the prospect of permissionless deployment for interoperability seem like a pipe dream, and it very well may be. Until Hyperlane.
-
-Hyperlane's architecture was created with the prospect of permissionelss deployment in mind, with the ultimate goal of achieving this holy grail of interoperability.&#x20;
-
-The MVP of Permissionless Deployment is now live, and accessible [here](../../operators/deployers.md). Try it out and give us your feedback!
 
 #### Developer Focus
 

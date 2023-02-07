@@ -1,5 +1,5 @@
 ---
-description: Build interchain applications using Hyperlane
+description: Build with Hyperlane
 ---
 
 # Getting started
