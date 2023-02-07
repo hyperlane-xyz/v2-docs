@@ -65,9 +65,9 @@ This example shows how to send 1 USDC (USDC has 6 decimals, so `1000000` is one 
 {% endtab %}
 {% endtabs %}
 
-If you view the transaction on a block explorer, you should be able to see the `Dispatch` event.
+Next, you **must pay for interchain gas** in the following section.
 
-You can see an example message sending transaction [here](https://goerli.etherscan.io/tx/0x00631c5fbff220619364dcda57421086890b4edcbbdb42e6507e8fb3578e8013).
+If you view the transaction on a block explorer, you should be able to see the `Dispatch` event. You can see an example message sending transaction [here](https://goerli.etherscan.io/tx/0x00631c5fbff220619364dcda57421086890b4edcbbdb42e6507e8fb3578e8013).
 
 ### Pay For Interchain Gas
 

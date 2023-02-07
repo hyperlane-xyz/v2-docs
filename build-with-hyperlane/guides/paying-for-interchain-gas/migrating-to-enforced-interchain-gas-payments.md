@@ -33,7 +33,7 @@ See [Paying the Correct Amount](paying-the-correct-amount.md) to understand how 
 
 #### IGP contract address changes
 
-The previous IGP contract address has been deprecated. Instead, two different IGP contracts are taking its place: the `DefaultIsmInterchainGasPaymaster` ([mainnet addresses](../../../../resources/addresses.md#defaultisminterchaingaspaymaster)), and the `InterchainGasPaymaster` ([mainnet addresses](../../../../resources/addresses.md#interchaingaspaymaster)).
+The previous IGP contract address has been deprecated. Instead, two different IGP contracts are taking its place: the `DefaultIsmInterchainGasPaymaster` ([mainnet addresses](../../../resources/addresses.md#defaultisminterchaingaspaymaster)), and the `InterchainGasPaymaster` ([mainnet addresses](../../../resources/addresses.md#interchaingaspaymaster)).
 
 See [Which IGP To Use & Understanding Gas Amounts](which-igp-to-use-and-understanding-gas-amounts.md) to understand which IGP contract your app should be using. Apps should move over to the appropriate IGP contract as soon as possible.
 
@@ -43,9 +43,9 @@ The full migration toward enforced and accurate on-chain gas payments is happeni
 
 1. &#x20;**Phase 1: New IGP contracts that charge interchain gas payments on the origin chain** (Completed)
    1. At this point, new IGP contracts are provided for applications to start using. These addresses are not expected to change in the future. The IGP contracts quote a non-zero interchain gas payment that's enforced, but the quoted payments don't yet use destination token exchange rates or gas prices to quote an accurate payment. Gas amounts are also not strictly enforced by the relayer.
-2. **Phase 2: Only messages that have been paid for via the new IGPs are relayed** (Up next)
+2. **Phase 2: Only messages that have been paid for via the new IGPs are relayed** (Completed)
    1. At this point, the relayer operated by the core team will only process messages that have made a corresponding `payForGas` call to one of the new IGP contracts. This requires applications to have moved over to the new IGP contracts.
-3. **Phase 3: Gas amounts become enforced by the relayer.**
+3. **Phase 3: Gas amounts become enforced by the relayer.** (Up next)
    1. At this point, the relayer operated by the core team will process messages that have specified the accurate amount of gas in the interchain gas payment.
 4. **Phase 4: Quoting fully accurate interchain gas payments.**
    1. At this point, the IGP contracts will use on-chain token exchange rates and destination chain gas prices to provide accurate quotes for messages.
@@ -76,7 +76,7 @@ Future changes, like accurately quoted interchain gas payments using token excha
 
 **How do I pay for gas with middlewares, like Interchain Accounts, Interchain Queries, and the Liquidity Layer?**
 
-APIs like the [Liquidity Layer API](../../../../apis/token-bridge-api.md), the [Accounts API](../../../../apis/send.md), and the [Queries API](../../../../apis/query.md) are sometimes called "middlewares." Just like all Hyperlane messages that wish to be delivered by a relayer, messages sent via these middlewares must have interchain gas paid for. See our entry on [Middleware APIs](middleware-apis.md) for more details.&#x20;
+APIs like the [Liquidity Layer API](../../../apis/token-bridge-api.md), the [Accounts API](../../../apis/send.md), and the [Queries API](../../../apis/query.md) are sometimes called "middlewares." Just like all Hyperlane messages that wish to be delivered by a relayer, messages sent via these middlewares must have interchain gas paid for. See our entry on [Middleware APIs](middleware-apis.md) for more details.&#x20;
 
 **This may break some of my existing mainnet contracts that are live on v2.**
 

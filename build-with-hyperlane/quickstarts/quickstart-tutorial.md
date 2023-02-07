@@ -44,9 +44,9 @@ You can call `Mailbox.dispatch()` directly using `cast`. Make sure that you have
 {% endtab %}
 {% endtabs %}
 
-If you view the transaction on a block explorer, you should be able to see the `Dispatch` event.
+Next, you **must pay for interchain gas** in the following section.
 
-You can see an example message sending transaction [here](https://kovan.etherscan.io/tx/0x7cabd0c3c780f62bbadff0b400086d46bfca0bf5c7cbd34a3e30c8880dddb5e3#eventlog).
+If you view the transaction on a block explorer, you should be able to see the `Dispatch` event. You can see an example message sending transaction [here](https://kovan.etherscan.io/tx/0x7cabd0c3c780f62bbadff0b400086d46bfca0bf5c7cbd34a3e30c8880dddb5e3#eventlog).
 
 ### Pay For Interchain Gas
 

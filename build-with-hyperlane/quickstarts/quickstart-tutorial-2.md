@@ -48,6 +48,8 @@ cast send 0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5 'dispatch(uint32, (address,
 {% endtab %}
 {% endtabs %}
 
+Next, you **must pay for interchain gas** in the following section.
+
 If you view the transaction on a block explorer, you should be able to see the `Dispatch` event. You can see an example message sending transaction [here](https://goerli.etherscan.io/tx/0xbb076b17dca5e436f574a4728dd59d25da4fd9d05c48c6ec304ea5a354849edf).
 
 ### Pay For Interchain Gas
