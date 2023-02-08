@@ -34,6 +34,10 @@
   * [Unit testing](build-with-hyperlane/guides/unit-testing.md)
   * [Configuring Security](build-with-hyperlane/guides/receive-1.md)
   * [V2 migration guide](build-with-hyperlane/guides/v2-migration-guide.md)
+* [Deploy Hyperlane](build-with-hyperlane/deploy-hyperlane/README.md)
+  * [Permissionless Deployment](https://docs.hyperlane.xyz/docs/operators/deployers)
+  * [Validators](https://docs.hyperlane.xyz/docs/operators/validators)
+  * [Relayers](https://docs.hyperlane.xyz/docs/operators/relayers)
 * [Celestia + Hyperlane](build-with-hyperlane/celestia-+-hyperlane.md)
 * [Troubleshooting](build-with-hyperlane/troubleshooting/README.md)
   * [Debugging with Explorer](build-with-hyperlane/troubleshooting/observability.md)
@@ -80,14 +84,14 @@
 ## Operators
 
 * [Permissionless Deployment](operators/deployers.md)
-* [Validators](operators/getting-started/README.md)
-  * [AWS setup](build-with-hyperlane/guides/getting-started/aws-setup.md)
-  * [Environment variables](operators/getting-started/environment-variables.md)
-  * [Start validating](operators/getting-started/start-validating.md)
-* [Relayers](operators/getting-started-1/README.md)
-  * [Environment variables](operators/getting-started-1/environment-variables.md)
-  * [Message filtering](operators/getting-started-1/message-filtering.md)
-  * [Start relaying](operators/getting-started-1/start-validating.md)
+* [Validators](operators/validators/README.md)
+  * [AWS setup](operators/validators/aws-setup.md)
+  * [Environment variables](operators/validators/environment-variables.md)
+  * [Start validating](operators/validators/start-validating.md)
+* [Relayers](operators/relayers/README.md)
+  * [Environment variables](operators/relayers/environment-variables.md)
+  * [Message filtering](operators/relayers/message-filtering.md)
+  * [Start relaying](operators/relayers/start-validating.md)
 
 ## Resources
 

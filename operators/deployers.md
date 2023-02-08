@@ -13,10 +13,10 @@ This tutorial is intended for users who want to deploy Hyperlane to a new EVM ch
 At a high level, this requires the following actions:
 
 1. Deploying the core smart contracts (`Mailbox, InterchainGasPaymaster`) to the local chain. This script will also deploy and configure an [Interchain Security Module](../protocol/sovereign-consensus.md#interchain-security-modules) on the local chain. Applications may use this ISM to verify interchain messages sent **to** the local chain.
-2. Running one or more [validators](getting-started/) for the local chain, to provide security for outgoing messages
+2. Running one or more [validators](validators/) for the local chain, to provide security for outgoing messages
 3. Deploying and configuring [Interchain Security Modules](../build-with-hyperlane/guides/receive-1.md#interchain-security-modules) on the remote chain(s). Applications will use these ISMs to verify interchain messages sent **from** the local chain.
-4. Running a [relayer](getting-started-1/) for the local chain, to deliver interchain messages sent **from** the local chain **to** the remote chain(s).
-5. Running a [relayer](getting-started-1/) for the remote chain(s), to deliver incoming messages sent **from** the remote chain(s) **to** the local chain.
+4. Running a [relayer](relayers/) for the local chain, to deliver interchain messages sent **from** the local chain **to** the remote chain(s).
+5. Running a [relayer](relayers/) for the remote chain(s), to deliver incoming messages sent **from** the remote chain(s) **to** the local chain.
 6. Testing that messages can be sent from the local chain to each of the remote chains, and vice versa.&#x20;
 
 ## 1. Deploy the core smart contracts
@@ -129,7 +129,7 @@ Script ran successfully.
 
 ## 4. Run a relayer for the local chain
 
-Similar to [#2.-run-validators](deployers.md#2.-run-validators "mention"), follow the [getting-started-1](getting-started-1/ "mention") instructions to run a relayer for the local chain by including the agent config in `CONFIG_FILES`
+Similar to [#2.-run-validators](deployers.md#2.-run-validators "mention"), follow the [relayers](relayers/ "mention") instructions to run a relayer for the local chain by including the agent config in `CONFIG_FILES`
 
 This relayer will deliver messages sent **from** the local chain **to** each of the remote chains. Remember to set the `HYP_RELAYER_DESTINATIONCHAINNAMES`for your supported remotes appropriately.\
 \
@@ -137,7 +137,7 @@ You will need the validator addresses and S3 bucket names/regions from [#2.-run-
 
 ## 5. Run relayer(s) for the remote chain(s)
 
-Reversely, follow the [getting-started-1](getting-started-1/ "mention") instructions to run a relayer for each of the remote chains.
+Reversely, follow the [relayers](relayers/ "mention") instructions to run a relayer for each of the remote chains.
 
 These relayers will deliver messages sent **from** the remote chains **to** the local chain. Remember to set the `HYP_RELAYER_DESTINATIONCHAINNAMES`for your supported remotes appropriately.
 
