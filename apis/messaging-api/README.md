@@ -30,4 +30,4 @@ You can [unit test](../../build-with-hyperlane/guides/unit-testing.md) your inte
 
 Delivering an interchain message requires submitting a transaction on the destination chain. Optionally, you can pay for the gas for this transaction on the origin chain, and let a Hyperlane [relayer](../../protocol/agents/relayer.md) deliver your message for you.
 
-Learn more about [interchain gas payments](broken-reference).
+Learn more about [paying-for-interchain-gas](../../build-with-hyperlane/guides/developers/paying-for-interchain-gas/ "mention").
