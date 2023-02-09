@@ -52,7 +52,7 @@
   * [Send](apis/messaging-api/send.md)
   * [Receive](apis/messaging-api/receive.md)
 * [Liquidity Layer API](apis/token-bridge-api.md)
-* [Accounts API](apis/send.md)
+* [Accounts API](apis/accounts.md)
 * [Queries API](apis/query.md)
 * [Warp API](apis/warp-api.md)
 

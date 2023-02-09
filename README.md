@@ -16,7 +16,7 @@ Keep reading to learn all about how you can leverage Hyperlane!
 
 Hyperlane's [APIs](./#hyperlane-apis) offer developers secure and simple ways to communicate between blockchains, while the Hyperlane [SDKs](broken-reference) make using Hyperlane and building interchain applications quick and easy.&#x20;
 
-[messaging-api](apis/messaging-api/ "mention") [token-bridge-api.md](apis/token-bridge-api.md "mention") [send.md](apis/send.md "mention")[query.md](apis/query.md "mention")[warp-api.md](apis/warp-api.md "mention")
+[messaging-api](apis/messaging-api/ "mention") [token-bridge-api.md](apis/token-bridge-api.md "mention") [accounts.md](apis/accounts.md "mention")[query.md](apis/query.md "mention")[warp-api.md](apis/warp-api.md "mention")
 
 
 
