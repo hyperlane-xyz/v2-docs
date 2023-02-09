@@ -5,7 +5,7 @@ description: Unique IDs for each Hyperlane-supported chain
 # Domain identifiers
 
 {% hint style="warning" %}
-Note that Hyperlane domain IDs have no relationship with EVM chain IDs, as Hyperlane will eventually support non-EVM chains.
+Note that Hyperlane domain IDs are not guaranteed to be the same as EVM chain IDs, as Hyperlane will eventually support non-EVM chains.
 {% endhint %}
 
 Hyperlane uses proprietary domain IDs to reference each Hyperlane-supported chain.
@@ -24,6 +24,7 @@ When [sending a message](../apis/messaging-api/send.md), users must provide the 
 | Optimism  | `10`                         |
 | Polygon   | `137`                        |
 | Moonbeam  | `1284`                       |
+| Gnosis    | `100`                        |
 
 ### Testnet
 
