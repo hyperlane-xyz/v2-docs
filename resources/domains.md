@@ -37,4 +37,3 @@ When [sending a message](../apis/messaging-api/send.md), users must provide the 
 | Moonbase Alpha  | `1287`                       |
 | Optimism Goerli | `420`                        |
 | Arbitrum Goerli | `421613`                     |
-|                 |                              |
