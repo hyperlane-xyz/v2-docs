@@ -24,7 +24,7 @@ You can run the validator binary by compiling the code directly, or using a dock
 
 The validator can be run directly via  `cargo run --bin validator` in the `rust` folder of the [monorepo](https://github.com/hyperlane-xyz/hyperlane-monorepo).
 
-Alternatively, the docker image can be run via `docker run -it gcr.io/abacus-labs-dev/hyperlane-agent:2023-02-01 ./validator`.
+Alternatively, the docker image can be run via `docker run -it gcr.io/abacus-labs-dev/hyperlane-agent:44361db-20230209-031017 ./validator`.
 
 {% hint style="warning" %}
 Note due to the rebranding away from Abacus to Hyperlane, all environment variables that were previously prefixed with `ABC_` have been changed to use the prefix `HYP_`. If you previously operated a validator with the old environment variable prefix, be sure to change environment variable names before upgrading to the latest image / commit.
@@ -34,7 +34,7 @@ If everything is configured correctly, you should see json files being written t
 
 ### Announce your validator
 
-[Relayers](../../../protocol/agents/relayer.md) need to know where to find your validator's signatures. You can make relayers aware of your validator by writing to the `ValidatorAnnounce` contract on the chain that you're validating.
+[Relayers](../../protocol/agents/relayer.md) need to know where to find your validator's signatures. You can make relayers aware of your validator by writing to the `ValidatorAnnounce` contract on the chain that you're validating.
 
 First, find the signed announcement JSON object written by your validator by navigating to your S3 bucket in the AWS console, selecting the `announcement.json` object, and clicking on the "Object URL".
 
@@ -56,7 +56,7 @@ You should see a JSON object that looks like this:
 }
 ```
 
-Then, navigate to the `ValidatorAnnounce` page on etherscan for your chain. You can find a link in [addresses.md](../../../resources/addresses.md "mention").
+Then, navigate to the `ValidatorAnnounce` page on etherscan for your chain. You can find a link in [addresses.md](../../resources/addresses.md "mention").
 
 Click on the "Contract" tab, and the "Write Contract" button, and click the dropdown on "announce".
 
@@ -66,7 +66,7 @@ Fill in the `_validator`, `_storageLocation`, and `_signature` arguments.
 * Set `_storageLocation` to `value.storage_location` from your JSON announcement
 * Set `_signature` to the concatenation of `signature.r`, `signature.s`, and the hexidecimal representation of `signature.v` (`0x1C` for 28 and `0x1B` for 27). Make sure that you remove the `0x` prefixes.
 
-<figure><img src="../../../.gitbook/assets/Screen Shot 2023-01-30 at 4.30.00 PM.png" alt=""><figcaption><p>Example input</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screen Shot 2023-01-30 at 4.30.00 PM.png" alt=""><figcaption><p>Example input</p></figcaption></figure>
 
 Once you see that your transaction has succeeded, relayers will automatically be made aware of your validator!&#x20;
 
