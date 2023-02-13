@@ -4,6 +4,10 @@ description: Attach value with your Hyperlane messages using the Liquidity Layer
 
 # Liquidity Layer API
 
+{% hint style="warning" %}
+The LiquidityLayer API is in beta and deployed only on testnet. The API is subject to change
+{% endhint %}
+
 Hyperlane's Liquidity layer will wrap around several token bridges to allow developers to send tokens alongside their message.
 
 ```mermaid

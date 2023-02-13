@@ -4,6 +4,10 @@ description: Send value across chains with Hyperlane's Liquidity Layer.
 
 # Liquidity Layer
 
+{% hint style="warning" %}
+The LiquidityLayer API is in beta and deployed only on testnet. The API is subject to change
+{% endhint %}
+
 This tutorial demonstrates how to:
 
 * [Send](../../apis/token-bridge-api.md#send) a simple interchain message alongside with tokens to a pre-deployed [`TestTokenRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/test/TestTokenRecipient.sol) contract.
