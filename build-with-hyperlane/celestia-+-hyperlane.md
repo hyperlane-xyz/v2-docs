@@ -115,11 +115,11 @@ Follow these instructions to send messages from your ethermint chain to the remo
 
 ## 3. Deploy a Hyperlane Warp route
 
-Additional documentation for deploying a Warp route to an EVM compatible chain can be found [here](quickstarts/deploy-a-warp-route.md).
+Additional documentation for deploying a Warp route to an EVM compatible chain can be found [here](guides/deploy-a-warp-route.md).
 
 ### Deploy the contracts
 
-Follow [these instructions](quickstarts/deploy-a-warp-route.md) to deploy warp route contracts to your ethermint chains and the remote chains that you'd like to support.
+Follow [these instructions](guides/deploy-a-warp-route.md) to deploy warp route contracts to your ethermint chains and the remote chains that you'd like to support.
 
 You will need to make sure you add the details for your chain in a chain config JSON file and pass that to the deployer. The contents of that file should look something like this. Make sure to substitute your own chain name, token name, and RPC URL.\
 
@@ -146,7 +146,7 @@ Your token config **must** specify the ISMs that you deployed on the remote chai
 
 ### Deploy the UI
 
-Follow [these instructions](quickstarts/deploy-the-ui-for-your-warp-route.md) to deploy the UI for your Warp Route.
+Follow [these instructions](guides/deploy-the-ui-for-your-warp-route.md) to deploy the UI for your Warp Route.
 
 You will need to make sure you've added your chain to `src/consts/chains.json`. You can use the same JSON object you used in the previous step, with the additional `logoImgSrc` field.
 
