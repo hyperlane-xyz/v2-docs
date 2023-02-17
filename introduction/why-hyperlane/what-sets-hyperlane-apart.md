@@ -6,15 +6,15 @@ description: What are the platform's differentiating features?
 
 If you're considering an interoperability platform, you probably want to know what makes it unique, so let's get right into it and discuss what differentiates Hyperlane from existing offerings.&#x20;
 
-#### [Permissionless Interoperability](../../protocol/permissionless-interoperability.md)
+#### [Permissionless Interoperability](../../deploy/permissionless-interoperability.md)
 
 The real magic of crypto is enabled by its permissionless nature. Even outside of crypto, the permissive and expressive nature of software is a major reason for the tremendous innovation seen in software in the last few decades while many other areas have stagnated.&#x20;
 
 Despite that, permissionless is sorely missing from the world of interoperability, and for good reason. The adversarial nature of blockchains makes the prospect of permissionless deployment for interoperability seem like a pipe dream, until now.
 
-Hyperlane's architecture was purpose built to be the first ever [Permissionless Interoperability](../../protocol/permissionless-interoperability.md) layer, an attempt to achieve the holy grail of blockchain connectivity.
+Hyperlane's architecture was purpose built to be the first ever [Permissionless Interoperability](../../deploy/permissionless-interoperability.md) layer, an attempt to achieve the holy grail of blockchain connectivity.
 
-The MVP of Permissionless Interoperability is now live, and accessible [here](../../operators/deployers.md). Try it out and give us your feedback!
+The MVP of Permissionless Interoperability is now live, and accessible [here](broken-reference). Try it out and give us your feedback!
 
 #### [Sovereign Consensus](../../protocol/sovereign-consensus.md)
 

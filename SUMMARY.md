@@ -9,6 +9,17 @@
   * [What sets Hyperlane apart?](introduction/why-hyperlane/what-sets-hyperlane-apart.md)
 * [Getting started](introduction/getting-started.md)
 
+## Permissionless Interoperability <a href="#deploy" id="deploy"></a>
+
+* [Overview](deploy/permissionless-interoperability.md)
+* [Deploy Hyperlane](deploy/deploy-hyperlane/README.md)
+  * [Validators](https://docs.hyperlane.xyz/docs/operators/validators)
+  * [Relayers](https://docs.hyperlane.xyz/docs/operators/relayers)
+* [Deploy Warp Route](deploy/deploy-warp-route/README.md)
+  * [Deploy a Warp Route](deploy/deploy-warp-route/deploy-a-warp-route.md)
+  * [Deploy the UI for your Warp Route](deploy/deploy-warp-route/deploy-the-ui-for-your-warp-route.md)
+* [Celestia + Hyperlane](deploy/celestia-+-hyperlane.md)
+
 ## Build With Hyperlane
 
 * [Quickstarts](build-with-hyperlane/quickstarts/README.md)
@@ -32,19 +43,12 @@
   * [Unit testing](build-with-hyperlane/guides/unit-testing.md)
   * [Configuring Security](build-with-hyperlane/guides/receive-1.md)
   * [V2 migration guide](build-with-hyperlane/guides/v2-migration-guide.md)
-  * [Deploy a Warp Route](build-with-hyperlane/guides/deploy-a-warp-route.md)
-  * [Deploy the UI for your Warp Route](build-with-hyperlane/guides/deploy-the-ui-for-your-warp-route.md)
-* [Deploy Hyperlane](build-with-hyperlane/deploy-hyperlane/README.md)
-  * [Permissionless Deployment](https://docs.hyperlane.xyz/docs/operators/deployers)
-  * [Validators](https://docs.hyperlane.xyz/docs/operators/validators)
-  * [Relayers](https://docs.hyperlane.xyz/docs/operators/relayers)
-* [Celestia + Hyperlane](build-with-hyperlane/celestia-+-hyperlane.md)
 * [Troubleshooting](build-with-hyperlane/troubleshooting/README.md)
   * [Debugging with Explorer](build-with-hyperlane/troubleshooting/observability.md)
   * [Troubleshooting Agents](build-with-hyperlane/troubleshooting/troubleshooting.md)
 * [Example apps](build-with-hyperlane/examples/README.md)
   * [HelloWorld](build-with-hyperlane/examples/helloworld.md)
-  * [ERC20 token](build-with-hyperlane/examples/erc20-token.md)
+  * [Interchain Token](build-with-hyperlane/examples/erc20-token.md)
 
 ## APIs
 
@@ -75,7 +79,6 @@
 * [Mailboxes](protocol/messaging.md)
 * [Sovereign consensus](protocol/sovereign-consensus.md)
 * [Proof of Stake](protocol/proof-of-stake.md)
-* [Permissionless Interoperability](protocol/permissionless-interoperability.md)
 * [Agents](protocol/agents/README.md)
   * [Validators](protocol/agents/validators.md)
   * [Relayers](protocol/agents/relayer.md)
@@ -83,7 +86,6 @@
 
 ## Operators
 
-* [Permissionless Deployment](operators/deployers.md)
 * [Validators](operators/validators/README.md)
   * [AWS setup](operators/validators/aws-setup.md)
   * [Environment variables](operators/validators/environment-variables.md)

@@ -2,7 +2,7 @@
 description: Deploy Hyperlane, anyone, anywhere, anytime
 ---
 
-# Permissionless Interoperability
+# Overview
 
 **Before Hyperlane**
 
@@ -16,8 +16,8 @@ Permissionless Interoperability means that you have the freedom to deploy Hyperl
 
 The permissionless and modular design of Hyperlane powers many unique features:
 
-* Expand to any environment without reliance on external parties with [Permissionless Deployment](../operators/deployers.md)
-* Own and customize your app's security model with [Sovereign Consensus](sovereign-consensus.md) and customize it with your choice of [Interchain Security Modules](sovereign-consensus.md#interchain-security-modules) (ISMs)&#x20;
+* Expand to any environment without reliance on external parties with [Permissionless Deployment](broken-reference)
+* Own and customize your app's security model with [Sovereign Consensus](../protocol/sovereign-consensus.md) and customize it with your choice of [Interchain Security Modules](../protocol/sovereign-consensus.md#interchain-security-modules) (ISMs)&#x20;
 * Move value anywhere, permissionlessly with [Warp Routes](../apis/warp-api.md)
 
 The Hyperlane thesis is that&#x20;
