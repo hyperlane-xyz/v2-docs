@@ -15,7 +15,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "sync": "node sync-addresses.js > ./developers/addresses.md",
+        "sync": "node sync-addresses.js > ./resources/addresses.md",
         "lint": "remark . --quiet --frail"
     },
     "remarkConfig": {
