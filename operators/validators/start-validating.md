@@ -4,7 +4,7 @@ description: Run your validator
 
 # Start validating
 
-### Recommended machine size
+Recommended machine size
 
 2 CPU + 2Gb RAM should be sufficient
 
@@ -56,6 +56,10 @@ You should see a JSON object that looks like this:
 }
 ```
 
+
+
+{% tabs %}
+{% tab title="Etherscan" %}
 Then, navigate to the `ValidatorAnnounce` page on etherscan for your chain. You can find a link in [addresses.md](../../resources/addresses.md "mention").
 
 Click on the "Contract" tab, and the "Write Contract" button, and click the dropdown on "announce".
@@ -67,6 +71,25 @@ Fill in the `_validator`, `_storageLocation`, and `_signature` arguments.
 * Set `_signature` to the concatenation of `signature.r`, `signature.s`, and the hexidecimal representation of `signature.v` (`0x1C` for 28 and `0x1B` for 27). Make sure that you remove the `0x` prefixes.
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2023-01-30 at 4.30.00 PM.png" alt=""><figcaption><p>Example input</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="Cast" %}
+Announce your validator by running the following command, filling in the following variables:
+
+* Set `$VALIDATOR_ANNOUNCE_ADDRESS` to the address of the `ValidatorAnnounce` contract: [addresses.md](../../resources/addresses.md "mention")
+* Set `$VALIDATOR` to `value.validator` from your JSON announcement
+* Set `$STORAGE_LOCATION` to `value.storage_location` from your JSON announcement
+* Set `$SIGNATURE` to the concatenation of `signature.r`, `signature.s`, and the hexidecimal representation of `signature.v` (`0x1C` for 28 and `0x1B` for 27). Make sure that you remove the `0x` prefixes.
+* Set `$RPC_URL` to an RPC URL that can be used to submit transactions
+* Set `$PRIVATE_KEY` to a hexadecimal private key that can be used to submit transactions
+
+<pre class="language-bash"><code class="lang-bash"><strong>cast send $VALIDATOR_ANNOUNCE_ADDRESS \
+</strong>  "announce(address, string calldata, bytes calldata)(bool)" \
+  $VALIDATOR $STORAGE_LOCATION $SIGNATURE \
+  --rpc-url $RPC_URL --private-key $PRIVATE_KEY
+</code></pre>
+{% endtab %}
+{% endtabs %}
 
 Once you see that your transaction has succeeded, relayers will automatically be made aware of your validator!&#x20;
 
