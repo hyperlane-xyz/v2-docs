@@ -41,9 +41,15 @@ function addressToBytes32(address _addr) internal pure returns (bytes32) {
 }
 ```
 
+### Paying for Interchain Gas
+
+Delivering a message to its destination requires submitting a transaction on the destination chain. If you want to have a [relayer](../../protocol/agents/relayer.md) deliver the message on your behalf, you can pay for the gas for this transaction on the origin chain.
+
+Learn more about [paying-for-interchain-gas](../../build-with-hyperlane/guides/developers/paying-for-interchain-gas/ "mention").
+
 ### Example Usage
 
-The code snippet below shows an example of sending a message from Ethereum to Avalanche.
+The code snippet below shows an example of sending a message from Ethereum to Avalanche. Note this example does not pay for interchain gas.
 
 ```solidity
 uint32 constant avalancheDomain = 43114;
