@@ -4,7 +4,7 @@ description: How to use the Hyperlane Explorer to debug messages
 
 # Debugging with Explorer
 
-Visit the Explorer at [https://explorer.hyperlane.xyz](https://explorer-v2.hyperlane.xyz/)
+Visit the Explorer at [https://explorer.hyperlane.xyz](https://explorer.hyperlane.xyz/)
 
 Then paste a sender/recipient address or a transaction hash into the top search field. All matching messages will be shown in the result list. Click the row for more details.
 
@@ -44,7 +44,7 @@ If you have a use case which is not accommodated by this behavior, **please reac
 Users are **not currently required** to pay relaying fees but eventually this will be necessary for the economic sustainability of the protocol.
 {% endhint %}
 
-An underfunded message implies the [gas paid](broken-reference) for message delivery is insufficient. The relayer registered on the gas paymaster can [`claim`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/InterchainGasPaymaster.sol#L62) these fees to compensate for gas costs incurred on the destination chain. The relayer client uses the [`eth_estimateGas`](https://ethereum.github.io/execution-apis/api-documentation/)RPC on the destination chain to determine the absolute cost of relaying a message, uses the [CoinGecko API](https://www.coingecko.com/en/api) to calculate the exchange rate between the two chains native assets, and will only pay for message processing if the message relay was funded appropriately on the source chain's paymaster (within some acceptable price deviation).
+An underfunded message implies the [gas paid](../guides/developers/paying-for-interchain-gas/) for message delivery is insufficient. The relayer registered on the gas paymaster can [`claim`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/igps/InterchainGasPaymaster.sol) these fees to compensate for gas costs incurred on the destination chain. The relayer client uses the [`eth_estimateGas`](https://ethereum.github.io/execution-apis/api-documentation/)RPC on the destination chain to determine the absolute cost of relaying a message, uses the [CoinGecko API](https://www.coingecko.com/en/api) to calculate the exchange rate between the two chains native assets, and will only pay for message processing if the message relay was funded appropriately on the source chain's paymaster (within some acceptable price deviation).
 
 ## Message status in your application
 

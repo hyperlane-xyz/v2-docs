@@ -14,7 +14,7 @@ Despite that, permissionless is sorely missing from the world of interoperabilit
 
 Hyperlane's architecture was purpose built to be the first ever [Permissionless Interoperability](../../deploy/permissionless-interoperability.md) layer, an attempt to achieve the holy grail of blockchain connectivity.
 
-The MVP of Permissionless Interoperability is now live, and accessible [here](broken-reference). Try it out and give us your feedback!
+The MVP of Permissionless Interoperability is now live, and accessible [here](../../deploy/deploy-hyperlane/). Try it out and give us your feedback!
 
 #### [Sovereign Consensus](../../protocol/sovereign-consensus.md)
 

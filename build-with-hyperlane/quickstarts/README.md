@@ -16,7 +16,7 @@ Send your first message in under 5 minutes with our [Messaging Quickstart](quick
 
 ### Interchain Accounts
 
-With Hyperlane, you can make a simple call via Interchain Accounts to a pre-deployed [`TestRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/core/contracts/test/TestRecipient.sol) contract on a remote destination chain.&#x20;
+With Hyperlane, you can make a simple call via Interchain Accounts to a pre-deployed [`TestRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/test/TestRecipient.sol) contract on a remote destination chain.&#x20;
 
 Try it here with the [ICA Quickstart](quickstart-tutorial-2.md).
 

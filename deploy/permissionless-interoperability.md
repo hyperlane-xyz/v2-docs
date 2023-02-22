@@ -16,7 +16,7 @@ Permissionless Interoperability means that you have the freedom to deploy Hyperl
 
 The permissionless and modular design of Hyperlane powers many unique features:
 
-* Expand to any environment without reliance on external parties with [Permissionless Deployment](broken-reference)
+* Expand to any environment without reliance on external parties with [Permissionless Deployment](deploy-hyperlane/)
 * Own and customize your app's security model with [Sovereign Consensus](../protocol/sovereign-consensus.md) and customize it with your choice of [Interchain Security Modules](../protocol/sovereign-consensus.md#interchain-security-modules) (ISMs)&#x20;
 * Move value anywhere, permissionlessly with [Warp Routes](../apis/warp-api.md)
 

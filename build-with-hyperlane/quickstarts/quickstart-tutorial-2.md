@@ -2,7 +2,7 @@
 
 This tutorial demonstrates how to:
 
-* Make a simple call via Interchain Accounts to a pre-deployed [`TestRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/core/contracts/test/TestRecipient.sol) contract on a remote destination chain.
+* Make a simple call via Interchain Accounts to a pre-deployed [`TestRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/test/TestRecipient.sol) contract on a remote destination chain.
 * [Pay for interchain gas](../../apis/accounts.md#paying-for-interchain-gas) to have a [relayer](../../protocol/agents/relayer.md) deliver the message.
 
 You can also check out the [`hyperlane-quickstart`](https://github.com/hyperlane-xyz/hyperlane-quickstart) repo for running this out of the box.
@@ -121,7 +121,7 @@ Now, we can call `payGasFor`, and we supply the gas payment quote as value in th
 
 ### Confirm delivery
 
-After the transaction that sent your call is [finalized](../../resources/latencies.md), you should be able to see a corresponding transaction delivering your message to the `TestRecipient` contract on the destination chain. You can watch for this transaction on [Hyperlane's Message Explorer](https://explorer-v2.hyperlane.xyz/) by entering the transaction hash or the sender/recipient address in the input field.\
+After the transaction that sent your call is [finalized](../../resources/latencies.md), you should be able to see a corresponding transaction delivering your message to the `TestRecipient` contract on the destination chain. You can watch for this transaction on [Hyperlane's Message Explorer](https://explorer.hyperlane.xyz/) by entering the transaction hash or the sender/recipient address in the input field.\
 \
 You can see an example message delivery transaction [here](https://explorer.hyperlane.xyz/message/24275).
 

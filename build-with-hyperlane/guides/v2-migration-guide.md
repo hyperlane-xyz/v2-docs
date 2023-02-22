@@ -10,7 +10,7 @@ A high level overview of some of the changes in V2.
 
 ### Unified mailboxes
 
-Hyperlane V2 will have one `Mailbox` contract per chain, as opposed to one `Outbox` and several `Inboxes`. This allows applications to specify a single address from which they send and receive messages. [ConnectionManager](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/AbacusConnectionManager.sol) contracts can still be used but are less useful as there are no longer many `Inbox` contracts to aggregate.
+Hyperlane V2 will have one `Mailbox` contract per chain, as opposed to one `Outbox` and several `Inboxes`. This allows applications to specify a single address from which they send and receive messages. ConnectionManager contracts can still be used but are less useful as there are no longer many `Inbox` contracts to aggregate.
 
 ### Sovereign consensus
 

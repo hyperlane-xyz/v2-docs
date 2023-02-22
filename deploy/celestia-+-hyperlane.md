@@ -70,11 +70,11 @@ Then, follow [these instructions](https://docs.celestia.org/developers/instantia
 
 ## 2. Deploy Hyperlane's interchain messaging API
 
-Additional documentation for deploying Hypelane to an EVM compatible chain can be found [here](broken-reference).
+Additional documentation for deploying Hypelane to an EVM compatible chain can be found [here](deploy-hyperlane/).
 
 ### Deploy the Hyperlane core contracts
 
-Follow [these instructions](broken-reference) to deploy the Hyperlane core contracts to your ethermint chain.
+Follow [these instructions](deploy-hyperlane/#1.-deploy-the-core-smart-contracts) to deploy the Hyperlane core contracts to your ethermint chain.
 
 If you run the contract deployment on the same machine as your ethermint node, you can use the RPC URL `http://localhost:8545`.
 
@@ -89,13 +89,13 @@ If `forge` complains about an incorrect nonce, use the `--slow` flag when deploy
 
 ### Run Hyperlane validators
 
-Follow [these instructions](broken-reference) to run one or more Hyperlane validators for your ethermint chain.
+Follow [these instructions](deploy-hyperlane/#2.-run-validators) to run one or more Hyperlane validators for your ethermint chain.
 
 You will need to expose your ethermint node's RPC endpoint to these validator(s) so that they can query the Hyperlane [`Mailbox`](../protocol/messaging.md) contract.
 
 ### Deploy remote ISMs
 
-Follow [these instructions](broken-reference) to deploy an `Interchain Security Module` smart contract to each of the remote chains you would like your ethermint chain to be able to communicate with.
+Follow [these instructions](deploy-hyperlane/#3.-deploy-remote-isms) to deploy an `Interchain Security Module` smart contract to each of the remote chains you would like your ethermint chain to be able to communicate with.
 
 You will need an RPC URL for each of these remote chains, as well as an address with tokens to pay for gas.&#x20;
 
@@ -103,7 +103,7 @@ Applications on remote chains will use these contracts to verify messages coming
 
 ### Run Hyperlane relayers
 
-Follow [these instructions ](broken-reference)and [these instructions](broken-reference) to run Hyperlane relayers to deliver messages between your ethermint chain and the remote chains you've configured.
+Follow [these instructions ](deploy-hyperlane/#4.-run-a-relayer-for-the-local-chain)and [these instructions](deploy-hyperlane/#5.-run-relayer-s-for-the-remote-chain-s) to run Hyperlane relayers to deliver messages between your ethermint chain and the remote chains you've configured.
 
 You will need an RPC URL for each chain, as well as an address with tokens to pay for gas.&#x20;
 
