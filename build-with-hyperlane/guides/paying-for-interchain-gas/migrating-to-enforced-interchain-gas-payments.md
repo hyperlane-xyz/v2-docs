@@ -45,10 +45,10 @@ The full migration toward enforced and accurate on-chain gas payments is happeni
    1. At this point, new IGP contracts are provided for applications to start using. These addresses are not expected to change in the future. The IGP contracts quote a non-zero interchain gas payment that's enforced, but the quoted payments don't yet use destination token exchange rates or gas prices to quote an accurate payment. Gas amounts are also not strictly enforced by the relayer.
 2. **Phase 2: Only messages that have been paid for via the new IGPs are relayed** (Completed)
    1. At this point, the relayer operated by the core team will only process messages that have made a corresponding `payForGas` call to one of the new IGP contracts. This requires applications to have moved over to the new IGP contracts.
-3. **Phase 3: Gas amounts become enforced by the relayer.** (Up next)
-   1. At this point, the relayer operated by the core team will process messages that have specified the accurate amount of gas in the interchain gas payment.
-4. **Phase 4: Quoting fully accurate interchain gas payments.**
+3. **Phase 3: Quoting fully accurate interchain gas payments.** (Completed on testnet, up next on mainnet)
    1. At this point, the IGP contracts will use on-chain token exchange rates and destination chain gas prices to provide accurate quotes for messages.
+4. **Phase 4: Gas amounts become enforced by the relayer.**
+   1. At this point, the relayer operated by the core team will process messages that have specified the accurate amount of gas in the interchain gas payment.
 
 ### FAQ
 
@@ -62,9 +62,9 @@ See [Which IGP To Use & Understanding Gas Amounts](../developers/paying-for-inte
 
 Generally, this would involve estimating an upper bound amount of gas that your messages use on the destination.
 
-**When is Phase 2 going into effect?**
+**When is Phase 3 going into effect?**
 
-We'll start enforcing that the new IGPs are used for gas payments on February 1, 2023. Expect an announcement on Discord.
+We'll start using on chain token exchange rates and gas prices to quote gas payments on February 23, 2023. Expect an announcement on Discord.
 
 **Is this relevant for V1 or V2?**
 
