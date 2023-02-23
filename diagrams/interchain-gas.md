@@ -12,10 +12,8 @@
 flowchart TB
     subgraph Origin
       Sender
-      style Sender fill:purple
       M_O[(Mailbox)]
       IGP[InterchainGasPaymaster]
-      click IGP https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/igps/InterchainGasPaymaster.sol
       Sender -- "id = dispatch()" --> M_O
       Sender -- "payForGas(id)\n{value: payment}" --> IGP
     end
@@ -30,4 +28,10 @@ flowchart TB
     end
 
     Relayer -- "process()" --> M_D
+
+    style Sender fill:purple
+    style Relayer fill:purple
+    style IGP fill:purple
+
+    click IGP https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/igps/InterchainGasPaymaster.sol
 ```
