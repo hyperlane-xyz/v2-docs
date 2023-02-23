@@ -51,6 +51,12 @@ A few types of ISMs are described below for illustrative purposes. Eventually, w
 
 **Multisig:** A simple t-of-n security model. A proof-of-stake adapter contract could be used to vary the membership to reflect the Hyperlane validators that provide the most economic security.
 
+<details>
+    <summary>Diagram</summary>
+<!-- INCLUDE diagrams/multisig-pos-ism.md -->
+<!-- END -->
+</details>
+
 **Optimistic:** A model pioneered by [Optics](https://docs.celo.org/protocol/bridge/optics) that prioritizes safety over liveness, optimistic ISMs encode a fraud window during which 1-of-n parties can halt the system.
 
 **Dynamic:** ISMs that vary their configuration (or underlying security model) over time based on message content or application state.

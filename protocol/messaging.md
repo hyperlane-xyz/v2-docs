@@ -57,27 +57,5 @@ See [`Message.sol`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/mai
 
 The diagram below illustrates the lifecycle of an interchain message being sent from "Sender" to "Recipient", secured using a validator-based ISM.
 
-```mermaid
-sequenceDiagram
-    participant Sender
-    participant MailboxOrigin
-    participant Validator(s)
-
-    participant Relayer
-    participant MailboxDestination
-    participant ISM
-    participant Recipient
-    
-    Sender->>MailboxOrigin: dispatch(destination, recipient, body)
-    MailboxOrigin-->>Sender: messageId
-    MailboxOrigin-->>Relayer: emit Dispatch(message)
-    Validator(s)-->>MailboxOrigin: latestCheckpoint()
-    MailboxOrigin-->>Validator(s): (merkle root, index)
-    Validator(s)->>Relayer: signature(merkle root, index)
-    Relayer->>MailboxDestination: process(metadata, message)
-    MailboxDestination-->>Recipient: interchainSecurityModule()
-    Recipient-->>MailboxDestination: ISM.address
-    MailboxDestination->>ISM: accept(metadata, message)
-    ISM-->>MailboxDestination: true
-    MailboxDestination->>Recipient: handle(origin, sender, body)
-```
+// <!-- INCLUDE diagrams/multisig-pos-ism.md -->
+// <!-- END -->

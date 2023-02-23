@@ -10,6 +10,9 @@ Unlike the [messaging-api](messaging-api/ "mention"), which requires recipients 
 
 The Accounts API assigns every `(uint32 origin, address sender)` pair a unique interchain account address. The sender controls that address on all remote chains, and can direct it to make arbitrary function calls via the `InterchainAccountRouter.dispatch()` endpoint.
 
+<!-- INCLUDE diagrams/accounts-simple.md -->
+<!-- END -->
+
 ### Interface
 
 ```solidity
@@ -161,3 +164,8 @@ function makeCall(uint256 gasAmount) external payable {
      );
 }
 ```
+
+### How it works
+
+<!-- INCLUDE diagrams/accounts-implementation.md -->
+<!-- END -->

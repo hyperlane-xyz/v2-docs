@@ -18,46 +18,8 @@ Hyperlane's [APIs](./#hyperlane-apis) offer developers secure and simple ways to
 
 [messaging-api](apis/messaging-api/ "mention") [token-bridge-api.md](apis/token-bridge-api.md "mention") [accounts.md](apis/accounts.md "mention")[query.md](apis/query.md "mention")[warp-api.md](apis/warp-api.md "mention")
 
-
-
-```mermaid
-flowchart LR
-    
-    subgraph oc[Origin Chain]
-        sc(Sender Contract) 
-        mb[\Mailbox/]
-    end
-    
-    subgraph rc[Destination Chain]
-        rec(Recipient Contract)
-        mb2[/Mailbox\]
-        ism(Interchain Security Module)
-    end
-
-    val{{"Validator(s)"}}
-    aws[(Off-Chain<br>Highly-Available<br>Storage)]
-    rel[/Relayer/]
-
-    
-    sc--"mailbox.dispatch()"-->mb
-    mb--"latestCheckpoint()"-->val
-    val--signed checkpoint-->aws
-    mb-->rel
-    aws-->rel
-    rel--"mailbox.process()"-->mb2
-    mb2--"recipient.handle()"-->rec
-    mb2<--"ism.accept()"-->ism
-    
-    style val fill:#fcf,stroke:#929,stroke-width:3px
-    style aws fill:#fc9,stroke:#f90,stroke-width:3px
-    style rel fill:#e4f3ff,stroke:#025aa1,stroke-width:3px 
-    style oc fill:#c8e6fe,stroke:#ddd,stroke-dasharray: 5 5,stroke-width:3px
-    style rc fill:#c8e6fe,stroke:#ddd,stroke-dasharray: 5 5,stroke-width:3px
-    style sc stroke-width:3px
-    style rec stroke-width:3px
-    style mb fill:#e4f3ff,stroke:#025aa1,stroke-width:3px
-    style mb2 fill:#e4f3ff,stroke:#025aa1,stroke-width:3px
-```
+<!-- INCLUDE diagrams/messaging-simple.md -->
+<!-- END -->
 
 ### Integrate Hyperlane into your app
 
