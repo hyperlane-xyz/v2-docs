@@ -24,6 +24,9 @@ function sendAndPayForMessage() external payable {
 }
 ```
 
+<!-- INCLUDE diagrams/interchain-gas.md -->
+<!-- END -->
+
 ### Paying interchain gas from a contract's own balance
 
 It's also possible for a contract to pay for its own messages, for example:

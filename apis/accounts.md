@@ -10,48 +10,13 @@ Unlike the [messaging-api](messaging-api/ "mention"), which requires recipients 
 
 The Accounts API assigns every `(uint32 origin, address sender)` pair a unique interchain account address. The sender controls that address on all remote chains, and can direct it to make arbitrary function calls via the `InterchainAccountRouter.dispatch()` endpoint.
 
+<!-- INCLUDE diagrams/accounts-simple.md -->
+<!-- END -->
+
 ### Interface
 
-```solidity
-interface IInterchainAccountRouter {
-    struct Call {
-        address to;
-        bytes data;
-    }
-
-    /**
-     * @notice Direct an interchain account to make multiple consecutive calls
-     * @param _destinationDomain The chain on which to make the calls
-     * @param _calls The list of ABI encoded calls to make
-     * @return The message ID of the dispatched Hyperlane message
-     */
-    function dispatch(uint32 _destinationDomain, Call[] calldata _calls)
-        external
-        returns (bytes32);
-
-    /**
-     * @notice Direct an interchain account to make a single call
-     * @param _destinationDomain The chain on which to make the call
-     * @param _target The address to call
-     * @param _data The calldata for the call
-     * @return The message ID of the dispatched Hyperlane message
-     */
-    function dispatch(
-        uint32 _destinationDomain,
-        address _target,
-        bytes calldata _data
-    ) external returns (bytes32);
-
-    /**
-     * @return The interchain account address for the (origin, sender) pair
-     */
-    function getInterchainAccount(uint32 _originDomain, address _sender)
-        external
-        view
-        returns (address);
-}
-
-```
+<!-- INCLUDE node_modules/@hyperlane-xyz/core/interfaces/IInterchainAccountRouter.sol -->
+<!-- END -->
 
 `InterchainAccountRouters`  can be found at `0xc011170d9795a7a2d065E384EAd1CA3394A7d35E` and domain IDs can be found [here](../resources/domains.md).
 
@@ -161,3 +126,8 @@ function makeCall(uint256 gasAmount) external payable {
      );
 }
 ```
+
+### How it works
+
+<!-- INCLUDE diagrams/accounts-implementation.md -->
+<!-- END -->
