@@ -18,7 +18,7 @@ To use the Interchain Queries API, developers specify a remote chain, an ABI enc
   "themeVariables": {
     "mainBkg": "#025AA1",
     "textColor": "white",
-    "clusterBkg": "beige"
+    "clusterBkg": "white"
   },
   "themeCSS": ".edgeLabel { color: black }"
 }}%%
@@ -225,7 +225,7 @@ function makeQuery(uint256 queryGasAmount) external payable {
   "themeVariables": {
     "mainBkg": "#025AA1",
     "textColor": "white",
-    "clusterBkg": "beige"
+    "clusterBkg": "white"
   },
   "themeCSS": ".edgeLabel { color: black }"
 }}%%

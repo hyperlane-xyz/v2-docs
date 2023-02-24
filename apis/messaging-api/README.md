@@ -12,7 +12,7 @@ description: Send and receive interchain messages using Hyperlane
   "themeVariables": {
     "mainBkg": "#025AA1",
     "textColor": "white",
-    "clusterBkg": "beige"
+    "clusterBkg": "white"
   },
   "themeCSS": ".edgeLabel { color: black }"
 }}%%

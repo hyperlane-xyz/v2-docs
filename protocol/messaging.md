@@ -65,7 +65,7 @@ The diagram below illustrates the lifecycle of an interchain message being sent 
   "themeVariables": {
     "mainBkg": "#025AA1",
     "textColor": "white",
-    "clusterBkg": "beige"
+    "clusterBkg": "white"
   },
   "themeCSS": ".edgeLabel { color: black }"
 }}%%

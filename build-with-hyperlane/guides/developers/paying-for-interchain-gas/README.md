@@ -16,7 +16,7 @@ For convenience, Hyperlane provides an on-chain API on the origin chain that can
   "themeVariables": {
     "mainBkg": "#025AA1",
     "textColor": "white",
-    "clusterBkg": "beige"
+    "clusterBkg": "white"
   },
   "themeCSS": ".edgeLabel { color: black }"
 }}%%

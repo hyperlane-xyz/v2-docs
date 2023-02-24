@@ -18,7 +18,7 @@ The Accounts API assigns every `(uint32 origin, address sender)` pair a unique i
   "themeVariables": {
     "mainBkg": "#025AA1",
     "textColor": "white",
-    "clusterBkg": "beige"
+    "clusterBkg": "white"
   },
   "themeCSS": ".edgeLabel { color: black }"
 }}%%
@@ -26,24 +26,23 @@ The Accounts API assigns every `(uint32 origin, address sender)` pair a unique i
 flowchart TB
     subgraph Origin Chain
       Sender
-      A_O[InterchainQueryRouter]
+      A_O[API]
     end
 
     subgraph Destination Chain
-      A_D[InterchainQueryRouter]
-      Recipient[Recipient]
+      SenderAccount
+      Recipient
     end
 
-    Sender -- "query(recipient, data, callback)" --> A_O
-    A_O <-. "relay" .-> A_D
-    A_D -- "call(data)" --> Recipient
-    Recipient -- "result" --> A_D
-    A_O -- "callback(result)" --> Sender
+    Sender -- "dispatch(destination, recipient, call)" --> A_O
+    A_O -. "relay" .- SenderAccount
+    SenderAccount -- "call(data)" --> Recipient
 
     click A_O https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/middleware/InterchainAccountRouter.sol
     click A_D https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/middleware/InterchainAccountRouter.sol
 
     style Sender fill:purple
+    style SenderAccount fill:purple
     style Recipient fill:purple
 ```
 <!-- WARNING: copied from the included file path. Do not edit directly. -->
@@ -198,7 +197,7 @@ function makeCall(uint256 gasAmount) external payable {
   "themeVariables": {
     "mainBkg": "#025AA1",
     "textColor": "white",
-    "clusterBkg": "beige"
+    "clusterBkg": "white"
   },
   "themeCSS": ".edgeLabel { color: black }"
 }}%%

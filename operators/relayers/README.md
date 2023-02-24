@@ -16,7 +16,7 @@ Every Hyperlane message requires two transactions to be delivered, one on the or
   "themeVariables": {
     "mainBkg": "#025AA1",
     "textColor": "white",
-    "clusterBkg": "beige"
+    "clusterBkg": "white"
   },
   "themeCSS": ".edgeLabel { color: black }"
 }}%%

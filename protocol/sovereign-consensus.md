@@ -74,7 +74,7 @@ A few types of ISMs are described below for illustrative purposes. Eventually, w
   "themeVariables": {
     "mainBkg": "#025AA1",
     "textColor": "white",
-    "clusterBkg": "beige"
+    "clusterBkg": "white"
   },
   "themeCSS": ".edgeLabel { color: black }"
 }}%%
