@@ -20,9 +20,10 @@ The default ISM is secured by Hyperlane validators. Validators can be slashed fo
   "themeVariables": {
     "mainBkg": "#025AA1",
     "textColor": "white",
-    "clusterBkg": "white"
+    "clusterBkg": "beige"
   },
-  "themeCSS": ".edgeLabel { color: black }"
+  "themeCSS": ".edgeLabel { color: black }",
+  "flowchart": {"useMaxWidth": "true" }
 }}%%
 
 flowchart TB
