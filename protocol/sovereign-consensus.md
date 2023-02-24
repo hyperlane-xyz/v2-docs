@@ -48,8 +48,8 @@ flowchart TB
     click Recipient https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/interfaces/IMessageRecipient.sol
     click M_D https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/Mailbox.sol
 
-    style Sender fill:purple
-    style Recipient fill:purple
+    style Sender fill:#efab17
+    style Recipient fill:#efab17
 ```
 
 <!-- WARNING: copied from the included file path. Do not edit directly. -->
@@ -117,7 +117,7 @@ A few types of ISMs are described below for illustrative purposes. Eventually, w
   "themeVariables": {
     "mainBkg": "#025AA1",
     "textColor": "white",
-    "clusterBkg": "beige"
+    "clusterBkg": "white"
   },
   "themeCSS": ".edgeLabel { color: black }",
   "flowchart": {"useMaxWidth": "true" }
@@ -164,8 +164,8 @@ flowchart TB
 
     click ISM https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/isms/MultisigIsm.sol
 
-    style Sender fill:purple
-    style Recipient fill:purple
+    style Sender fill:#efab17
+    style Recipient fill:#efab17
 ```
 <!-- WARNING: copied from the included file path. Do not edit directly. -->
 <!-- END -->

@@ -37,8 +37,8 @@ flowchart TB
     click Recipient https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/interfaces/IMessageRecipient.sol
     click M_D https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/Mailbox.sol
 
-    style Sender fill:purple
-    style Recipient fill:purple
+    style Sender fill:#efab17
+    style Recipient fill:#efab17
 ```
 
 <!-- WARNING: copied from the included file path. Do not edit directly. -->

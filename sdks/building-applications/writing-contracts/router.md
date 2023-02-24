@@ -43,9 +43,9 @@ graph BT
     R_E -. "routers()" .- R_P -. "routers()" .- R_G
     R_G -. "routers()" .- R_E
 
-    style R_E fill:purple
-    style R_P fill:purple
-    style R_G fill:purple
+    style R_E fill:#efab17
+    style R_P fill:#efab17
+    style R_G fill:#efab17
 ```
 
 <!-- WARNING: copied from the included file path. Do not edit directly. -->
