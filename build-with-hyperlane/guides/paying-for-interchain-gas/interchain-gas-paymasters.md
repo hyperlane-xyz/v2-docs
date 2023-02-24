@@ -9,6 +9,32 @@ An Interchain Gas Paymaster (IGP) contract has a payable function which accepts 
 This function does not necessarily need to be called in the same transaction as the message dispatch.
 
 <!-- INCLUDE node_modules/@hyperlane-xyz/core/interfaces/IInterchainGasPaymaster.sol -->
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
+```solidity
+// SPDX-License-Identifier: MIT OR Apache-2.0
+pragma solidity >=0.6.11;
+
+/**
+ * @title IInterchainGasPaymaster
+ * @notice Manages payments on a source chain to cover gas costs of relaying
+ * messages to destination chains.
+ */
+interface IInterchainGasPaymaster {
+    function payForGas(
+        bytes32 _messageId,
+        uint32 _destinationDomain,
+        uint256 _gasAmount,
+        address _refundAddress
+    ) external payable;
+
+    function quoteGasPayment(uint32 _destinationDomain, uint256 _gasAmount)
+        external
+        view
+        returns (uint256);
+}
+
+```
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
 <!-- END -->
 
 ### How It Works

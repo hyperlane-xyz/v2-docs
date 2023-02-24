@@ -47,6 +47,24 @@ Developers can send interchain messages very similarly to the [messaging-api](me
 #### Interface
 
 <!-- INCLUDE node_modules/@hyperlane-xyz/core/interfaces/ILiquidityLayerRouter.sol -->
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
+```solidity
+// SPDX-License-Identifier: MIT OR Apache-2.0
+pragma solidity >=0.6.11;
+
+interface ILiquidityLayerRouter {
+    function dispatchWithTokens(
+        uint32 _destinationDomain,
+        bytes32 _recipientAddress,
+        address _token,
+        uint256 _amount,
+        string calldata _bridge,
+        bytes calldata _messageBody
+    ) external returns (bytes32);
+}
+
+```
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
 <!-- END -->
 
 The address of the `LiquidityLayerRouter` is `0x2abe0860D81FB4242C748132bD69D125D88eaE26` on every chain.
@@ -70,6 +88,23 @@ Like sending, receiving is very similar to the [messaging-api](messaging-api/ "m
 #### Interface
 
 <!-- INCLUDE node_modules/@hyperlane-xyz/core/interfaces/ILiquidityLayerMessageRecipient.sol -->
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
+```solidity
+// SPDX-License-Identifier: Apache-2.0
+pragma solidity ^0.8.13;
+
+interface ILiquidityLayerMessageRecipient {
+    function handleWithTokens(
+        uint32 _origin,
+        bytes32 _sender,
+        bytes calldata _message,
+        address _token,
+        uint256 _amount
+    ) external;
+}
+
+```
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
 <!-- END -->
 
 `_origin` the Domain ID of the source chain, IDs found [here](../resources/domains.md#mainnet).

@@ -9,6 +9,46 @@ Hyperlane [relayers](../../../protocol/agents/relayer.md) deliver interchain mes
 Every Hyperlane message requires two transactions to be delivered, one on the origin chain to [dispatch](../../../apis/messaging-api/send.md) the message, and one on the destination chain to [process](../../../apis/messaging-api/receive.md) the messages. Relayers are responsible for sending the second transaction.
 
 <!-- INCLUDE diagrams/interchain-gas.md -->
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
+```mermaid
+%%{ init: {
+  "theme": "neutral",
+  "themeVariables": {
+    "mainBkg": "#025AA1",
+    "textColor": "white",
+    "clusterBkg": "beige"
+  },
+  "themeCSS": ".edgeLabel { color: black }"
+}}%%
+
+flowchart TB
+    subgraph Origin
+      Sender
+      M_O[(Mailbox)]
+      IGP[InterchainGasPaymaster]
+      Sender -- "id = dispatch()" --> M_O
+      Sender -- "payForGas(id)\n{value: payment}" --> IGP
+    end
+
+    Relayer((Relayer))
+
+    M_O -. "indexing" .-> Relayer
+    IGP -. "paymaster" .- Relayer
+
+    subgraph Destination
+      M_D[(Mailbox)]
+    end
+
+    Relayer -- "process()" --> M_D
+
+    style Sender fill:purple
+    style Relayer fill:purple
+    style IGP fill:purple
+
+    click IGP https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/igps/InterchainGasPaymaster.sol
+```
+
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
 <!-- END -->
 
 Hyperlane relayers are run on a per-origin-chain basis, delivering outbound messages from that chain to one or more remote chains. Relayers have no special permissions in Hyperlane. If relayer keys are compromised, only the tokens held by those keys are at risk.

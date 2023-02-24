@@ -11,6 +11,40 @@ Unlike the [messaging-api](messaging-api/ "mention"), which requires recipients 
 To use the Interchain Queries API, developers specify a remote chain, an ABI encoded view call to make on the remote chain, and an ABI encoded callback to be made on the querying contract, to which the return value of the remote view call will be appended.
 
 <!-- INCLUDE diagrams/queries-simple.md -->
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
+```mermaid
+%%{ init: {
+  "theme": "neutral",
+  "themeVariables": {
+    "mainBkg": "#025AA1",
+    "textColor": "white",
+    "clusterBkg": "beige"
+  },
+  "themeCSS": ".edgeLabel { color: black }"
+}}%%
+
+flowchart BT
+    subgraph Origin Chain
+      Sender
+      Q_O[API]
+    end
+
+    subgraph Destination Chain
+      Recipient[Recipient]
+    end
+
+    Sender -- "query(recipient, data, callback)" --> Q_O
+    Recipient -- "result" --> Q_O
+    Q_O -- "call(data)" --> Recipient
+    Q_O -- "callback(result)" --> Sender
+
+    click Q_O https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/middleware/InterchainQueryRouter.sol
+    click Q_D https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/middleware/InterchainQueryRouter.sol
+
+    style Sender fill:purple
+    style Recipient fill:purple
+```
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
 <!-- END -->
 
 ### Interface
@@ -184,6 +218,48 @@ function makeQuery(uint256 queryGasAmount) external payable {
 ### How it works
 
 <!-- INCLUDE diagrams/queries-implementation.md -->
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
+```mermaid
+%%{ init: {
+  "theme": "neutral",
+  "themeVariables": {
+    "mainBkg": "#025AA1",
+    "textColor": "white",
+    "clusterBkg": "beige"
+  },
+  "themeCSS": ".edgeLabel { color: black }"
+}}%%
+
+flowchart TB
+    subgraph Origin Chain
+      Sender
+      Q_O[InterchainQueryRouter]
+      M_O[(Mailbox)]
+    end
+
+    subgraph Destination Chain
+      M_D[(Mailbox)]
+      Q_D[InterchainQueryRouter]
+      Recipient
+    end
+
+    Sender -- "query(destination, recipient, data, callback)" --> Q_O
+    Q_O -- "dispatch(destination, router, \n[sender, recipient, data, callback])" --> M_O
+    M_O -. "relay" .- M_D
+    M_D -- "handle(origin, router, \n[sender, recipient, data, callback])" --> Q_D
+    Q_D -- "call(data)" --> Recipient
+    Recipient -- "result" --> Q_D
+    M_O -- "handle(destination, router, \n[sender, result, callback])" --> Q_O
+    Q_D -- "dispatch(origin, router, \n[sender, result, callback])" --> M_D
+    Q_O -- "callback(result)" --> Sender
+
+    click Q_O https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/middleware/InterchainQueryRouter.sol
+    click Q_D https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/middleware/InterchainQueryRouter.sol
+
+    style Sender fill:purple
+    style Recipient fill:purple
+```
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
 <!-- END -->
 
 ### Future Extensions

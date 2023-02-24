@@ -9,6 +9,21 @@ Developers must implement the `handle()` ABI in order to receive interchain mess
 ### Interface
 
 <!-- INCLUDE node_modules/@hyperlane-xyz/core/interfaces/IMessageRecipient.sol -->
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
+```solidity
+// SPDX-License-Identifier: MIT OR Apache-2.0
+pragma solidity >=0.6.11;
+
+interface IMessageRecipient {
+    function handle(
+        uint32 _origin,
+        bytes32 _sender,
+        bytes calldata _message
+    ) external;
+}
+
+```
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
 <!-- END -->
 
 `_origin` the Domain ID of the origin chain, IDs found [here](../../resources/domains.md#mainnet).
