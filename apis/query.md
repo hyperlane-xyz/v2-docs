@@ -10,22 +10,8 @@ Unlike the [messaging-api](messaging-api/ "mention"), which requires recipients 
 
 To use the Interchain Queries API, developers specify a remote chain, an ABI encoded view call to make on the remote chain, and an ABI encoded callback to be made on the querying contract, to which the return value of the remote view call will be appended.
 
-```mermaid
-%%{init: {'theme': 'neutral', 'themeCSS': '.node rect { fill: #025AA1 } .edgeLabel { color: black } .nodeLabel { color: white }'}}%%
-flowchart RL
-	subgraph origin chain
-		sender(Sender) --"query(Call, Callback)"--> APIO(Hyperlane)
-    APIO --"Callback(result)"--> sender
-	end
-
-	APIO -."relay".-> APID
-	APID -."relay".-> APIO
-
-	subgraph destination chain
-		APID(Hyperlane) --"Call"--> recipient(Sender)
-		recipient --"result"--> APID
-	end
-```
+<!-- INCLUDE diagrams/queries-simple.md -->
+<!-- END -->
 
 ### Interface
 
@@ -194,6 +180,11 @@ function makeQuery(uint256 queryGasAmount) external payable {
      );
 }
 ```
+
+### How it works
+
+<!-- INCLUDE diagrams/queries-implementation.md -->
+<!-- END -->
 
 ### Future Extensions
 

@@ -4,19 +4,8 @@ description: Send and receive interchain messages using Hyperlane
 
 # Messaging API
 
-```mermaid
-%%{init: {'theme': 'neutral', 'themeCSS': '.node rect { fill: #025AA1 } .edgeLabel { color: black } .nodeLabel { color: white }'}}%%
-flowchart LR
-	subgraph origin chain
-		sender --"dispatch()"--> MO[API]
-	end
-
-	MO -."relayer".-> MD
-
-	subgraph destination chain
-		MD[API] --"handle()"--> recipient
-	end
-```
+<!-- INCLUDE diagrams/messaging-simple.md -->
+<!-- END -->
 
 Hyperlane provides an on-chain API for sending and receiving interchain messages.
 

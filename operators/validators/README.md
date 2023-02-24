@@ -6,6 +6,9 @@ description: Everything you need to start running a validator
 
 Hyperlane [validators](../../../protocol/agents/validators.md) are stateless, do not submit transactions, and are not networked with other validators. Hyperlane validators are run on a per-origin-chain basis, and these instructions are written for a single chain.
 
+<!-- INCLUDE diagrams/multisig-pos-ism.md -->
+<!-- END -->
+
 Running a validator simply requires the following:
 
 #### An RPC node&#x20;
