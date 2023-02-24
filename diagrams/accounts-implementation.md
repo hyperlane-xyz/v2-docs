@@ -33,7 +33,7 @@ flowchart TB
     click A_O https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/middleware/InterchainAccountRouter.sol
     click A_D https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/middleware/InterchainAccountRouter.sol
 
-    style Sender fill:purple
-    style SenderAccount fill:purple
-    style Recipient fill:purple
+    style Sender fill:#efab17
+    style SenderAccount fill:#efab17
+    style Recipient fill:#efab17
 ```

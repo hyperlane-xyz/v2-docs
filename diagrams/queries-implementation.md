@@ -35,6 +35,6 @@ flowchart TB
     click Q_O https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/middleware/InterchainQueryRouter.sol
     click Q_D https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/middleware/InterchainQueryRouter.sol
 
-    style Sender fill:purple
-    style Recipient fill:purple
+    style Sender fill:#efab17
+    style Recipient fill:#efab17
 ```

@@ -4,7 +4,7 @@
   "themeVariables": {
     "mainBkg": "#025AA1",
     "textColor": "white",
-    "clusterBkg": "beige"
+    "clusterBkg": "white"
   },
   "themeCSS": ".edgeLabel { color: black }",
   "flowchart": {"useMaxWidth": "true" }
@@ -51,6 +51,6 @@ flowchart TB
 
     click ISM https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/isms/MultisigIsm.sol
 
-    style Sender fill:purple
-    style Recipient fill:purple
+    style Sender fill:#efab17
+    style Recipient fill:#efab17
 ```

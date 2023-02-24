@@ -27,8 +27,8 @@ flowchart TB
 		HypD(API) --"handleWithTokens(Call)"--> recipient(Recipient)
 	end
 
-  style sender fill:purple
-  style recipient fill:purple
+  style sender fill:#efab17
+  style recipient fill:#efab17
   style AdapterO fill:green
   style AdapterD fill:green
 ```
