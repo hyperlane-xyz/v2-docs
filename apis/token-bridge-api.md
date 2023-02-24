@@ -46,18 +46,8 @@ Developers can send interchain messages very similarly to the [messaging-api](me
 
 #### Interface
 
-```solidity
-interface ILiquidityLayerRouter {
-    function dispatchWithTokens(
-        uint32 _destinationDomain,
-        bytes32 _recipientAddress,
-        bytes calldata _messageBody,
-        address _token,
-        uint256 _amount,
-        string calldata _bridge
-    ) external returns (bytes32);
-}
-```
+<!-- INCLUDE node_modules/@hyperlane-xyz/core/interfaces/ILiquidityLayerRouter.sol -->
+<!-- END -->
 
 The address of the `LiquidityLayerRouter` is `0x2abe0860D81FB4242C748132bD69D125D88eaE26` on every chain.
 
@@ -79,17 +69,8 @@ Like sending, receiving is very similar to the [messaging-api](messaging-api/ "m
 
 #### Interface
 
-```solidity
-interface ILiquidityLayerMessageRecipient {
-    function handleWithTokens(
-        uint32 _origin,
-        bytes32 _sender,
-        bytes calldata _message,
-        address _token,
-        uint256 _amount
-    ) external;
-}
-```
+<!-- INCLUDE node_modules/@hyperlane-xyz/core/interfaces/ILiquidityLayerMessageRecipient.sol -->
+<!-- END -->
 
 `_origin` the Domain ID of the source chain, IDs found [here](../resources/domains.md#mainnet).
 

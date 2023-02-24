@@ -10,18 +10,6 @@ Applications can use sovereign consensus to tune security models and trust assum
 
 Sovereign consensus is entirely optional. [`Mailboxes`](messaging.md) will default to a module that leverages the economic security provided by [proof-of-stake](proof-of-stake.md).
 
-Applications can opt into sovereign consensus by implementing the `interchainSecurityModule()` ABI, which returns the address of the ISM being used by the application.
-
-```solidity
-interface ISpecifiesInterchainSecurityModule {
-    /// @notice Returns the address of the ISM that should be used to verify
-    /// interchain messages sent to this contract.
-    function interchainSecurityModule() external view returns (address);
-}
-```
-
-This model allows for varying levels of customization. Developers that want minimal customization can use the default ISM or point to an already deployed contract. Developers that want more control over security can deploy and configure their own ISM, or even write one from scratch.
-
 ### Interchain security modules
 
 Interchain security modules (ISMs) are smart contracts that define the security model for an application.
@@ -30,6 +18,10 @@ ISMs must implement the `verify()` interface, which gets called by the `Mailbox`
 
 <!-- INCLUDE node_modules/@hyperlane-xyz/core/interfaces/IInterchainSecurityModule.sol -->
 <!-- END -->
+
+Applications can opt into sovereign consensus by implementing the `interchainSecurityModule()`, which returns the address of the ISM being used by the application.
+
+This model allows for varying levels of customization. Developers that want minimal customization can use the default ISM or point to an already deployed contract. Developers that want more control over security can deploy and configure their own ISM, or even write one from scratch.
 
 ### Examples
 
