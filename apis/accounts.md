@@ -54,7 +54,8 @@ interface IInterchainAccountRouter {
         returns (address);
 }
 
-```
+<!-- INCLUDE node_modules/@hyperlane-xyz/core/interfaces/IInterchainAccountRouter.sol -->
+<!-- END -->
 
 `InterchainAccountRouters`  can be found at `0xc011170d9795a7a2d065E384EAd1CA3394A7d35E` and domain IDs can be found [here](../resources/domains.md).
 

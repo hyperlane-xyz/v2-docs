@@ -26,24 +26,10 @@ This model allows for varying levels of customization. Developers that want mini
 
 Interchain security modules (ISMs) are smart contracts that define the security model for an application.
 
-ISMs must implement the `accept()` interface, which gets called by the `Mailbox` before delivering a message. If `accept()` does not return true, the transaction will revert.
+ISMs must implement the `verify()` interface, which gets called by the `Mailbox` before delivering a message. If `verify()` does not return true, the transaction will revert.
 
-```solidity
-interface IInterchainSecurityModule {
-   /**
-    * @notice Returns whether or not to accept an interchain message.
-    * @param _metadata Arbitrary metadata that can be injected by a relayer,
-    * used by the ISM to verify the validity of `_message`.
-    * May include things like validator signatures, merkle proofs,
-    * zero-knowledge proofs of light client state, etc.
-    * @param _message Hyperlane formatted interchain message.
-    */
-    function accept(
-        bytes calldata _metadata,
-        bytes calldata _message
-    ) external returns (bool);
-}
-```
+<!-- INCLUDE node_modules/@hyperlane-xyz/core/interfaces/IInterchainSecurityModule.sol -->
+<!-- END -->
 
 ### Examples
 
