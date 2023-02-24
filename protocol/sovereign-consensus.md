@@ -10,6 +10,9 @@ Applications can use sovereign consensus to tune security models and trust assum
 
 Sovereign consensus is entirely optional. [`Mailboxes`](messaging.md) will default to a module that leverages the economic security provided by [proof-of-stake](proof-of-stake.md).
 
+<!-- INCLUDE diagrams/messaging-isms.md -->
+<!-- END -->
+
 ### Interchain security modules
 
 Interchain security modules (ISMs) are smart contracts that define the security model for an application.
@@ -64,8 +67,6 @@ A few types of ISMs are described below for illustrative purposes. Eventually, w
 
 **Multisig:** A simple t-of-n security model. A proof-of-stake adapter contract could be used to vary the membership to reflect the Hyperlane validators that provide the most economic security.
 
-<details>
-    <summary>Diagram</summary>
 <!-- INCLUDE diagrams/multisig-pos-ism.md -->
 <!-- WARNING: copied from the included file path. Do not edit directly. -->
 ```mermaid
@@ -125,7 +126,6 @@ flowchart TB
 ```
 <!-- WARNING: copied from the included file path. Do not edit directly. -->
 <!-- END -->
-</details>
 
 **Optimistic:** A model pioneered by [Optics](https://docs.celo.org/protocol/bridge/optics) that prioritizes safety over liveness, optimistic ISMs encode a fraud window during which 1-of-n parties can halt the system.
 
