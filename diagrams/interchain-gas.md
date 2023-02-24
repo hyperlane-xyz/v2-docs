@@ -30,8 +30,6 @@ flowchart TB
     Relayer -- "process()" --> M_D
 
     style Sender fill:purple
-    style Relayer fill:purple
-    style IGP fill:purple
 
     click IGP https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/igps/InterchainGasPaymaster.sol
 ```

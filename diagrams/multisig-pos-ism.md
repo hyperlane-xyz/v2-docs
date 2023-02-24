@@ -52,8 +52,4 @@ flowchart TB
 
     style Sender fill:purple
     style Recipient fill:purple
-    style V fill:purple
-    style ISM fill:purple
-    style aws fill:purple
-    style POS fill:purple
 ```
