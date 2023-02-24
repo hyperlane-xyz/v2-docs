@@ -11,6 +11,43 @@ The LiquidityLayer API is in beta and deployed only on testnet. The API is subje
 Hyperlane's Liquidity layer will wrap around several token bridges to allow developers to send tokens alongside their message.
 
 <!-- INCLUDE diagrams/liquidity-layer-simple.md -->
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
+```mermaid
+%%{ init: {
+  "theme": "neutral",
+  "themeVariables": {
+    "mainBkg": "#025AA1",
+    "textColor": "white",
+    "clusterBkg": "white"
+  },
+  "themeCSS": ".edgeLabel { color: black }"
+}}%%
+
+flowchart TB
+	subgraph origin chain
+		sender --"dispatchWithTokens()"--> HypO(API)
+        HypO --> AdapterO(Circle/Portal)
+        
+	end
+
+	HypO -."message".-> HypD
+	AdapterO -."value".-> AdapterD
+    
+
+	subgraph destination chain
+        AdapterD(Circle/Portal) --> HypD
+    
+
+		HypD(API) --"handleWithTokens(Call)"--> recipient(Recipient)
+	end
+
+  style sender fill:purple
+  style recipient fill:purple
+  style AdapterO fill:green
+  style AdapterD fill:green
+```
+
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
 <!-- END -->
 
 #### Supported Bridges
