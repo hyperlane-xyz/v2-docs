@@ -41,4 +41,5 @@ Your validator takes as configuration the following environment variables:
 | Optimism  | 0                               | 15                                   |
 | Polygon   | 256                             | 2                                    |
 | Moonbeam  | 0                               | 5                                    |
+| Gnosis    | 14                              | 5                                    |
 
