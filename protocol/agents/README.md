@@ -8,6 +8,6 @@ Like most intricate protocols, the Hyperlane protocol is operated by a set of of
 
 For convenience, Hyperlane implements these agents as a set of Rust binaries.
 
-1. [Validators](validators.md) sign`Mailbox` merkle roots and and make their signatures available to relayers.
-2. [Relayers](relayer.md) aggregate the off-chain metadata needed to deliver messages (e.g. validator signatures and merkle proofs) and submit them to `Mailboxes`, delivering interchain messages to their recipients.
-3. [Watchtowers](processor.md) observe the network for validator fraud. If detected, watchtowers submit evidence to the source chain, slashing the fraudulent validator(s).
+1. [validators.md](validators.md "mention") sign [messaging.md](../messaging.md "mention")merkle roots, and make and make their signatures available to relayers.
+2. [relayer.md](relayer.md "mention") aggregate off-chain metadata for [interchain-security-modules](../sovereign-consensus/interchain-security-modules/ "mention") and deliver messages to their recipients
+3. [processor.md](processor.md "mention") observe the network for fraud by [validators.md](validators.md "mention"). If detected, watchtowers submit evidence to the origin chain, slashing the fraudulent validator(s).

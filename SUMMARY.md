@@ -76,9 +76,14 @@
 ## Protocol
 
 * [Overview](protocol/overview.md)
-* [Mailboxes](protocol/messaging.md)
-* [Sovereign consensus](protocol/sovereign-consensus.md)
-* [Proof of Stake](protocol/proof-of-stake.md)
+* [Mailbox](protocol/messaging.md)
+* [Security](protocol/sovereign-consensus/README.md)
+  * [Interchain security modules](protocol/sovereign-consensus/interchain-security-modules/README.md)
+    * [Multisig ISM](protocol/sovereign-consensus/interchain-security-modules/multisig-ism.md)
+    * [Aggregation ISM](protocol/sovereign-consensus/interchain-security-modules/aggregation-ism.md)
+    * [Optimistic ISM](protocol/sovereign-consensus/interchain-security-modules/optimistic-ism.md)
+    * [Wormhole ISM](protocol/sovereign-consensus/interchain-security-modules/wormhole-ism.md)
+  * [Staking and slashing](protocol/sovereign-consensus/proof-of-stake.md)
 * [Agents](protocol/agents/README.md)
   * [Validators](protocol/agents/validators.md)
   * [Relayers](protocol/agents/relayer.md)
