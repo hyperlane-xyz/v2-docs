@@ -10,8 +10,6 @@ Unlike the [messaging-api](messaging-api/ "mention"), which requires recipients 
 
 To use the Interchain Queries API, developers specify a remote chain, an ABI encoded view call to make on the remote chain, and an ABI encoded callback to be made on the querying contract, to which the return value of the remote view call will be appended.
 
-<!-- INCLUDE diagrams/queries-simple.md -->
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
 ```mermaid
 %%{ init: {
   "theme": "neutral",
@@ -44,8 +42,6 @@ flowchart BT
     style Sender fill:#efab17
     style Recipient fill:#efab17
 ```
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
-<!-- END -->
 
 ### Interface
 
@@ -180,7 +176,7 @@ Just like all Hyperlane messages that wish to have their messages delivered by a
 
 The various `query` functions in the Queries API each return the message ID as a `bytes32`. This message ID can then be used by the caller to pay for interchain gas.
 
-Because the Queries API uses the default ISM for security, the [DefaultIsmInterchainGasPaymaster](../resources/addresses.md#defaultisminterchaingaspaymaster) IGP should be used. When specifying the amount of gas, the caller must pay for a gas amount high enough to cover:
+Because the Queries API uses the default ISM for security, the [`DefaultIsmInterchainGasPaymaster`](../resources/addresses.md#defaultisminterchaingaspaymaster)  should be used. When specifying the amount of gas, the caller must pay for a gas amount high enough to cover:
 
 1. "Overhead" gas used by the Queries API contract on the destination chain. This is about **80,000 gas**.
 2. The gas used by the user-specified arbitrary query / queries that will be performed on the destination chain.
@@ -217,8 +213,6 @@ function makeQuery(uint256 queryGasAmount) external payable {
 
 ### How it works
 
-<!-- INCLUDE diagrams/queries-implementation.md -->
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
 ```mermaid
 %%{ init: {
   "theme": "neutral",
@@ -259,8 +253,6 @@ flowchart TB
     style Sender fill:#efab17
     style Recipient fill:#efab17
 ```
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
-<!-- END -->
 
 ### Future Extensions
 

@@ -4,8 +4,16 @@ description: Send and receive interchain messages using Hyperlane
 
 # Messaging API
 
-<!-- INCLUDE diagrams/messaging-simple.md -->
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
+Hyperlane provides an on-chain API for sending and receiving interchain messages.
+
+Cant wait to get started? Follow the [quickstart-tutorial.md](../../build-with-hyperlane/quickstarts/quickstart-tutorial.md "mention") quickstart to send your first interchain message in less than five minutes. Otherwise, read on—
+
+#### Interface
+
+To [send.md](send.md "mention") interchain messages, reference the `Mailbox.dispatch()` API.
+
+To [receive.md](receive.md "mention") interchain messages, implement the `IMessageRecipient` interface.
+
 ```mermaid
 %%{ init: {
   "theme": "neutral",
@@ -17,7 +25,7 @@ description: Send and receive interchain messages using Hyperlane
   "themeCSS": ".edgeLabel { color: black }"
 }}%%
 
-flowchart TB
+flowchart LR
     subgraph Origin Chain
       Sender
       M_O[(Mailbox)]
@@ -41,19 +49,12 @@ flowchart TB
     style Recipient fill:#efab17
 ```
 
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
-<!-- END -->
+#### Testing
 
-Hyperlane provides an on-chain API for sending and receiving interchain messages.
+See the [unit-testing.md](../../build-with-hyperlane/guides/unit-testing.md "mention") documentation to see how to test your integration with the Hyperlane messaging API using the `MockMailbox` contracts.
 
-Cant wait to get started? Follow [this tutorial](../../build-with-hyperlane/quickstarts/quickstart-tutorial.md) to send your first interchain message in less than five minutes. Otherwise, read on—
+#### Interchain gas
 
-To send interchain messages, reference the [`Mailbox.dispatch()` API](send.md).
-
-To receive interchain messages, implement the [`IMessageRecipient.handle()`](receive.md) interface.
-
-You can [unit test](../../build-with-hyperlane/guides/unit-testing.md) your integration with the Hyperlane messaging API using the `MockMailbox`  contracts.
-
-Delivering an interchain message requires submitting a transaction on the destination chain. Optionally, you can pay for the gas for this transaction on the origin chain, and let a Hyperlane [relayer](../../protocol/agents/relayer.md) deliver your message for you.
+Delivering an interchain message requires submitting a transaction on the destination chain. Optionally, you can pay for the gas for this transaction on the origin chain, and let Hyperlane [relayers](../../operators/relayers/ "mention") deliver your message for you.
 
 Learn more about [paying-for-interchain-gas](../../build-with-hyperlane/guides/developers/paying-for-interchain-gas/ "mention").

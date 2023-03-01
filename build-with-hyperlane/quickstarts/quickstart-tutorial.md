@@ -13,8 +13,8 @@ You can also check out the [`hyperlane-quickstart`](https://github.com/hyperlane
 
 ### Inputs
 
-* `$MAILBOX_ADDRESS`: The `Mailbox` contract address on the origin chain. Hyperlane contract addresses can be found [here](../../resources/addresses.md#mailbox).
-* `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../../resources/domains.md).
+* `$MAILBOX_ADDRESS`: The [messaging.md](../../protocol/messaging.md "mention") contract address on the origin chain, see [addresses.md](../../resources/addresses.md "mention").
+* `$DESTINATION_DOMAIN`: The domain ID of the destination chain, see [domains.md](../../resources/domains.md "mention")
 * `$RECIPIENT`: The address of the `TestRecipient` contract on the destination chain, left padded to a `bytes32`. In our case: `0x000000000000000000000000BC3cFeca7Df5A45d61BC60E7898E63670e1654aE`
 
 ### Send a message
@@ -76,7 +76,7 @@ This `payForGas` call would typically be done by a smart contract that would fir
 5. For gas amount, enter `100000`.
 6.  Click `Query` and make note of the amount returned as `$GAS_PAYMENT_QUOTE`. For example, at the time of writing, the quote is `1` wei.
 
-    ![](<../../.gitbook/assets/Screen Shot 2023-01-30 at 11.30.56 AM (1).png>)
+    ![](<../../.gitbook/assets/Screen Shot 2023-01-30 at 11.30.56 AM.png>)
 
 #### Paying the Interchain Gas Payment
 

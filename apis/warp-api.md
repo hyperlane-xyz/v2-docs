@@ -6,13 +6,13 @@ description: Move your token between chains
 
 Developers can use Hyperlane's Warp API to permissionlessly deploy "Warp Routes", contracts that allow ERC20 tokens to move effortlessly between chains.
 
-Unlike other token wrapping protocols, Warp Routes are secured by [sovereign consensus](../protocol/sovereign-consensus/), allowing developers to specify the security model that governs the minting, burning, and unwrapping of their interchain token.
+Unlike other token wrapping protocols, Warp Routes are secured by Hyperlane's modular [sovereign-consensus](../protocol/sovereign-consensus/ "mention") protocol, allowing developers to specify the security model that governs the minting, burning, and unwrapping of their interchain token.
 
 ### Overview
 
 A Hyperlane Warp Route allows a particular token to be moved between chains according to a  security model specified by the deployer.
 
-Each Warp Route consists of one contract deployed on every chain that the token can move between. These contracts use the [Messaging API](messaging-api/) to send interchain messages to one another.&#x20;
+Each Warp Route consists of one contract deployed on every chain that the token can move between. These contracts use the [messaging-api](messaging-api/ "mention") to send interchain messages to one another.&#x20;
 
 When a user transfers from the _canonical_ origin chain to a _non-canonical_ destination chain, their tokens are locked in a `HypERC20Collateral` contract, which sends a message to the destination chain to mint wrapped tokens.
 
@@ -45,7 +45,7 @@ interface IHypERC20 is IERC20 {
 
 ### Security considerations
 
-Each Warp Route is secured by [sovereign consensus](../protocol/sovereign-consensus/). The deployer of a Warp Route can optionally specify the [Interchain Security Module(s)](../build-with-hyperlane/guides/receive-1.md#interchain-security-modules) (ISMs) that are used to verify interchain transfer messages.
+The deployer of a Warp Route can optionally specify the [interchain-security-modules](../protocol/sovereign-consensus/interchain-security-modules/ "mention") (ISMs) that are used to verify interchain transfer messages.
 
 This means that each Warp Route may have a unique security configuration. Users transferring interchain tokens should understand the trust assumptions of a Route before using it.&#x20;
 
