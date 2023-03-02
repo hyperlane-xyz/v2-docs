@@ -45,7 +45,7 @@ interface IHypERC20 is IERC20 {
 
 ### Security considerations
 
-The deployer of a Warp Route can optionally specify the [interchain-security-modules](../protocol/sovereign-consensus/interchain-security-modules/ "mention") (ISMs) that are used to verify interchain transfer messages.
+The deployer of a Warp Route can optionally specify the [interchain-security-modules.md](../protocol/sovereign-consensus/interchain-security-modules.md "mention") (ISMs) that are used to verify interchain transfer messages.
 
 This means that each Warp Route may have a unique security configuration. Users transferring interchain tokens should understand the trust assumptions of a Route before using it.&#x20;
 

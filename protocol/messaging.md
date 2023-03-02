@@ -34,7 +34,7 @@ To send interchain messages, developers call `Mailbox.dispatch()`.
 
 This function takes as parameters the message contents, the destination chain ID, and the recipient address. Each message get inserted as a leaf into an [incremental merkle tree](https://medium.com/@josephdelong/ethereum-2-0-deposit-merkle-tree-13ec8404ca4f) stored by the `Mailbox`.
 
-Hyperlane's [proof-of-stake.md](sovereign-consensus/proof-of-stake.md "mention") protocol uses this merkle tree to verify fraud proofs.
+Hyperlane's [proof-of-stake.md](proof-of-stake.md "mention") protocol uses this merkle tree to verify fraud proofs.
 
 ### Process
 
@@ -42,7 +42,7 @@ To deliver interchain messages, [relayer.md](agents/relayer.md "mention")call `M
 
 This function takes as parameters the message to deliver as well as arbitrary metadata that can be specified by the relayer.
 
-The `Mailbox` will pass the message and metadata to one or more [interchain-security-modules](sovereign-consensus/interchain-security-modules/ "mention") for verification. If the ISM successfully verifies the message, the `Mailbox` delivers the message to the recipient by calling `recipient.handle()`.
+The `Mailbox` will pass the message and metadata to one or more [interchain-security-modules.md](sovereign-consensus/interchain-security-modules.md "mention") for verification. If the ISM successfully verifies the message, the `Mailbox` delivers the message to the recipient by calling `recipient.handle()`.
 
 {% hint style="info" %}
 See [`Message.sol`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/libs/Message.sol)for more details on Hyperlane message encoding&#x20;
@@ -50,7 +50,7 @@ See [`Message.sol`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/mai
 
 ## Message lifecycle
 
-The diagram below illustrates the lifecycle of an interchain message being sent from "Sender" to "Recipient", secured using a [multisig-ism.md](sovereign-consensus/interchain-security-modules/multisig-ism.md "mention").
+The diagram below illustrates the lifecycle of an interchain message being sent from "Sender" to "Recipient", secured using a [multisig-ism.md](sovereign-consensus/multisig-ism.md "mention").
 
 ```mermaid
 %%{ init: {

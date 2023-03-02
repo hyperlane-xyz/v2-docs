@@ -57,7 +57,7 @@ function handle(
 
 ### Interchain security modules
 
-Developers can override Hyperlane's default [multisig-ism.md](../../protocol/sovereign-consensus/interchain-security-modules/multisig-ism.md "mention")-based security model by specifying their own [#interchain-security-modules](receive.md#interchain-security-modules "mention").
+Developers can override Hyperlane's default [multisig-ism.md](../../protocol/sovereign-consensus/multisig-ism.md "mention")-based security model by specifying their own [#interchain-security-modules](receive.md#interchain-security-modules "mention").
 
 See the [#security](receive.md#security "mention") documentation for more info on how to set the ISM used by your application.
 

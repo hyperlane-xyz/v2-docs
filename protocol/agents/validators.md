@@ -26,7 +26,7 @@ function latestCheckpoint()
   returns (bytes32 root, uint256 index);
 ```
 
-Validators that sign anything other than a finalized checkpoint risk compromising the safety of the protocol. If they are participating in [proof-of-stake.md](../sovereign-consensus/proof-of-stake.md "mention"), this may result in their stake being slashed.
+Validators that sign anything other than a finalized checkpoint risk compromising the safety of the protocol. If they are participating in [proof-of-stake.md](../proof-of-stake.md "mention"), this may result in their stake being slashed.
 
 Abacus Works is developing the validator as a Rust binary that can be easily run by anyone. Operationally, validators need to run this binary and a node for the chain that they are validating for. We hope that the majority of Hyperlane validators will come from each chain's existing node operator community.
 

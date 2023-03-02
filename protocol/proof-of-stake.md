@@ -8,11 +8,11 @@ description: Making fraud costly
 Staking and slashing are coming soon and are not yet implemented. This page is shown for informational purposes only. Details may change as the design matures.
 {% endhint %}
 
-Staking and slashing allow economic security to be added to ISMs that rely on validator signatures, including [multisig-ism.md](interchain-security-modules/multisig-ism.md "mention")and [optimistic-ism.md](interchain-security-modules/optimistic-ism.md "mention").
+Staking and slashing allow economic security to be added to ISMs that rely on validator signatures, including [multisig-ism.md](sovereign-consensus/multisig-ism.md "mention")and [optimistic-ism.md](sovereign-consensus/optimistic-ism.md "mention").
 
 Hyperlane validators can optionally participate in Hyperlane's staking protocol. Later, if these validators attempt to falsify or censor interchain messages, their stake, and any stake delegated to them, can be slashed.
 
-[interchain-security-modules](interchain-security-modules/ "mention") that depend on signatures from these validators benefit from the additional economic security provided by staking and slashing.
+[interchain-security-modules.md](sovereign-consensus/interchain-security-modules.md "mention") that depend on signatures from these validators benefit from the additional economic security provided by staking and slashing.
 
 ### Verifiable fraud proofs
 
@@ -20,7 +20,7 @@ Unlike many other interchain communication protocols, Hyperlane's slashing proto
 
 This means that the Hyperlane protocol is able to verify whether or not a validator signed a fraudulent checkpoint without any participation from trusted parties.
 
-This is possible because the stake put up by validators lives on the **same chain** as the state (i.e. the [messaging.md](../messaging.md "mention") merkle root) that they're attesting to. The slashing smart contract can compare the validator signature with the latest root of the [messaging.md](../messaging.md "mention"), and do some complicated merkle tree manipulation to confirm whether or not the checkpoint signed by the validator was fraudulent.
+This is possible because the stake put up by validators lives on the **same chain** as the state (i.e. the [messaging.md](messaging.md "mention") merkle root) that they're attesting to. The slashing smart contract can compare the validator signature with the latest root of the [messaging.md](messaging.md "mention"), and do some complicated merkle tree manipulation to confirm whether or not the checkpoint signed by the validator was fraudulent.
 
 In many other interchain communication protocols, it is common for a validator's stake to live on a **different chain** than the chain from which an interchain message originated.
 

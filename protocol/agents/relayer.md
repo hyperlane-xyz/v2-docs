@@ -10,7 +10,7 @@ Relayers are responsible for ensuring messages are delivered to their recipients
 Want to run a relayer? Follow the instructions at [relayers](../../operators/relayers/ "mention")
 {% endhint %}
 
-Relayers are configured to relay messages from an origin chain to one or more destination chains. A relayer observes the [messaging.md](../messaging.md "mention") on the origin chain, watching for new messages. When a new message is detected, the relayer queries the destination chain to determine the message recipient's [interchain-security-modules](../sovereign-consensus/interchain-security-modules/ "mention").
+Relayers are configured to relay messages from an origin chain to one or more destination chains. A relayer observes the [messaging.md](../messaging.md "mention") on the origin chain, watching for new messages. When a new message is detected, the relayer queries the destination chain to determine the message recipient's [interchain-security-modules.md](../sovereign-consensus/interchain-security-modules.md "mention").
 
 The relayer is then responsible for aggregating the metadata needed by that ISM. This will vary by ISM, and may include signatures from one or more [validators.md](validators.md "mention"), merkle proofs, zero knowledge proofs, and more!
 

@@ -4,7 +4,7 @@ description: Verify messages using validator signatures
 
 # Multisig ISM
 
-The `MultisigISM` is one of the most commonly used ISM types. These ISMs verify that `m` of `n` [validators.md](../../agents/validators.md "mention") have attested to the validity of a particular interchain message.
+The `MultisigISM` is one of the most commonly used ISM types. These ISMs verify that `m` of `n` [validators.md](../agents/validators.md "mention") have attested to the validity of a particular interchain message.
 
 ## Interface
 
@@ -36,7 +36,7 @@ interface IMultisigIsm is IInterchainSecurityModule {
 
 The hyperlane-monorepo contains a [`MultisigISM` implementation](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/isms/MultisigIsm.sol) that application developers can deploy off-the-shelf, specifying their desired configuration.
 
-Developers can configure, for each origin chain, a set of `n` [validators.md](../../agents/validators.md "mention"), and the number of validator signatures (`m`) needed to verify a message.
+Developers can configure, for each origin chain, a set of `n` [validators.md](../agents/validators.md "mention"), and the number of validator signatures (`m`) needed to verify a message.
 
 Validator signatures are **not** specific to an ISM. In other words, developers can configure their `MultisigISM` to use **any** validator that's running on Hyperlane and it will "just work".
 

@@ -2,23 +2,23 @@
 description: Modular interchain security
 ---
 
-# Security
+# Interchain security modules
 
 Hyperlane is secured by **Interchain Security Modules** (ISMs). ISMs are smart contracts that are responsible for verifying that interchain messages being delivered on the destination chain were _actually sent_ on the origin chain.
 
-The [messaging.md](../messaging.md "mention") contract has a default ISM that is used to secure interchain messages. Hyperlane developers can _**optionally**_ override this default by specifying an application-specific ISM, which they can configure, compose, and customize according to the needs of their application.
+Hyperlane developers can **optionally** **override** the [messaging.md](../messaging.md "mention")'s default ISM by specifying an application-specific ISM, which they can configure, compose, and customize according to the needs of their application.
 
 ### Configure
 
 Hyperlane defines a set of pre-built ISMs. Developers can deploy any of these contracts "off-the-shelf" and configure them with their own parameters.
 
-For example, application developers that want increased sovereignty over interchain security could deploy a [multisig-ism.md](interchain-security-modules/multisig-ism.md "mention") configured with validators sourced from their community.
+For example, application developers that want increased sovereignty over interchain security could deploy a [multisig-ism.md](multisig-ism.md "mention") configured with validators sourced from their community.
 
 ### Compose
 
 ISMs act as "security [legos](https://en.wikipedia.org/wiki/Lego)". Developers can mix and match different ISMs together to encode a security model that best fits their needs.
 
-For example, application developers that want additional security could deploy an [aggregation-ism.md](interchain-security-modules/aggregation-ism.md "mention") that requires verification by both a [quickstart-tutorial.md](../../build-with-hyperlane/quickstarts/quickstart-tutorial.md "mention") configured with validators from the Hyperlane community, **and** a [wormhole-ism.md](interchain-security-modules/wormhole-ism.md "mention") that verifies that a quorum of the [Wormhole](https://wormhole.com/) validator set verified the message.
+For example, application developers that want additional security could deploy an [aggregation-ism.md](aggregation-ism.md "mention") that requires verification by both a [quickstart-tutorial.md](../../build-with-hyperlane/quickstarts/quickstart-tutorial.md "mention") configured with validators from the Hyperlane community, **and** a [wormhole-ism.md](wormhole-ism.md "mention") that verifies that a quorum of the [Wormhole](https://wormhole.com/) validator set verified the message.
 
 ### Customize
 

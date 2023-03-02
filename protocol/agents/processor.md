@@ -8,7 +8,7 @@ description: Watchtowers observe the network for validator fraud
 `Watchtowers` are coming soon and is not yet implemented. This page is shown for informational purposes only. Details may change as the design matures.
 {% endhint %}
 
-[validators.md](validators.md "mention") are responsible for signing attestations of [messaging.md](../messaging.md "mention") state on the origin chain. These attestations can be consumed by [interchain-security-modules](../sovereign-consensus/interchain-security-modules/ "mention") to prove the validity of interchain messages on the destination chain.
+[validators.md](validators.md "mention") are responsible for signing attestations of [messaging.md](../messaging.md "mention") state on the origin chain. These attestations can be consumed by [interchain-security-modules.md](../sovereign-consensus/interchain-security-modules.md "mention") to prove the validity of interchain messages on the destination chain.
 
 But who watches them? Who makes sure they perform their role dutifully, without fault? The Watchtowers!
 
