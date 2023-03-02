@@ -12,9 +12,9 @@ A high level overview of some of the changes in V2.
 
 Hyperlane V2 will have one `Mailbox` contract per chain, as opposed to one `Outbox` and several `Inboxes`. This allows applications to specify a single address from which they send and receive messages. ConnectionManager contracts can still be used but are less useful as there are no longer many `Inbox` contracts to aggregate.
 
-### Sovereign consensus
+### Interchain security modules
 
-Hyperlane V2 adopts sovereign consensus, as outlined in the sovereign consensus [HIP](https://github.com/hyperlane-xyz/hips/pull/1). More work is needed in order for the relayer to automatically recognize anything other than the default `InterchainSecurityModule`. Until then, V2 will look similar to V1 from a security perspective.
+Hyperlane V2 adopts [sovereign-consensus](../../protocol/sovereign-consensus/ "mention"), as outlined in the sovereign consensus [HIP](https://github.com/hyperlane-xyz/hips/pull/1). More work is needed in order for the relayer to automatically recognize anything other than the default `InterchainSecurityModule`. Until then, V2 will look similar to V1 from a security perspective.
 
 ### Changing domain IDs
 
