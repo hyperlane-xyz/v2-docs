@@ -39,6 +39,8 @@ Next, add an empty entry for the local chain to `hyperlane-deploy/config/network
     // The Chain ID
     "id": 123456,
     // The address that will own ownable contracts post-deployment.
+    // Be sure to change this address for the chain you're deploying to.
+    // For all other existing deployments, keep the owner as-is.
     "owner": "0xfaD1C94469700833717Fa8a3017278BC1cA8031C",
     "contracts": {
       "proxyAdmin": "",
@@ -63,7 +65,7 @@ export RPC_URL=YOUR_CHAIN_RPC_URL
 </strong>export PRIVATE_KEY=YOUR_PRIVATE_KEY
 # The comma separated name(s) of the chains to receive messages from.
 # Used to configure the default MultisigIsm.
-export REMOTES=ethereum,polygon,avalanche,celo,arbitrum,optimism,bsc,moonbeam
+export REMOTES=alfajores,fuji,mumbai,bsctestnet,goerli,moonbasealpha,optimismgoerli,arbitrumgoerli
 
 forge script scripts/DeployCore.s.sol --broadcast --rpc-url $RPC_URL \
     --private-key $PRIVATE_KEY
