@@ -4,6 +4,8 @@ description: Configure your relayer
 
 # Environment variables
 
+Also take a look at the [Agent Configuration](../agent-configuration.md) page.
+
 Your relayer takes as configuration the following environment variables:
 
 | Environment variable                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |

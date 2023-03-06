@@ -6,6 +6,8 @@ description: Configure your validator
 
 Make sure that you have completed [AWS Setup](aws-setup.md)
 
+Also take a look at the [Agent Configuration](../agent-configuration.md) page.
+
 ### Environment variables
 
 Your validator takes as configuration the following environment variables:

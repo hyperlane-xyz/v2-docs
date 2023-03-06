@@ -99,6 +99,8 @@
   * [Environment variables](operators/relayers/environment-variables.md)
   * [Message filtering](operators/relayers/message-filtering.md)
   * [Start relaying](operators/relayers/start-validating.md)
+* [Agent configuration](operators/agent-configuration.md)
+* [Running with docker compose](operators/running-with-docker-compose.md)
 
 ## Resources
 
