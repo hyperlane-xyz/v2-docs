@@ -76,7 +76,7 @@ This `payForGas` call would typically be done by a smart contract that would fir
 5. For gas amount, enter `100000`.
 6.  Click `Query` and make note of the amount returned as `$GAS_PAYMENT_QUOTE`. For example, at the time of writing, the quote is `1` wei.
 
-    ![](<../../.gitbook/assets/Screen Shot 2023-01-30 at 11.30.56 AM (1).png>)
+    ![](<../../.gitbook/assets/Screen Shot 2023-01-30 at 11.30.56 AM.png>)
 
 #### Paying the Interchain Gas Payment
 

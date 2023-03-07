@@ -15,7 +15,8 @@ Previously, interchain gas payments were not enforced by the relayer that's oper
 * Interchain gas payments are starting to be enforced using on-chain fee quoting
 * The old IGP contracts have been deprecated, and there are new IGP contract addresses that apps must move to
 * Read the entire [Paying For Interchain Gas](../developers/paying-for-interchain-gas/) section for details on how to correctly pay interchain gas
-* A new SDK version `1.1.0` has been released with the relevant changes to gas payments
+* A new SDK version `1.1.0` has been released with the relevant changes to gas payments. Be sure to use this version or newer.
+* See "What's Next" to understand what the current phase of the rollout is.
 
 ### Overview of Changes
 
@@ -64,7 +65,7 @@ Generally, this would involve estimating an upper bound amount of gas that your 
 
 **When is Phase 3 going into effect?**
 
-We'll start using on chain token exchange rates and gas prices to quote gas payments on February 23, 2023. Expect an announcement on Discord.
+We'll start using on chain token exchange rates and gas prices to quote gas payments on March 7, 2023. Expect an announcement on Discord.
 
 **Is this relevant for V1 or V2?**
 
