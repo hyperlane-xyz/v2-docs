@@ -18,5 +18,4 @@ You can run the relayer binary by compiling the code directly, or using a docker
 
 The validator can be run directly via  `cargo run --bin relayer` in the `rust` folder of the [monorepo](https://github.com/hyperlane-xyz/hyperlane-monorepo).
 
-Alternatively, the docker image can be run via `docker run -it gcr.io/abacus-labs-dev/hyperlane-agent:a36e464-20230213-160309 ./relayer`.
-
+Alternatively, the docker image can be run via `docker run -it gcr.io/abacus-labs-dev/hyperlane-agent:319838e-20230307-232958 ./relayer`.
