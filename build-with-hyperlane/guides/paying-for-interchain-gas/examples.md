@@ -14,7 +14,7 @@ IInterchainGasPaymaster igp = IInterchainGasPaymaster(
 );
 
 function sendAndPayForMessage() external payable {
-    uint256 messageId = mailbox.dispatch(/* ... */);
+    bytes32 messageId = mailbox.dispatch(/* ... */);
     igp.payForGas{ value: msg.value }(
         messageId, // The ID of the message that was just dispatched
         destinationDomain, // The destination domain of the message
@@ -71,7 +71,7 @@ It's also possible for a contract to pay for its own messages, for example:
 
 ```solidity
 function contractPaysForItsOwnMessages() external {
-    uint256 messageId = mailbox.dispatch(/* ... */);
+    bytes32 messageId = mailbox.dispatch(/* ... */);
 
     // We're using the DefaultIsmInterchainGasPaymaster, so we specify
     // 50k gas to use in the recipient's handle function
