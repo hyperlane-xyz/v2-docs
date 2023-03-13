@@ -1,5 +1,5 @@
 ---
-description: Retrieve info about messages using REST
+description: Retrieve info about messages using REST Queries
 ---
 
 # REST API
@@ -23,9 +23,7 @@ const messageId = '62d30bde22af368e43f981f65186ff2c2b895a09774a9397f815dcc366793
 const url =`${baseUrl}?${action}&id=${messageId}`;
 const response = await fetch(url, {
   method: "GET",
-  headers: {
-    "Content-Type": "application/json",
-  },
+  headers: { "Content-Type": "application/json" },
 });
 const data = await response.json();
 ```
@@ -86,3 +84,45 @@ Action: `get-status` Parameter (1 required):
 Action: `search-messages`, Parameter (1 required):
 
 * `query`: address or hash to search (string)
+
+### APIs for Permissionless Interoperability chains&#x20;
+
+Hyperlane can be [permissionlessly deployed](../../../deploy/permissionless-interoperability.md) to any chain, but messages on PI chains cannot be identified by the default Hyperlane agents. To view details about messages from PI chains, query the `search-pi-messages` action. The search requires a chain config in the request body. Note, this same functionality is also available in the [Explorer web app](https://explorer.hyperlane.xyz/settings).
+
+```javascript
+const chainConfig = {
+  "chainId": 1234,
+  "name": "mychain",
+  "publicRpcUrls": [{ "http": "https://myRpcUrl.com" }],
+  "blockExplorers": [ {
+      "name": "MyChainScan",
+      "url": "https://myChainExplorer.com",
+      "apiUrl": "https://myChainExplorer.com/api",
+      "apiKey": "12345"
+  } ],
+  "contracts": {
+    "mailbox": "0x123..."
+  }
+}
+
+const baseUrl = 'https://explorer.hyperlane.xyz/api'
+const action = 'module=message&action=search-pi-messages'
+const query = '62d30bde22af368e43f981f65186ff2c2b895a09774a9397f815dcc366793875'
+const url =`${baseUrl}?${action}&query=${query}`;
+const response = await fetch(url, {
+  method: "POST",
+  body: JSON.stringify(chainConfig),
+  headers: { "Content-Type": "application/json" },
+});
+const data = await response.json();
+```
+
+#### Chain Config Schema
+
+The chain config schema is an extension of the Hyperlane SDK's [ChainMetadata schema](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/typescript/sdk/src/consts/chainMetadata.ts#L21) but with a `contracts` object added. Currently only the `mailbox` contract address is required but more functionality may be enabled in the future if more addresses are provided.&#x20;
+
+If a valid Etherscan-based block explorer config is provided, the Hyperlane Explorer will utilize it to find the desired messages. If not, it will use the RPC URL. Note, Explorers with api keys (even just free-tier keys), perform faster and more reliably.
+
+{% hint style="info" %}
+If the origin or destination `domainId` of chains in your messages doesn't match their `chainId` then you must include the `domainId` field in your chain config.
+{% endhint %}
