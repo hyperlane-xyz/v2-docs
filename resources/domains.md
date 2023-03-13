@@ -34,6 +34,7 @@ When [sending a message](../apis/messaging-api/send.md), users must provide the 
 | BSC Testnet     | `97`                         |
 | Fuji            | `43113`                      |
 | Goerli          | `5`                          |
+| Sepolia         | `11155111`                   |
 | Mumbai          | `80001`                      |
 | Moonbase Alpha  | `1287`                       |
 | Optimism Goerli | `420`                        |
