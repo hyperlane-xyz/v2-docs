@@ -87,7 +87,7 @@ Action: `search-messages`, Parameter (1 required):
 
 ### APIs for Permissionless Interoperability chains&#x20;
 
-Hyperlane can be [permissionlessly deployed](../../../deploy/permissionless-interoperability.md) to any chain, but messages on PI chains cannot be identified by the default Hyperlane agents. To view details about messages from PI chains, query the `search-pi-messages` action. The search requires a chain config in the request body. Note, this same functionality is also available in the [Explorer web app](https://explorer.hyperlane.xyz/settings).
+Hyperlane can be [permissionlessly deployed](../../deploy/permissionless-interoperability.md) to any chain, but messages on PI chains cannot be identified by the default Hyperlane agents. To view details about messages from PI chains, query the `search-pi-messages` action. The search requires a chain config in the request body. Note, this same functionality is also available in the [explorer UI](configuring-pi-chains.md).
 
 ```javascript
 const chainConfig = {
@@ -119,10 +119,4 @@ const data = await response.json();
 
 #### Chain Config Schema
 
-The chain config schema is an extension of the Hyperlane SDK's [ChainMetadata schema](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/typescript/sdk/src/consts/chainMetadata.ts#L21) but with a `contracts` object added. Currently only the `mailbox` contract address is required but more functionality may be enabled in the future if more addresses are provided.&#x20;
-
-If a valid Etherscan-based block explorer config is provided, the Hyperlane Explorer will utilize it to find the desired messages. If not, it will use the RPC URL. Note, Explorers with api keys (even just free-tier keys), perform faster and more reliably.
-
-{% hint style="info" %}
-If the origin or destination `domainId` of chains in your messages doesn't match their `chainId` then you must include the `domainId` field in your chain config.
-{% endhint %}
+The chain config schema is an extension of the Hyperlane SDK's [ChainMetadata schema](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/typescript/sdk/src/consts/chainMetadata.ts#L21) but with a `contracts` object added. See [Configuring PI Chains](configuring-pi-chains.md) for more details about this config object.

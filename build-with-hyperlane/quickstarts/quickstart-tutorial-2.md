@@ -127,4 +127,4 @@ You can see an example message delivery transaction [here](https://explorer.hype
 
 <figure><img src="../../.gitbook/assets/Test Message Sent -- Hyperlane Explorer.png" alt=""><figcaption><p>This transaction sent a "Hello World" message from Goerli to Alfajores</p></figcaption></figure>
 
-Read more under the [`Where is my message?` section](../troubleshooting/observability.md) to use tools like the[ Hyperlane Message Debugger.](https://explorer.hyperlane.xyz/debugger)
+Read more under the [`Where is my message?` section](../explorer/observability.md) to use tools like the[ Hyperlane Message Debugger.](https://explorer.hyperlane.xyz/debugger)

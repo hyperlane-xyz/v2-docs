@@ -32,5 +32,5 @@ Find information about pending and delivered messages in the [Hyperlane Explorer
 
 If you need help using Hyperlane, please reach out on [Discord](https://discord.com/invite/KBD3aD78Bb) or [Twitter](https://twitter.com/hyperlane\_xyz)!
 
-If you're running into issues once you've begun using Hyperlane, such as messages not getting processed or delivered properly, transaction failures, or other issues check out the [Troubleshooting](../build-with-hyperlane/troubleshooting/) pages.
+If you're running into issues once you've begun using Hyperlane, such as messages not getting processed or delivered properly, transaction failures, or other issues check out the [Troubleshooting](../build-with-hyperlane/troubleshooting.md) pages.
 

@@ -2,7 +2,7 @@
 description: How to use the Hyperlane Explorer to debug messages
 ---
 
-# Debugging with Explorer
+# Debugging Messages
 
 Visit the Explorer at [https://explorer.hyperlane.xyz](https://explorer.hyperlane.xyz/)
 
@@ -45,8 +45,6 @@ Users are **not currently required** to pay relaying fees but eventually this wi
 {% endhint %}
 
 An underfunded message implies the [gas paid](../guides/developers/paying-for-interchain-gas/) for message delivery is insufficient. The relayer registered on the gas paymaster can [`claim`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/igps/InterchainGasPaymaster.sol) these fees to compensate for gas costs incurred on the destination chain. The relayer client uses the [`eth_estimateGas`](https://ethereum.github.io/execution-apis/api-documentation/)RPC on the destination chain to determine the absolute cost of relaying a message, uses the [CoinGecko API](https://www.coingecko.com/en/api) to calculate the exchange rate between the two chains native assets, and will only pay for message processing if the message relay was funded appropriately on the source chain's paymaster (within some acceptable price deviation).
-
-## Message status in your application
 
 ### Using Etherscan
 

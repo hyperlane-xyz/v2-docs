@@ -4,12 +4,10 @@ description: Retrieve info about messages using GraphQL
 
 # GraphQL API
 
-The Hyperlane agents collect useful information about activity on the system, including all messages. That data can be queried via the APIs.
-
-The APIs are currently available free of charge and without any required authentication.
+The Hyperlane agents collect useful information about activity on the system, including all messages. That data can be queried via APIs. These APIs are currently available free of charge and without any required authentication. Connect your preferred GraphQL client or library to [https://api.hyperlane.xyz/v1/graphql](https://api.hyperlane.xyz/v1/graphql) to query data!
 
 {% hint style="info" %}
-Connect your preferred GraphQL client or library to [https://api.hyperlane.xyz/v1/graphql](https://api.hyperlane.xyz/v1/graphql) to query data!
+Note, the REST API is recommended over the GraphQL API because it exposes a simpler schema for message data.&#x20;
 {% endhint %}
 
 ### Example Query
