@@ -38,10 +38,11 @@ Next, add an empty entry for the local chain to `hyperlane-deploy/config/network
   "foochain": {
     // The Chain ID
     "id": 123456,
-    // The address that will own ownable contracts post-deployment.
+    // The address that will own all ownable contracts post-deployment.
     // Be sure to change this address for the chain you're deploying to.
     // For all other existing deployments, keep the owner as-is.
-    "owner": "0xfaD1C94469700833717Fa8a3017278BC1cA8031C",
+    // E.g. "0xfaD1C94469700833717Fa8a3017278BC1cA8031C"
+    "owner": "<change me>",
     "contracts": {
       "proxyAdmin": "",
       "mailbox": "",
@@ -51,6 +52,8 @@ Next, add an empty entry for the local chain to `hyperlane-deploy/config/network
     }
   },
 ```
+
+Leave all the entries for existing deployments untouched, e.g. those relating to `"mumbai"` or `"alfajores"`, etc.
 
 You can then run the following command to deploy the core contracts to your chain.
 
@@ -81,7 +84,7 @@ Deployed contract addresses will be written to `hyperlane-deploy/config/networks
 When using the agent config, the numerical fields `index.from` and `domain` must be converted to strings by surrounding them with quotes.
 {% endhint %}
 
-Follow the Validators guide to run validators for the mailbox on your chain. Include the agent config from [#1.-deploy-the-core-smart-contracts](./#1.-deploy-the-core-smart-contracts "mention") in `CONFIG_FILES`. If you use docker, you will need to mount the file into the container.
+Follow the [Validators guide](../../operators/validators/) to run validators for the mailbox on your chain. Include the agent config from [#1.-deploy-the-core-smart-contracts](./#1.-deploy-the-core-smart-contracts "mention") in `CONFIG_FILES`. If you're using Docker, you will need to mount the file into the container.
 
 Make sure to collect the validator addresses for use in the next step.
 

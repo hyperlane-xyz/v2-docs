@@ -4,15 +4,15 @@ description: Run your validator
 
 # Start validating
 
-Recommended machine size
+### Recommended machine size
 
-2 CPU + 2Gb RAM should be sufficient
+2 CPU + 2Gb RAM is sufficient. Validators are very lightweight.
 
 ### Monitoring and alerting
 
 Validators expose metrics on the port number specified in the environment variable `HYP_BASE_METRICS`. Port `9090` is recommended, though any valid port can be chosen.
 
-We also provide a mostly-ready-to-go grafana dashboard to get you started, you can find the source and instructions for importing it under [tools/grafana](https://github.com/hyperlane-xyz/hyperlane-monorepo/tree/main/tools/grafana). If you want to use your own, the `hyperlane_latest_checkpoint` is the most critical metric in both the `phase="validator_observed"` and `phase="validator_processed"` dimension. It should gradually increase and the two should never really be out of sync.
+We also provide a mostly-ready-to-go Grafana dashboard to get you started, you can find the source and instructions for importing it under [tools/grafana](https://github.com/hyperlane-xyz/hyperlane-monorepo/tree/main/tools/grafana). If you want to use your own, the `hyperlane_latest_checkpoint` is the most critical metric in both the `phase="validator_observed"` and `phase="validator_processed"` dimension. It should gradually increase and the two should never really be out of sync.
 
 ### Running multiple validators
 
@@ -20,76 +20,72 @@ We encourage folks to validate on as many chains as they are interested in suppo
 
 ### Running the binary
 
-You can run the validator binary by compiling the code directly, or using a docker image provided by Abacus Works.
+Refer to the [Installation](installation.md) instructions to access the validator binary.
 
-The validator can be run directly via  `cargo run --bin validator` in the `rust` folder of the [monorepo](https://github.com/hyperlane-xyz/hyperlane-monorepo).
+[Environment variables](environment-variables.md) can be placed in a `validator.env` file, for example:
 
-Alternatively, the docker image can be run via `docker run -it gcr.io/abacus-labs-dev/hyperlane-agent:a36e464-20230213-160309 ./validator`.
+{% code title="validator.env" overflow="wrap" %}
+```sh
+# These are example values to roughly illustrate
+# what a .env file should look like
 
-{% hint style="warning" %}
-Note due to the rebranding away from Abacus to Hyperlane, all environment variables that were previously prefixed with `ABC_` have been changed to use the prefix `HYP_`. If you previously operated a validator with the old environment variable prefix, be sure to change environment variable names before upgrading to the latest image / commit.
-{% endhint %}
-
-If everything is configured correctly, you should see json files being written to your S3 bucket.
-
-### Announce your validator
-
-[Relayers](../../protocol/agents/relayer.md) need to know where to find your validator's signatures. You can make relayers aware of your validator by writing to the `ValidatorAnnounce` contract on the chain that you're validating.
-
-First, find the signed announcement JSON object written by your validator by navigating to your S3 bucket in the AWS console, selecting the `announcement.json` object, and clicking on the "Object URL".
-
-You should see a JSON object that looks like this:
-
-```json
-{
-  "value": {
-    "validator": "0xe6072396568e73ce6803b12b7e04164e839f1e54",
-    "mailbox_address": "0x000000000000000000000000cc737a94fecaec165abcf12ded095bb13f037685",
-    "mailbox_domain": 44787,
-    "storage_location": "s3://hyperlane-testnet3-alfajores-validator-0/us-east-1"
-  },
-  "signature": {
-    "r": "0xe8bdb71521ca4737a30eb4f8c12094768b1c0cc5f9405e879d91066bff5cf02c",
-    "s": "0x1f41b8b6edfc7a1c5ffd0d3a216b2b56c5796b5a00cb686f896dac325d8cfa61",
-    "v": 28
-  }
-}
+HYP_VALIDATOR_ORIGINCHAINNAME=ethereum
+HYP_VALIDATOR_REORGPERIOD=20
+# ...
+# ...
 ```
+{% endcode %}
 
-
+To run the validator binary with the environment variables specified in `validator.env`:
 
 {% tabs %}
-{% tab title="Etherscan" %}
-Then, navigate to the `ValidatorAnnounce` page on etherscan for your chain. You can find a link in [addresses.md](../../resources/addresses.md "mention").
+{% tab title="Using Docker" %}
+Find the latest [Docker image](installation.md#docker-image) and set it to the environment variable `$DOCKER_IMAGE`.
 
-Click on the "Contract" tab, and the "Write Contract" button, and click the dropdown on "announce".
+Using the `--env-file` flag, we can pass in the environment variables to the validator:
 
-Fill in the `_validator`, `_storageLocation`, and `_signature` arguments.
+{% code overflow="wrap" %}
+```sh
+docker run -it --env-file validator.env $DOCKER_IMAGE ./validator
+```
+{% endcode %}
 
-* Set `_validator` to `value.validator` from your JSON announcement
-* Set `_storageLocation` to `value.storage_location` from your JSON announcement
-* Set `_signature` to the concatenation of `signature.r`, `signature.s`, and the hexidecimal representation of `signature.v` (`0x1C` for 28 and `0x1B` for 27). Make sure that you remove the `0x` prefixes.
+{% hint style="info" %}
+If you're supporting your own chain that you [permissionlessly deployed](broken-reference) and are specifying a path to your own config file in the `CONFIG_FILES` environment variable, check out the [config files with Docker section](../agent-configuration.md#config-files-with-docker).
+{% endhint %}
 
-<figure><img src="../../.gitbook/assets/Screen Shot 2023-01-30 at 4.30.00 PM.png" alt=""><figcaption><p>Example input</p></figcaption></figure>
+{% hint style="info" %}
+If you're running a [locally set up validator](setup/local-setup.md) on the same machine, which requires a locally ran relayer to be able to access these validator signatures, be sure to [mount](https://docs.docker.com/storage/bind-mounts/) your local validator's signature directory on your host machine into your Docker container.
+
+For example, if your local validator is writing signatures to `/tmp/hyperlane-validator-signatures-ethereum`, you should mount that directory to the same path in the Docker container:
+
+{% code overflow="wrap" %}
+```sh
+docker run -it --env-file validator.env --mount type=bind,source=/tmp/hyperlane-validator-signatures-ethereum,target=/tmp/hyperlane-validator-signatures-ethereum $DOCKER_IMAGE ./validator
+```
+{% endcode %}
+{% endhint %}
 {% endtab %}
 
-{% tab title="Cast" %}
-Announce your validator by running the following command, filling in the following variables:
+{% tab title="Building from source" %}
+See these instructions for [building from source](installation.md#building-from-source).
 
-* Set `$VALIDATOR_ANNOUNCE_ADDRESS` to the address of the `ValidatorAnnounce` contract: [addresses.md](../../resources/addresses.md "mention")
-* Set `$VALIDATOR` to `value.validator` from your JSON announcement
-* Set `$STORAGE_LOCATION` to `value.storage_location` from your JSON announcement
-* Set `$SIGNATURE` to the concatenation of `signature.r`, `signature.s`, and the hexidecimal representation of `signature.v` (`0x1C` for 28 and `0x1B` for 27). Make sure that you remove the `0x` prefixes.
-* Set `$RPC_URL` to an RPC URL that can be used to submit transactions
-* Set `$PRIVATE_KEY` to a hexadecimal private key that can be used to submit transactions
+Using `env` and `xargs`, we can run the built binary from within the `hyperlane-monorepo/rust` directory with the environment variables found in `validator.env`:
 
-<pre class="language-bash"><code class="lang-bash"><strong>cast send $VALIDATOR_ANNOUNCE_ADDRESS \
-</strong>  "announce(address, string calldata, bytes calldata)(bool)" \
-  $VALIDATOR $STORAGE_LOCATION $SIGNATURE \
-  --rpc-url $RPC_URL --private-key $PRIVATE_KEY
-</code></pre>
+{% code overflow="wrap" %}
+```sh
+env $(cat validator.env | grep -v "#" | xargs) ./target/release/validator
+```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
-Once you see that your transaction has succeeded, relayers will automatically be made aware of your validator!&#x20;
+If everything is configured correctly, you should see json files being written to your S3 bucket (if you followed the [AWS setup](setup/aws-setup.md)) or to your local signatures directory (if you followed the [Local setup](setup/local-setup.md)).
 
+### Next
+
+You're not done yet! The final step is to [announce your validator](start-validating.md#announce-your-validator), which involves posting some information about your validator on chain.
+
+{% content-ref url="announcing-your-validator.md" %}
+[announcing-your-validator.md](announcing-your-validator.md)
+{% endcontent-ref %}

@@ -23,9 +23,9 @@ For example:
 * `{ "chains": { "ethereum": { "name": "ethereum" } } }` (abbreviated as `chains.ethereum.name` or `chains.<chain_name>.name`) can be set with `HYP_BASE_CHAINS_ETHEREUM_NAME="ethereum"` or `HYP_VALIDATOR_CHAINS_ETHEREUM_NAME="ethereum"` or `HYP_RELAYER_CHAINS_ETHEREUM_NAME="ethereum"` ...
 * `{ "chains": { "avalanche": { "connection": { "url": "https://some-url.com" } } } }` (abbreviated as `chains.avalanche.connection.url` or `chains.<chain_name>.connection.url`) can be set with `HYP_BASE_CHAINS_AVALANCHE_CONNECTION_URL="https://some-url.com"` or `HYP_BASE_VALIDATOR_AVALANCHE_CONNECTION_URL="https://some-url.com"` and so on ...
 
-### Config files with docker
+### Config files with Docker
 
-Running with the agent in docker adds an extra layer of complexity because the config files need to be accessible from within the docker container. The base configs that can be found in [the repo](https://github.com/hyperlane-xyz/hyperlane-monorepo/tree/main/rust/config) are already part of the provided docker image and will all be loaded by default.
+Running with the agent in Docker adds an extra layer of complexity because the config files need to be accessible from within the Docker container. The base configs that can be found in [the repo](https://github.com/hyperlane-xyz/hyperlane-monorepo/tree/main/rust/config) are already part of the provided Docker image and will all be loaded by default.
 
 Mounting a single config file can be done with the flag `--mount type=bind,source=$LOCAL_CONFIG_PATH,target=/config/$CONFIG_NAME,readonly` and then adding the config file to `CONFIG_FILES` so it is loaded.
 

@@ -4,6 +4,12 @@ description: Configure your signing key and S3 bucket
 
 # AWS setup
 
+{% hint style="info" %}
+These instructions are for a production environment where validator keys exist in AWS's Key Management Service and validator signatures are posted publicly in an S3 bucket.
+
+If you're only intending to run a validator for testing or development purposes, consider the [Local setup](local-setup.md) instead.
+{% endhint %}
+
 ### Create an IAM user
 
 This IAM user will be given permission to sign with the KMS key that you will later configure. Your Hyperlane validator will use this identity when signing.
@@ -106,3 +112,11 @@ Your validator IAM user will need write permissions, and it should be publicly r
     ]
 }
 ```
+
+### Next
+
+Continue to the [Environment variables](../environment-variables.md) section.
+
+{% content-ref url="../environment-variables.md" %}
+[environment-variables.md](../environment-variables.md)
+{% endcontent-ref %}
