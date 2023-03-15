@@ -63,9 +63,9 @@ See [Which IGP To Use & Understanding Gas Amounts](../developers/paying-for-inte
 
 Generally, this would involve estimating an upper bound amount of gas that your messages use on the destination.
 
-**When is Phase 3 going into effect?**
+**When is Phase 4 going into effect?**
 
-We'll start using on chain token exchange rates and gas prices to quote gas payments on March 7, 2023. Expect an announcement on Discord.
+Gas amounts will be enforced on testnet on March 15, 2023. Enforcement on mainnet will be a fast follow. Expect an announcement on Discord.
 
 **Is this relevant for V1 or V2?**
 
@@ -73,7 +73,7 @@ This is only relevant for V2.
 
 **What can I expect from future changes to IGPs?**
 
-Future changes, like accurately quoted interchain gas payments using token exchange rates and destination chain gas prices, won't involve new IGP contract addresses to switch over to. The new provided IGP contracts are upgradeable, so as long as you migrate now to the new IGP contracts, start [paying for interchain gas](paying-the-correct-amount.md) based off what the IGP contract quotes, and are specifying correct gas amounts for your messages, no future action is required.
+Future changes won't involve new IGP contract addresses to switch over to. The new provided IGP contracts are upgradeable, so as long as you migrate now to the new IGP contracts, start [paying for interchain gas](paying-the-correct-amount.md) based off what the IGP contract quotes, and are specifying correct gas amounts for your messages, no future action is required.
 
 **How do I pay for gas with middlewares, like Interchain Accounts, Interchain Queries, and the Liquidity Layer?**
 
