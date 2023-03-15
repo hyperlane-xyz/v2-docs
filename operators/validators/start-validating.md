@@ -84,7 +84,7 @@ If everything is configured correctly, you should see json files being written t
 
 ### Next
 
-You're not done yet! The final step is to [announce your validator](start-validating.md#announce-your-validator), which involves posting some information about your validator on chain.
+You're not done yet! The final step is to [announce your validator](announcing-your-validator.md), which involves posting some information about your validator on chain.
 
 {% content-ref url="announcing-your-validator.md" %}
 [announcing-your-validator.md](announcing-your-validator.md)

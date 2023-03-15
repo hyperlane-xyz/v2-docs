@@ -13,7 +13,7 @@ Hyperlane uses proprietary domain IDs to reference each Hyperlane-supported chai
 When [sending a message](../apis/messaging-api/send.md), users must provide the domain ID of the destination chain. When [receiving a message](../apis/messaging-api/receive.md), the recipient will be passed the domain ID of the origin chain.
 
 {% hint style="info" %}
-This list includes only the deployments on chains that are managed by Abacus Works. With [Broken link](broken-reference "mention"), anybody can deploy Hyperlane on any chain and thus this list is definitionally not exhaustive.
+This list includes only the deployments on chains that are managed by Abacus Works. With [permissionless interoperability](broken-reference), anybody can deploy Hyperlane on any chain and thus this list is definitionally not exhaustive.
 {% endhint %}
 
 ### Mainnet
