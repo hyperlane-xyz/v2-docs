@@ -4,6 +4,8 @@
 
 This is an example showing how to have the caller of a function pay for a message's interchain gas. The `DefaultIsmInterchainGasPaymaster` is used.
 
+Note if the caller of the function is paying for the message's interchain gas, the function must be payable!
+
 ```solidity
 // The Mailbox (same address on all EVM chains)
 IMailbox mailbox = IMailbox(0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70);
@@ -24,8 +26,6 @@ function sendAndPayForMessage() external payable {
 }
 ```
 
-<!-- INCLUDE diagrams/interchain-gas.md -->
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
 ```mermaid
 %%{ init: {
   "theme": "neutral",
@@ -61,9 +61,6 @@ flowchart TB
 
     click IGP https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/igps/InterchainGasPaymaster.sol
 ```
-
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
-<!-- END -->
 
 ### Paying interchain gas from a contract's own balance
 
