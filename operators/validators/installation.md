@@ -12,7 +12,7 @@ The latest Docker image can be found at:
 
 {% code overflow="wrap" %}
 ```
-gcr.io/abacus-labs-dev/hyperlane-agent:a36e464-20230213-160309
+gcr.io/abacus-labs-dev/hyperlane-agent:1cbe5fd-20230309-202035
 ```
 {% endcode %}
 
@@ -20,7 +20,7 @@ To pull the image, run:
 
 {% code overflow="wrap" %}
 ```
-docker pull gcr.io/abacus-labs-dev/hyperlane-agent:a36e464-20230213-160309
+docker pull gcr.io/abacus-labs-dev/hyperlane-agent:1cbe5fd-20230309-202035
 ```
 {% endcode %}
 
@@ -28,7 +28,7 @@ The validator binary is found at `./validator`:
 
 {% code overflow="wrap" %}
 ```
-docker run -it gcr.io/abacus-labs-dev/hyperlane-agent:a36e464-20230213-160309 ./validator
+docker run -it gcr.io/abacus-labs-dev/hyperlane-agent:1cbe5fd-20230309-202035 ./validator
 ```
 {% endcode %}
 

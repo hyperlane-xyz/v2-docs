@@ -35,16 +35,17 @@ Your signed `announcement.json` should look something like this. Local validator
 ```json
 {
   "value": {
-    "validator": "0xe6072396568e73ce6803b12b7e04164e839f1e54",
+    "validator": "0xf43fbd072fd38e1121d4b3b0b8a35116bbb01ea9",
     "mailbox_address": "0x000000000000000000000000cc737a94fecaec165abcf12ded095bb13f037685",
-    "mailbox_domain": 44787,
-    "storage_location": "s3://hyperlane-testnet3-alfajores-validator-0/us-east-1"
+    "mailbox_domain": 5,
+    "storage_location": "s3://hyperlane-testnet3-goerli-validator-0/us-east-1"
   },
   "signature": {
-    "r": "0xe8bdb71521ca4737a30eb4f8c12094768b1c0cc5f9405e879d91066bff5cf02c",
-    "s": "0x1f41b8b6edfc7a1c5ffd0d3a216b2b56c5796b5a00cb686f896dac325d8cfa61",
-    "v": 28
-  }
+    "r": "0x2c23ffdc7173019fe2255fddbfa027dc99d5812b7c6595303792efe145c7f2cb",
+    "s": "0x229da4a683f4785a766cd8fce668741b78acaa7eed95eea9d09b14883de51b83",
+    "v": 27
+  },
+  "serialized_signature": "0x2c23ffdc7173019fe2255fddbfa027dc99d5812b7c6595303792efe145c7f2cb229da4a683f4785a766cd8fce668741b78acaa7eed95eea9d09b14883de51b831b"
 }
 ```
 
@@ -59,7 +60,8 @@ Now you can submit your signed announcement to the `ValidatorAnnounce` smart con
 3. Fill in the `_validator`, `_storageLocation`, and `_signature` arguments.
    1. Set `_validator` to `value.validator` from your JSON announcement
    2. Set `_storageLocation` to `value.storage_location` from your JSON announcement
-   3. Set `_signature` to the concatenation of `signature.r`, `signature.s`, and the hexidecimal representation of `signature.v` (`0x1C` for 28 and `0x1B` for 27). Make sure that you remove the `0x` prefixes.
+   3. Set `_signature` to the `serialized_signature` from your JSON announcement.
+      1. Older validator versions don't have the `serialized_signature` field. If this is the case for your validator, consider upgrading your validator to the latest version, or you may instead specify the concatenation of `signature.r`, `signature.s`, and the hexadecimal representation of `signature.v` (`0x1C` for 28 and `0x1B` for 27). Make sure that you remove the `0x` prefixes.
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2023-01-30 at 4.30.00 PM.png" alt=""><figcaption><p>Example input</p></figcaption></figure>
 
@@ -71,7 +73,8 @@ Now you can submit your signed announcement to the `ValidatorAnnounce` smart con
    1. Set `$VALIDATOR_ANNOUNCE_ADDRESS` to the address of the `ValidatorAnnounce` contract: [addresses.md](../../resources/addresses.md "mention")
    2. Set `$VALIDATOR` to `value.validator` from your JSON announcement
    3. Set `$STORAGE_LOCATION` to `value.storage_location` from your JSON announcement
-   4. Set `$SIGNATURE` to the concatenation of `signature.r`, `signature.s`, and the hexidecimal representation of `signature.v` (`0x1C` for 28 and `0x1B` for 27). Make sure that you remove the `0x` prefixes.
+   4. Set `$SIGNATURE` to the `serialized_signature` from your JSON announcement.
+      1. Older validator versions don't have the `serialized_signature` field. If this is the case for your validator, consider upgrading your validator to the latest version, or you may instead specify the concatenation of `signature.r`, `signature.s`, and the hexadecimal representation of `signature.v` (`0x1C` for 28 and `0x1B` for 27). Make sure that you remove the `0x` prefixes.
    5. Set `$RPC_URL` to an RPC URL that can be used to submit transactions
    6. Set `$PRIVATE_KEY` to a hexadecimal private key that can be used to submit transactions
 
