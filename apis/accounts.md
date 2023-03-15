@@ -10,8 +10,6 @@ Unlike the [messaging-api](messaging-api/ "mention"), which requires recipients 
 
 The Accounts API assigns every `(uint32 origin, address sender)` pair a unique interchain account address. The sender controls that address on all remote chains, and can direct it to make arbitrary function calls via the `InterchainAccountRouter.dispatch()` endpoint.
 
-<!-- INCLUDE diagrams/accounts-simple.md -->
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
 ```mermaid
 %%{ init: {
   "theme": "neutral",
@@ -45,13 +43,9 @@ flowchart TB
     style SenderAccount fill:#efab17
     style Recipient fill:#efab17
 ```
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
-<!-- END -->
 
 ### Interface
 
-<!-- INCLUDE node_modules/@hyperlane-xyz/core/interfaces/IInterchainAccountRouter.sol -->
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
 ```solidity
 // SPDX-License-Identifier: MIT OR Apache-2.0
 pragma solidity >=0.6.11;
@@ -75,10 +69,8 @@ interface IInterchainAccountRouter {
 }
 
 ```
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
-<!-- END -->
 
-`InterchainAccountRouters`  can be found at `0xc011170d9795a7a2d065E384EAd1CA3394A7d35E` and domain IDs can be found [here](../resources/domains.md).
+`InterchainAccountRouters` can be found at `0xc011170d9795a7a2d065E384EAd1CA3394A7d35E` and domain IDs can be found [here](../resources/domains.md).
 
 ## Example Usage
 
@@ -149,7 +141,7 @@ For the very first message sent by a sender on the origin chain to a new destina
 
 | Interchain Account Already Exists?                                                                                                                 | Overhead Gas Amount |
 | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| No - this is the very first message from a `(uint32 origin, address sender)` pair to the destination, and a new Interchain Account will be created | 425,000             |
+| No - this is the very first message from a `(uint32 origin, address sender)` pair to the destination, and a new Interchain Account will be created | 150,000             |
 | Yes                                                                                                                                                | 30,000              |
 
 #### Gas Payment Example
@@ -189,8 +181,6 @@ function makeCall(uint256 gasAmount) external payable {
 
 ### How it works
 
-<!-- INCLUDE diagrams/accounts-implementation.md -->
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
 ```mermaid
 %%{ init: {
   "theme": "neutral",
@@ -230,5 +220,3 @@ flowchart TB
     style SenderAccount fill:#efab17
     style Recipient fill:#efab17
 ```
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
-<!-- END -->
