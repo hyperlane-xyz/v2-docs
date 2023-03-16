@@ -74,6 +74,10 @@ forge script scripts/DeployCore.s.sol --broadcast --rpc-url $RPC_URL \
     --private-key $PRIVATE_KEY
 </code></pre>
 
+{% hint style="warning" %}
+If you have issues with the transaction submission, try the `--slow` argument
+{% endhint %}
+
 This script will write a partial Hyperlane agent config to `hyperlane-deploy/config/$LOCAL_agent_config.json`, which will be used in the following step.
 
 Deployed contract addresses will be written to `hyperlane-deploy/config/networks.json`
