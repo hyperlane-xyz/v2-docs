@@ -60,7 +60,7 @@ Note this example does not pay for interchain gas, and therefore would not be de
 
 ```solidity
 uint32 constant avalancheDomain = 43114;
-address constant avalancheRecipient = 0xBC3cFeca7Df5A45d61BC60E7898E63670e1654aE;
+address constant avalancheRecipient = 0x36FdA966CfffF8a9Cdc814f546db0e6378bFef35;
 address constant ethereumMailbox = 0x2f9db5616fa3fad1ab06cb2c906830ba63d135e3;
 IMailbox(ethereumMailbox).dispatch(
     avalancheDomain,

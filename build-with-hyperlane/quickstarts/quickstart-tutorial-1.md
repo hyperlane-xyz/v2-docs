@@ -17,7 +17,7 @@ This tutorial demonstrates how to:
 
 * `$TOKEN_BRIDGE_ROUTER`: The address of the TokenBridgeRouter  `0x2abe0860D81FB4242C748132bD69D125D88eaE26`
 * `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../../resources/domains.md). Goerli's domain ID is `5`, Fuji is `43113`
-* `$RECIPIENT`: The address of the `TestTokenRecipient` contract on the destination chain padded to bytes32, `0x00000000000000000000000036597C9C49F3c5887A86466398480ddB66aD0759` on every chain.
+* `$RECIPIENT`: The address of the `TestTokenRecipient` contract on the destination chain padded to bytes32, `0x00000000000000000000000085ac1164878e017b67660a74ff1f41f3D05C02Bb` on every chain.
 * `$TOKEN_ADDRESS`: The address of the Token you want to transfer. On Goerli, USDC is at `0x07865c6e87b9f70255377e024ace6630c1eaa37f`. On Fuji, USDC is at `0x5425890298aed601595a70ab815c96711a31bc65`.
 
 ### Acquire Token

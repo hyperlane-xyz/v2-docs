@@ -10,7 +10,7 @@ You can also check out the [`hyperlane-quickstart`](https://github.com/hyperlane
 ### Inputs
 
 * `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../../resources/domains.md).
-* `$RECIPIENT`: The address of the `TestRecipient` contract on the destination chain, `0xBC3cFeca7Df5A45d61BC60E7898E63670e1654aE`
+* `$RECIPIENT`: The address of the `TestRecipient` contract on the destination chain, `0x36FdA966CfffF8a9Cdc814f546db0e6378bFef35`
 
 ### Make a call
 

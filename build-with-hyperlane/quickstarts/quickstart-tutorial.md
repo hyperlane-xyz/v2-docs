@@ -13,7 +13,7 @@ This tutorial demonstrates how to:
 
 * `$MAILBOX_ADDRESS`: The [messaging.md](../../protocol/messaging.md "mention") contract address on the origin chain, see [addresses.md](../../resources/addresses.md "mention").
 * `$DESTINATION_DOMAIN`: The domain ID of the destination chain, see [domains.md](../../resources/domains.md "mention")
-* `$RECIPIENT`: The address of the `TestRecipient` contract on the destination chain, left padded to a `bytes32`. In our case: `0x000000000000000000000000BC3cFeca7Df5A45d61BC60E7898E63670e1654aE`
+* `$RECIPIENT`: The address of the `TestRecipient` contract on the destination chain, left padded to a `bytes32`. In our case: `0x00000000000000000000000036FdA966CfffF8a9Cdc814f546db0e6378bFef35`
 
 ### Send a message
 
@@ -26,7 +26,7 @@ Sending a message is a simple matter of calling `Mailbox.dispatch()`. This funct
 3. Click on the `Connect to Web3` button to connect your Wallet (i.e. Metamask). Make sure that you are on the correct network.
 4. Expand the `dispatch` box.
 5. For destination domain, enter `$DESTINATION_DOMAIN`. You can find some [here](../../resources/domains.md), or you could use `137` to send to Mainnet Polygon.
-6. For the recipient address, enter `$RECIPIENT`. Remember to make sure to zero-pad this to a `bytes32` if you are using your own address. Alternatively, you can use `0x000000000000000000000000BC3cFeca7Df5A45d61BC60E7898E63670e1654aE` (our test recipient address).
+6. For the recipient address, enter `$RECIPIENT`. Remember to make sure to zero-pad this to a `bytes32` if you are using your own address. Alternatively, you can use `0x00000000000000000000000036FdA966CfffF8a9Cdc814f546db0e6378bFef35` (our test recipient address).
 7. For the message body, enter whatever you like! A [string-to-hex converter website](https://dencode.com/en/string/hex) can help you write your message if you want to send a human-readable message. In the example below, we sent the "Hello World" string as `0x48656c6c6f20576f726c64`
 8. Submit the transaction via your wallet/Metamask
 
