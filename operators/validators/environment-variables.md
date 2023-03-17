@@ -60,7 +60,7 @@ These are required environment variables that are specific to the [Local setup](
 | Chain     | Suggested reorg period (blocks) | Suggested polling interval (seconds) |
 | --------- | ------------------------------- | ------------------------------------ |
 | Arbitrum  | 0                               | 1                                    |
-| Avalanche | 1                               | 2                                    |
+| Avalanche | 3                               | 2                                    |
 | BSC       | 15                              | 3                                    |
 | Celo      | 0                               | 5                                    |
 | Ethereum  | 20                              | 15                                   |
