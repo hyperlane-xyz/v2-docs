@@ -12,6 +12,14 @@ For a simple approach to debugging messages, try the Hyperlane Explorer. It can 
 
 Still need more help? Find our team on the [Hyperlane Discord](http://discord.gg/hyperlane) and ask away!
 
+#### Etherscan says an Error ocurrred
+
+More often than not, it is not actually an error. What happens is that the [messaging.md](../protocol/messaging.md "mention") will attempt to make a call to the recipient to query its [sovereign-consensus](../protocol/sovereign-consensus/ "mention"). If a recipient does not specify an ISM by implementing the interface, the Mailbox will default to the default ISM that is configured on it. However, to Etherscan, the transaction trace includes a revert which it calls out, however in this case, it is a false-positive. So if you see a process transaction like [this one](https://goerli-optimism.etherscan.io/tx/0x753843852e95048c21ce7b4e68149e8496beb86174197f8d727467dae1183dae), know that your message has actually been processed.
+
+<figure><img src="../.gitbook/assets/Screen Shot 2023-03-18 at 11.59.44 AM.png" alt=""><figcaption><p>This is actually fine!</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/Screen Shot 2023-03-18 at 11.58.57 AM.png" alt=""><figcaption><p>This is also fine!</p></figcaption></figure>
+
 ### Off-chain Agents&#x20;
 
 #### Missing name field error
