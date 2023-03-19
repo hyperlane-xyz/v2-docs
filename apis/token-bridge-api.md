@@ -10,8 +10,6 @@ The LiquidityLayer API is in beta and deployed only on testnet. The API is subje
 
 Hyperlane's Liquidity layer will wrap around several token bridges to allow developers to send tokens alongside their message.
 
-<!-- INCLUDE diagrams/liquidity-layer-simple.md -->
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
 ```mermaid
 %%{ init: {
   "theme": "neutral",
@@ -47,9 +45,6 @@ flowchart TB
   style AdapterD fill:green
 ```
 
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
-<!-- END -->
-
 #### Supported Bridges
 
 * Circle
@@ -61,12 +56,10 @@ flowchart TB
 
 ### Send
 
-Developers can send interchain messages very similarly to the [messaging-api](messaging-api/ "mention") by calling the `LiquidityLayerRouter.dispatchWithTokens` endpoint. At the moment, dispatched messages must be received by a contract with the `handleWithTokens()` function. You will learn more about this in the [Receive](messaging-api/receive.md) section up next, but for now let's cover the message sending interface.
+Developers can send interchain messages very similarly to the [messaging-api](messaging-api/ "mention") by calling the `LiquidityLayerRouter.dispatchWithTokens` endpoint. At the moment, dispatched messages must be received by a contract with the `handleWithTokens()` function. You will learn more about this in the [Receive](messaging-api/receive.md) section up next, but for now let's cover the message sending interface. Remember that you need to ERC-20-approve the tokens to the `LiquidityLayerRouter`, otherwise it is not authorized to move them.
 
 #### Interface
 
-<!-- INCLUDE node_modules/@hyperlane-xyz/core/interfaces/ILiquidityLayerRouter.sol -->
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
 ```solidity
 // SPDX-License-Identifier: MIT OR Apache-2.0
 pragma solidity >=0.6.11;
@@ -83,8 +76,6 @@ interface ILiquidityLayerRouter {
 }
 
 ```
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
-<!-- END -->
 
 The address of the `LiquidityLayerRouter` is `0x2abe0860D81FB4242C748132bD69D125D88eaE26` on every chain.
 
@@ -92,7 +83,7 @@ The address of the `LiquidityLayerRouter` is `0x2abe0860D81FB4242C748132bD69D125
 
 `_recipientAddress` is the receiving contract, it needs to be a contract with the `handleWithTokens()` function, you can read about it in the [Receive](token-bridge-api.md#receive) section.
 
-`_messageBody` is the message you're passing.&#x20;
+`_messageBody` is the message you're passing.
 
 `_token` is the address of the token on the origin chain you are trying to transfer
 
@@ -106,8 +97,6 @@ Like sending, receiving is very similar to the [messaging-api](messaging-api/ "m
 
 #### Interface
 
-<!-- INCLUDE node_modules/@hyperlane-xyz/core/interfaces/ILiquidityLayerMessageRecipient.sol -->
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
 ```solidity
 // SPDX-License-Identifier: Apache-2.0
 pragma solidity ^0.8.13;
@@ -123,8 +112,6 @@ interface ILiquidityLayerMessageRecipient {
 }
 
 ```
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
-<!-- END -->
 
 `_origin` the Domain ID of the source chain, IDs found [here](../resources/domains.md#mainnet).
 
@@ -135,8 +122,6 @@ interface ILiquidityLayerMessageRecipient {
 `_address` is the address of the token that was transferred to the recipient
 
 `_amount` is the amount of the token that was transferred
-
-
 
 The same points about access control and encoding from the [messaging-api](messaging-api/ "mention") apply to the LiquidityLayer API as well, so be sure to check it out. However, rather than requiring access control such that the Mailbox can only call the `handle` function, the LiquidityLayerRouter on the local chain must be the only address that can call the `handleWithTokens` function.
 
