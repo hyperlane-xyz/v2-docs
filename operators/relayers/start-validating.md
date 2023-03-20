@@ -25,6 +25,7 @@ Refer to the [Installation](installation.md) instructions to access the relayer 
 
 HYP_RELAYER_ORIGINCHAINNAME=ethereum
 HYP_RELAYER_DESTINATIONCHAINNAMES=polygon,avalanche
+HYP_RELAYER_GASENFORCEMENTPOLICY='[["type":"none"}]'
 # ...
 # ...
 ```
@@ -64,11 +65,11 @@ docker run -it --env-file relayer.env --mount type=bind,source=/tmp/hyperlane-va
 {% tab title="Building from source" %}
 See these instructions for [building from source](installation.md#building-from-source).
 
-Using `env` and `xargs`, we can run the built binary from within the `hyperlane-monorepo/rust` directory with the environment variables found in `relayer.env`:
+We can run the built binary from within the `hyperlane-monorepo/rust` directory with the environment variables found in `relayer.env`:
 
 {% code overflow="wrap" %}
 ```sh
-env $(cat relayer.env | grep -v "#" | xargs) ./target/release/relayer
+set -o allexport && source ~/fooo && set +o allexport && ./target/release/relayer
 ```
 {% endcode %}
 {% endtab %}
