@@ -192,8 +192,8 @@ If your message is not showing up in the explorer, you can check its delivery st
 ```bash
 # The message ID of the message you sent.
 export MESSAGE_ID=YOUR_MESSAGE_ID
-# An RPC url for the origin chain.
-export RPC_URL=YOUR_CHAIN_RPC_URL
+# An RPC url for the destination chain.
+export RPC_URL=_RPC_URL
 # The name of the chain the message was sent to.
 export DESTINATION=DESTINATION_CHAIN_NAME
 
