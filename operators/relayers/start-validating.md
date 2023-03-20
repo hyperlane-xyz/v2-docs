@@ -69,8 +69,10 @@ We can run the built binary from within the `hyperlane-monorepo/rust` directory 
 
 {% code overflow="wrap" %}
 ```sh
-set -o allexport && source ~/fooo && set +o allexport && ./target/release/relayer
+set -o allexport && source relayer.env && set +o allexport && ./target/release/relayer
 ```
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+Relayers needs to index all historic messages for the origin chain. This information is stored in a local database on disk (set with `db` in the config). This means running a relayer for the first time will take some extra time to catch up with the current state.
