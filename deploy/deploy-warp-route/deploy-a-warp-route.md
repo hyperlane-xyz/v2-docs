@@ -35,7 +35,11 @@ Deployers may configure interchain security by setting the `interchainSecurityMo
 
 An example token config for a Warp Route that allows for interchain transfers of the ERC20 token at address `0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6` between the Goerli and Alfajores testnets is shown below, and can be found in [`configs/warp-route-token-config.json`](https://github.com/hyperlane-xyz/hyperlane-token/blob/main/configs/warp-route-token-config.json)``
 
-This Warp Route is secured by the default ISMs that are set on the `Mailboxes` for those chains.
+This Warp Route is secured by the default ISMs that are set on the `Mailboxes` for those chains.&#x20;
+
+{% hint style="info" %}
+If you deployed Hyperlane to your own chain, you need to make sure to specify the ISMs that specify security for messages from your own chain, the default ISM is not able to do that.
+{% endhint %}
 
 ```json
 {
