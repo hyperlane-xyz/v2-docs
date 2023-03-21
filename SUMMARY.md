@@ -41,7 +41,6 @@
   * [Configuring Security](build-with-hyperlane/guides/receive-1.md)
   * [V2 migration guide](build-with-hyperlane/guides/v2-migration-guide.md)
 * [Explorer](build-with-hyperlane/explorer/README.md)
-  * [Searching for Messages](build-with-hyperlane/explorer/searching-for-messages.md)
   * [Debugging Messages](build-with-hyperlane/explorer/observability.md)
   * [Configuring PI Chains](build-with-hyperlane/explorer/configuring-pi-chains.md)
   * [REST API](build-with-hyperlane/explorer/rest-api.md)

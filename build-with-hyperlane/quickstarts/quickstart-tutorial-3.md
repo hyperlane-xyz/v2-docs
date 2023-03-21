@@ -51,7 +51,7 @@ function handleQueryAddressResult(address _result) public {
 5. For gas amount, enter `$GAS_AMOUNT`, which is `200000`.
 6. Click `Query` and make note of the amount returned as `$GAS_PAYMENT_QUOTE`. For example, at the time of writing, the quote is `1` wei.
 
-<figure><img src="../../.gitbook/assets/Screen Shot 2023-01-31 at 1.55.10 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screen Shot 2023-01-31 at 1.55.10 PM (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Making the Query
 
