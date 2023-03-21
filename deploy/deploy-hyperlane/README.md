@@ -75,7 +75,10 @@ forge script scripts/DeployCore.s.sol --broadcast --rpc-url $RPC_URL \
 </code></pre>
 
 {% hint style="warning" %}
-If you have issues with the transaction submission, try the `--slow` argument
+If you have issues with the transaction submission, try any of the following:
+
+* \- the `--slow` argument, as foundry may not properly account for fast-finality chains
+* the `--legacy` argument if you see `Failed to get EIP-1559 fees` as foundry defaults to 1559 transactions
 {% endhint %}
 
 This script will write a partial Hyperlane agent config to `hyperlane-deploy/config/$LOCAL_agent_config.json`, which will be used in the following step.
