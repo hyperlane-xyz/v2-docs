@@ -6,7 +6,7 @@ description: Run your validator
 
 ### Recommended machine size
 
-2 CPU + 2Gb RAM is sufficient. Validators are very lightweight.
+1 CPU + 1GiB RAM is sufficient. Validators are very lightweight.
 
 ### Monitoring and alerting
 

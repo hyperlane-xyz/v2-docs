@@ -55,19 +55,11 @@ These are required environment variables that are specific to the [Local setup](
 {% endtab %}
 {% endtabs %}
 
-### Suggested values
+### Suggested Reorg Periods
 
-| Chain     | Suggested reorg period (blocks) | Suggested polling interval (seconds) |
-| --------- | ------------------------------- | ------------------------------------ |
-| Arbitrum  | 0                               | 1                                    |
-| Avalanche | 3                               | 2                                    |
-| BSC       | 15                              | 3                                    |
-| Celo      | 0                               | 5                                    |
-| Ethereum  | 20                              | 15                                   |
-| Optimism  | 0                               | 15                                   |
-| Polygon   | 256                             | 2                                    |
-| Moonbeam  | 2                               | 5                                    |
-| Gnosis    | 14                              | 5                                    |
+{% content-ref url="../../resources/latencies.md" %}
+[latencies.md](../../resources/latencies.md)
+{% endcontent-ref %}
 
 ### Next
 

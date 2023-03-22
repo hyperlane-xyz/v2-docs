@@ -10,7 +10,7 @@ Relayers may want to further filter the messages they attempt to deliver. For ex
 
 Relayers may optionally filter the messages they deliver by setting the `HYP_RELAYER_WHITELIST` or `HYP_RELAYER_BLACKLIST` environment variables.
 
-These environment variables are JSON objects with the following format:
+These environment variables are stringified JSON objects with the following format:
 
 ```typescript
 type Filter = string | string[];
@@ -48,5 +48,7 @@ For example, the following config used as a whitelist will ensure the relayer wi
     }
 ]
 ```
+
+As a string, a valid config may look like `HYP_RELAYER_WHITELIST='[{"senderAddress":"","destinationDomain":["1"],"recipientAddress":""},{"senderAddress":"0xca7f632e91B592178D83A70B404f398c0a51581F","destinationDomain":["42220","43114"],"recipientAddress":""},{"senderAddress":"","destinationDomain":["42161","420"],"recipientAddress":"0xca7f632e91B592178D83A70B404f398c0a51581F"}]'`
 
 The blacklist supersedes the whitelist, i.e. if a message matches both the whitelist _and_ the blacklist, it will not be delivered.

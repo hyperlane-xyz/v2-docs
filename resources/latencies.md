@@ -1,35 +1,37 @@
 ---
-description: Abacus block finality latency configuration.
+description: Hyperlane block finality latency configuration.
 ---
 
 # Latencies
 
 Validators must wait a certain number of blocks to be mined before they are considered valid and [reorg-safe](https://www.alchemy.com/overviews/what-is-a-reorg). Without this, validators could be slashed since they may have signed a checkpoint that is no longer valid.
 
-Refer to the following sections for block finality configuration used by the Abacus Works validators.
+Refer to the following sections for block finality configuration used by the Hyperlane validators.
 
 ### Mainnet
 
-| Network   | Latency             |
-| --------- | ------------------- |
-| Arbitrum  | 1 block             |
-| Avalanche | 3 blocks (6s)       |
-| BSC       | 15 blocks (45s)     |
-| Celo      | 1 block (5s)        |
-| Ethereum  | 20 blocks (260s)    |
-| Optimism  | 1 block             |
-| Polygon   | 256 blocks (\~540s) |
+| Network   | Reorg Period        | Validator Polling Interval |
+| --------- | ------------------- | -------------------------- |
+| Arbitrum  | 1 block             | 1s                         |
+| Avalanche | 3 blocks (6s)       | 2s                         |
+| BSC       | 15 blocks (45s)     | 3s                         |
+| Celo      | 0 blocks (5s)       | 5s                         |
+| Ethereum  | 20 blocks (260s)    | 15s                        |
+| Gnosis    | 14 blocks (74s)     | 5s                         |
+| Moonbeam  | 0 blocks            | 5s                         |
+| Optimism  | 0 blocks            | 15s                        |
+| Polygon   | 256 blocks (\~540s) | 2s                         |
 
 ### Testnet
 
-| Network         | Latency          |
-| --------------- | ---------------- |
-| Arbitrum Goerli | 1 block          |
-| Alfajores       | 1 block (5s)     |
-| BSC Testnet     | 9 blocks (27s)   |
-| Fuji            | 3 blocks (\~6s)  |
-| Goerli          | 2 blocks (30s)   |
-| Kovan           | 7 blocks (\~50s) |
-| Mumbai          | 32 blocks (160s) |
-| Moonbase Alpha  | 1 block          |
-| Optimism Goerli | 1 block          |
+| Network         | Reorg Period     | Validator Polling Interval |
+| --------------- | ---------------- | -------------------------- |
+| Alfajores       | 1 block (5s)     | 5s                         |
+| Arbitrum Goerli | 1 block          | 5s                         |
+| BSC Testnet     | 9 blocks (27s)   | 5s                         |
+| Fuji            | 3 blocks (\~6s)  | 5s                         |
+| Goerli          | 2 blocks (30s)   | 5s                         |
+| Moonbase Alpha  | 1 block          | 5s                         |
+| Mumbai          | 32 blocks (160s) | 5s                         |
+| Optimism Goerli | 1 block          | 5s                         |
+| Sepolia         | 7 blocks (90s)   | 5s                         |
