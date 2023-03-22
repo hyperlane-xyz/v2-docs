@@ -66,7 +66,7 @@ These are required environment variables that are specific to the [Local setup](
 | Ethereum  | 20                              | 15                                   |
 | Optimism  | 0                               | 15                                   |
 | Polygon   | 256                             | 2                                    |
-| Moonbeam  | 0                               | 5                                    |
+| Moonbeam  | 2                               | 5                                    |
 | Gnosis    | 14                              | 5                                    |
 
 ### Next
