@@ -1,10 +1,12 @@
 ---
 description: >-
-  Step-by-step guides to deploying your first Warp Routes, allowing you to bring
+  Step-by-step guide to deploying your first Warp Routes, allowing you to bring
   your assets to any chain
 ---
 
 # Deploy Warp Route
+
+### Overview of Warp Routes
 
 Warp Routes are Hyperlane's unique take on the concept of token bridging, allowing you to permissionlessly bridge any ERC20-like asset to any chain via Hyperlane. You can combine Warp Routes with a Hyperlane deployment to create economic trade routes between any chain and others already connected through Hyperlane.
 

@@ -15,6 +15,9 @@
 * [Deploy Hyperlane](deploy/deploy-hyperlane/README.md)
   * [Validators](https://docs.hyperlane.xyz/docs/operators/validators)
   * [Relayers](https://docs.hyperlane.xyz/docs/operators/relayers)
+* [Warp Route Token Flow - new](deploy/warp-route-token-flow-new/README.md)
+  * [Deploy Warp Route](deploy/warp-route-token-flow-new/deploy-warp-route.md)
+  * [Deploy the UI for your Warp Route](deploy/warp-route-token-flow-new/deploy-the-ui-for-your-warp-route.md)
 * [Deploy Warp Route](deploy/deploy-warp-route/README.md)
   * [Deploy a Warp Route](deploy/deploy-warp-route/deploy-a-warp-route.md)
   * [Deploy the UI for your Warp Route](deploy/deploy-warp-route/deploy-the-ui-for-your-warp-route.md)
@@ -88,6 +91,7 @@
   * [Validators](protocol/agents/validators.md)
   * [Relayers](protocol/agents/relayer.md)
   * [Watchtowers](protocol/agents/processor.md)
+* [Warp Route](protocol/warp-route.md)
 
 ## Operators
 
