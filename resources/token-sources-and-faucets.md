@@ -12,8 +12,8 @@ description: Where to acquire tokens for development
 | BSC             | Binance, FTX, Kucoin                                                            | ​                            |
 | Polygon         | Most major exchanges                                                            | ​                            |
 | Celo            | Binance, Coinbase, Kucoin                                                       | ​                            |
-| Arbitrum        | ETH via ​                                                                       | ​                            |
-| Optimism        | ETH via ​                                                                       | ​                            |
+| Arbitrum        | Most major exchanges or canonical bridge                                        | ​                            |
+| Optimism        | Most major exchanges or canonical bridge                                        | ​                            |
 | Ethereum        | Most major exchanges                                                            | ​                            |
 | Moonbeam        | Binance, Coinbase, Kucoin                                                       | ​                            |
 | ​               | ​                                                                               | ​                            |
@@ -24,6 +24,6 @@ description: Where to acquire tokens for development
 | Fuji            | [Avalanche Faucet​​](https://faucet.avax.network/)                              | 2 AVAX                       |
 | BSC Testnet     | [​​BNB Smart Chain Faucet](https://testnet.bnbchain.org/faucet-smart)           | 0.5 BNB                      |
 | Arbitrum Goerli | [​​Triangle Faucet](https://faucet.triangleplatform.com/arbitrum/goerli)        | 0.1 ETH                      |
-| Optimism Goerli | ​​                                                                              | 0.1 ETH                      |
+| Optimism Goerli | [​​Swap Goerli ETH for Optimism Goerli](https://app.optimism.io/bridge/deposit) | 0.1 ETH                      |
 | Moonbase Alpha  | [​​Moonbase Alpha Faucet](https://apps.moonbeam.network/moonbase-alpha/faucet/) | 1 DEV                        |
 | Hyperspace      | [Filecoin Faucet](https://hyperspace.yoga/#faucet)                              | 5 tFIL                       |

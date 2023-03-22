@@ -8,6 +8,7 @@
   * [What are the benefits of Hyperlane?](introduction/why-hyperlane/what-are-the-benefits-of-hyperlane.md)
   * [What sets Hyperlane apart?](introduction/why-hyperlane/what-sets-hyperlane-apart.md)
 * [Getting started](introduction/getting-started.md)
+* [Hyperlane Quickstart](introduction/hyperlane-quickstart.md)
 
 ## Permissionless Interoperability <a href="#deploy" id="deploy"></a>
 
