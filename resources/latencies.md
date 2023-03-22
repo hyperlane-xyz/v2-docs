@@ -18,7 +18,7 @@ Refer to the following sections for block finality configuration used by the Hyp
 | Celo      | 0 blocks (5s)       | 5s                         |
 | Ethereum  | 20 blocks (260s)    | 15s                        |
 | Gnosis    | 14 blocks (74s)     | 5s                         |
-| Moonbeam  | 0 blocks            | 5s                         |
+| Moonbeam  | 2 blocks (20s)      | 5s                         |
 | Optimism  | 0 blocks            | 15s                        |
 | Polygon   | 256 blocks (\~540s) | 2s                         |
 
@@ -31,7 +31,7 @@ Refer to the following sections for block finality configuration used by the Hyp
 | BSC Testnet     | 9 blocks (27s)   | 5s                         |
 | Fuji            | 3 blocks (\~6s)  | 5s                         |
 | Goerli          | 2 blocks (30s)   | 5s                         |
-| Moonbase Alpha  | 1 block          | 5s                         |
+| Moonbase Alpha  | 2 blocks (20s)   | 5s                         |
 | Mumbai          | 32 blocks (160s) | 5s                         |
 | Optimism Goerli | 1 block          | 5s                         |
 | Sepolia         | 7 blocks (90s)   | 5s                         |
