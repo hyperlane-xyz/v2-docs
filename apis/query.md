@@ -43,6 +43,10 @@ flowchart BT
     style Recipient fill:#efab17
 ```
 
+{% hint style="warning" %}
+**Warning:** Queries which perform view calls that revert on the destination chain **will not** currently deliver a callback to the origin chain. Thus, it is potentially unsafe to rely on callback delivery. _This behavior is subject to change in future versions:_ callbacks may be delivered for success and failure modes through a [`Promise`-like](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Promise) resolve/reject interface.
+{% endhint %}
+
 ### Interface
 
 <pre class="language-solidity"><code class="lang-solidity">interface IInterchainQueryRouter {
