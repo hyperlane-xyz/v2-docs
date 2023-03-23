@@ -15,59 +15,56 @@ Note, the REST API is recommended over the GraphQL API because it exposes a simp
 The following query will retrieve useful information about a message:
 
 ```graphql
-query MessageDetails ($id: String!){
-  message(where: {msg_id: {_ilike: $id}}) {
-    destination
+query MyQuery {
+  message_view(limit: 10, where: {msg_id: {_eq: "\xYOUR_MSG_ID"}}) {
     msg_id
     nonce
-    msg_body
-    origin
-    origin_tx_id
-    origin_mailbox
-    recipient
     sender
-    timestamp
-    transaction {
-      id
-      block_id
-      gas_used
-      hash
-      sender
-      block {
-        hash
-        domain
-        height
-        id
-        timestamp
-      }
-    }
-    delivered_message {
-      id
-      tx_id
-      destination_mailbox
-      transaction {
-        block_id
-        gas_used
-        hash
-        id
-        sender
-        block {
-          domain
-          hash
-          height
-          id
-          timestamp
-        }
-      }
-    }
-    message_states {
-      block_height
-      block_timestamp
-      error_msg
-      estimated_gas_cost
-      id
-      processable
-    }
+    recipient
+    is_delivered
+    message_body
+    origin_mailbox
+    origin_domain_id
+    origin_chain_id
+    origin_block_id
+    origin_block_height
+    origin_block_hash
+    origin_tx_sender
+    origin_tx_recipient
+    origin_tx_nonce
+    origin_tx_max_priority_fee_per_gas
+    origin_tx_max_fee_per_gas
+    origin_tx_id
+    origin_tx_hash
+    origin_tx_gas_used
+    origin_tx_gas_price
+    origin_tx_gas_limit
+    origin_tx_effective_gas_price
+    origin_tx_cumulative_gas_used
+    destination_block_id
+    destination_block_hash
+    destination_block_height
+    destination_chain_id
+    destination_domain_id
+    destination_mailbox
+    destination_tx_cumulative_gas_used
+    destination_tx_effective_gas_price
+    destination_tx_gas_limit
+    destination_tx_gas_price
+    destination_tx_gas_used
+    destination_tx_hash
+    destination_tx_id
+    destination_tx_max_fee_per_gas
+    destination_tx_max_priority_fee_per_gas
+    destination_tx_nonce
+    destination_tx_recipient
+    destination_tx_sender
+    send_occurred_at
+    delivery_occurred_at
+    delivery_latency
+    num_payments
+    total_payment
+    total_gas_amount
   }
 }
 ```
@@ -75,34 +72,55 @@ query MessageDetails ($id: String!){
 ### GraphQL Schema Types
 
 ```graphql
-type message {
-  delivered_message: delivered_message
-  destination: Int!
-  domain: domain!
-  id: bigint!
-  message_states: [message_state!]!
-  msg_id: String!
-  msg_body: bytea
+type message_view {
+  msg_id: bytea
   nonce: Int!
-  origin: Int!
-  origin_mailbox: String!
-  origin_tx_id: bigint!
-  recipient: String!
-  sender: String!
-  time_created: timestamp!
-  timestamp: timestamp!
-  transaction: transaction!
-}
-
-type delivered_message {
-  destination_mailbox: String!
-  domain: Int!
-  domainByDomain: domain!
-  id: bigint!
-  msg_id: String!
-  time_created: timestamp!
-  transaction: transaction!
-  tx_id: bigint!
+  sender: bytea
+  recipient: bytea
+  is_delivered: Boolean!
+  message_body: bytea
+  origin_mailbox: bytea
+  origin_domain_id: Int!
+  origin_chain_id: Int!
+  origin_block_id: Int!
+  origin_block_height: Int!
+  origin_block_hash: bytea
+  origin_tx_sender: bytea
+  origin_tx_recipient: bytea
+  origin_tx_nonce: Int!
+  origin_tx_max_priority_fee_per_gas: Int!
+  origin_tx_max_fee_per_gas: Int!
+  origin_tx_id: Int!
+  origin_tx_hash: bytea
+  origin_tx_gas_used: Int!
+  origin_tx_gas_price: Int!
+  origin_tx_gas_limit: Int!
+  origin_tx_effective_gas_price: Int!
+  origin_tx_cumulative_gas_used: Int!
+  destination_block_id: Int!
+  destination_block_hash: bytea
+  destination_block_height: Int!
+  destination_chain_id: Int!
+  destination_domain_id: Int!
+  destination_mailbox: bytea
+  destination_tx_cumulative_gas_used: Int!
+  destination_tx_effective_gas_price: Int!
+  destination_tx_gas_limit: Int!
+  destination_tx_gas_price: Int!
+  destination_tx_gas_used: Int!
+  destination_tx_hash: bytea
+  destination_tx_id: Int!
+  destination_tx_max_fee_per_gas: Int!
+  destination_tx_max_priority_fee_per_gas: Int!
+  destination_tx_nonce: Int!
+  destination_tx_recipient: bytea
+  destination_tx_sender: bytea
+  send_occurred_at: timestamp!
+  delivery_occurred_at: timestamp!
+  delivery_latency: Int!
+  num_payments: Int!
+  total_payment: Int!
+  total_gas_amount: Int!
 }
 
 type block {
@@ -135,18 +153,6 @@ type gas_payment {
   time_created: timestamp!
   transaction: transaction!
   tx_id: bigint!
-}
-
-type message_state {
-  block_height: bigint!
-  block_timestamp: timestamp!
-  error_msg: String
-  estimated_gas_cost: numeric
-  id: bigint!
-  message: message!
-  msg_id: bigint!
-  processable: Boolean!
-  time_created: timestamp!
 }
 
 type transaction {
