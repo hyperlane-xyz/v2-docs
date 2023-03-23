@@ -139,7 +139,10 @@ Script ran successfully.
 == Logs ==
   MultisigIsm deployed at address 0x5307B8c7A4e8E992ea47126A2F974e65bc43E6e0
   TestRecipient deployed at address 0x2952EAB89729522252249d08883449e7CaD21326
+  InterchainGasPaymaster deployed at address 0xBC3cFeca7Df5A45d61BC60E7898E63670e1654aE
 ```
+
+This config will also deploy an `InterchainGasPaymaster` that you will need to use when you  [deploy-warp-route](../deploy-warp-route/ "mention")
 
 ## 4. Run a relayer for the local chain
 

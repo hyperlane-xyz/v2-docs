@@ -1,5 +1,5 @@
 ---
-description: Move your token between chains
+description: Create an interchain route for your token
 ---
 
 # Deploy a Warp Route
@@ -38,7 +38,7 @@ An example token config for a Warp Route that allows for interchain transfers of
 This Warp Route is secured by the default ISMs that are set on the `Mailboxes` for those chains.&#x20;
 
 {% hint style="info" %}
-If you deployed Hyperlane to your own chain, you need to make sure to specify the ISMs that specify security for messages from your own chain, the default ISM is not able to do that.
+If you deployed Hyperlane to your own chain, you need to make sure to specify the `InterchainSecurityModule`s and `InterchainGasPaymaster`s for the warp route to work.
 {% endhint %}
 
 ```json
@@ -73,7 +73,7 @@ If you would like to deploy a Warp Route to a chain that is not included in the 
 
 #### Example
 
-An example chain config for a Warp Route is shown below. If your chain does not have a block explorer you can leave that array empty.
+An example chain config for a Warp Route is shown below. The `blocks` and `blockExplorers` properties are optional.
 
 ```json
 {
@@ -88,6 +88,7 @@ An example chain config for a Warp Route is shown below. If your chain does not 
         "name": "Goerliscan",
         "url": "https://goerli.etherscan.io",
         "apiUrl": "https://api-goerli.etherscan.io",
+        "apiKey": "12345",
         "family": "etherscan"
       }
     ],
