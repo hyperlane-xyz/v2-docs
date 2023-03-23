@@ -10,86 +10,13 @@ Unlike the [messaging-api](messaging-api/ "mention"), which requires recipients 
 
 To use the Interchain Queries API, developers specify a remote chain, an ABI encoded view call to make on the remote chain, and an ABI encoded callback to be made on the querying contract, to which the return value of the remote view call will be appended.
 
-```mermaid
-%%{ init: {
-  "theme": "neutral",
-  "themeVariables": {
-    "mainBkg": "#025AA1",
-    "textColor": "white",
-    "clusterBkg": "white"
-  },
-  "themeCSS": ".edgeLabel { color: black }"
-}}%%
-
-flowchart BT
-    subgraph Origin Chain
-      Sender
-      Q_O[API]
-    end
-
-    subgraph Destination Chain
-      Recipient[Recipient]
-    end
-
-    Sender -- "query(recipient, data, callback)" --> Q_O
-    Recipient -- "result" --> Q_O
-    Q_O -- "call(data)" --> Recipient
-    Q_O -- "callback(result)" --> Sender
-
-    click Q_O https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/middleware/InterchainQueryRouter.sol
-    click Q_D https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/middleware/InterchainQueryRouter.sol
-
-    style Sender fill:#efab17
-    style Recipient fill:#efab17
-```
+<!-- INCLUDE diagrams/queries-simple.md -->
+<!-- END -->
 
 ### Interface
 
-<pre class="language-solidity"><code class="lang-solidity">interface IInterchainQueryRouter {
-    /**
-     * @param _destinationDomain Domain of destination chain
-     * @param target The address of the contract to query on destination chain.
-     * @param queryData The calldata of the view call to make on the destination
-<strong>     * chain.
-</strong>     * @param callback Callback function selector on `msg.sender` and optionally
-     * abi-encoded prefix arguments.
-     * @return messageId The ID of the Hyperlane message encoding the query.
-     */
-    function query(
-        uint32 _destinationDomain,
-        address target,
-        bytes calldata queryData,
-        bytes calldata callback
-    ) external returns (bytes32);
-
-    /**
-     * @param _destinationDomain Domain of destination chain
-     * @param call The target address of the contract to query on destination
-     * chain, and the calldata of the view call to make.
-     * @param callback Callback function selector on `msg.sender` and optionally
-     * abi-encoded prefix arguments.
-     * @return messageId The ID of the Hyperlane message encoding the query.
-     */
-    function query(
-        uint32 _destinationDomain,
-        Call calldata call,
-        bytes calldata callback
-    ) external returns (bytes32);
-
-    /**
-     * @param _destinationDomain Domain of destination chain
-     * @param calls Array of calls (to and data packed struct) to be made on
-     * destination chain in sequence.
-     * @param callbacks Array of callback function selectors on `msg.sender`
-     * and optionally abi-encoded prefix arguments.
-     */
-    function query(
-        uint32 _destinationDomain,
-        Call[] calldata calls,
-        bytes[] calldata callbacks
-    ) external returns (bytes32);
-}
-</code></pre>
+<!-- INCLUDE node_modules/@hyperlane-xyz/core/interfaces/IInterchainQueryRouter.sol -->
+<!-- END -->
 
 You can find the address of the `InterchainQueryRouter` contract on each chain [here](../resources/addresses.md#interchainqueryrouter), and chain domains [here](../resources/domains.md).
 
@@ -213,46 +140,8 @@ function makeQuery(uint256 queryGasAmount) external payable {
 
 ### How it works
 
-```mermaid
-%%{ init: {
-  "theme": "neutral",
-  "themeVariables": {
-    "mainBkg": "#025AA1",
-    "textColor": "white",
-    "clusterBkg": "white"
-  },
-  "themeCSS": ".edgeLabel { color: black }"
-}}%%
-
-flowchart TB
-    subgraph Origin Chain
-      Sender
-      Q_O[InterchainQueryRouter]
-      M_O[(Mailbox)]
-    end
-
-    subgraph Destination Chain
-      M_D[(Mailbox)]
-      Q_D[InterchainQueryRouter]
-      Recipient
-    end
-
-    Sender -- "query(destination, recipient, data, callback)" --> Q_O
-    Q_O -- "dispatch(destination, router, \n[sender, recipient, data, callback])" --> M_O
-    M_O -. "relay" .- M_D
-    M_D -- "handle(origin, router, \n[sender, recipient, data, callback])" --> Q_D
-    Q_D -- "call(data)" --> Recipient
-    Recipient -- "result" --> Q_D
-    M_O -- "handle(destination, router, \n[sender, result, callback])" --> Q_O
-    Q_D -- "dispatch(origin, router, \n[sender, result, callback])" --> M_D
-    Q_O -- "callback(result)" --> Sender
-
-    click Q_O https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/middleware/InterchainQueryRouter.sol
-    click Q_D https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/middleware/InterchainQueryRouter.sol
-
-    style Sender fill:#efab17
-    style Recipient fill:#efab17
-```
+<!-- INCLUDE diagrams/queries-implementation.md -->
+<!-- END -->
 
 ### Future Extensions
 
