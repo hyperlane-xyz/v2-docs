@@ -30,10 +30,10 @@ These **required** environment variables differ depending on which [key setup](s
 {% tab title="Hexadecimal keys" %}
 If you followed the [Hexadecimal key setup](setup/hexadecimal-key-setup.md), use these environment variables.
 
-| Environment variable                       | Description                                                                                                                                                                                                                                                         |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `HYP_BASE_CHAINS_[chain name]_SIGNER_TYPE` | <p>Set to <code>hexKey</code>.</p><p><br><strong>Relayers must set this for each destination chain.</strong><br><strong></strong><em>Example:</em> <code>HYP_BASE_CHAINS_POLYGON_SIGNER_TYPE=hexKey</code></p>                                                      |
-| `HYP_BASE_CHAINS_[chain name]_SIGNER_KEY`  | <p>A hexadecimal private key used to sign transactions for <code>chain_name</code>.<br><br><strong>Relayers must set this for each destination chain.</strong><br><strong></strong><em>Example:</em> <code>HYP_BASE_SIGNERS_POLYGON_SIGNER_KEY=123...def</code></p> |
+| Environment variable                       | Description                                                                                                                                                                                                                                                        |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `HYP_BASE_CHAINS_[chain name]_SIGNER_TYPE` | <p>Set to <code>hexKey</code>.</p><p><br><strong>Relayers must set this for each destination chain.</strong><br><strong></strong><em>Example:</em> <code>HYP_BASE_CHAINS_POLYGON_SIGNER_TYPE=hexKey</code></p>                                                     |
+| `HYP_BASE_CHAINS_[chain name]_SIGNER_KEY`  | <p>A hexadecimal private key used to sign transactions for <code>chain_name</code>.<br><br><strong>Relayers must set this for each destination chain.</strong><br><strong></strong><em>Example:</em> <code>HYP_BASE_CHAINS_POLYGON_SIGNER_KEY=123...def</code></p> |
 {% endtab %}
 
 {% tab title="AWS KMS keys" %}
