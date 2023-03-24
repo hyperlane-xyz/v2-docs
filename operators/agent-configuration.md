@@ -31,7 +31,12 @@ Mounting a single config file can be done with the flag `--mount type=bind,sourc
 
 Mounting an entire directory can be done with the flag `--mount source=$LOCAL_CONFIG_DIR_PATH,target=/config,readonly` then adding the individual config files to `CONFIG_FILES` that you want so they are loaded.
 
-Full example, suppose you have a config file `ethereum.json` and want to run the validator with it. `docker run -it --mount type=bind,source=/home/workspace/ethereum.json,target=/config/ethereum.json,readonly -e CONFIG_FILES=/config/ethereum.json gcr.io/abacus-labs-dev/hyperlane-agent:44361db-20230209-031017 ./validator`
+For example, suppose you have a config file at your local machine's path `/home/workspace/ethereum.json` and want to run the validator with it.
 
+{% code title="Example" overflow="wrap" %}
+```
+docker run -it --mount type=bind,source=/home/workspace/ethereum.json,target=/config/ethereum.json,readonly -e CONFIG_FILES=/config/ethereum.json $DOCKER_IMAGE ./validator
+```
+{% endcode %}
 
-
+The `source` path is the path on your local machine, the `target` path is where the source path contents will be made available within the Docker container, and the `CONFIG_FILES` should specify config(s) from the target path.
