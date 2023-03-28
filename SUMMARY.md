@@ -12,7 +12,7 @@
 
 ## Permissionless Interoperability <a href="#deploy" id="deploy"></a>
 
-* [Permissionless Interoperability Overview](deploy/permissionless-interoperability.md)
+* [Overview](deploy/permissionless-interoperability.md)
 * [Deploy Hyperlane](deploy/deploy-hyperlane/README.md)
   * [Validators](https://docs.hyperlane.xyz/docs/operators/validators)
   * [Relayers](https://docs.hyperlane.xyz/docs/operators/relayers)
@@ -89,7 +89,7 @@
   * [Validators](protocol/agents/validators.md)
   * [Relayers](protocol/agents/relayer.md)
   * [Watchtowers](protocol/agents/processor.md)
-* [Warp Route](protocol/warp-route.md)
+* [Warp Routes](https://docs.hyperlane.xyz/docs/deploy/deploy-warp-route)
 
 ## Operators
 

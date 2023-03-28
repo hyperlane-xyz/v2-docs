@@ -24,7 +24,7 @@ Learn more about Hyperlane's Security: [interchain-security-modules.md](../proto
 
 ## What can I build with Hyperlane?
 
-First and foremost you should know that you can use Hyperlane to connect your rollup or chain to other chains. Once you’ve done that, you can use [Warp Routes](../protocol/warp-route.md) to bring assets over into your chain.
+First and foremost you should know that you can use Hyperlane to connect your rollup or chain to other chains. Once you’ve done that, you can use [Warp Routes](../deploy/deploy-warp-route/) to bring assets over into your chain.
 
 With respect to apps, we encourage developers to be creative with how they use Hyperlane, but some practical use cases that we think the protocol is well-suited to include:
 
