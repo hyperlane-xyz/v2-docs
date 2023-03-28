@@ -76,7 +76,7 @@
 
 ## Protocol
 
-* [Overview](protocol/overview.md)
+* [Permissionless Interoperability](protocol/permissionless-interoperability.md)
 * [Mailbox](protocol/messaging.md)
 * [Interchain security modules](protocol/sovereign-consensus/README.md)
   * [Interface](protocol/sovereign-consensus/interchain-security-modules.md)

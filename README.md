@@ -14,7 +14,7 @@ Keep reading to learn all about how you can leverage Hyperlane!
 
 ### **Hyperlane APIs**
 
-Hyperlane's [APIs](./#hyperlane-apis) offer developers secure and simple ways to communicate between blockchains, while the Hyperlane [SDKs](broken-reference/) make using Hyperlane and building interchain applications quick and easy.
+Hyperlane's [APIs](./#hyperlane-apis) offer developers secure and simple ways to communicate between blockchains, while the Hyperlane [SDKs](broken-reference) make using Hyperlane and building interchain applications quick and easy.
 
 [messaging-api](apis/messaging-api/ "mention") [token-bridge-api.md](apis/token-bridge-api.md "mention") [accounts.md](apis/accounts.md "mention")[query.md](apis/query.md "mention")[warp-api.md](apis/warp-api.md "mention")
 
@@ -24,6 +24,6 @@ Check out the [getting started guide](introduction/getting-started.md) for every
 
 ### Learn more about the Hyperlane Protocol
 
-Take a look at the [protocol docs](protocol/overview.md) to understand the Hyperlane protocol architecture and [security model](protocol/sovereign-consensus/).
+Take a look at the [protocol docs](protocol/permissionless-interoperability.md) to understand the Hyperlane protocol architecture and [security model](protocol/sovereign-consensus/).
 
 ### Curious about what you should use Hyperlane for? Continue to the [next page](introduction/why-hyperlane/) to learn more
