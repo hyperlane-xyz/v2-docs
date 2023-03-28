@@ -1,8 +1,8 @@
 ---
-description: Deploy Hyperlane, anyone, anywhere, anytime
+description: Deploy Hyperlane, by anyone, anywhere, anytime
 ---
 
-# Overview
+# Permissionless Interoperability
 
 **Before Hyperlane**
 

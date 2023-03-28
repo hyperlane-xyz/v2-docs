@@ -12,7 +12,7 @@
 
 ## Permissionless Interoperability <a href="#deploy" id="deploy"></a>
 
-* [Overview](deploy/permissionless-interoperability.md)
+* [Permissionless Interoperability](deploy/permissionless-interoperability.md)
 * [Deploy Hyperlane](deploy/deploy-hyperlane/README.md)
   * [Validators](https://docs.hyperlane.xyz/docs/operators/validators)
   * [Relayers](https://docs.hyperlane.xyz/docs/operators/relayers)
