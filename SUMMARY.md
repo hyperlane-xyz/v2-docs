@@ -12,7 +12,7 @@
 
 ## Permissionless Interoperability <a href="#deploy" id="deploy"></a>
 
-* [Permissionless Interoperability](deploy/permissionless-interoperability.md)
+* [Permissionless Interoperability Overview](deploy/permissionless-interoperability.md)
 * [Deploy Hyperlane](deploy/deploy-hyperlane/README.md)
   * [Validators](https://docs.hyperlane.xyz/docs/operators/validators)
   * [Relayers](https://docs.hyperlane.xyz/docs/operators/relayers)
@@ -76,7 +76,7 @@
 
 ## Protocol
 
-* [Permissionless Interoperability](protocol/permissionless-interoperability.md)
+* [Overview](protocol/permissionless-interoperability.md)
 * [Mailbox](protocol/messaging.md)
 * [Interchain security modules](protocol/sovereign-consensus/README.md)
   * [Interface](protocol/sovereign-consensus/interchain-security-modules.md)
