@@ -47,9 +47,7 @@
   * [REST API](build-with-hyperlane/explorer/rest-api.md)
   * [GraphQL API](build-with-hyperlane/explorer/graphql-api.md)
 * [Troubleshooting](build-with-hyperlane/troubleshooting.md)
-* [Example apps](build-with-hyperlane/examples/README.md)
-  * [HelloWorld](build-with-hyperlane/examples/helloworld.md)
-  * [Interchain Token](build-with-hyperlane/examples/erc20-token.md)
+* [Example apps](build-with-hyperlane/examples.md)
 
 ## APIs
 
@@ -63,7 +61,10 @@
 
 ## SDKs
 
-* [Hyperlane SDKs](sdks/building-applications/README.md)
+* [Hyperlane App Framework](sdks/building-applications/README.md)
+  * [Example usage](sdks/building-applications/example-usage/README.md)
+    * [HelloWorld](sdks/building-applications/example-usage/helloworld.md)
+    * [Interchain Token](sdks/building-applications/example-usage/erc20-token.md)
   * [Solidity SDK](sdks/building-applications/writing-contracts/README.md)
     * [HyperlaneConnectionClient](sdks/building-applications/writing-contracts/abacusconnectionclient.md)
     * [Router](sdks/building-applications/writing-contracts/router.md)

@@ -64,7 +64,7 @@ We don’t recommend using Hyperlane in this manner — it would be very expensi
 
 Well, not exactly… Hyperlane is a[ Permissionless Interoperability Protocol ](broken-reference)that allows communication between blockchains. Token bridges are just one of many types of applications that can be built on top of Hyperlane! For more ideas what can be built on Hyperlane check out the question above.&#x20;
 
-Start building on Hyperlane [getting-started.md](../introduction/getting-started.md "mention")[quickstarts](../build-with-hyperlane/quickstarts/ "mention")[examples](../build-with-hyperlane/examples/ "mention")
+Start building on Hyperlane [getting-started.md](../introduction/getting-started.md "mention")[quickstarts](../build-with-hyperlane/quickstarts/ "mention")[examples.md](../build-with-hyperlane/examples.md "mention")
 
 ## **I’m a developer. How can my team build with Hyperlane?**
 

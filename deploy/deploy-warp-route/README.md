@@ -10,7 +10,7 @@ description: >-
 
 Warp Routes are Hyperlane's unique take on the concept of token bridging, allowing you to permissionlessly bridge any ERC20-like asset to any chain via Hyperlane. You can combine Warp Routes with a Hyperlane deployment to create economic trade routes between any chain and others already connected through Hyperlane.
 
-Once a Warp Route is created, the resulting asset is a true [Interchain Token](../../build-with-hyperlane/examples/erc20-token.md), meaning it can traverse between any Hyperlane connected chain with ease.&#x20;
+Once a Warp Route is created, the resulting asset is a true [Interchain Token](../../sdks/building-applications/example-usage/erc20-token.md), meaning it can traverse between any Hyperlane connected chain with ease.&#x20;
 
 This diagram below illustrates a fairly simplified overview of the flow in creating your Warp Route, and the resulting asset.&#x20;
 

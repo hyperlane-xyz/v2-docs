@@ -22,7 +22,7 @@ The Hyperlane application framework helps developers create and manage interchai
 
 Looking for some inspiration?
 
-[Take a look](../build-with-hyperlane/examples/) at some example applications built using the Hyperlane messaging API and application framework.
+[Take a look](../build-with-hyperlane/examples.md) at some example applications built using the Hyperlane messaging API and application framework.
 
 ### Hyperlane Explorer
 

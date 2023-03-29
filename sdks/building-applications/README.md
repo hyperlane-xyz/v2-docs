@@ -2,9 +2,9 @@
 description: Create interchain applications with the Hyperlane Application SDK
 ---
 
-# Hyperlane SDKs
+# Hyperlane App Framework
 
-Hyperlane provides a framework that helps developers create and manage applications built on top of interchain smart contracts. It is designed primarily for applications which leverage the shared state model and symmetric communication patterns such as the [Router](writing-contracts/router.md) pattern.&#x20;
+Hyperlane provides an optional framework that helps developers create and manage applications built on top of interchain smart contracts. It is designed primarily for applications which leverage the shared state model and symmetric communication patterns such as the [Router](writing-contracts/router.md) pattern. Note that this is a more fully feature abstraction that requires a learning curve. If you are just looking to try out Hyperlane, we recommend for you to look at the [quickstarts](../../build-with-hyperlane/quickstarts/ "mention") and [Broken link](broken-reference "mention") directly.
 
 ### Solidity SDK&#x20;
 
