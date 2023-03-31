@@ -6,15 +6,15 @@ description: Answering the most Frequently Asked Questions about all things Hype
 
 ## **What is Hyperlane?**
 
-Hyperlane is Permissionless Interoperability layer, with a modular security architecture that enables developers to bring interoperability to any chain or app completely [Permissionlessly](https://docs.hyperlane.xyz/docs/deploy/deploy-hyperlane). Beyond that, it is first to introduce modular and context based security, allowing devs to choose from [a menu of security options and mix and match](https://docs.hyperlane.xyz/docs/protocol/sovereign-consensus) based on user actions.
+Hyperlane is Permissionless Interoperability layer, with a modular security architecture that enables developers to bring interoperability to any chain or app completely permissionlessly. Beyond that, it is first to introduce modular and context based security, allowing devs to choose from a menu of [sovereign-consensus](../protocol/sovereign-consensus/ "mention") and mix and match based on user actions.
 
-Hyperlane is the interoperability layer of choice for the world of many blockchains and rollups. By allowing anyone to [deploy it anywhere](https://docs.hyperlane.xyz/docs/deploy/deploy-hyperlane), Hyperlane creates the first ‘network of networks’, to connect the rapidly expanding universe of chains.
+Hyperlane is the interoperability layer of choice for the world of many blockchains and rollups. By allowing anyone to [deploy-hyperlane](../deploy/deploy-hyperlane/ "mention"), Hyperlane creates the first ‘network of networks’, to connect the rapidly expanding universe of chains.
 
 Learn more: [so-what-is-hyperlane.md](../introduction/why-hyperlane/so-what-is-hyperlane.md "mention")
 
 ## **How is Hyperlane Secured?**
 
-Hyperlane is secured through its [Modular Security stack](../protocol/sovereign-consensus/), Hyperlane’s major innovation in interchain security — instead of a monolithic security model forced upon all applications and chains using Hyperlane, the protocol features a modular stack, allowing integrating developers to choose from an array of [Interchain Security Modules (ISMs)](https://docs.hyperlane.xyz/docs/protocol/sovereign-consensus) which can then be used based on needs and preferences. They can be used dynamically based on context, such that certain user actions go through a different set of [ISMs](../protocol/sovereign-consensus/), and they can even be stacked together for additional effect — full control is in your hands.
+Hyperlane is secured through its odular Security stack, Hyperlane’s major innovation in interchain security — instead of a monolithic security model forced upon all applications and chains using Hyperlane, the protocol features a modular stack, allowing integrating developers to choose from an array of [sovereign-consensus](../protocol/sovereign-consensus/ "mention") (ISMs) which can then be used based on needs and preferences. They can be used dynamically based on context, such that certain user actions go through a different set of ISMs, and they can even be stacked together for additional effect — full control is in your hands.
 
 Developers can select from a catalogue of ready-made modules, or write their own. ISMs can range from as simple as introducing designated signers required for messages to be processed to as nuanced as [Optimistic security](../protocol/sovereign-consensus/optimistic-ism.md), forcing a 12+ hour challenge period where a transaction can be blocked. Additionally, as the industry continues to make advances in security, we’ll be keeping pace and making compatible ISMs.
 
@@ -47,22 +47,20 @@ Full tutorial for [send.md](../apis/messaging-api/send.md "mention") and [receiv
 Summary:
 
 1. An application calls the `dispatch()` function on the origin chain, inserting the message into the Mailbox’s Merkle tree.
-2. Hyperlane [Relayers](https://docs.hyperlane.xyz/docs/operators/relayers/) observe the dispatched messages and assemble metadata for the recipients #Interchain security module
-3. A relayer delivers the message to the recipient by calling Mailbox.process(). The Mailbox verifies the message with the recipient’s ISM, and calls `recipient.handle()` to deliver the message.
+2. Hyperlane [relayer.md](../protocol/agents/relayer.md "mention") observe the dispatched messages and assemble metadata for the recipients Interchain Security Module
+3. A relayer delivers the message to the recipient by calling `Mailbox.process()`. The [messaging.md](../protocol/messaging.md "mention") verifies the message with the recipient’s ISM, and calls `recipient.handle()` to deliver the message.
 
 ## **How can I see the status of a message I have sent?**
 
-Paste an address or transaction hash into the search bar of the [Hyperlane Message Explorer](https://explorer.hyperlane.xyz/) to view details about a message’s status and history, from sent to finalized to validated to relayed. If the message has failed to send for some reason, there will be error messages indicating what may have gone wrong.
-
-Learn more about [Hyperlane's Explorer](https://explorer.hyperlane.xyz/) here [explorer](../build-with-hyperlane/explorer/ "mention")
+Paste an address or transaction hash into the search bar of the Hyperlane Message [explorer](../build-with-hyperlane/explorer/ "mention") to view details about a message’s status and history, from sent to finalized to validated to relayed. If the message has failed to send for some reason, there will be error messages indicating what may have gone wrong.
 
 ## **I can send interchain messages with Hyperlane — does that mean live chat/text?**
 
 We don’t recommend using Hyperlane in this manner — it would be very expensive. When we refer to message-passing, it’s the sending of arbitrary bytes between smart contracts rather than peer-to-peer or text messaging. There are several web3 projects that are suited to your use case; consider [XMTP](https://xmtp.org/) or [Push](https://push.org/) for this type of messaging.
 
-## **Are you a token bridge?**&#x20;
+## **Are you a token bridge?**
 
-Well, not exactly… Hyperlane is a[ Permissionless Interoperability Protocol ](broken-reference)that allows communication between blockchains. Token bridges are just one of many types of applications that can be built on top of Hyperlane! For more ideas what can be built on Hyperlane check out the question above.&#x20;
+Well, not exactly… Hyperlane is a [Broken link](broken-reference "mention") Protocol that allows communication between blockchains. Token bridges are just one of many types of applications that can be built on top of Hyperlane! For more ideas what can be built on Hyperlane check out the question above.
 
 Start building on Hyperlane [getting-started.md](../introduction/getting-started.md "mention")[quickstarts](../build-with-hyperlane/quickstarts/ "mention")[examples.md](../build-with-hyperlane/examples.md "mention")
 
@@ -84,7 +82,7 @@ For more extensive Troubleshooting check out or docs page [troubleshooting.md](.
 
 ## **I’m interested in joining the Hyperlane crew! How can I find out about careers?**
 
-Share our excitement for all things Interchain and [Permissionless Interoperability](../deploy/permissionless-interoperability.md). Check out Abacus Works [job openings](https://jobs.lever.co/Hyperlane)!
+Share our excitement for all things Interchain and [Broken link](broken-reference "mention"). Check out Abacus Works [job openings](https://jobs.lever.co/Hyperlane)!
 
 ## How can I contribute to improve this documentation?
 
