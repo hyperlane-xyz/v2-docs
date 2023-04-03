@@ -20,9 +20,9 @@ We encourage folks to validate on as many chains as they are interested in suppo
 
 ### Running the binary
 
-Refer to the [Installation](installation.md) instructions to access the validator binary.
+Refer to the [installation.md](installation.md "mention") instructions to access the validator binary.
 
-[Environment variables](environment-variables.md) can be placed in a `validator.env` file, for example:
+[environment-variables.md](environment-variables.md "mention") can be placed in a `validator.env` file, for example:
 
 {% code title="validator.env" overflow="wrap" %}
 ```sh
@@ -55,7 +55,7 @@ If you're supporting your own chain that you [permissionlessly deployed](broken-
 {% endhint %}
 
 {% hint style="info" %}
-If you're running a [locally set up validator](setup/local-setup.md) on the same machine, which requires a locally ran relayer to be able to access these validator signatures, be sure to [mount](https://docs.docker.com/storage/bind-mounts/) your local validator's signature directory on your host machine into your Docker container.
+If you're running with a [local-setup.md](setup/local-setup.md "mention") validator on the same machine, which requires a locally ran relayer to be able to access these validator signatures, be sure to [mount](https://docs.docker.com/storage/bind-mounts/) your local validator's signature directory on your host machine into your Docker container.
 
 For example, if your local validator is writing signatures to `/tmp/hyperlane-validator-signatures-ethereum`, you should mount that directory to the same path in the Docker container:
 
@@ -80,11 +80,11 @@ env $(cat validator.env | grep -v "#" | xargs) ./target/release/validator
 {% endtab %}
 {% endtabs %}
 
-If everything is configured correctly, you should see json files being written to your S3 bucket (if you followed the [AWS setup](setup/aws-setup.md)) or to your local signatures directory (if you followed the [Local setup](setup/local-setup.md)).
+If everything is configured correctly, you should see json files being written to your S3 bucket (if you followed the [aws-setup.md](setup/aws-setup.md "mention")) or to your local signatures directory (if you followed the [local-setup.md](setup/local-setup.md "mention")).
 
 ### Next
 
-You're not done yet! The final step is to [announce your validator](announcing-your-validator.md), which involves posting some information about your validator on chain.
+You're not done yet! The final step is [announcing-your-validator.md](announcing-your-validator.md "mention"), which involves posting some information about your validator on chain.
 
 {% content-ref url="announcing-your-validator.md" %}
 [announcing-your-validator.md](announcing-your-validator.md)

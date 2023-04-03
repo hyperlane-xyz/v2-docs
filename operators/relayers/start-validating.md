@@ -14,9 +14,9 @@ Coming soon™️
 
 ### Running the binary
 
-Refer to the [Installation](installation.md) instructions to access the relayer binary.
+Refer to the [installation.md](installation.md "mention") instructions to access the relayer binary.
 
-[Environment variables](environment-variables.md) can be placed in a `relayer.env` file, for example:
+[environment-variables.md](environment-variables.md "mention") can be placed in a `relayer.env` file, for example:
 
 {% code title="relayer.env" overflow="wrap" %}
 ```sh
@@ -35,7 +35,7 @@ To run the relayer binary with the environment variables specified in `relayer.e
 
 {% tabs %}
 {% tab title="Using Docker" %}
-Find the latest [Docker image](installation.md#docker-image) and set it to the environment variable `$DOCKER_IMAGE`.
+Find the latest [#docker-image](installation.md#docker-image "mention")and set it to the environment variable `$DOCKER_IMAGE`.
 
 Using the `--env-file` flag, we can pass in the environment variables to the relayer:
 
@@ -46,11 +46,11 @@ docker run -it --env-file relayer.env $DOCKER_IMAGE ./relayer
 {% endcode %}
 
 {% hint style="info" %}
-If you're supporting your own chain that you [permissionlessly deployed](broken-reference) and are specifying a path to your own config file in the `CONFIG_FILES` environment variable, check out the [config files with Docker section](../agent-configuration.md#config-files-with-docker).
+If you're supporting your own chain that via [Broken link](broken-reference "mention") and are specifying a path to your own config file in the `CONFIG_FILES` environment variable, check out [#config-files-with-docker](../agent-configuration.md#config-files-with-docker "mention").
 {% endhint %}
 
 {% hint style="info" %}
-If you're running a [locally set up validator](../validators/setup/local-setup.md) on the same machine and want the relayer to access these validator signatures, be sure to [mount](https://docs.docker.com/storage/bind-mounts/) your local validator's signature directory into your relayer at the same path that is [announced on chain](../validators/announcing-your-validator.md).
+If you're running validator with [local-setup.md](../validators/setup/local-setup.md "mention") on the same machine and want the relayer to access these validator signatures, be sure to [mount](https://docs.docker.com/storage/bind-mounts/) your local validator's signature directory into your relayer at the same path that you used when [announcing-your-validator.md](../validators/announcing-your-validator.md "mention").
 
 For example, if your local validator is writing signatures to `/tmp/hyperlane-validator-signatures-ethereum`, you should mount that directory to the same path in the Docker container:
 
@@ -63,7 +63,7 @@ docker run -it --env-file relayer.env --mount type=bind,source=/tmp/hyperlane-va
 {% endtab %}
 
 {% tab title="Building from source" %}
-See these instructions for [building from source](installation.md#building-from-source).
+See these instructions for [#building-from-source](installation.md#building-from-source "mention").
 
 We can run the built binary from within the `hyperlane-monorepo/rust` directory with the environment variables found in `relayer.env`:
 

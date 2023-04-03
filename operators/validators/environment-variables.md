@@ -4,9 +4,9 @@ description: Configure your validator
 
 # Environment variables
 
-Make sure that you have completed [Local Setup](setup/local-setup.md) or [AWS Setup](setup/aws-setup.md)
+Make sure that you have completed [local-setup.md](setup/local-setup.md "mention") or [aws-setup.md](setup/aws-setup.md "mention")
 
-Also take a look at the [Agent Configuration](../agent-configuration.md) page.
+Also take a look at the [agent-configuration.md](../agent-configuration.md "mention") page.
 
 ### Environment variables
 
@@ -29,7 +29,7 @@ These **required** environment variables differ based on which [setup](setup/) i
 
 {% tabs %}
 {% tab title="AWS setup" %}
-These are required environment variables that are specific to the [AWS setup](setup/aws-setup.md).
+These are required environment variables that are specific to the [aws-setup.md](setup/aws-setup.md "mention").
 
 | Environment variable                    | Description                                                                                                                                                           |
 | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -44,14 +44,14 @@ These are required environment variables that are specific to the [AWS setup](se
 {% endtab %}
 
 {% tab title="Local setup" %}
-These are required environment variables that are specific to the [Local setup](setup/local-setup.md).
+These are required environment variables that are specific to the [local-setup.md](setup/local-setup.md "mention").
 
-| Environment variable                  | Description                                                                                                                                                                                                                                                                                                                                                        |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `HYP_VALIDATOR_VALIDATOR_TYPE`        | Set to `hexKey`.                                                                                                                                                                                                                                                                                                                                                   |
-| `HYP_VALIDATOR_VALIDATOR_KEY`         | Your validator's private key, which is used to sign merkle roots.                                                                                                                                                                                                                                                                                                  |
-| `HYP_VALIDATOR_CHECKPOINTSYNCER_TYPE` | Set to `localStorage`.                                                                                                                                                                                                                                                                                                                                             |
-| `HYP_VALIDATOR_CHECKPOINTSYNCER_PATH` | <p>The path to your local directory where validator signatures will be written. This should be the value of <code>$MY_VALIDATOR_SIGNATURES_DIRECTORY</code> from the <a href="setup/local-setup.md#create-a-local-directory-for-your-validators-signatures">Local setup</a>.</p><p><em>Example:</em> <code>/tmp/hyperlane-validator-signatures-ethereum</code></p> |
+| Environment variable                  | Description                                                                                                                                                                                                                                                                                                       |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `HYP_VALIDATOR_VALIDATOR_TYPE`        | Set to `hexKey`.                                                                                                                                                                                                                                                                                                  |
+| `HYP_VALIDATOR_VALIDATOR_KEY`         | Your validator's private key, which is used to sign merkle roots.                                                                                                                                                                                                                                                 |
+| `HYP_VALIDATOR_CHECKPOINTSYNCER_TYPE` | Set to `localStorage`.                                                                                                                                                                                                                                                                                            |
+| `HYP_VALIDATOR_CHECKPOINTSYNCER_PATH` | <p>The path to your local directory where validator signatures will be written. This should be the value of <code>$MY_VALIDATOR_SIGNATURES_DIRECTORY</code> from the <a data-mention href="setup/local-setup.md">local-setup.md</a>.</p><p>Example: <code>/tmp/hyperlane-validator-signatures-ethereum</code></p> |
 {% endtab %}
 {% endtabs %}
 

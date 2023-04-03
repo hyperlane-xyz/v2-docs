@@ -7,52 +7,18 @@ description: Configure your signing key and S3 bucket
 {% hint style="info" %}
 These instructions are for a production environment where validator keys exist in AWS's Key Management Service and validator signatures are posted publicly in an S3 bucket.
 
-If you're only intending to run a validator for testing or development purposes, consider the [Local setup](local-setup.md) instead.
+If you're only intending to run a validator for testing or development purposes, consider the [local-setup.md](local-setup.md "mention") instead.
 {% endhint %}
 
-### Create an IAM user
+### 1. Create an AWS IAM user and KMS key
 
-This IAM user will be given permission to sign with the KMS key that you will later configure. Your Hyperlane validator will use this identity when signing.
+Follow the instructions for [aws-setup.md](../../agent-keys/aws-setup.md "mention") to generate an AWS IAM user and KMS key. You will use this user and key in the following steps.
 
-1. Go to AWS's Identity and Access Management (IAM) in the [AWS console](https://us-east-1.console.aws.amazon.com/iamv2/home).
-2. On the left, under "Access management", click "Users".
-3. Click the blue button "Add users".
-4. Pick a friendly and informative username, like `hyperlane-validator-${chain_name}`. This username will be referenced in future steps, so if you choose a different username be sure to use your correct username in the future.
-5. Click "Next", you do not need to assign the user any permissions.
-6. Click "Create user".
-7. Click into the user that you just created
-8. Click the "Security Credentials" tab
-9. Scroll down to "Access Keys" and click "Create Access Key"
-10. Select "Application running outside AWS" and click "Next"
-11. Click "Next", no need to add a description tag&#x20;
-12. Click "Create access key"
-13. Copy the "Access key ID" and "Secret access key" to a safe place. These will be passed to your Hyperlane validator as environment variables.
+{% content-ref url="../../agent-keys/aws-setup.md" %}
+[aws-setup.md](../../agent-keys/aws-setup.md)
+{% endcontent-ref %}
 
-### Create a KMS key
-
-This key will be used by your validator to sign `Mailbox` merkle roots.
-
-1. Go to AWS's Key Management Service (KMS) in the AWS console.
-2. Ensure you are in the region you want to create the key in. This can be confirmed by viewing the region at the top right of the console, or by finding the name in the URL's subdomain (e.g. `us-west-2.console.aws.amazon.com` means you're operating in the region `us-west-2`).
-3. On the left, click "Customer managed keys".
-4. Click "Create key".
-5. Select the "Asymmetric" key type.
-6. Select the "Sign and verify" key usage.
-7. Select the `ECC_SECG_P256K1` key spec.
-8. Click "Next".
-9. Set the Alias to something friendly and informative, like `hyperlane-validator-signer-${chain_name}`.
-10. While not necessary, feel free to write a description and add any tags that you think will be useful.
-11. Click "Next".
-12. A key administrator is not required, but if you want, you can select one.
-13. Click "Next".
-14. Give usage permissions to the IAM user you created in the previous section (e.g. `hyperlane-validator-{chain_name}`).
-15. Click "Next".
-16. In the Review page, scroll to the "Key policy". The generated key policy is acceptable, but you can make the access even less permissive if you wish by:
-    1. Removing the `kms:DescribeKey` and `kms:Verify` actions from the statement whose "Sid" is "Allow use of the key"
-    2. Removing the entire statement whose "Sid" is "Allow attachment of persistent resources".
-17. Click "Finish"
-
-### Create an S3 bucket
+### 2. Create an S3 bucket
 
 Your validator will post their signatures to this bucket.
 
@@ -68,7 +34,7 @@ Your validator will post their signatures to this bucket.
    4. Acknowledge that these settings may result in public access to your bucket
 7. The remaining default settings are fine, click the orange "Create bucket" button on the bottom
 
-### Configure S3 bucket permissions
+### 3. Configure S3 bucket permissions
 
 Your validator IAM user will need write permissions, and it should be publicly readable by relayers.
 
@@ -115,7 +81,7 @@ Your validator IAM user will need write permissions, and it should be publicly r
 
 ### Next
 
-Continue to the [Environment variables](../environment-variables.md) section.
+Continue to the [environment-variables.md](../environment-variables.md "mention") section.
 
 {% content-ref url="../environment-variables.md" %}
 [environment-variables.md](../environment-variables.md)

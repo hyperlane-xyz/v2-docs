@@ -10,14 +10,18 @@ The relayer is responsible for delivering messages to their destination chains. 
 
 A hexadecimal private key used for in-memory signing can be used by your relayer to sign transactions. This is the recommended setup for testing or development purposes.
 
-{% content-ref url="hexadecimal-key-setup.md" %}
-[hexadecimal-key-setup.md](hexadecimal-key-setup.md)
+{% content-ref url="../agent-keys/hexadecimal-key-setup.md" %}
+[hexadecimal-key-setup.md](../agent-keys/hexadecimal-key-setup.md)
 {% endcontent-ref %}
 
-## AWS KMS Setup
+## AWS KMS keys
 
 An AWS KMS key can be used by your relayer to sign transactions. This is the recommended setup for production relayers.
 
-{% content-ref url="aws-setup.md" %}
-[aws-setup.md](aws-setup.md)
+{% content-ref url="../agent-keys/aws-setup.md" %}
+[aws-setup.md](../agent-keys/aws-setup.md)
 {% endcontent-ref %}
+
+## Next
+
+After you've configured your relayer keys, continue to the [environment-variables.md](environment-variables.md "mention") section.

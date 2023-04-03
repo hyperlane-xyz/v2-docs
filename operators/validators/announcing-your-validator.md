@@ -4,7 +4,7 @@ description: Announcing information about your validator
 
 # Announcing your validator
 
-[Relayers](../../protocol/agents/relayer.md) need to know where to find your validator's signatures. You can make relayers aware of your validator by writing to the `ValidatorAnnounce` contract on the chain that you're validating.
+[relayer.md](../../protocol/agents/relayer.md "mention") need to know where to find your validator's signatures. You can make relayers aware of your validator by writing to the `ValidatorAnnounce` contract on the chain that you're validating.
 
 ### Getting your validator's signed announcement
 
@@ -12,7 +12,7 @@ First, find the signed announcement JSON object automatically created by your va
 
 {% tabs %}
 {% tab title="AWS S3 validators" %}
-If you followed the [AWS setup](setup/aws-setup.md) instructions, to find your signed announcement:
+If you followed the [aws-setup.md](setup/aws-setup.md "mention") instructions, to find your signed announcement:
 
 1. Navigate to your S3 bucket in the AWS console.
 2. Select the `announcement.json` object.
@@ -20,7 +20,7 @@ If you followed the [AWS setup](setup/aws-setup.md) instructions, to find your s
 {% endtab %}
 
 {% tab title="Local validators" %}
-If you followed the [Local setup](setup/local-setup.md) instructions, you can find your signed announcement by running:
+If you followed the [local-setup.md](setup/local-setup.md "mention") instructions, you can find your signed announcement by running:
 
 {% code overflow="wrap" %}
 ```sh
