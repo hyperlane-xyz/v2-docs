@@ -8,7 +8,7 @@ description: Aggregate security from multiple ISMs
 `AggregationISM` is coming soon and is not yet implemented. This page is shown for informational purposes only. Details may change as the design matures.
 {% endhint %}
 
-Developers can use an `AggregationISM` to combine security from multiple ISMs. Simply put, an `AggregationISM` requires that `m` of `n` __ ISMs __ verify a particular interchain message.
+Developers can use an `AggregationISM` to combine security from multiple ISMs. Simply put, an `AggregationISM` requires that `m` of `n` ISMs verify a particular interchain message.
 
 ## Interface
 

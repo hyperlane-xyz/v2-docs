@@ -6,7 +6,7 @@ description: Build interchain smart contracts
 
 The solidity SDK ([`@hyperlane-xyz/core`](https://www.npmjs.com/package/@hyperlane-xyz/core)) contains smart contract libraries for helping you write your interchain apps, including:
 
-### ``[`HyperlaneConnectionClient`](abacusconnectionclient.md)&#x20;
+### [`HyperlaneConnectionClient`](abacusconnectionclient.md)&#x20;
 
 A mix-in that your contract can inherit from when integrating with Hyperlane.
 

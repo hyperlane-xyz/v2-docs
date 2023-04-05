@@ -4,7 +4,7 @@ Two different types of IGP contracts are provided. Read below to understand whic
 
 #### When using the default ISM (for most applications)
 
-If your application makes use of the default [Interchain Security Module](../../receive-1.md#interchain-security-modules) (ISM) for security by either not specifying a [custom ISM](../../receive-1.md#specifying-custom-isms) or specifying **** the [MultisigIsm](../../../../resources/addresses.md#multisigism), your application can make use of the **`DefaultIsmInterchainGasPaymaster`**.
+If your application makes use of the default [Interchain Security Module](../../receive-1.md#interchain-security-modules) (ISM) for security by either not specifying a [custom ISM](../../receive-1.md#specifying-custom-isms) or specifying the [MultisigIsm](../../../../resources/addresses.md#multisigism), your application can make use of the **`DefaultIsmInterchainGasPaymaster`**.
 
 {% hint style="info" %}
 The default ISM is the default security module for Hyperlane messages, so if you don't know if you're using the default ISM for security, then you are automatically using the default ISM.

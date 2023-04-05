@@ -40,7 +40,7 @@ The `verify()` function takes two parameters.
 
 The first, `_metadata`, consists of arbitrary bytes provided by [relayer.md](../agents/relayer.md "mention"). Typically, these bytes are specific to the ISM. For example, for a [multisig-ism.md](multisig-ism.md "mention"), `_metadata` must include validator signatures.
 
-The second, `_message`, consists of the Hyperlane message being verified. ISMs can use this to inspect details about the message being verified. For example, a [multisig-ism.md](multisig-ism.md "mention") **** could change validator sets based on the origin chain of the message.
+The second, `_message`, consists of the Hyperlane message being verified. ISMs can use this to inspect details about the message being verified. For example, a [multisig-ism.md](multisig-ism.md "mention") could change validator sets based on the origin chain of the message.
 
 {% hint style="warning" %}
 See the [`Message.sol`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/libs/Message.sol) library for more information on the format of the Hyperlane message passed to `verify()`
