@@ -40,7 +40,7 @@ As mentioned in the [customization instructions](https://github.com/hyperlane-xy
 }
 ```
 
-Under `hypCollateralAddress`, specify the router address that you got on the collateral chain (`goerli` in the example config).
+You can replace the `tokens` entry with the output that was written to `hyperlane-deploy/artifacts/warp-ui-token-list.json` when you followed the instructions to [deploy-a-warp-route.md](deploy-a-warp-route.md "mention").
 
 ### Deploy the UI
 
