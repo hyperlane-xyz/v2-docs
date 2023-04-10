@@ -14,8 +14,6 @@
 
 * [Overview](deploy/permissionless-interoperability.md)
 * [Deploy Hyperlane](deploy/deploy-hyperlane/README.md)
-  * [Validators](https://docs.hyperlane.xyz/docs/operators/validators)
-  * [Relayers](https://docs.hyperlane.xyz/docs/operators/relayers)
   * [Keys](deploy/deploy-hyperlane/keys.md)
   * [Deploy contracts](deploy/deploy-hyperlane/deploy-contracts.md)
   * [Run validators](deploy/deploy-hyperlane/run-validators.md)

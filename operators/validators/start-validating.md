@@ -80,7 +80,7 @@ env $(cat validator.env | grep -v "#" | xargs) ./target/release/validator
 {% endtab %}
 {% endtabs %}
 
-If everything is configured correctly, you should see json files being written to your S3 bucket (if you followed the [aws-setup.md](setup/aws-setup.md "mention")) or to your local signatures directory (if you followed the [local-setup.md](setup/local-setup.md "mention")).
+If everything is configured correctly, you should see json files being written to your S3 bucket (if you followed the [aws-setup.md](setup/aws-setup.md "mention")) or to your local signatures directory (if you followed the [local-setup.md](setup/local-setup.md "mention")). New json files get written every time a new outbound message is inserted into the [messaging.md](../../protocol/messaging.md "mention").
 
 ### Next
 

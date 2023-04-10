@@ -26,7 +26,7 @@ DEBUG=hyperlane* yarn ts-node scripts/test-messages.ts \
 If everything ran successfully, congrats! You should something similar to the following output:
 
 ```bash
-$ DEBUG=hyperlane* yarn ts-node scripts/test.ts --chains anvil goerli --key 0x6f0311f4a0722954c46050bb9f088c4890999e16b64ad02784d24b5fd6d09060
+$ DEBUG=hyperlane* yarn ts-node scripts/test-messages.ts --chains anvil goerli --key 0x6f0311f4a0722954c46050bb9f088c4890999e16b64ad02784d24b5fd6d09060
 Sent message from anvil to 0xBC3cFeca7Df5A45d61BC60E7898E63670e1654aE on goerli with message ID 0x5ad21a8dcfe2cd91d3e59e26f2ef7f01f6ab1850ef5922233c7776eacff8d8b0
 Sent message from goerli to 0xBC3cFeca7Df5A45d61BC60E7898E63670e1654aE on anvil with message ID 0x27f8fcf9151c7bcc50408b2ca1df027346740f0b40b8e516b04b4a09a6757f69
 Message from anvil to goerli with ID 0x5ad21a8dcfe2cd91d3e59e26f2ef7f01f6ab1850ef5922233c7776eacff8d8b0 has not yet been delivered

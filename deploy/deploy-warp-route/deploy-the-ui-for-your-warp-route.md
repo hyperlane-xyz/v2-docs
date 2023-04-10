@@ -12,7 +12,7 @@ Follow these [instructions](https://github.com/hyperlane-xyz/hyperlane-warp-ui-t
 
 #### Configure Tokens
 
-As mentioned in the [customization instructions](https://github.com/hyperlane-xyz/hyperlane-warp-ui-template/blob/main/CUSTOMIZE.md), the UI repo contains a token list (see `./src/consts/tokens.json)`which much be updated. The default list looks like this:
+As mentioned in the [customization instructions](https://github.com/hyperlane-xyz/hyperlane-warp-ui-template/blob/main/CUSTOMIZE.md), the UI repo contains a token list (see `./src/consts/tokens.json)`which must be updated. It looks like this.
 
 ```
 {

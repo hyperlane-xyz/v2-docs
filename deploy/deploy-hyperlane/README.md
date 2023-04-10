@@ -10,9 +10,13 @@ Hyperlane is designed to be deployed to new chains by anyone, at any time. Read 
 
 ## Overview
 
-This tutorial is intended for users who want to deploy Hyperlane to a new EVM chain, so that interchain messages can be sent between that local chain and other remote chains with Hyperlane deployments.
+This tutorial is intended for users who want to deploy Hyperlane to a new EVM chain.
 
-At a high level, this requires the following actions:
+By the end of this guide you will have deployed and configured the Hyperlane [messaging-api](../../apis/messaging-api/ "mention"), allowing developers to send interchain messages to and from your chain.
+
+This will also allow developers to deploy [deploy-warp-route](../deploy-warp-route/ "mention") that include your chain, allowing tokens to move freely to and from your chain.
+
+At a high level, deploying Hyperlane requires the following actions:
 
 1. Setting up the [keys.md](keys.md "mention") you will use to deploy contracts and run validators and relayers
 2. Deploying Hyperlane contracts to the local chain and to every remote chain with which the local chain will be able to send and receive messages.

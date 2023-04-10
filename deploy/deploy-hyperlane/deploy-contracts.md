@@ -20,7 +20,7 @@ On all chains, we will deploy:
 If you have not yet set up your deployer, validator, and relayer keys, see [keys.md](keys.md "mention")
 {% endhint %}
 
-First, set up the `hyperlane-deploy` repo. This repo contain scripts to deploy Hyperlane contracts. You will need  to install [`yarn`](https://yarnpkg.com/getting-started/install) if you haven't already.
+First, set up the `hyperlane-deploy` repo. This repo contain scripts to deploy Hyperlane contracts. You will need to install [`yarn`](https://yarnpkg.com/getting-started/install) if you haven't already.
 
 ```bash
 git clone git@github.com:hyperlane-xyz/hyperlane-deploy.git
@@ -46,7 +46,7 @@ export const chains: ChainMap<ChainMetadata> = {
 };
 ```
 
-Finally, add the `MultisigIsmConfig` entry for your local chaina to `hyperlane-deploy/config/multisig_ism.ts`. An example has been populated for you for `anvil`.
+Finally, add the `MultisigIsmConfig` entry for your local chaina to `hyperlane-deploy/config/multisig_ism.ts`. An example with a single validator has been populated for you for `anvil`.
 
 ```typescript
 export const multisigIsmConfig: ChainMap<MultisigIsmConfig> = {
@@ -72,7 +72,7 @@ You can then run `yarn ts-node script scripts/deploy.ts` to deploy the Hyperlane
 An example deployment command to `anvil` that supports communication with `goerli` and `sepolia` is shown below:
 
 ```bash
-DEBUG=hyperlane* yarn ts-node script scripts/deploy.ts --local anvil \
+DEBUG=hyperlane* yarn ts-node scripts/deploy-hyperlane.ts --local anvil \
   --remotes goerli sepolia \
   --key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
 ```

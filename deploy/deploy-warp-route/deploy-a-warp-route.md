@@ -24,7 +24,7 @@ $ yarn build
 You will need to create a `WarpRouteConfig`  in [`hyperlane-deploy/config/warp_tokens.ts`](https://github.com/hyperlane-xyz/hyperlane-deploy/blob/main/config/warp\_tokens.ts) to define your Warp Route. This will include information such as:
 
 * Which token, on which chain, is this Warp Route being created for?
-* Optional Hyperlane connection details including contract addresses for [messaging.md](../../protocol/messaging.md "mention"), [interchain-gas-paymasters.md](../../build-with-hyperlane/guides/paying-for-interchain-gas/interchain-gas-paymasters.md "mention"), and [sovereign-consensus](../../protocol/sovereign-consensus/ "mention")
+* Optional Hyperlane connection details including contract addresses for [messaging.md](../../protocol/messaging.md "mention"), [interchain-gas-paymasters.md](../../build-with-hyperlane/guides/paying-for-interchain-gas/interchain-gas-paymasters.md "mention"), and [sovereign-consensus](../../protocol/sovereign-consensus/ "mention").
 
 #### Base
 
@@ -136,7 +136,7 @@ Run the following script to test your Warp Route by transferring tokens from one
 $ DEBUG=hyperlane* yarn ts-node scripts/test-warp-transfer.ts \
   --origin anvil1 --destination anvil2 --wei 1 \
   --recipient 0xac0974bec39a17e36ba4a6b4d238ff944bacb4a5 \
-  --key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 \
+  --key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
 ```
 
 If everything goes well, you should see the following output:

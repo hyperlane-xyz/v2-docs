@@ -4,10 +4,8 @@ description: Everything you need to start running a validator
 
 # Validators
 
-Hyperlane [validators](../../../protocol/agents/validators.md) are stateless, do not submit transactions, and are not networked with other validators. Hyperlane validators are run on a per-origin-chain basis, and these instructions are written for a single chain.
+Hyperlane [validators](../../protocol/agents/validators.md) are stateless, do not submit transactions, and are not networked with other validators. Hyperlane validators are run on a per-origin-chain basis, and these instructions are written for a single chain.
 
-<!-- INCLUDE diagrams/multisig-pos-ism.md -->
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
 ```mermaid
 %%{ init: {
   "theme": "neutral",
@@ -64,30 +62,28 @@ flowchart TB
     style Sender fill:#efab17
     style Recipient fill:#efab17
 ```
-<!-- WARNING: copied from the included file path. Do not edit directly. -->
-<!-- END -->
 
 Running a validator simply requires the following:
 
-#### An RPC node&#x20;
+#### An RPC node
 
-Validators make simple view calls to read merkle roots from the [`Mailbox`](../../../protocol/messaging.md) contract on the chain they are validating for.
+Validators make simple view calls to read merkle roots from the [`Mailbox`](../../protocol/messaging.md) contract on the chain they are validating for.
 
 {% hint style="warning" %}
 Operating a validator for Polygon mainnet requires access to an archive node. This is because validators should only sign roots once they've been finalized, and Polygon requires 256 block confirmations to achieve finality.
 {% endhint %}
 
-#### A secure signing key&#x20;
+#### A secure signing key
 
-Validators use this key to sign the `Mailbox's` latest merkle root. Securing this key is important. If it is compromised, attackers can attempt to falsify messages, causing the validator to be slashed.&#x20;
+Validators use this key to sign the `Mailbox's` latest merkle root. Securing this key is important. If it is compromised, attackers can attempt to falsify messages, causing the validator to be slashed.
 
-The Hyperlane validator agent currently supports signing with AWS KMS keys that are accessed via API keys/secrets.
+The Hyperlane validator agent currently supports signing with AWS KMS keys that are accessed via API keys/secrets as well as hexadecimal plaintext keys for testing. See more under [agent-keys](../agent-keys/ "mention").
 
-#### Publicly readable storage&#x20;
+#### Publicly readable storage
 
-Validators write their signatures off-chain to publicly accessible, highly available, storage, so that they can be aggregated by [relayers](../../../protocol/agents/relayer.md).&#x20;
+Validators write their signatures off-chain to publicly accessible, highly available, storage, so that they can be aggregated by [relayers](../../protocol/agents/relayer.md).
 
-The Hyperlane validator agent currently supports storing signatures on AWS S3 using the same AWS API key above.&#x20;
+The Hyperlane validator agent currently supports storing signatures on AWS S3 using the same AWS API key above.
 
 #### A machine to run on
 

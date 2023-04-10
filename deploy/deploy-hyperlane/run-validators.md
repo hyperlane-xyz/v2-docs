@@ -4,9 +4,7 @@ description: Securing outbound messages from your chain
 
 # Run validators
 
-Follow the [validators](../../operators/validators/ "mention")guide to run validators for the [messaging.md](../../protocol/messaging.md "mention")on your local chain.
-
-These validators will provide the security for messages sent **from** your chain **to** remote chains.
+Follow the [validators](../../operators/validators/ "mention") guide to run validators for the [messaging.md](../../protocol/messaging.md "mention")on your local chain. These validators will provide the security for messages sent **from** your chain **to** remote chains.&#x20;
 
 Include the agent config from the [deploy-contracts.md](deploy-contracts.md "mention") step in `CONFIG_FILES`. If you're using Docker, you will need to mount the file into the container.
 
