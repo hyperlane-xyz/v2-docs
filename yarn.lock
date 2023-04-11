@@ -365,42 +365,53 @@
     "@ethersproject/properties" "^5.7.0"
     "@ethersproject/strings" "^5.7.0"
 
-"@hyperlane-xyz/core@1.2.2", "@hyperlane-xyz/core@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/core/-/core-1.2.2.tgz#cfe2fac90e102112bae6497531f946ef6c870981"
-  integrity sha512-io4LdU5zGlCbhbawGyrNNxGc5iq9WigHg1I5vOuzhiwe3SJSo3KvGV2ev3zTl+lv4UeUzopK2wplbcu9V1GfEQ==
+"@hyperlane-xyz/core@1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/core/-/core-1.3.1.tgz#d67636b6557835a1f91cf738b0ff9b997f70fbaa"
+  integrity sha512-/ahpo2ZsDHz4sPE6kbeWmbyMyAQcq+lje4bbYLwW4WNhw4K4HVYmyI2h2M9KDVKLg82OzpEnvclxQARqIShSgA==
   dependencies:
-    "@hyperlane-xyz/utils" "1.2.2"
+    "@hyperlane-xyz/utils" "1.3.1"
     "@openzeppelin/contracts" "^4.8.0"
     "@openzeppelin/contracts-upgradeable" "^4.8.0"
 
-"@hyperlane-xyz/helloworld@^1.2.0":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/helloworld/-/helloworld-1.2.2.tgz#1107b78d522b2f79bb97b7200ef39fe5b6ad826f"
-  integrity sha512-wvZVbfEERylxKZgbMs5GKK99Mhl3y+TvAduPBe70sJv9qz02upo1vnJMefjxL4pg7Vod5uQIQBALQgFvxkPhKA==
+"@hyperlane-xyz/core@1.3.2", "@hyperlane-xyz/core@^1.3.2":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/core/-/core-1.3.2.tgz#167e3b4f2dff18917d8283a371c63829e6613e78"
+  integrity sha512-gATJkN2RBm7qn8rcNWwvlDr2bQZ3fipon07nwO7FAbaXEGDteVXGtOIzMyCqU8v9Jo+uZKZYf83+mPWmANOhdg==
   dependencies:
-    "@hyperlane-xyz/sdk" "1.2.2"
+    "@hyperlane-xyz/utils" "1.3.2"
+    "@openzeppelin/contracts" "^4.8.0"
+    "@openzeppelin/contracts-upgradeable" "^4.8.0"
+
+"@hyperlane-xyz/helloworld@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/helloworld/-/helloworld-1.3.1.tgz#e452c316bd4cb2d1d8d3d1976a90c289a3f84b4e"
+  integrity sha512-H8jTZu9UuGtTzd82PfrvBDjMY7A5fMFAAUf2afK7GgCj0K8T83gtMYxB6EgSsz5JG08YQW0UCb5SYj9+lccJDQ==
+  dependencies:
+    "@hyperlane-xyz/sdk" "1.3.1"
     "@openzeppelin/contracts-upgradeable" "^4.8.0"
     ethers "^5.7.2"
 
-"@hyperlane-xyz/hyperlane-token@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/hyperlane-token/-/hyperlane-token-1.2.2.tgz#7a96f3ff0937c4b4cd08dd7eb5c75c298095a560"
-  integrity sha512-NS+pseh3nul7z3swVkmSKxs2+epLLXeViOqj9XSvQyyq8QtMTIhkbQEUxPUmm2epVnHF5aSaqidRQuKlg4fjWQ==
+"@hyperlane-xyz/hyperlane-token@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/hyperlane-token/-/hyperlane-token-1.3.1.tgz#317f729fd29b7eac6b73cd94887e94efafd6fab6"
+  integrity sha512-T5GiSne1bTx4ZEo4rbcOLInBJmNdyEIX/RSroDGG/LO3t4RMoW2VDtv3wEatf1yPITiYli99P/uuFPzcr2s8fw==
   dependencies:
-    "@hyperlane-xyz/core" "1.2.2"
-    "@hyperlane-xyz/sdk" "1.2.2"
-    "@hyperlane-xyz/utils" "1.2.2"
+    "@hyperlane-xyz/core" "1.3.1"
+    "@hyperlane-xyz/sdk" "1.3.1"
+    "@hyperlane-xyz/utils" "1.3.1"
     "@openzeppelin/contracts-upgradeable" "^4.8.0"
     ethers "^5.7.2"
 
-"@hyperlane-xyz/sdk@1.2.2", "@hyperlane-xyz/sdk@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/sdk/-/sdk-1.2.2.tgz#33d76effa064ca211e888cbb1357e91ace24c892"
-  integrity sha512-gz4hM6RPZaOcNjusMNpddpq7SKX6uCS9o8IKr+TLUK1em5ggOkgkCl0ABD+ZBcaTt7KlqFFYVAGhH3sjxMvrXg==
+"@hyperlane-xyz/sdk@1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/sdk/-/sdk-1.3.1.tgz#bdfb2664b4b3a509598c412734837910ecceec88"
+  integrity sha512-aXLEk0IACWUWd/e9uiDvcJRxSGC5O8hZ4gl0Zz5nGkq7GeDMJuZN1D//KBSh4224nFsYLmzTfh5Agk6OtVkJAA==
   dependencies:
-    "@hyperlane-xyz/core" "1.2.2"
-    "@hyperlane-xyz/utils" "1.2.2"
+    "@hyperlane-xyz/core" "1.3.1"
+    "@hyperlane-xyz/utils" "1.3.1"
+    "@types/coingecko-api" "^1.0.10"
+    "@types/debug" "^4.1.7"
     "@wagmi/chains" "^0.2.6"
     coingecko-api "^1.0.10"
     cross-fetch "^3.1.5"
@@ -408,10 +419,33 @@
     ethers "^5.7.2"
     zod "^3.21.2"
 
-"@hyperlane-xyz/utils@1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/utils/-/utils-1.2.2.tgz#31ae030429d912724e6590b352b51250fc499373"
-  integrity sha512-MsiZE6Rw6fdN8gWRfhHqvic4+8wV/Ju51PibmulhsomNR8dJQc1d7Aexj3fnYr4VEZrZd1lQEc+BgQFCMuFOBg==
+"@hyperlane-xyz/sdk@^1.3.2":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/sdk/-/sdk-1.3.2.tgz#e3512de1ca73adb56331693f7222f11e112f0fa8"
+  integrity sha512-Ro2SSxQqbjBL90qbbcf+HRUcxS8dgn4aQMlWS7K6GyDMGbNHwakOFoLFnLqS2eYZLPSuBtCMdoGceJ+MCd9fTg==
+  dependencies:
+    "@hyperlane-xyz/core" "1.3.2"
+    "@hyperlane-xyz/utils" "1.3.2"
+    "@types/coingecko-api" "^1.0.10"
+    "@types/debug" "^4.1.7"
+    "@wagmi/chains" "^0.2.6"
+    coingecko-api "^1.0.10"
+    cross-fetch "^3.1.5"
+    debug "^4.3.4"
+    ethers "^5.7.2"
+    zod "^3.21.2"
+
+"@hyperlane-xyz/utils@1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/utils/-/utils-1.3.1.tgz#acb8fbe9030fe0504720fc3d8410b6f9b65715af"
+  integrity sha512-I+TxITmatsYNQ9pSkxvcd5rtvKb04wRU96H5pwQKzb8nDjzEV/lheJN0W1zumyV101KVV3cNyTlb+nBog0Fu9w==
+  dependencies:
+    ethers "^5.7.2"
+
+"@hyperlane-xyz/utils@1.3.2":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/utils/-/utils-1.3.2.tgz#ff1dd51f4748476ebb44b49566d101d655aea418"
+  integrity sha512-EmVa6egF9nlBG2MVIYnyWrK18aPe67cipU01BVnKN5DXSofB/13LA7WKaXnVH4eXwrbeefTWOqsDNBe7aDfKTw==
   dependencies:
     ethers "^5.7.2"
 
@@ -477,6 +511,11 @@
   dependencies:
     "@types/estree" "*"
 
+"@types/coingecko-api@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@types/coingecko-api/-/coingecko-api-1.0.10.tgz#e841f75c1dc5c6ab8f251011b28a9aec0576ec19"
+  integrity sha512-ENJO5JzV7qTj8GfrRWAy8lom4RPQv03stvw2z9riz0z7WOXcaorc8OPov8JEekoGQ397O1BbvgPjZj7bWgqdgg==
+
 "@types/concat-stream@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@types/concat-stream/-/concat-stream-2.0.0.tgz#a716f0ba9015014e643addb351da05a73bef425c"
@@ -484,7 +523,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/debug@^4.0.0":
+"@types/debug@^4.0.0", "@types/debug@^4.1.7":
   version "4.1.7"
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.7.tgz#7cc0ea761509124709b8b2d1090d8f6c17aadb82"
   integrity sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==
