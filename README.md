@@ -6,7 +6,7 @@ description: Pioneering permissionless and modular interoperability between bloc
 
 Hyperlane is the first [permissionless interoperability](deploy/permissionless-interoperability.md) layer. Empowering developers to bring interoperability functionality to any blockchain environment, whether it is a layer 1, a rollup, or an appchain. First of its kind, Hyperlane is the only interoperability solution that can be [permissionlessly deployed](deploy/deploy-hyperlane/) on any chain, by anyone. With its modular architecture, notably its [sovereign-consensus](protocol/sovereign-consensus/ "mention"), Hyperlane gives developers control over their security model, and an ability to choose from a menu of options augmented by strong defaults.
 
-With Hyperlane deployed on their chains of choice developers can start building Interchain Applications, apps that can serve users on any chain connected to Hyperlane. [Handling](apis/messaging-api/receive.md) the burden of interoperability on behalf of their users, and offering a superior experience.
+With Hyperlane deployed on their chains of choice, developers can start building Interchain Applications: apps that can serve users on any chain connected to Hyperlane. By [handling](apis/messaging-api/receive.md) the burden of interoperability on behalf of their users, interchain applications offer a superior experience.
 
 [Building with Hyperlane ](build-with-hyperlane/quickstarts/)means access to innovative middlewares such as Hyperlane's [Warp Routes](apis/warp-api.md) that provide developers with the ability to port over assets to any chain while leveraging all of the unique features that emerge from Hyperlane's modular architecture.
 
