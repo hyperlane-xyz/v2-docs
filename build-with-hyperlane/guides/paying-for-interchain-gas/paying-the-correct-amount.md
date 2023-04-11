@@ -1,6 +1,10 @@
-# Paying the Correct Amount
+---
+description: Get a quote for your interchain gas payment
+---
 
-### `quoteGasPayment`
+# Paying the correct amount
+
+## Quoting gas payments
 
 The `IInterchainGasPaymaster` interface provides a view function that quotes the required gas payment in origin chain native tokens:
 
@@ -13,10 +17,11 @@ interface IInterchainGasPaymaster {
 }
 ```
 
-This function can be called directly on or off chain, or using the Hyperlane SDK's [InterchainGasCalculator](../../../sdks/building-applications/nodejs-sdk/gas.md).
+This function can be called directly on or off chain.
 
-The provided InterchainGasPaymaster contracts will refund any overpayment to the `_refundAddress` passed to the `payForGas` function. See [Refunds](refunds.md) below for more information.
+The provided InterchainGasPaymaster contracts will refund any overpayment to the `_refundAddress` passed to the `payForGas` function. See [refunds.md](refunds.md "mention") for more information.
 
 {% hint style="warning" %}
-Because a refund may be made to the `_refundAddress`, special care should be made by an application to ensure this does not present a vector for reentrancy. See [Reentrancy Risk](refunds.md#reentrancy-risk) for more details.
+Because a refund may be made to the `_refundAddress`, special care should be made by an application to ensure this does not present a vector for reentrancy. See [#reentrancy-risk](refunds.md#reentrancy-risk "mention") for more details.
 {% endhint %}
+
