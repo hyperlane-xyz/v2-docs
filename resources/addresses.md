@@ -87,29 +87,15 @@ Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-
 
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Celo      | `0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5` | [View on celoscan.io](https://celoscan.io/address/0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5)                         |
-| Ethereum  | `0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5` | [View on etherscan.io](https://etherscan.io/address/0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5)                       |
-| Avalanche | `0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5` | [View on snowtrace.io](https://snowtrace.io/address/0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5)                       |
-| Polygon   | `0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5` | [View on polygonscan.com](https://polygonscan.com/address/0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5)                 |
-| Bsc       | `0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5` | [View on bscscan.com](https://bscscan.com/address/0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5)                         |
-| Arbitrum  | `0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5` | [View on arbiscan.io](https://arbiscan.io/address/0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5)                         |
-| Optimism  | `0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5` | [View on optimistic.etherscan.io](https://optimistic.etherscan.io/address/0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5) |
-| Moonbeam  | `0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5` | [View on moonscan.io](https://moonscan.io/address/0xE0Be420779cAd6E2bEA1E4F7C02F996D9ED1fCB5)                         |
-
-
-### Create2Factory
-
-| Network   | Address                                      | Explorer                                                                                                              |
-| --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Celo      | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on celoscan.io](https://celoscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                         |
-| Ethereum  | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on etherscan.io](https://etherscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                       |
-| Avalanche | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on snowtrace.io](https://snowtrace.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                       |
-| Polygon   | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on polygonscan.com](https://polygonscan.com/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                 |
-| Bsc       | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on bscscan.com](https://bscscan.com/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                         |
-| Arbitrum  | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on arbiscan.io](https://arbiscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                         |
-| Optimism  | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on optimistic.etherscan.io](https://optimistic.etherscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a) |
-| Moonbeam  | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on moonscan.io](https://moonscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                         |
-| Gnosis    | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on gnosisscan.io](https://gnosisscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                     |
+| Celo      | `0xB193eBf06faD5D66492BB41DBbCd202640aE83fF` | [View on celoscan.io](https://celoscan.io/address/0xB193eBf06faD5D66492BB41DBbCd202640aE83fF)                         |
+| Ethereum  | `0x5fD075C2157567F7F80e6cB20dDd75F40905bd87` | [View on etherscan.io](https://etherscan.io/address/0x5fD075C2157567F7F80e6cB20dDd75F40905bd87)                       |
+| Avalanche | `0x77c509140A45B4B85E1A28f8c21AaEB3Ca8788B3` | [View on snowtrace.io](https://snowtrace.io/address/0x77c509140A45B4B85E1A28f8c21AaEB3Ca8788B3)                       |
+| Polygon   | `0x4a4D878c41C7F71eCff182F526b7691aDC6e4150` | [View on polygonscan.com](https://polygonscan.com/address/0x4a4D878c41C7F71eCff182F526b7691aDC6e4150)                 |
+| Bsc       | `0xF9A4e3BA5e532906c241310f6832d2Ee8D1c5609` | [View on bscscan.com](https://bscscan.com/address/0xF9A4e3BA5e532906c241310f6832d2Ee8D1c5609)                         |
+| Arbitrum  | `0xAC2BE81884C66E6c05B80C05C907B54C74eA2C49` | [View on arbiscan.io](https://arbiscan.io/address/0xAC2BE81884C66E6c05B80C05C907B54C74eA2C49)                         |
+| Optimism  | `0x652e2F475Af7b1154817E09f5408f9011037492a` | [View on optimistic.etherscan.io](https://optimistic.etherscan.io/address/0x652e2F475Af7b1154817E09f5408f9011037492a) |
+| Moonbeam  | `0x5b6311e0417CfD3Fb10318108897E63777CFE8D7` | [View on moonscan.io](https://moonscan.io/address/0x5b6311e0417CfD3Fb10318108897E63777CFE8D7)                         |
+| Gnosis    | `0x32e77b20bf0cf034eB80ea9DD02De881016B01B3` | [View on gnosisscan.io](https://gnosisscan.io/address/0x32e77b20bf0cf034eB80ea9DD02De881016B01B3)                     |
 
 
 ### ValidatorAnnounce
@@ -209,29 +195,15 @@ Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-
 
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Alfajores      | `0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D` | [View on alfajores.celoscan.io](https://alfajores.celoscan.io/address/0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D)               |
-| Fuji           | `0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D` | [View on testnet.snowtrace.io](https://testnet.snowtrace.io/address/0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D)                 |
-| Mumbai         | `0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D` | [View on mumbai.polygonscan.com](https://mumbai.polygonscan.com/address/0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D)             |
-| Bsctestnet     | `0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D` | [View on testnet.bscscan.com](https://testnet.bscscan.com/address/0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D)                   |
-| Goerli         | `0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D` | [View on goerli.etherscan.io](https://goerli.etherscan.io/address/0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D)                   |
-| Moonbasealpha  | `0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D)                 |
-| Optimismgoerli | `0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D) |
-| Arbitrumgoerli | `0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D)                     |
-
-
-### Create2Factory
-
-| Network        | Address                                      | Explorer                                                                                                                        |
-| -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Alfajores      | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on alfajores.celoscan.io](https://alfajores.celoscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)               |
-| Fuji           | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on testnet.snowtrace.io](https://testnet.snowtrace.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                 |
-| Mumbai         | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on mumbai.polygonscan.com](https://mumbai.polygonscan.com/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)             |
-| Bsctestnet     | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on testnet.bscscan.com](https://testnet.bscscan.com/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                   |
-| Goerli         | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on goerli.etherscan.io](https://goerli.etherscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                   |
-| Moonbasealpha  | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                 |
-| Optimismgoerli | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a) |
-| Arbitrumgoerli | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                     |
-| Sepolia        | `0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a` | [View on sepolia.etherscan.io](https://sepolia.etherscan.io/address/0xc97D8e6f57b0d64971453dDc6EB8483fec9d163a)                 |
+| Alfajores      | `0xDb91D575F17d8AAf1aFEC0eaDBD5Ac9e5Cef4ad0` | [View on alfajores.celoscan.io](https://alfajores.celoscan.io/address/0xDb91D575F17d8AAf1aFEC0eaDBD5Ac9e5Cef4ad0)               |
+| Fuji           | `0xf82b58Bf348a6CEA6e19413e9DE040dB1a363128` | [View on testnet.snowtrace.io](https://testnet.snowtrace.io/address/0xf82b58Bf348a6CEA6e19413e9DE040dB1a363128)                 |
+| Mumbai         | `0x6a9CeD0e13E738517558aA283DA0E93e5904D49b` | [View on mumbai.polygonscan.com](https://mumbai.polygonscan.com/address/0x6a9CeD0e13E738517558aA283DA0E93e5904D49b)             |
+| Bsctestnet     | `0x951c74D83a85833b53A448caaB7397bd3fa6CFB2` | [View on testnet.bscscan.com](https://testnet.bscscan.com/address/0x951c74D83a85833b53A448caaB7397bd3fa6CFB2)                   |
+| Goerli         | `0xCb0ba89F564e31180A101Df54b7971206e03ee9b` | [View on goerli.etherscan.io](https://goerli.etherscan.io/address/0xCb0ba89F564e31180A101Df54b7971206e03ee9b)                   |
+| Moonbasealpha  | `0x209Ccdbe13BB913104117B1D6f7801684e98FA1F` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0x209Ccdbe13BB913104117B1D6f7801684e98FA1F)                 |
+| Optimismgoerli | `0x12EBd8cb561c68b587C392e0c5405B9866FD5820` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0x12EBd8cb561c68b587C392e0c5405B9866FD5820) |
+| Arbitrumgoerli | `0x4266D8Dd66D8Eb3934c8942968d1e54214D072d3` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0x4266D8Dd66D8Eb3934c8942968d1e54214D072d3)                     |
+| Sepolia        | `0xB057Fb841027a8554521DcCdeC3c3474CaC99AB5` | [View on sepolia.etherscan.io](https://sepolia.etherscan.io/address/0xB057Fb841027a8554521DcCdeC3c3474CaC99AB5)                 |
 
 
 ### ValidatorAnnounce
