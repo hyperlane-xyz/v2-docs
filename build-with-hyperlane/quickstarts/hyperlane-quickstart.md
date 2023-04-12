@@ -2,9 +2,9 @@
 description: Quickstart Tutorial to help you start with Hyperlane
 ---
 
-# Hyperlane Quickstart
+# hyperlane-quickstart repo
 
-This page contains example code that can be easily understood and modified. It should help you familiarize yourself with how to use the Hyperlane APIs to build your cross-chain application. Hyperlane offers several APIs: The Messaging API lets you send arbitrary bytes from a sender contract on the origin chain to a receiver contract on the destination chain. The accounts API lets senders specify ABI-encoded Calls that can be executed from a sender's Interchain Account (ICA) on the destination chain. The Queries API allows you to make remote view calls with built-in callbacks without the need to deploy remote contracts. We built this quickstart with both [Hardhat](https://hardhat.org/) and [Foundry](https://getfoundry.sh/) in mind, so feel free to jump to the relevant sections.
+We recommend using the other quickstarts that we have prepared for you in this section, but if you would rather have a repo that you can clone, this is for you. We built this quickstart with both [Hardhat](https://hardhat.org/) and [Foundry](https://getfoundry.sh/) in mind, so feel free to jump to the relevant sections.
 
 You can find contracts related to this [Quickstart on GitHub](https://github.com/hyperlane-xyz/hyperlane-quickstart)
 

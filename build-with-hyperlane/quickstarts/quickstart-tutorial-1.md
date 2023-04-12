@@ -10,8 +10,8 @@ The LiquidityLayer API is in beta and deployed only on testnet. The API is subje
 
 This tutorial demonstrates how to:
 
-* [Send](../../apis/token-bridge-api.md#send) a simple interchain message alongside with tokens to a pre-deployed [`TestTokenRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/test/TestTokenRecipient.sol) contract.
-* [Pay for interchain gas](../../apis/token-bridge-api.md#paying-for-interchain-gas) to have a [relayer](../../protocol/agents/relayer.md) deliver the message.
+* [Send](../../apis-and-sdks/token-bridge-api.md#send) a simple interchain message alongside with tokens to a pre-deployed [`TestTokenRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/test/TestTokenRecipient.sol) contract.
+* [Pay for interchain gas](../../apis-and-sdks/token-bridge-api.md#paying-for-interchain-gas) to have a [relayer](../../protocol/agents/relayer.md) deliver the message.
 
 ### Inputs
 

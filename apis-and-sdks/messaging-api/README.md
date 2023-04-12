@@ -6,7 +6,7 @@ description: Send and receive interchain messages using Hyperlane
 
 Hyperlane provides an on-chain API for sending and receiving interchain messages.
 
-Cant wait to get started? Follow the [quickstart-tutorial.md](../../build-with-hyperlane/quickstarts/quickstart-tutorial.md "mention") quickstart to send your first interchain message in less than five minutes. Otherwise, read on—
+Cant wait to get started? Follow the [messaging.md](../../build-with-hyperlane/quickstarts/messaging.md "mention") quickstart to send your first interchain message in less than five minutes. Otherwise, read on—
 
 #### Interface
 

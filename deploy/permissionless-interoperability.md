@@ -18,7 +18,7 @@ The permissionless and modular design of Hyperlane powers many unique features:
 
 * Expand to any environment without reliance on external parties with [Permissionless Deployment](deploy-hyperlane/)
 * Own and customize your app's security model with your choice of [sovereign-consensus](../protocol/sovereign-consensus/ "mention") (ISMs)&#x20;
-* Move value anywhere, permissionlessly with [Warp Routes](../apis/warp-api.md)
+* Move value anywhere, permissionlessly with [Warp Routes](../apis-and-sdks/warp-api.md)
 
 The Hyperlane thesis is that&#x20;
 

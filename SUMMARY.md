@@ -8,7 +8,6 @@
   * [What are the benefits of Hyperlane?](introduction/why-hyperlane/what-are-the-benefits-of-hyperlane.md)
   * [What sets Hyperlane apart?](introduction/why-hyperlane/what-sets-hyperlane-apart.md)
 * [Getting started](introduction/getting-started.md)
-* [Hyperlane Quickstart](introduction/hyperlane-quickstart.md)
 
 ## Permissionless Interoperability <a href="#deploy" id="deploy"></a>
 
@@ -19,7 +18,7 @@
   * [Run validators](deploy/deploy-hyperlane/run-validators.md)
   * [Run relayers](deploy/deploy-hyperlane/run-relayers.md)
   * [Send test messages](deploy/deploy-hyperlane/send-test-messages.md)
-* [Warp routes](deploy/deploy-warp-route/README.md)
+* [Warp Routes](deploy/deploy-warp-route/README.md)
   * [Deploy a Warp Route](deploy/deploy-warp-route/deploy-a-warp-route.md)
   * [Deploy the UI for your Warp Route](deploy/deploy-warp-route/deploy-the-ui-for-your-warp-route.md)
 * [Celestia + Hyperlane](deploy/celestia-+-hyperlane.md)
@@ -27,10 +26,11 @@
 ## Build With Hyperlane
 
 * [Quickstarts](build-with-hyperlane/quickstarts/README.md)
-  * [Messaging](build-with-hyperlane/quickstarts/quickstart-tutorial.md)
+  * [Messaging](build-with-hyperlane/quickstarts/messaging.md)
+  * [Accounts](build-with-hyperlane/quickstarts/accounts.md)
+  * [Queries](build-with-hyperlane/quickstarts/queries.md)
   * [Liquidity Layer](build-with-hyperlane/quickstarts/quickstart-tutorial-1.md)
-  * [Accounts](build-with-hyperlane/quickstarts/quickstart-tutorial-2.md)
-  * [Queries](build-with-hyperlane/quickstarts/quickstart-tutorial-3.md)
+  * [hyperlane-quickstart repo](build-with-hyperlane/quickstarts/hyperlane-quickstart.md)
 * [Guides](build-with-hyperlane/guides/README.md)
   * [Finding My Messages](build-with-hyperlane/guides/finding-my-messages.md)
   * [Paying For Interchain Gas](build-with-hyperlane/guides/developers/paying-for-interchain-gas/README.md)
@@ -53,34 +53,31 @@
 * [Troubleshooting](build-with-hyperlane/troubleshooting.md)
 * [Example apps](build-with-hyperlane/examples.md)
 
-## APIs
+## APIs and SDKs
 
-* [Messaging API](apis/messaging-api/README.md)
-  * [Send](apis/messaging-api/send.md)
-  * [Receive](apis/messaging-api/receive.md)
-* [Liquidity Layer API](apis/token-bridge-api.md)
-* [Accounts API](apis/accounts/README.md)
-  * [Overrides](apis/accounts/overrides.md)
-  * [Example usage](apis/accounts/example-usage.md)
-  * [Computing addresses](apis/accounts/computing-addresses.md)
-* [Queries API](apis/query.md)
-* [Warp API](apis/warp-api.md)
-
-## SDKs
-
-* [Hyperlane App Framework](sdks/building-applications/README.md)
-  * [Example usage](sdks/building-applications/example-usage/README.md)
-    * [HelloWorld](sdks/building-applications/example-usage/helloworld.md)
-    * [Interchain Token](sdks/building-applications/example-usage/erc20-token.md)
-  * [Solidity SDK](sdks/building-applications/writing-contracts/README.md)
-    * [HyperlaneConnectionClient](sdks/building-applications/writing-contracts/abacusconnectionclient.md)
-    * [Router](sdks/building-applications/writing-contracts/router.md)
-  * [NodeJS SDK](sdks/building-applications/nodejs-sdk/README.md)
-    * [RPC Providers](sdks/building-applications/nodejs-sdk/multiprovider.md)
-    * [Deployment](sdks/building-applications/nodejs-sdk/deploying-contracts.md)
-    * [Interchain Testing](sdks/building-applications/nodejs-sdk/testing-contracts.md)
-    * [Interchain Gas Quotes](sdks/building-applications/nodejs-sdk/gas.md)
-    * [App Abstraction](sdks/building-applications/nodejs-sdk/contract-interaction.md)
+* [Messaging API](apis-and-sdks/messaging-api/README.md)
+  * [Send](apis-and-sdks/messaging-api/send.md)
+  * [Receive](apis-and-sdks/messaging-api/receive.md)
+* [Accounts API](apis-and-sdks/accounts/README.md)
+  * [Overrides](apis-and-sdks/accounts/overrides.md)
+  * [Example usage](apis-and-sdks/accounts/example-usage.md)
+  * [Computing addresses](apis-and-sdks/accounts/computing-addresses.md)
+* [Queries API](apis-and-sdks/query.md)
+* [Warp Route API](apis-and-sdks/warp-api.md)
+* [Liquidity Layer API](apis-and-sdks/token-bridge-api.md)
+* [Hyperlane App Framework](apis-and-sdks/building-applications/README.md)
+  * [Example usage](apis-and-sdks/building-applications/example-usage/README.md)
+    * [HelloWorld](apis-and-sdks/building-applications/example-usage/helloworld.md)
+    * [Interchain Token](apis-and-sdks/building-applications/example-usage/erc20-token.md)
+  * [Solidity SDK](apis-and-sdks/building-applications/writing-contracts/README.md)
+    * [HyperlaneConnectionClient](apis-and-sdks/building-applications/writing-contracts/abacusconnectionclient.md)
+    * [Router](apis-and-sdks/building-applications/writing-contracts/router.md)
+  * [NodeJS SDK](apis-and-sdks/building-applications/nodejs-sdk/README.md)
+    * [RPC Providers](apis-and-sdks/building-applications/nodejs-sdk/multiprovider.md)
+    * [Deployment](apis-and-sdks/building-applications/nodejs-sdk/deploying-contracts.md)
+    * [Interchain Testing](apis-and-sdks/building-applications/nodejs-sdk/testing-contracts.md)
+    * [Interchain Gas Quotes](apis-and-sdks/building-applications/nodejs-sdk/gas.md)
+    * [App Abstraction](apis-and-sdks/building-applications/nodejs-sdk/contract-interaction.md)
 
 ## Protocol
 

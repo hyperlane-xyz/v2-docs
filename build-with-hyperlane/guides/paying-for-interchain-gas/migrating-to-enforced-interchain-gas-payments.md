@@ -77,7 +77,7 @@ Future changes won't involve new IGP contract addresses to switch over to. The n
 
 **How do I pay for gas with middlewares, like Interchain Accounts, Interchain Queries, and the Liquidity Layer?**
 
-APIs like the [Liquidity Layer API](../../../apis/token-bridge-api.md), the [Accounts API](../../../apis/accounts/), and the [Queries API](../../../apis/query.md) are sometimes called "middlewares." Just like all Hyperlane messages that wish to be delivered by a relayer, messages sent via these middlewares must have interchain gas paid for. See our entry on [Middleware APIs](middleware-apis.md) for more details.&#x20;
+APIs like the [Liquidity Layer API](../../../apis-and-sdks/token-bridge-api.md), the [Accounts API](../../../apis-and-sdks/accounts/), and the [Queries API](../../../apis-and-sdks/query.md) are sometimes called "middlewares." Just like all Hyperlane messages that wish to be delivered by a relayer, messages sent via these middlewares must have interchain gas paid for. See our entry on [Middleware APIs](middleware-apis.md) for more details.&#x20;
 
 **This may break some of my existing mainnet contracts that are live on v2.**
 

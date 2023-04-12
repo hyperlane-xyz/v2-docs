@@ -53,4 +53,4 @@ The IGP contracts that are provided will calculate and enforce payment on-chain.
 
 ### The Router Pattern
 
-If your application uses the [router.md](../../../sdks/building-applications/writing-contracts/router.md "mention") pattern, an internal function [`_dispatchWithGas`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/13daa1bd86788074686cd9a7f68cc3cf722b85e4/solidity/contracts/Router.sol#L188) is provided that will dispatch a message and pay interchain gas.
+If your application uses the [router.md](../../../apis-and-sdks/building-applications/writing-contracts/router.md "mention") pattern, an internal function [`_dispatchWithGas`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/13daa1bd86788074686cd9a7f68cc3cf722b85e4/solidity/contracts/Router.sol#L188) is provided that will dispatch a message and pay interchain gas.

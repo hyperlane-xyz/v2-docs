@@ -4,7 +4,7 @@ description: Create an interchain route for your token
 
 # Deploy a Warp Route
 
-A Warp Route is simply a [router.md](../../sdks/building-applications/writing-contracts/router.md "mention") application, requiring a `HypERC20` token contract to be deployed on each chain you wish to support.
+A Warp Route is simply a [router.md](../../apis-and-sdks/building-applications/writing-contracts/router.md "mention") application, requiring a `HypERC20` token contract to be deployed on each chain you wish to support.
 
 The [hyperlane-deploy](https://github.com/hyperlane-xyz/hyperlane-deploy) repo includes a script that allows you to configure and deploy a Warp Route for your desired token.
 

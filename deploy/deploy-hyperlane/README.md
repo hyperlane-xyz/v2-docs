@@ -12,7 +12,7 @@ Hyperlane is designed to be deployed to new chains by anyone, at any time. Read 
 
 This tutorial is intended for users who want to deploy Hyperlane to a new EVM chain.
 
-By the end of this guide you will have deployed and configured the Hyperlane [messaging-api](../../apis/messaging-api/ "mention"), allowing developers to send interchain messages to and from your chain.
+By the end of this guide you will have deployed and configured the Hyperlane [messaging-api](../../apis-and-sdks/messaging-api/ "mention"), allowing developers to send interchain messages to and from your chain.
 
 This will also allow developers to deploy [deploy-warp-route](../deploy-warp-route/ "mention") that include your chain, allowing tokens to move freely to and from your chain.
 
