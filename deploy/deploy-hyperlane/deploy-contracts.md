@@ -28,13 +28,13 @@ cd hyperlane-deploy
 yarn install
 ```
 
-Next, add a [`ChainMetadata`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/typescript/sdk/src/consts/chainMetadata.ts#L21) entry for your local chain to `hyperlane-deploy/config/chains.ts`. An example has been populated for you for [`anvil`](https://book.getfoundry.sh/anvil/).
+Next, add a [`ChainMetadata`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/typescript/sdk/src/consts/chainMetadata.ts#L21) entry for your local chain to `hyperlane-deploy/config/chains.ts`. An example has been populated for you for [`anvil`](https://book.getfoundry.sh/anvil/). Any chains that already have Hyperlane deployments do not need to be configured here (see [domains.md](../../resources/domains.md "mention") for the list of already supported chains).
 
 ```typescript
 export const chains: ChainMap<ChainMetadata> = {
   // ----------- Your chains here -----------------
-  anvil: {
-    name: 'anvil',
+  anvil1: {
+    name: 'anvil1',
     // anvil default chain id
     chainId: 31337,
     publicRpcUrls: [
@@ -46,7 +46,7 @@ export const chains: ChainMap<ChainMetadata> = {
 };
 ```
 
-Finally, add the `MultisigIsmConfig` entry for your local chain to `hyperlane-deploy/config/multisig_ism.ts`. An example with a single validator has been populated for you for `anvil`.
+Finally, add the `MultisigIsmConfig` entry for your local chain to `hyperlane-deploy/config/multisig_ism.ts`. An example with a single validator has been populated for you for `anvil`. Any chains that already have Hyperlane deployments do not need to be configured here (see [domains.md](../../resources/domains.md "mention") for the list of already supported chains).
 
 ```typescript
 export const multisigIsmConfig: ChainMap<MultisigIsmConfig> = {
@@ -63,7 +63,7 @@ export const multisigIsmConfig: ChainMap<MultisigIsmConfig> = {
 
 ## Deploy
 
-You can then run `yarn ts-node script scripts/deploy.ts` to deploy the Hyperlane contracts. You will need to provide the following arguments:
+You can then run `yarn ts-node scripts/deploy-hyperlane.ts` to deploy the Hyperlane contracts. You will need to provide the following arguments:
 
 * `local`: The local chain on which Hyperlane is being deployed
 * `remotes`: The chains with which 'local' will be able to send and receive messages

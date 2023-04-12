@@ -25,6 +25,8 @@ Refer to the [installation.md](installation.md "mention") instructions to access
 
 HYP_RELAYER_ORIGINCHAINNAME=ethereum
 HYP_RELAYER_DESTINATIONCHAINNAMES=polygon,avalanche
+# Note that the single quotes pose issues when using Docker's --env-file
+# flag, so they must be removed
 HYP_RELAYER_GASENFORCEMENTPOLICY='[["type":"none"}]'
 # ...
 # ...
