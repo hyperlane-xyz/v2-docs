@@ -83,8 +83,8 @@ The Hyperlane validator agent currently supports signing with AWS KMS keys that 
 
 Validators write their signatures off-chain to publicly accessible, highly available, storage, so that they can be aggregated by [relayers](../../protocol/agents/relayer.md).
 
-The Hyperlane validator agent currently supports storing signatures on AWS S3 using the same AWS API key above.
+The Hyperlane validator agent currently supports storing signatures on AWS S3 using the same AWS API key above, as well as storing signatures in the local filesystem for testing.
 
 #### A machine to run on
 
-Validators can compile the rust binary themselves, or run a docker image provided by Abacus Works. The binary is completely stateless and can be run using your favorite cloud service. You can even run multiple instances of them in different regions for high availability, as Hyperlane has no notion of "double signing".
+Validators can compile the Rust binary themselves, or run a Docker image provided by Abacus Works. The binary is completely stateless and can be run using your favorite cloud service. You can even run multiple instances of them in different regions for high availability, as Hyperlane has no notion of "double signing".

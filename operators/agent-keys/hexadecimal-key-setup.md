@@ -7,7 +7,7 @@ description: Generating a raw hexadecimal key
 Using hexadecimal keys is the easiest and fastest way to configure Hyperlane agents.
 
 {% hint style="warning" %}
-Hexadecimal keys are not recommended for production environments, for which [aws-setup.md](aws-setup.md "mention") are recommended.,&#x20;
+Hexadecimal keys are not recommended for production environments, for which [aws-setup.md](aws-setup.md "mention") are recommended.
 {% endhint %}
 
 ### Generate a hexadecimal key&#x20;

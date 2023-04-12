@@ -38,11 +38,11 @@ Hyperlane's [proof-of-stake.md](proof-of-stake.md "mention") protocol uses this 
 
 ### Process
 
-To deliver interchain messages, [relayer.md](agents/relayer.md "mention")call `Mailbox.process()`.
+To deliver interchain messages, [relayer.md](agents/relayer.md "mention") call `Mailbox.process()`.
 
 This function takes as parameters the message to deliver as well as arbitrary metadata that can be specified by the relayer.
 
-The `Mailbox` will pass the message and metadata to one or more [interchain-security-modules.md](sovereign-consensus/interchain-security-modules.md "mention") for verification. If the ISM successfully verifies the message, the `Mailbox` delivers the message to the recipient by calling `recipient.handle()`.
+The `Mailbox` will pass the message and metadata to one or more interchain security module [interchain-security-modules.md](sovereign-consensus/interchain-security-modules.md "mention") for verification. If the ISM successfully verifies the message, the `Mailbox` delivers the message to the recipient by calling `recipient.handle()`.
 
 {% hint style="info" %}
 See [`Message.sol`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/libs/Message.sol)for more details on Hyperlane message encoding&#x20;

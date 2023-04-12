@@ -34,7 +34,7 @@ Mounting an entire directory can be done with the flag `--mount source=$LOCAL_CO
 For example, suppose you have a config file at your local machine's path `/home/workspace/ethereum.json` and want to run the validator with it.
 
 {% code title="Example" overflow="wrap" %}
-```
+```sh
 docker run -it --mount type=bind,source=/home/workspace/ethereum.json,target=/config/ethereum.json,readonly -e CONFIG_FILES=/config/ethereum.json $DOCKER_IMAGE ./validator
 ```
 {% endcode %}

@@ -4,7 +4,7 @@ description: Required setup instructions
 
 # Setup
 
-The relayer is responsible for delivering messages to their destination chains. This involves being able to submit transactions to many destination chains, and therefore requires access to a key for signing transaction. There are two supported key types: hexadecimal private keys (for in-memory signing), and AWS KMS based keys (best practice for production environments).
+The relayer is responsible for delivering messages to their destination chains. This involves being able to submit transactions to many destination chains, and therefore requires access to a key for signing transactions. There are two supported key types: hexadecimal private keys (for in-memory signing), and AWS KMS based keys (best practice for production environments).
 
 ## Hexadecimal keys
 

@@ -70,7 +70,7 @@ Now you can submit your signed announcement to the `ValidatorAnnounce` smart con
 
 {% tab title="Cast" %}
 1. Announce your validator by running the following command, filling in the following variables:
-   1. Set `$VALIDATOR_ANNOUNCE_ADDRESS` to the address of the `ValidatorAnnounce` contract: [addresses.md](../../resources/addresses.md "mention")
+   1. Set `$VALIDATOR_ANNOUNCE_ADDRESS` to the address of the `ValidatorAnnounce` contract for your origin chain. You can find addresses for existing deployments here: [addresses.md](../../resources/addresses.md "mention")
    2. Set `$VALIDATOR` to `value.validator` from your JSON announcement
    3. Set `$STORAGE_LOCATION` to `value.storage_location` from your JSON announcement
    4. Set `$SIGNATURE` to the `serialized_signature` from your JSON announcement.

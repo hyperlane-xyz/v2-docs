@@ -21,5 +21,5 @@ At a high level, deploying Hyperlane requires the following actions:
 1. Setting up the [keys.md](keys.md "mention") you will use to deploy contracts and run validators and relayers
 2. Deploying Hyperlane contracts to the local chain and to every remote chain with which the local chain will be able to send and receive messages.
 3. Running one or more [validators.md](../../protocol/agents/validators.md "mention") for the new chain, to provide security for outgoing messages
-4. Running [relayer.md](../../protocol/agents/relayer.md "mention") for the local chain and every remote chain which which the local chain will be able to send and receive messages.
+4. Running [relayer.md](../../protocol/agents/relayer.md "mention") for the local chain and every remote chain with which the local chain will be able to send and receive messages.
 5. Testing that messages can be sent from the local chain to each of the remote chains, and vice versa.&#x20;

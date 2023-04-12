@@ -46,7 +46,7 @@ export const chains: ChainMap<ChainMetadata> = {
 };
 ```
 
-Finally, add the `MultisigIsmConfig` entry for your local chaina to `hyperlane-deploy/config/multisig_ism.ts`. An example with a single validator has been populated for you for `anvil`.
+Finally, add the `MultisigIsmConfig` entry for your local chain to `hyperlane-deploy/config/multisig_ism.ts`. An example with a single validator has been populated for you for `anvil`.
 
 ```typescript
 export const multisigIsmConfig: ChainMap<MultisigIsmConfig> = {
