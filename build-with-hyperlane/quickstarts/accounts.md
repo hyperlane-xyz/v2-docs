@@ -1,11 +1,11 @@
 # Accounts
 
-This tutorial demonstrates how to make a simple interchain call using the [accounts](../../apis-and-sdks/accounts/ "mention") to a pre-deployed [`TestRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/test/TestRecipient.sol) contract on a remote chain.
+This tutorial demonstrates how to make a simple interchain call using the [accounts](../../apis/accounts/ "mention") to a pre-deployed [`TestRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/test/TestRecipient.sol) contract on a remote chain.
 
 You can also check out the [`hyperlane-quickstart`](https://github.com/hyperlane-xyz/hyperlane-quickstart) repo for running this out of the box.
 
 {% hint style="info" %}
-Want to learn more about interchain accounts? Take a look at the [accounts](../../apis-and-sdks/accounts/ "mention") documentation
+Want to learn more about interchain accounts? Take a look at the [accounts](../../apis/accounts/ "mention") documentation
 {% endhint %}
 
 ### Inputs

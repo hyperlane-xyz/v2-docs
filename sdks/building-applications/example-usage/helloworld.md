@@ -4,7 +4,7 @@ description: The skeleton of an Hyperlane-connected contract and app
 
 # HelloWorld
 
-****[**HelloWorld**](helloworld.md) **** app **** is the skeleton of an Hyperlane-connected contract and app using the [App framework](../).
+\*\*\*\*[**HelloWorld**](helloworld.md) \*\*\*\* app \*\*\*\* is the skeleton of an Hyperlane-connected contract and app using the [App framework](../../../apis-and-sdks/building-applications/).
 
 The [hyperlane-app-template repo](https://github.com/hyperlane-xyz/hyperlane-app-template) shows the basic skeleton of an Hyperlane app.
 
