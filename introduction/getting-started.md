@@ -24,21 +24,21 @@ Once Hyperlane exists on your desired chains, you can use one of the APIs provid
 You can use the accounts API to have an account make function calls on another chain. For example, a DAO can easily own assets on other chains without needing any remote smart contracts.
 
 * [accounts.md](../build-with-hyperlane/quickstarts/accounts.md "mention") quickstart
-* [accounts](../apis/accounts/ "mention") reference
+* [accounts](../apis-and-sdks/accounts/ "mention") reference
 
 **Queries API**
 
 You can use the queries API to read state from a remote chain. For example, you can read a price feed or ENS name on Ethereum from BSC.
 
 * [queries.md](../build-with-hyperlane/quickstarts/queries.md "mention")quickstart
-* [query.md](../apis/query.md "mention") reference
+* [query.md](../apis-and-sdks/query.md "mention") reference
 
 **Messaging API**
 
 Anything that doesn't fit in the above, you can use Hyperlane messaging to send and receive arbitrary bytes between your contracts on different chains for maximum flexibility.
 
 * [messaging.md](../build-with-hyperlane/quickstarts/messaging.md "mention") quickstart
-* [messaging-api](../apis/messaging-api/ "mention") reference
+* [messaging-api](../apis-and-sdks/messaging-api/ "mention") reference
 
 ## Example applications
 

@@ -42,7 +42,7 @@ A list of known deployments can be found at [domains.md](domains.md "mention")
 
 ## **What happens when I send a message on Hyperlane?**
 
-Full tutorial for [send.md](../apis/messaging-api/send.md "mention") and [receive.md](../apis/messaging-api/receive.md "mention") messages using Hyperlane.
+Full tutorial for [send.md](../apis-and-sdks/messaging-api/send.md "mention") and [receive.md](../apis-and-sdks/messaging-api/receive.md "mention") messages using Hyperlane.
 
 Summary:
 

@@ -2,9 +2,9 @@
 description: Configure your relayer
 ---
 
-# Configuration
+# Environment variables
 
-Also take a look at the [agent-configuration](../agent-configuration/ "mention") page and the [configuration-reference.md](../agent-configuration/configuration-reference.md "mention") for more details.
+Also take a look at the [agent-configuration.md](../agent-configuration.md "mention") page.
 
 Your relayer takes as configuration the following environment variables:
 

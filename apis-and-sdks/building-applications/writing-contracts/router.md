@@ -8,6 +8,8 @@ Application developers looking to write their contracts once and deploy them on 
 
 In this pattern, an instance of the application's contracts is deployed on each application-supported chain. Each instance is made aware of the addresses of instances on other chains. These instances use Hyperlane to communicate information and state to and from instances on remote chains.
 
+<!-- INCLUDE diagrams/router.md -->
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
 ```mermaid
 %%{ init: {
   "theme": "neutral",
@@ -46,8 +48,13 @@ graph BT
     style R_G fill:#efab17
 ```
 
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
+<!-- END -->
+
 Developers using this pattern can inherit from the `Router` mix-in contract. `Router` is a [`HyperlaneConnectionClient`](abacusconnectionclient.md) that tracks the addresses of other `Router` contract addresses on remote chains. This allows `Routers` to send messages directly to others without having to specify addresses. It also allows `Routers` to reject messages sent from other untrusted senders.
 
+<!-- INCLUDE node_modules/@hyperlane-xyz/core/contracts/Router.sol -->
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
 ```solidity
 // SPDX-License-Identifier: MIT OR Apache-2.0
 pragma solidity >=0.6.11;
@@ -274,3 +281,5 @@ abstract contract Router is HyperlaneConnectionClient, IMessageRecipient {
 }
 
 ```
+<!-- WARNING: copied from the included file path. Do not edit directly. -->
+<!-- END -->

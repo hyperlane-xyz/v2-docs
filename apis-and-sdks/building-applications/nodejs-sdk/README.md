@@ -4,11 +4,11 @@ _Note: Abacus is the former name of the Hyperlane protocol. The repos will soon 
 
 The NodeJS SDK ([`@hyperlane-xyz/sdk`](https://www.npmjs.com/package/@hyperlane-xyz/sdk)) contains everything you need to productionize your interchain app on the web, including:
 
-### [RPC Provider Management](../../../sdks/building-applications/nodejs-sdk/multiprovider.md)
+### [RPC Provider Management](multiprovider.md)
 
 App to chain communication is performed via ethers.js compatible [providers](https://docs.ethers.io/v5/api/providers/). To help manage providers for multiple chains, the SDK includes a `MultiProvider` utility.
 
-### [Multichain Deployment Tooling](../../../sdks/building-applications/nodejs-sdk/deploying-contracts.md)
+### [Multichain Deployment Tooling](deploying-contracts.md)
 
 Facilitate deploying your contract(s) to multiple chains. This includes utilities for bytecode verification, contract upgradability patterns, and resumability from partially successful deployments (e.g. k/n chains successfully deployed).
 
@@ -16,7 +16,7 @@ Facilitate deploying your contract(s) to multiple chains. This includes utilitie
 
 Hyperlane allows users to pay for message processing on the destination chain using tokens from the origin chain. Use the `InterchainGasCalculator` utility for gas estimation of interchain messages.
 
-### [App Abstraction](../../../sdks/building-applications/nodejs-sdk/contract-interaction.md)
+### [App Abstraction](contract-interaction.md)
 
 ## Class Hierarchy
 

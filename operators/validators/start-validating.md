@@ -51,7 +51,7 @@ docker run -it --env-file validator.env $DOCKER_IMAGE ./validator
 {% endcode %}
 
 {% hint style="info" %}
-If you're supporting your own chain that you [permissionlessly deployed](broken-reference) and are specifying a path to your own config file in the `CONFIG_FILES` environment variable, check out the [#config-files-with-docker](../agent-configuration/#config-files-with-docker "mention") section.
+If you're supporting your own chain that you [permissionlessly deployed](broken-reference) and are specifying a path to your own config file in the `CONFIG_FILES` environment variable, check out the [#config-files-with-docker](../agent-configuration.md#config-files-with-docker "mention") section.
 {% endhint %}
 
 {% hint style="info" %}

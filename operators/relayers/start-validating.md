@@ -48,7 +48,7 @@ docker run -it --env-file relayer.env $DOCKER_IMAGE ./relayer
 {% endcode %}
 
 {% hint style="info" %}
-If you're supporting your own chain that via [Broken link](broken-reference "mention") and are specifying a path to your own config file in the `CONFIG_FILES` environment variable, check out [#config-files-with-docker](../agent-configuration/#config-files-with-docker "mention").
+If you're supporting your own chain that via [Broken link](broken-reference "mention") and are specifying a path to your own config file in the `CONFIG_FILES` environment variable, check out [#config-files-with-docker](../agent-configuration.md#config-files-with-docker "mention").
 {% endhint %}
 
 {% hint style="info" %}

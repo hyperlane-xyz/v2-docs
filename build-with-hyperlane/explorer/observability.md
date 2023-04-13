@@ -24,10 +24,10 @@ If the destination domain identifier (`uint32`) is not known to relay clients th
 
 #### Invalid recipient
 
-If the recipient address (`bytes32`) is not a contract address that implements the [`IMessageRecipient` interface](../../apis/messaging-api/receive.md), the relayer will not be able to deliver your message.&#x20;
+If the recipient address (`bytes32`) is not a contract address that implements the [`IMessageRecipient` interface](../../apis-and-sdks/messaging-api/receive.md), the relayer will not be able to deliver your message.&#x20;
 
 {% hint style="warning" %}
-EVM addresses (`address`) must be left-padded with zeroes to be compliant. Refer to the [send encoding](../../apis/messaging-api/send.md#encoding) section for details and a `pure addressToBytes32` utility function.&#x20;
+EVM addresses (`address`) must be left-padded with zeroes to be compliant. Refer to the [send encoding](../../apis-and-sdks/messaging-api/send.md#encoding) section for details and a `pure addressToBytes32` utility function.&#x20;
 {% endhint %}
 
 #### Unprocessable

@@ -6,7 +6,7 @@ description: Everything you need to start running a relayer
 
 Hyperlane [relayers](../../protocol/agents/relayer.md) deliver interchain messages to their recipients.
 
-Every Hyperlane message requires two transactions to be delivered, one on the origin chain to [dispatch](../../apis/messaging-api/send.md) the message, and one on the destination chain to [process](../../apis/messaging-api/receive.md) the messages. Relayers are responsible for sending the second transaction.
+Every Hyperlane message requires two transactions to be delivered, one on the origin chain to [dispatch](../../apis-and-sdks/messaging-api/send.md) the message, and one on the destination chain to [process](../../apis-and-sdks/messaging-api/receive.md) the messages. Relayers are responsible for sending the second transaction.
 
 ```mermaid
 %%{ init: {
