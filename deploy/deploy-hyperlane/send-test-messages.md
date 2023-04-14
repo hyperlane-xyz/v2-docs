@@ -8,7 +8,7 @@ You can check everything is working correctly by sending a test message between 
 
 ## Send messages
 
-You can run `yarn ts-node script scripts/test-messages.ts` to send test messages. You will need to provide the following arguments:
+You can run `yarn ts-node scripts/test-messages.ts` to send test messages. You will need to provide the following arguments:
 
 * `chains`: Test messages will be sent between each pair of these chains
 * `key`: A hexadecimal private key for transaction signing
