@@ -56,7 +56,7 @@ flowchart LR
 
 ### Send
 
-Developers can send interchain messages very similarly to the [messaging-api](messaging-api/ "mention") by calling the `LiquidityLayerRouter.dispatchWithTokens` endpoint. At the moment, dispatched messages must be received by a contract with the `handleWithTokens()` function. You will learn more about this in the [Receive](messaging-api/receive.md) section up next, but for now let's cover the message sending interface. Remember that you need to ERC-20-approve the tokens to the `LiquidityLayerRouter`, otherwise it is not authorized to move them.
+Developers can send interchain messages very similarly to the [messaging-api](../apis/messaging-api/ "mention") by calling the `LiquidityLayerRouter.dispatchWithTokens` endpoint. At the moment, dispatched messages must be received by a contract with the `handleWithTokens()` function. You will learn more about this in the [Receive](../apis/messaging-api/receive.md) section up next, but for now let's cover the message sending interface. Remember that you need to ERC-20-approve the tokens to the `LiquidityLayerRouter`, otherwise it is not authorized to move them.
 
 #### Interface
 
@@ -93,7 +93,7 @@ The address of the `LiquidityLayerRouter` is `0x2abe0860D81FB4242C748132bD69D125
 
 ### Receive
 
-Like sending, receiving is very similar to the [messaging-api](messaging-api/ "mention"):thumbsup:
+Like sending, receiving is very similar to the [messaging-api](../apis/messaging-api/ "mention"):thumbsup:
 
 #### Interface
 
@@ -123,7 +123,7 @@ interface ILiquidityLayerMessageRecipient {
 
 `_amount` is the amount of the token that was transferred
 
-The same points about access control and encoding from the [messaging-api](messaging-api/ "mention") apply to the LiquidityLayer API as well, so be sure to check it out. However, rather than requiring access control such that the Mailbox can only call the `handle` function, the LiquidityLayerRouter on the local chain must be the only address that can call the `handleWithTokens` function.
+The same points about access control and encoding from the [messaging-api](../apis/messaging-api/ "mention") apply to the LiquidityLayer API as well, so be sure to check it out. However, rather than requiring access control such that the Mailbox can only call the `handle` function, the LiquidityLayerRouter on the local chain must be the only address that can call the `handleWithTokens` function.
 
 ### Paying for Interchain Gas
 

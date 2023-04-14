@@ -4,7 +4,7 @@ description: An interchain ERC20 token contract
 
 # Interchain Token
 
-****[**ERC20 Token**](erc20-token.md) **** app is an interchain ERC20 token contract using the [App framework.](../)
+\*\*\*\*[**ERC20 Token**](erc20-token.md) \*\*\*\* app is an interchain ERC20 token contract using the [App framework.](../../../apis-and-sdks/building-applications/)
 
 The [hyperlane-token repo](https://github.com/hyperlane-xyz/hyperlane-token) shows an example Interchain Token, an ERC20 that can travel between any Hyperlane chain, also called a `HypERC20`.
 
@@ -12,7 +12,7 @@ The changes to the vanilla OpenZeppelin ERC20 contract are minimal. It has a `tr
 
 #### Contract
 
-Its [contract](https://github.com/hyperlane-xyz/hyperlane-token/blob/main/contracts/HypERC20.sol) implements a `transferRemote` method which burns tokens and dispatches corresponding messages.&#x20;
+Its [contract](https://github.com/hyperlane-xyz/hyperlane-token/blob/main/contracts/HypERC20.sol) implements a `transferRemote` method which burns tokens and dispatches corresponding messages.
 
 ```solidity
 /**

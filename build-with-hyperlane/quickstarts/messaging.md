@@ -6,7 +6,7 @@ description: Send your first interchain message in under 5 minutes
 
 This tutorial demonstrates how to:
 
-* [Send](../../apis-and-sdks/messaging-api/send.md) a simple interchain message to a pre-deployed [`TestRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/test/TestRecipient.sol) contract.
+* [Send](../../apis/messaging-api/send.md) a simple interchain message to a pre-deployed [`TestRecipient`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/test/TestRecipient.sol) contract.
 * [Pay for interchain gas](../guides/developers/paying-for-interchain-gas/) to have a [relayer](../../protocol/agents/relayer.md) deliver the message.
 
 ### Inputs
