@@ -42,7 +42,7 @@ function handleQueryAddressResult(address _result) public {
 
 {% tabs %}
 {% tab title="Using Metamask" %}
-#### Getting the Interchain Gas Payment Quote
+**Getting the Interchain Gas Payment Quote**
 
 1. The TestQuerySender contract uses the DefaultIsmInterchainGasPaymaster to pay for interchain gas. Navigate to this contract page on [Etherscan](https://goerli.etherscan.io/address/0xF90cB82a76492614D07B82a7658917f3aC811Ac1) (or whatever chain you want to send from, see contract addresses [here](../../resources/addresses.md#defaultisminterchaingaspaymaster))
 2. Under the `Contract` tab, select `Read Contract`.
@@ -51,9 +51,9 @@ function handleQueryAddressResult(address _result) public {
 5. For gas amount, enter `$GAS_AMOUNT`, which is `200000`.
 6. Click `Query` and make note of the amount returned as `$GAS_PAYMENT_QUOTE`. For example, at the time of writing, the quote is `1` wei.
 
-<figure><img src="../../.gitbook/assets/Screen Shot 2023-01-31 at 1.55.10 PM (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screen Shot 2023-01-31 at 1.55.10 PM.png" alt=""><figcaption></figcaption></figure>
 
-#### Making the Query
+**Making the Query**
 
 1. Navigate to the `TestQuerySender` `0x96D7D6Eba6C635e3EaC12b593Ef8B2eE1F6E6683` contract page on [Etherscan](https://goerli.etherscan.io/address/0xF49ed566145eA1773c4Fb788b143Bd99f17b2024) (or whatever chain you want to send from - on testnets the TestQuerySender is always found at `0x96D7D6Eba6C635e3EaC12b593Ef8B2eE1F6E6683`, and on mainnets it's `0x8566F965f613cB47A5Bd59879d07186122590895`)
 2. Under the `Contract` tab, find the `Write Contract` button.
@@ -70,9 +70,9 @@ function handleQueryAddressResult(address _result) public {
 {% endtab %}
 
 {% tab title="Using cast" %}
-We can get an interchain gas payment quote and call TestQuerySender directly using `cast`.&#x20;
+We can get an interchain gas payment quote and call TestQuerySender directly using `cast`.
 
-#### Getting the Interchain Gas Payment Quote
+**Getting the Interchain Gas Payment Quote**
 
 The `$IGP_ADDRESS` is the address of the [DefaultIsmInterchainGasPaymaster](../../resources/addresses.md#defaultisminterchaingaspaymaster-1), which is used by the TestQuerySender.
 
@@ -84,7 +84,7 @@ cast call $IGP_ADDRESS "quoteGasPayment(uint32,uint256)" $DESTINATION_DOMAIN $GA
 ```
 {% endcode %}
 
-#### Making the Query
+**Making the Query**
 
 You can call the `TestQuerySender` directly using `cast`. Make sure that you have a valid RPC URL for the origin chain and a private key with which you can pay for gas. The `TestQuerySender` address is `0x96D7D6Eba6C635e3EaC12b593Ef8B2eE1F6E6683` on testnets and `0x8566F965f613cB47A5Bd59879d07186122590895` on mainnets.
 

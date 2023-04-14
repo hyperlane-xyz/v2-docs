@@ -20,7 +20,7 @@
   * [Send test messages](deploy/deploy-hyperlane/send-test-messages.md)
 * [Warp Routes](deploy/deploy-warp-route/README.md)
   * [Deploy a Warp Route](deploy/deploy-warp-route/deploy-a-warp-route.md)
-  * [Deploy the UI for your Warp Route](deploy/deploy-warp-route/deploy-the-ui-for-your-warp-route.md)
+  * [Deploy a UI for your Warp Route](deploy/deploy-warp-route/deploy-the-ui-for-your-warp-route.md)
 * [Celestia + Hyperlane](deploy/celestia-+-hyperlane.md)
 
 ## Build With Hyperlane

@@ -21,24 +21,24 @@ $ yarn build
 
 ### Warp Route config
 
-You will need to create a `WarpRouteConfig`  in [`hyperlane-deploy/config/warp_tokens.ts`](https://github.com/hyperlane-xyz/hyperlane-deploy/blob/main/config/warp\_tokens.ts) to define your Warp Route. This will include information such as:
+You will need to create a `WarpRouteConfig` in [`hyperlane-deploy/config/warp_tokens.ts`](https://github.com/hyperlane-xyz/hyperlane-deploy/blob/main/config/warp\_tokens.ts) to define your Warp Route. This will include information such as:
 
 * Which token, on which chain, is this Warp Route being created for?
 * Optional Hyperlane connection details including contract addresses for [messaging.md](../../protocol/messaging.md "mention"), [interchain-gas-paymasters.md](../../build-with-hyperlane/guides/paying-for-interchain-gas/interchain-gas-paymasters.md "mention"), and [sovereign-consensus](../../protocol/sovereign-consensus/ "mention").
 
 #### Base
 
-Your `WarpRouteConfig` must have exactly one `base` entry. Here you will configure details about the token you are creating a warp route for.
+Your `WarpRouteConfig` must have exactly one `base` entry. Here you will configure details about the token for which you are creating a warp route.
 
 * **chainName**: Set this equal to the chain on which your token exists
 * **type**: Set this to `TokenType.collateral` to create a warp route for an ERC20 token, or `TokenType.native` to create a warp route for a native token (e.g. ether)
-* **address:** If using `TokenType.collateral`, the address of the ERC20 token to create a warp route for
+* **address:** If using `TokenType.collateral`, the address of the ERC20 token for which to create a route
 
 #### Synthetics
 
 Your `WarpRouteConfig` must have at least one `synthetics` entry. Here you will configure details about the remote chains supported by your warp route.
 
-* **chainName:** Set this equal to the chain on which you want a wrapped version of your token&#x20;
+* **chainName:** Set this equal to the chain on which you want a wrapped version of your token
 
 #### Options
 
@@ -52,7 +52,7 @@ You may specify the following optional values in your `base` and `synthetics` en
 
 An example `WarpRouteConfig` is provided in [`hyperlane-deploy/config/warp_tokens.ts`](https://github.com/hyperlane-xyz/hyperlane-deploy/blob/main/config/warp\_tokens.ts)that defines a warp route for a native token between two local chains.
 
-This Warp Route is secured by the default [sovereign-consensus](../../protocol/sovereign-consensus/ "mention") that are set on the `Mailboxes` for those chains.&#x20;
+This Warp Route is secured by the default [sovereign-consensus](../../protocol/sovereign-consensus/ "mention") that are set on the `Mailboxes` for those chains.
 
 ```typescript
 import { TokenType } from '@hyperlane-xyz/hyperlane-token';
@@ -116,11 +116,13 @@ Run the following script to deploy your Warp Route. You will need to provide the
 * `key`: A hexadecimal private key for transaction signing
 
 ```bash
-$ DEBUG=hyperlane* yarn ts-node scripts/deploy-warp-routes.ts \
+yarn ts-node scripts/deploy-warp-routes.ts \
   --key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
 ```
 
-When the command finishes, it will output the list of contracts to `hyperlane-deploy/artifacts/warp-token-addresses.json`
+When the command finishes, it will output the list of contracts addresses to `hyperlane-deploy/artifacts/warp-token-addresses.json.`
+
+The deployer will also output a token list file to `hyperlane-deploy/artifacts/warp-ui-token-list.ts` which can be used to [configure a Warp Route UI](deploy-the-ui-for-your-warp-route.md).
 
 ## 4. Testing
 
@@ -133,7 +135,7 @@ Run the following script to test your Warp Route by transferring tokens from one
 * `key`: A hexadecimal private key for transaction signing
 
 ```bash
-$ DEBUG=hyperlane* yarn ts-node scripts/test-warp-transfer.ts \
+yarn ts-node scripts/test-warp-transfer.ts \
   --origin anvil1 --destination anvil2 --wei 1 \
   --recipient 0xac0974bec39a17e36ba4a6b4d238ff944bacb4a5 \
   --key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
