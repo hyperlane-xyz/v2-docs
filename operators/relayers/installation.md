@@ -12,7 +12,7 @@ The latest Docker image can be found at:
 
 {% code overflow="wrap" %}
 ```
-gcr.io/abacus-labs-dev/hyperlane-agent:5bf8aed-20230323-140136
+gcr.io/abacus-labs-dev/hyperlane-agent:debafb9-20230414-183521
 ```
 {% endcode %}
 
@@ -20,7 +20,7 @@ To pull the image, run:
 
 {% code overflow="wrap" %}
 ```
-docker pull gcr.io/abacus-labs-dev/hyperlane-agent:5bf8aed-20230323-140136
+docker pull gcr.io/abacus-labs-dev/hyperlane-agent:debafb9-20230414-183521
 ```
 {% endcode %}
 
@@ -28,7 +28,7 @@ The relayer binary is found at `./relayer`:
 
 {% code overflow="wrap" %}
 ```
-docker run -it gcr.io/abacus-labs-dev/hyperlane-agent:5bf8aed-20230323-140136 ./relayer
+docker run -it gcr.io/abacus-labs-dev/hyperlane-agent:debafb9-20230414-183521 ./relayer
 ```
 {% endcode %}
 

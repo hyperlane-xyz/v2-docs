@@ -276,40 +276,6 @@ export HYP_BASE_CHAINS_ETHEREUM_ADDRESSES_VALIDATOR_ANNOUNCE="0x9bBdef63594D5FFc
 {% endtab %}
 {% endtabs %}
 
-## chains.\<chain\_name>.txsubmission <a href="#chains.chain_name.txsubmission" id="chains.chain_name.txsubmission"></a>
-
-**Description:** The way in which the transaction should be submitted to the blockchain.
-
-**Optional:** Defaults to `signer`
-
-**Agents:** Relayer
-
-**Type:** `Enum ("signer")`
-
-{% tabs %}
-{% tab title="As Env" %}
-```sh
-export HYP_BASE_${CHAIN_NAME}_TXSUBMISSION="signer"
-export HYP_BASE_ETHEREUM_TXSUBMISSION="signer"
-```
-{% endtab %}
-
-{% tab title="As Config" %}
-```json
-{
-    "chains": {
-        "<chain_name>": {
-            "txsubmission": "signer"
-        },
-        "ethereum": {
-            "txsubmission": "signer"
-        }
-    }
-}
-```
-{% endtab %}
-{% endtabs %}
-
 ## chains.\<chain\_name>.signer <a href="#chains.chain_name.signer" id="chains.chain_name.signer"></a>
 
 **Description:** The signer that should be used this chain
@@ -568,7 +534,7 @@ export HYP_BASE_ETHEREUM_CONNECTION_TYPE="httpFallback"
 
 **Description:** Url to connect to
 
-**Requires:**&#x20;
+**Requires:**
 
 ```
 ((chains.<chain_name>.protocol = "ethereum" | undefined)
@@ -608,7 +574,7 @@ export HYP_BASE_ETHEREUM_URL="http://127.0.0.1:8545"
 
 ## chains.\<chain\_name>.urls <a href="#chains.chain_name.urls" id="chains.chain_name.urls"></a>
 
-**Description:**&#x20;
+**Description:**
 
 **Requires:**
 
@@ -619,7 +585,7 @@ export HYP_BASE_ETHEREUM_URL="http://127.0.0.1:8545"
 
 **Optional:** No (iff requirements are met)
 
-**Agents:**&#x20;
+**Agents:**
 
 **Type:** `string` (comma separated list of urls without spaces)
 
@@ -904,7 +870,7 @@ export HYP_BASE_METRICS=9090
 
 **Agents:** All
 
-**Type:**  `Enum ("pretty" | "json" | "full" | "compact")`
+**Type:** `Enum ("pretty" | "json" | "full" | "compact")`
 
 {% tabs %}
 {% tab title="As Env" %}
@@ -951,8 +917,6 @@ HYP_BASE_TRACING_LEVEL="info"
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
 ## originchainname
 
@@ -1276,15 +1240,15 @@ export HYP_BASE_INTERVAL=30
 
 ## db
 
-**Description:**&#x20;
+**Description:**
 
-**Requires:**&#x20;
+**Requires:**
 
-**Optional:**&#x20;
+**Optional:**
 
 **Agents:** Relayer & Scraper
 
-**Type:**&#x20;
+**Type:**
 
 {% tabs %}
 {% tab title="As Env" %}
