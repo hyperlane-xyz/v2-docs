@@ -72,7 +72,7 @@ You can then run `yarn ts-node scripts/deploy-hyperlane.ts` to deploy the Hyperl
 An example deployment command to `anvil` that supports communication with `goerli` and `sepolia` is shown below:
 
 ```bash
-yarn ts-node scripts/deploy-hyperlane.ts --local anvil \
+DEBUG=hyperlane* yarn ts-node scripts/deploy-hyperlane.ts --local anvil \
   --remotes goerli sepolia \
   --key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
 ```

@@ -116,7 +116,7 @@ Run the following script to deploy your Warp Route. You will need to provide the
 * `key`: A hexadecimal private key for transaction signing
 
 ```bash
-yarn ts-node scripts/deploy-warp-routes.ts \
+DEBUG=hyperlane* yarn ts-node scripts/deploy-warp-routes.ts \
   --key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
 ```
 

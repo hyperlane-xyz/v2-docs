@@ -16,7 +16,7 @@ You can run `yarn ts-node scripts/test-messages.ts` to send test messages. You w
 An example command that tests that messages can be sent between any pair of `anvil`, `goerli`, and `sepolia` is shown below:
 
 ```bash
-yarn ts-node scripts/test-messages.ts \
+DEBUG=hyperlane* yarn ts-node scripts/test-messages.ts \
   --chains anvil goerli sepolia \
   --key 0x6f0311f4a0722954c46050bb9f088c4890999e16b64ad02784d24b5fd6d09061
 ```
