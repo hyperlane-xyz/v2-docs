@@ -20,7 +20,7 @@ function sendAndPayForMessage() external payable {
     igp.payForGas{ value: msg.value }(
         messageId, // The ID of the message that was just dispatched
         destinationDomain, // The destination domain of the message
-        50000, // 50k gas to use in the recipient's handle function
+        100000, // 100k gas to use in the recipient's handle function
         msg.sender // refunds go to msg.sender, who paid the msg.value
     );
 }
@@ -71,8 +71,8 @@ function contractPaysForItsOwnMessages() external {
     bytes32 messageId = mailbox.dispatch(/* ... */);
 
     // We're using the DefaultIsmInterchainGasPaymaster, so we specify
-    // 50k gas to use in the recipient's handle function
-    uint256 gasAmount = 5000; 
+    // 100k gas to use in the recipient's handle function
+    uint256 gasAmount = 100000; 
     // Get the required payment from the IGP.
     uint256 quotedPayment = igp.quoteGasPayment(
         destinationDomain,
