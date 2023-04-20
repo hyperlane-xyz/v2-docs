@@ -1,5 +1,5 @@
 ---
-description: Pioneering permissionless and modular interoperability between blockchains
+description: The permissionless interoperability layer built for modular blockchains
 ---
 
 # Hyperlane Introduction
@@ -12,9 +12,11 @@ Building with Hyperlane means access to innovative middlewares such as Hyperlane
 
 Keep reading to learn all about how you can leverage Hyperlane!
 
-### Integrate Hyperlane into your app/protocol
+### Integrate Hyperlane into your Chain, Rollup, or App
 
-Check out the [getting started guide](introduction/getting-started.md) for everything you need to start building with Hyperlane. If you run into an issue or have any questions, [join our discord](https://discord.gg/hyperlane) to get support from the community of Hyperlane builders!
+Check out the [getting started guide](introduction/getting-started.md) for everything you need to start building with Hyperlane. As a creator of a new Chain or Rollup, a Rollup Framework, or a Rollup Service, you can learn how to [deploy Hyperlane](deploy/deploy-hyperlane/) yourself!\
+\
+If you run into an issue or have any questions, [join our discord](https://discord.gg/hyperlane) to get support from the community of Hyperlane builders!
 
 ### Learn more about the Hyperlane Protocol
 
