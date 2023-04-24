@@ -12,7 +12,7 @@ The latest Docker image can be found at:
 
 {% code overflow="wrap" %}
 ```
-gcr.io/abacus-labs-dev/hyperlane-agent:debafb9-20230414-183521
+gcr.io/abacus-labs-dev/hyperlane-agent:40cc4a6-20230420-080111
 ```
 {% endcode %}
 
@@ -20,7 +20,7 @@ To pull the image, run:
 
 {% code overflow="wrap" %}
 ```
-docker pull gcr.io/abacus-labs-dev/hyperlane-agent:debafb9-20230414-183521
+docker pull gcr.io/abacus-labs-dev/hyperlane-agent:40cc4a6-20230420-080111
 ```
 {% endcode %}
 
