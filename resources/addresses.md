@@ -113,6 +113,14 @@ Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-
 | Gnosis    | `0x9bBdef63594D5FFc2f370Fe52115DdFFe97Bc524` | [View on gnosisscan.io](https://gnosisscan.io/address/0x9bBdef63594D5FFc2f370Fe52115DdFFe97Bc524)                     |
 
 
+### LiquidityLayer
+
+| Network   | Address                                      | Explorer                                                                                        |
+| --------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Ethereum  | `0x9954A0d5C9ac7e4a3687f9B08c0FF272f9d0dc71` | [View on etherscan.io](https://etherscan.io/address/0x9954A0d5C9ac7e4a3687f9B08c0FF272f9d0dc71) |
+| Avalanche | `0xEff8C988b9F9f606059c436F5C1Cc431571C8B03` | [View on snowtrace.io](https://snowtrace.io/address/0xEff8C988b9F9f606059c436F5C1Cc431571C8B03) |
+
+
 {% endtab %}
 {% tab title="Testnet" %}
 ### Mailbox
@@ -219,6 +227,17 @@ Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-
 | Optimismgoerli | `0x3Fc742696D5dc9846e04f7A1823D92cb51695f9a` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0x3Fc742696D5dc9846e04f7A1823D92cb51695f9a) |
 | Arbitrumgoerli | `0x3Fc742696D5dc9846e04f7A1823D92cb51695f9a` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0x3Fc742696D5dc9846e04f7A1823D92cb51695f9a)                     |
 | Sepolia        | `0x3Fc742696D5dc9846e04f7A1823D92cb51695f9a` | [View on sepolia.etherscan.io](https://sepolia.etherscan.io/address/0x3Fc742696D5dc9846e04f7A1823D92cb51695f9a)                 |
+
+
+### LiquidityLayer
+
+| Network    | Address                                      | Explorer                                                                                                            |
+| ---------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Goerli     | `0x2abe0860D81FB4242C748132bD69D125D88eaE26` | [View on goerli.etherscan.io](https://goerli.etherscan.io/address/0x2abe0860D81FB4242C748132bD69D125D88eaE26)       |
+| Fuji       | `0x2abe0860D81FB4242C748132bD69D125D88eaE26` | [View on testnet.snowtrace.io](https://testnet.snowtrace.io/address/0x2abe0860D81FB4242C748132bD69D125D88eaE26)     |
+| Mumbai     | `0x2abe0860D81FB4242C748132bD69D125D88eaE26` | [View on mumbai.polygonscan.com](https://mumbai.polygonscan.com/address/0x2abe0860D81FB4242C748132bD69D125D88eaE26) |
+| Bsctestnet | `0x2abe0860D81FB4242C748132bD69D125D88eaE26` | [View on testnet.bscscan.com](https://testnet.bscscan.com/address/0x2abe0860D81FB4242C748132bD69D125D88eaE26)       |
+| Alfajores  | `0x2abe0860D81FB4242C748132bD69D125D88eaE26` | [View on alfajores.celoscan.io](https://alfajores.celoscan.io/address/0x2abe0860D81FB4242C748132bD69D125D88eaE26)   |
 
 
 {% endtab %}

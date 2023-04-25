@@ -5,10 +5,10 @@ description: Attach value with your Hyperlane messages using the Liquidity Layer
 # Liquidity Layer API
 
 {% hint style="warning" %}
-The LiquidityLayer API is in beta and deployed only on testnet. The API is subject to change
+The LiquidityLayer API is in beta. The API is subject to change
 {% endhint %}
 
-Hyperlane's Liquidity layer will wrap  several token bridges to allow developers to send tokens alongside their message.
+Hyperlane's Liquidity layer wraps token bridges to allow developers to send tokens alongside their message.
 
 ```mermaid
 %%{ init: {
@@ -49,10 +49,10 @@ flowchart LR
 
 * Circle
   * Token: USDC
-  * Chains: Goerli and Fuji
+  * Chains: Etherum and Avalanche C-Chain (Mainnet), Goerli and Fuji (Testnet)
 * Portal
   * Token: USDC, ETH
-  * Chains: Goerli, Fuji, Mumbai, BSC Testnet, Alfajores
+  * Chains: Goerli, Fuji, Mumbai, BSC Testnet, Alfajores (Testnet only)
 
 ### Send
 
@@ -77,9 +77,7 @@ interface ILiquidityLayerRouter {
 
 ```
 
-The address of the `LiquidityLayerRouter` is `0x2abe0860D81FB4242C748132bD69D125D88eaE26` on every chain.
-
-`_destinationDomain` is the chain you're sending to, it is **not** the chainID, rather it is a unique ID assigned by the protocol to each chain. Domain ID's can be found [here](../resources/domains.md).
+`_destinationDomain` is the chain you're sending to. Domain ID's can be found [here](../resources/domains.md).
 
 `_recipientAddress` is the receiving contract, it needs to be a contract with the `handleWithTokens()` function, you can read about it in the [Receive](token-bridge-api.md#receive) section.
 

@@ -56,6 +56,37 @@ description: Hyperlane core contract addresses
 
 {% tabs %}
 `);
+
+// Liquidity layer is not yet in the SDK
+const extraContracts = ["liquidityLayer"];
+const extraAddresses = {
+  mainnet: {
+    ethereum: {
+      liquidityLayer: "0x9954A0d5C9ac7e4a3687f9B08c0FF272f9d0dc71",
+    },
+    avalanche: {
+      liquidityLayer: "0xEff8C988b9F9f606059c436F5C1Cc431571C8B03",
+    },
+  },
+  testnet: {
+    goerli: {
+      liquidityLayer: "0x2abe0860D81FB4242C748132bD69D125D88eaE26",
+    },
+    fuji: {
+      liquidityLayer: "0x2abe0860D81FB4242C748132bD69D125D88eaE26",
+    },
+    mumbai: {
+      liquidityLayer: "0x2abe0860D81FB4242C748132bD69D125D88eaE26",
+    },
+    bsctestnet: {
+      liquidityLayer: "0x2abe0860D81FB4242C748132bD69D125D88eaE26",
+    },
+    alfajores: {
+      liquidityLayer: "0x2abe0860D81FB4242C748132bD69D125D88eaE26",
+    },
+  },
+};
+
 for (const env of enviroments) {
   console.log(`{% tab title="${capitalize(env)}" %}`);
   for (const contract of contracts) {
@@ -66,6 +97,13 @@ for (const env of enviroments) {
     console.log(generateTable(contract.name, hyperlaneEnvironments[env]));
     console.log("\n");
   }
+
+  for (const contract of extraContracts) {
+    console.log(`### ${capitalize(contract)}\n`);
+    console.log(generateTable(contract, extraAddresses[env]));
+    console.log("\n");
+  }
+
   console.log("{% endtab %}");
 }
 console.log("{% endtabs %}");
