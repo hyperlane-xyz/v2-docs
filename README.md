@@ -4,22 +4,28 @@ description: The permissionless interoperability layer built for modular blockch
 
 # Hyperlane Introduction
 
-Hyperlane is the first [permissionless interoperability](deploy/permissionless-interoperability.md) layer. Empowering developers to bring interoperability functionality to any blockchain environment, whether it is a layer 1, a rollup, or an appchain. First of its kind, Hyperlane is the only interoperability solution that can be [permissionlessly deployed](deploy/deploy-hyperlane/) on any chain, by anyone. With its modular architecture, notably its [sovereign-consensus](protocol/sovereign-consensus/ "mention"), Hyperlane gives developers control over their security model, and an ability to choose from a menu of options augmented by strong defaults.
+Hyperlane is the first universal and permissionless interoperability framework built for the modular blockchain stack.&#x20;
 
-With Hyperlane deployed on their chains of choice developers can start building Interchain Applications, apps that can serve users on any chain connected to Hyperlane. Handling the burden of interoperability on behalf of their users, and offering a superior experience.
+Anyone can [deploy-hyperlane](deploy/deploy-hyperlane/ "mention") to any blockchain environment, whether it is a layer 1, rollup, or app-chain, allowing that chain to communicate seamlessly with any other chain on which Hyperlane has been deployed.
 
-Building with Hyperlane means access to innovative middlewares such as Hyperlane's [Warp Routes](apis-and-sdks/warp-api.md) that provide developers with the ability to port over assets to any chain while leveraging all of the unique features that emerge from Hyperlane's modular architecture.
+Hyperlane is designed with modularity in mind. Notably, its [sovereign-consensus](protocol/sovereign-consensus/ "mention") gives developers control over their security model, allowing them to configure, compose, and customize security according to the needs of their application.
 
-Keep reading to learn all about how you can leverage Hyperlane!
+Using Hyperlane, developers can build _Interchain Applications_ - dapps that span multiple blockchains. Some pre-built examples that can be deployed out of the box include:
 
-### Integrate Hyperlane into your Chain, Rollup, or App
+1. [deploy-warp-route](deploy/deploy-warp-route/ "mention"), which allow native, `ERC20`, and `ERC721` tokens to move seamlessly across chains
+2. Interchain [accounts](apis/accounts/ "mention"), which allows an account on one chain (e.g. a DAO) to make smart contract calls on remote chains
+3. Interchain [query.md](apis/query.md "mention"), which allow an account on one chain to make view calls on remote chains
 
-Check out the [getting started guide](introduction/getting-started.md) for everything you need to start building with Hyperlane. As a creator of a new Chain or Rollup, a Rollup Framework, or a Rollup Service, you can learn how to [deploy Hyperlane](deploy/deploy-hyperlane/) yourself!\
+Keep reading to learn all the things Hyperlane can do for you!
+
+### Integrate Hyperlane into your chain, rollup, or app
+
+Check out the [getting-started.md](introduction/getting-started.md "mention") guide for everything you need to start building with Hyperlane. As a creator of a new Chain or Rollup, a Rollup Framework, or a Rollup Service, you can learn how to [deploy-hyperlane](deploy/deploy-hyperlane/ "mention") yourself!\
 \
 If you run into an issue or have any questions, [join our discord](https://discord.gg/hyperlane) to get support from the community of Hyperlane builders!
 
-### Learn more about the Hyperlane Protocol
+### Learn more about the Hyperlane protocol
 
-Take a look at the [protocol docs](protocol/permissionless-interoperability.md) to understand the Hyperlane protocol architecture and [security model](protocol/sovereign-consensus/).
+Take a look at the protocol [permissionless-interoperability.md](protocol/permissionless-interoperability.md "mention") to understand the Hyperlane protocol architecture, or read more about [sovereign-consensus](protocol/sovereign-consensus/ "mention") to learn more about how Hyperlane interchain messaging is secured.
 
 ### Curious about what you should use Hyperlane for? Continue to the [next page](introduction/why-hyperlane/) to learn more

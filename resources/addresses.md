@@ -5,9 +5,8 @@ description: Hyperlane core contract addresses
 # Contract addresses
 
 {% tabs %}
-
 {% tab title="Mainnet" %}
-### Mailbox
+#### Mailbox
 
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -21,10 +20,10 @@ description: Hyperlane core contract addresses
 | Moonbeam  | `0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70` | [View on moonscan.io](https://moonscan.io/address/0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70)                         |
 | Gnosis    | `0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70` | [View on gnosisscan.io](https://gnosisscan.io/address/0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70)                     |
 
-
-### DefaultIsmInterchainGasPaymaster
+#### DefaultIsmInterchainGasPaymaster
 
 Read about this [here](../build-with-hyperlane/guides/developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)
+
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | Celo      | `0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc` | [View on celoscan.io](https://celoscan.io/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc)                         |
@@ -37,10 +36,10 @@ Read about this [here](../build-with-hyperlane/guides/developers/paying-for-inte
 | Moonbeam  | `0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc` | [View on moonscan.io](https://moonscan.io/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc)                         |
 | Gnosis    | `0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc` | [View on gnosisscan.io](https://gnosisscan.io/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc)                     |
 
-
-### InterchainGasPaymaster
+#### InterchainGasPaymaster
 
 Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-a-custom-ism-advanced)
+
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | Celo      | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on celoscan.io](https://celoscan.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918)                         |
@@ -53,8 +52,7 @@ Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-
 | Moonbeam  | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on moonscan.io](https://moonscan.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918)                         |
 | Gnosis    | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on gnosisscan.io](https://gnosisscan.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918)                     |
 
-
-### MultisigIsm
+#### MultisigIsm
 
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -68,8 +66,7 @@ Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-
 | Moonbeam  | `0xf3b1F415740A26568C45b1c771A737E31C198F09` | [View on moonscan.io](https://moonscan.io/address/0xf3b1F415740A26568C45b1c771A737E31C198F09)                         |
 | Gnosis    | `0xC343A7054838FE9F249D7E3Ec1Fa6f1D108694b8` | [View on gnosisscan.io](https://gnosisscan.io/address/0xC343A7054838FE9F249D7E3Ec1Fa6f1D108694b8)                     |
 
-
-### InterchainQueryRouter
+#### InterchainQueryRouter
 
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -82,8 +79,7 @@ Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-
 | Optimism  | `0x234b19282985882d6d6fd54dEBa272271f4eb784` | [View on optimistic.etherscan.io](https://optimistic.etherscan.io/address/0x234b19282985882d6d6fd54dEBa272271f4eb784) |
 | Moonbeam  | `0x234b19282985882d6d6fd54dEBa272271f4eb784` | [View on moonscan.io](https://moonscan.io/address/0x234b19282985882d6d6fd54dEBa272271f4eb784)                         |
 
-
-### InterchainAccountRouter
+#### InterchainAccountRouter
 
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -97,8 +93,7 @@ Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-
 | Moonbeam  | `0x5b6311e0417CfD3Fb10318108897E63777CFE8D7` | [View on moonscan.io](https://moonscan.io/address/0x5b6311e0417CfD3Fb10318108897E63777CFE8D7)                         |
 | Gnosis    | `0x32e77b20bf0cf034eB80ea9DD02De881016B01B3` | [View on gnosisscan.io](https://gnosisscan.io/address/0x32e77b20bf0cf034eB80ea9DD02De881016B01B3)                     |
 
-
-### ValidatorAnnounce
+#### ValidatorAnnounce
 
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -112,18 +107,16 @@ Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-
 | Moonbeam  | `0x9bBdef63594D5FFc2f370Fe52115DdFFe97Bc524` | [View on moonscan.io](https://moonscan.io/address/0x9bBdef63594D5FFc2f370Fe52115DdFFe97Bc524)                         |
 | Gnosis    | `0x9bBdef63594D5FFc2f370Fe52115DdFFe97Bc524` | [View on gnosisscan.io](https://gnosisscan.io/address/0x9bBdef63594D5FFc2f370Fe52115DdFFe97Bc524)                     |
 
-
-### LiquidityLayer
+#### LiquidityLayer
 
 | Network   | Address                                      | Explorer                                                                                        |
 | --------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | Ethereum  | `0x9954A0d5C9ac7e4a3687f9B08c0FF272f9d0dc71` | [View on etherscan.io](https://etherscan.io/address/0x9954A0d5C9ac7e4a3687f9B08c0FF272f9d0dc71) |
 | Avalanche | `0xEff8C988b9F9f606059c436F5C1Cc431571C8B03` | [View on snowtrace.io](https://snowtrace.io/address/0xEff8C988b9F9f606059c436F5C1Cc431571C8B03) |
-
-
 {% endtab %}
+
 {% tab title="Testnet" %}
-### Mailbox
+#### Mailbox
 
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -137,10 +130,10 @@ Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-
 | Arbitrumgoerli | `0xCC737a94FecaeC165AbCf12dED095BB13F037685` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0xCC737a94FecaeC165AbCf12dED095BB13F037685)                     |
 | Sepolia        | `0xCC737a94FecaeC165AbCf12dED095BB13F037685` | [View on sepolia.etherscan.io](https://sepolia.etherscan.io/address/0xCC737a94FecaeC165AbCf12dED095BB13F037685)                 |
 
-
-### DefaultIsmInterchainGasPaymaster
+#### DefaultIsmInterchainGasPaymaster
 
 Read about this [here](../build-with-hyperlane/guides/developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)
+
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | Alfajores      | `0xF90cB82a76492614D07B82a7658917f3aC811Ac1` | [View on alfajores.celoscan.io](https://alfajores.celoscan.io/address/0xF90cB82a76492614D07B82a7658917f3aC811Ac1)               |
@@ -153,10 +146,10 @@ Read about this [here](../build-with-hyperlane/guides/developers/paying-for-inte
 | Arbitrumgoerli | `0xF90cB82a76492614D07B82a7658917f3aC811Ac1` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0xF90cB82a76492614D07B82a7658917f3aC811Ac1)                     |
 | Sepolia        | `0xF987d7edcb5890cB321437d8145E3D51131298b6` | [View on sepolia.etherscan.io](https://sepolia.etherscan.io/address/0xF987d7edcb5890cB321437d8145E3D51131298b6)                 |
 
-
-### InterchainGasPaymaster
+#### InterchainGasPaymaster
 
 Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-a-custom-ism-advanced)
+
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | Alfajores      | `0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a` | [View on alfajores.celoscan.io](https://alfajores.celoscan.io/address/0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a)               |
@@ -169,8 +162,7 @@ Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-
 | Arbitrumgoerli | `0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a)                     |
 | Sepolia        | `0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a` | [View on sepolia.etherscan.io](https://sepolia.etherscan.io/address/0x8f9C3888bFC8a5B25AED115A82eCbb788b196d2a)                 |
 
-
-### MultisigIsm
+#### MultisigIsm
 
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -184,8 +176,7 @@ Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-
 | Arbitrumgoerli | `0x47384E33E67007B7fE4326fb096Bdf9CbA7AB6E4` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0x47384E33E67007B7fE4326fb096Bdf9CbA7AB6E4)                     |
 | Sepolia        | `0xD3d062a5dcBA85ae863618d4c264d2358300c283` | [View on sepolia.etherscan.io](https://sepolia.etherscan.io/address/0xD3d062a5dcBA85ae863618d4c264d2358300c283)                 |
 
-
-### InterchainQueryRouter
+#### InterchainQueryRouter
 
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -198,8 +189,7 @@ Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-
 | Optimismgoerli | `0xF782C6C4A02f2c71BB8a1Db0166FAB40ea956818` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0xF782C6C4A02f2c71BB8a1Db0166FAB40ea956818) |
 | Arbitrumgoerli | `0xF782C6C4A02f2c71BB8a1Db0166FAB40ea956818` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0xF782C6C4A02f2c71BB8a1Db0166FAB40ea956818)                     |
 
-
-### InterchainAccountRouter
+#### InterchainAccountRouter
 
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -213,8 +203,7 @@ Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-
 | Arbitrumgoerli | `0x4266D8Dd66D8Eb3934c8942968d1e54214D072d3` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0x4266D8Dd66D8Eb3934c8942968d1e54214D072d3)                     |
 | Sepolia        | `0xB057Fb841027a8554521DcCdeC3c3474CaC99AB5` | [View on sepolia.etherscan.io](https://sepolia.etherscan.io/address/0xB057Fb841027a8554521DcCdeC3c3474CaC99AB5)                 |
 
-
-### ValidatorAnnounce
+#### ValidatorAnnounce
 
 | Network        | Address                                      | Explorer                                                                                                                        |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -228,8 +217,7 @@ Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-
 | Arbitrumgoerli | `0x3Fc742696D5dc9846e04f7A1823D92cb51695f9a` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0x3Fc742696D5dc9846e04f7A1823D92cb51695f9a)                     |
 | Sepolia        | `0x3Fc742696D5dc9846e04f7A1823D92cb51695f9a` | [View on sepolia.etherscan.io](https://sepolia.etherscan.io/address/0x3Fc742696D5dc9846e04f7A1823D92cb51695f9a)                 |
 
-
-### LiquidityLayer
+#### LiquidityLayer
 
 | Network    | Address                                      | Explorer                                                                                                            |
 | ---------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -238,7 +226,5 @@ Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-
 | Mumbai     | `0x2abe0860D81FB4242C748132bD69D125D88eaE26` | [View on mumbai.polygonscan.com](https://mumbai.polygonscan.com/address/0x2abe0860D81FB4242C748132bD69D125D88eaE26) |
 | Bsctestnet | `0x2abe0860D81FB4242C748132bD69D125D88eaE26` | [View on testnet.bscscan.com](https://testnet.bscscan.com/address/0x2abe0860D81FB4242C748132bD69D125D88eaE26)       |
 | Alfajores  | `0x2abe0860D81FB4242C748132bD69D125D88eaE26` | [View on alfajores.celoscan.io](https://alfajores.celoscan.io/address/0x2abe0860D81FB4242C748132bD69D125D88eaE26)   |
-
-
 {% endtab %}
 {% endtabs %}
