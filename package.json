@@ -19,7 +19,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "sync": "node sync-addresses.js > ./resources/addresses.md && node sync-partials.js",
+        "sync": "node sync-addresses.js > ./resources/addresses.md && node sync-partials.js && node sync-config.js > resources/validators.md",
         "lint": "remark . --quiet --frail"
     },
     "remarkConfig": {
