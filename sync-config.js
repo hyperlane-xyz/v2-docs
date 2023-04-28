@@ -103,7 +103,7 @@ for (const env of environments) {
       ...config.validators.map((address, i) => {
         const name = names[i];
         const homepage = homepages[name];
-        return [`[${name}](${homepage})`, `\`${address}\``, storageUrls[i]];
+        return [`[${name}](${homepage})`, `\`${address}\``, `[View on S3](${storageUrls[i]})`];
       }),
     ];
 
