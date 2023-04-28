@@ -2,21 +2,24 @@ import {
   MultiProvider,
   defaultMultisigIsmConfigs,
   hyperlaneEnvironments,
-  chainMetadata
+  chainMetadata,
 } from "@hyperlane-xyz/sdk";
 
-import { Mailbox__factory, ValidatorAnnounce__factory } from "@hyperlane-xyz/core";
+import {
+  Mailbox__factory,
+  ValidatorAnnounce__factory,
+} from "@hyperlane-xyz/core";
 
 import { markdownTable } from "markdown-table";
 
 const homepages = {
-  dsrv: 'https://www.dsrvlabs.com/',
-  abacus: 'https://www.hyperlane.xyz/crew',
-  everstake: 'https://everstake.one/',
-  'zee prime': 'https://zeeprime.capital/',
-  'staked': 'https://staked.us/',
-  'zkv': 'https://zkvalidator.com/',
-}
+  dsrv: "https://www.dsrvlabs.com/",
+  abacus: "https://www.hyperlane.xyz/crew",
+  everstake: "https://everstake.one/",
+  "zee prime": "https://zeeprime.capital/",
+  staked: "https://staked.us/",
+  zkv: "https://zkvalidator.com/",
+};
 
 // TODO: add to storage modality
 export const multisigConfigNames = {
@@ -62,9 +65,7 @@ description: Mailbox default security settings
 
 const multiProvider = new MultiProvider();
 
-const environments = [
-  "mainnet",
-];
+const environments = ["mainnet"];
 for (const env of environments) {
   const addresses = hyperlaneEnvironments[env];
 
@@ -73,7 +74,7 @@ for (const env of environments) {
   for (const network of networks) {
     const config = defaultMultisigIsmConfigs[network];
 
-    console.log(`## ${capitalize(network)}`);
+    console.log(`## ${capitalize(network)}\n`);
 
     const contracts = addresses[network];
     const provider = multiProvider.getProvider(network);
@@ -106,25 +107,35 @@ for (const env of environments) {
       }),
     ];
 
-    console.log(`### Validators`);
+    console.log(`### Validators\n`);
     console.log(markdownTable(validatorEntries));
+    console.log();
 
-    let ismEntries = [['Destination', 'Threshold', 'Address', 'View on Explorer']];
+    let ismEntries = [
+      ["Destination", "Threshold", "Address", "View on Explorer"],
+    ];
     for (const remote of networks.filter((n) => n !== network)) {
       const remoteProvider = multiProvider.getProvider(remote);
 
-      const mailbox = Mailbox__factory.connect(addresses[remote].mailbox, remoteProvider)
+      const mailbox = Mailbox__factory.connect(
+        addresses[remote].mailbox,
+        remoteProvider
+      );
       const ism = await mailbox.defaultIsm();
 
       const explorer = chainMetadata[remote].blockExplorers[0].url;
       const url = new URL(explorer);
 
       ismEntries.push([
-        capitalize(remote), `${config.threshold} / ${config.validators.length}`, `\`${ism}\``, `[View on ${url.hostname}](${explorer}/address/${ism})`
-      ])
+        capitalize(remote),
+        `${config.threshold} / ${config.validators.length}`,
+        `\`${ism}\``,
+        `[View on ${url.hostname}](${explorer}/address/${ism})`,
+      ]);
     }
 
-    console.log(`### Multisig ISM`);
+    console.log(`### Multisig ISM\n`);
     console.log(markdownTable(ismEntries));
+    console.log();
   }
 }
