@@ -125,7 +125,7 @@
 * [Glossary](resources/glossary.md)
 * [Contract addresses](resources/addresses.md)
 * [Domain identifiers](resources/domains.md)
-* [Validators](resources/validators.md)
+* [Mailbox Default Security](resources/security.md)
 * [Token Sources & Faucets](resources/token-sources-and-faucets.md)
 * [Core App Environments](resources/environments.md)
 * [Latencies](resources/latencies.md)
