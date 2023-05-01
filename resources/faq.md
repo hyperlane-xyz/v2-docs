@@ -8,7 +8,7 @@ description: Answering the most Frequently Asked Questions about all things Hype
 
 Hyperlane is Permissionless Interoperability layer, with a modular security architecture that enables developers to bring interoperability to any chain or app completely permissionlessly. Beyond that, it is first to introduce modular and context based security, allowing devs to choose from a menu of [sovereign-consensus](../protocol/sovereign-consensus/ "mention") and mix and match based on user actions.
 
-Hyperlane is the interoperability layer of choice for the world of many blockchains and rollups. By allowing anyone to [deploy-hyperlane](../deploy/deploy-hyperlane/ "mention"), Hyperlane creates the first ‘network of networks’, to connect the rapidly expanding universe of chains.
+Hyperlane is the interoperability layer of choice for the world of many blockchains and rollups. By allowing anyone to [deploy-hyperlane.md](../deploy/deploy-hyperlane.md "mention"), Hyperlane creates the first ‘network of networks’, to connect the rapidly expanding universe of chains.
 
 Learn more: [so-what-is-hyperlane.md](../introduction/why-hyperlane/so-what-is-hyperlane.md "mention")
 
@@ -60,7 +60,7 @@ We don’t recommend using Hyperlane in this manner — it would be very expensi
 
 ## **Are you a token bridge?**
 
-Well, not exactly… Hyperlane is a [Broken link](broken-reference "mention") Protocol that allows communication between blockchains. Token bridges are just one of many types of applications that can be built on top of Hyperlane! For more ideas what can be built on Hyperlane check out the question above.
+Well, not exactly… Hyperlane is a [broken-reference](broken-reference/ "mention") Protocol that allows communication between blockchains. Token bridges are just one of many types of applications that can be built on top of Hyperlane! For more ideas what can be built on Hyperlane check out the question above.
 
 Start building on Hyperlane [getting-started.md](../introduction/getting-started.md "mention")[quickstarts](../build-with-hyperlane/quickstarts/ "mention")[examples.md](../build-with-hyperlane/examples.md "mention")
 
@@ -82,7 +82,7 @@ For more extensive Troubleshooting check out or docs page [troubleshooting.md](.
 
 ## **I’m interested in joining the Hyperlane crew! How can I find out about careers?**
 
-Share our excitement for all things Interchain and [Broken link](broken-reference "mention"). Check out Abacus Works [job openings](https://jobs.lever.co/Hyperlane)!
+Share our excitement for all things Interchain and [broken-reference](broken-reference/ "mention"). Check out Abacus Works [job openings](https://jobs.lever.co/Hyperlane)!
 
 ## How can I contribute to improve this documentation?
 

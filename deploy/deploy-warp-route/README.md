@@ -2,7 +2,7 @@
 description: Interchain ERC20 and ERC721 tokens
 ---
 
-# Warp routes
+# Warp Routes
 
 {% content-ref url="deploy-a-warp-route.md" %}
 [deploy-a-warp-route.md](deploy-a-warp-route.md)
@@ -26,7 +26,7 @@ Users can redeem their locked tokens at any time by transferring their wrapped t
 
 Like all applications built on top of Hyperlane, Warp Routes have customizable security via [sovereign-consensus](../../protocol/sovereign-consensus/ "mention"). This allows Warp Route deployers to configure and enforce custom rules and constraints that the interchain token must follow.
 
-Warp Routes can be deployed between any set of chains that have Hyperlane deployments. If you would like to create a Warp Route that includes a chain that Hyperlane is not currently deployed on, feel free to [deploy-hyperlane](../deploy-hyperlane/ "mention")yourself!
+Warp Routes can be deployed between any set of chains that have Hyperlane deployments. If you would like to create a Warp Route that includes a chain that Hyperlane is not currently deployed on, feel free to [deploy-hyperlane.md](../deploy-hyperlane.md "mention")yourself!
 
 ## Glossary
 
@@ -39,4 +39,3 @@ The **collateral token** can be any ERC20 token. It does not get burned but its 
 {% content-ref url="deploy-a-warp-route.md" %}
 [deploy-a-warp-route.md](deploy-a-warp-route.md)
 {% endcontent-ref %}
-

@@ -12,12 +12,7 @@
 ## Permissionless Interoperability <a href="#deploy" id="deploy"></a>
 
 * [Overview](deploy/permissionless-interoperability.md)
-* [Deploy Hyperlane](deploy/deploy-hyperlane/README.md)
-  * [Keys](deploy/deploy-hyperlane/keys.md)
-  * [Deploy contracts](deploy/deploy-hyperlane/deploy-contracts.md)
-  * [Run validators](deploy/deploy-hyperlane/run-validators.md)
-  * [Run relayers](deploy/deploy-hyperlane/run-relayers.md)
-  * [Send test messages](deploy/deploy-hyperlane/send-test-messages.md)
+* [Deploy Hyperlane](deploy/deploy-hyperlane.md)
 * [Warp Routes](deploy/deploy-warp-route/README.md)
   * [Deploy a Warp Route](deploy/deploy-warp-route/deploy-a-warp-route.md)
   * [Deploy a UI for your Warp Route](deploy/deploy-warp-route/deploy-the-ui-for-your-warp-route.md)

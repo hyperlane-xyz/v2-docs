@@ -12,7 +12,7 @@ description: >-
 
 If you have deployed your own chain or rollup and want interoperability for that chain, you can deploy Hyperlane to your chain. Here's how:
 
-* [deploy-hyperlane](../deploy/deploy-hyperlane/ "mention") to the chain of your choice
+* [deploy-hyperlane.md](../deploy/deploy-hyperlane.md "mention") to the chain of your choice
 * [deploy-warp-route](../deploy/deploy-warp-route/ "mention") enable token representations of popular tokens like ETH or USDC on your chain with a working UI out of the box.
 
 ## For application developers

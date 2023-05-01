@@ -6,7 +6,7 @@ description: The permissionless interoperability layer built for modular blockch
 
 Hyperlane is the first universal and permissionless interoperability framework built for the modular blockchain stack.&#x20;
 
-Anyone can [deploy-hyperlane](deploy/deploy-hyperlane/ "mention") to any blockchain environment, whether it is a layer 1, rollup, or app-chain, allowing that chain to communicate seamlessly with any other chain on which Hyperlane has been deployed.
+Anyone can [deploy-hyperlane.md](deploy/deploy-hyperlane.md "mention") to any blockchain environment, whether it is a layer 1, rollup, or app-chain, allowing that chain to communicate seamlessly with any other chain on which Hyperlane has been deployed.
 
 Hyperlane is designed with modularity in mind. Notably, its [sovereign-consensus](protocol/sovereign-consensus/ "mention") gives developers control over their security model, allowing them to configure, compose, and customize security according to the needs of their application.
 
@@ -20,7 +20,7 @@ Keep reading to learn all the things Hyperlane can do for you!
 
 ### Integrate Hyperlane into your chain, rollup, or app
 
-Check out the [getting-started.md](introduction/getting-started.md "mention") guide for everything you need to start building with Hyperlane. As a creator of a new Chain or Rollup, a Rollup Framework, or a Rollup Service, you can learn how to [deploy-hyperlane](deploy/deploy-hyperlane/ "mention") yourself!\
+Check out the [getting-started.md](introduction/getting-started.md "mention") guide for everything you need to start building with Hyperlane. As a creator of a new Chain or Rollup, a Rollup Framework, or a Rollup Service, you can learn how to [deploy-hyperlane.md](deploy/deploy-hyperlane.md "mention") yourself!\
 \
 If you run into an issue or have any questions, [join our discord](https://discord.gg/hyperlane) to get support from the community of Hyperlane builders!
 

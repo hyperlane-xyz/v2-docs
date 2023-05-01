@@ -53,5 +53,5 @@ See [`Message.sol`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/mai
 {% endhint %}
 
 {% hint style="warning" %}
-[Relayer](../../protocol/agents/relayer.md) support for ISMs other than the `MultisigIsm` are coming soon™️. It is recommended to use the default ISM for now, or if you're [permissionlessly deploying](../../deploy/deploy-hyperlane/#3.-deploy-remote-isms) Hyperlane, the `MultisigIsm`s you've deployed.
+[Relayer](../../protocol/agents/relayer.md) support for ISMs other than the `MultisigIsm` are coming soon™️. It is recommended to use the default ISM for now, or if you're [permissionlessly deploying](../../deploy/deploy-hyperlane.md#3.-deploy-remote-isms) Hyperlane, the `MultisigIsm`s you've deployed.
 {% endhint %}
