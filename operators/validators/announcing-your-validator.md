@@ -24,7 +24,7 @@ If you followed the [local-setup.md](setup/local-setup.md "mention") instruction
 
 {% code overflow="wrap" %}
 ```sh
-cat $MY_VALIDATOR_SIGNATURES_DIRECTORY/announcement.json
+cat $HYP_VALIDATOR_CHECKPOINTSYNCER_PATH/announcement.json
 ```
 {% endcode %}
 {% endtab %}
