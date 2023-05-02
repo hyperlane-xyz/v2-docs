@@ -25,7 +25,7 @@ Your validator will post their signatures to this bucket.
 1. Go to AWS's S3 in the AWS console.
 2. On the right, click the orange "Create Bucket" button
 3. Pick an informative bucket name, such as `hyperlane-validator-signatures-${validator_name}-${chain_name}`
-4. Consider choosing the same region as the KMS key you created in the previous step.&#x20;
+4. Consider choosing the same region as the KMS key you created in the previous step.
 5. Keep the recommended "ACLs disabled" setting for object ownership.
 6. Configure public access settings so that relayers can read your signatures
    1. Uncheck "Block all public access"
@@ -48,7 +48,7 @@ Your validator IAM user will need write permissions, and it should be publicly r
 8. Scroll down to "Bucket policy" and click "Edit"
 9. Enter the following contents. The Bucket ARN is shown just above where you enter the policy
 
-```
+```json
 {
     "Version": "2012-10-17",
     "Statement": [

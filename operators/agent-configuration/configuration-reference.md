@@ -6,7 +6,9 @@ description: All configuration
 
 ## CONFIG\_FILES
 
-**Description:** (Env only) List of configuration file paths to load in order. They will be merged first to last, so if both the first one and the last one specify a specific config path, the value set in the last file listed will be used.
+**Description:** (Env only) List of additional configuration file paths to load in order (such as those in `hyperlane-monorepo/rust/config`). They will be merged first to last, so if both the first one and the last one specify a specific config path, the value set in the last file listed will be used.
+
+These files must be accessible within the filesystem your agent has access to. If you're running in Docker, see [#config-files-with-docker](./#config-files-with-docker "mention") for tips on mounting your config files into your Docker container.
 
 **Optional:** Yes
 
@@ -1240,27 +1242,41 @@ export HYP_BASE_INTERVAL=30
 
 ## db
 
-**Description:**
+**Description:** For the relayer, this is a local filesystem path to where the indexing cache should be stored. **This must be unique per relayer!** Multiple relayers must have different paths. The path is relative to the current working directory if it does not start with a system defined root path such as `/` on unix.
 
-**Requires:**
+For the scraper, this is the connection string to a postgresql database.
 
-**Optional:**
+**Optional:** For relayers it is optional and defaults to a path in the current working directory which includes the `originchainname`. For the scraper it is required.
 
 **Agents:** Relayer & Scraper
 
-**Type:**
+**Type:** `string`
 
 {% tabs %}
 {% tab title="As Env" %}
 ```sh
-export HYP_BASE_
+# Relayer
+export HYP_BASE_DB="/tmp/hyp/relayer/ethereum-cache"
+
+# Scraper
+export HYP_BASE_DB="postgresql://postgres:password@localhost:5432/dbname"
 ```
 {% endtab %}
 
 {% tab title="As Config" %}
+For the relayer:
+
 ```json
 {
-    
+    "db": "/tmp/hyp/relayer/ethereum-cache"
+}
+```
+
+For the scraper:
+
+```json
+{
+    "db": "postgresql://postgres:password@localhost:5432/dbname"
 }
 ```
 {% endtab %}
@@ -1367,6 +1383,8 @@ export HYP_BASE_GASPAYMENTENFORCEMENT='[{"type": "none", "matchingList": [{"send
 
 **Description:** A matching list to define what messages should be allowed. Any messages which do not match this list will not be relayed. If no whitelist is supplied all messages will be allowed.
 
+See also [message-filtering.md](../relayers/environment-variables/message-filtering.md "mention")
+
 **Optional:** Yes
 
 **Agents:** Relayer
@@ -1418,6 +1436,8 @@ export HYP_BASE_WHITELIST='[{"senderAddress": "0xa441b15fe9a3cf56661190a0b93b9de
 
 **Description:** A matching list to define what messages should be ignored. Any messages which match this list will not be relayed. If no blacklist is supplied all messages will be allowed.
 
+See also [message-filtering.md](../relayers/environment-variables/message-filtering.md "mention")
+
 **Optional:** Yes
 
 **Agents:** Relayer
@@ -1425,7 +1445,7 @@ export HYP_BASE_WHITELIST='[{"senderAddress": "0xa441b15fe9a3cf56661190a0b93b9de
 **Type:** `JSON (string)`
 
 ```typescript
-type whitelist = MatchingList | undefined;
+type blacklist = MatchingList | undefined;
 
 // A list of matching rules. A message matches if any of the list
 // elements matches the message.

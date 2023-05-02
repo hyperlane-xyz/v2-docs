@@ -8,44 +8,28 @@ The recommended installation method for a production environment is using a Dock
 
 ## Docker image
 
-The latest Docker image can be found at:
+To run the relayer in docker, run:
 
 {% code overflow="wrap" %}
-```
-gcr.io/abacus-labs-dev/hyperlane-agent:40cc4a6-20230420-080111
-```
-{% endcode %}
-
-To pull the image, run:
-
-{% code overflow="wrap" %}
-```
-docker pull gcr.io/abacus-labs-dev/hyperlane-agent:40cc4a6-20230420-080111
-```
-{% endcode %}
-
-The relayer binary is found at `./relayer`:
-
-{% code overflow="wrap" %}
-```
+```bash
 docker run -it gcr.io/abacus-labs-dev/hyperlane-agent:40cc4a6-20230420-080111 ./relayer
 ```
 {% endcode %}
 
 ## Building from source
 
-First, follow the setup instructions found here: [https://github.com/hyperlane-xyz/hyperlane-monorepo#rust](https://github.com/hyperlane-xyz/hyperlane-monorepo#rust).
+First, clone the repo
 
 ```sh
-# Clone the repo
 git clone git@github.com:hyperlane-xyz/hyperlane-monorepo.git
-
-# cd into the rust directory
-cd ./hyperlane-monorepo/rust
-
-# Build the release version of the relayer
-cargo build --release --bin relayer
-
-# The relayer binary is found at `./target/release/relayer`:
-./target/release/relayer
 ```
+
+And then follow the [setup instructions](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/README.md#setup) in the `rust` directory
+
+### Next
+
+Now that you have a way to run the relayer, continue to the setup.
+
+{% content-ref url="setup.md" %}
+[setup.md](setup.md)
+{% endcontent-ref %}
