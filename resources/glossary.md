@@ -34,6 +34,26 @@ Checkpoints signatures by [#validator](glossary.md#validator "mention")s are use
 
 <details>
 
+<summary>Collateral chain</summary>
+
+For a [#warp-route](glossary.md#warp-route "mention"), the chain on which the [#collateral-token](glossary.md#collateral-token "mention") is deposited into the warp route.\
+\
+Read more about [deploy-warp-route](../deploy/deploy-warp-route/ "mention")
+
+</details>
+
+<details>
+
+<summary>Collateral token</summary>
+
+For a [#warp-route](glossary.md#warp-route "mention"), the token which is deposited on the [#collateral-chain](glossary.md#collateral-chain "mention") to create a wrapped token on a remote [#synthetic-chain](glossary.md#synthetic-chain "mention").
+
+Read more about [deploy-warp-route](../deploy/deploy-warp-route/ "mention")
+
+</details>
+
+<details>
+
 <summary>Default ISM</summary>
 
 The [#interchain-security-module](glossary.md#interchain-security-module "mention") that will be used to verify inbound messages if the message recipient has not specified their own ISM.\
@@ -139,6 +159,16 @@ Relayers are untrusted, and anyone can operate a relayer.
 The Routing ISM is a type of [#interchain-security-module](glossary.md#interchain-security-module "mention") that defers to a different ISM depending on the message being delivered.\
 \
 For example, a Routing ISM could use a different ISM depending on the origin chain from which the message was sent.
+
+</details>
+
+<details>
+
+<summary>Synthetic chain</summary>
+
+For a [#warp-route](glossary.md#warp-route "mention"), a chain on which wrapped tokens are minted. These wrapped tokens are backed by [#collateral-token](glossary.md#collateral-token "mention")s that have been locked on the [#collateral-chain](glossary.md#collateral-chain "mention").\
+\
+Read more about [deploy-warp-route](../deploy/deploy-warp-route/ "mention")
 
 </details>
 

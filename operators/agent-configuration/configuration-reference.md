@@ -1383,7 +1383,7 @@ export HYP_BASE_GASPAYMENTENFORCEMENT='[{"type": "none", "matchingList": [{"send
 
 **Description:** A matching list to define what messages should be allowed. Any messages which do not match this list will not be relayed. If no whitelist is supplied all messages will be allowed.
 
-See also [message-filtering.md](../relayers/environment-variables/message-filtering.md "mention")
+See also [message-filtering.md](../relayers/message-filtering.md "mention")
 
 **Optional:** Yes
 
@@ -1436,7 +1436,7 @@ export HYP_BASE_WHITELIST='[{"senderAddress": "0xa441b15fe9a3cf56661190a0b93b9de
 
 **Description:** A matching list to define what messages should be ignored. Any messages which match this list will not be relayed. If no blacklist is supplied all messages will be allowed.
 
-See also [message-filtering.md](../relayers/environment-variables/message-filtering.md "mention")
+See also [message-filtering.md](../relayers/message-filtering.md "mention")
 
 **Optional:** Yes
 

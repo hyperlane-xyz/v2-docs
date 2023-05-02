@@ -24,4 +24,4 @@ An AWS KMS key can be used by your relayer to sign transactions. This is the rec
 
 ## Next
 
-After you've configured your relayer keys, continue to the [environment-variables](environment-variables/ "mention") section.
+After you've configured your relayer keys, continue to the [environment-variables.md](environment-variables.md "mention") section.

@@ -12,7 +12,7 @@ description: Run your relayer
 
 Refer to the [installation.md](installation.md "mention") instructions to access the relayer binary.
 
-[environment-variables](environment-variables/ "mention") can be placed in a `relayer.env` file, for example:
+[environment-variables.md](environment-variables.md "mention") can be placed in a `relayer.env` file, for example:
 
 {% code title="relayer.env" overflow="wrap" %}
 ```sh

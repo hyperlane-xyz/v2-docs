@@ -8,7 +8,7 @@ By default, the relayer will attempt to deliver messages sent from its origin ch
 
 Relayers may want to further filter the messages they attempt to deliver. For example, someone building an interchain app may want to run a relayer that only delivers messages sent to that application. Similarly, some relayers may wish to only relay messages to a subset of available chains.
 
-Relayers may **optionally** filter the messages they deliver by setting the `HYP_BASE_WHITELIST` or `HYP_BASE_BLACKLIST` environment variables. See also the configuration reference's[#whitelist](../../agent-configuration/configuration-reference.md#whitelist "mention") and[#blacklist](../../agent-configuration/configuration-reference.md#blacklist "mention") sections.
+Relayers may **optionally** filter the messages they deliver by setting the `HYP_BASE_WHITELIST` or `HYP_BASE_BLACKLIST` environment variables. See also the configuration reference's[#whitelist](../agent-configuration/configuration-reference.md#whitelist "mention") and[#blacklist](../agent-configuration/configuration-reference.md#blacklist "mention") sections.
 
 These environment variables are stringified JSON objects with the following format:
 
@@ -72,6 +72,6 @@ The blacklist supersedes the whitelist, i.e. if a message matches both the white
 
 Now you are ready to relay messages!
 
-{% content-ref url="../start-validating.md" %}
-[start-validating.md](../start-validating.md)
+{% content-ref url="start-validating.md" %}
+[start-validating.md](start-validating.md)
 {% endcontent-ref %}
