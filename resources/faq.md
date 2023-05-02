@@ -1,89 +1,167 @@
 ---
-description: Answering the most Frequently Asked Questions about all things Hyperlane
+description: Answering the most frequently asked questions about all things Hyperlane
 ---
 
 # FAQ
 
-## **What is Hyperlane?**
+<details>
 
-Hyperlane is Permissionless Interoperability layer, with a modular security architecture that enables developers to bring interoperability to any chain or app completely permissionlessly. Beyond that, it is first to introduce modular and context based security, allowing devs to choose from a menu of [sovereign-consensus](../protocol/sovereign-consensus/ "mention") and mix and match based on user actions.
+<summary>What is Hyperlane?</summary>
 
-Hyperlane is the interoperability layer of choice for the world of many blockchains and rollups. By allowing anyone to [deploy-hyperlane.md](../deploy/deploy-hyperlane.md "mention"), Hyperlane creates the first ‘network of networks’, to connect the rapidly expanding universe of chains.
+Hyperlane is the first universal and permissionless interoperability framework built for the modular blockchain stack.&#x20;
 
-Learn more: [so-what-is-hyperlane.md](../introduction/why-hyperlane/so-what-is-hyperlane.md "mention")
+Anyone can [deploy-hyperlane.md](../deploy/deploy-hyperlane.md "mention") to any blockchain environment, whether it is a layer 1, rollup, or app-chain, allowing that chain to communicate seamlessly with any other chain on which Hyperlane has been deployed.
 
-## **How is Hyperlane Secured?**
+</details>
 
-Hyperlane is secured through its modular security stack, Hyperlane’s major innovation in interchain security — instead of a monolithic security model forced upon all applications and chains using Hyperlane, the protocol features [sovereign-consensus](../protocol/sovereign-consensus/ "mention") (ISMs), allowing integrating developers to choose from an array security models which can be customized based on needs and preferences. They can be used dynamically based on context, such that certain user actions go through a different set of ISMs, and they can even be stacked together for additional effect — full control is in your hands.
+<details>
 
-Developers can select from a catalogue of ready-made modules, or write their own. ISMs can range from as simple as introducing designated signers required for messages to be processed to as nuanced as [Optimistic security](../protocol/sovereign-consensus/optimistic-ism.md), forcing a 12+ hour challenge period where a transaction can be blocked. Additionally, as the industry continues to make advances in security, we’ll be keeping pace and making compatible ISMs.
+<summary>What are the benefits of using Hyperlane for blockchain developers?</summary>
 
-We no longer use the term “Sovereign Consensus”. Instead we refer to Hyperlane’s Modular Security Stack.
+Hyperlane offers benefits for both blockchain and dapp developers.
 
-Learn more about Hyperlane's Security: [interchain-security-modules.md](../protocol/sovereign-consensus/interchain-security-modules.md "mention")[multisig-ism.md](../protocol/sovereign-consensus/multisig-ism.md "mention")[aggregation-ism.md](../protocol/sovereign-consensus/aggregation-ism.md "mention")[optimistic-ism.md](../protocol/sovereign-consensus/optimistic-ism.md "mention")[wormhole-ism.md](../protocol/sovereign-consensus/wormhole-ism.md "mention")
+For blockchain developers, a Hyperlane deployment expands accessibility to users, assets, and valuable state from other connected blockchains on which Hyperlane has been deployed.
 
-## What can I build with Hyperlane?
+For dapp developers, Hyperlane provides seamless connectivity across multiple blockchains, allowing developers to create interchain network effects and liquidity and users to interact with applications from their preferred chain.
 
-First and foremost you should know that you can use Hyperlane to connect your rollup or chain to other chains. Once you’ve done that, you can use [Warp Routes](../deploy/deploy-warp-route/) to bring assets over into your chain.
+</details>
 
-With respect to apps, we encourage developers to be creative with how they use Hyperlane, but some practical use cases that we think the protocol is well-suited to include:
+<details>
 
-* Minting and using natively-interchain assets
-* Interchain stablecoins / CDPs
-* Interchain lending
-* Interchain derivatives
-* Interchain governance
-* Blockchain smart routing
-* Blockspace auctions
+<summary>How is Hyperlane secured?</summary>
 
-## **Where is Hyperlane deployed?**
+Hyperlane is secured by its modular security stack featuring [sovereign-consensus](../protocol/sovereign-consensus/ "mention") (ISMs). Developers can configure various pre-built ISMs, compose them with each other, or even create custom ISMs based on their application's needs.
+
+A modular approach to security ensures that Hyperlane will continue to stay up to the latest industry advances in security models.
+
+</details>
+
+<details>
+
+<summary>Who are the Hyperlane validators?</summary>
+
+Hyperlane is secured with a modular security stack featuring [sovereign-consensus](../protocol/sovereign-consensus/ "mention") (ISMs).
+
+There is no protocol-enshrined security model, let alone validator set.\
+\
+That said, most Hyperlane deployments are configured with a [#default-ism](glossary.md#default-ism "mention"), which specifies the security model to use if the message recipient has not specified an ISM override.\
+\
+See [security.md](security.md "mention") for more information
+
+</details>
+
+<details>
+
+<summary>What can I build with Hyperlane?</summary>
+
+Hyperlane's [messaging-api](../apis/messaging-api/ "mention") allows dapp developers to send arbitrary bytes between smart contracts on different chains. This can be used to create interchain applications, dapps which span multiple chains.
+
+For inspiration, take a look at some of the pre-built applications built on top of Hyperlane, including:
+
+* The [warp-api.md](../apis-and-sdks/warp-api.md "mention"), which lets users move tokens from one chain to another
+* The [accounts](../apis/accounts/ "mention"), which lets users make interchain function calls
+* The [query.md](../apis/query.md "mention"), which lets users make interchain view calls
+* Other [examples.md](../build-with-hyperlane/examples.md "mention") built on top of Hyperlane
+
+</details>
+
+<details>
+
+<summary>Where is Hyperlane deployed?</summary>
 
 A list of known deployments can be found at [domains.md](domains.md "mention")
 
-## **What happens when I send a message on Hyperlane?**
+</details>
 
-Full tutorial for [send.md](../apis/messaging-api/send.md "mention") and [receive.md](../apis/messaging-api/receive.md "mention") messages using Hyperlane.
+<details>
+
+<summary>What happens when I send a message on Hyperlane?</summary>
+
+See the [send.md](../apis/messaging-api/send.md "mention") and [receive.md](../apis/messaging-api/receive.md "mention") pages for more details
 
 Summary:
 
-1. An application calls the `dispatch()` function on the origin chain, inserting the message into the Mailbox’s Merkle tree.
-2. Hyperlane [relayer.md](../protocol/agents/relayer.md "mention") observe the dispatched messages and assemble metadata for the recipients Interchain Security Module
+1. An application calls the `dispatch()` function on the origin chain, inserting the message into the [messaging.md](../protocol/messaging.md "mention")'s Merkle tree.
+2. Hyperlane [relayer.md](../protocol/agents/relayer.md "mention") observe the dispatched messages and assemble metadata for the recipient's Interchain Security Module (ISM)
 3. A relayer delivers the message to the recipient by calling `Mailbox.process()`. The [messaging.md](../protocol/messaging.md "mention") verifies the message with the recipient’s ISM, and calls `recipient.handle()` to deliver the message.
 
-## **How can I see the status of a message I have sent?**
+</details>
 
-Paste an address or transaction hash into the search bar of the Hyperlane Message [explorer](../build-with-hyperlane/explorer/ "mention") to view details about a message’s status and history, from sent to finalized to validated to relayed. If the message has failed to send for some reason, there will be error messages indicating what may have gone wrong.
+<details>
 
-## **I can send interchain messages with Hyperlane — does that mean live chat/text?**
+<summary>How can I see the status of a message I have sent?</summary>
 
-We don’t recommend using Hyperlane in this manner — it would be very expensive. When we refer to message-passing, it’s the sending of arbitrary bytes between smart contracts rather than peer-to-peer or text messaging. There are several web3 projects that are suited to your use case; consider [XMTP](https://xmtp.org/) or [Push](https://push.org/) for this type of messaging.
+Paste an address or transaction hash into the search bar of the Hyperlane Message [explorer](../build-with-hyperlane/explorer/ "mention") to view details about a message’s status and history.
 
-## **Are you a token bridge?**
+If the message has failed to send for some reason, there will be error messages indicating what may have gone wrong.\
+\
+See [troubleshooting.md](../build-with-hyperlane/troubleshooting.md "mention") for more information on how to debug an undelivered message
 
-Well, not exactly… Hyperlane is a [broken-reference](broken-reference/ "mention") Protocol that allows communication between blockchains. Token bridges are just one of many types of applications that can be built on top of Hyperlane! For more ideas what can be built on Hyperlane check out the question above.
+</details>
 
-Start building on Hyperlane [getting-started.md](../introduction/getting-started.md "mention")[quickstarts](../build-with-hyperlane/quickstarts/ "mention")[examples.md](../build-with-hyperlane/examples.md "mention")
+<details>
 
-## **I’m a developer. How can my team build with Hyperlane?**
+<summary>I can send interchain messages with Hyperlane — does that mean live chat/text?</summary>
 
-If you’re reading this FAQ, you’ve found our docs — this is a great place to start! That said, we know that questions arise during implementation, and we’re happy to help you on your way.
+Hyperlane is a protocol designed to allow smart contracts on different chains to interact with each other.
 
-Our Founders and Engineering team are regularly active in the [Discord](http://discord.gg/hyperlane). Feedback from developers directly influences our product roadmap.
+When we refer to message-passing, it’s the sending of arbitrary bytes between smart contracts rather than peer-to-peer or text messaging. There are several web3 projects that are suited to the chat use case; consider [XMTP](https://xmtp.org/) or [Push](https://push.org/) for this type of messaging.
 
-## **What’s Abacus Works?**
+</details>
 
-Abacus Works is the name of our legal identity. You may encounter some references to Abacus in our older posts and repositories. We made rebranding from Abacus to Hyperlane in Fall 2022. We made an effort to update our repository and docs to reflect the new Hyperlane name — but if you encounter references to Abacus, it’s the same project!
+<details>
 
-## **How can I join Hyperlane community and connect with builders and community members ?**
+<summary>Is Hyperlane a token bridge?</summary>
 
-You can find us on [Discord](http://discord.gg/hyperlane) or [Twitter](http://twitter.com/hyperlane\_xyz) — not only are we happy to help you troubleshoot and problem-solve as you build, but we have a growing community of developers and enthusiasts who join us daily to chat about the interchain future.
+Not exactly. Hyperlane is a protocol that allows communication between blockchains.&#x20;
 
-For more extensive Troubleshooting check out or docs page [troubleshooting.md](../build-with-hyperlane/troubleshooting.md "mention")
+Token bridges are just one of many types of applications that can be built on top of Hyperlane!\
+\
+For more ideas what can be built on Hyperlane check out [#what-can-i-build-with-hyperlane](faq.md#what-can-i-build-with-hyperlane "mention")\
 
-## **I’m interested in joining the Hyperlane crew! How can I find out about careers?**
 
-Share our excitement for all things Interchain and [broken-reference](broken-reference/ "mention"). Check out Abacus Works [job openings](https://jobs.lever.co/Hyperlane)!
+</details>
 
-## How can I contribute to improve this documentation?
+<details>
 
-You can make PR to edit this documentation directly by using [following link](https://app.gitbook.com/invite/Pl1c4GYUuMTxkQTcVCdO/8Sz5qySf7rfyzypHYyuZ)!
+<summary>I’m a developer. How can my team build with Hyperlane?</summary>
+
+If you’re reading this FAQ, you’ve found the docs — this is a great place to start! That said, we know that questions arise during implementation, and we’re happy to help you on your way.
+
+The Hyperlane community is regularly active in the [Discord](http://discord.gg/hyperlane). Feedback from developers directly influences the product roadmap.
+
+</details>
+
+<details>
+
+<summary>What is Abacus Works?</summary>
+
+Abacus Works is the name of a legal identity working on Hyperlane.
+
+You may encounter some references to Abacus in older posts and repositories. Hyperlane rebranded from Abacus to Hyperlane in Fall 2022.
+
+</details>
+
+<details>
+
+<summary>How can I join the Hyperlane community?</summary>
+
+You join the [Discord](http://discord.gg/hyperlane) or follow Hyperlane [Twitter](http://twitter.com/hyperlane\_xyz) where you can find a growing community of developers and enthusiasts to chat about the interchain future.
+
+</details>
+
+<details>
+
+<summary>I'm interested in working on Hyperlane, where can I see job openings?</summary>
+
+Share the excitement for all things interchain. Check out Abacus Works [job openings](https://jobs.lever.co/Hyperlane)!
+
+</details>
+
+<details>
+
+<summary>How can I contribute to improve this documentation?</summary>
+
+You can make a PR to edit this documentation directly via the [docs repo](https://github.com/hyperlane-xyz/docs)
+
+</details>

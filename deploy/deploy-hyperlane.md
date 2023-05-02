@@ -4,17 +4,13 @@ description: Deploy Hyperlane to any smart contract environment of your choice.
 
 # Deploy Hyperlane
 
-Hyperlane is designed to be deployed to new chains by anyone, at any time. Read on to learn how to deploy Hyperlane to your favorite EVM chain.
-
-## Overview
+Hyperlane is designed to be deployed to new chains by anyone, at any time.&#x20;
 
 This tutorial is intended for users who want to deploy Hyperlane to a new EVM chain.
 
 By the end of this guide you will have deployed and configured the Hyperlane [messaging-api](../apis/messaging-api/ "mention"), allowing developers to send interchain messages to and from your chain.
 
 At a high level, deploying Hyperlane requires the following actions:
-
-
 
 [#1.-setup-keys](deploy-hyperlane.md#1.-setup-keys "mention") that you will use to deploy contracts and run validators and relayers
 
@@ -25,8 +21,6 @@ At a high level, deploying Hyperlane requires the following actions:
 [#4.-run-relayers](deploy-hyperlane.md#4.-run-relayers "mention") for the local chain and for every remote chain with which the local chain will be able to send and receive messages.
 
 [#5.-send-test-messages](deploy-hyperlane.md#5.-send-test-messages "mention") to confirm that your relayers able to deliver messages from and to each pair of chains
-
-
 
 ## 1. Setup keys
 
@@ -47,8 +41,6 @@ For instructions on how to generate keys, see [agent-keys](../operators/agent-ke
 {% hint style="warning" %}
 **Do not proceed to the next section until you have set up deployer, validator, and relayer keys.**
 {% endhint %}
-
-##
 
 ## 2. Deploy contracts
 
@@ -133,7 +125,7 @@ DEBUG=hyperlane* yarn ts-node scripts/deploy-hyperlane.ts --local anvil \
 The deploy script will only accept chains for which configuration has been provided. If you do not see your desired chain in the list of choices, you may be missing config in `chains.ts` or `multisig_ism.ts`
 {% endhint %}
 
-## Verify
+### Verify
 
 If everything ran successfully, congrats! You should see contract addresses written to `artifacts/addresses.json`, and agent config written to `artifacts/agent_config.json`
 

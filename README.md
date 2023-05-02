@@ -26,6 +26,14 @@ If you run into an issue or have any questions, [join our discord](https://disco
 
 ### Learn more about the Hyperlane protocol
 
-Take a look at the protocol [permissionless-interoperability.md](protocol/permissionless-interoperability.md "mention") to understand the Hyperlane protocol architecture, or read more about [sovereign-consensus](protocol/sovereign-consensus/ "mention") to learn more about how Hyperlane interchain messaging is secured.
+First, take a look at the [faq.md](resources/faq.md "mention"), which covers some high level questions about what Hyperlane is and how it works.
 
-### Curious about what you should use Hyperlane for? Continue to the [next page](introduction/why-hyperlane/) to learn more
+{% content-ref url="resources/faq.md" %}
+[faq.md](resources/faq.md)
+{% endcontent-ref %}
+
+To dive deeper into the Hyperlane, take a look at the protocol architecture [permissionless-interoperability.md](protocol/permissionless-interoperability.md "mention"), or read more about [sovereign-consensus](protocol/sovereign-consensus/ "mention") to learn more about how Hyperlane interchain messaging is secured.
+
+
+
+###

@@ -3,10 +3,6 @@
 ## ⏩ Introduction
 
 * [Hyperlane Introduction](README.md)
-* [Why Hyperlane](introduction/why-hyperlane/README.md)
-  * [So, what is Hyperlane?](introduction/why-hyperlane/so-what-is-hyperlane.md)
-  * [What are the benefits of Hyperlane?](introduction/why-hyperlane/what-are-the-benefits-of-hyperlane.md)
-  * [What sets Hyperlane apart?](introduction/why-hyperlane/what-sets-hyperlane-apart.md)
 * [Getting started](introduction/getting-started.md)
 
 ## Permissionless Interoperability <a href="#deploy" id="deploy"></a>
@@ -120,11 +116,9 @@
 * [Glossary](resources/glossary.md)
 * [Contract addresses](resources/addresses.md)
 * [Domain identifiers](resources/domains.md)
-* [Mailbox Default Security](resources/security.md)
+* [Default ISM settings](resources/security.md)
 * [Token Sources & Faucets](resources/token-sources-and-faucets.md)
-* [Core App Environments](resources/environments.md)
 * [Latencies](resources/latencies.md)
-* [Migration to Enforced Interchain Gas Payments](resources/migration-to-enforced-interchain-gas-payments.md)
 * [Github](https://github.com/hyperlane-xyz)
 * [Discord](https://discord.gg/hyperlane)
 * [Website](https://hyperlane.xyz)
