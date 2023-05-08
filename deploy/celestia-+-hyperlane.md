@@ -20,7 +20,7 @@ At a high level, this tutorial will involve three steps.
 
 ## 1. Deploy an Ethermint-based rollup to Celestia
 
-Additional documentation for deploying an EVM compatible rollup to Celestia can be found [here](https://docs.celestia.org/developers/ethermint).
+Additional documentation for deploying an EVM compatible rollup to Celestia can be found [here](https://rollkit.dev/docs/tutorials/ethermint).
 
 ### Setup
 
@@ -58,7 +58,7 @@ Once your node is syncing, follow [these instructions](https://docs.celestia.org
 
 ### Run an ethermint node
 
-First, build `ethermintd` by following [these instructions](https://docs.celestia.org/developers/rollmint-on-ethermint).
+First, build `ethermintd` by following [these instructions](https://rollkit.dev/docs/tutorials/ethermint/#%EF%B8%8F-rollkit-installation).
 
 Open up a new `screen` session for running your ethermint node:
 
@@ -66,7 +66,7 @@ Open up a new `screen` session for running your ethermint node:
 $ screen -S ethermint-node
 ```
 
-Then, follow [these instructions](https://docs.celestia.org/developers/instantiate-ethermint#instantiating-the-ethermint-rollup) to run your ethermint node.
+Then, follow [these instructions](https://rollkit.dev/docs/tutorials/ethermint/#-setting-up-your-environment-for-ethermint-on-celestia) to run your ethermint node.
 
 ## 2. Deploy Hyperlane's interchain messaging API
 
