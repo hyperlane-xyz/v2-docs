@@ -2,7 +2,7 @@
 
 ## ⏩ Introduction
 
-* [Hyperlane Introduction](README.md)
+* [Hyperlane introduction](README.md)
 * [Getting started](introduction/getting-started.md)
 
 ## Permissionless Interoperability <a href="#deploy" id="deploy"></a>
@@ -23,21 +23,15 @@
   * [Liquidity Layer](build-with-hyperlane/quickstarts/quickstart-tutorial-1.md)
   * [hyperlane-quickstart repo](build-with-hyperlane/quickstarts/hyperlane-quickstart.md)
 * [Guides](build-with-hyperlane/guides/README.md)
-  * [Finding My Messages](build-with-hyperlane/guides/finding-my-messages.md)
-  * [Paying For Interchain Gas](build-with-hyperlane/guides/developers/paying-for-interchain-gas/README.md)
-    * [Interchain Gas Paymaster](build-with-hyperlane/guides/paying-for-interchain-gas/interchain-gas-paymasters.md)
-    * [Paying the correct amount](build-with-hyperlane/guides/paying-for-interchain-gas/paying-the-correct-amount.md)
-    * [Which IGP to Use & Understanding Gas Amounts](build-with-hyperlane/guides/developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md)
-    * [Refunds](build-with-hyperlane/guides/paying-for-interchain-gas/refunds.md)
-    * [Examples](build-with-hyperlane/guides/paying-for-interchain-gas/examples.md)
-    * [Middleware APIs](build-with-hyperlane/guides/paying-for-interchain-gas/middleware-apis.md)
-    * [Migrating to Enforced Interchain Gas Payments](build-with-hyperlane/guides/paying-for-interchain-gas/migrating-to-enforced-interchain-gas-payments.md)
-    * [Manually pay for interchain gas](build-with-hyperlane/guides/paying-for-interchain-gas/manually-pay-for-interchain-gas.md)
+  * [Finding my messages](build-with-hyperlane/guides/finding-my-messages.md)
+  * [Automatically pay for interchain gas](build-with-hyperlane/guides/paying-for-interchain-gas.md)
+  * [Manually pay for interchain gas](build-with-hyperlane/guides/manually-pay-for-interchain-gas.md)
+  * [Choosing an interchain gas paymaster contract](build-with-hyperlane/guides/which-igp-to-use-and-understanding-gas-amounts.md)
   * [Unit testing](build-with-hyperlane/guides/unit-testing.md)
-  * [Configuring Security](build-with-hyperlane/guides/receive-1.md)
+  * [Specifying an ISM](build-with-hyperlane/guides/receive-1.md)
   * [V2 migration guide](build-with-hyperlane/guides/v2-migration-guide.md)
 * [Explorer](build-with-hyperlane/explorer/README.md)
-  * [Debugging Messages](build-with-hyperlane/explorer/observability.md)
+  * [Debugging messages](build-with-hyperlane/explorer/observability.md)
   * [Configuring PI Chains](build-with-hyperlane/explorer/configuring-pi-chains.md)
   * [REST API](build-with-hyperlane/explorer/rest-api.md)
   * [GraphQL API](build-with-hyperlane/explorer/graphql-api.md)
@@ -56,6 +50,7 @@
 * [Queries API](apis/query.md)
 * [Warp Route API](apis-and-sdks/warp-api.md)
 * [Liquidity Layer API](apis-and-sdks/token-bridge-api.md)
+* [Interchain gas paymaster API](apis-and-sdks/interchain-gas-paymaster-api.md)
 * [Hyperlane App Framework](apis-and-sdks/building-applications/README.md)
   * [Example usage](sdks/building-applications/example-usage/README.md)
     * [HelloWorld](sdks/building-applications/example-usage/helloworld.md)
@@ -66,8 +61,8 @@
   * [NodeJS SDK](apis-and-sdks/building-applications/nodejs-sdk/README.md)
     * [RPC Providers](sdks/building-applications/nodejs-sdk/multiprovider.md)
     * [Deployment](sdks/building-applications/nodejs-sdk/deploying-contracts.md)
-    * [Interchain Testing](sdks/building-applications/nodejs-sdk/testing-contracts.md)
-    * [Interchain Gas Quotes](sdks/building-applications/nodejs-sdk/gas.md)
+    * [Interchain testing](sdks/building-applications/nodejs-sdk/testing-contracts.md)
+    * [Quoting gas payments](sdks/building-applications/nodejs-sdk/gas.md)
     * [App Abstraction](sdks/building-applications/nodejs-sdk/contract-interaction.md)
 
 ## Protocol
@@ -80,6 +75,7 @@
   * [Aggregation ISM](protocol/sovereign-consensus/aggregation-ism.md)
   * [Optimistic ISM](protocol/sovereign-consensus/optimistic-ism.md)
   * [Wormhole ISM](protocol/sovereign-consensus/wormhole-ism.md)
+* [Interchain gas payments](protocol/interchain-gas-payments.md)
 * [Staking and slashing](protocol/proof-of-stake.md)
 * [Agents](protocol/agents/README.md)
   * [Validators](protocol/agents/validators.md)

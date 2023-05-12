@@ -90,7 +90,7 @@ See [accounts](../apis/accounts/ "mention") for more information.
 
 A smart contract deployed by a [#relayer](glossary.md#relayer "mention") that accepts payments on an origin chain for message delivery on destination chains.\
 \
-See [interchain-gas-paymasters.md](../build-with-hyperlane/guides/paying-for-interchain-gas/interchain-gas-paymasters.md "mention") for more information
+See [Broken link](broken-reference "mention") for more information
 
 </details>
 

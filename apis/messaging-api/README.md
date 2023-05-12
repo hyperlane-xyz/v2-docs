@@ -57,4 +57,4 @@ See the [unit-testing.md](../../build-with-hyperlane/guides/unit-testing.md "men
 
 Delivering an interchain message requires submitting a transaction on the destination chain. Optionally, you can pay for the gas for this transaction on the origin chain, and let Hyperlane [relayers](../../operators/relayers/ "mention") deliver your message for you.
 
-Learn more about [paying-for-interchain-gas](../../build-with-hyperlane/guides/developers/paying-for-interchain-gas/ "mention").
+Learn more about [paying-for-interchain-gas.md](../../build-with-hyperlane/guides/paying-for-interchain-gas.md "mention").

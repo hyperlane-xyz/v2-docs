@@ -28,7 +28,7 @@ Sending a message is a simple matter of calling `InterchainAccountRouter.callRem
 2. Under the `Contract` tab, find the `Write Contract` button.
 3. Click on the `Connect to Web3` button to connect your Wallet (i.e. Metamask). Make sure that you are on the correct network.
 4. Expand the `callRemote` box
-5. For the `_destination` argument, enter `$DESTINATION_DOMAIN`. You can find some [here](../../resources/domains.md), or you could use `137` to send to Polygon.
+5. For destination domain, enter `$DESTINATION_DOMAIN`. You could use `137` to send to mainnet Polygon, or see other [domains.md](../../resources/domains.md "mention")
 6. For the `_to` argument, enter the `$RECIPIENT`
 7. For the `_value` argument, enter 0
 8. For the `_data` argument, enter the `$CALLDATA`
@@ -49,9 +49,9 @@ You can call the `InterchainAccountRouter` directly using `cast`. Make sure that
 If you view the transaction on a block explorer, you should be able to see the `Dispatch` event. You can see an example message sending transaction [here](https://goerli.etherscan.io/tx/0xbb076b17dca5e436f574a4728dd59d25da4fd9d05c48c6ec304ea5a354849edf).
 
 {% hint style="warning" %}
-For your call to be executed on the destination chain, you **must** [manually-pay-for-interchain-gas.md](../guides/paying-for-interchain-gas/manually-pay-for-interchain-gas.md "mention"), using `550000` for the gas amount
+For your call to be executed on the destination chain, you **must** [manually-pay-for-interchain-gas.md](../guides/manually-pay-for-interchain-gas.md "mention"), using `550000` for the gas amount
 {% endhint %}
 
-{% content-ref url="../guides/paying-for-interchain-gas/manually-pay-for-interchain-gas.md" %}
-[manually-pay-for-interchain-gas.md](../guides/paying-for-interchain-gas/manually-pay-for-interchain-gas.md)
+{% content-ref url="../guides/manually-pay-for-interchain-gas.md" %}
+[manually-pay-for-interchain-gas.md](../guides/manually-pay-for-interchain-gas.md)
 {% endcontent-ref %}

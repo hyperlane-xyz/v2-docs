@@ -4,11 +4,13 @@ description: The Permissionless Interoperability Layer
 
 # Overview
 
-Hyperlane is the first Permissionless Interoperability layer. At its core exists a generalized interchain messaging protocol that enables developers to send messages from one blockchain to another. Messages can contain any arbitrary bytes, and are not limited to text. They can be used to transfer any information between blockchains. They can allow you to move around value, execute function calls, and many other things that allow for the creation of interchain applications, apps that can be accessed by users on any blockchain.
+Hyperlane is the first [#permissionless-interoperability](../deploy/permissionless-interoperability.md#permissionless-interoperability "mention") layer that allows smart contract developers to send arbitrary data between blockchains.
+
+Developers can use Hyperlane to move tokens, execute function calls, and many other things that allow for the creation of interchain applications, apps that can be accessed by users on any blockchain.
 
 Users interface with the Hyperlane protocol via [messaging.md](messaging.md "mention") smart contracts, which provide an on-chain [messaging-api](../apis/messaging-api/ "mention") to send and receive interchain messages.
 
-Hyperlane takes a modular approach to [sovereign-consensus](sovereign-consensus/ "mention"), allowing applications to configure and choose from a selection of [interchain-security-modules.md](sovereign-consensus/interchain-security-modules.md "mention") (ISMs). Applications may specify an ISM to customize the security model that secures their integration with the Hyperlane messaging API.
+Hyperlane takes a modular approach to security, allowing applications to configure and choose from a selection of [sovereign-consensus](sovereign-consensus/ "mention") (ISMs). Applications may specify an ISM to customize the security model that secures their integration with the Hyperlane messaging API.
 
 ```mermaid
 %%{ init: {
@@ -23,45 +25,28 @@ Hyperlane takes a modular approach to [sovereign-consensus](sovereign-consensus/
 }}%%
 
 flowchart TB
-    V(("Validator(s)"))
     Relayer((Relayer))
 
     subgraph Origin
       Sender
       M_O[(Mailbox)]
-      POS[Proof of Stake]
 
-      Sender -- "dispatch(destination, recipient, body)" --> M_O
+      Sender -- "1. dispatch(destination, recipient, body)" --> M_O
     end
 
-    subgraph Cloud
-      aws[(Metadata\nDatabase)]
-    end
-
-    M_O -. "indexing" .-> Relayer
-    M_O -. "indexing" .-> V
-    POS == "staking" === V
-
-    V -- "signatures" --> aws
+    M_O -. "2. emit Message(origin, sender, destination, recipient, body)" .-> Relayer
 
     subgraph Destination
       Recipient
       M_D[(Mailbox)]
-      ISM[MultisigISM]
+      ISM[InterchainSecurityModule]
 
-      M_D -- "verify(metadata, [origin, sender, body])" --> ISM
-      M_D -- "handle(origin, sender, body)" --> Recipient
-      ISM -. "interchainSecurityModule()" .- Recipient
+      M_D -. "4. interchainSecurityModule()" .-> Recipient
+      M_D -- "5. verify(metadata, message)" --> ISM
+      M_D -- "6. handle(origin, sender, body)" --> Recipient
     end
 
-    Relayer -- "process()" --> M_D
-
-    aws -. "metadata" .-> Relayer
-    aws -. "moduleType()" .- ISM
-
-    POS -. "validators()" .- ISM
-
-    click ISM https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/isms/MultisigIsm.sol
+    Relayer -- "3. process(metadata, message)" --> M_D
 
     style Sender fill:#efab17
     style Recipient fill:#efab17

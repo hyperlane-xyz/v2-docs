@@ -9,7 +9,7 @@ Inheriting from [`HyperlaneConnectionClient`](https://github.com/hyperlane-xyz/h
 This mix-in contract maintains a pointers to the three contracts Hyperlane developers may need to interact with:
 
 1. [`Mailbox`](../../../protocol/messaging.md) (required)
-2. [`InterchainGasPaymaster`](../../../build-with-hyperlane/guides/paying-for-interchain-gas/interchain-gas-paymasters.md) (optional)
+2. [`InterchainGasPaymaster`](broken-reference) (optional)
 3. [`InterchainSecurityModule`](../../../protocol/sovereign-consensus/) (optional)
 
 `HyperlaneConnectionClient` exposes functions that allow subclasses to easily send messages to the `Mailbox` via the `mailbox` storage variable, and permission message delivery via the `onlyMailbox` modifier.

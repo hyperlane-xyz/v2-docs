@@ -8,7 +8,7 @@ Developers can use the Accounts API to create and control an account on a remote
 
 Unlike the [messaging-api](../messaging-api/ "mention"), which requires recipients to implement a specific interface, the Accounts API allows developers to interact with any remote contract.
 
-The Accounts API assigns every `(uint32 origin, uint32 destination, address owner)` tuple a unique interchain account (ICA) address. The sender owns that ICA on the destination chain, and can direct it to m
+The Accounts API assigns every `(uint32 origin, uint32 destination, address owner)` tuple a unique interchain account (ICA) address. The sender owns that ICA on the destination chain, and can direct it to make arbitrary function calls via the `InterchainAccountRouter.callRemote()` endpoint.
 
 ### Computing addresses
 
@@ -21,42 +21,6 @@ address myInterchainAccount = IInterchainAccountRouter(...).getInterchainAccount
     destination,
     address(this)
 );
-```
-
-ake arbitrary function calls via the `InterchainAccountRouter.callRemote()` endpoint.
-
-```mermaid
-%%{ init: {
-  "theme": "neutral",
-  "themeVariables": {
-    "mainBkg": "#025AA1",
-    "textColor": "white",
-    "clusterBkg": "white"
-  },
-  "themeCSS": ".edgeLabel { color: black }"
-}}%%
-
-flowchart LR
-    subgraph Origin Chain
-      Owner
-      A_O[API]
-    end
-
-    subgraph Destination Chain
-      ICA
-      Recipient
-    end
-
-    Owner -- "callRemote(destination, swap(0xa1c...))" --> A_O
-    A_O -. "relay" .- ICA
-    ICA -- "swap(0xa1c...)" --> Recipient
-
-    click A_O https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/middleware/InterchainAccountRouter.sol
-    click A_D https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/middleware/InterchainAccountRouter.sol
-
-    style Owner fill:#efab17
-    style ICA fill:#efab17
-    style Recipient fill:#efab17
 ```
 
 ### Interface
@@ -133,7 +97,7 @@ address myInterchainAccount = IInterchainAccountRouter(...).getInterchainAccount
 
 ### Paying for Interchain Gas
 
-Just like all Hyperlane messages that wish to have their messages delivered by a relayer, users must [pay for interchain gas](../../build-with-hyperlane/guides/developers/paying-for-interchain-gas/).
+Just like all Hyperlane messages that wish to have their messages delivered by a relayer, users must [pay for interchain gas](../../build-with-hyperlane/guides/paying-for-interchain-gas.md).
 
 The various `callRemote` functions in the Accounts API each return the message ID as a `bytes32`. This message ID can then be used by the caller to pay for interchain gas.
 
@@ -186,7 +150,7 @@ function makeCall(uint256 gasAmount) external payable {
 }
 ```
 
-### How it works
+## Diagram
 
 ```mermaid
 %%{ init: {

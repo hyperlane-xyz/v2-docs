@@ -16,7 +16,7 @@ $ yarn install
 
 ### Hardhat
 
-We have both unit tests as well as hardhat tasks that show you how to develop on top of the Hyperlane APIs. To interact with the hardhat tasks on remote networks, you will need to add a private key configuration. Those keys need to have funds as well, we recommend using the [Paradigm faucet](https://faucet.paradigm.xyz/) to request funds. Check out our [Token Sources & Facets page](https://docs.hyperlane.xyz/docs/resources/token-sources-and-faucets) to get different funds on different chains.&#x20;
+We have both unit tests as well as hardhat tasks that show you how to develop on top of the Hyperlane APIs. To interact with the hardhat tasks on remote networks, you will need to add a private key configuration. Those keys need to have funds as well, we recommend using the [Paradigm faucet](https://faucet.paradigm.xyz/) to request funds. Check out our [Token Sources & Facets page](https://docs.hyperlane.xyz/docs/resources/token-sources-and-faucets) to get different funds on different chains.
 
 When accounts are ready, start up building with hardhat, or see the `package.json` scripts for a set of common commands:
 
@@ -24,7 +24,7 @@ When accounts are ready, start up building with hardhat, or see the `package.jso
 $ yarn hardhat compile
 ```
 
-#### Direct Messaging API
+#### Messaging API
 
 If you just want to get started with sending a message, you can use the `send-message` task to send a message to a pre-deployed `TestRecipient`:
 
@@ -34,7 +34,7 @@ $ yarn hardhat send-message --network goerli --remote mumbai --message "Your Mes
 
 (Any Hyperlane-supported chain name can be used)
 
-#### Deploy Sender and Receiver contracts
+#### Deploy sender and receiver contracts
 
 Now that you know how easy and quick sending Hyperlane messages are, you can deploy a sending and receiving contract. You can use the predefined `HyperlaneMessageSender/Receiver` contracts and tasks to get started:
 
@@ -153,4 +153,4 @@ You can then read the query result via:
 $ yarn hardhat get-query-result --reader "READER_ADDRESS" --network goerli
 ```
 
-\
+\\

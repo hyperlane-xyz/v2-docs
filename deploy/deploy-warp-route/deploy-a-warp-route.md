@@ -24,7 +24,7 @@ $ yarn build
 You will need to create a `WarpRouteConfig` in [`hyperlane-deploy/config/warp_tokens.ts`](https://github.com/hyperlane-xyz/hyperlane-deploy/blob/main/config/warp\_tokens.ts) to define your Warp Route. This will include information such as:
 
 * Which token, on which chain, is this Warp Route being created for?
-* Optional Hyperlane connection details including contract addresses for [messaging.md](../../protocol/messaging.md "mention"), [interchain-gas-paymasters.md](../../build-with-hyperlane/guides/paying-for-interchain-gas/interchain-gas-paymasters.md "mention"), and [sovereign-consensus](../../protocol/sovereign-consensus/ "mention").
+* Optional Hyperlane connection details including contract addresses for [messaging.md](../../protocol/messaging.md "mention"), [Broken link](broken-reference "mention"), and [sovereign-consensus](../../protocol/sovereign-consensus/ "mention").
 
 #### Base
 
@@ -46,7 +46,7 @@ You may specify the following optional values in your `base` and `synthetics` en
 
 * **mailbox:** The address of the [messaging.md](../../protocol/messaging.md "mention")contract to use to send and receive messages
 * **interchainSecurityModule:** The address of an [sovereign-consensus](../../protocol/sovereign-consensus/ "mention") to verify interchain messages
-* **interchainGasPaymaster:** The address of a [interchain-gas-paymasters.md](../../build-with-hyperlane/guides/paying-for-interchain-gas/interchain-gas-paymasters.md "mention") to pay for the gas needed to deliver interchain messages
+* **interchainGasPaymaster:** The address of a [Broken link](broken-reference "mention") to pay for the gas needed to deliver interchain messages
 
 #### Example
 
@@ -122,7 +122,7 @@ DEBUG=hyperlane* yarn ts-node scripts/deploy-warp-routes.ts \
 
 When the command finishes, it will output the list of contracts addresses to `hyperlane-deploy/artifacts/warp-token-addresses.json.`
 
-The deployer will also output a token list file to `hyperlane-deploy/artifacts/warp-ui-token-list.ts` which can be used to [configure a Warp Route UI](deploy-the-ui-for-your-warp-route.md).
+The deployer will also output a token list file to `hyperlane-deploy/artifacts/warp-ui-token-list.ts` which can be used to [deploy-the-ui-for-your-warp-route.md](deploy-the-ui-for-your-warp-route.md "mention").
 
 ## 4. Testing
 

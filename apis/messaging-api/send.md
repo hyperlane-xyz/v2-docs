@@ -4,7 +4,7 @@ description: Send a message to any Hyperlane supported network
 
 # Send
 
-Developers can send interchain messages by calling `Mailbox.dispatch()`.&#x20;
+Developers can send interchain messages by calling `Mailbox.dispatch()`.
 
 ### Interface
 
@@ -32,7 +32,7 @@ See [addresses.md](../../resources/addresses.md "mention")and [domains.md](../..
 ### Encoding
 
 {% hint style="info" %}
-Recipient addresses are left-padded to `bytes32` for compatibility with virtual machines that are addressed differently.&#x20;
+Recipient addresses are left-padded to `bytes32` for compatibility with virtual machines that are addressed differently.
 {% endhint %}
 
 The following utility is provided in the [`TypeCasts` library](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/libs/TypeCasts.sol) for convenience.
@@ -48,11 +48,11 @@ function addressToBytes32(address _addr) internal pure returns (bytes32) {
 
 Delivering a message to its destination requires submitting a transaction on the destination chain. If you want to have [relayer.md](../../protocol/agents/relayer.md "mention") deliver the message on your behalf, you can pay for the gas for this transaction on the origin chain.
 
-Learn more about [paying-for-interchain-gas](../../build-with-hyperlane/guides/developers/paying-for-interchain-gas/ "mention").
+Learn more about [paying-for-interchain-gas.md](../../build-with-hyperlane/guides/paying-for-interchain-gas.md "mention").
 
 ### Example Usage
 
-The code snippet below shows an example of sending a message from Ethereum to Avalanche.&#x20;
+The code snippet below shows an example of sending a message from Ethereum to Avalanche.
 
 {% hint style="warning" %}
 Note this example does not pay for interchain gas, and therefore would not be delivered automatically by a relayer.

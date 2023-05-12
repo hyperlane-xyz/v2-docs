@@ -4,9 +4,9 @@ description: Using the Hyperlane Explorer to find and track messages
 
 # Explorer
 
-The [Hyperlane Explorer](https://explorer.hyperlane.xyz/) can be used to find messages on any network with a Hyperlane deployment. Drill down into messages for more details about their properties and status.&#x20;
+The [Hyperlane Explorer](https://explorer.hyperlane.xyz/) can be used to find messages on any network with a Hyperlane deployment. Drill down into messages for more details about their properties and status.
 
-Messages to/from [core chains](../../resources/domains.md) will searchable by transaction hash, message ID, or sender/recipient address. For other chains, the explorer can be configured to search for messages by providing it a [chain config](configuring-pi-chains.md).
+Messages to/from [core chains](../../resources/domains.md) will searchable by transaction hash, message ID, or sender/recipient address. For other chains, the explorer can be configured to search for messages by providing it a chain config.
 
 ### Searching for messages
 
@@ -25,20 +25,19 @@ To search, enter your query into the top search bar. You can use the Origin Chai
 <figure><img src="../../.gitbook/assets/Screenshot 2023-03-14 at 4.03.15 PM.png" alt=""><figcaption><p>Explorer search bar</p></figcaption></figure>
 
 {% hint style="info" %}
-Note, by default the explorer will only find message on [core Hyperlane chains](../../resources/domains.md). For searching chains deployed using Permisionless Interoperability, see [Configure PI Chains](configuring-pi-chains.md).
+Note, by default the explorer will only find message on [core Hyperlane chains](../../resources/domains.md). To view messages send to and/or from other chains, see [configuring-pi-chains.md](configuring-pi-chains.md "mention") .
 {% endhint %}
 
 ### Permissionless Interoperability
 
-The explorer UI and REST API can be configured to search for messages on any chain with a Hyperlane deployment. See [Configuring PI Chains](configuring-pi-chains.md) for details.
+The explorer UI and REST API can be configured to search for messages on any chain with a Hyperlane deployment. See [configuring-pi-chains.md](configuring-pi-chains.md "mention") for details.
 
 ### Debugging Messages
 
-If you're trying to debug a problem with message delivery, the [Debugging Messages](observability.md) page has useful tips.
+If you're trying to debug a problem with message delivery, the [observability.md](observability.md "mention") page has useful tips.
 
 ### API Reference
 
-The explorer's data can be accessed programmatically via the [REST API](rest-api.md) or [GraphQL API](graphql-api.md). The REST API is recommended because it exposes a simpler interface for message data.&#x20;
+The explorer's data can be accessed programmatically via the [rest-api.md](rest-api.md "mention") or [graphql-api.md](graphql-api.md "mention"). The REST API is recommended because it exposes a simpler interface for message data.
 
 ###
-
