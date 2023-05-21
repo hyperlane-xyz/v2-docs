@@ -25,7 +25,7 @@ Sending a message is a simple matter of calling `InterchainAccountRouter.callRem
 {% tabs %}
 {% tab title="Using Metamask" %}
 1. Navigate to the `InterchainAccountRouter` contract page on Etherscan (or whatever chain you want to send from). See [addresses.md](../../resources/addresses.md "mention") for `InterchainAccountRouter` addresses
-2. Under the `Contract` tab, find the `Write Contract` button.
+2. Under the `Contract` tab, find the `Write as Proxy` button.
 3. Click on the `Connect to Web3` button to connect your Wallet (i.e. Metamask). Make sure that you are on the correct network.
 4. Expand the `callRemote` box
 5. For destination domain, enter `$DESTINATION_DOMAIN`. You could use `137` to send to mainnet Polygon, or see other [domains.md](../../resources/domains.md "mention")
