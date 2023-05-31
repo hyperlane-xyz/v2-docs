@@ -67,11 +67,3 @@ HYP_BASE_WHITELIST='[{"senderAddress":"*","destinationDomain":["1"],"recipientAd
 ```
 
 The blacklist supersedes the whitelist, i.e. if a message matches both the whitelist _and_ the blacklist, it will not be delivered.
-
-### Next
-
-Now you are ready to relay messages!
-
-{% content-ref url="start-validating.md" %}
-[start-validating.md](start-validating.md)
-{% endcontent-ref %}

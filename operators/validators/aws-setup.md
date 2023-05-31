@@ -7,15 +7,15 @@ description: Configure your signing key and S3 bucket
 {% hint style="info" %}
 These instructions are for a production environment where validator keys exist in AWS's Key Management Service and validator signatures are posted publicly in an S3 bucket.
 
-If you're only intending to run a validator for testing or development purposes, consider the [local-setup.md](local-setup.md "mention") instead.
+If you're only intending to run a validator for testing or development purposes, consider the [#local-setup](setup.md#local-setup "mention") instead.
 {% endhint %}
 
 ### 1. Create an AWS IAM user and KMS key
 
-Follow the instructions for [aws-setup.md](../../agent-keys/aws-setup.md "mention") to generate an AWS IAM user and KMS key. You will use this user and key in the following steps.
+Follow the instructions for [aws-setup.md](../agent-keys/aws-setup.md "mention") to generate an AWS IAM user and KMS key. You will use this user and key in the following steps.
 
-{% content-ref url="../../agent-keys/aws-setup.md" %}
-[aws-setup.md](../../agent-keys/aws-setup.md)
+{% content-ref url="../agent-keys/aws-setup.md" %}
+[aws-setup.md](../agent-keys/aws-setup.md)
 {% endcontent-ref %}
 
 ### 2. Create an S3 bucket
@@ -78,11 +78,3 @@ Your validator IAM user will need write permissions, and it should be publicly r
     ]
 }
 ```
-
-### Next
-
-Continue to the [environment-variables.md](../environment-variables.md "mention") section.
-
-{% content-ref url="../environment-variables.md" %}
-[environment-variables.md](../environment-variables.md)
-{% endcontent-ref %}

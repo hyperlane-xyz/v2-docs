@@ -51,7 +51,7 @@ On the local chain, we will deploy:
 On all chains, we will deploy:
 
 * A [multisig-ism.md](../protocol/sovereign-consensus/multisig-ism.md "mention") that can be used to verify inbound messages
-* An [Broken link](broken-reference "mention"), which can be used to pay our relayer for delivering interchain messages
+* A [#interchaingaspaymasters](../protocol/interchain-gas-payments.md#interchaingaspaymasters "mention"), which can be used to pay our relayer for delivering interchain messages
 * A `TestRecipient`, which we will send messages to, in order to test that everything is working correctly
 
 ### Setup
