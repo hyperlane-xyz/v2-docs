@@ -15,13 +15,14 @@ Follow these [instructions](https://github.com/hyperlane-xyz/hyperlane-warp-ui-t
 As mentioned in the [customization instructions](https://github.com/hyperlane-xyz/hyperlane-warp-ui-template/blob/main/CUSTOMIZE.md), the UI repo contains a token list (see `./src/consts/tokens.ts)`which must be updated. Here's an example:
 
 ```typescript
-import { TokenMetadata } from '../features/tokens/types';
+import { WarpTokenConfig } from '../features/tokens/types';
 
-export const tokenList: TokenMetadata[] = [
+export const tokenList: WarpTokenConfig = [
   {
     chainId: 5,
     address: '0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6',
     hypCollateralAddress: '0x145de8760021c4ac6676376691b78038d3DE9097',
+    type: 'collateral' // or 'native'
     name: 'Weth',
     symbol: 'WETH',
     decimals: 18,
@@ -43,4 +44,3 @@ Since the UI is a Next.js app, you can use your favorite hosting service to host
 * Hit Deploy!
 
 And that's it! Now you and your users can use the UI to send tokens from the collateral chain to remote chains, from one remote chain to another, and from any remote chain back to the collateral chain.
-
