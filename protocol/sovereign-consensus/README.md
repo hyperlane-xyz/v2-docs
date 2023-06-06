@@ -18,7 +18,7 @@ For example, application developers that want increased sovereignty over interch
 
 ISMs act as "security [legos](https://en.wikipedia.org/wiki/Lego)". Developers can mix and match different ISMs together to encode a security model that best fits their needs.
 
-For example, application developers that want additional security could deploy an [aggregation-ism.md](aggregation-ism.md "mention") that requires verification by both a [messaging.md](../../build-with-hyperlane/quickstarts/messaging.md "mention") configured with validators from the Hyperlane community, **and** a [wormhole-ism.md](wormhole-ism.md "mention") that verifies that a quorum of the [Wormhole](https://wormhole.com/) validator set verified the message.
+For example, application developers that want additional security could deploy an [aggregation-ism.md](aggregation-ism.md "mention") that requires verification by both a [multisig-ism.md](multisig-ism.md "mention") configured with validators from the Hyperlane community, **and** a [wormhole-ism.md](wormhole-ism.md "mention") that verifies that a quorum of the [Wormhole](https://wormhole.com/) validator set verified the message.
 
 ### Customize
 
@@ -30,7 +30,7 @@ For example, application developers can build ISMs that adjust security models b
 
 Application developers can override the default ISM by implementing the `ISpecifiesInterchainSecurityModule` interface in their application.
 
-Specifically, this interface must be implemented in the same smart contract that implements `handle()`.&#x20;
+Specifically, this interface must be implemented in the same smart contract that implements `handle()`.
 
 ```solidity
 // SPDX-License-Identifier: MIT OR Apache-2.0
