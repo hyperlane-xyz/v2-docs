@@ -34,6 +34,27 @@ export const tokenList: WarpTokenConfig = [
 
 You can replace the `tokens` entry with the output that was written to `hyperlane-deploy/artifacts/warp-ui-token-list.ts` from the [deploy-a-warp-route.md](deploy-a-warp-route.md "mention") instructions.
 
+#### Configure Chain
+
+In addition, custom chains also need to be configured, in \`./src/consts/chains.ts\`. This should be the same configuration as the one used in the [#setup](../deploy-hyperlane.md#setup "mention") step when deploying Hyperlane and the [#example-1](deploy-a-warp-route.md#example-1 "mention")when deploying the Warp Route. Here's an example:
+
+<pre class="language-typescript"><code class="lang-typescript"><strong>  anvil1: {
+</strong>    chainId: 31337,
+    name: 'anvil1',
+    displayName: 'Anvil 1 Local',
+    nativeToken: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    publicRpcUrls: [{ http: 'http://127.0.0.1:8545' }],
+    blocks: {
+      confirmations: 1,
+      reorgPeriod: 0,
+      estimateBlockTime: 10,
+    },
+    logoURI: '/logo.svg',
+  },
+};
+
+</code></pre>
+
 ### Deploy the UI
 
 Since the UI is a Next.js app, you can use your favorite hosting service to host it. We recommend [Vercel](https://vercel.com), which works very well with Next. [Netlify](https://www.netlify.com) and [Fleek](https://fleek.co) are also a good options.

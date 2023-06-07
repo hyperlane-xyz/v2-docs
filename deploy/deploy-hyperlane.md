@@ -15,19 +15,27 @@ At a high level, deploying Hyperlane requires the following actions:
 1. [#1.-setup-keys](deploy-hyperlane.md#1.-setup-keys "mention") that you will use to deploy contracts and run validators and relayers
 2. [#2.-deploy-contracts](deploy-hyperlane.md#2.-deploy-contracts "mention") to the local chain and to every remote chain with which the local chain will be able to send and receive messages.
 3. [#3.-run-validators](deploy-hyperlane.md#3.-run-validators "mention") on your local chain, to provide the signatures needed for the [sovereign-consensus](../protocol/sovereign-consensus/ "mention") you deployed in step (2)
-4. [#4.-run-relayers](deploy-hyperlane.md#4.-run-relayers "mention") for the local chain and for every remote chain with which the local chain will be able to send and receive messages.
+4. [#4.-run-relayer](deploy-hyperlane.md#4.-run-relayer "mention") to send and receive messages between the local chain and all remote chains set up in the [#2.-deploy-contracts](deploy-hyperlane.md#2.-deploy-contracts "mention") step.
 5. [#5.-send-test-messages](deploy-hyperlane.md#5.-send-test-messages "mention") to confirm that your relayers able to deliver messages from and to each pair of chains
 
 ## 1. Setup keys
 
 In order to complete this guide, you first need to set up the following:
 
-* **A deployer key**: a 32 byte hexadecimal private key that is funded on all the chains on which we need to deploy contracts.
-* **Validator addresses**: a list of validator addresses for your local chain are needed to configure the [multisig-ism.md](../protocol/sovereign-consensus/multisig-ism.md "mention")s. The configuration is a list of `n` local validator addresses and the threshold `m`, the minimum number of validators needed to verify outbound messages from the local chain.
-* **Relayer keys**: You'll be running one relayer for the local chain and each of the remote chains. Each relayer instance must be configured with a key that has a balance on all the other chains. Use the chains' faucet to get tokens if they are testnets, for the core chains, you can find a list of faucets under [token-sources-and-faucets.md](../resources/token-sources-and-faucets.md "mention")
+<table><thead><tr><th width="122.33333333333331">Key Type</th><th width="278">Description</th><th>Needs Funding?</th></tr></thead><tbody><tr><td>Contract Deployer</td><td>32 byte hexadecimal private key</td><td>Yes, on all the chains on which we need to deploy contracts.</td></tr><tr><td>Validator Accounts</td><td>A list of validator addresses for your local chain are needed to configure the <a data-mention href="../protocol/sovereign-consensus/multisig-ism.md">multisig-ism.md</a>s. The configuration is a list of <code>n</code> local validator addresses and the threshold <code>m</code>, the minimum number of validators needed to verify outbound messages from the local chain.</td><td>No, validators sign checkpoints but don't send transactions.</td></tr><tr><td>Relayer Accounts</td><td>The relayer client(s) use one account on the local chain and an additional account for each of the remote chains. </td><td>Yes. Each relayer instance must be configured with a key that has a balance on all the other chains. Use the chains' faucet to get tokens if they are testnets, for the core chains, you can find a list of faucets under <a data-mention href="../resources/token-sources-and-faucets.md">token-sources-and-faucets.md</a>.</td></tr></tbody></table>
 
 {% hint style="info" %}
 For instructions on how to generate keys, see [agent-keys](../operators/agent-keys/ "mention"). Your deployer key **must** be a hexadecimal key, while validator and relayer keys can be hexadecimal or AWS KMS.
+{% endhint %}
+
+{% hint style="info" %}
+If deploying on a local network using [Foundry's Anvil](https://github.com/foundry-rs/foundry/tree/master/anvil), use the following command to fund your newly-generated account. It uses one of the pre-funded private keys to transfer 1 ETH to the address in the `$YOUR_PUBLIC_KEY` variable.
+
+```
+cast send $YOUR_PUBLIC_KEY \
+--private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 \
+--value $(cast tw 1)
+```
 {% endhint %}
 
 {% content-ref url="../operators/agent-keys/" %}
@@ -184,7 +192,7 @@ Make sure these validators match the addresses you provided when in your `Multis
 [validators](../operators/validators/)
 {% endcontent-ref %}
 
-## 4. Run relayers
+## 4. Run relayer
 
 Follow the [relayers](../operators/relayers/ "mention") guide to run a relayer for the local chain and each of the remote chains. These relayers will deliver interchain messages sent between the local and remote chains.
 

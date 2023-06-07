@@ -12,7 +12,7 @@
 * [Warp Routes](deploy/deploy-warp-route/README.md)
   * [Deploy a Warp Route](deploy/deploy-warp-route/deploy-a-warp-route.md)
   * [Deploy a UI for your Warp Route](deploy/deploy-warp-route/deploy-the-ui-for-your-warp-route.md)
-* [Celestia + Hyperlane](deploy/celestia-+-hyperlane.md)
+* [Modular Rollup Interoperability](deploy/celestia-+-hyperlane.md)
 
 ## Build With Hyperlane
 

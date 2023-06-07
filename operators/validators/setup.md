@@ -4,7 +4,9 @@ description: Required setup instructions
 
 # Guide
 
-## Local setup
+## Environments
+
+### Local Setup
 
 {% hint style="warning" %}
 **The local setup is only intended for testing or development purposes.**
@@ -14,13 +16,13 @@ This is intended to show how you can run a validator on your _**local machine**_
 For running a validator in a production environment, see the [aws-setup.md](aws-setup.md "mention") guide.
 {% endhint %}
 
-### Create a hexadecimal key for your validator to sign with
+#### Create a hexadecimal key for your validator to sign with
 
 {% content-ref url="../agent-keys/hexadecimal-key-setup.md" %}
 [hexadecimal-key-setup.md](../agent-keys/hexadecimal-key-setup.md)
 {% endcontent-ref %}
 
-### Create a local directory for your validator's signatures
+#### Create a local directory for your validator's signatures
 
 When running a validator locally, your validator will write its signatures to a local directory. This directory can be named whatever you like, just remember to use this directory when setting your [#configuration](setup.md#configuration "mention").
 
@@ -32,25 +34,34 @@ MY_VALIDATOR_SIGNATURES_DIRECTORY=/tmp/hyperlane-validator-signatures-ethereum
 mkdir $MY_VALIDATOR_SIGNATURES_DIRECTORY
 ```
 
-Also take a look at the [agent-configuration](../agent-configuration/ "mention") page and the [configuration-reference.md](../agent-configuration/configuration-reference.md "mention") for a full list of configuration possibilities. **The list below is not complete,** however it should be enough to get started.
+### Production Setup
+
+For running a validator in a production environment, see the AWS setup guide.
+
+{% content-ref url="aws-setup.md" %}
+[aws-setup.md](aws-setup.md)
+{% endcontent-ref %}
 
 ## Configuration
+
+{% hint style="info" %}
+Take a look at the [agent-configuration](../agent-configuration/ "mention") page and the [configuration-reference.md](../agent-configuration/configuration-reference.md "mention") for a full list of configuration possibilities. **The list below is not complete,** however it should be enough to get started.
+{% endhint %}
 
 ### Environment variables
 
 Your validator takes environment variables as configuration. See below for these environment variables & those that are specific to the setup instructions you followed.
 
-| Environment variable                                 | Description                                                                                                                                                                                                                                                                                                                                                                               |
-| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CONFIG_FILES`                                       | If you want to add additional configuration files you can add additional paths here as a comma separated list. These files must be accessible within the filesystem your agent has access to. If you're running in Docker, see [#config-files-with-docker](../agent-configuration/#config-files-with-docker "mention") for tips on mounting your config files into your Docker container. |
-| `HYP_BASE_ORIGINCHAINNAME`                           | The name of the chain being validated (e.g. `ethereum`)                                                                                                                                                                                                                                                                                                                                   |
-| `HYP_BASE_REORGPERIOD`                               | <p>The number of block confirmations a validator should wait before signing the <code>Mailbox</code> merkle root. Note that signing a root that is later invalidated (i.e. due to a re-org) is considered fraudulent behavior and will eventually be slashable.<br>See <a data-mention href="../../resources/latencies.md">latencies.md</a></p>                                           |
-| `HYP_BASE_INTERVAL`                                  | In seconds, the frequency with which the validator should poll the `Mailbox` merkle root. (Defaults to 5 seconds).                                                                                                                                                                                                                                                                        |
-| `HYP_BASE_CHAINS_[origin chain name]_CONNECTION_URL` | <p>The RPC URL of the node for the chain you are validating. Note Polygon mainnet requires an RPC URL of an archive node (see <a data-mention href="./#an-rpc-node">#an-rpc-node</a>for details).<br>e.g. <code>HYP_BASE_CHAINS_ETHEREUM_CONNECTION_URL</code> or <code>HYP_BASE_CHAINS_POLYGON_CONNECTION_URL</code></p>                                                                 |
+| Environment variable                                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `CONFIG_FILES`                                       | If you're supporting your own chain that you [permissionlessly deployed](broken-reference/) (including a local testnet), you must specify a path to your own config file via this environment variable. You can add additional paths here as a comma separated list. These files must be accessible within the filesystem your agent has access to. If you're running in Docker, see [#config-files-with-docker](../agent-configuration/#config-files-with-docker "mention") for tips on mounting your config files into your Docker container.                                                                                                                                                              |
+| `HYP_BASE_ORIGINCHAINNAME`                           | The name of the chain being validated (e.g. `ethereum`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `HYP_BASE_CHAINS_[origin chain name]_CONNECTION_URL` | <p>The RPC URL of the node for the chain you are validating. Notes:</p><ul><li>Polygon mainnet requires an RPC URL of an archive node (see <a data-mention href="./#an-rpc-node">#an-rpc-node</a>for details).<br>e.g. <code>HYP_BASE_CHAINS_ETHEREUM_CONNECTION_URL</code> or <code>HYP_BASE_CHAINS_POLYGON_CONNECTION_URL</code></li><li>If deploying via Docker and running a chain locally (e.g. anvil), you must use <code>http://host.docker.internal</code> as the host instead of <code>http://127.0.01</code> . See more details in <a href="https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach">this</a> post.</li></ul> |
+| `HYP_BASE_REORGPERIOD`                               | <p>The number of block confirmations a validator should wait before signing the <code>Mailbox</code> merkle root. Note that signing a root that is later invalidated (i.e. due to a re-org) is considered fraudulent behavior and will eventually be slashable.<br>See <a data-mention href="../../resources/latencies.md">latencies.md</a></p>                                                                                                                                                                                                                                                                                                                                                              |
 
 #### Setup-specific environment variables
 
-These **required** environment variables differ based on which [setup.md](setup.md "mention") instructions you followed.
+These **required** environment variables differ based on which of the [#environments](setup.md#environments "mention") you set up.
 
 {% tabs %}
 {% tab title="Local setup" %}
@@ -58,7 +69,7 @@ These are required environment variables that are specific to the [#local-setup]
 
 | Environment variable             | Description                                                                                                                                                                                                                                                                                                     |
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `HYP_BASE_VALIDATOR_TYPE`        | Set to `hexKey`.                                                                                                                                                                                                                                                                                                |
+| `HYP_BASE_VALIDATOR_TYPE`        | Set to the `hexKey` literal.                                                                                                                                                                                                                                                                                    |
 | `HYP_BASE_VALIDATOR_KEY`         | Your validator's private key, which is used to sign merkle roots.                                                                                                                                                                                                                                               |
 | `HYP_BASE_CHECKPOINTSYNCER_TYPE` | Set to `localStorage`.                                                                                                                                                                                                                                                                                          |
 | `HYP_BASE_CHECKPOINTSYNCER_PATH` | <p>The path to your local directory where validator signatures will be written. This should be the value of <code>$MY_VALIDATOR_SIGNATURES_DIRECTORY</code> from the <a data-mention href="setup.md#local-setup">#local-setup</a>.</p><p>Example: <code>/tmp/hyperlane-validator-signatures-ethereum</code></p> |
@@ -68,12 +79,12 @@ Note that relayers **must** be configured with`HYP_BASE_ALLOWLOCALCHECKPOINTSYNC
 {% endhint %}
 {% endtab %}
 
-{% tab title="AWS setup" %}
+{% tab title="Production setup (AWS)" %}
 These are required environment variables that are specific to the [aws-setup.md](aws-setup.md "mention").
 
 | Environment variable               | Description                                                                                                                                                           |
 | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `HYP_BASE_VALIDATOR_TYPE`          | Set to `aws`.                                                                                                                                                         |
+| `HYP_BASE_VALIDATOR_TYPE`          | Set to the `aws` literal.                                                                                                                                             |
 | `HYP_BASE_VALIDATOR_ID`            | <p>The alias of your validator's AWS KMS key, prefixed with <code>alias/</code>.<br><em>Example:</em> <code>alias/hyperlane-validator-signer-${chain_name}</code></p> |
 | `HYP_BASE_VALIDATOR_REGION`        | <p>The region of your AWS KMS key.<br><em>Example:</em> <code>us-east-1</code>.</p>                                                                                   |
 | `HYP_BASE_CHECKPOINTSYNCER_TYPE`   | Set to `s3`.                                                                                                                                                          |
@@ -153,13 +164,15 @@ docker run -it --env-file validator.env $DOCKER_IMAGE ./validator
 {% endcode %}
 
 {% hint style="info" %}
-If you're supporting your own chain that you [permissionlessly deployed](broken-reference/) and are specifying a path to your own config file in the `CONFIG_FILES` environment variable, check out the [#config-files-with-docker](../agent-configuration/#config-files-with-docker "mention") section.
+If you're specifying a path to your own config file in the `CONFIG_FILES` environment variable, check out the [#config-files-with-docker](../agent-configuration/#config-files-with-docker "mention") section.
 {% endhint %}
 
 {% hint style="info" %}
 If you're running with a [#local-setup](setup.md#local-setup "mention") validator on the same machine, which requires a locally ran relayer to be able to access these validator signatures, be sure to [mount](https://docs.docker.com/storage/bind-mounts/) your local validator's signature directory on your host machine into your Docker container.
 
-For example, if your local validator is writing signatures to `/tmp/hyperlane-validator-signatures-ethereum`, you should mount a directory for the Docker container:
+For example, if your local validator is writing signatures to `/tmp/hyperlane-validator-signatures-ethereum`, you should mount a directory for the Docker container. This is the same directory set in the `$HYP_BASE_CHECKPOINTSYNCER_PATH` environment variable.&#x20;
+
+If the command below fails with `docker: invalid reference format`, the whitespaces may have been malformed and you should remove them from the command.
 
 {% code overflow="wrap" %}
 ```sh
@@ -167,6 +180,7 @@ docker run \
     -it \
     --env-file validator.env \
     --mount type=bind,source="$(pwd)"/hyperlane-validator-signatures-ethereum,target=/tmp/hyperlane-validator-signatures-ethereum \
+    # you can pass multiple `--mount` flags to mount several directories
     $DOCKER_IMAGE \
     ./validator
 ```
@@ -255,7 +269,7 @@ Now you can submit your signed announcement to the `ValidatorAnnounce` smart con
 4. Click "Write" and submit the transaction.
 {% endtab %}
 
-{% tab title="Cast" %}
+{% tab title="Cast (Foundry)" %}
 1. Announce your validator by running the following command, filling in the following variables:
    1. Set `$VALIDATOR_ANNOUNCE_ADDRESS` to the address of the `ValidatorAnnounce` contract for your origin chain. You can find addresses for existing deployments here: [addresses.md](../../resources/addresses.md "mention")
    2. Set `$VALIDATOR` to `value.validator` from your JSON announcement

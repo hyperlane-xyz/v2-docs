@@ -1,8 +1,8 @@
 ---
-description: A match made in modular heaven
+description: Celestia + Hyperlane, a match made in modular heaven
 ---
 
-# Celestia + Hyperlane
+# Modular Rollup Interoperability
 
 This guide will walk you through the process of deploying an EVM-compatible sovereign rollup on Celestia, with interoperability powered by Hyperlane.
 
