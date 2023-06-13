@@ -17,7 +17,7 @@ It may be useful to know the remote address of your ICA before sending a message
 An example is included below of a contract precomputing its own Interchain Account address.
 
 ```solidity
-address myInterchainAccount = IInterchainAccountRouter(...).getInterchainAccount(
+address myInterchainAccount = IInterchainAccountRouter(...).getRemoteInterchainAccount(
     destination,
     address(this)
 );
@@ -79,7 +79,7 @@ Call swapCall = Call({
     value: 0,
 });
 uint32 ethereumDomain = 1;
-IInterchainAccountRouter(0xabc...).dispatch(ethereumDomain, [swapCall]);
+IInterchainAccountRouter(0xabc...).callRemote(ethereumDomain, [swapCall]);
 </code></pre>
 
 ### Computing addresses
@@ -89,7 +89,7 @@ It may be useful to know the remote address of your ICA before sending a message
 An example is included below of a contract precomputing its own interchain account address.
 
 ```solidity
-address myInterchainAccount = IInterchainAccountRouter(...).getInterchainAccount(
+address myInterchainAccount = IInterchainAccountRouter(...).getRemoteInterchainAccount(
     destination,
     address(this)
 );
@@ -123,9 +123,10 @@ function makeCall(uint256 gasAmount) external payable {
     uint32 ethereumDomain = 0x657468;
     // consistent across all chains
     address icaRouter = 0xc011170d9795a7a2d065E384EAd1CA3394A7d35E;
-    bytes32 messageId = IInterchainAccountRouter(icaRouter).dispatch(
+    bytes32 messageId = IInterchainAccountRouter(icaRouter).callRemote(
         ethereumDomain,
         address(pool),
+        0,
         abi.encodeCall(pool.swap, (...))
     );
 
@@ -177,7 +178,7 @@ flowchart TB
       Recipient
     end
 
-    Sender -- "dispatch(destination, recipient, call)" --> A_O
+    Sender -- "callRemote(destination, recipient, value, call)" --> A_O
     A_O -- "dispatch(destination, router, \n[sender, recipient, call])" --> M_O
     M_O -. "relay" .- M_D
     M_D -- "handle(origin, router, \n[sender, recipient, call])" --> A_D
