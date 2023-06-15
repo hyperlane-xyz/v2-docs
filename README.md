@@ -2,7 +2,7 @@
 description: The permissionless interoperability layer built for modular blockchains
 ---
 
-# Hyperlane Introduction
+# Hyperlane introduction
 
 Hyperlane is the first universal and permissionless interoperability framework built for the modular blockchain stack.&#x20;
 
@@ -13,7 +13,7 @@ Hyperlane is designed with modularity in mind. Notably, its [sovereign-consensus
 Using Hyperlane, developers can build _Interchain Applications_ - dapps that span multiple blockchains. Some pre-built examples that can be deployed out of the box include:
 
 1. [deploy-warp-route](deploy/deploy-warp-route/ "mention"), which allow native, `ERC20`, and `ERC721` tokens to move seamlessly across chains
-2. Interchain [accounts](apis/accounts/ "mention"), which allows an account on one chain (e.g. a DAO) to make smart contract calls on remote chains
+2. Interchain [accounts.md](apis-and-sdks/accounts.md "mention"), which allows an account on one chain (e.g. a DAO) to make smart contract calls on remote chains
 3. Interchain [query.md](apis/query.md "mention"), which allow an account on one chain to make view calls on remote chains
 
 Keep reading to learn all the things Hyperlane can do for you!

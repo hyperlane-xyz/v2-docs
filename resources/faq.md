@@ -59,7 +59,7 @@ Hyperlane's [messaging-api](../apis/messaging-api/ "mention") allows dapp develo
 For inspiration, take a look at some of the pre-built applications built on top of Hyperlane, including:
 
 * The [warp-api.md](../apis-and-sdks/warp-api.md "mention"), which lets users move tokens from one chain to another
-* The [accounts](../apis/accounts/ "mention"), which lets users make interchain function calls
+* The [accounts.md](../apis-and-sdks/accounts.md "mention"), which lets users make interchain function calls
 * The [query.md](../apis/query.md "mention"), which lets users make interchain view calls
 * Other [examples.md](../build-with-hyperlane/examples.md "mention") built on top of Hyperlane
 

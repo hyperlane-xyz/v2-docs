@@ -80,7 +80,7 @@ A [#middleware](glossary.md#middleware "mention") smart contract that allows use
 \
 For example, DAOs can use interchain accounts to own contracts on remote chains.\
 \
-See [accounts](../apis/accounts/ "mention") for more information.
+See [accounts.md](../apis-and-sdks/accounts.md "mention") for more information.
 
 </details>
 

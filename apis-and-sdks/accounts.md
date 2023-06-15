@@ -6,9 +6,11 @@ description: Call smart contracts on remote chains
 
 Developers can use the Accounts API to create and control an account on a remote chain from their local chain.
 
-Unlike the [messaging-api](../messaging-api/ "mention"), which requires recipients to implement a specific interface, the Accounts API allows developers to interact with any remote contract.
+Unlike the [messaging-api](../apis/messaging-api/ "mention"), which requires recipients to implement a specific interface, the Accounts API allows developers to interact with any remote contract.
 
-The Accounts API assigns every `(uint32 origin, uint32 destination, address owner)` tuple a unique interchain account (ICA) address. The sender owns that ICA on the destination chain, and can direct it to make arbitrary function calls via the `InterchainAccountRouter.callRemote()` endpoint.
+The Accounts API assigns every `(uint32 origin, address owner, address remoteRouter, address remoteISM)` tuple a unique interchain account (ICA) address. The sender owns that ICA on the destination chain, and can direct it to make arbitrary function calls via the `InterchainAccountRouter.callRemote()` endpoint.
+
+On many chains, you are able to use the defaults that are set by the owner of the router contract. See the [#overrides](accounts.md#overrides "mention") section to see how to make calls to any chain or use custom [sovereign-consensus](../protocol/sovereign-consensus/ "mention").
 
 ### Computing addresses
 
@@ -46,7 +48,7 @@ interface IInterchainAccountRouter {
 ```
 
 {% hint style="info" %}
-Want to use `InterchainAccountRouter`? Please refer to [addresses.md](../../resources/addresses.md "mention") and [domains.md](../../resources/domains.md "mention")
+Want to use `InterchainAccountRouter`? Please refer to [addresses.md](../resources/addresses.md "mention") and [domains.md](../resources/domains.md "mention")
 {% endhint %}
 
 ## Example Usage
@@ -84,6 +86,10 @@ IInterchainAccountRouter(0xabc...).callRemote(ethereumDomain, [swapCall]);
 
 ### Computing addresses
 
+{% hint style="danger" %}
+There is a bug in address computation in the latest deployment that will result in the wrong address
+{% endhint %}
+
 It may be useful to know the remote address of your ICA before sending a message. For example, you may want to first fund the address with tokens. The `getRemoteInterchainAccount` function can be used to get the address of an ICA given the destination chain and owner address.
 
 An example is included below of a contract precomputing its own interchain account address.
@@ -95,9 +101,19 @@ address myInterchainAccount = IInterchainAccountRouter(...).getRemoteInterchainA
 );
 ```
 
+If you are using [#overrides](accounts.md#overrides "mention") to specify remote chains or [sovereign-consensus](../protocol/sovereign-consensus/ "mention"), pass those overrides when computing the remote ICA address.
+
+```solidity
+address myRemoteIca = IInterchainAccountRouter(...).getRemoteInterchainAccount(
+    address(this),
+    remoteRouterOverride,
+    remoteIsmOverride
+);
+```
+
 ### Paying for Interchain Gas
 
-Just like all Hyperlane messages that wish to have their messages delivered by a relayer, users must [pay for interchain gas](../../build-with-hyperlane/guides/paying-for-interchain-gas.md).
+Just like all Hyperlane messages that wish to have their messages delivered by a relayer, users must [pay for interchain gas](../build-with-hyperlane/guides/paying-for-interchain-gas.md).
 
 The various `callRemote` functions in the Accounts API each return the message ID as a `bytes32`. This message ID can then be used by the caller to pay for interchain gas.
 
@@ -149,6 +165,48 @@ function makeCall(uint256 gasAmount) external payable {
          msg.sender
      );
 }
+```
+
+## Overrides
+
+The interchain accounts API allows developers to override the default chains and security models configured in the `InterchainAccountRouter`.
+
+This can be useful for developers who wish to:
+
+* Call an ICA on a chain that was not explicitly added by the `InterchainAccountRouter` owner, or
+* Secure their ICA(s) using different [sovereign-consensus](../protocol/sovereign-consensus/ "mention") than the defaults configured in the `InterchainAccountRouter`
+
+### Interface
+
+{% hint style="warning" %}
+The address of a remote ICA will vary with the `_router` and `_ism` overrides used
+{% endhint %}
+
+The `callRemoteWithOverrides` function looks similar to the `callRemote` function, but takes two additional arguments.
+
+First, developers can override `_router`, the address of the `InterchainAccountRouter` on the remote chain. This allows developers to control an ICA on remote chains that have not been configured on the local `InterchainAccountRouter`.
+
+Second, developers can override `_ism`, the address of the remote interchain security module (ISM) used to secure their ICA. This ISM will be used to verify the interchain messages passed between the local and remote `InterchainAccountRouters`. This allows developers to use a custom security model that best suits their needs.
+
+Read more about [sovereign-consensus](../protocol/sovereign-consensus/ "mention").
+
+```solidity
+    /**
+     * @notice Dispatches a sequence of remote calls to be made by an owner's
+     * interchain account on the destination domain
+     * @dev Recommend using CallLib.build to format the interchain calls
+     * @param _destination The remote domain of the chain to make calls on
+     * @param _router The remote router address
+     * @param _ism The remote ISM address
+     * @param _calls The sequence of calls to make
+     * @return The Hyperlane message ID
+     */
+    function callRemoteWithOverrides(
+        uint32 _destination,
+        bytes32 _router,
+        bytes32 _ism,
+        CallLib.Call[] calldata _calls
+    ) public returns (bytes32) 
 ```
 
 ## Diagram

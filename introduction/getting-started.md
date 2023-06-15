@@ -24,7 +24,7 @@ Once Hyperlane exists on your desired chains, you can use one of the APIs provid
 You can use the accounts API to have an account make function calls on another chain. For example, a DAO can easily own assets on other chains without needing any remote smart contracts.
 
 * [accounts.md](../build-with-hyperlane/quickstarts/accounts.md "mention") quickstart
-* [accounts](../apis/accounts/ "mention") reference
+* [accounts.md](../apis-and-sdks/accounts.md "mention") reference
 
 **Queries API**
 

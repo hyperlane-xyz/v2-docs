@@ -101,7 +101,7 @@ You can find the address of the `InterchainQueryRouter` contract on each chain [
 
 ### Encoding
 
-Calls can be easily encoded with the `abi.encodeCall` function. As with the [accounts](accounts/ "mention"), you can either call `dispatch` directly or pass `Call` structs
+Calls can be easily encoded with the `abi.encodeCall` function. As with the [accounts.md](../apis-and-sdks/accounts.md "mention"), you can either call `dispatch` directly or pass `Call` structs
 
 ```solidity
 interface ENS {
