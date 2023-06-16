@@ -4,6 +4,7 @@
 
 * [Hyperlane introduction](README.md)
 * [Getting started](introduction/getting-started.md)
+* [Why Should You Use Hyperlane?](introduction/why-should-you-use-hyperlane.md)
 
 ## Permissionless Interoperability <a href="#deploy" id="deploy"></a>
 
