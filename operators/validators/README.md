@@ -4,7 +4,7 @@ description: Everything you need to start running a validator
 
 # Validators
 
-Hyperlane [validators](../../protocol/agents/validators.md) are stateless, do not submit transactions, and are not networked with other validators. Hyperlane validators are run on a per-origin-chain basis, and these instructions are written for a single chain.
+Hyperlane [validators.md](../../protocol/agents/validators.md "mention") are not networked with other validators and do not regularly submit transactions. Hyperlane validators are run on a per-origin-chain basis, and these instructions are written for a single chain.
 
 ```mermaid
 %%{ init: {
@@ -81,10 +81,10 @@ The Hyperlane validator agent currently supports signing with AWS KMS keys that 
 
 #### Publicly readable storage
 
-Validators write their signatures off-chain to publicly accessible, highly available, storage, so that they can be aggregated by [relayers](../../protocol/agents/relayer.md).
+Validators write their signatures off-chain to publicly accessible, highly available, storage, so that they can be aggregated by [relayer.md](../../protocol/agents/relayer.md "mention").
 
 The Hyperlane validator agent currently supports storing signatures on AWS S3 using the same AWS API key above, as well as storing signatures in the local filesystem for testing.
 
 #### A machine to run on
 
-Validators can compile the Rust binary themselves, or run a Docker image provided by Abacus Works. The binary is completely stateless and can be run using your favorite cloud service. You can even run multiple instances of them in different regions for high availability, as Hyperlane has no notion of "double signing".
+Validators can compile the Rust binary themselves or run a Docker image provided by Abacus Works. The binary can be run using your favorite cloud service. You can even run multiple instances of them in different regions for high availability, as Hyperlane has no notion of "double signing".

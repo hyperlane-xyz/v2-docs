@@ -7,9 +7,31 @@ All agents use the same method of configuration which is a multi-layered config 
 1. Base configuration which takes the form `rust/config/<env_name>/<config_name>.json` all of these are loaded automatically.
 2. Config files passed in via the `CONFIG_FILES` env var are loaded next; this env var should be a comma separated list of paths to json files that should be loaded in order from first to last.
 3. `HYP_BASE_` prefixed env vars will be read next.
-4. `HYP_<AGENT>_` prefixed env vars will be read last and ONLY for the current agent. I.e. `RELAYER`, `VALIDATOR`, and `SCRAPER` will only read their respective prefixes.
+4. `HYP_<AGENT>_` prefixed env vars are then read and apply ONLY for the current agent. I.e. `RELAYER`, `VALIDATOR`, and `SCRAPER` will only read their respective prefixes.
+5. Command line arguments will be read last
 
-### Using environment variables
+### Command line arguments
+
+Command line arguments are added after the application name, such as`./relayer --originChainNames="test1,test2,test3"`
+
+The following formats are supported:
+
+* `--argName argValue`
+* `--argName "argValue"`
+* `--argName 'argValue'`
+* `--argName=argValue`
+* `--argName="argValue"`
+* `--argName='argValue'`
+
+Argument names are case-insensitive, so in this guide we may show them in camel-case for easier reading, but `--argName` is equivalent to `--ARGNAME` and `--argname.`
+
+Examples:
+
+* `{ "db": "/path/to/dir" }` can be set with `--db "/path/to/dir"`
+* `{ "chains": { "ethereum": { "name": "ethereum" } } }` (abbreviated as `chains.ethereum.name` or `chains.<chain_name>.name`) can be set with `--chains.ethereum.name ethereum`
+* `{ "chains": { "avalanche": { "connection": { "url": "https://some-url.com" } } } }` (abbreviated as `chains.avalanche.connection.url` or `chains.<chain_name>.connection.url`) can be set with `--chains.avalanche.connection.url "https://some-url.com"`
+
+### Environment variables
 
 The config file format is the preferred way to set things which are not secret and do not need to change for each run as it is the easiest format to inspect and edit. Every config value in the file can be set as an env var if you use the correct name, however, there are a few env vars that cannot be set in the config such as `CONFIG_FILES`.
 
@@ -21,7 +43,7 @@ For example:
 
 * `{ "db": "/path/to/dir" }` can be set with `HYP_BASE_DB="/path/to/dir"` or `HYP_RELAYER_DB="/path/to/dir"`
 * `{ "chains": { "ethereum": { "name": "ethereum" } } }` (abbreviated as `chains.ethereum.name` or `chains.<chain_name>.name`) can be set with `HYP_BASE_CHAINS_ETHEREUM_NAME="ethereum"` or `HYP_VALIDATOR_CHAINS_ETHEREUM_NAME="ethereum"` or `HYP_RELAYER_CHAINS_ETHEREUM_NAME="ethereum"` ...
-* `{ "chains": { "avalanche": { "connection": { "url": "https://some-url.com" } } } }` (abbreviated as `chains.avalanche.connection.url` or `chains.<chain_name>.connection.url`) can be set with `HYP_BASE_CHAINS_AVALANCHE_CONNECTION_URL="https://some-url.com"` or `HYP_BASE_VALIDATOR_AVALANCHE_CONNECTION_URL="https://some-url.com"` and so on ...
+* `{ "chains": { "avalanche": { "connection": { "url": "https://some-url.com" } } } }` (abbreviated as `chains.avalanche.connection.url` or `chains.<chain_name>.connection.url`) can be set with `HYP_BASE_CHAINS_AVALANCHE_CONNECTION_URL="https://some-url.com"` or `HYP_BASE_VALIDATOR_AVALANCHE_CONNECTION_URL="https://some-url.com"` and so on...
 
 ### Config files with Docker
 
@@ -40,4 +62,3 @@ docker run -it --mount type=bind,source=/home/workspace/ethereum.json,target=/co
 {% endcode %}
 
 The `source` path is the path on your local machine, the `target` path is where the source path contents will be made available within the Docker container, and the `CONFIG_FILES` should specify config(s) from the target path.
-

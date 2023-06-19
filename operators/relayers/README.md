@@ -4,9 +4,9 @@ description: Everything you need to start running a relayer
 
 # Relayers
 
-Hyperlane [relayers](../../protocol/agents/relayer.md) deliver interchain messages to their recipients.
+Hyperlane [relayer.md](../../protocol/agents/relayer.md "mention") deliver interchain messages to their recipients.
 
-Every Hyperlane message requires two transactions to be delivered, one on the origin chain to [dispatch](../../apis/messaging-api/send.md) the message, and one on the destination chain to [process](../../apis/messaging-api/receive.md) the messages. Relayers are responsible for sending the second transaction.
+Every Hyperlane message requires two transactions to be delivered, one on the origin chain to [send.md](../../apis/messaging-api/send.md "mention") the message, and one on the destination chain to [receive.md](../../apis/messaging-api/receive.md "mention") the messages. Relayers are responsible for sending the second transaction.
 
 ```mermaid
 %%{ init: {
@@ -50,7 +50,7 @@ Running a relayer requires the following:
 
 #### RPC nodes
 
-Relayers use RPC nodes to read the origin chain, and deliver messages to the destination chain(s). Relayers must be configured with an RPC node for the origin chain, and each destination chain.
+Relayers use RPC nodes to read the origin chain(s), and deliver messages to the destination chain(s). Relayers must be configured with an RPC node for all origin and destination chains.
 
 #### One or more signing keys
 

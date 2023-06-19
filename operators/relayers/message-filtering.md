@@ -8,9 +8,9 @@ By default, the relayer will attempt to deliver messages sent from its origin ch
 
 Relayers may want to further filter the messages they attempt to deliver. For example, someone building an interchain app may want to run a relayer that only delivers messages sent to that application. Similarly, some relayers may wish to only relay messages to a subset of available chains.
 
-Relayers may **optionally** filter the messages they deliver by setting the `HYP_BASE_WHITELIST` or `HYP_BASE_BLACKLIST` environment variables. See also the configuration reference's[#whitelist](../agent-configuration/configuration-reference.md#whitelist "mention") and[#blacklist](../agent-configuration/configuration-reference.md#blacklist "mention") sections.
+Relayers may **optionally** filter the messages they deliver by setting the `--whitelist` or `--blacklist` environment variables. See also the configuration reference's[#whitelist](../agent-configuration/configuration-reference.md#whitelist "mention") and[#blacklist](../agent-configuration/configuration-reference.md#blacklist "mention") sections.
 
-These environment variables are stringified JSON objects with the following format:
+These configs are stringified JSON objects with the following format:
 
 ```typescript
 // A list of matching rules. A message matches if any of the list
@@ -60,10 +60,10 @@ For example, the following config used as a whitelist will ensure the relayer wi
 ]
 ```
 
-As an env string, a valid config may look like&#x20;
+A valid config may look like&#x20;
 
 ```bash
-HYP_BASE_WHITELIST='[{"senderAddress":"*","destinationDomain":["1"],"recipientAddress":"*"},{"senderAddress":"0xca7f632e91B592178D83A70B404f398c0a51581F","destinationDomain":["42220","43114"],"recipientAddress":"*"},{"senderAddress":"*","destinationDomain":["42161","420"],"recipientAddress":"0xca7f632e91B592178D83A70B404f398c0a51581F"}]'
+--whitelist='[{"senderAddress":"*","destinationDomain":["1"],"recipientAddress":"*"},{"senderAddress":"0xca7f632e91B592178D83A70B404f398c0a51581F","destinationDomain":["42220","43114"],"recipientAddress":"*"},{"senderAddress":"*","destinationDomain":["42161","420"],"recipientAddress":"0xca7f632e91B592178D83A70B404f398c0a51581F"}]'
 ```
 
 The blacklist supersedes the whitelist, i.e. if a message matches both the whitelist _and_ the blacklist, it will not be delivered.

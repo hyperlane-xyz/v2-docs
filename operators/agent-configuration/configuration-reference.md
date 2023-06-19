@@ -17,6 +17,10 @@ These files must be accessible within the filesystem your agent has access to. I
 **Type:** `string` (Comma separated list of file paths)
 
 {% tabs %}
+{% tab title="As Arg" %}
+Not supported as an argument
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 export CONFIG_FILES='./config/ethereum/my-config.json,./config/ethereum/my-validator-config.json'
@@ -39,6 +43,12 @@ Not supported in configuration files
 **Type:** `Map<string, ChainSetup (Object)>` (See `chains.*` for `ChainSetup` values)
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--chains.${CHAIN_NAME}.*
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 HYP_BASE_CHAINS_${CHAIN_NAME}_*
@@ -71,6 +81,13 @@ HYP_BASE_CHAINS_ETHEREUM_*
 **Type:** `string`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```sh
+--chains.${CHAIN_NAME}.name $DOMAIN_NAME
+--chains.ethereum.name ethereum
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 HYP_BASE_${CHAIN_NAME}_NAME="$DOMAIN_NAME"
@@ -107,6 +124,13 @@ HYP_BASE_ETHEREUM_NAME="ethereum"
 **Type:** `Numeric (string | number)`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--chains.${CHAIN_NAME}.domain $DOMAIN_ID
+--chains.ethereum.domain 1
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_${CHAIN_NAME}_DOMAIN="$DOMAIN_NAME"
@@ -141,6 +165,13 @@ export HYP_BASE_ETHEREUM_DOMAIN=1
 **Type:** `Numeric (string | number)`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--chains.${CHAIN_NAME}.finalityBlocks $FINALITY_BLOCKS
+--chains.ethereum.finalityBlcoks 20
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_${CHAIN_NAME}_FINALITY_BLOCKS="$FINALITY_BLOCKS"
@@ -175,6 +206,13 @@ export HYP_BASE_ETHEREUM_FINALITY_BLOCKS=20
 **Type:** `Hash (string)`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--chains.${CHAIN_NAME}.addresses.mailbox "$MAILBOX_ADDRESS"
+--chains.ethereum.addresses.mailbox "0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70"
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_CHAINS_${CHAIN_NAME}_ADDRESSES_MAILBOX="$MAILBOX_ADDRESS"
@@ -213,6 +251,13 @@ export HYP_BASE_CHAINS_ETHEREUM_ADDRESSES_MAILBOX="0x35231d4c2D8B8ADcB5617A638A0
 **Type:** `Hash (string)`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--chains.${CHAIN_NAME}.addresses.interchainGasPaymaster "$IGP_ADDRESS"
+--chains.ethereum.addresses.interchainGasPaymaster "0x6cA0B6D22da47f091B7613223cD4BB03a2d77918"
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_CHAINS_${CHAIN_NAME}_ADDRESSES_INTERCHAIN_GAS_PAYMASTER="$IGP_ADDRESS"
@@ -251,6 +296,13 @@ export HYP_BASE_CHAINS_ETHEREUM_ADDRESSES_INTERCHAIN_GAS_PAYMASTER="0x6cA0B6D22d
 **Type:** `Hash (string)`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--chains.${CHAIN_NAME}.addresses.validatorAnnounce "$VALIDATOR_ANNOUNCE_ADDRESS"
+--chains.ethereum.addresses.validatorAnnounce "0x9bBdef63594D5FFc2f370Fe52115DdFFe97Bc524"
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_CHAINS_${CHAIN_NAME}_ADDRESSES_VALIDATOR_ANNOUNCE="$VALIDATOR_ANNOUNCE_ADDRESS"
@@ -289,6 +341,12 @@ export HYP_BASE_CHAINS_ETHEREUM_ADDRESSES_VALIDATOR_ANNOUNCE="0x9bBdef63594D5FFc
 **Type:** `SignerConf (Object)`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--chains.${CHAIN_NAME}.signer.*
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 HYP_BASE_${CHAIN_NAME}_SIGNER_*
@@ -322,6 +380,13 @@ HYP_BASE_${CHAIN_NAME}_SIGNER_*
 **Type:** `Enum ("hexKey" | "aws" | "node")`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--chains.${CHAIN_NAME}.signer.type hexKey
+--chains.ethereum.signer.type node
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 export HYP_BASE_${CHAIN_NAME}_SIGNER_TYPE="hexKey"
@@ -361,6 +426,12 @@ export HYP_BASE_${CHAIN_NAME}_SIGNER_TYPE="hexKey"
 **Type:** `string`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--chains.${CHAIN_NAME}.signer.key "8166f546bab6da521a8369cab06c5d2b9e46670292d85c875ee9ec20e84ffb61"
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 export HYP_BASE_${CHAIN_NAME}_SIGNER_KEY="8166f546bab6da521a8369cab06c5d2b9e46670292d85c875ee9ec20e84ffb61"
@@ -400,6 +471,12 @@ export HYP_BASE_${CHAIN_NAME}_SIGNER_KEY="8166f546bab6da521a8369cab06c5d2b9e4667
 **Type:** `string`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--chains.ethereum.signer.type "alias/validator-signer-ethereum"
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 export HYP_BASE_${CHAIN_NAME}_SIGNER_ID="alias/validator-signer-ethereum"
@@ -435,6 +512,12 @@ export HYP_BASE_${CHAIN_NAME}_SIGNER_ID="alias/validator-signer-ethereum"
 **Type:** `string`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--chains.${CHAIN_NAME}.signer.region us-east-1
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 export HYP_BASE_${CHAIN_NAME}_SIGNER_REGION="us-east-1"
@@ -468,6 +551,13 @@ export HYP_BASE_${CHAIN_NAME}_SIGNER_REGION="us-east-1"
 **Type:** `Enum ("ethereum" | "fuel")`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--chains.${CHAIN_NAME}.protocol ethereum
+--chains.ethereum.protocol ethereum
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_${CHAIN_NAME}_PROTOCOL="ethereum"
@@ -509,6 +599,12 @@ export HYP_BASE_ARBITRUM_PROTOCOL="ethereum"
 **Type:** `Enum ("http", "ws", "httpFallback", "httpQuorum")`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--chains.${CHAIN_NAME}.connectionType http
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_${CHAIN_NAME}_CONNECTION_TYPE="url"
@@ -551,6 +647,13 @@ export HYP_BASE_ETHEREUM_CONNECTION_TYPE="httpFallback"
 **Type:** `string`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--chains.${CHAIN_NAME}.url "$CONNECTION_URL"
+--chains.ethereum.url "http://127.0.0.1:8545"
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_${CHAIN_NAME}_URL="$CONNECTION_URL"
@@ -592,6 +695,13 @@ export HYP_BASE_ETHEREUM_URL="http://127.0.0.1:8545"
 **Type:** `string` (comma separated list of urls without spaces)
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--chains.${CHAIN_NAME}.urls "$CONNECTION_URLS"
+--chains.ethereum.urls "http://127.0.0.1:8545,http://127.0.0.1:8546,http://127.0.0.1:8547"
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_${CHAIN_NAME}_URLS="$CONNECTION_URLS"
@@ -626,6 +736,13 @@ export HYP_BASE_ETHEREUM_URLS="http://127.0.0.1:8545,http://127.0.0.1:8546,http:
 **Type:** `Numeric (string | number)`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--chains.${CHAIN_NAME}.index.from 0
+--chains.ethereum.index.from 16271503
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_${CHAIN_NAME}_INDEX_FROM=0
@@ -664,6 +781,13 @@ export HYP_BASE_ETHEREUM_INDEX_FROM=16271503
 **Type:** `Numeric (string | number)`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--chains.${CHAIN_NAME}.index.chunk 1999
+--chains.ethereum.index.chunk 1999
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_${CHAIN_NAME}_INDEX_CHUNK=1999
@@ -702,6 +826,12 @@ export HYP_BASE_ETHEREUM_INDEX_CHUNK=1999
 **Type:** `SignerConf (Object)`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```
+--defaultSigner.*
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 HYP_BASE_DEFAULTSIGNER_*
@@ -728,6 +858,12 @@ HYP_BASE_DEFAULTSIGNER_*
 **Type:** `Enum ("hexKey" | "aws" | "node")`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```
+--defaultSigner.type hexKey
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 export HYP_BASE_DEFAULTSIGNER_TYPE="hexKey"
@@ -758,6 +894,12 @@ export HYP_BASE_DEFAULTSIGNER_TYPE="hexKey"
 **Type:** `string`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--defaultSigner.key "8166f546bab6da521a8369cab06c5d2b9e46670292d85c875ee9ec20e84ffb61"
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 export HYP_BASE_DEFAULTSIGNER_KEY="8166f546bab6da521a8369cab06c5d2b9e46670292d85c875ee9ec20e84ffb61"
@@ -789,6 +931,12 @@ export HYP_BASE_DEFAULTSIGNER_KEY="8166f546bab6da521a8369cab06c5d2b9e46670292d85
 **Type:** `string`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--defaultSigner.id "alias/validator-signer-ethereum"
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 export HYP_BASE_DEFAULTSIGNER_ID="alias/validator-signer-ethereum"
@@ -820,6 +968,12 @@ export HYP_BASE_DEFAULTSIGNER_ID="alias/validator-signer-ethereum"
 **Type:** `string`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--defaultSigner.region us-east-1
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 export HYP_BASE_DEFAULTSIGNER_REGION="us-east-1"
@@ -849,6 +1003,12 @@ export HYP_BASE_DEFAULTSIGNER_REGION="us-east-1"
 **Type:** `Numeric (string | number)`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--metrics 9090
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_METRICS=9090
@@ -875,6 +1035,12 @@ export HYP_BASE_METRICS=9090
 **Type:** `Enum ("pretty" | "json" | "full" | "compact")`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--tracing.fmt pretty
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 export HYP_BASE_TRACING_FMT="pretty"
@@ -903,6 +1069,12 @@ export HYP_BASE_TRACING_FMT="pretty"
 **Type:** `Enum ("trace" | "debug" | "info" | "warn" | "error" | "off")`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--tracing.level info
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 HYP_BASE_TRACING_LEVEL="info"
@@ -931,6 +1103,12 @@ HYP_BASE_TRACING_LEVEL="info"
 **Type:** `string`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--originChainName ethereum
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_ORIGINCHAINNAME="ethereum"
@@ -957,6 +1135,12 @@ export HYP_BASE_ORIGINCHAINNAME="ethereum"
 **Type:** `SignerConf (Object)`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--validator.*
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 HYP_BASE_VALIDATOR_*
@@ -983,6 +1167,12 @@ HYP_BASE_VALIDATOR_*
 **Type:** `Enum ("hexKey" | "aws" | "node")`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--validator.type hexKey
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 export HYP_BASE_VALIDATOR_TYPE="hexKey"
@@ -1013,6 +1203,12 @@ export HYP_BASE_VALIDATOR_TYPE="hexKey"
 **Type:** `string`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--validator.key 8166f546bab6da521a8369cab06c5d2b9e46670292d85c875ee9ec20e84ffb61
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 export HYP_BASE_VALIDATOR_KEY="8166f546bab6da521a8369cab06c5d2b9e46670292d85c875ee9ec20e84ffb61"
@@ -1044,6 +1240,12 @@ export HYP_BASE_VALIDATOR_KEY="8166f546bab6da521a8369cab06c5d2b9e46670292d85c875
 **Type:** `string`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--validator.id "alias/validator-signer-ethereum"
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 export HYP_BASE_VALIDATOR_ID="alias/validator-signer-ethereum"
@@ -1075,6 +1277,12 @@ export HYP_BASE_VALIDATOR_ID="alias/validator-signer-ethereum"
 **Type:** `string`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--validator.region us-east-1
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 export HYP_BASE_VALIDATOR_REGION="us-east-1"
@@ -1104,6 +1312,12 @@ export HYP_BASE_VALIDATOR_REGION="us-east-1"
 **Type:** `Enum ("localStorage" | "s3")`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--checkpointSyncer.type localStorage
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_CHECKPOINTSYNCER_TYPE="localStorage"
@@ -1134,6 +1348,12 @@ export HYP_BASE_CHECKPOINTSYNCER_TYPE="localStorage"
 **Type:** `string`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--checkpointSyncer.path "/tmp/syncer"
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_CHECKPOINTSYNCER_PATH="/tmp/syncer"
@@ -1165,6 +1385,12 @@ export HYP_BASE_CHECKPOINTSYNCER_PATH="/tmp/syncer"
 **Type:** `string`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--checkpointSyncer.bucket signatures-ethereum
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_CHECKPOINTSYNCER_BUCKET="signatures-ethereum"
@@ -1196,6 +1422,12 @@ export HYP_BASE_CHECKPOINTSYNCER_BUCKET="signatures-ethereum"
 **Type:** `string`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--checkpointSyncer.region us-east-1
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_CHECKPOINTSYNCER_REGION="us-east-1"
@@ -1225,6 +1457,12 @@ export HYP_BASE_CHECKPOINTSYNCER_REGION="us-east-1"
 **Type:** `Numeric (string | number)`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--interval 30
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_INTERVAL=30
@@ -1253,6 +1491,16 @@ For the scraper, this is the connection string to a postgresql database.
 **Type:** `string`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+# Relayer
+--db "/tmp/hyp/relayer/ethereum-cache"
+
+# Scraper
+--db "postgresql://postgres:password@localhost:5432/dbname"
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 # Relayer
@@ -1293,6 +1541,12 @@ For the scraper:
 **Type:** `string` (comma separated list)
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--destinationChainNames "arbitrum,ethereum,bsc"
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_DESTINATIONCHAINNAMES="arbitrum,ethereum,bsc"
@@ -1364,6 +1618,12 @@ type GasFraction = string;
 ```
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--gasPaymentEnforcement '[{"type": "none", "matchingList": [{"senderAddress": "0xa441b15fe9a3cf56661190a0b93b9dec7d041272"}]}, {"type": "minimum", "payment": 100000}]'
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_GASPAYMENTENFORCEMENT='[{"type": "none", "matchingList": [{"senderAddress": "0xa441b15fe9a3cf56661190a0b93b9dec7d041272"}]}, {"type": "minimum", "payment": 100000}]'
@@ -1417,6 +1677,12 @@ type Wildcard = "*";
 </code></pre>
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--whitelist '[{"senderAddress": "0xa441b15fe9a3cf56661190a0b93b9dec7d041272", "originDomain": [1, 42]}, {"destinationDomain": 1}]'
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_WHITELIST='[{"senderAddress": "0xa441b15fe9a3cf56661190a0b93b9dec7d041272", "originDomain": [1, 42]}, {"destinationDomain": 1}]'
@@ -1471,6 +1737,12 @@ type Wildcard = "*";
 ```
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--blacklist '[{"senderAddress": "0xa441b15fe9a3cf56661190a0b93b9dec7d041272", "originDomain": [1, 42]}, {"destinationDomain": 1}]'
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_BLACKLIST='[{"senderAddress": "0xa441b15fe9a3cf56661190a0b93b9dec7d041272", "originDomain": [1, 42]}, {"destinationDomain": 1}]'
@@ -1497,6 +1769,12 @@ export HYP_BASE_BLACKLIST='[{"senderAddress": "0xa441b15fe9a3cf56661190a0b93b9de
 **Type:** `Numeric (string | number)`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--transactionGasLimit 250000000
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_TRANSACTIONGASLIMIT="250000000"
@@ -1523,6 +1801,12 @@ export HYP_BASE_TRANSACTIONGASLIMIT="250000000"
 **Type:** `string` (comma separated list of domain ids)
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--skipTransactionGasLimitFor "43114,10,42220"
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_SKIPTRANSACTIONGASLIMITFOR="43114,10,42220"
@@ -1549,6 +1833,12 @@ export HYP_BASE_SKIPTRANSACTIONGASLIMITFOR="43114,10,42220"
 **Type:** `boolean`
 
 {% tabs %}
+{% tab title="As Arg" %}
+```bash
+--allowLocalCheckpointSyncers false
+```
+{% endtab %}
+
 {% tab title="As Env" %}
 ```sh
 export HYP_BASE_ALLOWLOCALCHECKPOINTSYNCERS=false
@@ -1575,6 +1865,10 @@ export HYP_BASE_ALLOWLOCALCHECKPOINTSYNCERS=false
 **Type:** `string`
 
 {% tabs %}
+{% tab title="As Arg" %}
+Not supported as an argument
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 export AWS_ACCESS_KEY_ID="AKIAIOSFODNN7EXAMPLE"
@@ -1597,6 +1891,10 @@ Not supported in configuration files
 **Type:** `string`
 
 {% tabs %}
+{% tab title="As Arg" %}
+Not supported as an argument
+{% endtab %}
+
 {% tab title="As Env" %}
 ```bash
 export AWS_SECRET_ACCESS_KEY="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"

@@ -1,6 +1,6 @@
 # Monitoring and alerting
 
-Validators expose metrics on the port number specified in the environment variable `HYP_BASE_METRICS`. Port `9090` is the default, though any valid port can be chosen.
+Validators expose metrics on the port number specified by the argument `--metrics`. Port `9090` is the default, though any valid port can be chosen.
 
 {% hint style="info" %}
 If running as a Docker image, make sure to port-forward the metrics endpoint port. For, instance, to forward port 9090 on the local port 80, add the following flag to your `docker run` command: `-p 9090:80`

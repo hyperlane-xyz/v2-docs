@@ -37,7 +37,7 @@ This is an example docker-compose file for running a validator that should get y
 ```yaml
 services:
   ethereum-validator:
-    image: gcr.io/abacus-labs-dev/hyperlane-agent:44361db-20230209-031017
+    image: gcr.io/abacus-labs-dev/hyperlane-agent:497db63-20230614-174455
     command: ./validator
     ports:
       - "9090:9090/tcp"
