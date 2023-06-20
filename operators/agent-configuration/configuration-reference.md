@@ -1094,11 +1094,11 @@ HYP_BASE_TRACING_LEVEL="info"
 
 ## originchainname
 
-**Description:** Name of the chain a validator should validate for and name of the chain a relayer should relayer messages from.
+**Description:** Name of the chain a validator should validate for and name of the chain a relayer should relayer messages from. **Deprecated for Relayers, use** [#relaychains](configuration-reference.md#relaychains "mention") **instead.**
 
-**Optional:** No
+**Optional:** No - Validators; Yes - Relayers
 
-**Agents:** Validator & Relayer
+**Agents:** Validator & Relayer&#x20;
 
 **Type:** `string`
 
@@ -1530,11 +1530,43 @@ For the scraper:
 {% endtab %}
 {% endtabs %}
 
-## destinationchainnames
+## relaychains
 
-**Description:** List of chains to deliver messages to.
+**Description:** List of chains to deliver messages between.
 
 **Optional:** No
+
+**Agents:** Relayer
+
+**Type:** `string` (comma separated list)
+
+{% tabs %}
+{% tab title="As Arg" %}
+```bash
+--relayChains "arbitrum,ethereum,bsc"
+```
+{% endtab %}
+
+{% tab title="As Env" %}
+```sh
+export HYP_BASE_RELAYCHAINS="arbitrum,ethereum,bsc"
+```
+{% endtab %}
+
+{% tab title="As Config" %}
+```json
+{
+    "relaychains": "arbitrum,ethereum,bsc"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+## destinationchainnames
+
+**Description:** List of chains to deliver messages to. **Deprecated, use** [#relaychains](configuration-reference.md#relaychains "mention") **instead.**
+
+**Optional:** Yes
 
 **Agents:** Relayer
 

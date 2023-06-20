@@ -44,7 +44,7 @@ flowchart TB
     click IGP https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/igps/InterchainGasPaymaster.sol
 ```
 
-Hyperlane relayers are run on a per-origin-chain basis, delivering outbound messages from that chain to one or more remote chains. Relayers have no special permissions in Hyperlane. If relayer keys are compromised, only the tokens held by those keys are at risk.
+Hyperlane relayers are configured to relayer messages between one or more origin chains and destination chains. Relayers have no special permissions in Hyperlane. If relayer keys are compromised, only the tokens held by those keys are at risk.
 
 Running a relayer requires the following:
 

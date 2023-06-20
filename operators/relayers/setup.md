@@ -6,7 +6,7 @@ description: Required setup instructions
 
 ## Configuration
 
-The relayer is responsible for delivering messages to their destination chains. This involves being able to submit transactions to many destination chains, and therefore requires access to a key for signing transactions. There are two supported key types: hexadecimal private keys (for in-memory signing), and AWS KMS based keys (best practice for production environments).
+The relayer is responsible for watching for new messages on the origin chain(s) and delivering them to their destination chains. This involves being able to submit transactions to many destination chains, and therefore requires access to a key for signing transactions. There are two supported key types: hexadecimal private keys (for in-memory signing), and AWS KMS based keys (best practice for production environments).
 
 ### Hexadecimal keys
 
@@ -30,13 +30,12 @@ Also take a look at the [agent-configuration](../agent-configuration/ "mention")
 
 Your relayer takes as configuration the following:
 
-| Argument                               | Description                                                                                                                                                                                                                                         |
-| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--chains.[chain_name].connection.url` | <p>An RPC url for <code>chain_name</code>.<br><em>Example:</em> <code>--chains.ethereum.connection.url='http://localhost:8545'</code><br><br><strong>Relayers must set multiple connection URLs, one for each chain it interacts with.</strong></p> |
-| `--originChainName`                    | <p>The name of the origin chain to relay messages from.</p><p><em>Example:</em> <code>ethereum</code></p>                                                                                                                                           |
-| `--destinationChainNames`              | <p>Comma separated names of the destination chains to relay messages to.<br><em>Example:</em> <code>polygon,avalanche</code></p>                                                                                                                    |
-| `--whitelist`                          | <p>An optional whitelist. The relayer will only relay messages that match this whitelist.<br><br>See <a data-mention href="message-filtering.md">message-filtering.md</a>for more info.</p>                                                         |
-| `--blacklist`                          | <p>An optional blacklist. The relayer will not relay messages that match this blacklist.<br><br>See <a data-mention href="message-filtering.md">message-filtering.md</a>for more info.</p>                                                          |
+| Argument                               | Description                                                                                                                                                                                                                                                                                                                                            |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--relayChains`                        | <p>Comma separated names of the origin and destination chains to relay messages between.<br><em>Example:</em> <code>ethereum,polygon,avalanche</code><br><br>(See also the <a data-mention href="../agent-configuration/configuration-reference.md">configuration-reference.md</a> for how to specify origin and destination chains indipendently)</p> |
+| `--chains.[chain_name].connection.url` | <p>An RPC url for <code>chain_name</code>.<br><em>Example:</em> <code>--chains.ethereum.connection.url='http://localhost:8545'</code><br><br><strong>Relayers must set multiple connection URLs, one for each chain it interacts with.</strong></p>                                                                                                    |
+| `--whitelist`                          | <p>An optional whitelist. The relayer will only relay messages that match this whitelist.<br><br>See <a data-mention href="message-filtering.md">message-filtering.md</a>for more info.</p>                                                                                                                                                            |
+| `--blacklist`                          | <p>An optional blacklist. The relayer will not relay messages that match this blacklist.<br><br>See <a data-mention href="message-filtering.md">message-filtering.md</a>for more info.</p>                                                                                                                                                             |
 
 | Environment variable | Description                                                                                                                                                                                                                                                                                                                                                                               |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -87,7 +86,7 @@ To download the docker image, run:
 
 {% code overflow="wrap" %}
 ```bash
-docker pull gcr.io/abacus-labs-dev/hyperlane-agent:497db63-20230614-174455
+docker pull gcr.io/abacus-labs-dev/hyperlane-agent:1fff74e-20230614-005705
 ```
 {% endcode %}
 {% endtab %}
@@ -118,8 +117,7 @@ Refer to the [#installation](setup.md#installation "mention") instructions to ac
 # These are example values to roughly illustrate
 # what a .env file should look like
 
-HYP_BASE_ORIGINCHAINNAME=ethereum
-HYP_BASE_DESTINATIONCHAINNAMES=polygon,avalanche
+HYP_BASE_RELAYCHAINS=ethereum,polygon,avalanche
 HYP_BASE_DB="/hyperlane_db"
 # ...
 # ...
@@ -181,4 +179,4 @@ env $(cat validator.env | grep -v "#" | xargs) ./target/release/relayer
 {% endtab %}
 {% endtabs %}
 
-Relayers needs to index all historic messages for the origin chain. This information is stored in a local database on disk (set with `db` in the config). This means running a relayer for the first time may take some extra time to catch up with the current state.
+Relayers needs to index all historic messages for the origin chain(s). This information is stored in a local database on disk (set with `db` in the config). This means running a relayer for the first time may take some extra time to catch up with the current state.

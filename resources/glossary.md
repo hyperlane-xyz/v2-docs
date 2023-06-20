@@ -146,7 +146,7 @@ The [multisig-ism.md](../protocol/sovereign-consensus/multisig-ism.md "mention")
 
 <summary>Relayer</summary>
 
-[relayer.md](../protocol/agents/relayer.md "mention") are Hyperlane [#agent](glossary.md#agent "mention")s responsible for delivering messages to their destination chains.\
+[relayer.md](../protocol/agents/relayer.md "mention") are Hyperlane [#agent](glossary.md#agent "mention")s responsible for delivering messages from their origin chain(s) to their destination chain(s).\
 \
 Relayers are untrusted, and anyone can operate a relayer.
 

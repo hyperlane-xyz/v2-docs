@@ -15,8 +15,8 @@ At a high level, deploying Hyperlane requires the following actions:
 1. [#1.-setup-keys](deploy-hyperlane.md#1.-setup-keys "mention") that you will use to deploy contracts and run validators and relayers
 2. [#2.-deploy-contracts](deploy-hyperlane.md#2.-deploy-contracts "mention") to the local chain and to every remote chain with which the local chain will be able to send and receive messages.
 3. [#3.-run-validators](deploy-hyperlane.md#3.-run-validators "mention") on your local chain, to provide the signatures needed for the [sovereign-consensus](../protocol/sovereign-consensus/ "mention") you deployed in step (2)
-4. [#4.-run-relayer](deploy-hyperlane.md#4.-run-relayer "mention") to send and receive messages between the local chain and all remote chains set up in the [#2.-deploy-contracts](deploy-hyperlane.md#2.-deploy-contracts "mention") step.
-5. [#5.-send-test-messages](deploy-hyperlane.md#5.-send-test-messages "mention") to confirm that your relayers able to deliver messages from and to each pair of chains
+4. [#4.-run-relayer](deploy-hyperlane.md#4.-run-relayer "mention") to send and receive messages between chains set up in the [#2.-deploy-contracts](deploy-hyperlane.md#2.-deploy-contracts "mention") step.
+5. [#5.-send-test-messages](deploy-hyperlane.md#5.-send-test-messages "mention") to confirm that your relayer is able to deliver messages from and to each pair of chains
 
 ## 1. Setup keys
 
@@ -194,13 +194,9 @@ Make sure these validators match the addresses you provided when in your `Multis
 
 ## 4. Run relayer
 
-Follow the [relayers](../operators/relayers/ "mention") guide to run a relayer for the local chain and each of the remote chains. These relayers will deliver interchain messages sent between the local and remote chains.
+Follow the [relayers](../operators/relayers/ "mention") guide to run a relayer that will deliver interchain messages sent between the local and remote chains.
 
-{% hint style="warning" %}
-You must run multiple relayers, one for the local chain and one for each of the remote chains
-{% endhint %}
-
-Remember to set the `HYP_RELAYER_DESTINATIONCHAINNAMES` appropriately.
+Remember to set `--relayChains` or `HYP_BASE_RELAYCHAINS` appropriately.
 
 Include the agent config from the [#2.-deploy-contracts](deploy-hyperlane.md#2.-deploy-contracts "mention") step in `CONFIG_FILES`. If you're using Docker, you will need to mount the file into the container.
 
