@@ -1480,19 +1480,22 @@ export HYP_BASE_INTERVAL=30
 
 ## db
 
-**Description:** For the relayer, this is a local filesystem path to where the indexing cache should be stored. **This must be unique per relayer!** Multiple relayers must have different paths. The path is relative to the current working directory if it does not start with a system defined root path such as `/` on unix.
+**Description:** This is a local filesystem path to where the agents store relevant data on disk. **This must be unique per agent!** Multiple agents must have different paths. The path is relative to the current working directory if it does not start with a system defined root path such as `/` on unix. When using docker images, ensure that this folder gets persisted across runs.
 
 For the scraper, this is the connection string to a postgresql database.
 
-**Optional:** For relayers it is optional and defaults to a path in the current working directory which includes the `originchainname`. For the scraper it is required.
+**Optional:** For validators and relayers it is optional and defaults to a path in the current working directory which includes the `originchainname`. For the scraper it is required.
 
-**Agents:** Relayer & Scraper
+**Agents:** All
 
 **Type:** `string`
 
 {% tabs %}
 {% tab title="As Arg" %}
 ```bash
+# Validator
+--db "/tmp/hyp/validator/ethereum-cache"
+
 # Relayer
 --db "/tmp/hyp/relayer/ethereum-cache"
 
@@ -1503,6 +1506,9 @@ For the scraper, this is the connection string to a postgresql database.
 
 {% tab title="As Env" %}
 ```sh
+# Validator
+export HYP_BASE_DB="/tmp/hyp/validator/ethereum-cache"
+
 # Relayer
 export HYP_BASE_DB="/tmp/hyp/relayer/ethereum-cache"
 
@@ -1512,6 +1518,14 @@ export HYP_BASE_DB="postgresql://postgres:password@localhost:5432/dbname"
 {% endtab %}
 
 {% tab title="As Config" %}
+For the validator:
+
+```json
+{
+    "db": "/tmp/hyp/validator/ethereum-cache"
+}
+```
+
 For the relayer:
 
 ```json
