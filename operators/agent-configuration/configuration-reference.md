@@ -90,8 +90,8 @@ HYP_BASE_CHAINS_ETHEREUM_*
 
 {% tab title="As Env" %}
 ```bash
-HYP_BASE_${CHAIN_NAME}_NAME="$DOMAIN_NAME"
-HYP_BASE_ETHEREUM_NAME="ethereum"
+HYP_BASE_CHAINS_${CHAIN_NAME}_NAME="$DOMAIN_NAME"
+HYP_BASE_CHAINS_ETHEREUM_NAME="ethereum"
 ```
 {% endtab %}
 
@@ -133,8 +133,8 @@ HYP_BASE_ETHEREUM_NAME="ethereum"
 
 {% tab title="As Env" %}
 ```sh
-export HYP_BASE_${CHAIN_NAME}_DOMAIN="$DOMAIN_NAME"
-export HYP_BASE_ETHEREUM_DOMAIN=1
+export HYP_BASE_CHAINS_${CHAIN_NAME}_DOMAIN="$DOMAIN_NAME"
+export HYP_BASE_CHAINS_ETHEREUM_DOMAIN=1
 ```
 {% endtab %}
 
@@ -174,8 +174,8 @@ export HYP_BASE_ETHEREUM_DOMAIN=1
 
 {% tab title="As Env" %}
 ```sh
-export HYP_BASE_${CHAIN_NAME}_FINALITY_BLOCKS="$FINALITY_BLOCKS"
-export HYP_BASE_ETHEREUM_FINALITY_BLOCKS=20
+export HYP_BASE_CHAINS_${CHAIN_NAME}_FINALITY_BLOCKS="$FINALITY_BLOCKS"
+export HYP_BASE_CHAINS_ETHEREUM_FINALITY_BLOCKS=20
 ```
 {% endtab %}
 
@@ -349,7 +349,7 @@ export HYP_BASE_CHAINS_ETHEREUM_ADDRESSES_VALIDATOR_ANNOUNCE="0x9bBdef63594D5FFc
 
 {% tab title="As Env" %}
 ```bash
-HYP_BASE_${CHAIN_NAME}_SIGNER_*
+HYP_BASE_CHAINS_${CHAIN_NAME}_SIGNER_*
 ```
 {% endtab %}
 
@@ -389,7 +389,7 @@ HYP_BASE_${CHAIN_NAME}_SIGNER_*
 
 {% tab title="As Env" %}
 ```bash
-export HYP_BASE_${CHAIN_NAME}_SIGNER_TYPE="hexKey"
+export HYP_BASE_CHAINS_${CHAIN_NAME}_SIGNER_TYPE="hexKey"
 ```
 {% endtab %}
 
@@ -434,7 +434,7 @@ export HYP_BASE_${CHAIN_NAME}_SIGNER_TYPE="hexKey"
 
 {% tab title="As Env" %}
 ```bash
-export HYP_BASE_${CHAIN_NAME}_SIGNER_KEY="8166f546bab6da521a8369cab06c5d2b9e46670292d85c875ee9ec20e84ffb61"
+export HYP_BASE_CHAINS_${CHAIN_NAME}_SIGNER_KEY="8166f546bab6da521a8369cab06c5d2b9e46670292d85c875ee9ec20e84ffb61"
 ```
 {% endtab %}
 
@@ -479,7 +479,7 @@ export HYP_BASE_${CHAIN_NAME}_SIGNER_KEY="8166f546bab6da521a8369cab06c5d2b9e4667
 
 {% tab title="As Env" %}
 ```bash
-export HYP_BASE_${CHAIN_NAME}_SIGNER_ID="alias/validator-signer-ethereum"
+export HYP_BASE_CHAINS_${CHAIN_NAME}_SIGNER_ID="alias/validator-signer-ethereum"
 ```
 {% endtab %}
 
@@ -520,7 +520,7 @@ export HYP_BASE_${CHAIN_NAME}_SIGNER_ID="alias/validator-signer-ethereum"
 
 {% tab title="As Env" %}
 ```bash
-export HYP_BASE_${CHAIN_NAME}_SIGNER_REGION="us-east-1"
+export HYP_BASE_CHAINS_${CHAIN_NAME}_SIGNER_REGION="us-east-1"
 ```
 {% endtab %}
 
@@ -560,8 +560,8 @@ export HYP_BASE_${CHAIN_NAME}_SIGNER_REGION="us-east-1"
 
 {% tab title="As Env" %}
 ```sh
-export HYP_BASE_${CHAIN_NAME}_PROTOCOL="ethereum"
-export HYP_BASE_ARBITRUM_PROTOCOL="ethereum"
+export HYP_BASE_CHAINS_${CHAIN_NAME}_PROTOCOL="ethereum"
+export HYP_BASE_CHAINS_ARBITRUM_PROTOCOL="ethereum"
 ```
 {% endtab %}
 
@@ -607,8 +607,8 @@ export HYP_BASE_ARBITRUM_PROTOCOL="ethereum"
 
 {% tab title="As Env" %}
 ```sh
-export HYP_BASE_${CHAIN_NAME}_CONNECTION_TYPE="url"
-export HYP_BASE_ETHEREUM_CONNECTION_TYPE="httpFallback"
+export HYP_BASE_CHAINS_${CHAIN_NAME}_CONNECTION_TYPE="url"
+export HYP_BASE_CHAINS_ETHEREUM_CONNECTION_TYPE="httpFallback"
 ```
 {% endtab %}
 
@@ -656,8 +656,8 @@ export HYP_BASE_ETHEREUM_CONNECTION_TYPE="httpFallback"
 
 {% tab title="As Env" %}
 ```sh
-export HYP_BASE_${CHAIN_NAME}_URL="$CONNECTION_URL"
-export HYP_BASE_ETHEREUM_URL="http://127.0.0.1:8545"
+export HYP_BASE_CHAINS_${CHAIN_NAME}_URL="$CONNECTION_URL"
+export HYP_BASE_CHAINS_ETHEREUM_URL="http://127.0.0.1:8545"
 ```
 {% endtab %}
 
@@ -704,8 +704,8 @@ export HYP_BASE_ETHEREUM_URL="http://127.0.0.1:8545"
 
 {% tab title="As Env" %}
 ```sh
-export HYP_BASE_${CHAIN_NAME}_URLS="$CONNECTION_URLS"
-export HYP_BASE_ETHEREUM_URLS="http://127.0.0.1:8545,http://127.0.0.1:8546,http://127.0.0.1:8547"
+export HYP_BASE_CHAINS_${CHAIN_NAME}_URLS="$CONNECTION_URLS"
+export HYP_BASE_CHAINS_ETHEREUM_URLS="http://127.0.0.1:8545,http://127.0.0.1:8546,http://127.0.0.1:8547"
 ```
 {% endtab %}
 
@@ -745,8 +745,8 @@ export HYP_BASE_ETHEREUM_URLS="http://127.0.0.1:8545,http://127.0.0.1:8546,http:
 
 {% tab title="As Env" %}
 ```sh
-export HYP_BASE_${CHAIN_NAME}_INDEX_FROM=0
-export HYP_BASE_ETHEREUM_INDEX_FROM=16271503
+export HYP_BASE_CHAINS_${CHAIN_NAME}_INDEX_FROM=0
+export HYP_BASE_CHAINS_ETHEREUM_INDEX_FROM=16271503
 ```
 {% endtab %}
 
@@ -790,8 +790,8 @@ export HYP_BASE_ETHEREUM_INDEX_FROM=16271503
 
 {% tab title="As Env" %}
 ```sh
-export HYP_BASE_${CHAIN_NAME}_INDEX_CHUNK=1999
-export HYP_BASE_ETHEREUM_INDEX_CHUNK=1999
+export HYP_BASE_CHAINS_${CHAIN_NAME}_INDEX_CHUNK=1999
+export HYP_BASE_CHAINS_ETHEREUM_INDEX_CHUNK=1999
 ```
 {% endtab %}
 
