@@ -36,7 +36,7 @@
   * [Configuring PI Chains](build-with-hyperlane/explorer/configuring-pi-chains.md)
   * [REST API](build-with-hyperlane/explorer/rest-api.md)
   * [GraphQL API](build-with-hyperlane/explorer/graphql-api.md)
-* [Troubleshooting](build-with-hyperlane/troubleshooting.md)
+* [Troubleshooting/Developer FAQ](build-with-hyperlane/troubleshooting.md)
 * [Example apps](build-with-hyperlane/examples.md)
 
 ## APIs and SDKs

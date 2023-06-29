@@ -7,17 +7,19 @@ description: Pay for message delivery on the origin chain
 &#x20;Hyperlane provides an on-chain API on the origin chain that allows message senders to pay one or more [relayers](../operators/relayers/ "mention") to deliver a message on the destination chain.
 
 {% hint style="info" %}
-Learn more about [interchain-gas-payments.md](../protocol/interchain-gas-payments.md "mention")
+Learn more about [interchain-gas-payments.md](../protocol/interchain-gas-payments.md "mention") protocol [here](../protocol/interchain-gas-payments.md)
 {% endhint %}
 
 ## Interface
 
 The interchain gas paymaster (IGP) interface exposes two functions that can be used together to quote and pay for interchain gas.
 
-1. `quoteGasPayment` is a view function that allows users to get a quote for an amount of gas on the destination chain, denominated in the origin chain's native token
+1. `quoteGasPayment` is a view function that allows users to get a quote for an amount of gas on the destination chain, denominated in the origin chain's native token.
 2. `payGasFor` is a payable function that pays a relayer to deliver a specific message to the destination chain
 
 These functions do not necessarily need to be called in the same transaction as the message dispatch.
+
+You can find deployed IGPs on [addresses.md](../resources/addresses.md "mention")
 
 ```solidity
 // SPDX-License-Identifier: MIT OR Apache-2.0
@@ -73,7 +75,7 @@ interface IInterchainGasPaymaster {
 
 ## Refunds
 
-Under some circumstances, users may call `payGasFor` with `msg.value` greater than what would be returned by `quoteGasPayment`. In this case, the IGP contract should refund the difference to the `_refundAddress` provided.
+Users may call `payGasFor` with `msg.value` greater than what would be returned by `quoteGasPayment`. In this case, the IGP contract should refund the difference to the `_refundAddress` provided. This allows users to not need to call `quoteGasPayment` explicitly.
 
 For example, if you are paying for 1M gas and pass 0.1 ETH to the IGP contract, but `quoteGasPayment` quotes a payment of 0.08 ETH, the `_refundAddress` will be refunded `0.02` ETH.
 
