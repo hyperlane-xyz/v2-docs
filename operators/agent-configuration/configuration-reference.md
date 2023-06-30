@@ -581,7 +581,7 @@ export HYP_BASE_CHAINS_ARBITRUM_PROTOCOL="ethereum"
 {% endtab %}
 {% endtabs %}
 
-## chains.\<chain\_name>.connectionType <a href="#chains.chain_name.connectiontype" id="chains.chain_name.connectiontype"></a>
+## chains.\<chain\_name>.connection.type <a href="#chains.chain_name.connectiontype" id="chains.chain_name.connectiontype"></a>
 
 **Description:** How to communicate with the provider
 
@@ -601,7 +601,7 @@ export HYP_BASE_CHAINS_ARBITRUM_PROTOCOL="ethereum"
 {% tabs %}
 {% tab title="As Arg" %}
 ```bash
---chains.${CHAIN_NAME}.connectionType http
+--chains.${CHAIN_NAME}.connection.type http
 ```
 {% endtab %}
 
@@ -617,10 +617,14 @@ export HYP_BASE_CHAINS_ETHEREUM_CONNECTION_TYPE="httpFallback"
 {
     "chains": {
         "<chain_name>": {
-            "connectionType": "http"
+            "connection": {
+                "type": "http"
+            }
         },
         "ethereum": {
-            "connectionType": "httpFallback"
+            "connection": {
+                "type": "httpFallback"
+            }
         }
     }
 }
@@ -628,7 +632,7 @@ export HYP_BASE_CHAINS_ETHEREUM_CONNECTION_TYPE="httpFallback"
 {% endtab %}
 {% endtabs %}
 
-## chains.\<chain\_name>.url <a href="#chains.chain_name.url" id="chains.chain_name.url"></a>
+## chains.\<chain\_name>.connection.url <a href="#chains.chain_name.url" id="chains.chain_name.url"></a>
 
 **Description:** Url to connect to
 
@@ -636,7 +640,7 @@ export HYP_BASE_CHAINS_ETHEREUM_CONNECTION_TYPE="httpFallback"
 
 ```
 ((chains.<chain_name>.protocol = "ethereum" | undefined)
-    AND (chains.<chain_name>.connectionType = "http" | "ws" | undefined)
+    AND (chains.<chain_name>.connection.type = "http" | "ws" | undefined)
 ) OR chains.<chain_name>.protocol = "fuel"
 ```
 
@@ -649,15 +653,15 @@ export HYP_BASE_CHAINS_ETHEREUM_CONNECTION_TYPE="httpFallback"
 {% tabs %}
 {% tab title="As Arg" %}
 ```bash
---chains.${CHAIN_NAME}.url "$CONNECTION_URL"
---chains.ethereum.url "http://127.0.0.1:8545"
+--chains.${CHAIN_NAME}.connection.url "$CONNECTION_URL"
+--chains.ethereum.connection.url "http://127.0.0.1:8545"
 ```
 {% endtab %}
 
 {% tab title="As Env" %}
 ```sh
-export HYP_BASE_CHAINS_${CHAIN_NAME}_URL="$CONNECTION_URL"
-export HYP_BASE_CHAINS_ETHEREUM_URL="http://127.0.0.1:8545"
+export HYP_BASE_CHAINS_${CHAIN_NAME}_CONNECTION_URL="$CONNECTION_URL"
+export HYP_BASE_CHAINS_ETHEREUM_CONNECTION_URL="http://127.0.0.1:8545"
 ```
 {% endtab %}
 
@@ -666,10 +670,14 @@ export HYP_BASE_CHAINS_ETHEREUM_URL="http://127.0.0.1:8545"
 {
     "chains": {
         "<chain_name>": {
-            "url": "<connection_url>"
+            "connection": {
+                "url": "<connection_url>"
+            }
         },
         "ethereum": {
-            "url": "http://127.0.0.1:8545"
+            "connection": {
+                "url": "http://127.0.0.1:8545"
+            }
         }
     }
 }
@@ -677,7 +685,7 @@ export HYP_BASE_CHAINS_ETHEREUM_URL="http://127.0.0.1:8545"
 {% endtab %}
 {% endtabs %}
 
-## chains.\<chain\_name>.urls <a href="#chains.chain_name.urls" id="chains.chain_name.urls"></a>
+## chains.\<chain\_name>.connection.urls <a href="#chains.chain_name.urls" id="chains.chain_name.urls"></a>
 
 **Description:**
 
@@ -685,7 +693,7 @@ export HYP_BASE_CHAINS_ETHEREUM_URL="http://127.0.0.1:8545"
 
 ```
 (chains.<chain_name>.protocol = "ethereum" | undefined)
-    AND (chains.<chain_name>.connectionType = "httpFallback" | "httpQuorum")
+    AND (chains.<chain_name>.connection.type = "httpFallback" | "httpQuorum")
 ```
 
 **Optional:** No (iff requirements are met)
@@ -697,15 +705,15 @@ export HYP_BASE_CHAINS_ETHEREUM_URL="http://127.0.0.1:8545"
 {% tabs %}
 {% tab title="As Arg" %}
 ```bash
---chains.${CHAIN_NAME}.urls "$CONNECTION_URLS"
---chains.ethereum.urls "http://127.0.0.1:8545,http://127.0.0.1:8546,http://127.0.0.1:8547"
+--chains.${CHAIN_NAME}.connection.urls "$CONNECTION_URLS"
+--chains.ethereum.connection.urls "http://127.0.0.1:8545,http://127.0.0.1:8546,http://127.0.0.1:8547"
 ```
 {% endtab %}
 
 {% tab title="As Env" %}
 ```sh
-export HYP_BASE_CHAINS_${CHAIN_NAME}_URLS="$CONNECTION_URLS"
-export HYP_BASE_CHAINS_ETHEREUM_URLS="http://127.0.0.1:8545,http://127.0.0.1:8546,http://127.0.0.1:8547"
+export HYP_BASE_CHAINS_${CHAIN_NAME}_CONNECTION_URLS="$CONNECTION_URLS"
+export HYP_BASE_CHAINS_ETHEREUM_CONNECTION_URLS="http://127.0.0.1:8545,http://127.0.0.1:8546,http://127.0.0.1:8547"
 ```
 {% endtab %}
 
@@ -714,10 +722,14 @@ export HYP_BASE_CHAINS_ETHEREUM_URLS="http://127.0.0.1:8545,http://127.0.0.1:854
 {
     "chains": {
         "<chain_name>": {
-            "urls": "<connection_urls>"
+            "connection": {
+                "urls": "<connection_urls>"
+            }
         },
         "ethereum": {
-            "urls": "http://127.0.0.1:8545,http://127.0.0.1:8546,http://127.0.0.1:8547"
+            "connection": {
+                "urls": "http://127.0.0.1:8545,http://127.0.0.1:8546,http://127.0.0.1:8547"
+            }
         }
     }
 }
