@@ -4,7 +4,7 @@ description: The permissionless interoperability layer built for modular blockch
 
 # Hyperlane introduction
 
-Hyperlane is the first universal and permissionless interoperability framework built for the modular blockchain stack.&#x20;
+Hyperlane is the first universal and permissionless interoperability layer built for the modular blockchain stack.&#x20;
 
 Anyone can [deploy-hyperlane.md](deploy/deploy-hyperlane.md "mention") to any blockchain environment, whether it is a layer 1, rollup, or app-chain, allowing that chain to communicate seamlessly with any other chain on which Hyperlane has been deployed.
 
