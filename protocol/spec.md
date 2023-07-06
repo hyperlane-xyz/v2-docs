@@ -1,11 +1,11 @@
-# Hyperlane Protocol Specification
+# Hyperlane Integration Checklist
 
-A Hyperlane imnlementation for a new chain is composed of the following components:
+A Hyperlane integration for a new chain is composed of the following components:
 
-1. [contracts](#contracts): expose the interface for application developers to send and receive messages with
-2. [agents](#agents): operate the protocol by adding security and relaying messages
-3. [services](#services): optional components that can be used to enhance the developer experience
-4. [apps](#apps): optional demo applications that use the protocol
+- [ ] [contracts](#contracts): expose the interface for application developers to send and receive messages with
+- [ ] [agents](#agents): operate the protocol by adding security and relaying messages
+- [ ] [apps](#apps): applications that use the protocol
+<!-- - [ ] [services](#services): optional components that can be used to enhance the developer experience -->
 
 # Contracts
 
@@ -272,25 +272,49 @@ function payForGas(
 
 # Agents
 
-Below describes the offchain agent spec for the Hyperlane protocol.
+Below describes the agent spec for a new chain implementation. The rust implementations hope to support all chains, but the spec is intended to be chain agnostic. See the [cosmos stubs PR](https://github.com/hyperlane-xyz/hyperlane-monorepo/pull/2466/) for an example of what rust traits need to be implemented in the agents to achieve the below functionality.
 
 ## Relayer
 
 Relayers index messages dispatched from the [Mailbox](#mailbox) on the origin chain and process messages on the destination chain by building metadata for the message [recipient](#message-recipient)'s [ISM](#interchain-security-module).
 
-<!-- integration checklist -->
+They must be able to 
+- [ ] get dispatched [message](#message)s from the origin mailbox
+- [ ] get merkle [root](#root)s corresponding to each dispatched message ID
+- [ ] sign transactions that [process](#process) messages on the destination mailbox
 
 ## Validator
 
-<!-- ## Watcher -->
+Validators index messages dispatched from the [Mailbox](#mailbox) on the origin chain and produce attestations that a given message ID was dispatched. Attestations of a specific message ID being dispatched from a specific Mailbox are formatted as follows:
 
-<!-- ## Scraper -->
+```solidity
+struct Checkpoint {
+    uint32  origin,
+    bytes32 originMailbox,
+    bytes32 root,
+    uint32  index,
+    bytes32 messageId
+}
+```
 
-# Services
+They must be able to
+- [ ] get dispatched [message](#message)s from the origin mailbox
+- [ ] get merkle [root](#root)s corresponding to each dispatched message ID
+- [ ] sign [checkpoints](#mailbox-attestations) for each dispatched message ID
+
+<!-- 
+
+## Watcher
+
+watch for fraud 
+
+-->
+
+<!-- # Services
 
 ## Scraper
 
-## Explorer
+## Explorer -->
 
 # Apps
 
