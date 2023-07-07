@@ -4,9 +4,9 @@ description: Create an interchain route for your token
 
 # Deploy a Warp Route
 
-A Warp Route is simply a [router.md](../../sdks/building-applications/writing-contracts/router.md "mention") application, requiring a `HypERC20` token contract to be deployed on each chain you wish to support.
+A Warp Route is a type of [router.md](../../sdks/building-applications/writing-contracts/router.md "mention") application, requiring a `HypERC20` or `HypERC721` token contract to be deployed on each chain you wish to support.
 
-The [hyperlane-deploy](https://github.com/hyperlane-xyz/hyperlane-deploy) repo includes a script that allows you to configure and deploy a Warp Route for your desired token.
+The [hyperlane-deploy](https://github.com/hyperlane-xyz/hyperlane-deploy) repo includes a script to configure and deploy a Warp Route for your desired token.
 
 ## 1. Setup
 
@@ -24,15 +24,17 @@ $ yarn build
 You will need to create a `WarpRouteConfig` in [`hyperlane-deploy/config/warp_tokens.ts`](https://github.com/hyperlane-xyz/hyperlane-deploy/blob/main/config/warp\_tokens.ts) to define your Warp Route. This will include information such as:
 
 * Which token, on which chain, is this Warp Route being created for?
-* Optional Hyperlane connection details including contract addresses for [messaging.md](../../protocol/messaging.md "mention"), [#interchaingaspaymasters](../../protocol/interchain-gas-payments.md#interchaingaspaymasters "mention"), and [sovereign-consensus](../../protocol/sovereign-consensus/ "mention").
+* _Optional:_ Hyperlane connection details including contract addresses for [messaging.md](../../protocol/messaging.md "mention"), [#interchaingaspaymasters](../../protocol/interchain-gas-payments.md#interchaingaspaymasters "mention"), and [sovereign-consensus](../../protocol/sovereign-consensus/ "mention").
+* _Optional:_ The token standard - fungible tokens using ERC20 or NFTs using ERC721. Defaults to ERC20.
 
 #### Base
 
 Your `WarpRouteConfig` must have exactly one `base` entry. Here you will configure details about the token for which you are creating a warp route.
 
 * **chainName**: Set this equal to the chain on which your token exists
-* **type**: Set this to `TokenType.collateral` to create a warp route for an ERC20 token, or `TokenType.native` to create a warp route for a native token (e.g. ether)
-* **address:** If using `TokenType.collateral`, the address of the ERC20 token for which to create a route
+* **type**: Set this to `TokenType.collateral` to create a warp route for an ERC20/ERC721 token, or `TokenType.native` to create a warp route for a native token (e.g. ether)
+* **address:** If using `TokenType.collateral`, the address of the ERC20/ERC721 contract for which to create a route
+* **isNft:** If using `TokenType.collateral` for an ERC721 contract, set to `true`.
 
 #### Synthetics
 
