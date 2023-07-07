@@ -365,51 +365,42 @@
     "@ethersproject/properties" "^5.7.0"
     "@ethersproject/strings" "^5.7.0"
 
-"@hyperlane-xyz/core@1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/core/-/core-1.3.1.tgz#d67636b6557835a1f91cf738b0ff9b997f70fbaa"
-  integrity sha512-/ahpo2ZsDHz4sPE6kbeWmbyMyAQcq+lje4bbYLwW4WNhw4K4HVYmyI2h2M9KDVKLg82OzpEnvclxQARqIShSgA==
+"@hyperlane-xyz/core@1.3.8", "@hyperlane-xyz/core@^1.3.8":
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/core/-/core-1.3.8.tgz#5237606b36c0dab3112f8cceaf985572671da10f"
+  integrity sha512-Ztvmu0GOQJfAipRetMxIg2glb513uYH5wE4eGlQNRFjh4MJXpKonzjfsqZu7eI4mF9ZLAxTfF2jxvFsX6yIodg==
   dependencies:
-    "@hyperlane-xyz/utils" "1.3.1"
+    "@hyperlane-xyz/utils" "1.3.8"
     "@openzeppelin/contracts" "^4.8.0"
     "@openzeppelin/contracts-upgradeable" "^4.8.0"
 
-"@hyperlane-xyz/core@1.3.2", "@hyperlane-xyz/core@^1.3.2":
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/core/-/core-1.3.2.tgz#167e3b4f2dff18917d8283a371c63829e6613e78"
-  integrity sha512-gATJkN2RBm7qn8rcNWwvlDr2bQZ3fipon07nwO7FAbaXEGDteVXGtOIzMyCqU8v9Jo+uZKZYf83+mPWmANOhdg==
+"@hyperlane-xyz/helloworld@^1.3.8":
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/helloworld/-/helloworld-1.3.8.tgz#cbd262a7247059a1f950247f7d47b64f0894aa1b"
+  integrity sha512-ofKoY2rxBMww1cwresw5C7vDfZg5oBRMqGDsQA86rHwZwF2DP8yhhl9D/PY6YQLNIMKb5IKY3if9ApgLen1dWQ==
   dependencies:
-    "@hyperlane-xyz/utils" "1.3.2"
-    "@openzeppelin/contracts" "^4.8.0"
-    "@openzeppelin/contracts-upgradeable" "^4.8.0"
-
-"@hyperlane-xyz/helloworld@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/helloworld/-/helloworld-1.3.1.tgz#e452c316bd4cb2d1d8d3d1976a90c289a3f84b4e"
-  integrity sha512-H8jTZu9UuGtTzd82PfrvBDjMY7A5fMFAAUf2afK7GgCj0K8T83gtMYxB6EgSsz5JG08YQW0UCb5SYj9+lccJDQ==
-  dependencies:
-    "@hyperlane-xyz/sdk" "1.3.1"
+    "@hyperlane-xyz/sdk" "1.3.8"
     "@openzeppelin/contracts-upgradeable" "^4.8.0"
     ethers "^5.7.2"
 
-"@hyperlane-xyz/hyperlane-token@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/hyperlane-token/-/hyperlane-token-1.3.1.tgz#317f729fd29b7eac6b73cd94887e94efafd6fab6"
-  integrity sha512-T5GiSne1bTx4ZEo4rbcOLInBJmNdyEIX/RSroDGG/LO3t4RMoW2VDtv3wEatf1yPITiYli99P/uuFPzcr2s8fw==
+"@hyperlane-xyz/hyperlane-token@^1.3.8":
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/hyperlane-token/-/hyperlane-token-1.3.8.tgz#47fe1d8b08486bc9a37a64982cbbd78c042806d3"
+  integrity sha512-NxYCnkuGNyl7IaAdY+1Uiif1AZz2KaIlHY2hFxGtNBJP3BGCF8TQWvy0VNDGlgDjK+TLxWjJ9yyKWPxvMaWGAQ==
   dependencies:
-    "@hyperlane-xyz/core" "1.3.1"
-    "@hyperlane-xyz/sdk" "1.3.1"
-    "@hyperlane-xyz/utils" "1.3.1"
+    "@hyperlane-xyz/core" "1.3.8"
+    "@hyperlane-xyz/sdk" "1.3.8"
+    "@hyperlane-xyz/utils" "1.3.8"
     "@openzeppelin/contracts-upgradeable" "^4.8.0"
     ethers "^5.7.2"
 
-"@hyperlane-xyz/sdk@1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/sdk/-/sdk-1.3.1.tgz#bdfb2664b4b3a509598c412734837910ecceec88"
-  integrity sha512-aXLEk0IACWUWd/e9uiDvcJRxSGC5O8hZ4gl0Zz5nGkq7GeDMJuZN1D//KBSh4224nFsYLmzTfh5Agk6OtVkJAA==
+"@hyperlane-xyz/sdk@1.3.8", "@hyperlane-xyz/sdk@^1.3.8":
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/sdk/-/sdk-1.3.8.tgz#990a6bc1499db15f26a53a87a2f4fa86e01863a2"
+  integrity sha512-RHJyYy5XSR7HNwJGfgcfxh6qbdEjE8FwCdY8ZKxTFhdROyuNQQWMGKNUTrq+e0ga6S6qsWEYdxEeQyb8X2lp4Q==
   dependencies:
-    "@hyperlane-xyz/core" "1.3.1"
-    "@hyperlane-xyz/utils" "1.3.1"
+    "@hyperlane-xyz/core" "1.3.8"
+    "@hyperlane-xyz/utils" "1.3.8"
     "@types/coingecko-api" "^1.0.10"
     "@types/debug" "^4.1.7"
     "@wagmi/chains" "^0.2.6"
@@ -419,33 +410,10 @@
     ethers "^5.7.2"
     zod "^3.21.2"
 
-"@hyperlane-xyz/sdk@^1.3.2":
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/sdk/-/sdk-1.3.2.tgz#e3512de1ca73adb56331693f7222f11e112f0fa8"
-  integrity sha512-Ro2SSxQqbjBL90qbbcf+HRUcxS8dgn4aQMlWS7K6GyDMGbNHwakOFoLFnLqS2eYZLPSuBtCMdoGceJ+MCd9fTg==
-  dependencies:
-    "@hyperlane-xyz/core" "1.3.2"
-    "@hyperlane-xyz/utils" "1.3.2"
-    "@types/coingecko-api" "^1.0.10"
-    "@types/debug" "^4.1.7"
-    "@wagmi/chains" "^0.2.6"
-    coingecko-api "^1.0.10"
-    cross-fetch "^3.1.5"
-    debug "^4.3.4"
-    ethers "^5.7.2"
-    zod "^3.21.2"
-
-"@hyperlane-xyz/utils@1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/utils/-/utils-1.3.1.tgz#acb8fbe9030fe0504720fc3d8410b6f9b65715af"
-  integrity sha512-I+TxITmatsYNQ9pSkxvcd5rtvKb04wRU96H5pwQKzb8nDjzEV/lheJN0W1zumyV101KVV3cNyTlb+nBog0Fu9w==
-  dependencies:
-    ethers "^5.7.2"
-
-"@hyperlane-xyz/utils@1.3.2":
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/utils/-/utils-1.3.2.tgz#ff1dd51f4748476ebb44b49566d101d655aea418"
-  integrity sha512-EmVa6egF9nlBG2MVIYnyWrK18aPe67cipU01BVnKN5DXSofB/13LA7WKaXnVH4eXwrbeefTWOqsDNBe7aDfKTw==
+"@hyperlane-xyz/utils@1.3.8":
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/utils/-/utils-1.3.8.tgz#163042751d3fb188a872cb8677a28b00b31fe816"
+  integrity sha512-LBKRZOH2Pjjs8PorhOR2rPZz6ypwtRmT9vAsP6Si8FOZ9abLQeB2AeLYhqMEmljXlyyYZGlCF8QBEnnU6c7kUQ==
   dependencies:
     ethers "^5.7.2"
 
