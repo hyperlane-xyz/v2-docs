@@ -24,6 +24,10 @@ More often than not, it is not actually an error. What happens is that the [mess
 
 <figure><img src="../.gitbook/assets/Screen Shot 2023-03-18 at 11.58.57 AM.png" alt=""><figcaption><p>This is also fine!</p></figcaption></figure>
 
+#### I deployed Hyperlane to a new chain but my message/tokens are not getting delivered
+
+The relayer logs are your best friend. If you are running a validator on your local machine and writing checkpoints to localStorage, make sure that the relayer has access to them. If you use docker, ensure that you mount the path through. Also, enable the `--allowLocalCheckpointSyncers` option on the relayer.
+
 ### Message cancellation
 
 Once a message is enqueued on a Mailbox merkle tree, from the system perspective, messages are perpetually processable. If messages are supposed to be of limited validity or cancelable, it is up to the application to encode those semantics into their message bytes.&#x20;
