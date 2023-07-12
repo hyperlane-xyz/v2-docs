@@ -365,42 +365,42 @@
     "@ethersproject/properties" "^5.7.0"
     "@ethersproject/strings" "^5.7.0"
 
-"@hyperlane-xyz/core@1.3.8", "@hyperlane-xyz/core@^1.3.8":
-  version "1.3.8"
-  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/core/-/core-1.3.8.tgz#5237606b36c0dab3112f8cceaf985572671da10f"
-  integrity sha512-Ztvmu0GOQJfAipRetMxIg2glb513uYH5wE4eGlQNRFjh4MJXpKonzjfsqZu7eI4mF9ZLAxTfF2jxvFsX6yIodg==
+"@hyperlane-xyz/core@1.4.2", "@hyperlane-xyz/core@^1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/core/-/core-1.4.2.tgz#d19067eb8bb518422ad897f62f36b7390220bbb4"
+  integrity sha512-nr3+n77jaagZ0Wa/jROMnuSHoZWUDzkCnOMCP+5U1UblUdGZAZID9dZUaf/DapjGcgFdiDVhttbQ9Y1jPxXqoA==
   dependencies:
-    "@hyperlane-xyz/utils" "1.3.8"
+    "@hyperlane-xyz/utils" "1.4.2"
     "@openzeppelin/contracts" "^4.8.0"
     "@openzeppelin/contracts-upgradeable" "^4.8.0"
 
-"@hyperlane-xyz/helloworld@^1.3.8":
-  version "1.3.8"
-  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/helloworld/-/helloworld-1.3.8.tgz#cbd262a7247059a1f950247f7d47b64f0894aa1b"
-  integrity sha512-ofKoY2rxBMww1cwresw5C7vDfZg5oBRMqGDsQA86rHwZwF2DP8yhhl9D/PY6YQLNIMKb5IKY3if9ApgLen1dWQ==
+"@hyperlane-xyz/helloworld@^1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/helloworld/-/helloworld-1.4.2.tgz#ce10111324b248769d7be97d1bba331a63f84bf9"
+  integrity sha512-VMlpJ1qYhLtzp+WkGY0CE6sYVE3Eluy3iO87veIcwg3XOwrf/U1K7CyiR23o3OONfWvakvi6HvnQ9/QPHx4qJw==
   dependencies:
-    "@hyperlane-xyz/sdk" "1.3.8"
+    "@hyperlane-xyz/sdk" "1.4.2"
     "@openzeppelin/contracts-upgradeable" "^4.8.0"
     ethers "^5.7.2"
 
-"@hyperlane-xyz/hyperlane-token@^1.3.8":
-  version "1.3.8"
-  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/hyperlane-token/-/hyperlane-token-1.3.8.tgz#47fe1d8b08486bc9a37a64982cbbd78c042806d3"
-  integrity sha512-NxYCnkuGNyl7IaAdY+1Uiif1AZz2KaIlHY2hFxGtNBJP3BGCF8TQWvy0VNDGlgDjK+TLxWjJ9yyKWPxvMaWGAQ==
+"@hyperlane-xyz/hyperlane-token@^1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/hyperlane-token/-/hyperlane-token-1.4.2.tgz#68347b7f6316233001f60e04c069f98274916737"
+  integrity sha512-2NF1GPV9Gt17OqzjVwa7MiUr+WO1Llr5vYt5OzMiHZVDeDbFNcAxYxVG52uj+ScRM9+J9oLojpg7LEmxt8t33Q==
   dependencies:
-    "@hyperlane-xyz/core" "1.3.8"
-    "@hyperlane-xyz/sdk" "1.3.8"
-    "@hyperlane-xyz/utils" "1.3.8"
+    "@hyperlane-xyz/core" "1.4.2"
+    "@hyperlane-xyz/sdk" "1.4.2"
+    "@hyperlane-xyz/utils" "1.4.2"
     "@openzeppelin/contracts-upgradeable" "^4.8.0"
     ethers "^5.7.2"
 
-"@hyperlane-xyz/sdk@1.3.8", "@hyperlane-xyz/sdk@^1.3.8":
-  version "1.3.8"
-  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/sdk/-/sdk-1.3.8.tgz#990a6bc1499db15f26a53a87a2f4fa86e01863a2"
-  integrity sha512-RHJyYy5XSR7HNwJGfgcfxh6qbdEjE8FwCdY8ZKxTFhdROyuNQQWMGKNUTrq+e0ga6S6qsWEYdxEeQyb8X2lp4Q==
+"@hyperlane-xyz/sdk@1.4.2", "@hyperlane-xyz/sdk@^1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/sdk/-/sdk-1.4.2.tgz#724b00e59a49b833299f3051dca7cec7312a78b2"
+  integrity sha512-TNNGFVPPGPI2HNL16rw1oQ0aBOWxv5OBV616lZinA2C+E4fWTecLvl0+5Ps48FkFFDzNFY/OssGiujgN7Y72Ug==
   dependencies:
-    "@hyperlane-xyz/core" "1.3.8"
-    "@hyperlane-xyz/utils" "1.3.8"
+    "@hyperlane-xyz/core" "1.4.2"
+    "@hyperlane-xyz/utils" "1.4.2"
     "@types/coingecko-api" "^1.0.10"
     "@types/debug" "^4.1.7"
     "@wagmi/chains" "^0.2.6"
@@ -410,10 +410,10 @@
     ethers "^5.7.2"
     zod "^3.21.2"
 
-"@hyperlane-xyz/utils@1.3.8":
-  version "1.3.8"
-  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/utils/-/utils-1.3.8.tgz#163042751d3fb188a872cb8677a28b00b31fe816"
-  integrity sha512-LBKRZOH2Pjjs8PorhOR2rPZz6ypwtRmT9vAsP6Si8FOZ9abLQeB2AeLYhqMEmljXlyyYZGlCF8QBEnnU6c7kUQ==
+"@hyperlane-xyz/utils@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@hyperlane-xyz/utils/-/utils-1.4.2.tgz#f8f8eac77e027e70fbbf96923a3c696514dd1ead"
+  integrity sha512-9D9XGYJ/evgxF+mkGBTo0pzkp0CN5+yW874BfS1CR0NIlo6OTC/BwYjPVv7ZTZPoaPlP+LJhGM0M5hGJNZ1tMw==
   dependencies:
     ethers "^5.7.2"
 
