@@ -80,6 +80,7 @@
   * [Relayers](protocol/agents/relayer.md)
   * [Watchtowers](protocol/agents/processor.md)
 * [Warp Routes](https://docs.hyperlane.xyz/docs/deploy/deploy-warp-route)
+* [Implementation Guide](protocol/spec.md)
 
 ## Operators
 
