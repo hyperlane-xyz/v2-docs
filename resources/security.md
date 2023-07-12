@@ -1,3 +1,4 @@
+duplicate definition - NotCrossChainCall()
 ---
 description: Mailbox default security settings
 ---
