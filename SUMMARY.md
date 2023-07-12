@@ -62,6 +62,8 @@
     * [Interchain testing](sdks/building-applications/nodejs-sdk/testing-contracts.md)
     * [Quoting gas payments](sdks/building-applications/nodejs-sdk/gas.md)
     * [App Abstraction](sdks/building-applications/nodejs-sdk/contract-interaction.md)
+* [Hooks API](apis-and-sdks/validators/README.md)
+  * [Contract addresses](apis-and-sdks/validators/addresses.md)
 
 ## Protocol
 
@@ -73,6 +75,7 @@
   * [Aggregation ISM](protocol/sovereign-consensus/aggregation-ism.md)
   * [Optimistic ISM](protocol/sovereign-consensus/optimistic-ism.md)
   * [Wormhole ISM](protocol/sovereign-consensus/wormhole-ism.md)
+  * [Hook ISM](protocol/sovereign-consensus/hook-ism.md)
 * [Interchain gas payments](protocol/interchain-gas-payments.md)
 * [Staking and slashing](protocol/proof-of-stake.md)
 * [Agents](protocol/agents/README.md)
