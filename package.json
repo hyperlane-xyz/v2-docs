@@ -3,10 +3,10 @@
     "description": "Private docs package",
     "version": "0.0.0",
     "devDependencies": {
-        "@hyperlane-xyz/core": "^1.3.2",
-        "@hyperlane-xyz/sdk": "^1.3.2",
-        "@hyperlane-xyz/hyperlane-token": "^1.3.1",
-        "@hyperlane-xyz/helloworld": "^1.3.1",
+        "@hyperlane-xyz/core": "^1.3.8-beta0",
+        "@hyperlane-xyz/sdk": "^1.3.8-beta0",
+        "@hyperlane-xyz/token": "^1.3.8-beta0",
+        "@hyperlane-xyz/helloworld": "^1.3.8-beta0",
         "@types/node": "^18.11.18",
         "glob": "^8.1.0",
         "markdown-table": "^3.0.3",
@@ -19,7 +19,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "sync": "node sync-addresses.js > ./resources/addresses.md && node sync-partials.js && node sync-config.js > resources/security.md",
+        "sync": "./sync.sh",
         "lint": "remark . --quiet --frail"
     },
     "remarkConfig": {
