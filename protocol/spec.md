@@ -1,10 +1,13 @@
-# Hyperlane Integration Checklist
+# Hyperlane Implementation Guide
 
-A Hyperlane integration for a new chain is composed of the following components:
+A Hyperlane implementation for a new chain architecture is comprised of the following:
 
-- [ ] [contracts](#contracts): expose the interface for application developers to send and receive messages with
-- [ ] [agents](#agents): operate the protocol by adding security and relaying messages
-- [ ] [apps](#apps): applications that use the protocol
+- [ ] [Contracts](#contracts): expose the interface for application developers to send and receive messages with
+
+- [ ] [Agents](#agents): operate the protocol by adding security and relaying messages
+
+- [ ] [Apps](#apps): applications that use the protocol and demonstrate its capabilities
+
 <!-- - [ ] [services](#services): optional components that can be used to enhance the developer experience -->
 
 # Contracts
@@ -19,6 +22,9 @@ Below describes the onchain contract spec for the Hyperlane protocol. It uses so
 ## Message
 
 The message is the core data structure used by the Hyperlane protocol. It is a packed data structure that contains all the information needed to route a message from one domain to another.
+
+- [Solidity](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/libs/Message.sol)
+- [Sway](https://github.com/hyperlane-xyz/fuel-contracts/blob/main/contracts/hyperlane-message/src/main.sw)
 
 ```solidity
 struct Message {
@@ -48,6 +54,9 @@ struct Message {
 
 A contract that wants to receive a message must expose the following handler.
 
+- [Solidity](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/interfaces/IMessageRecipient.sol)
+- [Sway](https://github.com/hyperlane-xyz/fuel-contracts/blob/main/contracts/hyperlane-interfaces/src/lib.sw#L109)
+
 ```solidity
 function handle(
     uint32  origin,
@@ -73,6 +82,9 @@ function interchainSecurityModule() returns (address);
 ## Mailbox
 
 The mailbox is the entrypoint for developers to send and receive messages from.
+
+- [Solidity](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/Mailbox.sol)
+- [Sway](https://github.com/hyperlane-xyz/fuel-contracts/blob/main/contracts/hyperlane-mailbox/src/main.sw)
 
 ### dispatch
 
@@ -139,6 +151,9 @@ function root() public view returns (bytes32);
 
 Interchain security modules are used to verify messages before they are processed. 
 
+- [Solidity](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/interfaces/IInterchainSecurityModule.sol)
+- [Sway](https://github.com/hyperlane-xyz/fuel-contracts/blob/main/contracts/hyperlane-interfaces/src/lib.sw#L93)
+
 ### moduleType
 
 Returns an enum that represents the type of security model
@@ -191,9 +206,15 @@ function verify(
 
 Implements a security module that checks if the metadata provided to verify satisfies a quorum of signatures from a set of configured validators.
 
+- [Solidity](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/isms/multisig/AbstractMultisigIsm.sol)
+- [Sway](https://github.com/hyperlane-xyz/fuel-contracts/blob/main/contracts/multisig-ism/src/main.sw)
+
 ### Metadata
 
 To be used with the MESSAGE_ID_MULTISIG module type implementation in the relayer, the metadata must be formatted as follows:
+
+- [Solidity](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/libs/isms/MessageIdMultisigIsmMetadata.sol)
+- [Sway](https://github.com/hyperlane-xyz/fuel-contracts/blob/main/contracts/multisig-ism-metadata/src/main.sw)
 
 ```solidity
 struct MultisigMetadata {
@@ -243,6 +264,9 @@ function validatorsAndThreshold(
 
 The gas paymaster is used to pay for the gas required in message processing on the destination chain. This is not strictly required if relayers are willing to subsidize message processing.
 
+- [Solidity](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/igps/InterchainGasPaymaster.sol)
+- [Sway](https://github.com/hyperlane-xyz/fuel-contracts/blob/main/contracts/igp/interchain-gas-paymaster/src/main.sw)
+
 ### payForGas
 
 Deposits msg.value as a payment for the relaying of a message
@@ -269,46 +293,93 @@ function payForGas(
 |`gasAmount`|`uint256`|The amount of destination gas to pay for.|
 |`refundAddress`|`address`|The local address to refund any overpayment to.|
 
+### Gas Payment
+
+Emitted when a payment is made for a message's gas costs.
+
+```solidity
+event GasPayment(
+    bytes32 messageId,
+    uint256 gasAmount,
+    uint256 payment
+);
+```
 
 # Agents
 
-Below describes the agent spec for a new chain implementation. The rust implementations hope to support all chains, but the spec is intended to be chain agnostic. See the [cosmos stubs PR](https://github.com/hyperlane-xyz/hyperlane-monorepo/pull/2466/) for an example of what rust traits need to be implemented in the agents to achieve the below functionality.
+Below describes the agent spec for a new chain implementation. The rust implementations hope to support all chains, but the spec is intended to be chain agnostic. 
 
-## Relayer
+<!-- See the [cosmos stubs PR](https://github.com/hyperlane-xyz/hyperlane-monorepo/pull/2466/) for an example of what rust traits need to be implemented in the agents to achieve the below functionality. -->
 
-Relayers index messages dispatched from the [Mailbox](#mailbox) on the origin chain and process messages on the destination chain by building metadata for the message [recipient](#message-recipient)'s [ISM](#interchain-security-module).
+### Message Indexing
 
-They must be able to 
-- [ ] get dispatched [message](#message)s from the origin mailbox
-- [ ] get merkle [root](#root)s corresponding to each dispatched message ID
-- [ ] sign transactions that [process](#process) messages on the destination mailbox
+All agents must index [messages](#message) from the origin [mailbox](#mailbox). In the solidity mailbox, we [emit an event for each message](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/Mailbox.sol#L125-L129) dispatched. Other chains may have different ways of surfacing this information, but the agent must be able to get message content reliably and with consistent ordering -- see the [message indexer](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/hyperlane-core/src/traits/indexer.rs) trait.
+
+- [ethereum](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/chains/hyperlane-ethereum/src/mailbox.rs)
 
 ## Validator
 
-Validators index messages dispatched from the [Mailbox](#mailbox) on the origin chain and produce attestations that a given message ID was dispatched. Attestations of a specific message ID being dispatched from a specific Mailbox are formatted as follows:
+In addition to indexing messages dispatched from the mailbox, validators produce attestations for the messages they observe to be used on the destination chain for security.
 
-```solidity
-struct Checkpoint {
-    uint32  origin,
-    bytes32 originMailbox,
-    bytes32 root,
-    uint32  index,
-    bytes32 messageId
+### Checkpoint
+
+Validators produce attestations called [checkpoints](#checkpoint) from the [mailbox](#mailbox) which commit via merkle [root](#root) to all dispatched message IDs. 
+
+```rust
+pub struct Checkpoint {
+    /// The mailbox address
+    pub mailbox_address: H256,
+    /// The mailbox chain
+    pub mailbox_domain: u32,
+    /// The checkpointed root
+    pub root: H256,
+    /// The index of the checkpoint
+    pub index: u32,
 }
 ```
 
-They must be able to
-- [ ] get dispatched [message](#message)s from the origin mailbox
-- [ ] get merkle [root](#root)s corresponding to each dispatched message ID
-- [ ] sign [checkpoints](#mailbox-attestations) for each dispatched message ID
+Validators use the latest checkpoint method on the [mailbox trait](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/16146f0f03d0b0be67583cf16b22a3c50abdd977/rust/hyperlane-core/src/traits/mailbox.rs) to get the latest checkpoint from the mailbox and submit signatures using the [checkpoint syncer trait](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/16146f0f03d0b0be67583cf16b22a3c50abdd977/rust/hyperlane-base/src/traits/checkpoint_syncer.rs).
 
-<!-- 
+### Checkpoint with Message ID
 
-## Watcher
+Validators use indexed messages to join the [checkpoint](#checkpoint) with the corresponding message ID emitted from the mailbox. 
 
-watch for fraud 
+```rust
+pub struct CheckpointWithMessageId {
+    /// existing Hyperlane checkpoint struct
+    #[deref]
+    pub checkpoint: Checkpoint,
+    /// hash of message emitted from mailbox checkpoint.index
+    pub message_id: H256,
+}
+```
 
--->
+They also publish these augmented checkpoints on their syncer.
+
+## Relayer
+
+In addition to indexing messages dispatched from the mailbox, relayers process messages on the destination chain. This requires building metadata that satisfies the message [recipient](#message-recipient)'s [ISM](#interchain-security-module) verification requirements, and signing transactions that [process](#process) the message on the destination [mailbox](#mailbox).
+
+### Metadata Builders
+
+Each [module type](#moduletype) implies a different metadata format for [message verification](#verify) to succeed. Relayers need each module trait (eg [multisig](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/hyperlane-core/src/traits/multisig_ism.rs)) to be implemented.
+
+### Message Processor
+
+The relayer will attempt to process messages on the destination mailbox (see [message processor](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/agents/relayer/src/msg/processor.rs#L24)). If 
+- the message recipient ISM returns an unknown module type
+- module type is known but metadata fails to verify
+- metadata verifies but dry running (gas estimation) message processing fails
+
+then the message will be kicked to an exponential backoff retry queue. The relayer relies on implementations of the [mailbox](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/hyperlane-core/src/traits/mailbox.rs) and [ism](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/hyperlane-core/src/traits/interchain_security_module.rs) traits for these checks.
+
+### Gas Payment Enforcement
+
+Relayers may also require gas payment for a specific message ID on the origin chain before processing the message on the destination chain. To do this, they must have an [IGP](#interchain-gas-paymaster) deployed with their address set as beneficiary and index [gas payment](#gas-payment) events. See [gas payment enforcement trait](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/agents/relayer/src/msg/gas_payment/mod.rs).
+
+<!-- ## Watcher -->
+
+<!-- watch for fraud  -->
 
 <!-- # Services
 
