@@ -62,8 +62,8 @@
     * [Interchain testing](sdks/building-applications/nodejs-sdk/testing-contracts.md)
     * [Quoting gas payments](sdks/building-applications/nodejs-sdk/gas.md)
     * [App Abstraction](sdks/building-applications/nodejs-sdk/contract-interaction.md)
-* [Hooks API](apis-and-sdks/validators/README.md)
-  * [Contract addresses](apis-and-sdks/validators/addresses.md)
+* [Hooks API](apis-and-sdks/hooks/README.md)
+  * [Contract addresses](apis-and-sdks/hooks/addresses.md)
 
 ## Protocol
 

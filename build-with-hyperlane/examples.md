@@ -74,4 +74,3 @@ An interchain game where you collect and battle monsters. The monster NFTs are d
 
 A simple and easy tool to test cross-chain protocols. A set of helper contracts, one per cross-chain protocol, that is designed to help you simulate as closely as possible how the cross-chain transaction would go. Check out [Pigeon](https://github.com/exp-table/pigeon#protocols-support)
 
-***
