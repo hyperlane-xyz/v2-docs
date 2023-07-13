@@ -4,9 +4,9 @@
 
 A Hyperlane implementation for a new chain architecture is comprised of the following:
 
-1. [Contracts](spec.md#contracts): expose the interface for application developers to send and receive messages with
-2. [Agents](spec.md#agents): operate the protocol by adding security and relaying messages
-3. [Apps](spec.md#apps): applications that use the protocol and demonstrate its capabilities
+1. [Contracts](spec.md#1.-contracts): expose the interface for application developers to send and receive messages with
+2. [Agents](spec.md#2.-agents): operate the protocol by adding security and relaying messages
+3. [Applications](spec.md#3.-applications): applications that use the protocol and demonstrate its capabilities
 
 ## 1. Contracts
 
