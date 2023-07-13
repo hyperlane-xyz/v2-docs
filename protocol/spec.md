@@ -48,7 +48,7 @@ The mailbox is the entrypoint for developers to send and receive messages from.
 * [Solidity Implementation](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/Mailbox.sol)
 * [Sway Implementation](https://github.com/hyperlane-xyz/fuel-contracts/blob/main/contracts/hyperlane-mailbox/src/main.sw)
 
-#### [dispatch](spec.md#dispatch)
+#### dispatch
 
 Dispatches a message to the destination domain and recipient.
 
@@ -66,7 +66,7 @@ function dispatch(
 );
 ```
 
-#### [process](spec.md#process)
+#### process
 
 Attempts to deliver `message` to its recipient. Verifies `message` via the recipient's ISM using the provided `metadata`.
 
@@ -168,7 +168,38 @@ function verify(
 );
 ```
 
-### [Multisig ISM](spec.md#multisig-ism)
+### Validator Announce
+
+Validators announce their signature storage location so that relayers can fetch and verify their signatures.
+
+### announce
+
+Announces a validator signature storage location
+
+
+```solidity
+function announce(
+    address validator,      // The address of the validator
+    string storageLocation, // Information encoding the location of signed checkpoints
+    bytes signature         // The signed validator announcement
+) external returns (bool);
+```
+
+### getAnnouncedStorageLocations
+
+Returns a list of all announced storage locations
+
+
+```solidity
+function getAnnouncedStorageLocations(
+    address[] _validators   // The list of validators to get storage locations for
+) external view returns (
+    string[][]              // A list of registered storage metadata
+);
+```
+
+
+### Multisig ISM
 
 Implements a security module that checks if the metadata provided to verify satisfies a quorum of signatures from a set of configured validators.
 
