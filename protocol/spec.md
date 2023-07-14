@@ -8,6 +8,8 @@ A Hyperlane implementation for a new chain architecture is comprised of the foll
 2. [Agents](spec.md#2.-agents): operate the protocol by adding security and relaying messages
 3. [Applications](spec.md#3.-applications): applications that use the protocol and demonstrate its capabilities
 
+Before getting started here, it is recommended to review the [protocol documentation.](broken-reference)
+
 ## 1. Contracts
 
 Below describes the onchain contract spec for the Hyperlane protocol. It uses solidity types for familiarity but everything should be generalizable to other languages.
@@ -176,7 +178,6 @@ Validators announce their signature storage location so that relayers can fetch 
 
 Announces a validator signature storage location
 
-
 ```solidity
 function announce(
     address validator,      // The address of the validator
@@ -189,7 +190,6 @@ function announce(
 
 Returns a list of all announced storage locations
 
-
 ```solidity
 function getAnnouncedStorageLocations(
     address[] _validators   // The list of validators to get storage locations for
@@ -197,7 +197,6 @@ function getAnnouncedStorageLocations(
     string[][]              // A list of registered storage metadata
 );
 ```
-
 
 ### Multisig ISM
 
@@ -360,8 +359,7 @@ then the message will be kicked to an exponential backoff retry queue. The relay
 Relayers may also require gas payment for a specific message ID on the origin chain before processing the message on the destination chain. To do this, they must have an [IGP](spec.md#interchain-gas-paymaster) deployed with their address set as beneficiary and index [gas payment](spec.md#gas-payment) events. See [gas payment enforcement trait](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/rust/agents/relayer/src/msg/gas\_payment/mod.rs). We recommend to start with no gas payment enforcement policy and then gradually support more restrictive ones.
 
 {% hint style="info" %}
-Once you implemented the MVP of the relayer, you can create an end-to-end test that \
-
+Once you implemented the MVP of the relayer, you can create an end-to-end test that \\
 
 1. Spins up local origin and destination chain
 2. Deploys your contracts onto both
