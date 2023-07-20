@@ -1,46 +1,54 @@
 ---
-description: Smarter interchain security models
+description: Aggregate security from multiple ISMs
 ---
 
-# Routing ISM
+# Aggregation ISM
 
-Developers can use a `RoutingISM` to delegate message verification to a different ISM. This allows developers to change security models based on message content or application context.&#x20;
+Developers can use an `AggregationISM` to combine security from multiple ISMs. Simply put, an `AggregationISM` requires that `m` of `n` ISMs verify a particular interchain message.
 
 ## Interface
 
-`RoutingISMs` must implement the `IRoutingIsm` interface.
+`AggregationISMs` must implement the `IAggregationIsm` interface.
 
 ```solidity
-interface IRoutingIsm is IInterchainSecurityModule {
+// SPDX-License-Identifier: MIT OR Apache-2.0
+pragma solidity >=0.6.11;
+
+import {IInterchainSecurityModule} from "../IInterchainSecurityModule.sol";
+
+interface IAggregationIsm is IInterchainSecurityModule {
     /**
-     * @notice Returns the ISM responsible for verifying _message
+     * @notice Returns the set of modules responsible for verifying _message
+     * and the number of modules that must verify
      * @dev Can change based on the content of _message
-     * @param _message Formatted Hyperlane message (see Message.sol).
-     * @return module The ISM to use to verify _message
+     * @param _message Hyperlane formatted interchain message
+     * @return modules The array of ISM addresses
+     * @return threshold The number of modules needed to verify
      */
-    function route(bytes calldata _message)
+    function modulesAndThreshold(bytes calldata _message)
         external
         view
-        returns (IInterchainSecurityModule);
+        returns (address[] memory modules, uint8 threshold);
 }
+
 ```
 
 ## Configure
 
-The hyperlane-monorepo contains a `RoutingISM` implementation, `DomainRoutingIsm`, that application developers can deploy off-the-shelf, specifying their desired configuration.
+The hyperlane-monorepo contains an `AggregationISM` implementation that application developers can deploy off-the-shelf, specifying their desired configuration.
 
-This ISM simply switches security models depending on the origin chain of the message. A simple use case for this is to use different [multisig-ism.md](multisig-ism.md "mention") validator sets for each chain.
+Developers can configure, for each origin chain, a set of `n` ISMs, and the number of ISMs needed to verify a message.
 
-Eventually, you could imagine a `DomainRoutingIsm` routing to different light-client-based ISMs, depending on the type of consensus protocol used on the origin chain.
+`AggregationISMs` can aggregate the security of any ISMs. For example, users can deploy a [multisig-ism.md](multisig-ism.md "mention") with their own validator set, and deploy an `AggregationISM` that aggregates that ISM with the Hyperlane default ISM.
 
-The [hyperlane-deploy repo](https://github.com/hyperlane-xyz/hyperlane-deploy) contains the tooling and instructions needed to deploy and configure a `DomainRoutingIsm`.
+The [hyperlane-deploy repo](https://github.com/hyperlane-xyz/hyperlane-deploy) contains the tooling and instructions needed to deploy and configure an `AggregationISM`.
 
 ## Customize
 
-The hyperlane-monorepo contains an abstract `RoutingISM` implementation that application developers can fork.
+The hyperlane-monorepo contains an abstract `AggregationISM` implementation that application developers can fork.
 
-Developers simply need to implement the `route()` function.
+Developers simply need to implement the `modulesAndThreshold()` function.
 
-By creating a custom implementation, application developers can tailor the security provided by a `RoutingISM` to the needs of their application.
+By creating a custom implementation, application developers can tailor the security provided by a `AggregationISM` to the needs of their application.
 
-For example, a custom implementation could change security models based on the contents of the message or the state of the application receiving the message.
+For example, a custom implementation could require that low value messages be verified by a [multisig-ism.md](multisig-ism.md "mention"), and require that high value messages _also_ be verified by a [wormhole-ism.md](wormhole-ism.md "mention").

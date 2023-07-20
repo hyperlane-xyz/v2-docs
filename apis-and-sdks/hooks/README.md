@@ -8,7 +8,7 @@ description: Use native or third-party bridges as "hooks" for your dispatch call
 
 Developers can use the Hooks API to secure their messages either through native bridges like for Optimism or use other third-party bridge vendors.
 
-There are cases where you may feel the MultisigISM or your own configured ISM security isn't sufficient for your application and instead you want the security of a native bridge like Optimism or a third-party vendor like Wormhole. You can opt-in to such do so with hooks without leaving the purview of the Mailbox interface and needing a bridge-specific implementation. Hooks can also be used as routes specified for the [aggregation-ism-1.md](../../protocol/sovereign-consensus/aggregation-ism-1.md "mention").
+There are cases where you may feel the MultisigISM or your own configured ISM security isn't sufficient for your application and instead you want the security of a native bridge like Optimism or a third-party vendor like Wormhole. You can opt-in to such do so with hooks without leaving the purview of the Mailbox interface and needing a bridge-specific implementation. Hooks can also be used as routes specified for the [aggregation-ism.md](../../protocol/sovereign-consensus/aggregation-ism.md "mention").
 
 Hooks come in a pair of contracts, the `IMessageHook` on the source chain and `HookISM` on the destination chain. `IMessageHook` provides you the `postDispatch` method which you can call after `IMailbox.dispatch` providing the destination domain and the messageId. You pass on the `messageId` as payload to configured external provider (defined by the hook) which interacts with the corresponding `HookISM` contract on the destination chain. If the ISM can verify the validity of the messageId, the message can be delivered successfully by the relayer.
 
@@ -161,7 +161,7 @@ All ERC-5164 compatible bridge vendors have to implement contracts `IMessageDisp
 
 The `ERC-5164` hook calls the dispatchMessage function on the `IMessageDispatcher` which send messages to IMessageExecutor at the specified toChainId. The executor contract has the special access to write to the `ERC5164ISM` contract, setting the messageId in the `verifiedMessageId`'s mapping to the original source chain sender (ie. the user).  The relayer carries just the message with no metadata, waiting for the  bridge provider to prove the validity and transport the message to the destination chain and the message delivery is then verified.&#x20;
 
-This open interface allows any third party bridge provider like Wormhole or Telepathy to implement the interface and be supported by the ERC5164Hook out-of-the-box. This is especially useful if you want the reliability and security of a diverse set of bridge vendors by using the [aggregation-ism-1.md](../../protocol/sovereign-consensus/aggregation-ism-1.md "mention").
+This open interface allows any third party bridge provider like Wormhole or Telepathy to implement the interface and be supported by the ERC5164Hook out-of-the-box. This is especially useful if you want the reliability and security of a diverse set of bridge vendors by using the [aggregation-ism.md](../../protocol/sovereign-consensus/aggregation-ism.md "mention").
 
 ```mermaid
 %%{ init: {
