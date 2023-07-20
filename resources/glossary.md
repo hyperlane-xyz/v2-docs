@@ -18,7 +18,7 @@ Example agents include [validators](../operators/validators/ "mention") and [rel
 
 <summary>Aggregation ISM</summary>
 
-The [aggregation-ism.md](../protocol/sovereign-consensus/aggregation-ism.md "mention") is a type of interchain security module that aggregates security from many [sovereign-consensus](../protocol/sovereign-consensus/ "mention") (ISMs) by requiring that `m` of `n` ISMs verify a particular interchain message.
+The [aggregation-ism-1.md](../protocol/sovereign-consensus/aggregation-ism-1.md "mention") is a type of interchain security module that aggregates security from many [sovereign-consensus](../protocol/sovereign-consensus/ "mention") (ISMs) by requiring that `m` of `n` ISMs verify a particular interchain message.
 
 </details>
 
