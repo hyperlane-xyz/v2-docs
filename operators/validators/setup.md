@@ -69,11 +69,12 @@ These **required** environment variables differ based on which of the [#environm
 {% tab title="Local setup" %}
 These are required for the [#local-setup](setup.md#local-setup "mention").
 
-| Argument                  | Description                                                                                                                                                                                                                                                                                                                               |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--validator.key`         | Your validator's private key, which is used to sign merkle roots.                                                                                                                                                                                                                                                                         |
-| `--checkpointSyncer.type` | Set to `localStorage`.                                                                                                                                                                                                                                                                                                                    |
-| `--checkpointSyncer.path` | <p>The path to your local directory where validator signatures will be written. This should be the value of <code>$MY_VALIDATOR_SIGNATURES_DIRECTORY</code> from the <a data-mention href="setup.md#local-setup">#local-setup</a>.</p><p>Example: <code>--checkpointSyncer.path='/tmp/hyperlane-validator-signatures-ethereum'</code></p> |
+| Argument                                | Description                                                                                                                                                                                                                                                                                                                               |
+| --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--validator.key`                       | Your validator's private key, which is used to sign merkle roots.                                                                                                                                                                                                                                                                         |
+| `--chains.${localchainname}.signer.key` | Your validator's private key, which will be used to submit a transaction on chain that publicly announce your validator's checkpoint syncer.                                                                                                                                                                                              |
+| `--checkpointSyncer.type`               | Set to `localStorage`.                                                                                                                                                                                                                                                                                                                    |
+| `--checkpointSyncer.path`               | <p>The path to your local directory where validator signatures will be written. This should be the value of <code>$MY_VALIDATOR_SIGNATURES_DIRECTORY</code> from the <a data-mention href="setup.md#local-setup">#local-setup</a>.</p><p>Example: <code>--checkpointSyncer.path='/tmp/hyperlane-validator-signatures-ethereum'</code></p> |
 
 {% hint style="warning" %}
 Note that relayers **must** be configured with\
@@ -85,14 +86,16 @@ to be able to read signatures from this validator.
 {% tab title="Production Setup (AWS)" %}
 These are required variables that are specific to the [aws-setup.md](aws-setup.md "mention").
 
-| Argument                    | Description                                                                                                                                                           |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--validator.type`          | Set to the `aws` literal.                                                                                                                                             |
-| `--validator.id`            | <p>The alias of your validator's AWS KMS key, prefixed with <code>alias/</code>.<br><em>Example:</em> <code>alias/hyperlane-validator-signer-${chain_name}</code></p> |
-| `--validator.region`        | <p>The region of your AWS KMS key.<br><em>Example:</em> <code>us-east-1</code>.</p>                                                                                   |
-| `--checkpointSyncer.type`   | Set to `s3`.                                                                                                                                                          |
-| `--checkpointSyncer.bucket` | The AWS S3 bucket name.                                                                                                                                               |
-| `--checkpointSyncer.region` | <p>The region of your AWS S3 bucket.<br><em>Example:</em> <code>us-east-1</code>.</p>                                                                                 |
+| Argument                                 | Description                                                                                                                                                           |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--validator.type`                       | Set to the `aws` literal.                                                                                                                                             |
+| `--validator.id`                         | <p>The alias of your validator's AWS KMS key, prefixed with <code>alias/</code>.<br><em>Example:</em> <code>alias/hyperlane-validator-signer-${chain_name}</code></p> |
+| `--chains.${localchainname}.signer.type` | Set to the `aws` literal.                                                                                                                                             |
+| `--chains.${localchainname}.signer.type` | <p>The alias of your validator's AWS KMS key, prefixed with <code>alias/</code>.<br><em>Example:</em> <code>alias/hyperlane-validator-signer-${chain_name}</code></p> |
+| `--validator.region`                     | <p>The region of your AWS KMS key.<br><em>Example:</em> <code>us-east-1</code>.</p>                                                                                   |
+| `--checkpointSyncer.type`                | Set to `s3`.                                                                                                                                                          |
+| `--checkpointSyncer.bucket`              | The AWS S3 bucket name.                                                                                                                                               |
+| `--checkpointSyncer.region`              | <p>The region of your AWS S3 bucket.<br><em>Example:</em> <code>us-east-1</code>.</p>                                                                                 |
 
 | Environment variable    | Description                                             |
 | ----------------------- | ------------------------------------------------------- |
