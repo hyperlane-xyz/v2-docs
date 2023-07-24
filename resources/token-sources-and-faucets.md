@@ -2,7 +2,7 @@
 description: Where to acquire tokens for development
 ---
 
-# Token Sources & Faucets
+# Token sources & faucets
 
 ​
 
@@ -27,3 +27,4 @@ description: Where to acquire tokens for development
 | Optimism Goerli | [​​Swap Goerli ETH for Optimism Goerli](https://app.optimism.io/bridge/deposit) | 0.1 ETH                      |
 | Moonbase Alpha  | [​​Moonbase Alpha Faucet](https://apps.moonbeam.network/moonbase-alpha/faucet/) | 1 DEV                        |
 | Hyperspace      | [Filecoin Faucet](https://hyperspace.yoga/#faucet)                              | 5 tFIL                       |
+| Sepolia         | [Sepolia Faucet](https://sepoliafaucet.com/)                                    | 0.5 ETH                      |
