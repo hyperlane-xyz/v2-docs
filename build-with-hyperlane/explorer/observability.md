@@ -20,7 +20,7 @@ If your message was not delivered it can be due to several factors:
 
 #### Invalid destination
 
-If the destination domain identifier (`uint32`) is not known to relay clients they will have no way to deliver your message. Refer to the [domains.md](../../resources/domains.md "mention") for known domains and the canonical identifiers to use when sending messages to these destinations.
+If the destination domain identifier (`uint32`) is not known to relay clients they will have no way to deliver your message. Refer to the [domains](../../resources/domains/ "mention") for known domains and the canonical identifiers to use when sending messages to these destinations.
 
 #### Invalid recipient
 

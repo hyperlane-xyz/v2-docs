@@ -50,7 +50,7 @@ Interchain gas payments are facilitated by `InterchainGasPaymaster` (IGP) smart 
 
 These contracts expose the [interchain-gas-paymaster-api.md](../apis-and-sdks/interchain-gas-paymaster-api.md "mention"), which allows users to pay [relayer.md](agents/relayer.md "mention") with native tokens on the origin chain to cover the costs of delivering a message on the destination chain.
 
-Each `InterchainGasPaymaster` contract corresponds to exactly one relayer. You can find addresses of the Abacus Works' relayer under [addresses.md](../resources/addresses.md "mention")
+Each `InterchainGasPaymaster` contract corresponds to exactly one relayer. You can find addresses of the Abacus Works' relayer under [addresses](../resources/addresses/ "mention")
 
 ### Gas oracles
 

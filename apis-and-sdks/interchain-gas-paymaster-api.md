@@ -19,7 +19,7 @@ The interchain gas paymaster (IGP) interface exposes two functions that can be u
 
 These functions do not necessarily need to be called in the same transaction as the message dispatch.
 
-You can find deployed IGPs on [addresses.md](../resources/addresses.md "mention")
+You can find deployed IGPs on [addresses](../resources/addresses/ "mention")
 
 ```solidity
 // SPDX-License-Identifier: MIT OR Apache-2.0

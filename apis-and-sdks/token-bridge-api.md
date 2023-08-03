@@ -77,7 +77,7 @@ interface ILiquidityLayerRouter {
 
 ```
 
-`_destinationDomain` is the chain you're sending to. Domain ID's can be found [here](../resources/domains.md).
+`_destinationDomain` is the chain you're sending to. Domain ID's can be found [here](../resources/domains/).
 
 `_recipientAddress` is the receiving contract, it needs to be a contract with the `handleWithTokens()` function, you can read about it in the [Receive](token-bridge-api.md#receive) section.
 
@@ -111,7 +111,7 @@ interface ILiquidityLayerMessageRecipient {
 
 ```
 
-`_origin` the Domain ID of the source chain, IDs found [here](../resources/domains.md#mainnet).
+`_origin` the Domain ID of the source chain, IDs found [here](../resources/domains/#mainnet).
 
 `_sender` the address of the message sender on the source chain
 
@@ -129,7 +129,7 @@ Just like all Hyperlane messages that wish to have their messages delivered by a
 
 The `dispatchWithTokens` function in the Liquidity Layer API returns the message ID as a `bytes32`. This message ID can then be used by the caller to pay for interchain gas.
 
-Because the Liquidity Layer uses the default ISM for security, the [DefaultIsmInterchainGasPaymaster](../resources/addresses.md#defaultisminterchaingaspaymaster-1) IGP should be used. When specifying the amount of gas, the caller must pay for a gas amount high enough to cover:
+Because the Liquidity Layer uses the default ISM for security, the [DefaultIsmInterchainGasPaymaster](../resources/addresses/#defaultisminterchaingaspaymaster-1) IGP should be used. When specifying the amount of gas, the caller must pay for a gas amount high enough to cover:
 
 1. "Overhead" gas used by the Liquidity Layer contract on the destination chain. This is about **280,000 gas**. This is because the actual cost of bridging the tokens via the underlying Circle or Portal bridge can be fairly high.
 2. The gas used by the recipient's `handleWithTokens` function on the destination chain.

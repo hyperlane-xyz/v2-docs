@@ -10,7 +10,7 @@ Want to learn more about interchain accounts? Take a look at the [accounts.md](.
 
 ### Inputs
 
-* `$DESTINATION_DOMAIN`: The domain ID of the destination chain. See [domains.md](../../resources/domains.md "mention")
+* `$DESTINATION_DOMAIN`: The domain ID of the destination chain. See [domains](../../resources/domains/ "mention")
 * `$RECIPIENT`: The address of the `TestRecipient` contract on the destination chain,`0x36FdA966CfffF8a9Cdc814f546db0e6378bFef35`
 * `$CALLDATA`: The calldata of the call to make on `TestRecipient`, which we generate using `cast`: `0xf07c1f4700000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000001648656c6c6f576f726c642066726f6d20616e2049434100000000000000000000`
 
@@ -24,11 +24,11 @@ Sending a message is a simple matter of calling `InterchainAccountRouter.callRem
 
 {% tabs %}
 {% tab title="Using Metamask" %}
-1. Navigate to the `InterchainAccountRouter` contract page on Etherscan (or whatever chain you want to send from). See [addresses.md](../../resources/addresses.md "mention") for `InterchainAccountRouter` addresses
+1. Navigate to the `InterchainAccountRouter` contract page on Etherscan (or whatever chain you want to send from). See [addresses](../../resources/addresses/ "mention") for `InterchainAccountRouter` addresses
 2. Under the `Contract` tab, find the `Write as Proxy` button.
 3. Click on the `Connect to Web3` button to connect your Wallet (i.e. Metamask). Make sure that you are on the correct network.
 4. Expand the `callRemote` box
-5. For destination domain, enter `$DESTINATION_DOMAIN`. You could use `137` to send to mainnet Polygon, or see other [domains.md](../../resources/domains.md "mention")
+5. For destination domain, enter `$DESTINATION_DOMAIN`. You could use `137` to send to mainnet Polygon, or see other [domains](../../resources/domains/ "mention")
 6. For the `_to` argument, enter the `$RECIPIENT`
 7. For the `_value` argument, enter 0
 8. For the `_data` argument, enter the `$CALLDATA`

@@ -32,7 +32,7 @@ If you have the hash of the transaction that sent your interchain message, you c
 {% tab title="Using Metamask" %}
 **Getting the interchain gas payment quote**
 
-1. Navigate to the [#defaultisminterchaingaspaymaster](../../resources/addresses.md#defaultisminterchaingaspaymaster "mention") contract page on [Etherscan](https://etherscan.io/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc) (or its equivalent if you're sending from a non-Ethereum chain).
+1. Navigate to the [#defaultisminterchaingaspaymaster](../../resources/addresses/#defaultisminterchaingaspaymaster "mention") contract page on [Etherscan](https://etherscan.io/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc) (or its equivalent if you're sending from a non-Ethereum chain).
 2. Under the `Contract` tab, select `Read Contract`.
 3. Expand the `quoteGasPayment` function.
 4. For destination domain, enter `$DESTINATION_DOMAIN`.

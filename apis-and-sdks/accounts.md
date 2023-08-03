@@ -48,7 +48,7 @@ interface IInterchainAccountRouter {
 ```
 
 {% hint style="info" %}
-Want to use `InterchainAccountRouter`? Please refer to [addresses.md](../resources/addresses.md "mention") and [domains.md](../resources/domains.md "mention")
+Want to use `InterchainAccountRouter`? Please refer to [addresses](../resources/addresses/ "mention") and [domains](../resources/domains/ "mention")
 {% endhint %}
 
 ## Example Usage

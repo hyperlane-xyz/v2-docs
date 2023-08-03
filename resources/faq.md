@@ -69,7 +69,7 @@ For inspiration, take a look at some of the pre-built applications built on top 
 
 <summary>Where is Hyperlane deployed?</summary>
 
-A list of known deployments can be found at [domains.md](domains.md "mention")
+A list of known deployments can be found at [domains](domains/ "mention")
 
 </details>
 

@@ -15,8 +15,8 @@ This tutorial demonstrates how to:
 
 ### Inputs
 
-* `$LIQUIDITY_LAYER_ROUTER`: The address of the LiquidityLayerRouter which you can find under [here](../../resources/addresses.md)
-* `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../../resources/domains.md). Goerli's domain ID is `5`, Fuji is `43113`
+* `$LIQUIDITY_LAYER_ROUTER`: The address of the LiquidityLayerRouter which you can find under [here](../../resources/addresses/)
+* `$DESTINATION_DOMAIN`: The domain ID of the destination chain. Domain IDs can be found [here](../../resources/domains/). Goerli's domain ID is `5`, Fuji is `43113`
 * `$RECIPIENT`: The address of the `TestTokenRecipient` contract on the destination chain padded to bytes32, `0x00000000000000000000000085ac1164878e017b67660a74ff1f41f3D05C02Bb` on every chain.
 * `$TOKEN_ADDRESS`: The address of the Token you want to transfer. On Goerli, USDC is at `0x07865c6e87b9f70255377e024ace6630c1eaa37f`. On Fuji, USDC is at `0x5425890298aed601595a70ab815c96711a31bc65`. On Ethereum, USDC is at `0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48`. On Avalanche, USDC is at `0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E`
 

@@ -6,7 +6,7 @@ description: Using the Hyperlane Explorer to find and track messages
 
 The [Hyperlane Explorer](https://explorer.hyperlane.xyz/) can be used to find messages on any network with a Hyperlane deployment. Drill down into messages for more details about their properties and status.
 
-Messages to/from [core chains](../../resources/domains.md) will searchable by transaction hash, message ID, or sender/recipient address. For other chains, the explorer can be configured to search for messages by providing it a chain config.
+Messages to/from [core chains](../../resources/domains/) will searchable by transaction hash, message ID, or sender/recipient address. For other chains, the explorer can be configured to search for messages by providing it a chain config.
 
 ### Searching for messages
 
@@ -25,7 +25,7 @@ To search, enter your query into the top search bar. You can use the Origin Chai
 <figure><img src="../../.gitbook/assets/Screenshot 2023-03-14 at 4.03.15 PM.png" alt=""><figcaption><p>Explorer search bar</p></figcaption></figure>
 
 {% hint style="info" %}
-Note, by default the explorer will only find message on [core Hyperlane chains](../../resources/domains.md). To view messages send to and/or from other chains, see [configuring-pi-chains.md](configuring-pi-chains.md "mention") .
+Note, by default the explorer will only find message on [core Hyperlane chains](../../resources/domains/). To view messages send to and/or from other chains, see [configuring-pi-chains.md](configuring-pi-chains.md "mention") .
 {% endhint %}
 
 ### Permissionless Interoperability

@@ -8,7 +8,7 @@ This tutorial demonstrates how to make a simple interchain view call via the Que
 
 ### Inputs
 
-* `$DESTINATION_DOMAIN`: The domain ID of the destination chain. You can use `43113` to send to Fuji, or choose from any of the known [domains.md](../../resources/domains.md "mention")
+* `$DESTINATION_DOMAIN`: The domain ID of the destination chain. You can use `43113` to send to Fuji, or choose from any of the known [domains](../../resources/domains/ "mention")
 * `$TARGET`: The address of the contract on the destination chain you want to query. You could just query for the `owner()` of the `InterchainAccountRouter` contract which is found at `0xc61Bbf8eAb0b748Ecb532A7ffC49Ab7ca6D3a39D` on every testnet chain
 * `$TARGET_DATA`: The ABI encoded call, if you want to make an `owner()` call that would be `0x8da5cb5b`
 * `$GAS_AMOUNT`: The amount of gas on the destination chain to pay for. For the simple `owner()` example, we can set this to a generous `200000` gas. See [interchain-gas-payments.md](../../protocol/interchain-gas-payments.md "mention") to learn more.
@@ -44,7 +44,7 @@ function handleQueryAddressResult(address _result) public {
 {% tab title="Using Metamask" %}
 **Getting the Interchain Gas Payment Quote**
 
-1. The `TestQuerySender` contract uses the `DefaultIsmInterchainGasPaymaster` to pay for interchain gas. Navigate to this contract page on [Etherscan](https://goerli.etherscan.io/address/0xF90cB82a76492614D07B82a7658917f3aC811Ac1) (or whatever chain you want to send from, see [#defaultisminterchaingaspaymaster](../../resources/addresses.md#defaultisminterchaingaspaymaster "mention") contract addresses)
+1. The `TestQuerySender` contract uses the `DefaultIsmInterchainGasPaymaster` to pay for interchain gas. Navigate to this contract page on [Etherscan](https://goerli.etherscan.io/address/0xF90cB82a76492614D07B82a7658917f3aC811Ac1) (or whatever chain you want to send from, see [#defaultisminterchaingaspaymaster](../../resources/addresses/#defaultisminterchaingaspaymaster "mention") contract addresses)
 2. Under the `Contract` tab, select `Read Contract`.
 3. Expand the `quoteGasPayment` function.
 4. For destination domain, enter `$DESTINATION_DOMAIN`.
@@ -74,7 +74,7 @@ We can get an interchain gas payment quote and call `TestQuerySender` directly u
 
 **Getting the Interchain Gas Payment Quote**
 
-The `$IGP_ADDRESS` is the address of the [#defaultisminterchaingaspaymaster](../../resources/addresses.md#defaultisminterchaingaspaymaster "mention"), which is used by the `TestQuerySender`.
+The `$IGP_ADDRESS` is the address of the [#defaultisminterchaingaspaymaster](../../resources/addresses/#defaultisminterchaingaspaymaster "mention"), which is used by the `TestQuerySender`.
 
 First, we use the `$IGP_ADDRESS` to get a quote for how much your gas payment will cost, and we save this in an environment variable called `$GAS_PAYMENT_QUOTE`:
 

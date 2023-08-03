@@ -106,8 +106,10 @@
 
 * [FAQ](resources/faq.md)
 * [Glossary](resources/glossary.md)
-* [Contract addresses](resources/addresses.md)
-* [Domain identifiers](resources/domains.md)
+* [Contract addresses](resources/addresses/README.md)
+  * [Permissionless Deployment Contract Addresses](resources/addresses/permissionless.md)
+* [Domain identifiers](resources/domains/README.md)
+  * [Permissionless Domain Identifiers](resources/domains/permissionless-domain-identifiers.md)
 * [Default ISM settings](resources/security.md)
 * [Token sources & faucets](resources/token-sources-and-faucets.md)
 * [Latencies](resources/latencies.md)

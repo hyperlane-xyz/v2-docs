@@ -27,7 +27,7 @@ Hyperlane can only deliver messages to smart contracts that implement the `IMess
     ) external returns (bytes32) {
 ```
 
-See [addresses.md](../../resources/addresses.md "mention")and [domains.md](../../resources/domains.md "mention") for `Mailbox` contract addresses, and chain domain IDs, respectively.
+See [addresses](../../resources/addresses/ "mention")and [domains](../../resources/domains/ "mention") for `Mailbox` contract addresses, and chain domain IDs, respectively.
 
 ### Encoding
 

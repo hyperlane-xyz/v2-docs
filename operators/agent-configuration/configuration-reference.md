@@ -113,7 +113,7 @@ HYP_BASE_CHAINS_ETHEREUM_NAME="ethereum"
 
 ## chains.\<chain\_name>.domain <a href="#chains.chain_name.domain" id="chains.chain_name.domain"></a>
 
-**Description:** Hyperplane domain id to uniquely identify the domain. See also: [Domain Identifiers](../../resources/domains.md#mainnet).
+**Description:** Hyperplane domain id to uniquely identify the domain. See also: [Domain Identifiers](../../resources/domains/#mainnet).
 
 **Requires:** Alignment with domain name if it is a known domain.
 
@@ -197,7 +197,7 @@ export HYP_BASE_CHAINS_ETHEREUM_FINALITY_BLOCKS=20
 
 ## chains.\<chain\_name>.addresses.mailbox <a href="#chains.chain_name.addresses.mailbox" id="chains.chain_name.addresses.mailbox"></a>
 
-**Description:** Address of the mailbox contract on the chain. See also [contract addresses](../../resources/addresses.md).
+**Description:** Address of the mailbox contract on the chain. See also [contract addresses](../../resources/addresses/).
 
 **Optional:** No
 
@@ -242,7 +242,7 @@ export HYP_BASE_CHAINS_ETHEREUM_ADDRESSES_MAILBOX="0x35231d4c2D8B8ADcB5617A638A0
 
 ## chains.\<chain\_name>.addresses.interchainGasPaymaster <a href="#chains.chain_name.addresses.interchaingaspaymaster" id="chains.chain_name.addresses.interchaingaspaymaster"></a>
 
-**Description:** Address of the interchain gas paymaster contract on the chain. See also [contract addresses](../../resources/addresses.md).
+**Description:** Address of the interchain gas paymaster contract on the chain. See also [contract addresses](../../resources/addresses/).
 
 **Optional:** No
 
@@ -287,7 +287,7 @@ export HYP_BASE_CHAINS_ETHEREUM_ADDRESSES_INTERCHAIN_GAS_PAYMASTER="0x6cA0B6D22d
 
 ## chains.\<chain\_name>.addresses.validatorAnnounce <a href="#chains.chain_name.addresses.validatorannounce" id="chains.chain_name.addresses.validatorannounce"></a>
 
-**Description:** Address of the validator announce contract on the chain. See also [contract addresses](../../resources/addresses.md).
+**Description:** Address of the validator announce contract on the chain. See also [contract addresses](../../resources/addresses/).
 
 **Optional:** No
 

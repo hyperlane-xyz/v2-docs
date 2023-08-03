@@ -95,7 +95,7 @@ flowchart BT
 }
 </code></pre>
 
-You can find the address of the `InterchainQueryRouter` contract on each chain [here](../resources/addresses.md#interchainqueryrouter), and chain domains [here](../resources/domains.md).
+You can find the address of the `InterchainQueryRouter` contract on each chain [here](../resources/addresses/#interchainqueryrouter), and chain domains [here](../resources/domains/).
 
 ## Example Usage
 
@@ -180,7 +180,7 @@ Just like all Hyperlane messages that wish to have their messages delivered by a
 
 The various `query` functions in the Queries API each return the message ID as a `bytes32`. This message ID can then be used by the caller to pay for interchain gas.
 
-Because the Queries API uses the default ISM for security, the [`DefaultIsmInterchainGasPaymaster`](../resources/addresses.md#defaultisminterchaingaspaymaster) should be used. When specifying the amount of gas, the caller must pay for a gas amount high enough to cover:
+Because the Queries API uses the default ISM for security, the [`DefaultIsmInterchainGasPaymaster`](../resources/addresses/#defaultisminterchaingaspaymaster) should be used. When specifying the amount of gas, the caller must pay for a gas amount high enough to cover:
 
 1. "Overhead" gas used by the Queries API contract on the destination chain. This is about **80,000 gas**.
 2. The gas used by the user-specified arbitrary query / queries that will be performed on the destination chain.

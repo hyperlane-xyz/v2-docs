@@ -32,7 +32,7 @@ When using the `DefaultIsmInterchainGasPaymaster`, the `_gasAmount` to use when 
 
 Behind the scenes, the `DefaultIsmInterchainGasPaymaster` is configured to automatically add to the provided `_gasAmount` all overhead gas amounts that your message will use at its destination-- this includes any gas used by the Mailbox or the default ISM (for example, verifying validator signatures). This allows messages to be fully paid for without requiring any knowledge of the internal gas usage of the destination's Mailbox contract or default ISM when a message is processed.
 
-Find the deployed [#defaultisminterchaingaspaymaster](../../resources/addresses.md#defaultisminterchaingaspaymaster "mention") contract addresses for the Abacus Works relayer.
+Find the deployed [#defaultisminterchaingaspaymaster](../../resources/addresses/#defaultisminterchaingaspaymaster "mention") contract addresses for the Abacus Works relayer.
 
 #### When using a custom ISM (advanced)
 
@@ -47,7 +47,7 @@ The gas amount required to process the message should include:
 * The amount of gas used by the ISM to verify the message
 * The amount of gas used by the message's recipient `handle` function
 
-Find the deployed [#interchaingaspaymaster](../../resources/addresses.md#interchaingaspaymaster "mention") contract addresses for the Abacus Works relayer.
+Find the deployed [#interchaingaspaymaster](../../resources/addresses/#interchaingaspaymaster "mention") contract addresses for the Abacus Works relayer.
 
 #### TL;DR
 

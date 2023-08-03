@@ -68,7 +68,7 @@ See [security.md](security.md "mention") to see the current configurations.
 
 A unique identifier for a particular chain, used by the Hyperlane protocol to determine message origin and destination.\
 \
-May be the same as the EVM chain ID, but isn't always. See [domains.md](domains.md "mention") for a list of known Hyperlane domain IDs.
+May be the same as the EVM chain ID, but isn't always. See [domains](domains/ "mention") for a list of known Hyperlane domain IDs.
 
 </details>
 
