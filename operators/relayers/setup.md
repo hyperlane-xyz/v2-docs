@@ -87,7 +87,7 @@ To download the docker image, run:
 
 {% code overflow="wrap" %}
 ```bash
-docker pull gcr.io/abacus-labs-dev/hyperlane-agent:1fff74e-20230614-005705
+docker pull gcr.io/abacus-labs-dev/hyperlane-agent:ed7569d-20230725-171222
 ```
 {% endcode %}
 {% endtab %}
