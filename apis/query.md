@@ -126,8 +126,8 @@ Call nameExpiresCall = Call({
 Query the ENS contract on Ethereum for the owner and expiration time of the any domain (from any network), and write it to storage.
 
 <pre class="language-solidity"><code class="lang-solidity"><strong>uint32 constant ethereumDomain = 1;
-</strong>// consistent across all chains
-address constant iqsRouter = 0x1d9fB4EA1712d0aaF713F7e02Aee0766Bb42bdB0;
+</strong>// Insert real address from "Contract Addresses"
+address constant iqsRouter = "0x123456";
 // The address of the ENS contract on Ethereum
 address constant ens = 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e;
 
