@@ -174,7 +174,7 @@ We can run the built binary from within the `hyperlane-monorepo/rust` directory 
 
 {% code overflow="wrap" %}
 ```sh
-env $(cat validator.env | grep -v "#" | xargs) ./target/release/relayer
+env $(cat relayer.env | grep -v "#" | xargs) ./target/release/relayer
 ```
 {% endcode %}
 {% endtab %}
