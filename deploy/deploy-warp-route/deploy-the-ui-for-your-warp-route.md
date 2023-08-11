@@ -65,3 +65,7 @@ Since the UI is a Next.js app, you can use your favorite hosting service to host
 * Hit Deploy!
 
 And that's it! Now you and your users can use the UI to send tokens from the collateral chain to remote chains, from one remote chain to another, and from any remote chain back to the collateral chain.
+
+#### Stranded Whale Problem
+
+A common problem with token bridges like Warp Routes is that a user may transfer a token like USDC to a new chain, but only afterwords realize that they do not have the native gas token to move those tokens anywhere including back. You may consider modifying the UI to warn the users of this situation, or better faucet them some dust of native gas token so improve their experience. You can either do so by modifying the warp route contracts where it holds some balance of the native token and can share that with recipients, or you could build an off-chain service which just observes the[ `ReceivedTransferRemote`](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/11d9d0bf0d5ac9f2f57141e0e7549dd415e0325e/typescript/token/contracts/libs/TokenRouter.sol#L90)transfer the native gas token to the recipient.
