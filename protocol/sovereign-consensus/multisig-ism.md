@@ -34,7 +34,7 @@ interface IMultisigIsm is IInterchainSecurityModule {
 
 ## Configure
 
-The hyperlane-monorepo contains a [`MultisigISM` implementation](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/isms/MultisigIsm.sol) that application developers can deploy off-the-shelf, specifying their desired configuration.
+The hyperlane-monorepo contains [`MultisigISM` implementations](https://github.com/hyperlane-xyz/hyperlane-monorepo/tree/main/solidity/contracts/isms/multisig) (including a [legacy](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/isms/multisig/LegacyMultisigIsm.sol) version and more gas-efficient [versions](https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/solidity/contracts/isms/multisig/StaticMultisigIsm.sol) deployable via factories) that application developers can deploy off-the-shelf, specifying their desired configuration.
 
 Developers can configure, for each origin chain, a set of `n` [validators.md](../agents/validators.md "mention"), and the number of validator signatures (`m`) needed to verify a message.
 
