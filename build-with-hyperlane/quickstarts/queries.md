@@ -47,11 +47,11 @@ function handleQueryAddressResult(address _result) public {
 1. The `TestQuerySender` contract uses the `DefaultIsmInterchainGasPaymaster` to pay for interchain gas. Navigate to this contract page on [Etherscan](https://goerli.etherscan.io/address/0xF90cB82a76492614D07B82a7658917f3aC811Ac1) (or whatever chain you want to send from, see [#defaultisminterchaingaspaymaster](../../resources/addresses/#defaultisminterchaingaspaymaster "mention") contract addresses)
 2. Under the `Contract` tab, select `Read Contract`.
 3. Expand the `quoteGasPayment` function.
-4. For destination domain, enter `$DESTINATION_DOMAIN`.
+4. For the destination domain, enter `$DESTINATION_DOMAIN`.
 5. For gas amount, enter `$GAS_AMOUNT`, which is `200000`.
 6. Click `Query` and make note of the amount returned as `$GAS_PAYMENT_QUOTE`. For example, at the time of writing, the quote is `1` wei.
 
-<figure><img src="../../.gitbook/assets/Screen Shot 2023-01-31 at 1.55.10 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2023-08-23 at 3.30.04 PM.png" alt=""><figcaption></figcaption></figure>
 
 **Making the Query**
 
@@ -66,7 +66,7 @@ function handleQueryAddressResult(address _result) public {
 9. For gas amount, enter `$GAS_AMOUNT`.
 10. Submit the transaction via your wallet/Metamask
 
-<figure><img src="../../.gitbook/assets/Screen Shot 2023-01-31 at 2.14.07 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2023-08-23 at 4.05.26 PM.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Using cast" %}
