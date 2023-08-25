@@ -24,6 +24,8 @@ In order to complete this guide, you first need to set up the following:
 
 <table><thead><tr><th width="122.33333333333331">Key Type</th><th width="278">Description</th><th>Needs Funding?</th></tr></thead><tbody><tr><td>Contract Deployer</td><td>32 byte hexadecimal private key</td><td>Yes, on all the chains on which we need to deploy contracts.</td></tr><tr><td>Validator Accounts</td><td>A list of validator addresses for your local chain are needed to configure the <a data-mention href="../protocol/sovereign-consensus/multisig-ism.md">multisig-ism.md</a>s. The configuration is a list of <code>n</code> local validator addresses and the threshold <code>m</code>, the minimum number of validators needed to verify outbound messages from the local chain.</td><td>Yes, a small amount to do announce the location of the validator signatures (could be done by a different key in production)</td></tr><tr><td>Relayer Accounts</td><td>The relayer client(s) use one account on the local chain and an additional account for each of the remote chains. </td><td>Yes. Each relayer instance must be configured with a key that has a balance on all the other chains. Use the chains' faucet to get tokens if they are testnets, for the core chains, you can find a list of faucets under <a data-mention href="../resources/token-sources-and-faucets.md">token-sources-and-faucets.md</a>.</td></tr></tbody></table>
 
+When testing out this guide, you can use the same hexadecimal key for all three roles for simplicity.
+
 {% hint style="info" %}
 For instructions on how to generate keys, see [agent-keys](../operators/agent-keys/ "mention"). Your deployer key **must** be a hexadecimal key, while validator and relayer keys can be hexadecimal or AWS KMS.
 {% endhint %}
