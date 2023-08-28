@@ -13,31 +13,27 @@ description: >-
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | Astar      | `0x6C120D87F87E931c762339fa8aD94f48c8174824` | [View on subscan.io](https://astar.subscan.io/account/0x6C120D87F87E931c762339fa8aD94f48c8174824)                         |
+| Nautilus      | `0xF59557dfacDc5a1cb8A36Af43aA4819a6A891e88` | [View on nautscan.com](https://nautscan.com/mainnet/search/0xF59557dfacDc5a1cb8A36Af43aA4819a6A891e88)                         |
 | Polygon zkEVM      | `0xDDd979557327455A497B314fbE879e82C63BA563` | [View on polygonscan.com](https://zkevm.polygonscan.com/address/0xDDd979557327455A497B314fbE879e82C63BA563)                         |
 
 #### DefaultIsmInterchainGasPaymaster
 
-Read about this [here](../../build-with-hyperlane/guides/developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)
+Read about paying for interchain gas [here](../../build-with-hyperlane/guides/developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)
 
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Nautilus      | `0x7f50C5776722630a0024fAE05fDe8b47571D7B39` | [View on nautscan.com](https://nautscan.com/mainnet/search/0x7f50C5776722630a0024fAE05fDe8b47571D7B39)                         |
 | Polygon zkEVM   | `0xC844ACFB52b344B27A087e2CA11e1Be8df06D8C5` | [View on polygonscan.com](https://zkevm.polygonscan.com/address/0xC844ACFB52b344B27A087e2CA11e1Be8df06D8C5)                 |
 
 #### InterchainGasPaymaster
 
-Advanced use - [read here](../../build-with-hyperlane/guides/developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-a-custom-ism-advanced)
+Advanced use - [read more here](../../build-with-hyperlane/guides/developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-a-custom-ism-advanced)
 
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Astar     | `0x6C120D87F87E931c762339fa8aD94f48c8174824` | [View on subscan.io](https://astar.subscan.io/account/0x687007C510Cd174f815cdaDA4De51d66BA73544d)         
+| Astar     | `0x6C120D87F87E931c762339fa8aD94f48c8174824` | [View on subscan.io](https://astar.subscan.io/account/0x687007C510Cd174f815cdaDA4De51d66BA73544d)         |
+| Nautilus      | `0x3a464f746D23Ab22155710f44dB16dcA53e0775E` | [View on nautscan.com](https://nautscan.com/mainnet/search/0x3a464f746D23Ab22155710f44dB16dcA53e0775E)                         |
 | Polygon zkEVM      | `0x9C54659D372d9424ef79A9C24d921AB4ee376045` | [View on polyganscan.com](https://zkevm.polygonscan.com/address/0x9C54659D372d9424ef79A9C24d921AB4ee376045)                         |
-
-#### StorageGasOracle
-
-| Network   | Address                                      | Explorer                                                                                        |
-| --------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| Astar     | `0xcA1d6a964dfe209e8fB33614b0EFFdA9723232D7` | [View on blockscout.com](https://blockscout.com/astar/address/0xcA1d6a964dfe209e8fB33614b0EFFdA9723232D7/contracts)         
-| Polygon zkEVM   | `0x8d856B6987527CdD9344bfcA31903219a332f059` | [View on polygonscan.com](https://zkevm.polygonscan.com/address/0x8d856B6987527CdD9344bfcA31903219a332f059)                 |
 
 #### MultisigIsm
 
@@ -50,15 +46,9 @@ Advanced use - [read here](../../build-with-hyperlane/guides/developers/paying-f
 
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Astar     | `0x05533EA9B9F37daA890512d8a2DD5b853620819e` | [View on blockscout.com](https://blockscout.com/astar/address/0x05533EA9B9F37daA890512d8a2DD5b853620819e/contracts)         
+| Astar     | `0x05533EA9B9F37daA890512d8a2DD5b853620819e` | [View on blockscout.com](https://blockscout.com/astar/address/0x05533EA9B9F37daA890512d8a2DD5b853620819e/contracts)         |
+| Nautilus      | `0x23ce76645EC601148fa451e751eeB75785b97A00` | [View on nautscan.com](https://nautscan.com/mainnet/search/0x23ce76645EC601148fa451e751eeB75785b97A00)                         |
 | Polygon zkEVM   | `0x31EC336b4c0f04983c05bB9706E5271AA6842068` | [View on polygonscan.com](https://zkevm.polygonscan.com/address/0x31EC336b4c0f04983c05bB9706E5271AA6842068)                 |
-
-#### ProxyAdmin
-
-| Network   | Address                                      | Explorer                                                                                        |
-| --------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| Astar (DefaultProxyAdmin)     | `0x2FdA8c6783Aa36BeD645baD28a4cDC8769dCD252` | [View on blockscout.com](https://blockscout.com/astar/address/0x2FdA8c6783Aa36BeD645baD28a4cDC8769dCD252/contracts)         
-| Polygon   | `0xef81A58b40489865200Ef6B7AD3D94a0c29aDA2a` | [View on polygonscan.com](https://zkevm.polygonscan.com/address/0xef81A58b40489865200Ef6B7AD3D94a0c29aDA2a)                 |
 
 {% endtab %}
 
