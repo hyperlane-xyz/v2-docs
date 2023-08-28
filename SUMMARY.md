@@ -2,7 +2,7 @@
 
 ## ⏩ Introduction
 
-* [Hyperlane introduction](README.md)
+* [Hyperlane Introduction](README.md)
 * [Getting started](introduction/getting-started.md)
 * [Why Should You Use Hyperlane?](introduction/why-should-you-use-hyperlane.md)
 
@@ -111,6 +111,7 @@
 * [Domain identifiers](resources/domains/README.md)
   * [Permissionless Domain Identifiers](resources/domains/permissionless-domain-identifiers.md)
 * [Default ISM settings](resources/security.md)
+* [Coming Soon: Hyperlane v3](resources/coming-soon-hyperlane-v3.md)
 * [Token sources & faucets](resources/token-sources-and-faucets.md)
 * [Latencies](resources/latencies.md)
 * [Github](https://github.com/hyperlane-xyz)
