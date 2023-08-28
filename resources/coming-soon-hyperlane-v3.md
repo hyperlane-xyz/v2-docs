@@ -126,17 +126,17 @@ contract Mailbox {
     bytes32 latestDispatchedId;
 
     // implements defaults that can be overriden (overhead IGP, etc)
-IPostDispatchHook public defaultHook;
+    IPostDispatchHook public defaultHook;
 
     // enforces protocol fees or any future required hooks
-IPostDispatchHook public requiredHook;
+    IPostDispatchHook public requiredHook;
 
     function dispatch(
-            uint32 destination,
-    bytes32 recipient,
-    bytes calldata body,
-            IPostDispatchHook customHook?, // optional
-            bytes calldata hookMetadata?   // optional
+        uint32 destination,
+        bytes32 recipient,
+        bytes calldata body,
+        IPostDispatchHook customHook?, // optional
+        bytes calldata hookMetadata?   // optional
     ) external payable returns (bytes32 messageId) {
         ...
         // effects
@@ -154,11 +154,11 @@ IPostDispatchHook public requiredHook;
     }
 
     function quoteDispatch(
-            uint32 destination,
-            bytes32 recipient,
-            bytes calldata body,
-            IPostDispatchHook customHook?, // optional
-            bytes calldata hookMetadata?   // optional
+        uint32 destination,
+        bytes32 recipient,
+        bytes calldata body,
+        IPostDispatchHook customHook?, // optional
+        bytes calldata hookMetadata?   // optional
     ) external view returns (uint256 fee) {
         fee = (customHook ?? defaultHook).quoteDispatch(hookMetadata ?? "", message)
                     + requiredHook.quoteDispatch(hookMetadata ?? "", message);
