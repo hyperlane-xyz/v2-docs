@@ -65,9 +65,9 @@ A great example for reference while developing CCIP Read ISM's exists as the [Ch
 
 As per CCIP Read, the offchain API will need to return JSON data with the form,
 
-```
+```json
 {
-    "data": string
+  "data": "..."
 }
 ```
 
@@ -83,7 +83,9 @@ When setting up the ISM, the `getOffchainVerifyInfo` and `verify` functions are 
 
 - `verify` must take the provided `metadata` and assert its legitimacy. Again the [ChainlinkISM implementation](https://github.com/AlexBHarley/permissionless-chainlink-feeds/blob/main/apps/contracts/contracts/ChainlinkAggregator.sol#L114) can be a useful reference point when developing this logic for your own ISM.
 
-```
+Below is the scaffold of what a CCIP Read ISM could look like, where the ISM is also the receiver of the message, as per the Chainlink ISM.
+
+```solidity
 pragma solidity ^0.8.13;
 
 import {AbstractCcipReadIsm} from "@hyperlane-xyz/core/contracts/isms/ccip-read/AbstractCcipReadIsm.sol";
@@ -91,8 +93,7 @@ import {IInterchainSecurityModule, ISpecifiesInterchainSecurityModule} from "@hy
 import {IMailbox} from "@hyperlane-xyz/core/contracts/interfaces/IMailbox.sol";
 import {Message} from "@hyperlane-xyz/core/contracts/libs/Message.sol";
 
-contract MyCcipReadIsm is AbstractCcipReadIsm, ISpecifiesInterchainSecurityModule
-{
+contract MyCcipReadIsm is AbstractCcipReadIsm, ISpecifiesInterchainSecurityModule {
     using Message for bytes;
     IMailbox mailbox;
 
@@ -128,13 +129,18 @@ contract MyCcipReadIsm is AbstractCcipReadIsm, ISpecifiesInterchainSecurityModul
     ) external view override {
         revert OffchainLookup(
             address(this),
-            ["https://myapi.com/endpoint"],
+            offchainUrls,
             _message,
             MyCcipReadIsm.process.selector,
             _message
         );
     }
 
+    /**
+     * Provided for full CCIP Read specification compatibility. Relayers
+     * will call the Mailbox directly regardless of the selector specified
+     * in the `OffchainLookup` error
+     */
     function process(
         bytes calldata _metadata,
         bytes calldata _message
