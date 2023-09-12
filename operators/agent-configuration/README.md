@@ -4,7 +4,7 @@ All agents use the same method of configuration which is a multi-layered config 
 
 ### Config layers
 
-1. Base configuration which takes the form `rust/config/<env_name>/<config_name>.json` all of these are loaded automatically.
+1. Base configuration from "default deployments" are in the [monorepo](https://github.com/hyperlane-xyz/hyperlane-monorepo/tree/main/rust/config) and all of these are loaded automatically.
 2. Config files passed in via the `CONFIG_FILES` env var are loaded next; this env var should be a comma separated list of paths to json files that should be loaded in order from first to last.
 3. `HYP_BASE_` prefixed env vars will be read next.
 4. `HYP_<AGENT>_` prefixed env vars are then read and apply ONLY for the current agent. I.e. `RELAYER`, `VALIDATOR`, and `SCRAPER` will only read their respective prefixes.
