@@ -52,9 +52,9 @@ These configurations requirements differ depending on which [setup.md](setup.md 
 {% tab title="Hexadecimal keys" %}
 If you created [hexadecimal-key-setup.md](../agent-keys/hexadecimal-key-setup.md "mention"), use these configs.
 
-| Argument              | Description                                                                                                                                                 |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--defaultSigner.key` | <p>A hexadecimal private key used to sign transactions for <code>chain_name</code>.<br><br><em>Example:</em> <code>--defaultSigner.key=123...def</code></p> |
+| Argument              | Description                                                                                                                                    |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--defaultSigner.key` | <p>A hexadecimal private key used to sign transactions for all chains.<br><br><em>Example:</em> <code>--defaultSigner.key=123...def</code></p> |
 {% endtab %}
 
 {% tab title="AWS KMS keys" %}
