@@ -274,6 +274,23 @@ TODO: Add Sepolia to agent_config.json
         "from": 3018
       }
     },
+    "sepolia": {
+        "name": "sepolia",
+        "chainId": 11155111,
+        "domainId": 11155111,
+        "protocol": "ethereum",
+        "rpcUrls": [
+          {
+            "http": "https://rpc.ankr.com/eth_sepolia"
+          }
+        ],
+        "mailbox": "TODO",
+        "interchainGasPaymaster": "TODO",
+        "validatorAnnounce": "TODO",
+        "index": {
+          "from": "TODO"
+        }
+      },
     "chains": {
       "goerli": {
         "name": "goerli",
@@ -303,7 +320,20 @@ TODO: Add Sepolia to agent_config.json
         "index": {
           "from": 17
         }
-      }
+      },
+      "sepolia": {
+        "name": "sepolia",
+        "domain": 11155111,
+        "addresses": {
+          "mailbox": "TODO",
+          "interchainGasPaymaster": "TODO",
+          "validatorAnnounce": "TODO"
+        },
+        "protocol": "ethereum",
+        "finalityBlocks": 2,
+        "index": {
+          "from": "TODO"
+        }
     }
   }
 ```
