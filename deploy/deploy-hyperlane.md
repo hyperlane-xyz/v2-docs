@@ -31,7 +31,7 @@ For instructions on how to generate keys, see [agent-keys](../operators/agent-ke
 {% endhint %}
 
 {% hint style="info" %}
-If deploying on a local network using [Foundry's Anvil](https://github.com/foundry-rs/foundry/tree/master/anvil), use the following command to fund your newly-generated account. It uses one of the pre-funded private keys to transfer 1 ETH to the address in the `$YOUR_PUBLIC_KEY` variable.
+If deploying on a local network using [Foundry's Anvil](https://github.com/foundry-rs/foundry), use the following command to fund your newly-generated account. It uses one of the pre-funded private keys to transfer 1 ETH to the address in the `$YOUR_PUBLIC_KEY` variable.
 
 ```
 cast send $YOUR_PUBLIC_KEY \
@@ -178,35 +178,144 @@ $  head -n 22 artifacts/agent_config.json
   },
 ```
 
-## 3. Run validators
+## 3. Run validators and relayers
 
-Follow the [validators](../operators/validators/ "mention") guide to run validators for the [messaging.md](../protocol/messaging.md "mention")on your local chain. These validators will provide the security for messages sent **from** your chain **to** remote chains.
+We've partnered with [Kurtosis](https://www.kurtosis.com/) to offer a smooth validator and relayer deployment experience through [Kurtosis Cloud](https://cloud.kurtosis.com/). This section of the guide will walk you through how to deploy a validator and relayer using the no-code, Kurtosis Cloud UI that connects a Goerli to Polaris. 
 
-Include the agent config from the [#2.-deploy-contracts](deploy-hyperlane.md#2.-deploy-contracts "mention") step in `CONFIG_FILES`. If you're using Docker, you will need to mount the file into the container.
+If you wish to read more about validators and relayers, check out our docs on these topics at [Validators](../operators/validators/ "mention") and [Relayers](../operators/relayers/ "mention").
 
-You should have already set up your validator keys in step [#1.-setup-keys](deploy-hyperlane.md#1.-setup-keys "mention"), so you can skip that part of the [validators](../operators/validators/ "mention") guide.
+For feedback or questions about using Kurtosis in this section, please file a [Github Issue](https://github.com/kurtosis-tech/kurtosis/issues/new/choose) or start a [Github Discussion](https://github.com/kurtosis-tech/kurtosis/discussions/new?category=q-a). Alternatively, the Kurtosis team is available for technical support on their [Discord server](https://discord.com/invite/jJFG7XBqcY) as well.
 
-{% hint style="warning" %}
-Make sure these validators match the addresses you provided when in your `MultisigIsmConfig`. Otherwise, the [multisig-ism.md](../protocol/sovereign-consensus/multisig-ism.md "mention")s you deployed in the previous step will not be able to verify messages sent from your chain.
-{% endhint %}
+### Log in to Kurtosis Cloud to provision an instance
 
-{% content-ref url="../operators/validators/" %}
-[validators](../operators/validators/)
-{% endcontent-ref %}
+To begin, visit the [Kurtosis Cloud website](https://cloud.kurtosis.com/) (direct link: https://cloud.kurtosis.com/) and sign in with Google. 
 
-## 4. Run relayer
+If this is the first time you're using Kurtosis Cloud, Kurtosis will automatically begin provisioning a remote cloud instance for your validator and relayer (see screenshot below). This should take no longer than 3 minutes.
 
-Follow the [relayers](../operators/relayers/ "mention") guide to run a relayer that will deliver interchain messages sent between the local and remote chains.
+<figure><img src="../.gitbook/assets/kurtosis-get-excited.png" alt=""><figcaption><p>Kurtosis will provision a brand new instance for you if this is your first time using Kurtosis.</p></figcaption></figure>
 
-Remember to set `--relayChains` or `HYP_BASE_RELAYCHAINS` appropriately.
+Once complete, you will be prompted to interact with your new, empty cloud instance via the Enclave Manager or via the Kurtosis CLI. Go ahead and click on Launch in Enclave Manager (see screenshot below). 
 
-Include the agent config from the [#2.-deploy-contracts](deploy-hyperlane.md#2.-deploy-contracts "mention") step in `CONFIG_FILES`. If you're using Docker, you will need to mount the file into the container.
+<figure><img src="../.gitbook/assets/kurtosis-launch-instance.png" alt=""><figcaption><p>Launch the Enclave Manager to interact with your new Cloud instance.</p></figcaption></figure>
 
-You should have already set up your relayer keys in step [#1.-setup-keys](deploy-hyperlane.md#1.-setup-keys "mention"), so you can skip that part of the [relayers](../operators/relayers/ "mention") guide.
+### Create the environment for your relayer and validator
+Next, you'll see a page where you can select to view existing enclaves or to create a new one. An enclave can be thought of as an isolated environment with which you can deploy things on to. In this case, it will be the environment that houses your relayer and validator. Select "Create Enclave".
 
-{% content-ref url="../operators/relayers/" %}
-[relayers](../operators/relayers/)
-{% endcontent-ref %}
+<figure><img src="../.gitbook/assets/kurtosis-create-enclave.png" alt=""><figcaption><p>Create a new enclave to house your relayer and validator.</p></figcaption></figure>
+
+The next screen will be the Kurtosis Package catalog: a collection of runnable packages that anyone can write and use. Start typing "hyperlane" in the search box and you will see the Hyperlane package appear, with the format: `github.com/kurtosis-tech/hyperlane-package`. Go ahead and select that and choose "Configure" in the bottom of your screen.
+
+<figure><img src="../.gitbook/assets/kurtosis-hyperlane-package-select.png" alt=""><figcaption><p>Select the Hyperlane package to configure and deploy</p></figcaption></figure>
+
+### Configure and deploy your relayer and validator
+You're almost done! Its now time to configure your relayer and validator. 
+
+In this guide, you will check the `Restart services` box, fill in only the required fields, and will an example configuration value. When deploying Hyperlane for your own project, please use your own configuration values and any of the optional fields as you see fit. For this example, the following `agent_config.json` file will be used:
+
+TODO: Add Sepolia to agent_config.json
+
+<details>
+
+<summary>Here is the example `agent_config.json` used in this section:</summary>
+
+```json
+{
+    "goerli": {
+      "chainId": 5,
+      "domainId": 5,
+      "name": "goerli",
+      "protocol": "ethereum",
+      "displayName": "Goerli",
+      "nativeToken": {
+        "name": "Ether",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "rpcUrls": [
+        {
+          "http": " https://rpc.ankr.com/eth_goerli"
+        }
+      ],
+      "blockExplorers": [
+        {
+          "name": "Etherscan",
+          "url": "https://goerli.etherscan.io",
+          "apiUrl": "https://api-goerli.etherscan.io/api",
+          "family": "etherscan"
+        }
+      ],
+      "blocks": {
+        "confirmations": 1,
+        "reorgPeriod": 2,
+        "estimateBlockTime": 13
+      },
+      "isTestnet": true,
+      "mailbox": "0xCC737a94FecaeC165AbCf12dED095BB13F037685",
+      "interchainGasPaymaster": "0xD2d856Cd4158577b9C7b3628DCa2B2680D8d6Fff",
+      "validatorAnnounce": "0x3Fc742696D5dc9846e04f7A1823D92cb51695f9a",
+      "index": {
+        "from": 8039005
+      }
+    },
+    "anvil": {
+      "name": "anvil",
+      "chainId": 31337,
+      "domainId": 31337,
+      "protocol": "ethereum",
+      "rpcUrls": [
+        {
+          "http": "127.0.0.1:8545"
+        }
+      ],
+      "mailbox": "0x74756B469390CAee600F332184895ACbf86C4396",
+      "interchainGasPaymaster": "0x9368C1f2B6BE2869018622a9aB43a5D8ED27Fba2",
+      "validatorAnnounce": "0x177B784C94d85f6645a35BfD14175D44045e573f",
+      "index": {
+        "from": 3018
+      }
+    },
+    "chains": {
+      "goerli": {
+        "name": "goerli",
+        "domain": 5,
+        "addresses": {
+          "mailbox": "0xCC737a94FecaeC165AbCf12dED095BB13F037685",
+          "interchainGasPaymaster": "0xD2d856Cd4158577b9C7b3628DCa2B2680D8d6Fff",
+          "validatorAnnounce": "0x3Fc742696D5dc9846e04f7A1823D92cb51695f9a"
+        },
+        "protocol": "ethereum",
+        "finalityBlocks": 2,
+        "index": {
+          "from": 8039005
+        }
+      },
+      "anvil": {
+        "name": "anvil",
+        "domain": 31337,
+        "addresses": {
+          "mailbox": "0x74756B469390CAee600F332184895ACbf86C4396",
+          "interchainGasPaymaster": "0x9368C1f2B6BE2869018622a9aB43a5D8ED27Fba2",
+          "validatorAnnounce": "0x177B784C94d85f6645a35BfD14175D44045e573f"
+        },
+        "signer": null,
+        "protocol": "ethereum",
+        "finalityBlocks": 1,
+        "index": {
+          "from": 17
+        }
+      }
+    }
+  }
+```
+</details>
+
+The below screenshot is an example configuration to show case how you would fill in the fields. Once you're all finished filling in the details, select `Run` on the bottom right!
+
+<figure><img src="../.gitbook/assets/kurtosis-configure-package.png" alt=""><figcaption><p>Configure your Hyperlane relayer and validator metadata, and click Run!</p></figcaption></figure>
+
+Congratulations! You've now deployed your own Relayer and Validator on Kurtosis! You should be able to see the status and various metadata about your relayer and validators within the Enclave Manager UI. 
+
+TODO: Screenshots of the Relayer and Validator views, and maybe one for logs.
 
 ## 5. Send test messages
 
