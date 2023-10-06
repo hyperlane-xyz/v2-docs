@@ -336,6 +336,8 @@ TODO: Add Sepolia to agent_config.json
         }
     }
   }
+}
+
 ```
 </details>
 
