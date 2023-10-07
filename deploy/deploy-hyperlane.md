@@ -14,9 +14,8 @@ At a high level, deploying Hyperlane requires the following actions:
 
 1. [#1.-setup-keys](deploy-hyperlane.md#1.-setup-keys "mention") that you will use to deploy contracts and run validators and relayers
 2. [#2.-deploy-contracts](deploy-hyperlane.md#2.-deploy-contracts "mention") to the local chain and to every remote chain with which the local chain will be able to send and receive messages.
-3. [#3.-run-validators](deploy-hyperlane.md#3.-run-validators "mention") on your local chain, to provide the signatures needed for the [sovereign-consensus](../protocol/sovereign-consensus/ "mention") you deployed in step (2)
-4. [#4.-run-relayer](deploy-hyperlane.md#4.-run-relayer "mention") to send and receive messages between chains set up in the [#2.-deploy-contracts](deploy-hyperlane.md#2.-deploy-contracts "mention") step.
-5. [#5.-send-test-messages](deploy-hyperlane.md#5.-send-test-messages "mention") to confirm that your relayer is able to deliver messages from and to each pair of chains
+3. [#3.-run-validators-and-relayers](deploy-hyperlane.md#3-run-validators-and-relayers "mention") to provide the signatures needed for the [sovereign-consensus](../protocol/sovereign-consensus/ "mention") you deployed and to send and receive between chains set up in the [#2.-deploy-contracts](deploy-hyperlane.md#2.-deploy-contracts "mention") step above.
+4. [#5.-send-test-messages](deploy-hyperlane.md#5.-send-test-messages "mention") to confirm that your relayer is able to deliver messages from and to each pair of chains
 
 ## 1. Setup keys
 
