@@ -22,11 +22,6 @@ description: Hyperlane core contract addresses
 | Moonbeam  | `0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70` | [View on moonscan.io](https://moonscan.io/address/0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70)                         |
 | Gnosis    | `0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70` | [View on gnosisscan.io](https://gnosisscan.io/address/0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70)                     |
 
-### AggregationHook
-
-Uses aggregation of IGP and MerkleTreeHook
-| Network | Address | Explorer |
-| ------- | ------- | -------- |
 
 ### InterchainGasPaymaster
 
