@@ -22,49 +22,41 @@ description: Hyperlane core contract addresses
 | Moonbeam  | `0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70` | [View on moonscan.io](https://moonscan.io/address/0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70)                         |
 | Gnosis    | `0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70` | [View on gnosisscan.io](https://gnosisscan.io/address/0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70)                     |
 
-### DefaultIsmInterchainGasPaymaster
+### AggregationHook
 
-Read about this [here](../build-with-hyperlane/guides/developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)
+Uses aggregation of IGP and MerkleTreeHook
 | Network | Address | Explorer |
-| --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Celo | `0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc` | [View on celoscan.io](https://celoscan.io/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc) |
-| Ethereum | `0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc` | [View on etherscan.io](https://etherscan.io/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc) |
-| Avalanche | `0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc` | [View on snowtrace.io](https://snowtrace.io/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc) |
-| Polygon | `0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc` | [View on polygonscan.com](https://polygonscan.com/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc) |
-| Bsc | `0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc` | [View on bscscan.com](https://bscscan.com/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc) |
-| Arbitrum | `0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc` | [View on arbiscan.io](https://arbiscan.io/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc) |
-| Optimism | `0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc` | [View on optimistic.etherscan.io](https://optimistic.etherscan.io/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc) |
-| Moonbeam | `0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc` | [View on moonscan.io](https://moonscan.io/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc) |
-| Gnosis | `0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc` | [View on gnosisscan.io](https://gnosisscan.io/address/0x56f52c0A1ddcD557285f7CBc782D3d83096CE1Cc) |
+| ------- | ------- | -------- |
 
 ### InterchainGasPaymaster
 
-Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-a-custom-ism-advanced)
-| Network | Address | Explorer |
-| --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Celo | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on celoscan.io](https://celoscan.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918) |
-| Ethereum | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on etherscan.io](https://etherscan.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918) |
-| Avalanche | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on snowtrace.io](https://snowtrace.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918) |
-| Polygon | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on polygonscan.com](https://polygonscan.com/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918) |
-| Bsc | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on bscscan.com](https://bscscan.com/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918) |
-| Arbitrum | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on arbiscan.io](https://arbiscan.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918) |
-| Optimism | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on optimistic.etherscan.io](https://optimistic.etherscan.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918) |
-| Moonbeam | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on moonscan.io](https://moonscan.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918) |
-| Gnosis | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on gnosisscan.io](https://gnosisscan.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918) |
-
-### MultisigIsm
-
 | Network   | Address                                      | Explorer                                                                                                              |
 | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Celo      | `0x9bDE63104EE030d9De419EEd6bA7D14b86D6fE3f` | [View on celoscan.io](https://celoscan.io/address/0x9bDE63104EE030d9De419EEd6bA7D14b86D6fE3f)                         |
-| Ethereum  | `0xec48E52D960E54a179f70907bF28b105813877ee` | [View on etherscan.io](https://etherscan.io/address/0xec48E52D960E54a179f70907bF28b105813877ee)                       |
-| Avalanche | `0xeE80ab5B563cB3825133f29502bA34eD3707cb8C` | [View on snowtrace.io](https://snowtrace.io/address/0xeE80ab5B563cB3825133f29502bA34eD3707cb8C)                       |
-| Polygon   | `0x61A80297e77FC5395bd6Ff60EEacf7CD4f18d4a4` | [View on polygonscan.com](https://polygonscan.com/address/0x61A80297e77FC5395bd6Ff60EEacf7CD4f18d4a4)                 |
-| Bsc       | `0x3a579C0bd04FC4C98A8D70EEABD9094e7be4B26D` | [View on bscscan.com](https://bscscan.com/address/0x3a579C0bd04FC4C98A8D70EEABD9094e7be4B26D)                         |
-| Arbitrum  | `0x32B92bd3e5045B67FDD8dbb7A58D25980836d04C` | [View on arbiscan.io](https://arbiscan.io/address/0x32B92bd3e5045B67FDD8dbb7A58D25980836d04C)                         |
-| Optimism  | `0xAab1D11E2063Bae5EB01fa946cA8d2FDe3db05D5` | [View on optimistic.etherscan.io](https://optimistic.etherscan.io/address/0xAab1D11E2063Bae5EB01fa946cA8d2FDe3db05D5) |
-| Moonbeam  | `0xf3b1F415740A26568C45b1c771A737E31C198F09` | [View on moonscan.io](https://moonscan.io/address/0xf3b1F415740A26568C45b1c771A737E31C198F09)                         |
-| Gnosis    | `0xC343A7054838FE9F249D7E3Ec1Fa6f1D108694b8` | [View on gnosisscan.io](https://gnosisscan.io/address/0xC343A7054838FE9F249D7E3Ec1Fa6f1D108694b8)                     |
+| Celo      | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on celoscan.io](https://celoscan.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918)                         |
+| Ethereum  | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on etherscan.io](https://etherscan.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918)                       |
+| Avalanche | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on snowtrace.io](https://snowtrace.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918)                       |
+| Polygon   | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on polygonscan.com](https://polygonscan.com/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918)                 |
+| Bsc       | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on bscscan.com](https://bscscan.com/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918)                         |
+| Arbitrum  | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on arbiscan.io](https://arbiscan.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918)                         |
+| Optimism  | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on optimistic.etherscan.io](https://optimistic.etherscan.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918) |
+| Moonbeam  | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on moonscan.io](https://moonscan.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918)                         |
+| Gnosis    | `0x6cA0B6D22da47f091B7613223cD4BB03a2d77918` | [View on gnosisscan.io](https://gnosisscan.io/address/0x6cA0B6D22da47f091B7613223cD4BB03a2d77918)                     |
+
+### MerkleTreeHook
+
+| Network | Address | Explorer |
+| ------- | ------- | -------- |
+
+### ProtocolFee
+
+Required hook for every message
+| Network | Address | Explorer |
+| ------- | ------- | -------- |
+
+### DefaultIsm
+
+| Network | Address | Explorer |
+| ------- | ------- | -------- |
 
 ### InterchainQueryRouter
 
@@ -128,34 +120,92 @@ Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-
 | Moonbasealpha       | `0x76189acFA212298d7022624a4633411eE0d2f26F` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0x76189acFA212298d7022624a4633411eE0d2f26F)                    |
 | Mumbai              | `0x2d1889fe5B092CD988972261434F7E5f26041115` | [View on mumbai.polygonscan.com](https://mumbai.polygonscan.com/address/0x2d1889fe5B092CD988972261434F7E5f26041115)                |
 
-### DefaultIsmInterchainGasPaymaster
+### AggregationHook
 
-Read about this [here](../build-with-hyperlane/guides/developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-the-default-ism-for-most-applications)
+Uses aggregation of IGP and MerkleTreeHook
 | Network | Address | Explorer |
-| ------- | ------- | -------- |
+| ------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Basegoerli | `0x168e606fE4A9c8d7F83a3aAA132E831f153e4bAa` | [View on goerli.basescan.org](https://goerli.basescan.org/address/0x168e606fE4A9c8d7F83a3aAA132E831f153e4bAa) |
+| Arbitrumgoerli | `0xf852EB6b98d84A4296754043a56759a0Ae0E06df` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0xf852EB6b98d84A4296754043a56759a0Ae0E06df) |
+| Optimismgoerli | `0x1C8A2588b8038BF9B7b1b60dD0EdF5b995A45599` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0x1C8A2588b8038BF9B7b1b60dD0EdF5b995A45599) |
+| Scrollsepolia | `0x7b63Aa270335F8896717c2A809205F4b650E4268` | [View on sepolia-blockscout.scroll.io](https://sepolia-blockscout.scroll.io/address/0x7b63Aa270335F8896717c2A809205F4b650E4268) |
+| Alfajores | `0xdBabD76358897E68E4964647C1fb8Bf524f5EFdB` | [View on alfajores.celoscan.io](https://alfajores.celoscan.io/address/0xdBabD76358897E68E4964647C1fb8Bf524f5EFdB) |
+| Polygonzkevmtestnet | `0x0Fd2C6F0Ad45e766660b9fDebCF36a2AD69536D1` | [View on testnet-zkevm.polygonscan.com](https://testnet-zkevm.polygonscan.com//address/0x0Fd2C6F0Ad45e766660b9fDebCF36a2AD69536D1) |
+| Sepolia | `0xe3147d5618f5e2e100690B50ec923009a4cde14A` | [View on sepolia.etherscan.io](https://sepolia.etherscan.io/address/0xe3147d5618f5e2e100690B50ec923009a4cde14A) |
+| Fuji | `0x8E9b4006171c6B75111823e7545Ee5400CEce0B3` | [View on testnet.snowtrace.io](https://testnet.snowtrace.io/address/0x8E9b4006171c6B75111823e7545Ee5400CEce0B3) |
+| Bsctestnet | `0x3d675bB93250Ab7603F40cbb9194bae210784627` | [View on testnet.bscscan.com](https://testnet.bscscan.com/address/0x3d675bB93250Ab7603F40cbb9194bae210784627) |
+| Goerli | `0x2dF77b3efe9B8f9aEDf7bFC86f40B048178d8116` | [View on goerli.etherscan.io](https://goerli.etherscan.io/address/0x2dF77b3efe9B8f9aEDf7bFC86f40B048178d8116) |
+| Moonbasealpha | `0xaA9d918C49Cea0D2a877252aFb7976B6e3A48623` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0xaA9d918C49Cea0D2a877252aFb7976B6e3A48623) |
+| Mumbai | `0xD546273418733AcEC8c7A67EfB881c9Ea83851bf` | [View on mumbai.polygonscan.com](https://mumbai.polygonscan.com/address/0xD546273418733AcEC8c7A67EfB881c9Ea83851bf) |
 
 ### InterchainGasPaymaster
 
-Advanced use - [read here](../build-with-hyperlane/guides/developers/paying-for-interchain-gas/which-igp-to-use-and-understanding-gas-amounts.md#when-using-a-custom-ism-advanced)
+| Network             | Address                                      | Explorer                                                                                                                           |
+| ------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Basegoerli          | `0x28B02B97a850872C4D33C3E024fab6499ad96564` | [View on goerli.basescan.org](https://goerli.basescan.org/address/0x28B02B97a850872C4D33C3E024fab6499ad96564)                      |
+| Arbitrumgoerli      | `0x76189acFA212298d7022624a4633411eE0d2f26F` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0x76189acFA212298d7022624a4633411eE0d2f26F)                        |
+| Optimismgoerli      | `0x02A7661273528EfF3d78CBE7CbD1a717b28B89fC` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0x02A7661273528EfF3d78CBE7CbD1a717b28B89fC)    |
+| Scrollsepolia       | `0x86fb9F1c124fB20ff130C41a79a432F770f67AFD` | [View on sepolia-blockscout.scroll.io](https://sepolia-blockscout.scroll.io/address/0x86fb9F1c124fB20ff130C41a79a432F770f67AFD)    |
+| Alfajores           | `0x1246529edDcA523AfE5c6b9414299633d2E16697` | [View on alfajores.celoscan.io](https://alfajores.celoscan.io/address/0x1246529edDcA523AfE5c6b9414299633d2E16697)                  |
+| Polygonzkevmtestnet | `0xAD34A66Bf6dB18E858F6B686557075568c6E031C` | [View on testnet-zkevm.polygonscan.com](https://testnet-zkevm.polygonscan.com//address/0xAD34A66Bf6dB18E858F6B686557075568c6E031C) |
+| Sepolia             | `0x6f2756380FD49228ae25Aa7F2817993cB74Ecc56` | [View on sepolia.etherscan.io](https://sepolia.etherscan.io/address/0x6f2756380FD49228ae25Aa7F2817993cB74Ecc56)                    |
+| Fuji                | `0x6895d3916B94b386fAA6ec9276756e16dAe7480E` | [View on testnet.snowtrace.io](https://testnet.snowtrace.io/address/0x6895d3916B94b386fAA6ec9276756e16dAe7480E)                    |
+| Bsctestnet          | `0x0dD20e410bdB95404f71c5a4e7Fa67B892A5f949` | [View on testnet.bscscan.com](https://testnet.bscscan.com/address/0x0dD20e410bdB95404f71c5a4e7Fa67B892A5f949)                      |
+| Goerli              | `0x0cD26594ea6c6526927C0F5225AC09F6288e7140` | [View on goerli.etherscan.io](https://goerli.etherscan.io/address/0x0cD26594ea6c6526927C0F5225AC09F6288e7140)                      |
+| Moonbasealpha       | `0x92F05669A354a032A84FcfABfD13beE1aBc5bFd0` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0x92F05669A354a032A84FcfABfD13beE1aBc5bFd0)                    |
+| Mumbai              | `0x8aB67CAF605c6ee83cbFeFb0D8d67FDd3BF7B591` | [View on mumbai.polygonscan.com](https://mumbai.polygonscan.com/address/0x8aB67CAF605c6ee83cbFeFb0D8d67FDd3BF7B591)                |
+
+### MerkleTreeHook
+
+| Network             | Address                                      | Explorer                                                                                                                           |
+| ------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Basegoerli          | `0x5821f3B6eE05F3dC62b43B74AB1C8F8E6904b1C8` | [View on goerli.basescan.org](https://goerli.basescan.org/address/0x5821f3B6eE05F3dC62b43B74AB1C8F8E6904b1C8)                      |
+| Arbitrumgoerli      | `0xf0A38e1eEA49dAc7968F470c3aA0BDE2565A5d80` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0xf0A38e1eEA49dAc7968F470c3aA0BDE2565A5d80)                        |
+| Optimismgoerli      | `0xFEe074B31B5B259eB3109737bE13D39B853b47b9` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0xFEe074B31B5B259eB3109737bE13D39B853b47b9)    |
+| Scrollsepolia       | `0x863E8c26621c52ACa1849C53500606e73BA272F0` | [View on sepolia-blockscout.scroll.io](https://sepolia-blockscout.scroll.io/address/0x863E8c26621c52ACa1849C53500606e73BA272F0)    |
+| Alfajores           | `0x48D4ede231344A19c92b9cA9Ac8B453116012169` | [View on alfajores.celoscan.io](https://alfajores.celoscan.io/address/0x48D4ede231344A19c92b9cA9Ac8B453116012169)                  |
+| Polygonzkevmtestnet | `0x68311418D79fE8d96599384ED767d225635d88a8` | [View on testnet-zkevm.polygonscan.com](https://testnet-zkevm.polygonscan.com//address/0x68311418D79fE8d96599384ED767d225635d88a8) |
+| Sepolia             | `0xa5075B2AcA697944273d67B57a3340a0730632A3` | [View on sepolia.etherscan.io](https://sepolia.etherscan.io/address/0xa5075B2AcA697944273d67B57a3340a0730632A3)                    |
+| Fuji                | `0x9ff6ac3dAf63103620BBf76136eA1AFf43c2F612` | [View on testnet.snowtrace.io](https://testnet.snowtrace.io/address/0x9ff6ac3dAf63103620BBf76136eA1AFf43c2F612)                    |
+| Bsctestnet          | `0xb6752a47541DAFaF17752FB2899BC1f138A03091` | [View on testnet.bscscan.com](https://testnet.bscscan.com/address/0xb6752a47541DAFaF17752FB2899BC1f138A03091)                      |
+| Goerli              | `0xeE2842C22F15e69cD443378aa8fbD1fE16E59Ed3` | [View on goerli.etherscan.io](https://goerli.etherscan.io/address/0xeE2842C22F15e69cD443378aa8fbD1fE16E59Ed3)                      |
+| Moonbasealpha       | `0x155B1CD2f7Cbc58d403B9BE341FaB6CD77425175` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0x155B1CD2f7Cbc58d403B9BE341FaB6CD77425175)                    |
+| Mumbai              | `0x9AF85731EDd41E2E50F81Ef8a0A69D2fB836EDf9` | [View on mumbai.polygonscan.com](https://mumbai.polygonscan.com/address/0x9AF85731EDd41E2E50F81Ef8a0A69D2fB836EDf9)                |
+
+### ProtocolFee
+
+Required hook for every message
 | Network | Address | Explorer |
 | ------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Basegoerli | `0x28B02B97a850872C4D33C3E024fab6499ad96564` | [View on goerli.basescan.org](https://goerli.basescan.org/address/0x28B02B97a850872C4D33C3E024fab6499ad96564) |
-| Arbitrumgoerli | `0x76189acFA212298d7022624a4633411eE0d2f26F` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0x76189acFA212298d7022624a4633411eE0d2f26F) |
-| Optimismgoerli | `0x02A7661273528EfF3d78CBE7CbD1a717b28B89fC` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0x02A7661273528EfF3d78CBE7CbD1a717b28B89fC) |
-| Scrollsepolia | `0x86fb9F1c124fB20ff130C41a79a432F770f67AFD` | [View on sepolia-blockscout.scroll.io](https://sepolia-blockscout.scroll.io/address/0x86fb9F1c124fB20ff130C41a79a432F770f67AFD) |
-| Alfajores | `0x1246529edDcA523AfE5c6b9414299633d2E16697` | [View on alfajores.celoscan.io](https://alfajores.celoscan.io/address/0x1246529edDcA523AfE5c6b9414299633d2E16697) |
-| Polygonzkevmtestnet | `0xAD34A66Bf6dB18E858F6B686557075568c6E031C` | [View on testnet-zkevm.polygonscan.com](https://testnet-zkevm.polygonscan.com//address/0xAD34A66Bf6dB18E858F6B686557075568c6E031C) |
-| Sepolia | `0x6f2756380FD49228ae25Aa7F2817993cB74Ecc56` | [View on sepolia.etherscan.io](https://sepolia.etherscan.io/address/0x6f2756380FD49228ae25Aa7F2817993cB74Ecc56) |
-| Fuji | `0x6895d3916B94b386fAA6ec9276756e16dAe7480E` | [View on testnet.snowtrace.io](https://testnet.snowtrace.io/address/0x6895d3916B94b386fAA6ec9276756e16dAe7480E) |
-| Bsctestnet | `0x0dD20e410bdB95404f71c5a4e7Fa67B892A5f949` | [View on testnet.bscscan.com](https://testnet.bscscan.com/address/0x0dD20e410bdB95404f71c5a4e7Fa67B892A5f949) |
-| Goerli | `0x0cD26594ea6c6526927C0F5225AC09F6288e7140` | [View on goerli.etherscan.io](https://goerli.etherscan.io/address/0x0cD26594ea6c6526927C0F5225AC09F6288e7140) |
-| Moonbasealpha | `0x92F05669A354a032A84FcfABfD13beE1aBc5bFd0` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0x92F05669A354a032A84FcfABfD13beE1aBc5bFd0) |
-| Mumbai | `0x8aB67CAF605c6ee83cbFeFb0D8d67FDd3BF7B591` | [View on mumbai.polygonscan.com](https://mumbai.polygonscan.com/address/0x8aB67CAF605c6ee83cbFeFb0D8d67FDd3BF7B591) |
+| Basegoerli | `0xEe421285728284000ec6c6C55C6F9161faeFfa99` | [View on goerli.basescan.org](https://goerli.basescan.org/address/0xEe421285728284000ec6c6C55C6F9161faeFfa99) |
+| Arbitrumgoerli | `0x0358ba0D90ED2d90fB8cBb610F27C274D8077a0B` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0x0358ba0D90ED2d90fB8cBb610F27C274D8077a0B) |
+| Optimismgoerli | `0x962e30F6A3ECDA85c7fa1FcF38cD04efA991Ee20` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0x962e30F6A3ECDA85c7fa1FcF38cD04efA991Ee20) |
+| Scrollsepolia | `0x5821f3B6eE05F3dC62b43B74AB1C8F8E6904b1C8` | [View on sepolia-blockscout.scroll.io](https://sepolia-blockscout.scroll.io/address/0x5821f3B6eE05F3dC62b43B74AB1C8F8E6904b1C8) |
+| Alfajores | `0xC9D50584F08Bf6cCD1004d14c7062044b45E3b48` | [View on alfajores.celoscan.io](https://alfajores.celoscan.io/address/0xC9D50584F08Bf6cCD1004d14c7062044b45E3b48) |
+| Polygonzkevmtestnet | `0xddf4C3e791caCaFd26D7fb275549739B38ae6e75` | [View on testnet-zkevm.polygonscan.com](https://testnet-zkevm.polygonscan.com//address/0xddf4C3e791caCaFd26D7fb275549739B38ae6e75) |
+| Sepolia | `0x13AC3349Cb159fE86A22cf42DdA803D9f7309DB5` | [View on sepolia.etherscan.io](https://sepolia.etherscan.io/address/0x13AC3349Cb159fE86A22cf42DdA803D9f7309DB5) |
+| Fuji | `0xEbA64c8a9b4a61a9210d5fe7E4375380999C821b` | [View on testnet.snowtrace.io](https://testnet.snowtrace.io/address/0xEbA64c8a9b4a61a9210d5fe7E4375380999C821b) |
+| Bsctestnet | `0x3eF0a63B8976b838704Bcc93C78C56b6653E5a39` | [View on testnet.bscscan.com](https://testnet.bscscan.com/address/0x3eF0a63B8976b838704Bcc93C78C56b6653E5a39) |
+| Goerli | `0x9293B8dAcA7933765de499C992B0Fa86Bb104b0f` | [View on goerli.etherscan.io](https://goerli.etherscan.io/address/0x9293B8dAcA7933765de499C992B0Fa86Bb104b0f) |
+| Moonbasealpha | `0xe2A73F106902983452713F24Bd019F6eb8712986` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0xe2A73F106902983452713F24Bd019F6eb8712986) |
+| Mumbai | `0x244d1F7e30Be144A87602905baBF86630e8f39DC` | [View on mumbai.polygonscan.com](https://mumbai.polygonscan.com/address/0x244d1F7e30Be144A87602905baBF86630e8f39DC) |
 
-### MultisigIsm
+### DefaultIsm
 
-| Network | Address | Explorer |
-| ------- | ------- | -------- |
+| Network             | Address                                      | Explorer                                                                                                                           |
+| ------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Basegoerli          | `0x7147a48429D6FA06ec08Ed95b500e68356819f2b` | [View on goerli.basescan.org](https://goerli.basescan.org/address/0x7147a48429D6FA06ec08Ed95b500e68356819f2b)                      |
+| Arbitrumgoerli      | `0x8C841784947dEa42f78263D54bec15c0cF65fA22` | [View on goerli.arbiscan.io](https://goerli.arbiscan.io/address/0x8C841784947dEa42f78263D54bec15c0cF65fA22)                        |
+| Optimismgoerli      | `0x986e076aA22342282B6c2a287e9AaBC8a36161f3` | [View on goerli-optimism.etherscan.io](https://goerli-optimism.etherscan.io/address/0x986e076aA22342282B6c2a287e9AaBC8a36161f3)    |
+| Scrollsepolia       | `0x4983DDBd279DB930cd883B44AF3f0da7567a06E6` | [View on sepolia-blockscout.scroll.io](https://sepolia-blockscout.scroll.io/address/0x4983DDBd279DB930cd883B44AF3f0da7567a06E6)    |
+| Alfajores           | `0xFBb1D475d2275D4643B6ba9Dae16f2F5465F9436` | [View on alfajores.celoscan.io](https://alfajores.celoscan.io/address/0xFBb1D475d2275D4643B6ba9Dae16f2F5465F9436)                  |
+| Polygonzkevmtestnet | `0xfF5512D605018c185ac159B20354994BD3d75Ae2` | [View on testnet-zkevm.polygonscan.com](https://testnet-zkevm.polygonscan.com//address/0xfF5512D605018c185ac159B20354994BD3d75Ae2) |
+| Sepolia             | `0x97FE534674A0fA312b730C946A8A8AC9DcF90100` | [View on sepolia.etherscan.io](https://sepolia.etherscan.io/address/0x97FE534674A0fA312b730C946A8A8AC9DcF90100)                    |
+| Fuji                | `0x2d6891ac730E14521Ea0C45A00d3Eb62f2e432df` | [View on testnet.snowtrace.io](https://testnet.snowtrace.io/address/0x2d6891ac730E14521Ea0C45A00d3Eb62f2e432df)                    |
+| Bsctestnet          | `0xEf7cacD303D1886b3dE396B45a184d16f39248E0` | [View on testnet.bscscan.com](https://testnet.bscscan.com/address/0xEf7cacD303D1886b3dE396B45a184d16f39248E0)                      |
+| Goerli              | `0x8BbdB0023ef47992b3E83E2B1B290D72A7477EfE` | [View on goerli.etherscan.io](https://goerli.etherscan.io/address/0x8BbdB0023ef47992b3E83E2B1B290D72A7477EfE)                      |
+| Moonbasealpha       | `0x367241b198C29C6a8B2aa0c9D8350B6F81C2Abb3` | [View on moonbase.moonscan.io](https://moonbase.moonscan.io/address/0x367241b198C29C6a8B2aa0c9D8350B6F81C2Abb3)                    |
+| Mumbai              | `0xCbDc6B43fcC9465E18E0eE925170f6F2893625b8` | [View on mumbai.polygonscan.com](https://mumbai.polygonscan.com/address/0xCbDc6B43fcC9465E18E0eE925170f6F2893625b8)                |
 
 ### InterchainQueryRouter
 
