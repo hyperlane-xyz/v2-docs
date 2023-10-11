@@ -32,7 +32,7 @@ For app developers looking to upgrade their interchain capabilities, Hyperlane o
 * [Accounts API](../apis-and-sdks/accounts.md) for creating + calling smart contracts on remote chains.
 * [Warp Routes API](../apis-and-sdks/warp-api.md) for moving assets between chains
 * [Queries API](../apis/query.md) for querying state on remote chains.
-* [Liquidity API](../apis-and-sdks/token-bridge-api.md) for attaching value to your Hyperlane messages
+* [Liquidity API](broken-reference) for attaching value to your Hyperlane messages
 * And our [Hyperlane SDK](../apis-and-sdks/building-applications/) for building interchain apps if you need help getting started.
 
 In addition, Hyperlane gives you the ability to customize your interchain security with[ Interchain Security Modules (ISMs)](https://docs.hyperlane.xyz/docs/protocol/sovereign-consensus). Most interoperability protocols today are built with a one-size-fits-all security model, where every supported chain is immediately opted-in to a connection with newly added chains. Under this model, the attack surface increases as more chains are added. And you can’t do anything about it as a developer. You have no control over your own app’s security. Hyperlane helps you remove this dependency with Modular Security.
