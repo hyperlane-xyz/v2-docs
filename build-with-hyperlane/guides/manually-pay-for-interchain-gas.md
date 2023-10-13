@@ -79,7 +79,7 @@ Now, we can call `payGasFor`, and we supply the gas payment quote as value in th
 
 ### Confirm delivery
 
-After you've paid for itnerchain gas, you should be able to see a corresponding transaction delivering your message on the destination chain. You can watch for this transaction on [Hyperlane's Message Explorer](https://explorer.hyperlane.xyz/) by entering the transaction hash or the sender/recipient address in the input field.\
+After you've paid for interchain gas, you should be able to see a corresponding transaction delivering your message on the destination chain. You can watch for this transaction on [Hyperlane's Message Explorer](https://explorer.hyperlane.xyz/) by entering the transaction hash or the sender/recipient address in the input field.\
 \
 You can see an example message delivery transaction [here](https://explorer.hyperlane.xyz/message/24275).
 
