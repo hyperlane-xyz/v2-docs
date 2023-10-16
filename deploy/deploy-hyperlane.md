@@ -189,7 +189,7 @@ For feedback or questions about using Kurtosis in this section, please file a [G
 
 To begin, visit the [Kurtosis Cloud website](https://cloud.kurtosis.com/) (direct link: https://cloud.kurtosis.com/) and sign in with Google. 
 
-If this is the first time you're using Kurtosis Cloud, Kurtosis will automatically begin provisioning a remote cloud instance for your validator and relayer (see screenshot below). This should take no longer than 3 minutes.
+If this is the first time you're using Kurtosis Cloud, Kurtosis will automatically begin provisioning a remote cloud instance for your validator and relayer (see screenshot below). Provisioning should take only a few minutes.
 
 <figure><img src="../.gitbook/assets/kurtosis-get-excited.png" alt=""><figcaption><p>Kurtosis will provision a brand new instance for you if this is your first time using Kurtosis.</p></figcaption></figure>
 
