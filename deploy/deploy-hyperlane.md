@@ -179,7 +179,7 @@ $  head -n 22 artifacts/agent_config.json
 
 ## 3. Run validators and relayers
 
-We've partnered with [Kurtosis](https://www.kurtosis.com/) to offer a smooth validator and relayer deployment experience through [Kurtosis Cloud](https://cloud.kurtosis.com/). This section of the guide will walk you through how to deploy a validator and relayer using the no-code, Kurtosis Cloud UI that connects a Goerli to Polaris. 
+We've partnered with [Kurtosis](https://www.kurtosis.com/) to offer a smooth validator and relayer deployment experience through [Kurtosis Cloud](https://cloud.kurtosis.com/). This section of the guide will walk you through how to deploy a validator and relayer using the no-code, Kurtosis Cloud UI that connects Goerli to Polaris. 
 
 If you wish to read more about validators and relayers, check out our docs on these topics at [Validators](../operators/validators/ "mention") and [Relayers](../operators/relayers/ "mention").
 
