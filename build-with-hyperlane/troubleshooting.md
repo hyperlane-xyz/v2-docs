@@ -36,4 +36,4 @@ Once a message is enqueued on a Mailbox merkle tree, from the system perspective
 
 #### Missing name field error
 
-An error about a missing `name` field most likely indicates that you have an environment variable that implies the existence of a chain, but said chain does not exist in the config files. You may have mispelled the ENV name (`HYP_BASE_CHAINS_GOERLI_CONNECTION_URL)`. Or you may have specified a new chain but forgot to load the corresponding config file.
+An error about a missing `name` field most likely indicates that you have an environment variable that implies the existence of a chain, but said chain does not exist in the config files. You may have misspelled the ENV name (`HYP_BASE_CHAINS_GOERLI_CONNECTION_URL)`. Or you may have specified a new chain but forgot to load the corresponding config file.

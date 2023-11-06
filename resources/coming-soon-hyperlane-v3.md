@@ -125,7 +125,7 @@ contract Mailbox {
     // commits to latest dispatched message content
     bytes32 latestDispatchedId;
 
-    // implements defaults that can be overriden (overhead IGP, etc)
+    // implements defaults that can be overridden (overhead IGP, etc)
     IPostDispatchHook public defaultHook;
 
     // enforces protocol fees or any future required hooks
