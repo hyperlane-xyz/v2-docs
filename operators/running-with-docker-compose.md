@@ -43,7 +43,7 @@ services:
       - "9090:9090/tcp"
     environment:
       CONFIG_FILES: /ethereum_validator.json
-      AWS_ACCESS_KEY: somesecretkey
+      AWS_ACCESS_KEY_ID: somesecretkey
       AWS_SECRET_ACCESS_KEY: somesecretkey
     configs:
       - ethereum_validator.json
