@@ -1,8 +1,6 @@
----
-description: The permissionless interoperability layer built for modular blockchains
----
+# With the [launch of v3](https://github.com/hyperlane-xyz/v2-docs/), this repo is deprecated.
 
-# Hyperlane introduction
+## Hyperlane introduction
 
 Hyperlane is the first universal and permissionless interoperability layer built for the modular blockchain stack.&#x20;
 
