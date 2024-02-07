@@ -1,6 +1,6 @@
 # ⚠️ With the [launch of v3](https://github.com/hyperlane-xyz/v3-docs/), this repo is deprecated. ⚠️
 
-For the current docs site, visit [docs.hyperlane.xyz](docs.hyperlane.xyz) - for the old v2 docs see [v2](v2.hyperlane.xyz).
+**For the current docs site, visit [docs.hyperlane.xyz](https://docs.hyperlane.xyz/) - for the old v2 docs see [v2](https://v2.hyperlane.xyz/).**
 
 ## Hyperlane introduction
 
